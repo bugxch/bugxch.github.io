@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>整理阅读 on 巴巴变的博客</title>
+        <link>http://blog.bugxch.top/tags/%E6%95%B4%E7%90%86%E9%98%85%E8%AF%BB/</link>
+        <description>Recent content in 整理阅读 on 巴巴变的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>bugxch</copyright>
+        <lastBuildDate>Sat, 21 Jul 2018 20:53:18 +0000</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/%E6%95%B4%E7%90%86%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>建立阅读体系</title>
+        <link>http://blog.bugxch.top/p/%E5%BB%BA%E7%AB%8B%E9%98%85%E8%AF%BB%E4%BD%93%E7%B3%BB/</link>
+        <pubDate>Sat, 21 Jul 2018 20:53:18 +0000</pubDate>
+        
+        <guid>http://blog.bugxch.top/p/%E5%BB%BA%E7%AB%8B%E9%98%85%E8%AF%BB%E4%BD%93%E7%B3%BB/</guid>
+        <description>&lt;p&gt;为了更高效地吸收知识，需要对书籍的难易程度进行分类，不同类别的书籍阅读方法不同，投入精力不同，输出形式不同，阅读强度不同。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.readitforward.com/wp-content/uploads/2015/06/bookshelf-organization.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;阅读体系&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;阅读体系&#34;&gt;阅读体系&lt;/h2&gt;
+&lt;p&gt;阅读体系的核心思想是&lt;strong&gt;数字量化书籍的 “软硬程度”，根据不同硬度给予不同的学习强度，分层吸收，保证精力的科学分配&lt;/strong&gt;。我自己设定阅读共有 4 个档次，其中 1 最 “硬”，信息密度最高，需要投入最多的精力，4 最 “软”，类似于随手翻到的传单或者在路上捡到的画册，信息密度很低，快速翻过即可。针对不同的硬度书籍，使用不同的阅读策略，可以在减少不必要的精力投入，充分利用学习时间，高效学习相关知识体系。阅读策略包括如下一些指标：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;系统性&lt;/strong&gt;。这是衡量书籍的指标，书籍的知识体系是否完备，各个部分之间是否紧密联系，数学类书籍系统性最强，散文类书籍系统性就很弱。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;完成度&lt;/strong&gt;。这是个人精力投入完整性指标，是否有必要读完所有的内容？还是仅仅读取其中的部分信息即可？亦或是仅仅蜻蜓点水即可？该指标与阅读目的书籍信息密度相关，也与自己的知识储备相关。比如，已经读过相关的书籍就没必要面面俱到都看完了。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;输出形式&lt;/strong&gt;。学以致用，&lt;strong&gt;知识越硬，越需要高强度清晰的输出&lt;/strong&gt;。一来整理知识，日后便于提纲挈领，将短时记忆转为长时记忆，固化于心；二来倒逼输入，逼迫自己将学习的东西讲清楚。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;练习强度&lt;/strong&gt;。学习最怕一曝十寒，所以保证单位时间内的足够的学习强度，持续不间断的输入才能将知识一步步踏踏实实地印到脑子里，不然很容易遗忘，重新进入这种状态又要花很多时间和精力。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;累计时长&lt;/strong&gt;。在阅读少许书籍内容之后，结合自己的需要，就可以将其分类，提前划拨阅读时长，不能超过这个界限，以免浪费时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面从这几个维度对这 5 种书籍总结归纳。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;硬度&lt;/th&gt;
+&lt;th&gt;系统性&lt;/th&gt;
+&lt;th&gt;输出形式&lt;/th&gt;
+&lt;th&gt;练习强度 (次 / 周)&lt;/th&gt;
+&lt;th&gt;完成度（%）&lt;/th&gt;
+&lt;th&gt;阅读累计时长（小时）&lt;/th&gt;
+&lt;th&gt;举例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;非常系统&lt;/td&gt;
+&lt;td&gt;博客系列文章 / github 代码 / 阅读笔记&lt;/td&gt;
+&lt;td&gt;5+&lt;/td&gt;
+&lt;td&gt;95+&lt;/td&gt;
+&lt;td&gt;30+&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/1240002/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《C Primer Plus》&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;比较系统&lt;/td&gt;
+&lt;td&gt;博客文章 / 阅读笔记&lt;/td&gt;
+&lt;td&gt;[3,5]&lt;/td&gt;
+&lt;td&gt;80~90&lt;/td&gt;
+&lt;td&gt;20-&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/26895993/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《刻意练习》&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;系统性不强&lt;/td&gt;
+&lt;td&gt;阅读短评&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;50~60&lt;/td&gt;
+&lt;td&gt;5-&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/26677905/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《打破自我的标签》&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;零碎片段&lt;/td&gt;
+&lt;td&gt;豆瓣标记&lt;/td&gt;
+&lt;td&gt;1-&lt;/td&gt;
+&lt;td&gt;10-&lt;/td&gt;
+&lt;td&gt;1-&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/11614293/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《人生需要揭穿》&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;上面的表格只是初步的判断，之后会根据实际经验对参数进行修改。需要补充一点，5 级我没有写，因为影响不大，5 级的阅读类似于机场或者火车上翻阅杂志的强度，随便看看即可，不需要耗费什么精力和脑力，因此写不写无所谓。&lt;/p&gt;
+&lt;h2 id=&#34;意义&#34;&gt;意义&lt;/h2&gt;
+&lt;p&gt;标准只是参照，实际阅读可以遵循如下的步骤展开：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;提高硬书的比例&lt;/strong&gt;。硬技能（通信 / 计算机 / 数学 / 工程能力 / 产品能力）是立身之本，目前还处在职业生涯初期，提高工作技能，就能快速提高收入，至少目前的两年之内需要急速提升自己的硬技能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;带着问题读书&lt;/strong&gt;。这样效果最佳，首先明确自己阅读的目的何在，学习一门技术？还是改进自己的方法？了解一段历史？还是提升对不知道事物的认知？不能漫无目的瞎逛，浪费时间。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预估时间&lt;/strong&gt;。拿到书本，大体浏览目录，作者，豆瓣评论，自己翻阅感兴趣的部分，迅速对书籍分档，之后预估阅读时长。结合番茄工作法，严苛按照时长推进阅读进度，&lt;strong&gt;不能超时&lt;/strong&gt;。这就是阅读的 time schedule，初期可能会有差距，但是之后的预估时间需要越来越精确。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;单刀直入&lt;/strong&gt;。根据阅读的目的，&lt;strong&gt;直接、简单、粗暴&lt;/strong&gt;地阅读强相关部分，如果强相关读不懂再回过头补充需要的知识，边补充边试验，带着问题尽快拿下这个知识点。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保持强度&lt;/strong&gt;。依照强度持续学习，保证学习密度才能将其刻印在脑海中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定期输出&lt;/strong&gt;。保证输出质量，阅读后提炼总结，尤其需要明示自己的收获，以及需要改变的行动。&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

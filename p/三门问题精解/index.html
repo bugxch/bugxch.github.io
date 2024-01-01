@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='书接上文，使用贝叶斯定理解释著名的Monty Hall问题，思索清楚之后感觉挺有趣，分享下。
+'>
+<title>三门问题精解</title>
+
+<link rel='canonical' href='http://blog.bugxch.top/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='三门问题精解'>
+<meta property='og:description' content='书接上文，使用贝叶斯定理解释著名的Monty Hall问题，思索清楚之后感觉挺有趣，分享下。
+'>
+<meta property='og:url' content='http://blog.bugxch.top/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='math' /><meta property='article:tag' content='bayes' /><meta property='article:published_time' content='2022-04-21T20:36:36&#43;08:00'/><meta property='article:modified_time' content='2022-04-21T20:36:36&#43;08:00'/>
+<meta name="twitter:title" content="三门问题精解">
+<meta name="twitter:description" content="书接上文，使用贝叶斯定理解释著名的Monty Hall问题，思索清楚之后感觉挺有趣，分享下。
+">
+    <link rel="shortcut icon" href="%5cfavicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue8037ab3c5772f21a937200919ce7a89_163234_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">不写，就无法思考</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bugxch'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/hoho2006'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:635426349@qq.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1704065269185" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4407" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M874.666667 181.333333H149.333333c-40.533333 0-74.666667 34.133333-74.666666 74.666667v512c0 40.533333 34.133333 74.666667 74.666666 74.666667h725.333334c40.533333 0 74.666667-34.133333 74.666666-74.666667V256c0-40.533333-34.133333-74.666667-74.666666-74.666667z m-725.333334 64h725.333334c6.4 0 10.666667 4.266667 10.666666 10.666667v25.6L512 516.266667l-373.333333-234.666667V256c0-6.4 4.266667-10.666667 10.666666-10.666667z m725.333334 533.333334H149.333333c-6.4 0-10.666667-4.266667-10.666666-10.666667V356.266667l356.266666 224c4.266667 4.266667 10.666667 4.266667 17.066667 4.266666s12.8-2.133333 17.066667-4.266666l356.266666-224V768c0 6.4-4.266667 10.666667-10.666666 10.666667z" fill="currentColor" p-id="4408"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#问题描述">问题描述</a></li>
+    <li><a href="#分析解答">分析解答</a>
+      <ol>
+        <li><a href="#朴素分析">朴素分析</a></li>
+        <li><a href="#贝叶斯定理">贝叶斯定理</a></li>
+      </ol>
+    </li>
+    <li><a href="#为什么会错">为什么会错？</a></li>
+    <li><a href="#问题变种">问题变种</a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%8A%80%E8%89%BA/" >
+                技艺
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/">三门问题精解</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2022/04/21</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 6 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>书接<a class="link" href="https://bugxch.github.io/detection/"  target="_blank" rel="noopener"
+    >上文</a>，使用贝叶斯定理解释著名的<a class="link" href="https://www.wikiwand.com/zh/%E8%92%99%E6%8F%90%E9%9C%8D%E7%88%BE%E5%95%8F%E9%A1%8C"  target="_blank" rel="noopener"
+    >Monty Hall问题</a>，思索清楚之后感觉挺有趣，分享下。</p>
+<p><img src="https://cdn.pixabay.com/photo/2018/10/01/13/53/droplet-3716288_960_720.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="问题描述">问题描述</h2>
+<blockquote>
+<p>參賽者會看見三扇門，其中一扇門的裏面有一輛汽車，選中裏面是汽車的那扇門，就可以贏得該輛汽車，另外兩扇門裏面則都是一隻山羊。當參賽者選定了一扇門，<strong>主持人會開啟另一扇是山羊的門</strong>；並問：「要不要換一扇門？」</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Monty_open_door.svg/440px-Monty_open_door.svg.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>我想大多数人的答案应该是无论换不换门，结果都是一样，赢得比赛的概率是1/2，但是实际的答案是，<strong>换一扇门赢面更大</strong>，准确得说换一扇门赢得比赛的概率是不换门的2倍。为什么会是这样呢？</p>
+<h2 id="分析解答">分析解答</h2>
+<p>为了对这个问题做精确的解答，我们有必要对问题的描述做更详细的澄清。当前的这个游戏满足如下的条件：</p>
+<ul>
+<li>參賽者在三扇門中挑選一扇。他並不知道內裏有甚麼。</li>
+<li>主持人知道每扇門後面有什麼。</li>
+<li>主持人必須開啓剩下的其中一扇門，並且必須提供換門的機會。</li>
+<li>主持人永遠都會挑一扇有山羊的門。
+<ul>
+<li>如果參賽者挑了一扇有山羊的門，主持人必須挑另一扇有山羊的門。</li>
+<li>如果參賽者挑了一扇有汽車的門，主持人隨機（概率均勻分佈）在另外兩扇門中挑一扇有山羊的門。</li>
+</ul>
+</li>
+<li>參賽者會被問是否保持他的原來選擇，還是轉而選擇剩下的那一道門。</li>
+</ul>
+<h3 id="朴素分析">朴素分析</h3>
+<p>使用穷举法分析概率，假设3扇门的编号分别是1，2，3，根据最初选择的编号，以及奖品所在门的编号，可以画出下面的表格</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">初始选择门编号</th>
+<th style="text-align:center">奖品所在门编号</th>
+<th style="text-align:center">不换门结果</th>
+<th style="text-align:center">换门结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">赢</td>
+<td style="text-align:center">输</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">输</td>
+<td style="text-align:center">赢</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">输</td>
+<td style="text-align:center">赢</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">输</td>
+<td style="text-align:center">赢</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">赢</td>
+<td style="text-align:center">输</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">输</td>
+<td style="text-align:center">赢</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">输</td>
+<td style="text-align:center">赢</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">输</td>
+<td style="text-align:center">赢</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">赢</td>
+<td style="text-align:center">输</td>
+</tr>
+</tbody>
+</table></div>
+<p>上面的表格囊括了所有的情况。第一行的结果很明显，第二行的情况是，主持人肯定会打开编号3的门（因为只有这个门的后面不是奖品），所以如果换门肯定就是换到2号门，那么就赢了，其他的情况类似。这时，可以数一数后面两列的结果，换门有6次赢，是不换门的2倍（只有3次赢）。</p>
+<h3 id="贝叶斯定理">贝叶斯定理</h3>
+<p>参考<a class="link" href="https://bugxch.github.io/detection/"  target="_blank" rel="noopener"
+    >新冠检测后面的数学定理</a>里面的贝叶斯定理，我们推算下这个令人吊诡的结论是如何产生的。我们假设有三扇门的编号分别是A、B和C。在没有任何其他信息的情况下，你选择了A作为答案。此时</p>
+<p>$$
+Pr(A) = Pr(B) = Pr(C) = \frac{1}{3}
+$$</p>
+<p>其中</p>
+<ul>
+<li>A表示奖品在A门后的概率</li>
+<li>B表示奖品在B门后的概率</li>
+<li>C表示奖品在C门后的概率</li>
+</ul>
+<p>可以看出此时无论你选择哪一扇门赢得比赛的概率都一样。</p>
+<blockquote>
+<p>然后，蒙蒂打开了C门，告诉你C门后面没有奖品，所以你知道$Pr(C) = 0$，那此时你对$Pr(A)$和$Pr(B)$的估计还保持原样吗？</p>
+</blockquote>
+<p>我们令E表示蒙蒂选择C门作为展示门（以表明该门后面没有奖品）这个事件，那么实际上要比较的就是$Pr(A|E)$和$Pr(B|E)$的大小关系。根据贝叶斯定理</p>
+<p>现在已知，$Pr(A) = Pr(B) = Pr(C) = \frac{1}{3}$，下一步就是推导</p>
+<ul>
+<li>$Pr(E|A) = 1/2$，因为如果奖品在A门后面，那么蒙蒂可能选择B门也可能选择C门作为展示门，那么选择C门作为展示门的概率是1/2；</li>
+<li>$Pr(E|B) = 1$，因为如果奖品在B门后面，那么蒙蒂只能选择C门作为展示门；</li>
+<li>$Pr(E|C) = 0$，因为如果奖品在C门后面，那么蒙蒂不可能选择C门作为展示门；</li>
+</ul>
+<p>实际上，到这一步已经可以看出来了$Pr(A|E) = \frac{Pr(B|E)} 2$的结果了。但是，可以更进一步计算</p>
+<p>$$
+\begin{align}
+Pr(E) &amp;= Pr(A)Pr(E|A) + Pr(B)Pr(E|B) + Pr(C)Pr(E|C)\
+&amp;=\frac{1}{3}\times \frac{1}{2} + \frac{1}{3}\times 1 + \frac{1}{3}\times 0\
+&amp; = \frac{1}{2}
+\end{align}
+$$</p>
+<p>带入上面的公式，可以得到$Pr(A|E) = \frac{1}{3}$和$Pr(B|E) = \frac{2}{3}$</p>
+<h2 id="为什么会错">为什么会错？</h2>
+<p>我们的大脑在分析这个问题时，做了不切实际的假设，并且对这个假设深信不疑。我们习惯于分析<strong>相互独立的随机事件</strong>，最典型的例子是抛硬币，抛掷一枚硬币正面朝上的概率是0.5，我们得到这个结论的依据是<strong>特定结果数量与结果总数的比例</strong>，正面的情况是1，总的结果是2，所以概率是1/2。这就是为什么我们认为无论更换与否，赢得的概率一样的原因。但是实际的情况并不是这样的，<strong>选择换门与否并不是相互独立随机事件</strong>，下面我们做更进一步的说明。</p>
+<p>第一步，随机选择一扇门，这个的确是随机的，无论选择哪一扇门，最终赢得比赛的概率是1/3。但是整个事件的随机独立性在蒙蒂选择打开哪扇门的时候发生了变化，</p>
+<ol>
+<li>他事先不知道没有被你选中的那两扇门后面奖品的情况，他<strong>随机选择</strong>任意扇门；</li>
+<li>他事先知道另外两扇门后面奖品的情况，他<strong>故意选择</strong>了那一扇没有奖品的门</li>
+</ol>
+<p>上面的两种情况的随机独立性完全不同，</p>
+<ul>
+<li>第一种情况，对于蒙蒂来说选择两扇门中的任意一个就像投掷硬币一样，两扇门对于他来讲是平等的选择，他选择任意扇门的概率是1/2。</li>
+<li>第二种情况，他倾向于选择没有奖品的那扇门，这次的选择不是随机的，而是有意识的选择，尤其当两扇门中有一扇有奖品的时候，他<strong>必然</strong>会选择没有奖品的那扇门，此时选择那扇门的概率是1，而不是1/2。这样的选择具有<strong>倾向性</strong>，而不是<strong>随机决策</strong>的结果。实际上，他排除了不是奖品的那扇门，所以<strong>剩下来的那扇门有奖品的概率更高</strong>，而不是和他选择打开的那扇门的概率相同。</li>
+</ul>
+<p>这里是另一种分析的思路，初始选择中，假设你选择了A，那么A门有奖品的概率是$\frac{1}{3}$，B门和C门有奖品的概率是$\frac{2}{3}$。B门和C门至少有一扇门是没有奖品的，蒙蒂知道奖品的位置，他打开那扇没有奖品的门，假设是C门。那剩下B门有奖品的概率就变成了$\frac{2}{3}$！<strong>蒙蒂帮你排除了没有奖品的那扇门</strong>，所以你换门之后赢得的概率一定是$\frac{2}{3}$！</p>
+<h2 id="问题变种">问题变种</h2>
+<p>这个问题的变种是，在你选定门之后，节目组请另一个嘉宾在你没有选定的两扇门里面随机选定一扇门，那扇门后面没有山羊，那么他打开其中任意一扇门，显示是山羊，此时更换选择的赢面是否更大？注意，这个嘉宾事先不清楚奖品在那一扇门后面。</p>
+<p>答案是否，无论是否更换选择，两个的概率都是1/2。参考之前的贝叶斯定理的推理，假设同前，你选了A门，那么此时嘉宾需要在B和C门直接选一个门，</p>
+<ul>
+<li>$Pr(E|A) = 1/2$，因为如果奖品在A门后面，这里的概率分两步，第一步是选择C门，嘉宾选择的概率是1/2，第二步是C门后面是羊的概率，此时是1，所以最终的概率是1/2 * 1 = 1/2；</li>
+<li>$Pr(E|B) = 1/2$，分析同上；</li>
+<li>$Pr(E|C) = 0$，第二步C门后面是羊的概率是0，所以按照上面的分析最终的概率是1/2*0 =0。</li>
+</ul>
+<p>可以看出无论更换与否，中奖的概率都是一样的。</p>
+<h2 id="参考资料">参考资料</h2>
+<ol>
+<li><a class="link" href="https://www.maa.org/external_archive/devlin/devlin_12_05.html"  target="_blank" rel="noopener"
+    >Monty Hall revisited</a>，问题的数学推导</li>
+<li><a class="link" href="https://www.wikiwand.com/zh/%E8%92%99%E6%8F%90%E9%9C%8D%E7%88%BE%E5%95%8F%E9%A1%8C"  target="_blank" rel="noopener"
+    >蒙提霍爾問題 - Wikiwand</a>，维基百科描述</li>
+<li><a class="link" href="https://www.statisticshowto.com/probability-and-statistics/monty-hall-problem/"  target="_blank" rel="noopener"
+    >Monty Hall Problem: Solution Explained Simply - Statistics How To</a>，一篇精湛的统计学分析</li>
+</ol>
+<hr>
+<p>全文完🚀</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/math/">math</a>
+        
+            <a href="/tags/bayes/">bayes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CSAPP读书笔记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">程序的机器级表示</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">hugo博客更换giscus评论系统</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E5%AE%8C%E5%85%A8%E5%B9%B2%E5%87%80%E5%8D%B8%E8%BD%BD%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">完全干净卸载双系统</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">工具服务总结</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

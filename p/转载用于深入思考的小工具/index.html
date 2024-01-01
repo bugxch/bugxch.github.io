@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=''>
+<meta name="keywords" content="思考"><title>[转载]用于深入思考的小工具</title>
+
+<link rel='canonical' href='http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E7%94%A8%E4%BA%8E%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='[转载]用于深入思考的小工具'>
+<meta property='og:description' content=''>
+<meta property='og:url' content='http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E7%94%A8%E4%BA%8E%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='转载' /><meta property='article:tag' content='工具' /><meta property='article:published_time' content='2020-07-19T21:18:11&#43;08:00'/><meta property='article:modified_time' content='2020-07-19T21:18:11&#43;08:00'/>
+<meta name="twitter:title" content="[转载]用于深入思考的小工具">
+<meta name="twitter:description" content="">
+    <link rel="shortcut icon" href="%5cfavicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue8037ab3c5772f21a937200919ce7a89_163234_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">不写，就无法思考</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bugxch'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/hoho2006'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:635426349@qq.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1704065269185" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4407" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M874.666667 181.333333H149.333333c-40.533333 0-74.666667 34.133333-74.666666 74.666667v512c0 40.533333 34.133333 74.666667 74.666666 74.666667h725.333334c40.533333 0 74.666667-34.133333 74.666666-74.666667V256c0-40.533333-34.133333-74.666667-74.666666-74.666667z m-725.333334 64h725.333334c6.4 0 10.666667 4.266667 10.666666 10.666667v25.6L512 516.266667l-373.333333-234.666667V256c0-6.4 4.266667-10.666667 10.666666-10.666667z m725.333334 533.333334H149.333333c-6.4 0-10.666667-4.266667-10.666666-10.666667V356.266667l356.266666 224c4.266667 4.266667 10.666667 4.266667 17.066667 4.266666s12.8-2.133333 17.066667-4.266666l356.266666-224V768c0 6.4-4.266667 10.666667-10.666666 10.666667z" fill="currentColor" p-id="4408"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#问题列表">问题列表</a></li>
+    <li><a href="#google问题列表">Google问题列表</a>
+      <ol>
+        <li><a href="#许世伟">许世伟</a></li>
+        <li><a href="#刘睿敏">刘睿敏</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%98%85%E8%AF%BB/" >
+                阅读
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%BD%AC%E8%BD%BD%E7%94%A8%E4%BA%8E%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/">[转载]用于深入思考的小工具</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2020/07/19</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 12 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>为了能够进一步探讨创造力，深度思考，学习，以及AI当中的一些话题，我发现我不得不先写一篇post来引入关于思考的一些工具和运作方式，作为后续posts探讨的基石。这篇文章会基于我在medium上的post进行展开。</p>
+<p>为了掌握一项技能，或者深入一个领域，我们首先要从它们的定义开始入手，即知道，它们是什么，意味着什么。同样的，为了具备创造力，我们首先得弄清楚它最基本的含义是什么。</p>
+<p>所谓创造，其最基本的一个含义就是能够做出、发展出一些之前没有的东西，重点在于“之前没有”。这里很tricky的一个地方在于，只要是世人看不到的、接触不到的，即可认为是“没有”，而不必是哲学意义上的本来所固有之类的抽象属性。而为了创造出“世人看不到”的东西，你仅仅需要去看到那些其他人看不到的东西就可以了。</p>
+<p>这种“看到他人看不到的东西”的技能，叫做“深入思考”。你的思想越有穿透性，你的洞察力越深入，你就越能看到表象之下他人注意不到的事情。并且，这是一个细密并且会随着你认知能力的成长而成长的动态过程：</p>
+<p>为了能够进一步探讨创造力，深度思考，学习，以及AI当中的一些话题，我发现我不得不先写一篇post来引入关于思考的一些工具和运作方式，作为后续posts探讨的基石。这篇文章会基于我在medium上的post进行展开。</p>
+<p>为了掌握一项技能，或者深入一个领域，我们首先要从它们的定义开始入手，即知道，它们是什么，意味着什么。同样的，为了具备创造力，我们首先得弄清楚它最基本的含义是什么。</p>
+<p>所谓创造，其最基本的一个含义就是能够做出、发展出一些之前没有的东西，重点在于“之前没有”。这里很tricky的一个地方在于，只要是世人看不到的、接触不到的，即可认为是“没有”，而不必是哲学意义上的本来所固有之类的抽象属性。而为了创造出“世人看不到”的东西，你仅仅需要去看到那些其他人看不到的东西就可以了。</p>
+<p>这种“看到他人看不到的东西”的技能，叫做“深入思考”。你的思想越有穿透性，你的洞察力越深入，你就越能看到表象之下他人注意不到的事情。并且，这是一个细密并且会随着你认知能力的成长而成长的动态过程：</p>
+<ul>
+<li>你的穿透性越强，你深入的层次就会越深入；</li>
+<li>你的视野越开阔，你所深入的方向就会越丰富；</li>
+<li>你对你要解决的问题理解得越透彻，你就越能把握深入的程度，知道深入到哪个层次就必须停止，否则就是偏离你的问题。</li>
+</ul>
+<p>每个人生而具备的能力是不同的，但我们不应该仅仅满足于继承于“天赋”的技能恒定值。正如人类区别于动物的地方在于，我们不会去接受大自然给我们的固有设定选项。我们会通过思考去发明工具，通过工具去开创出我们想要的世界。同样地，我们绝不应该也满足于自然给我们的“天赋”这一默认选项，我们会有意识地，通过练习、通过一些工具去塑造和提高我们想要的技能。</p>
+<p>掌握一项技能从来都不是件容易的事情。其第一步，必须要能够排除一些心理成见，让自己能够专注于训练本身。关于“深入思考”，很多人会拒绝去寻找、去接受提高他们思考能力的工具。他们会把这件事看得非常情绪化，非常personal。他们给出的反应是：提高思考的能力？我难道不会思考？你是说我无法掌握我自己的大脑？你是在侮辱我吗？(One direct ruthless answer from psychology to all these questions is yes, except the last one.)我对这些反应的一个看法是，人们非常容易在那些half-mature的技能或事情上得出偏见性的矛盾结论。</p>
+<ul>
+<li>如果你想去一个很远的地方，比如某个跨过太平洋的国家，你会很容易地接受这样一个事实：你不能够仅仅通过步行去完成这趟旅行。你会很乐意地运用一些工具，比如汽车或飞机去帮助你到达你的目的地。</li>
+<li>如果你想去搜索一些信息，你会很容易地接受你不能够仅仅通过自己的双手和眼睛去到处寻找材料。你会很乐意地运用一些工具，比如Google去帮助你寻找你想要的。</li>
+</ul>
+<p>那你为什么不能接受你需要运用工具才能好地提高你的思考技能的事实呢？人们通常会对那些他们穷尽所有能力都毫无办法的事情表现得客观一些，而对那些他们可以但却不够成熟的事情表现得很情绪化。（这也是为什么你比他人强一点点会引来嫉妒，强大很多会引来羡慕和祝福。）</p>
+<p>请抛掉这些无畏的偏见和情绪，让我们集中于提高思考深度的问题上。</p>
+<p>在我看来，问题列表(question list)，实践和写作是用于提高思考深度的最小巧并且最有效的工具组合。它们足够轻便，任何人都可以轻而易举地得到它们。但这样的易得性，丝毫没有降低它们在帮助你进入一个新的领域，解决一些复杂性难题时的有效性。恰恰相反，它们的小巧易得性，能够像Unix工具或者瑞士军刀一样，不仅能够为你提供各种行之有效的组合方案，而且还能将其复杂度和可操作性控制在你能接受的范围之内。</p>
+<h2 id="问题列表">问题列表</h2>
+<p>每一个领域都有独特的思维方式、思考角度和核心思想。在一个领域里的摸爬滚打，能让你学到的最有价值的东西不是这个领域的知识，而是这个领域独有的思维方式和它背后所展现的核心思想。另一方面，所谓进入一个领域，或者说在一个领域里开始入门，指的是你能够真正以这个领域所独有的角度去思考问题，能够用它背后所蕴含的思想去指导你的行事方式，进而让你具备这个领域所特有的做事风格。</p>
+<p>然而，要开始这样一段入门进而不断精深的旅程，你不能够像跑步一样，仅仅对自己说一声“往前”，然后就可以不断前进。大脑不会那样乖乖听话，因为那不是大脑的运作方式。如同钓鱼需要鱼饵，为了能够让大脑开启它的引擎，你也必须提供它的诱饵：“问题”。</p>
+<p>人的思维不会自动地往下深入，它只会根据你能提供给它的问题进行运转。你向什么方向抛出问题，它就向什么地方思考；你的问题越精细，它的思考就会越缜密；你抛给大脑的问题越频繁，它所训练的时间就会越长久。大师和新手之间的差距，在于处理一个问题时，他们头脑中的问题列表不同。大师头脑中的问题列表，不仅详实丰富，并且主次分明。他知道首先应该问出什么样的问题，去把握一件事的主题框架；然后，应该在哪些地方问出一些基本的构架性问题，以掌控住局势；最后，应该在哪些地方抛出更为细致的问题，以便能够进一步精细、优化自己所最关心的核心主题。你必须不断地扩充和删减你的问题列表，让它足够充分而又没有冗余，集中在“关节”性的部分，而不会被表象稀释它们的有效性。</p>
+<p>如何开始你的成长之旅，让你可以不断扩充你的问题列表？特别是开始阶段，如何从0变为1？我想，一份能够跨越领域的通识性的“元问题”列表或许能够给予你帮助。</p>
+<p>进入一个新的领域，你所需要开始的第一个问题系列便是：</p>
+<ol>
+<li>这个领域为什么会存在？它的意义是什么，能够为世界提供什么价值？</li>
+<li>这个领域关心哪些问题？为什么这些问题值得这个领域关心？</li>
+<li>你对上述问题的解答全面吗？如果是，你如何能够证明你的解答是完整的？如果不是，你怎样才能搜集到这个领域更多的信息？</li>
+</ol>
+<p>这些问题所展现的不仅是你如何进入新领域的途径，更是在向你说明，你的大脑如何在阅读上述材料时逐步落地，真正开始深入肤浅的表象，去进一步探索深刻的主题。很多人会嘲笑一些领域的“简单”和“枯燥”，对其从业者所表现出来的对该领域的“诗意”一般的向往表示费解和轻蔑，比如设计、电影、写作、数学和编程。</p>
+<p>面对设计作品，我们往往很难体会到设计者背后的良苦用心。为什么我们会不懂设计？因为我们缺乏最起码的入门。但只要我们通过上面的元问题列表检测一下自己，立刻就会推演出自己应该努力的方向，进入深度的沉思状态。</p>
+<ol>
+<li>为什么设计会存在？它真的仅仅是简单的装饰的堆砌吗？如果是，那为什么有些人会把奢侈品穿成淘宝货，而另外一些人能够把淘宝货穿出奢侈品的格调？如果不是，到底是什么能够让它能够直指你的内心，让你的所有行事方式都跟随设计者的意图移动？（嗯？感觉惊讶吗？嗯，你开始深入思考了）</li>
+<li>这个领域关心哪些问题？关心各种细小元素：长、短、明、暗？为什么这些问题值得这个领域关心？仅仅是因为它能影响你的审美吗？它会不会影响你的其它部分呢？你的情绪？判断力？甚至是你的价值取向？</li>
+<li>你对上述问题的解答全面吗？所谓设计，仅仅考虑的是它的“美”吗？是否有可能我们完全弄错了它所关心的主题呢？会不会有可能它对“美”的理解完全不同于对装饰的关注呢？</li>
+</ol>
+<p>没有问题的引导，你甚至不会知道自己的“不知”，轻易地陷入习焉不察、不以为意的恶习。要知道其中的精髓和内在含义，就不得不细加推敲和反复琢磨。这些“推敲”与“琢磨”都是建立在你的“问题列表”之上的。很多新人面对师傅的指导，常常容易听到一句这样的话，“你得多看看，你再多想想”。在我看来，这是非常粗糙的指导。我应该看什么呢？想什么呢？对于稍有经验的人，没有进行深思熟虑是态度问题。可是，对于初学者来说，他还没有构建出相应的问题列表，还不知道应该问什么问题，应该反复推敲一些什么问题。这也就是俗称的没入门。此时给出一份该领域的问题列表，对于新手的成长将会是极其有帮助的。但即便是无人指导（每一个新领域的开拓者都会遇到这样的情况），跨界的元问题列表，也能为你提供一个很好的探索的起点。</p>
+<p>所谓问之弥深，钻之弥坚，你思维的引擎会随着所问的问题而不断地提升其转速，而的你思考也会随着问题的引领而不断地加深。没有问题做诱饵，你的思考将无法深入，你的思维也无法缜密。“反复推敲”“心思缜密”“行事谨慎”，没有一份问题列表作依托，就会成为你的一厢情愿。</p>
+<p>另一方面，问题列表本身即会构成一个领域的框架。所谓框架，即是一个领域所依托的骨架。如若能够将其骨架上的问题和所思所问一一解决和考量，这个领域的其它部分，便能够得以健康成长。而这些思维的框架无一不是由问题列表所构成，比如波特五力模型，CFA的企业财务健康分析，又或者是创业人士对自己将要构建的世界的分析。在如今创业大潮的时代背景下，列举一份我搜集整理的Google的问题列表，为大家作为参考，翻译如下：</p>
+<h2 id="google问题列表">Google问题列表</h2>
+<p>思考一下你理想中的工作是什么样的，不是你当前的设想，而是你五年后的图景你想到什么地方去？</p>
+<ol>
+<li>你想做什么事？</li>
+<li>你想赚取多少薪水？</li>
+<li>写下你理想中的工作的介绍 (job description)：想想如果你在网上看到它，它应该是什么样的？</li>
+</ol>
+<p>现在，再想象你穿越到5年后并且你已经得到了这份工作：</p>
+<ol>
+<li>这时，你的简历上五年前到现在的履历应该是什么样的？</li>
+<li>从五年前到你现在得到这个职位，你应该会经历怎样的历程？</li>
+</ol>
+<p>请继续保持思考你理想中的工作，根据它去评估一下你自己的优势和劣势：你还需要提高哪些方面才能到达哪里？</p>
+<p>顺便提一句，如果你的结论是你现在已经得到了你理想中的工作，那么，这说明你的思考还不够大胆。重新做一遍上述的步骤，并且要保证你理想中的工作是基于你当前实力的延展，而不是毫无根据的幻想。</p>
+<p>如果你按照以上步骤行事，它应该会有效果。如果你不遵循它们，那么你很可能会为YogiBerra的一段话提供一段新的实例证明：“你要小心了，如果你都不知道你的理想乡在哪里，那么你很可能不会到达那里。”</p>
+<p>提出问题和解释问题的技能同给出问题答案的技能同样重要。</p>
+<p>现在，如果你对未来有你自己的一些看法，并且有了一些主意，那么你可以问问自己一些更加残酷的问题：</p>
+<ol>
+<li>一家非常小巧并且资本充裕的竞争公司，会如何去撼动你公司的核心业务？</li>
+<li>它会怎样利用数字平台的优势去挖掘你的弱点，或者撬走为你公司带来盈利最多的客户呢？</li>
+<li>你公司当前所做的哪些事情正在摧毁自己的业务呢？</li>
+<li>同质竞争和收益受损是你公司扼杀潜在创新所经常给出的理由吗？</li>
+<li>公司的领导层经常使用自己的产品吗？他们热爱它吗？</li>
+<li>他们愿意把自己的产品作为礼物送给自己的另一半吗？（显然这在很多情况下会有点不切实际，但它依旧是一个很好的思想实验。）</li>
+<li>你的客户热爱你的产品吗？</li>
+<li>还是说，你的客户是被一些其它因素绑定在了你的产品上，但这些因素在未来很可能会消失？</li>
+<li>想象一下如果你的客户完全不会被这些因素所绑定，那会发生什么？</li>
+<li>上一问题的一个有趣的推论是，如果你强迫你的产品团队将产品做得来让客户可以轻易抛弃你的产品而转向你的竞争者，你的产品团队会有什么样的反应？他们依然能够将产品做得来非常出色，以至于客户想要继续使用你的产品，即便是他们不必如此？</li>
+</ol>
+<p>关于产品的问题列表：</p>
+<ol>
+<li>它们有多少部分是建立在独特的技术洞见之上？</li>
+<li>有多少产品人是在高管阵营里面？</li>
+<li>公司是否狠狠地奖励和提拔了那些在创造出色产品中做出最大贡献的人？</li>
+<li>你的决策过程是导向最好的决策？还是导向最容易接受的决策？</li>
+<li>你的员工有多大的自由度？</li>
+<li>如果你的公司里有一名非常有创造力的员工，这名员工能够有足够的自由度去施展和实现他的想法而不用担心他自己的职位高低吗？</li>
+<li>你在新想法的决策是依据产品的优良程度，还是盈利程度？</li>
+<li>在你的公司里，谁的表现会更好呢？是那些掌握了大量信息的人，还是传播了大量信息的人？</li>
+<li>那些掌握大量信息的人会阻止信息在人们之间互相传播吗？</li>
+</ol>
+<p>上面都是一些非常残酷的问题，并且他们都没有显而易见的答案。但可以肯定的是，如果这些问题不被提出，那么肯定不会有相应的解决方案。</p>
+<p>另外，鉴于我自己的技术背景，这里再提供一份我整理的技术人员的问题列表供大家参考，它们来自于《技术人创业攻略》这本书。</p>
+<h3 id="许世伟">许世伟</h3>
+<ol>
+<li>先了解整个背景，看别人一般怎么做</li>
+<li>有哪些新兴的idea，这些idea是不是靠谱，如果我来做，会倾向于哪个方向</li>
+<li>新技术的思考方式是什么</li>
+<li>它要解决的问题是什么</li>
+<li>它和自己要解决的问题有多大的相关性</li>
+<li>你对这个技术的“了解”，是只限于多了解了一个名词？</li>
+<li>你清楚了这个技术背后的具体原理吗？</li>
+</ol>
+<p>产品的思考</p>
+<ol>
+<li>你了解这个产品的业务吗</li>
+<li>了解它的运作方式吗</li>
+<li>这个产品和商业的关系是什么呢</li>
+<li>用户为什么需要我们</li>
+<li>我们到底在颠覆什么</li>
+<li>到底要做什么，应该如何做</li>
+<li>工种认知和服务认知</li>
+</ol>
+<p>为什么要做这个服务
+把服务做好，要做哪些功能
+某个功能为什么会受到用户群的欢迎</p>
+<h3 id="刘睿敏">刘睿敏</h3>
+<p>你想用钱去换技术：</p>
+<ol>
+<li>技术是别人吃饭的东西，为什么会给你？你如果不自己造一个饭碗，别人为什么会把他的给你呢？</li>
+<li>什么叫自主可控？自己做的，从无到有的东西叫自主可控。不是自己做的，就不可控</li>
+<li>产业链上最核心的技术有哪些？你是否掌握了这些核心技术？</li>
+<li>你是否在持续跟踪这些核心技术？在应用真正开始盛行之前，你做好了理论上的准备吗？</li>
+<li>你是否只能谈一些如何应用、基于实践和操作层面的东西？</li>
+<li>你能深入细谈核心的技术要点和设计思路吗？</li>
+<li>你是否理解你修改的开源产品背后的设计思路？</li>
+<li>你是否有循序渐进地、逐层深入地了技术的核心？</li>
+<li>上层的工具开发，你是否有做相应的工作？中层的解析执行，你是否知道它们遵循的路径是什么？底层的优化，你是否知道该如何设计，你的优化又如何与其它模块配合？</li>
+<li>你的角色是否仅仅是一个使用者？</li>
+<li>你是否甚至连这个领域的理论都不清楚，还混淆了其中的各种概念</li>
+</ol>
+<hr>
+<p>这篇文章转载自下面的公众号，大家可以关注公众号GeekArtT</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E8%BD%AC%E8%BD%BD/">转载</a>
+        
+            <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E6%8C%87%E6%95%B0%E5%9F%BA%E9%87%91%E6%8A%95%E8%B5%84%E6%8C%87%E5%8D%97%E7%AC%94%E8%AE%B0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">《指数基金投资指南》笔记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/kindle%E6%9C%80%E4%BD%B3%E6%8E%92%E7%89%88%E8%AE%B0%E5%BD%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Kindle最佳排版记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2018%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2018阅读书单</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E4%BC%AF%E6%81%A9%E6%96%AF%E6%96%B0%E6%83%85%E7%BB%AA%E7%96%97%E6%B3%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">伯恩斯新情绪疗法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%B8%93%E6%B3%A8%E5%8A%9B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img3.doubanio.com/lpic/s28133355.jpg" loading="lazy" data-key="" data-hash="https://img3.doubanio.com/lpic/s28133355.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">《专注力》读书笔记</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='补码是如何产生的？
+'>
+<title>为什么会有补码</title>
+
+<link rel='canonical' href='http://blog.bugxch.top/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='为什么会有补码'>
+<meta property='og:description' content='补码是如何产生的？
+'>
+<meta property='og:url' content='http://blog.bugxch.top/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机' /><meta property='article:published_time' content='2018-07-21T20:30:02&#43;00:00'/><meta property='article:modified_time' content='2018-07-21T20:30:02&#43;00:00'/>
+<meta name="twitter:title" content="为什么会有补码">
+<meta name="twitter:description" content="补码是如何产生的？
+">
+    <link rel="shortcut icon" href="%5cfavicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue8037ab3c5772f21a937200919ce7a89_163234_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">不写，就无法思考</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bugxch'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/hoho2006'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:635426349@qq.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1704065269185" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4407" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M874.666667 181.333333H149.333333c-40.533333 0-74.666667 34.133333-74.666666 74.666667v512c0 40.533333 34.133333 74.666667 74.666666 74.666667h725.333334c40.533333 0 74.666667-34.133333 74.666666-74.666667V256c0-40.533333-34.133333-74.666667-74.666666-74.666667z m-725.333334 64h725.333334c6.4 0 10.666667 4.266667 10.666666 10.666667v25.6L512 516.266667l-373.333333-234.666667V256c0-6.4 4.266667-10.666667 10.666666-10.666667z m725.333334 533.333334H149.333333c-6.4 0-10.666667-4.266667-10.666666-10.666667V356.266667l356.266666 224c4.266667 4.266667 10.666667 4.266667 17.066667 4.266666s12.8-2.133333 17.066667-4.266666l356.266666-224V768c0 6.4-4.266667 10.666667-10.666666 10.666667z" fill="currentColor" p-id="4408"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#程序结果">程序结果</a></li>
+    <li><a href="#编码机制">编码机制</a>
+      <ol>
+        <li><a href="#二进制表示">二进制表示</a></li>
+        <li><a href="#整数编码">整数编码</a>
+          <ol>
+            <li><a href="#引入负数">引入负数</a></li>
+            <li><a href="#补码">补码</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%8A%80%E8%89%BA/" >
+                技艺
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81/">为什么会有补码</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2018/07/21</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 6 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>补码是如何产生的？</p>
+<p><img src="http://codeforwin.org/wp-content/uploads/2015/08/twos-complement-of-binary-value.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>今天读<a class="link" href="https://book.douban.com/subject/4188358/"  target="_blank" rel="noopener"
+    >《数值分析》</a>第 0 章的实数的浮点表示，对计算机存储数据的机制产生兴趣，所以自己写了个小程序结合现有资料探索总结下。</p>
+<p>我们现在遇到一个计算机的基本问题，</p>
+<blockquote>
+<p>给定一个数（整数或者实数）$X$，如何以 $w$个比特位的形式$[x_{w-1},x_{w-2},…,x_0]$将它存储在计算机的内存里？</p>
+</blockquote>
+<h2 id="程序结果">程序结果</h2>
+<p>我自己写的 C 程序如下，分别打印出整数<code>120055,-411</code>，浮点数<code>102.3235， -3.256</code>和双精度浮点数<code>120.254， -56.2441</code>在计算机内存中的二进制比特，这几个数字是我随手写的，但是均没有超出计算机的表示范围。程序如下所示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;stdio.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include&lt;stdlib.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">enum</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">INT</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="c1">//int和float有4个字节
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">FLOAT</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DOUBLE</span> <span class="o">=</span> <span class="mi">8</span> <span class="c1">//double有8个字节
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="n">TYPE_E</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">showBytes</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">ch</span><span class="p">,</span> <span class="n">TYPE_E</span> <span class="n">len</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34; %.2x&#34;</span><span class="p">,</span> <span class="n">ch</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">120055</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">411</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">a_f</span> <span class="o">=</span> <span class="mf">102.3235</span><span class="p">,</span> <span class="n">b_f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.256</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="n">a_d</span> <span class="o">=</span> <span class="mf">120.254</span><span class="p">,</span> <span class="n">b_d</span> <span class="o">=</span> <span class="o">-</span><span class="mf">56.2441</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;binary of a %d, 0x&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">showBytes</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">INT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;binary of b %d, 0x&#34;</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">showBytes</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">b</span><span class="p">,</span> <span class="n">INT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;binary of a_f %f, 0x&#34;</span><span class="p">,</span> <span class="n">a_f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">showBytes</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">a_f</span><span class="p">,</span> <span class="n">FLOAT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;binary of b_f %f, 0x&#34;</span><span class="p">,</span> <span class="n">b_f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">showBytes</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">b_f</span><span class="p">,</span> <span class="n">FLOAT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;binary of a_d %f, 0x&#34;</span><span class="p">,</span> <span class="n">a_d</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">showBytes</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">a_d</span><span class="p">,</span> <span class="n">DOUBLE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;binary of b_d %f, 0x&#34;</span><span class="p">,</span> <span class="n">b_d</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">showBytes</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">b_d</span><span class="p">,</span> <span class="n">DOUBLE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">getchar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>程序运行完成之后的结果如下所示</p>
+<p><img src="https://github.com/bugxch/blogpics/blob/master/201807/result.png?raw=true"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>因为是小端存储，因此整理之后的结果如下所示</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>数值</th>
+<th>内存表示（十六进制）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>120055</td>
+<td>0001D4F7</td>
+</tr>
+<tr>
+<td>-411</td>
+<td>FFFFFE65</td>
+</tr>
+<tr>
+<td>102.3235</td>
+<td>42CCA5A2</td>
+</tr>
+<tr>
+<td>-3.256</td>
+<td>C050624E</td>
+</tr>
+<tr>
+<td>120.254</td>
+<td>405E104189374BC7</td>
+</tr>
+<tr>
+<td>-56.2441</td>
+<td>C04C1F3EAB367A10</td>
+</tr>
+</tbody>
+</table></div>
+<p>从上面的结果可以看出不同数值的长度不同，因为计算机给每个不同的类型分配的内存大小不同，这个可以通过 C 中的<code>sizeof</code>函数看出来。下面我们需要搞清楚的是，**为什么这些数都是以这样的形式和内容存储在计算机中的？**这一篇文章，我们先谈比较简单的整数的表示，下一篇文章会解释浮点数的表示方法。</p>
+<h2 id="编码机制">编码机制</h2>
+<h3 id="二进制表示">二进制表示</h3>
+<p>我们知道，计算机中以二进制的形式存储数字，所有的十进制的数字都需要转换成二进制存储起来。至于十进制和二进制如何转换，课本和网上已经有非常详尽的解释（可参考文末的文章），而且有非常完善的<a class="link" href="http://tool.oschina.net/hexconvert/"  target="_blank" rel="noopener"
+    >在线进制转换工具</a>可以轻松实现多个进制之间的相互转换，这里不再赘述。为了便于对比，除非特殊情况，本文的内容均使用十六进制数。</p>
+<h3 id="整数编码">整数编码</h3>
+<p>我们先从简单的正整数入手，<code>120055 = 0x1D4F7</code>，考虑到计算机<code>int</code>类型使用 4 个字节，补齐前面的<code>0</code>，于是为<code>0x0001D4F7</code>，这个与我们程序验证结果一致。因此，可以断定<strong>正整数在计算机中存储的形式就是它转换成二进制的形式</strong>。</p>
+<h4 id="引入负数">引入负数</h4>
+<p>那么负整数是如何保存的呢？来看第二个数字<code>-411</code>，因为<code>411 = 0x19b</code>，所以我们直观的表示就是<code>-0x19b</code>，但是计算机不能表示负号，那么该如何处理这个问题呢？一个直接简单的想法是使用 1 个比特表示符号正负，自然的想法是取最高位，<strong>0 表示正数，1 表示负数</strong>，所以可以表示成<code>0x8000019b</code>。这样表示比较直观，但是有一个小问题。为了便于说明，我将问题的规模缩小，比如考虑 3 个比特的二进制和十进制数之间的转换。如果使用我们之前的换算方法，那么二进制编码的情况如下</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>十进制</th>
+<th>二进制</th>
+<th>十进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>000</strong></td>
+<td>0</td>
+<td><strong>100</strong></td>
+<td>0</td>
+</tr>
+<tr>
+<td>001</td>
+<td>1</td>
+<td>101</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>010</td>
+<td>2</td>
+<td>110</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>011</td>
+<td>3</td>
+<td>111</td>
+<td>-3</td>
+</tr>
+</tbody>
+</table></div>
+<p>很明显，十进制<code>0</code>有两种不同的编码方式，3 个比特本来可以表示不同的 8 个数，却只能表示 7 个不同的数，这是对信息比特的浪费。最佳的表示方式应该满足，<strong>在一个一致的运算关系之下，不同的二进制编码表示不同的十进制数</strong>，于是引入了<strong>补码</strong>的概念。</p>
+<h4 id="补码">补码</h4>
+<p>首先，补码如何计算？</p>
+<blockquote>
+<p>给定 $w$ 个比特，如何求一个十进制数 $X$ 的二进制补码 $[x_{w-1},x_{w-2},…,x_0]$？</p>
+</blockquote>
+<p>以 8 比特为例，如果求正整数 8 的相反数，我们用<code>0-8 = -8</code>，补码的取法类似，使用如下的计算</p>
+<p>００００００００
+－００００１０００
+－－－－－－－－－
+　１１１１１０００</p>
+<p>但是不够减，小学算术告诉我们可以向前借位，于是有</p>
+<p>１００００００００
+－００００１０００
+－－－－－－－－－
+　１１１１１０００</p>
+<p>问题解决，总结下这个变换过程：最高有效位表示正负号，正数 XX 的补码是其自身的二进制表示 XX，负数 XX 的补码是 2w−|X|2w−|X|。</p>
+<p>举个例子，比如使用 4 个 bit 表示 6 和 - 7 的补码，分别是 $(1100)<em>2$和和$(2^4 - |7|)</em>{10} = (9)_{10} = (1001)_2$。这里需要特别说明下，经常听到求一个负数。这里需要特别说明下，经常听到求一个负数X的二进制补码，就是先求的二进制补码，就是先求$|X|$ 的二进制表示，<strong>除了符号位之外的所有位取反加 1</strong>，这和上面的方法<strong>等效</strong>，因为$2^w - |X| = (1000…0)_2 - |X| = (111…1 + 000…1)_2 - |X| = (111…1)_2 - |X| + 1$，一目了然。使用该方法编码 3 个比特的编码，如下所示</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>十进制</th>
+<th>二进制</th>
+<th>十进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>000</td>
+<td>0</td>
+<td>100</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>001</td>
+<td>1</td>
+<td>101</td>
+<td>-3</td>
+</tr>
+<tr>
+<td>010</td>
+<td>2</td>
+<td>110</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>011</td>
+<td>3</td>
+<td>111</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table></div>
+<p>很明显，<strong>使用补码，所有的十进制数都有与之对应唯一的二进制编码表示</strong>。使用这个方法可以计算出来 $(-411)<em>{10} = (FFFFE65)</em>{16}$<strong>，与之前程序的结果完全一致！！<strong>于是猜想</strong>计算机使用补码存储对应的整数！</strong></p>
+<blockquote>
+<p>已知一个 $w$ 比特的二进制补码$[x_{w-1},x_{w-2},…,x_0]$，如何求它对应的十进制数 $X$？</p>
+</blockquote>
+<p>如果知道这个数的补码形式，根据<a class="link" href="https://book.douban.com/subject/26912767/"  target="_blank" rel="noopener"
+    >《深入理解计算机系统》</a>中给出二进制数补码表示$[x_{w-1},x_{w-2},…,x_0]$ 与十进制数之间的转换关系</p>
+<p>$$
+X = -x_{w-1}2^{w-1} + \sum_{i = 0}^{w-2}{x_i2_i}
+$$</p>
+<blockquote>
+<p>使用补码有什么好处？</p>
+</blockquote>
+<p>第一，<code>0</code>的表示唯一。
+第二，<strong>所有整数的加法统一在一个法则之下，使用一套逻辑电路</strong>。现在有一个问题，异号两个数相加怎么计算，比如</p>
+<blockquote>
+<p><code>1 + (-3) = ?</code></p>
+</blockquote>
+<p>根据数字的表示不同，这个问题有如下几种解法。</p>
+<ul>
+<li>
+<p>十进制解法，也就是我们人类自己的解法，首先我们会判断 3 和 - 2 那个绝对值大，之后符号取绝对值大的那个，最后绝对值大的减去绝对值小的作为新的数字的绝对值。听起来比较拗口，这里分了好几个步骤：1) 比较绝对值大小，决定符号；2) 绝对值相减确定结果的绝对值。</p>
+</li>
+<li>
+<p>使用之前的编码方案（为了简单，我们仍然使用 3 比特数举例，如果我们使用之前的表示方法），直接二进制相减，即 $(1 + (-3))_{10} = (001 + 111)_2 = (000)<em>2 = (0)</em>{10}$，这是明显错误的结果。如果想要正确，我们需要借鉴十进制的解法，先判断绝对值，再确定符号，两个数字相加需要将符号单独拎出来处理，加法是计算机的最基础的运算操作，这样的处理逻辑<strong>增加了电路的设计复杂度</strong>，极大地影响计算机的性能。</p>
+</li>
+<li>
+<p>使用补码。$(1 + (-3))_{10} = (001 + 101)_2 = (110)<em>2 = (-2)</em>{10}$，可以自行验证其他的所有的异号的和，都能得到正确的答案。可以看出，符号位直接当作数据的一部分参与运算，计算机并没有单独对其做处理，从计算机的角度来看<strong>简单粗暴有效</strong>，之所以会有这么神奇的结果，是因为
+$$
+[X]_补 + [Y]_补 = [X+Y]_补
+$$
+这个定理可以按照两数同号，两数异号两种情况进行证明。正因为有这样的数学关系，所以<strong>计算机将补码作为整数存储的形式</strong>。</p>
+</li>
+</ul>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li><a class="link" href="https://book.douban.com/subject/4188358/"  target="_blank" rel="noopener"
+    >《数值分析》</a>，0.2 和 0.3 节</li>
+<li><a class="link" href="https://book.douban.com/subject/26912767/"  target="_blank" rel="noopener"
+    >《深入理解计算机系统》</a>，第二章</li>
+<li><a class="link" href="http://www.cnblogs.com/gaizai/p/4233780.html"  target="_blank" rel="noopener"
+    >二、八、十、十六进制转换（图解篇） - 听风吹雨 - 博客园</a></li>
+<li><a class="link" href="http://www.ruanyifeng.com/blog/2009/08/twos_complement.html"  target="_blank" rel="noopener"
+    >关于 2 的补码</a></li>
+<li><a class="link" href="https://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html"  target="_blank" rel="noopener"
+    >Two’s Complement</a></li>
+</ul>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E6%9E%81%E7%AE%80%E7%89%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">极简版《计算机原理》</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E5%A0%86%E6%A0%88%E5%87%BA%E6%A0%88%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">堆栈出栈序列问题</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%AE%8F/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">C语言中的宏</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E5%AD%97%E8%8A%82%E5%BA%8F/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">字节序</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8F%B2/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">操作系统简史</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。
+'>
+<title>信息的表示和处理</title>
+
+<link rel='canonical' href='http://blog.bugxch.top/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='信息的表示和处理'>
+<meta property='og:description' content='疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。
+'>
+<meta property='og:url' content='http://blog.bugxch.top/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:tag' content='CSAPP' /><meta property='article:published_time' content='2022-04-22T17:13:44&#43;08:00'/><meta property='article:modified_time' content='2022-04-22T17:13:44&#43;08:00'/>
+<meta name="twitter:title" content="信息的表示和处理">
+<meta name="twitter:description" content="疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。
+">
+    <link rel="shortcut icon" href="%5cfavicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue8037ab3c5772f21a937200919ce7a89_163234_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">不写，就无法思考</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bugxch'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/hoho2006'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:635426349@qq.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1704065269185" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4407" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M874.666667 181.333333H149.333333c-40.533333 0-74.666667 34.133333-74.666666 74.666667v512c0 40.533333 34.133333 74.666667 74.666666 74.666667h725.333334c40.533333 0 74.666667-34.133333 74.666666-74.666667V256c0-40.533333-34.133333-74.666667-74.666666-74.666667z m-725.333334 64h725.333334c6.4 0 10.666667 4.266667 10.666666 10.666667v25.6L512 516.266667l-373.333333-234.666667V256c0-6.4 4.266667-10.666667 10.666666-10.666667z m725.333334 533.333334H149.333333c-6.4 0-10.666667-4.266667-10.666666-10.666667V356.266667l356.266666 224c4.266667 4.266667 10.666667 4.266667 17.066667 4.266666s12.8-2.133333 17.066667-4.266666l356.266666-224V768c0 6.4-4.266667 10.666667-10.666666 10.666667z" fill="currentColor" p-id="4408"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#计算机的字长">计算机的字长</a></li>
+    <li><a href="#整数的表示">整数的表示</a>
+      <ol>
+        <li><a href="#整数范围">整数范围</a></li>
+        <li><a href="#补码表示">补码表示</a></li>
+        <li><a href="#c语言中无符号和有符号的转换">C语言中无符号和有符号的转换</a></li>
+        <li><a href="#整数的扩展和截断">整数的扩展和截断</a></li>
+        <li><a href="#编程建议">编程建议</a></li>
+      </ol>
+    </li>
+    <li><a href="#整数计算">整数计算</a>
+      <ol>
+        <li><a href="#整数加法">整数加法</a></li>
+        <li><a href="#整数乘法">整数乘法</a></li>
+        <li><a href="#整数除法">整数除法</a></li>
+      </ol>
+    </li>
+    <li><a href="#浮点数表示">浮点数表示</a>
+      <ol>
+        <li><a href="#ieee-754浮点数的表示法">IEEE 754浮点数的表示法</a></li>
+        <li><a href="#舍入rounding">舍入（Rounding）</a>
+          <ol>
+            <li><a href="#十进制的舍入">十进制的舍入</a></li>
+            <li><a href="#二进制的舍入">二进制的舍入</a></li>
+            <li><a href="#问题解答">问题解答</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#浮点数计算">浮点数计算</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%8A%80%E8%89%BA/" >
+                技艺
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/">信息的表示和处理</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2022/04/22</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 10 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。</p>
+<p><img src="/"
+	
+	
+	
+	loading="lazy"
+	
+	
+><img src="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="计算机的字长">计算机的字长</h2>
+<blockquote>
+<p>每一台计算机都有字长，指明指针数据的标称大小，字长决定了的最重要的系统参数是虚拟地址空间的最大大小。</p>
+</blockquote>
+<ol>
+<li>字长决定了指针的存储大小，32位的字长的指针存储空间是4字节，64位是8个字节；</li>
+<li>字长决定了虚拟地址的最大大小，所以32位的寻址空间最大是$2^{32}$Byte = 4GB，64位的是$2^{64}$Byte = 16EB。</li>
+</ol>
+<p>典型的C语言的数据类型的大小参考下表</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>C声明</th>
+<th style="text-align:center">32bit</th>
+<th style="text-align:center">64bit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td>short int</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td>int</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td>long int</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td>long long int</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td>char *</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td>float</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td>double</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table></div>
+<p>查看上面的表格，32bit和64bit的大部分数据类型的字节长度是一样的，仅有两个不同，long int和char *。可以使用下面的代码查看每个不同类型的字节的大小</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;size of char is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;size of short is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">short</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;size of int is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;size of long is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;size of long long is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;size of double is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;size of float is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;size of char* is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我在自己的64位字长的win10电脑上试了下，除了char *的字节数是4，其他的与上面表格的结果一样。</p>
+<h2 id="整数的表示">整数的表示</h2>
+<h3 id="整数范围">整数范围</h3>
+<p>整数分为无符号和有符号整数，如果表示整数$w$位比特，那么无符号表示的范围是$[0, 2^w-1]$，有符号整数表示的范围是$[-2^{w-1},2^{w-1}-1]$。下面是一些典型值，</p>
+<p><img src="https://pic.imgdb.cn/item/6263b5f9239250f7c5732b75.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>参考下表，可以在自己的PC上可以通过下面的代码，得到上面的值</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Macro</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHAR_BIT</td>
+<td>8</td>
+<td>Defines the number of bits in a byte.</td>
+</tr>
+<tr>
+<td>SCHAR_MIN</td>
+<td>-128</td>
+<td>Defines the minimum value for a signed char.</td>
+</tr>
+<tr>
+<td>SCHAR_MAX</td>
+<td>+127</td>
+<td>Defines the maximum value for a signed char.</td>
+</tr>
+<tr>
+<td>UCHAR_MAX</td>
+<td>255</td>
+<td>Defines the maximum value for an unsigned char.</td>
+</tr>
+<tr>
+<td>CHAR_MIN</td>
+<td>-128</td>
+<td>Defines the minimum value for type char and its value will be equal to SCHAR_MIN if char represents negative values, otherwise zero.</td>
+</tr>
+<tr>
+<td>CHAR_MAX</td>
+<td>+127</td>
+<td>Defines the value for type char and its value will be equal to SCHAR_MAX if char represents negative values, otherwise UCHAR_MAX.</td>
+</tr>
+<tr>
+<td>MB_LEN_MAX</td>
+<td>16</td>
+<td>Defines the maximum number of bytes in a multi-byte character.</td>
+</tr>
+<tr>
+<td>SHRT_MIN</td>
+<td>-32768</td>
+<td>Defines the minimum value for a short int.</td>
+</tr>
+<tr>
+<td>SHRT_MAX</td>
+<td>+32767</td>
+<td>Defines the maximum value for a short int.</td>
+</tr>
+<tr>
+<td>USHRT_MAX</td>
+<td>65535</td>
+<td>Defines the maximum value for an unsigned short int.</td>
+</tr>
+<tr>
+<td>INT_MIN</td>
+<td>-2147483648</td>
+<td>Defines the minimum value for an int.</td>
+</tr>
+<tr>
+<td>INT_MAX</td>
+<td>+2147483647</td>
+<td>Defines the maximum value for an int.</td>
+</tr>
+<tr>
+<td>UINT_MAX</td>
+<td>4294967295</td>
+<td>Defines the maximum value for an unsigned int.</td>
+</tr>
+<tr>
+<td>LONG_MIN</td>
+<td>-9223372036854775808</td>
+<td>Defines the minimum value for a long int.</td>
+</tr>
+<tr>
+<td>LONG_MAX</td>
+<td>+9223372036854775807</td>
+<td>Defines the maximum value for a long int.</td>
+</tr>
+<tr>
+<td>ULONG_MAX</td>
+<td>18446744073709551615</td>
+<td>Defines the maximum value for an unsigned long int.</td>
+</tr>
+</tbody>
+</table></div>
+<p>代码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;limits.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;int max is %d, int min is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">INT_MAX</span><span class="p">,</span> <span class="n">INT_MIN</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;char max is %d, char min is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">CHAR_MAX</span><span class="p">,</span> <span class="n">CHAR_MIN</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="补码表示">补码表示</h3>
+<p>$w$bit的有符号整数数学表示如下，</p>
+<p>$$
+B 2 T_{w}(\vec{x}) \doteq-x_{w-1} 2^{w-1}+\sum_{i=0}^{w-2} x_{i} 2^{i}
+$$</p>
+<p>有一个理解的小技巧，与无符号的整数相比，对于这$w$位bit解读差异仅仅在最高位$x_{w-1}$，有符号数的权重是$-2^{w-1}$，无符号数的权重是$2^{w-1}$。这个是理解书本里面内容的技巧。典型数值的补码表示如下所示，</p>
+<p><img src="https://pic.imgdb.cn/item/6263bb95239250f7c5832dd2.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>从上面的表格可以看出，</p>
+<ol>
+<li>相同位宽的无符号整数最大值与有符号整数的-1的底层bit一样；</li>
+<li>$TMin_w = -TMax_w - 1$。</li>
+</ol>
+<blockquote>
+<p>假如 <code>0xFA</code>是某个2字节数的补码表示，那么它实际表示的数字是十进制的多少？</p>
+</blockquote>
+<p>这个问题的解答可以通过补码的定义（参考上文）逐位计算，</p>
+<p>$$
+B2T_{w}(\vec{x}) \doteq-x_{w-1} 2^{w-1}+\sum_{i=0}^{w-2} x_{i} 2^{i} = -x_{w-1} 2^{w-1}+A
+$$</p>
+<p>但是还有更简单直观的计算方法，我们知道二进制的无符号整数的定义是</p>
+<p>$$
+B2U_{w}(\vec{x}) \doteq x_{w-1} 2^{w-1}+\sum_{i=0}^{w-2} x_{i} 2^{i} = x_{w-1} 2^{w-1}+A
+$$</p>
+<p>所以，可以得到$B2U_{w}(\vec{x})  =  B2T_{w}(\vec{x})  + x_{w-1} 2^{w}$，因此，</p>
+<ol>
+<li>如果最高位是0，二者的结果是一样的；</li>
+<li>如果最高位是1，那么可以进一步推导</li>
+</ol>
+<p>$$
+B2T_{w}(\vec{x}) = B2U_{w}(\vec{x}) - x_{w-1} 2^{w} =  -\left[(2^{w} - 1) -B2U_{w}(\vec{x})\right] - 1
+$$</p>
+<p>而$(2^{w} - 1) -B2U_{w}(\vec{x}) = x按位取反$，所以可以将这个补码的表示理解成unsigned的数，然后减去长度为$w$的全1的二进制比特，再减去1。</p>
+<p>所以，0xFA是情况2，补码表示的是 <code>-(~0xFA) - 1 = -0x05 - 1 = -6</code>。</p>
+<h3 id="c语言中无符号和有符号的转换">C语言中无符号和有符号的转换</h3>
+<ol>
+<li>位宽一样的无符号和有符号的整数之间的转换，遵循<strong>底层的bit不变</strong>的原则，互相进行转换，也就是说无论如何转换，仅仅是底层bit的解读方法不同而已。</li>
+<li>C语言中的无符号数和有符号数的二元计算，都会将<strong>有符号数强制转换为无符号整数</strong>进行计算。</li>
+</ol>
+<h3 id="整数的扩展和截断">整数的扩展和截断</h3>
+<p>整数的扩展分为无符号扩展和有符号数的扩展，</p>
+<ol>
+<li>无符号数的扩展就往高位bit填充0；</li>
+<li>有符号数的扩展方式是符号扩展，即最高位符号位填充空位。</li>
+</ol>
+<p>整数截断逻辑很简单，就是底层的bit表示按照目的的位宽直接截断。这一小节有一个技巧，如果是位宽较小的有符号转换成为位宽较宽的无符号数，则是<strong>保持符号不变，先改变位宽</strong>，<strong>再进行转换</strong>，比如下面的代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">short</span> <span class="n">sx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">unsigned</span> <span class="n">uy</span> <span class="o">=</span> <span class="n">sx</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;uy = %u: </span><span class="se">\t</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">uy</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上面的代码中，第2行等价于(unsigned int)(int)sx，先应用符号扩展将short扩展到int，然后再使用等宽bit位的无符号的转换。</p>
+<h3 id="编程建议">编程建议</h3>
+<p>在实际的软件开发中，尤其要注意无符号整数和有符号整数的转换，比如下面的代码的第4行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">float</span> <span class="nf">sum_element</span><span class="p">(</span><span class="kt">float</span> <span class="n">a</span><span class="p">[],</span> <span class="kt">unsigned</span> <span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">result</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果length的初始值为0，那么length - 1会是一个非常大的正数，导致对于数组a的越界访问。</p>
+<h2 id="整数计算">整数计算</h2>
+<p>这一部分的推导看起来比较复杂，刚开始读比较吃力，但是如果看懂了推导中的原则，理解起来就比较清晰了，作者在这一段的推理非常严谨。</p>
+<h3 id="整数加法">整数加法</h3>
+<ol>
+<li>
+<p>无符号加法很简单，直观来讲，就是逐位相加，超过bit表示范围的高位直接截断。有符号数的加法，推理的原则是<strong>有符号数加法补码之和与无符号之和有完全相同的位级表示</strong>。</p>
+</li>
+<li>
+<p>对于加法的比较直观的理解，无论是无符号还是有符号数，两个数的加法依然需要在特定位宽的bit位上表示出来，也就是说最终的结果肯定是要落在合理的表示区间的。</p>
+<ul>
+<li>如果$w$位宽的无符号数超过表示区间，那么就$\mod 2^w$，也就是减去$2^w$；</li>
+<li>如果$w$位宽的有符号数超过表示区间，同样是$\mod 2^w$，但是分两种，如果是负溢出，就$+2^w$，如果是负溢出就$-2^w$，举例4bit位宽的（-6）+（-3）= -9，小于-8，所以是负溢出，需要再加16，结果就是7。</li>
+</ul>
+</li>
+<li>
+<p>需要注意这里没有整数减法章节，但是介绍了<strong>逆元</strong>的概念，$x-^t_w{y} = x + (-^t_w{y})$，两个数相减相当于加上第二个数的逆元。计算的原则同上面的2，如果超过表示区间，就做模运算。</p>
+</li>
+<li>
+<p>补码的逆元，有一种比较巧妙的方法，所有比特位取反，然后最低位+1，累进相加。</p>
+</li>
+</ol>
+<h3 id="整数乘法">整数乘法</h3>
+<ol>
+<li>无符号数乘法也很简单，相乘之后取模；</li>
+<li>有符号数的乘法，推理的原则是<strong>有符号数加法补码之积与无符号之积有完全相同的位级表示</strong>。所以可以将有符号数的乘法，先转换成为无符号数的乘法计算，之后再以有符号数的补码解读位级表示即可。</li>
+<li>与常数的乘积可以转化成为右移位、加法和减法的组合，时钟周期比单纯的乘法更少。</li>
+</ol>
+<h3 id="整数除法">整数除法</h3>
+<p>书里面没有介绍整数的通用除法，详细推理了整数除以2的幂的过程，</p>
+<ol>
+<li>无论无符号还是有符号整数，$x\gg k = \lfloor {x/2^k}\rfloor$；</li>
+<li>对于有符号整数，$(x + (1\ll k) - 1)\gg k = \lceil x/2^k\rceil$，这里实际上是一个数学的小技巧，$(m+n-1)/n = \lceil m/n\rceil$。</li>
+</ol>
+<blockquote>
+<p>习题2.44是掌握整数运算的试金石。</p>
+</blockquote>
+<h2 id="浮点数表示">浮点数表示</h2>
+<h3 id="ieee-754浮点数的表示法">IEEE 754浮点数的表示法</h3>
+<p>参考<a class="link" href="https://bugxch.github.io/floatincomputer/#"  target="_blank" rel="noopener"
+    >浮点数在计算机中的表示</a>。</p>
+<h3 id="舍入rounding">舍入（Rounding）</h3>
+<p>上面的IEEE的浮点数的表示方法解决了二进制bit到浮点数的映射问题，但是如果给定一个任意精度的实数$x$，如果使用给定位宽的浮点数表示这个数呢？这里就要引入舍入的概念。<strong>舍入解决了将数学上的任意精度的实数集合到计算机表示的有限元素的浮点数集合的映射问题</strong>。从之前的浮点数的表示可以看出，计算机表示的浮点数不可能有无限的精度，将半精度浮点数在数轴上标示出来，它在数轴上的分布是离散的，任意两个离散标示值之间的实数是无穷多的，这些实数如果要用半精度表示就只能通过某种方法<strong>舍入</strong>到标示的某个值上。以下面的问题为例，</p>
+<blockquote>
+<p>半精度浮点数有下面的点，[0.01118, 0.011185, 0.01119]，那么0.011183该如何表示成半精度浮点数结果是什么呢？</p>
+</blockquote>
+<h4 id="十进制的舍入">十进制的舍入</h4>
+<p>直觉告诉我，这个数要么就是0.01118，要么就是0.011185，因为这个数字介于二者之间，如果按照误差尽量小的原则，那么可以计算一下与两个备选数字的差的绝对值，然后舍入到绝对值最小的那个上。这个就是C语言当前使用的舍入方法，称为最接近值的舍入（round to nearest)。这里面还有一个特殊的地方，以对于十进制的数字为例，舍入到最近的整数，如果这个数是两个整数的中间的值，也就是X.5的形式，那么舍入到最近的偶数。比如0.5是0和1的中间值，它举例两个数的举例是一样的，舍入到0，3.5是3和4的中间值，舍入到4。这样做可以最小化一组数的舍入误差的均值。因此，这种舍入方法又称为round to even。除此之外，还有如下的舍入方法</p>
+<ol>
+<li>向0舍入，数轴上向着0的方向舍入；</li>
+<li>向下舍入，也是向$-\infty$舍入；</li>
+<li>向上舍入，即向$+\infty$舍入</li>
+</ol>
+<p>如下图所示，表示了上面的三种情况，
+<img src="https://pic.imgdb.cn/item/6269d201239250f7c523458b.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="二进制的舍入">二进制的舍入</h4>
+<p>那如何将十进制的舍入类推到二进制的舍入呢？这里包括两个步骤：</p>
+<ol>
+<li>确定舍入的位数，对于某个二进制数$0.001001_{2}$，如果是舍入到小数点后3位，那么这个位数就是3；</li>
+<li>确定需要舍入的数是否位于两个数的中间位置。</li>
+</ol>
+<ul>
+<li>如果在中间位置，那么向偶数方向舍入，对于二进制来讲，偶数就是最低有效位为0的数；</li>
+<li>如果不在中间位置，就向最近的数字舍入。</li>
+</ul>
+<p>以上面的数$0.001001_2$为例，就是确认这个数是否在$0.001_2$和$0.010_2$的中间位置，这个位置的数字是$0.0011_2$。很明显$0.001001_2$不是$0.0011_2$，而且小于该值，所以舍入到$0.001_2$。</p>
+<p>可以归纳一下，对于给定小数位的浮点数的舍入，对于形如$x.xxxyxxx_2$的二进制数（x和y是0或者1，而且不同位上的数字相互独立），假如舍入到小数点后4位，那么$y=0$或者$y=1$。</p>
+<ul>
+<li>如果$y=0$，那么可能舍入的两个二进制数是$x.xxx0_{2}$和$x.xxx1_{2}$，两个的中间值是$x.xxx01_2$（逐位相加，左移1个bit）；</li>
+<li>如果$y=1$，那么可能舍入的两个二进制数是$x.xxx1_{2}$和$x.xx(x+1)0_{2}$，两个的中间值是$x.xxx11_2$。</li>
+</ul>
+<p>所以，无论要舍入的小数位是0或者1，需要舍入的中间值一定是$x.xxxy1_2$形式。</p>
+<h4 id="问题解答">问题解答</h4>
+<p>回到最初的问题，$0.01118_{10}$的二进制表示是0010000110111001，按照浮点数的表示法，也就是$1.0110111001_2\times 2^{-7}$，同样的$0.011185_{10}$的二进制表示是0010000110111010，也就是$1.0110111010_2\times 2^{-7}$，如果按照精确到二进制小数点后10位（因为半精度浮点数的尾数是用10个bit来表示的），那么这两个数的中间数应该是$1.01101110011_2\times 2^{-7}$</p>
+<p>$0.011183_{10}$，转换成二进制是$1.0110111001110_2 \times 2 ^{-7}$，与中间数的二进制相比，明显大于中间数，所以舍入到比较大的$0.011185_{10}$。如果按照十进制的方式来处理也是一样的，$0.01118_{10}$和$0.011185_{10}$的中间数是$0.0111825_{10}$，明显大于这个中间数，也是舍入到较大的数。</p>
+<h2 id="浮点数计算">浮点数计算</h2>
+<p>书本里面没有做详细的计算规则的说明，参考<a class="link" href="https://courses.engr.illinois.edu/cs357/sp2020/notes/ref-5-rounding.html"  target="_blank" rel="noopener"
+    >Rounding - CS 357</a>做一下说明。两个浮点数做加法需要完成下面的3个步骤：</p>
+<ol>
+<li>将两个浮点数调整到相同的指数；</li>
+<li>做简单的数学的二进制加法；</li>
+<li>对结果进行舍入。
+以二进制数$a =(1.101)_2$和$b=(1.001)_2\times 2^{-1}$为例，假设计算机系统表示尾数的只有3bit，那么计算就会是这样</li>
+</ol>
+<p>$$
+\begin{aligned}
+a &amp;=1.101 \times 2^{1} \
+b &amp;=0.01001 \times 2^{1} \
+a+b &amp;=1.111 \times 2^{1}
+\end{aligned}
+$$</p>
+<p>最后的结果以小数点后3位作为舍入精度位。可以看到无论是哪个数，有效的数字为是4位，所以没有有效数字位的丢失。</p>
+<hr>
+<p>全文完🚀</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+        
+            <a href="/tags/csapp/">CSAPP</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">浮点数在计算机中的表示</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CSAPP读书笔记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">程序的机器级表示</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E5%85%B3%E4%BA%8E%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%B7%E6%80%9D/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于浮点数的迷思</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://pic.imgdb.cn/item/60940147d1a9ae528fdc3a1d.png" loading="lazy" data-key="" data-hash="https://pic.imgdb.cn/item/60940147d1a9ae528fdc3a1d.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">二分查找——从入门到精通</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>书单 on 巴巴变的博客</title>
+        <link>http://blog.bugxch.top/tags/%E4%B9%A6%E5%8D%95/</link>
+        <description>Recent content in 书单 on 巴巴变的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>bugxch</copyright>
+        <lastBuildDate>Thu, 26 Jul 2018 06:38:02 +0000</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/%E4%B9%A6%E5%8D%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2018阅读书单</title>
+        <link>http://blog.bugxch.top/p/2018%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95/</link>
+        <pubDate>Thu, 26 Jul 2018 06:38:02 +0000</pubDate>
+        
+        <guid>http://blog.bugxch.top/p/2018%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;烂熟于心，两三本书。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/booklist.png?raw=true&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;操作系统&#34;&gt;操作系统&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/25813550/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;《计算机组成与设计：硬件/软件接口》&lt;/strong&gt;&lt;/a&gt;，从硬件和软件接口的角度讲述计算机运行的基本原理，结合矩阵运算的例子，从编译器，代码，芯片内部并行处理等角度大大提高了程序运行的效率。书籍侧重从软硬件的角度如何提高程序运行的效率，降低功耗，和当前的AI core中的加速算子的工作联系紧密，值得细读。&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/20152598/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;操作系统 (豆瓣)&lt;/a&gt;，掌握计算机操作系统的好书&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/av6538245/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;操作系统&lt;/a&gt;，bilibili上的一个非常不错的清华操作系统公开课&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://akaedu.github.io/book/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Linux C编程一站式学习&lt;/strong&gt;&lt;/a&gt;，结合C语言学习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;深度学习&#34;&gt;深度学习&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://zh.gluon.ai/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;动手学深度学习&lt;/a&gt;，新的深度学习框架&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;http://neuralnetworksanddeeplearning.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;《神经网络与深度学习》&lt;/strong&gt;&lt;/a&gt;，结合实际的代码简明扼要的&lt;a class=&#34;link&#34; href=&#34;https://github.com/mnielsen/neural-networks-and-deep-learning&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;代码&lt;/a&gt;介绍了&lt;strong&gt;深度学习以及卷积神经网络&lt;/strong&gt;的核心概念，需要仔细研读，结合代码理解其中的所有关键概念。&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://developers.google.cn/machine-learning/crash-course/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;机器学习速成课程&lt;/a&gt;，谷歌与2018年3月1日推出的在线机器学习速成教程。&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;http://lamda.nju.edu.cn/weixs/book/CNN_book.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;《解析卷积神经网络—深度学习实践手册》&lt;/strong&gt;&lt;/a&gt;，学习卷积神经网络的必读书目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;编程基础&#34;&gt;编程基础&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/1319751/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;《C++Primer Plus》&lt;/strong&gt;&lt;/a&gt;，C++学习经典书籍，我在github上建立了个仓库，专门上传本书中的各章的答案，精读&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.git-tower.com/learn/git/ebook/cn/command-line&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git教程&lt;/a&gt;，网上找的git教程，读起来还不错&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/19930393/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;老码识途&lt;/a&gt;，结合C语言以及VS软件的汇编显示功能，自底层往上逐层剖析程序的运行之道，建立“猜测——实证——构建”的系统观，深入读读&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://seisman.github.io/how-to-write-makefile/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;跟我一起写Makefile&lt;/a&gt;，编写大型C/C++工程的必备技能&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/25779298/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;《利用Python进行数据分析》&lt;/strong&gt;&lt;/a&gt;，掌握python中编程的基础课程，其中包括numpy/pandas等非常重要的python数据分析库&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;http://zh-google-styleguide.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google 开源项目风格指南&lt;/a&gt;，google发布的C++/python/json编程风格指南&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;http://translations.readthedocs.io/en/latest/hacker_howto.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何成为一名黑客&lt;/a&gt;，学习计算机的奇技淫巧&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/NapleC/Coding-Developer-Book/blob/master/C%E8%AF%AD%E8%A8%80/%E6%9E%97%E9%94%90%C2%B7%E9%AB%98%E8%B4%A8%E9%87%8FC%20%20%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;林锐·高质量C 编程指南&lt;/a&gt;，不错的编程指导&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.oreilly.com/openbook/make3/book/index.csp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《make projects with GNU》&lt;/a&gt;，系统学习makefile工程的好书&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;社科&#34;&gt;社科&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/26824237/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《大国大城》&lt;/a&gt;，2017年初在上海书城看到的描述城市化发展的好书&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/1115353/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奇特的一生 &lt;/a&gt;，博物学家的传记&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/27608239/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;原则&lt;/a&gt;，桥水基金老大的生活工作之道&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/30246792/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;认识身体 (豆瓣)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

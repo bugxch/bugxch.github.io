@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>foldersync on 巴巴变的博客</title>
+        <link>http://blog.bugxch.top/tags/foldersync/</link>
+        <description>Recent content in foldersync on 巴巴变的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>bugxch</copyright>
+        <lastBuildDate>Wed, 11 Aug 2021 22:31:58 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/foldersync/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>初识卡片笔记写作法</title>
+        <link>http://blog.bugxch.top/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/</link>
+        <pubDate>Wed, 11 Aug 2021 22:31:58 +0800</pubDate>
+        
+        <guid>http://blog.bugxch.top/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/</guid>
+        <description>&lt;img src="https://pic.imgdb.cn/item/6113da595132923bf8329013.png" alt="Featured image of post 初识卡片笔记写作法" /&gt;&lt;p&gt;卡片笔记写作法的学习总结，部署实践。&lt;/p&gt;
+&lt;h2 id=&#34;基本思想及原理&#34;&gt;基本思想及原理&lt;/h2&gt;
+&lt;p&gt;最近在阅读&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/35503571/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;卡片笔记写作法&lt;/a&gt;，在正式出版差不多一周的时间，这本书登上了豆瓣的非虚构图书排行榜的No.2，评分高达8.0，&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6113dc455132923bf838d9fa.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;顺藤摸瓜，我花了几天时间仔细搜罗了相关的资料文档，发现这是非常好的达到长期主义知识复利的工具，总结下资料，写个博客记录下。&lt;a class=&#34;link&#34; href=&#34;https://zettelkasten.de/introduction/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;卢曼卡片盒笔记法介绍 (Introduction to the Zettelkasten Method) • Zettelkasten Method&lt;/a&gt;是翻译的比较权威的阐述卡片笔记写作法精髓的文章。&lt;/p&gt;
+&lt;h2 id=&#34;笔记软件及部署&#34;&gt;笔记软件及部署&lt;/h2&gt;
+&lt;p&gt;我选择使用&lt;a class=&#34;link&#34; href=&#34;https://obsidian.md/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Obsidian&lt;/a&gt; +&lt;a class=&#34;link&#34; href=&#34;https://www.jianguoyun.com/#/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;坚果云&lt;/a&gt; +&lt;a class=&#34;link&#34; href=&#34;https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite&amp;amp;hl=en_US&amp;amp;gl=US&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FolderSync&lt;/a&gt;作为PC与安卓手机的笔记系统。&lt;/p&gt;
+&lt;h3 id=&#34;全平台笔记软件&#34;&gt;全平台笔记软件&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://obsidian.md/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Obsidian&lt;/a&gt;当前的版本是v0.12.12，我上周发现的宝藏笔记软件，最大的特点&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;非常私密和安全。所有的资料和文档都保存在本地PC和手机，如果需要同步文档可以付费或者通过其他的同步软件实现；&lt;/li&gt;
+&lt;li&gt;个人免费。&lt;/li&gt;
+&lt;li&gt;支持md文档，支持笔记双向链接，支持Windows/Linux/Mac/Android/ios客户端。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个软件的介绍文档和资料已经很多了，可以参考下面的链接进行学习&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1jB4y1c7p2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;持续更新44集全网最全obsidian教程|搬运分享非原创_哔哩哔哩_bilibili&lt;/a&gt;，B站上推荐非常多视频教程；&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1SA411i7BG&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Obsidian：目前我们眼中最美最好用的免费笔记/知识管理软件_哔哩哔哩_bilibili&lt;/a&gt;，B站上的另一个比较简单的介绍视频，时长比较短；&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sspai.com/post/63481&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;玩转 Obsidian | 基础设置篇 - 少数派&lt;/a&gt;，比较早介绍该款软件的文章&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://publish.obsidian.md/chinesehelp/01&amp;#43;2021%E6%96%B0%E6%95%99%E7%A8%8B/2021%E5%B9%B4%E6%96%B0%E6%95%99%E7%A8%8B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2021年新教程 - Obsidian中文教程 - Obsidian Publish&lt;/a&gt;，官方中文教程，也是使用obsidian发布的，可以从中看到笔记的链接图。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;安卓手机与pc同步&#34;&gt;安卓手机与PC同步&lt;/h3&gt;
+&lt;p&gt;具体参考&lt;a class=&#34;link&#34; href=&#34;https://help.jianguoyun.com/?p=2887&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何使用FolderSync在安卓手机上同步文件夹到坚果云？&lt;/a&gt;，按照文章的步骤设置使用即可。&lt;/p&gt;
+&lt;h3 id=&#34;辅助技能&#34;&gt;辅助技能&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://einverne.github.io/post/2021/04/obsidian-markdown-webclip.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Obsidian 使用篇一：使用 markdown-clipper 全文保存网页 | Verne in GitHub&lt;/a&gt;，这篇文章介绍了两个非常好用插件，可以通过chrome或者edge将网页的信息摘录到本地的闪念笔记里面，也可以通过插件将网页的内容转换成为md保存在本地。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;全文完🚀&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

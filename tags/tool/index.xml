@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>tool on 巴巴变的博客</title>
+        <link>http://blog.bugxch.top/tags/tool/</link>
+        <description>Recent content in tool on 巴巴变的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>bugxch</copyright>
+        <lastBuildDate>Tue, 03 May 2022 22:11:34 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/tool/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>工具服务总结</title>
+        <link>http://blog.bugxch.top/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/</link>
+        <pubDate>Tue, 03 May 2022 22:11:34 +0800</pubDate>
+        
+        <guid>http://blog.bugxch.top/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/</guid>
+        <description>&lt;p&gt;工欲善其事，必先利其器。对自己工具软件的一次总结。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/62725d110947543129526ae2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;下面表格是对我当前电脑配置的软件工具的总结。&lt;/p&gt;
+&lt;h2 id=&#34;软件列表&#34;&gt;软件列表&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;软件&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;平台&lt;/th&gt;
+&lt;th&gt;费用&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;使用说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typora.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Typora&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;默认md编辑器&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;付费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;参考官网的&lt;a class=&#34;link&#34; href=&#34;https://support.typora.io/Quick-Start/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quick Start - Typora Support&lt;/a&gt;，我现在就在使用这个软件写这篇博客，前段时间更新到了1.0，然后收费了，觉得好用就买了，购买链接&lt;a class=&#34;link&#34; href=&#34;https://sspai.com/item/329&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在此&lt;/a&gt;，89元rmb终身买断，支持最多3个终端。当前使用主题是Mo&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://todo.microsoft.com/tasks/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;微软To Do&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;任务管理&lt;/td&gt;
+&lt;td&gt;win/android&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;跨平台任务管理软件，使用不到一个月，但是体验极好，win/android全平台同步，尤其是“我的一天”的任务，操作简单，上手容易&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Edge浏览器&lt;/td&gt;
+&lt;td&gt;浏览器&lt;/td&gt;
+&lt;td&gt;win/android&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;微软官方浏览器，之前是IE内核，现在换成chromium内核，支持微软账户书签密码同步，更重要的是兼容chrome插件，chrome用户可以无缝平移。插件丰富，同步无忧，还不占内存&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bandisoft.com/bandizip/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bandizip&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;解压缩&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;简单智能，免费省心&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.scootersoftware.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Beyond Compare&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;文本比较&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;付费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;程序员都知道，我还没有付费，考虑中，或者使用更低的商业版本也够用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.listary.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Listary&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;效率工具&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;可付费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;可以使用免费版，我付费买断了，和windows无缝集成，文本搜索，软件搜索，快捷操作不在话下&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.autohotkey.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AutoHotkey&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;效率工具&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;基本上等同一个叫脚本语言了，我主要用于使用快捷键快速打开软件和文件夹&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://obsidian.md/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Obsidian&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;知识管理&lt;/td&gt;
+&lt;td&gt;win/android&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;可以付费购买它的全平台同步功能，但是基本可以通过其他方法绕过来。&lt;strong&gt;第二大脑&lt;/strong&gt;的称谓不是虚的，支持双链笔记，原生支持md，数据在本地存储，支持git，插件丰富，我在2021年发现的&lt;strong&gt;最有价值软件&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.rescuetime.com/dashboard?src=client&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RescueTime&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;时间管理&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;下载在后台静悄悄运行，精细统计每日的电脑时间，知道自己时间花到哪里去了&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.internetdownloadmanager.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Internet Download Manager&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;下载&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;付费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;付费买断，下载神器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.edrawsoft.cn/edrawmax/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;亿图图示&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;软件绘图&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;付费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;可以使用免费版，visio的替代软件，已经买断&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://picasa.en.uptodown.com/windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Picasa&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;图片浏览&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;虽然google在几年前停更了，但是仍然不影响它的使用，迄今用过的&lt;strong&gt;最好看的看图软件&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Molunerfinn/PicGo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PicGo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;图片上传&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;写博客上传图床的工具软件，结合复制图片的快捷键，非常好用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.snipaste.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Snipaste&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;截图&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;好用的截图软件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://notepad-plus-plus.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Notepad++&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;编辑器&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;这个就不介绍了，程序员都知道&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Visual Studio Code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;编辑器&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;现在应该是No. 1了的编辑器了，插件很丰富&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://visualstudio.microsoft.com/zh-hans/vs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Visual Studio 2022 &lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;IDE&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;主要用来练习leetcode，使用C++语言&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;博客生成&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;当前博客的生成工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.xiaoyuzhoufm.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;小宇宙播客&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;播客&lt;/td&gt;
+&lt;td&gt;android&lt;/td&gt;
+&lt;td&gt;免费&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;手机上的博客终端，正常通勤路上，我基本上在听它，目前累计收听176小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;服务列表&#34;&gt;服务列表&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;服务&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;平台&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://glados.one/console&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GLaDOS&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;机场&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;便宜、稳定、好用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.superbed.cn/timeline&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;聚合图床&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;图床&lt;/td&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;好用，和Picgo，Obsidian配合使用天衣无缝&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.dedao.cn/vip/home?type=ebook&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;得到电子书&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;电子书&lt;/td&gt;
+&lt;td&gt;win/android&lt;/td&gt;
+&lt;td&gt;收录全面，排版精美&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://flomoapp.com/mine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flomo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;知识管理&lt;/td&gt;
+&lt;td&gt;win/android&lt;/td&gt;
+&lt;td&gt;全平台支持的卡片笔记型知识管理工具，支持标签嵌套，目前整合了得到电子书，有知有行等软件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.duku.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;读库&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;纸质书&lt;/td&gt;
+&lt;td&gt;android/纸质书&lt;/td&gt;
+&lt;td&gt;从第一期开始就关注，现在是年度会员，之前还给岳父订阅过一年&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;最后，放一张我今年生日买的收音机，外形和声音都很喜欢，&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6272689809475431296d98a1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;全文完🚀&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
