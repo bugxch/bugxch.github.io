@@ -17,7 +17,29 @@
 <meta name="twitter:description" content="与tensorflow模型与caffe模型不同，当前的pytorch没有官方的直观查看网络结构的工具，google了下pytorch的网络解析的方法，发现可以将pytorch的model转换成为events文件使用tensorboard查看，记录之。
 ">
     <link rel="shortcut icon" href="%5cfavicon.ico" />
-
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
     </head>
     <body class="
     article-page

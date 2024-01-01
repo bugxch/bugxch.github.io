@@ -17,7 +17,29 @@
 <meta name="twitter:description" content="为了更高效地吸收知识，需要对书籍的难易程度进行分类，不同类别的书籍阅读方法不同，投入精力不同，输出形式不同，阅读强度不同。
 ">
     <link rel="shortcut icon" href="%5cfavicon.ico" />
-
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
     </head>
     <body class="
     article-page

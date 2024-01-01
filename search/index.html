@@ -14,7 +14,29 @@
 <meta name="twitter:title" content="搜索">
 <meta name="twitter:description" content=""><link rel="alternate" type="application/json" href="https://github.bugxch.io/search/index.json">
     <link rel="shortcut icon" href="%5cfavicon.ico" />
-<link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  <link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
     </head>
     <body class="template-search">
     <script>
