@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>技艺 on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/categories/%E6%8A%80%E8%89%BA/</link>
+        <link>https://github.bugxch.io/categories/%E6%8A%80%E8%89%BA/</link>
         <description>Recent content in 技艺 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sun, 08 May 2022 07:32:49 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/categories/%E6%8A%80%E8%89%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 May 2022 07:32:49 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/categories/%E6%8A%80%E8%89%BA/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CSAPP读书笔记</title>
-        <link>http://blog.bugxch.top/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+        <link>https://github.bugxch.io/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Sun, 08 May 2022 07:32:49 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://github.bugxch.io/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;p&gt;这是之前&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/read/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;读书计划&lt;/a&gt;中《深入理解计算机系统》的读书笔记。&lt;/p&gt;
 &lt;table&gt;
@@ -43,10 +43,10 @@
         </item>
         <item>
         <title>程序的机器级表示</title>
-        <link>http://blog.bugxch.top/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</link>
+        <link>https://github.bugxch.io/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</link>
         <pubDate>Sun, 08 May 2022 07:27:38 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</guid>
+        <guid>https://github.bugxch.io/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</guid>
         <description>&lt;p&gt;继续之前的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_notes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;CSAPP读书笔记&lt;/a&gt;，这是第3章的读书笔记。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6277012f0947543129b619f5.jpg&#34;
@@ -211,10 +211,10 @@
         </item>
         <item>
         <title>hugo博客更换giscus评论系统</title>
-        <link>http://blog.bugxch.top/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://github.bugxch.io/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 May 2022 06:53:47 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://github.bugxch.io/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;p&gt;之前的blog换过很多个评论系统，这次换成giscus试试。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6276f9af0947543129ae0168.jpg&#34;
 	
@@ -241,10 +241,10 @@
         </item>
         <item>
         <title>完全干净卸载双系统</title>
-        <link>http://blog.bugxch.top/p/%E5%AE%8C%E5%85%A8%E5%B9%B2%E5%87%80%E5%8D%B8%E8%BD%BD%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://github.bugxch.io/p/%E5%AE%8C%E5%85%A8%E5%B9%B2%E5%87%80%E5%8D%B8%E8%BD%BD%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Fri, 06 May 2022 08:59:46 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%AE%8C%E5%85%A8%E5%B9%B2%E5%87%80%E5%8D%B8%E8%BD%BD%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://github.bugxch.io/p/%E5%AE%8C%E5%85%A8%E5%B9%B2%E5%87%80%E5%8D%B8%E8%BD%BD%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;p&gt;之前在win10上安装了双系统，最近发现wsl的ubuntu也挺香，所以就尝试卸载manjaro。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6274759009475431296fc792.jpg&#34;
 	
@@ -286,10 +286,10 @@
         </item>
         <item>
         <title>工具服务总结</title>
-        <link>http://blog.bugxch.top/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/</link>
+        <link>https://github.bugxch.io/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/</link>
         <pubDate>Tue, 03 May 2022 22:11:34 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://github.bugxch.io/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;p&gt;工欲善其事，必先利其器。对自己工具软件的一次总结。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/62725d110947543129526ae2.png&#34;
 	
@@ -529,10 +529,10 @@
         </item>
         <item>
         <title>关于浮点数的迷思</title>
-        <link>http://blog.bugxch.top/p/%E5%85%B3%E4%BA%8E%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%B7%E6%80%9D/</link>
+        <link>https://github.bugxch.io/p/%E5%85%B3%E4%BA%8E%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%B7%E6%80%9D/</link>
         <pubDate>Wed, 27 Apr 2022 16:04:05 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%85%B3%E4%BA%8E%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%B7%E6%80%9D/</guid>
+        <guid>https://github.bugxch.io/p/%E5%85%B3%E4%BA%8E%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%B7%E6%80%9D/</guid>
         <description>&lt;p&gt;这两天研究了下CSAPP中的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_ch2/#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;浮点数的知识&lt;/a&gt;，结合这些知识，终于可以解答之前关于float的一些迷思。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6268f90d239250f7c59e8af0.jpg&#34;
@@ -610,12 +610,12 @@
         </item>
         <item>
         <title>信息的表示和处理</title>
-        <link>http://blog.bugxch.top/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</link>
+        <link>https://github.bugxch.io/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</link>
         <pubDate>Fri, 22 Apr 2022 17:13:44 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</guid>
+        <guid>https://github.bugxch.io/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</guid>
         <description>&lt;p&gt;疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://blog.bugxch.top/&#34;
+&lt;p&gt;&lt;img src=&#34;https://github.bugxch.io/&#34;
 	
 	
 	
@@ -1045,10 +1045,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>三门问题精解</title>
-        <link>http://blog.bugxch.top/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</link>
         <pubDate>Thu, 21 Apr 2022 20:36:36 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</guid>
         <description>&lt;p&gt;书接&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/detection/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;上文&lt;/a&gt;，使用贝叶斯定理解释著名的&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh/%E8%92%99%E6%8F%90%E9%9C%8D%E7%88%BE%E5%95%8F%E9%A1%8C&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Monty Hall问题&lt;/a&gt;，思索清楚之后感觉挺有趣，分享下。&lt;/p&gt;
@@ -1224,10 +1224,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>新冠检测后面的数学定理</title>
-        <link>http://blog.bugxch.top/p/%E6%96%B0%E5%86%A0%E6%A3%80%E6%B5%8B%E5%90%8E%E9%9D%A2%E7%9A%84%E6%95%B0%E5%AD%A6%E5%AE%9A%E7%90%86/</link>
+        <link>https://github.bugxch.io/p/%E6%96%B0%E5%86%A0%E6%A3%80%E6%B5%8B%E5%90%8E%E9%9D%A2%E7%9A%84%E6%95%B0%E5%AD%A6%E5%AE%9A%E7%90%86/</link>
         <pubDate>Wed, 23 Mar 2022 20:13:15 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%96%B0%E5%86%A0%E6%A3%80%E6%B5%8B%E5%90%8E%E9%9D%A2%E7%9A%84%E6%95%B0%E5%AD%A6%E5%AE%9A%E7%90%86/</guid>
+        <guid>https://github.bugxch.io/p/%E6%96%B0%E5%86%A0%E6%A3%80%E6%B5%8B%E5%90%8E%E9%9D%A2%E7%9A%84%E6%95%B0%E5%AD%A6%E5%AE%9A%E7%90%86/</guid>
         <description>&lt;p&gt;新冠检测的科学原理。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/624c3253239250f7c5dee479.png&#34;
 	
@@ -1468,10 +1468,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Git分支操作</title>
-        <link>http://blog.bugxch.top/p/git%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/</link>
+        <link>https://github.bugxch.io/p/git%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Tue, 15 Mar 2022 09:20:00 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/git%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://github.bugxch.io/p/git%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;git的一些技术的分支操作笔记。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.pixabay.com/photo/2018/08/14/07/06/landscape-3604825_1280.jpg&#34;
 	
@@ -1711,10 +1711,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>初识卡片笔记写作法</title>
-        <link>http://blog.bugxch.top/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/</link>
+        <link>https://github.bugxch.io/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/</link>
         <pubDate>Wed, 11 Aug 2021 22:31:58 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/</guid>
+        <guid>https://github.bugxch.io/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6113da595132923bf8329013.png" alt="Featured image of post 初识卡片笔记写作法" /&gt;&lt;p&gt;卡片笔记写作法的学习总结，部署实践。&lt;/p&gt;
 &lt;h2 id=&#34;基本思想及原理&#34;&gt;基本思想及原理&lt;/h2&gt;
 &lt;p&gt;最近在阅读&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/35503571/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1764,10 +1764,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>二分查找——从入门到精通</title>
-        <link>http://blog.bugxch.top/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</link>
+        <link>https://github.bugxch.io/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</link>
         <pubDate>Thu, 06 May 2021 22:33:59 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</guid>
+        <guid>https://github.bugxch.io/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/60940147d1a9ae528fdc3a1d.png" alt="Featured image of post 二分查找——从入门到精通" /&gt;&lt;p&gt;最近在准备考试，做了一些二分搜索的题目，感觉有点意思，记录下做题的心得😁。&lt;/p&gt;
 &lt;h2 id=&#34;文章目标&#34;&gt;文章目标&lt;/h2&gt;
 &lt;p&gt;通过阅读本文，可以彻底搞懂二分查找的基本原理及各种变体，可以独立完成下面的力扣题目&lt;/p&gt;
@@ -2631,10 +2631,10 @@ $$
         </item>
         <item>
         <title>Factory Method模式精解（C&#43;&#43;版本）</title>
-        <link>http://blog.bugxch.top/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://github.bugxch.io/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Sun, 02 May 2021 21:43:54 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://github.bugxch.io/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608eae16d1a9ae528f502e1a.png" alt="Featured image of post Factory Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;继续之前的设计模式第四弹，这次是大名鼎鼎的工厂方法模式。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -2913,10 +2913,10 @@ $$
         </item>
         <item>
         <title>Template Method模式精解（C&#43;&#43;版本）</title>
-        <link>http://blog.bugxch.top/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://github.bugxch.io/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Fri, 30 Apr 2021 19:52:15 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://github.bugxch.io/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608bef5dd1a9ae528f268767.png" alt="Featured image of post Template Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;设计模式第三弹，设计模式&lt;strong&gt;行为型模式&lt;/strong&gt;中的模板方法，也比较简单。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -3168,10 +3168,10 @@ $$
         </item>
         <item>
         <title>Adapter模式精解（C&#43;&#43;版本）</title>
-        <link>http://blog.bugxch.top/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://github.bugxch.io/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Thu, 29 Apr 2021 22:39:41 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://github.bugxch.io/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608ac85bd1a9ae528fde126e.png" alt="Featured image of post Adapter模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;本篇是设计模式第二篇，适配器模式，比较好理解。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -3354,10 +3354,10 @@ $$
         </item>
         <item>
         <title>Iterator模式精解（C&#43;&#43;版本）</title>
-        <link>http://blog.bugxch.top/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://github.bugxch.io/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Sat, 10 Apr 2021 22:15:09 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://github.bugxch.io/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6086d967d1a9ae528f307ce1.jpg" alt="Featured image of post Iterator模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;从本文章开始，参考结城浩的&lt;a class=&#34;link&#34; href=&#34;https://www.ituring.com.cn/book/1811&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《图解设计模式》&lt;/a&gt;写23种设计模式的系列介绍文章，结合网络上其他的设计模式的内容，使用C++的语言编写这些设计模式，记录自己的设计模式的心得。&lt;/p&gt;
 &lt;h2 id=&#34;设计模式分类&#34;&gt;设计模式分类&lt;/h2&gt;
@@ -4152,10 +4152,10 @@ $$
         </item>
         <item>
         <title>[转载]表驱动法代码实践</title>
-        <link>http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/</link>
+        <link>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/</link>
         <pubDate>Fri, 22 Jan 2021 08:07:14 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/</guid>
+        <guid>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/600a17e53ffa7d37b3da9d49.jpg" alt="Featured image of post [转载]表驱动法代码实践" /&gt;&lt;p&gt;这是一篇转载，点击查看&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/clover-toeic/p/3730362.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;原文链接&lt;/a&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5776,10 +5776,10 @@ $$
         </item>
         <item>
         <title>LeetCode区间问题总结</title>
-        <link>http://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
+        <link>https://github.bugxch.io/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sun, 16 Aug 2020 22:31:31 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://github.bugxch.io/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg" alt="Featured image of post LeetCode区间问题总结" /&gt;&lt;p&gt;上周五考试没有过，其中专业级第二题是关于区间的问题，在leetcode上找到类似的题目，总结复习下。&lt;/p&gt;
 &lt;h2 id=&#34;引子&#34;&gt;引子&lt;/h2&gt;
 &lt;p&gt;先看这道题，&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/corporate-flight-bookings/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -5926,10 +5926,10 @@ $$
         </item>
         <item>
         <title>C&#43;&#43;中的sort函数详解</title>
-        <link>http://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 15 Aug 2020 21:25:46 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6002ed073ffa7d37b305c866.jpg" alt="Featured image of post C&#43;&#43;中的sort函数详解" /&gt;&lt;p&gt;公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。&lt;/p&gt;
 &lt;h2 id=&#34;总述&#34;&gt;总述&lt;/h2&gt;
 &lt;p&gt;下面是C++的stl中的排序的所有函数，这个系列的博客会逐一介绍，这次的博客先关注最常用的&lt;code&gt;sort&lt;/code&gt;函数。&lt;/p&gt;
@@ -6399,10 +6399,10 @@ $$
         </item>
         <item>
         <title>广度优先搜索详解</title>
-        <link>http://blog.bugxch.top/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 08 Aug 2020 11:24:24 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;p&gt;总结一下广度优先搜索的原理和用法。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Depth-first-tree.svg/640px-Depth-first-tree.svg.png?1596857354686&#34;
 	
@@ -7345,10 +7345,10 @@ $$
         </item>
         <item>
         <title>滑动窗口技巧</title>
-        <link>http://blog.bugxch.top/p/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%8A%80%E5%B7%A7/</link>
+        <link>https://github.bugxch.io/p/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%8A%80%E5%B7%A7/</link>
         <pubDate>Sun, 02 Aug 2020 15:40:45 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%8A%80%E5%B7%A7/</guid>
+        <guid>https://github.bugxch.io/p/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%8A%80%E5%B7%A7/</guid>
         <description>&lt;p&gt;今天主要刷leetcode的滑动窗口的题目，需要完成如下题目，本文主要记录解题思路和方法，以便加深理解记忆，答案到处都是，只有消化了才是自己的。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.cxyxiaowu.com/wp-content/uploads/2020/04/1587885580-7ad02b4170d7e1a.jpeg&#34;
 	
@@ -8198,10 +8198,10 @@ $$
         </item>
         <item>
         <title>使用linux vs code调试C&#43;&#43;程序</title>
-        <link>http://blog.bugxch.top/p/%E4%BD%BF%E7%94%A8linux-vs-code%E8%B0%83%E8%AF%95c-%E7%A8%8B%E5%BA%8F/</link>
+        <link>https://github.bugxch.io/p/%E4%BD%BF%E7%94%A8linux-vs-code%E8%B0%83%E8%AF%95c-%E7%A8%8B%E5%BA%8F/</link>
         <pubDate>Sun, 26 Jul 2020 08:12:22 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E4%BD%BF%E7%94%A8linux-vs-code%E8%B0%83%E8%AF%95c-%E7%A8%8B%E5%BA%8F/</guid>
+        <guid>https://github.bugxch.io/p/%E4%BD%BF%E7%94%A8linux-vs-code%E8%B0%83%E8%AF%95c-%E7%A8%8B%E5%BA%8F/</guid>
         <description>&lt;p&gt;最近练习leetcode编程，我希望在manjaro系统的vs code上可以单步调试C++代码，找了很多资料都不能正常运行，所以参考&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/docs/cpp/cpp-debug&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;官方资料&lt;/a&gt;自己整好了，记录一下。&lt;/p&gt;
 &lt;h2 id=&#34;预置条件&#34;&gt;预置条件&lt;/h2&gt;
@@ -8513,10 +8513,10 @@ $$
         </item>
         <item>
         <title>01背包问题详解</title>
-        <link>http://blog.bugxch.top/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;p&gt;背包问题是非常经典的动态规划问题，但是中文书籍和资料很少有把这个问题说得清晰明了的，问题表述不清，递推公式错误，不一而足，我在彻底想清楚这个问题后，觉得很有必要记录下整个思考过程。&lt;/p&gt;
 &lt;h2 id=&#34;原始问题&#34;&gt;原始问题&lt;/h2&gt;
 &lt;p&gt;当前有$n$件物品，第$i$件物品的重量为$w_i$，价值为$p_i$，当前有一个容量为$C$的背包。此处物品的重量，价值以及背包的容量都是非负整数。从这些物品中精心挑选若干件装入包中，这若干件被挑选的物品&lt;strong&gt;总重量不超过背包容量$C$，总价值尽量大&lt;/strong&gt;，那么所有可能的挑选方法得到的&lt;/p&gt;
@@ -9154,10 +9154,10 @@ $$
         </item>
         <item>
         <title>《CPlusPlus Primer Plus》第九章习题及答案</title>
-        <link>http://blog.bugxch.top/p/cplusplus-primer-plus%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%B9%A0%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/</link>
+        <link>https://github.bugxch.io/p/cplusplus-primer-plus%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%B9%A0%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/</link>
         <pubDate>Mon, 27 Jan 2020 12:49:07 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/cplusplus-primer-plus%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%B9%A0%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/</guid>
+        <guid>https://github.bugxch.io/p/cplusplus-primer-plus%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%B9%A0%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/bugxch/blogpics/master/202001/c%2B%2B.jpg" alt="Featured image of post 《CPlusPlus Primer Plus》第九章习题及答案" /&gt;&lt;p&gt;假期做题，记录下。&lt;/p&gt;
 &lt;p&gt;此处是复习题的答案，编程练习题的答案见&lt;a class=&#34;link&#34; href=&#34;https://github.com/bugxch/Solutions_C-PrimerPlus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;bugxch/Solutions_C-PrimerPlus&lt;/a&gt;。&lt;/p&gt;
@@ -9302,10 +9302,10 @@ $$
         </item>
         <item>
         <title>[转载]双线性插值简介</title>
-        <link>http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E5%8F%8C%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E7%AE%80%E4%BB%8B/</link>
+        <link>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E5%8F%8C%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E7%AE%80%E4%BB%8B/</link>
         <pubDate>Sun, 26 Jan 2020 22:24:10 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E5%8F%8C%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E7%AE%80%E4%BB%8B/</guid>
+        <guid>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E5%8F%8C%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E7%AE%80%E4%BB%8B/</guid>
         <description>&lt;p&gt;该文档转载自&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/xiaqunfeng123/article/details/17362881&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;图像缩放——双线性插值算法&lt;/a&gt;，我搜罗一堆中文文章里面讲得比较清楚的一篇了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://gisgeography.com/wp-content/uploads/2016/10/Bilinear-Interpolation-Feature-678x322.png&#34;
@@ -9396,10 +9396,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Tensorboad查看pytorch模型</title>
-        <link>http://blog.bugxch.top/p/tensorboad%E6%9F%A5%E7%9C%8Bpytorch%E6%A8%A1%E5%9E%8B/</link>
+        <link>https://github.bugxch.io/p/tensorboad%E6%9F%A5%E7%9C%8Bpytorch%E6%A8%A1%E5%9E%8B/</link>
         <pubDate>Fri, 06 Dec 2019 21:53:20 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/tensorboad%E6%9F%A5%E7%9C%8Bpytorch%E6%A8%A1%E5%9E%8B/</guid>
+        <guid>https://github.bugxch.io/p/tensorboad%E6%9F%A5%E7%9C%8Bpytorch%E6%A8%A1%E5%9E%8B/</guid>
         <description>&lt;p&gt;与tensorflow模型与caffe模型不同，当前的pytorch没有官方的直观查看网络结构的工具，google了下pytorch的网络解析的方法，发现可以将pytorch的model转换成为events文件使用tensorboard查看，记录之。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/v2-f5424ffa46911a547362912542c23dd2_1200x500.jpg&#34;
 	
@@ -9496,10 +9496,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Manjaro添加开机启动脚本</title>
-        <link>http://blog.bugxch.top/p/manjaro%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</link>
+        <link>https://github.bugxch.io/p/manjaro%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</link>
         <pubDate>Sun, 24 Feb 2019 20:48:23 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/manjaro%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</guid>
+        <guid>https://github.bugxch.io/p/manjaro%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</guid>
         <description>&lt;p&gt;如何给manjaro添加开机启动脚本。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://wiki.manjaro.org/images/thumb/e/ea/New_logo_tex.png/800px-New_logo_tex.png&#34;
 	
@@ -9594,10 +9594,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Manjaro安装CUDA教程</title>
-        <link>http://blog.bugxch.top/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</link>
+        <link>https://github.bugxch.io/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</link>
         <pubDate>Sat, 09 Feb 2019 19:02:24 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</guid>
+        <guid>https://github.bugxch.io/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</guid>
         <description>&lt;p&gt;去年年底安装将我的Thinkpad T450的双系统中的opensuse换成了&lt;a class=&#34;link&#34; href=&#34;https://manjaro.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Manjaro&lt;/a&gt;，折腾安装了下CUDA，是为记录。&lt;/p&gt;
 &lt;h2 id=&#34;基本安装&#34;&gt;基本安装&lt;/h2&gt;
@@ -9793,10 +9793,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>tf中的padding方式SAME和VALID有什么区别?</title>
-        <link>http://blog.bugxch.top/p/tf%E4%B8%AD%E7%9A%84padding%E6%96%B9%E5%BC%8Fsame%E5%92%8Cvalid%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
+        <link>https://github.bugxch.io/p/tf%E4%B8%AD%E7%9A%84padding%E6%96%B9%E5%BC%8Fsame%E5%92%8Cvalid%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
         <pubDate>Wed, 14 Nov 2018 07:09:58 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/tf%E4%B8%AD%E7%9A%84padding%E6%96%B9%E5%BC%8Fsame%E5%92%8Cvalid%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
+        <guid>https://github.bugxch.io/p/tf%E4%B8%AD%E7%9A%84padding%E6%96%B9%E5%BC%8Fsame%E5%92%8Cvalid%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
         <description>&lt;p&gt;Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。&lt;/p&gt;
 &lt;h2 id=&#34;tensorflow的计算公式&#34;&gt;Tensorflow的计算公式&lt;/h2&gt;
 &lt;h3 id=&#34;二维卷积接口&#34;&gt;二维卷积接口&lt;/h3&gt;
@@ -10284,10 +10284,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>python文件操作</title>
-        <link>http://blog.bugxch.top/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+        <link>https://github.bugxch.io/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Thu, 08 Nov 2018 07:33:12 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://github.bugxch.io/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。&lt;/p&gt;
 &lt;h1 id=&#34;python文件读写&#34;&gt;python文件读写&lt;/h1&gt;
 &lt;h2 id=&#34;基础知识&#34;&gt;基础知识&lt;/h2&gt;
@@ -10704,10 +10704,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>\$(cd \$(dirname $0);pwd)的解释</title>
-        <link>http://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</link>
+        <link>https://github.bugxch.io/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</link>
         <pubDate>Sat, 03 Nov 2018 20:47:24 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</guid>
+        <guid>https://github.bugxch.io/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</guid>
         <description>&lt;p&gt;I love shell.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/i_love_bash.png?raw=true&#34;
 	
@@ -10837,10 +10837,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>牛顿迭代法</title>
-        <link>http://blog.bugxch.top/p/%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95/</link>
+        <link>https://github.bugxch.io/p/%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95/</link>
         <pubDate>Sun, 05 Aug 2018 08:15:17 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95/</guid>
+        <guid>https://github.bugxch.io/p/%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95/</guid>
         <description>&lt;p&gt;最近的工作中，在求算子softamx时需要使用牛顿迭代法，记录下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95.png?raw=true&#34;
 	
@@ -11023,10 +11023,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>极简版《计算机原理》</title>
-        <link>http://blog.bugxch.top/p/%E6%9E%81%E7%AE%80%E7%89%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</link>
+        <link>https://github.bugxch.io/p/%E6%9E%81%E7%AE%80%E7%89%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</link>
         <pubDate>Sat, 21 Jul 2018 21:59:51 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%9E%81%E7%AE%80%E7%89%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</guid>
+        <guid>https://github.bugxch.io/p/%E6%9E%81%E7%AE%80%E7%89%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</guid>
         <description>&lt;p&gt;读书笔记。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/cover.jpg?raw=true&#34;
 	
@@ -11536,10 +11536,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>方法论</title>
-        <link>http://blog.bugxch.top/p/%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
+        <link>https://github.bugxch.io/p/%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
         <pubDate>Sat, 21 Jul 2018 21:59:00 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%96%B9%E6%B3%95%E8%AE%BA/</guid>
+        <guid>https://github.bugxch.io/p/%E6%96%B9%E6%B3%95%E8%AE%BA/</guid>
         <description>&lt;p&gt;&lt;strong&gt;学习是个终身课题，偶尔得之，胡言乱语。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/study.jpg?raw=true&#34;
 	
@@ -11627,10 +11627,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>堆栈出栈序列问题</title>
-        <link>http://blog.bugxch.top/p/%E5%A0%86%E6%A0%88%E5%87%BA%E6%A0%88%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98/</link>
+        <link>https://github.bugxch.io/p/%E5%A0%86%E6%A0%88%E5%87%BA%E6%A0%88%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98/</link>
         <pubDate>Sat, 21 Jul 2018 21:46:35 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%A0%86%E6%A0%88%E5%87%BA%E6%A0%88%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://github.bugxch.io/p/%E5%A0%86%E6%A0%88%E5%87%BA%E6%A0%88%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;p&gt;这是工作中遇到的小问题。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/stack.jpg?raw=true&#34;
 	
@@ -11744,10 +11744,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>正则表达式详解（上）</title>
-        <link>http://blog.bugxch.top/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8A/</link>
+        <link>https://github.bugxch.io/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8A/</link>
         <pubDate>Sat, 21 Jul 2018 21:12:46 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8A/</guid>
+        <guid>https://github.bugxch.io/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8A/</guid>
         <description>&lt;p&gt;简单来说，正则表达式是根据一定的语法规则组合而成的用来匹配具有某种模式的文本的字符串。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh-hans/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;维基百科&lt;/a&gt;定义如下：&lt;/p&gt;
@@ -12090,10 +12090,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>正则表达式详解（下）</title>
-        <link>http://blog.bugxch.top/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8B/</link>
+        <link>https://github.bugxch.io/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8B/</link>
         <pubDate>Sat, 21 Jul 2018 21:10:56 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8B/</guid>
+        <guid>https://github.bugxch.io/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8B/</guid>
         <description>&lt;p&gt;书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。&lt;/p&gt;
 &lt;h2 id=&#34;匹配字符串&#34;&gt;匹配字符串&lt;/h2&gt;
 &lt;p&gt;python 的 re 模块支持正则表达式，基本步骤是使用 compile 编译正则表达式为 pattern 实例，之后使用实例匹配目标文本（一般使用方法 match 和 search）。先来看一个简单的例子，&lt;/p&gt;
@@ -12477,10 +12477,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>建立阅读体系</title>
-        <link>http://blog.bugxch.top/p/%E5%BB%BA%E7%AB%8B%E9%98%85%E8%AF%BB%E4%BD%93%E7%B3%BB/</link>
+        <link>https://github.bugxch.io/p/%E5%BB%BA%E7%AB%8B%E9%98%85%E8%AF%BB%E4%BD%93%E7%B3%BB/</link>
         <pubDate>Sat, 21 Jul 2018 20:53:18 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%BB%BA%E7%AB%8B%E9%98%85%E8%AF%BB%E4%BD%93%E7%B3%BB/</guid>
+        <guid>https://github.bugxch.io/p/%E5%BB%BA%E7%AB%8B%E9%98%85%E8%AF%BB%E4%BD%93%E7%B3%BB/</guid>
         <description>&lt;p&gt;为了更高效地吸收知识，需要对书籍的难易程度进行分类，不同类别的书籍阅读方法不同，投入精力不同，输出形式不同，阅读强度不同。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://www.readitforward.com/wp-content/uploads/2015/06/bookshelf-organization.jpg&#34;
 	
@@ -12571,10 +12571,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>梯度下降算法之方程求解</title>
-        <link>http://blog.bugxch.top/p/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95%E4%B9%8B%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95%E4%B9%8B%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3/</link>
         <pubDate>Sat, 21 Jul 2018 20:41:31 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95%E4%B9%8B%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95%E4%B9%8B%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3/</guid>
         <description>&lt;p&gt;从上个月专攻机器学习，从本篇开始，我会陆续写机器学习的内容，都是我的学习笔记。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bigsnarf.files.wordpress.com/2016/07/fff.png?w=630&#34;
 	
@@ -12888,10 +12888,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>matplot 之 3D 绘图指南</title>
-        <link>http://blog.bugxch.top/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/</link>
+        <link>https://github.bugxch.io/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/</link>
         <pubDate>Sat, 21 Jul 2018 20:39:09 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/</guid>
+        <guid>https://github.bugxch.io/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/</guid>
         <description>&lt;p&gt;因为梯度下降算法需要绘制 3 维图像，故学习之，日后借鉴。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/3d_demo.png?raw=true&#34;
 	
@@ -13646,10 +13646,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>C语言中的宏</title>
-        <link>http://blog.bugxch.top/p/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%AE%8F/</link>
+        <link>https://github.bugxch.io/p/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%AE%8F/</link>
         <pubDate>Sat, 21 Jul 2018 20:33:48 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%AE%8F/</guid>
+        <guid>https://github.bugxch.io/p/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%AE%8F/</guid>
         <description>&lt;p&gt;C/C++中有些特殊的宏定义，面试时候被问到，写个短文总结下。&lt;/p&gt;
 &lt;h2 id=&#34;宏定义中的和连字符&#34;&gt;宏定义中的#和##连字符&lt;/h2&gt;
 &lt;p&gt;这两个字符在宏定义中代表连接和替换，&lt;/p&gt;
@@ -13982,10 +13982,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>字节序</title>
-        <link>http://blog.bugxch.top/p/%E5%AD%97%E8%8A%82%E5%BA%8F/</link>
+        <link>https://github.bugxch.io/p/%E5%AD%97%E8%8A%82%E5%BA%8F/</link>
         <pubDate>Sat, 21 Jul 2018 20:32:35 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%AD%97%E8%8A%82%E5%BA%8F/</guid>
+        <guid>https://github.bugxch.io/p/%E5%AD%97%E8%8A%82%E5%BA%8F/</guid>
         <description>&lt;p&gt;大端和小端，到底是什么意思？&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/zijiexu.png?raw=true&#34;
 	
@@ -14052,10 +14052,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>操作系统简史</title>
-        <link>http://blog.bugxch.top/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8F%B2/</link>
+        <link>https://github.bugxch.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8F%B2/</link>
         <pubDate>Sat, 21 Jul 2018 20:31:23 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8F%B2/</guid>
+        <guid>https://github.bugxch.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AE%80%E5%8F%B2/</guid>
         <description>&lt;p&gt;今后转行机器学习，现在补上操作系统的短板，边学习边总结，我会发布一系列操作系统的博客，此为第一篇。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/os.png?raw=true&#34;
 	
@@ -14174,10 +14174,10 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
         </item>
         <item>
         <title>为什么会有补码</title>
-        <link>http://blog.bugxch.top/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81/</link>
+        <link>https://github.bugxch.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81/</link>
         <pubDate>Sat, 21 Jul 2018 20:30:02 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81/</guid>
+        <guid>https://github.bugxch.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81/</guid>
         <description>&lt;p&gt;补码是如何产生的？&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://codeforwin.org/wp-content/uploads/2015/08/twos-complement-of-binary-value.png&#34;
 	
@@ -14481,10 +14481,10 @@ $$
         </item>
         <item>
         <title>python排序</title>
-        <link>http://blog.bugxch.top/p/python%E6%8E%92%E5%BA%8F/</link>
+        <link>https://github.bugxch.io/p/python%E6%8E%92%E5%BA%8F/</link>
         <pubDate>Sat, 21 Jul 2018 20:28:44 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/python%E6%8E%92%E5%BA%8F/</guid>
+        <guid>https://github.bugxch.io/p/python%E6%8E%92%E5%BA%8F/</guid>
         <description>&lt;p&gt;python基本操作知识积累。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://geekswipe.net/wp-content/uploads/2014/10/Geekswipe-Python-Twitter-bot-Source-Photo-by-Karthikeyan-KC.jpg&#34;
 	
@@ -14670,10 +14670,10 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
         </item>
         <item>
         <title>Git学习笔记（一）</title>
-        <link>http://blog.bugxch.top/p/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</link>
+        <link>https://github.bugxch.io/p/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</link>
         <pubDate>Sat, 21 Jul 2018 20:26:54 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</guid>
+        <guid>https://github.bugxch.io/p/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</guid>
         <description>&lt;p&gt;git笔记记录。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://www.aapnainfotech.com/wp-content/uploads/2016/03/Git-rename-branch-1024x483-965x482.jpg&#34;
 	
@@ -15326,10 +15326,10 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
         </item>
         <item>
         <title>浮点数在计算机中的表示</title>
-        <link>http://blog.bugxch.top/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/</link>
+        <link>https://github.bugxch.io/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/</link>
         <pubDate>Sat, 21 Jul 2018 08:19:45 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/</guid>
+        <guid>https://github.bugxch.io/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/</guid>
         <description>&lt;p&gt;接上一篇博客&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/2017/12/13/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81%EF%BC%9F/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《为什么会有补码？》&lt;/a&gt;，我仅仅分析了整数在计算机中表示方式，但是计算机中的浮点数又是如何表示的呢？&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://rh6stzxdcl1wf9gj1fkj14uc-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/Fig-1.png&#34;
@@ -15612,10 +15612,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>单链表基本操作</title>
-        <link>http://blog.bugxch.top/p/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
+        <link>https://github.bugxch.io/p/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Fri, 20 Jul 2018 23:18:50 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://github.bugxch.io/p/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;C语言的链表基本操作。&lt;/p&gt;
 &lt;h2 id=&#34;为何需要链表&#34;&gt;为何需要链表？&lt;/h2&gt;
 &lt;p&gt;学习 C 语言的开始，我们最早接触的数据类型是数组，它有两个特点：&lt;/p&gt;
@@ -15947,10 +15947,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Source Insight 基础配置</title>
-        <link>http://blog.bugxch.top/p/source-insight-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</link>
+        <link>https://github.bugxch.io/p/source-insight-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Fri, 20 Jul 2018 23:08:38 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/source-insight-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://github.bugxch.io/p/source-insight-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;p&gt;我们提交的代码，要求不能有多余的空格与 TAB 键，而且代码是在 linux 环境中编译和运行的，而我们经常使用 source insight 编辑代码，因此有必要针对性地配置以省去反复去掉空格和 TAB 键的麻烦。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201812/sourceinsight.png?raw=true&#34;
 	
@@ -16067,10 +16067,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>C语言补遗</title>
-        <link>http://blog.bugxch.top/p/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E9%81%97/</link>
+        <link>https://github.bugxch.io/p/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E9%81%97/</link>
         <pubDate>Fri, 20 Jul 2018 22:54:24 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E9%81%97/</guid>
+        <guid>https://github.bugxch.io/p/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E9%81%97/</guid>
         <description>&lt;p&gt;前些天公司摸底 C 语言考试，得分比较难看，回来发了考试答案，这篇博客把我做错的题目拿出来理一理，补补课。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;

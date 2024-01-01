@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>AI on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/ai/</link>
+        <link>https://github.bugxch.io/tags/ai/</link>
         <description>Recent content in AI on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sun, 26 Jan 2020 22:24:10 +0000</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 26 Jan 2020 22:24:10 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/ai/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[转载]双线性插值简介</title>
-        <link>http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E5%8F%8C%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E7%AE%80%E4%BB%8B/</link>
+        <link>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E5%8F%8C%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E7%AE%80%E4%BB%8B/</link>
         <pubDate>Sun, 26 Jan 2020 22:24:10 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E5%8F%8C%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E7%AE%80%E4%BB%8B/</guid>
+        <guid>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E5%8F%8C%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E7%AE%80%E4%BB%8B/</guid>
         <description>&lt;p&gt;该文档转载自&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/xiaqunfeng123/article/details/17362881&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;图像缩放——双线性插值算法&lt;/a&gt;，我搜罗一堆中文文章里面讲得比较清楚的一篇了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://gisgeography.com/wp-content/uploads/2016/10/Bilinear-Interpolation-Feature-678x322.png&#34;

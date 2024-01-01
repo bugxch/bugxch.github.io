@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>数据结构 on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <link>https://github.bugxch.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
         <description>Recent content in 数据结构 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Fri, 20 Jul 2018 23:18:50 +0000</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 20 Jul 2018 23:18:50 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>单链表基本操作</title>
-        <link>http://blog.bugxch.top/p/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
+        <link>https://github.bugxch.io/p/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Fri, 20 Jul 2018 23:18:50 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://github.bugxch.io/p/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;C语言的链表基本操作。&lt;/p&gt;
 &lt;h2 id=&#34;为何需要链表&#34;&gt;为何需要链表？&lt;/h2&gt;
 &lt;p&gt;学习 C 语言的开始，我们最早接触的数据类型是数组，它有两个特点：&lt;/p&gt;

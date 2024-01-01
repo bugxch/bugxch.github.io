@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>迭代器模式 on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/</link>
+        <link>https://github.bugxch.io/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/</link>
         <description>Recent content in 迭代器模式 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sat, 10 Apr 2021 22:15:09 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Apr 2021 22:15:09 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Iterator模式精解（C&#43;&#43;版本）</title>
-        <link>http://blog.bugxch.top/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://github.bugxch.io/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Sat, 10 Apr 2021 22:15:09 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://github.bugxch.io/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6086d967d1a9ae528f307ce1.jpg" alt="Featured image of post Iterator模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;从本文章开始，参考结城浩的&lt;a class=&#34;link&#34; href=&#34;https://www.ituring.com.cn/book/1811&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《图解设计模式》&lt;/a&gt;写23种设计模式的系列介绍文章，结合网络上其他的设计模式的内容，使用C++的语言编写这些设计模式，记录自己的设计模式的心得。&lt;/p&gt;
 &lt;h2 id=&#34;设计模式分类&#34;&gt;设计模式分类&lt;/h2&gt;

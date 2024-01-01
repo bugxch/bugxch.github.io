@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>c&#43;&#43; on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/c&#43;&#43;/</link>
+        <link>https://github.bugxch.io/tags/c&#43;&#43;/</link>
         <description>Recent content in c&#43;&#43; on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sun, 16 Aug 2020 22:31:31 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/c++/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Aug 2020 22:31:31 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/c++/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LeetCode区间问题总结</title>
-        <link>http://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
+        <link>https://github.bugxch.io/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sun, 16 Aug 2020 22:31:31 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://github.bugxch.io/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg" alt="Featured image of post LeetCode区间问题总结" /&gt;&lt;p&gt;上周五考试没有过，其中专业级第二题是关于区间的问题，在leetcode上找到类似的题目，总结复习下。&lt;/p&gt;
 &lt;h2 id=&#34;引子&#34;&gt;引子&lt;/h2&gt;
 &lt;p&gt;先看这道题，&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/corporate-flight-bookings/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -159,10 +159,10 @@
         </item>
         <item>
         <title>C&#43;&#43;中的sort函数详解</title>
-        <link>http://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 15 Aug 2020 21:25:46 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6002ed073ffa7d37b305c866.jpg" alt="Featured image of post C&#43;&#43;中的sort函数详解" /&gt;&lt;p&gt;公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。&lt;/p&gt;
 &lt;h2 id=&#34;总述&#34;&gt;总述&lt;/h2&gt;
 &lt;p&gt;下面是C++的stl中的排序的所有函数，这个系列的博客会逐一介绍，这次的博客先关注最常用的&lt;code&gt;sort&lt;/code&gt;函数。&lt;/p&gt;
@@ -632,10 +632,10 @@
         </item>
         <item>
         <title>《CPlusPlus Primer Plus》第九章习题及答案</title>
-        <link>http://blog.bugxch.top/p/cplusplus-primer-plus%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%B9%A0%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/</link>
+        <link>https://github.bugxch.io/p/cplusplus-primer-plus%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%B9%A0%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/</link>
         <pubDate>Mon, 27 Jan 2020 12:49:07 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/cplusplus-primer-plus%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%B9%A0%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/</guid>
+        <guid>https://github.bugxch.io/p/cplusplus-primer-plus%E7%AC%AC%E4%B9%9D%E7%AB%A0%E4%B9%A0%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/bugxch/blogpics/master/202001/c%2B%2B.jpg" alt="Featured image of post 《CPlusPlus Primer Plus》第九章习题及答案" /&gt;&lt;p&gt;假期做题，记录下。&lt;/p&gt;
 &lt;p&gt;此处是复习题的答案，编程练习题的答案见&lt;a class=&#34;link&#34; href=&#34;https://github.com/bugxch/Solutions_C-PrimerPlus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;bugxch/Solutions_C-PrimerPlus&lt;/a&gt;。&lt;/p&gt;

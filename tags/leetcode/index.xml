@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>leetcode on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/leetcode/</link>
+        <link>https://github.bugxch.io/tags/leetcode/</link>
         <description>Recent content in leetcode on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Thu, 06 May 2021 22:33:59 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/leetcode/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 06 May 2021 22:33:59 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>二分查找——从入门到精通</title>
-        <link>http://blog.bugxch.top/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</link>
+        <link>https://github.bugxch.io/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</link>
         <pubDate>Thu, 06 May 2021 22:33:59 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</guid>
+        <guid>https://github.bugxch.io/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/60940147d1a9ae528fdc3a1d.png" alt="Featured image of post 二分查找——从入门到精通" /&gt;&lt;p&gt;最近在准备考试，做了一些二分搜索的题目，感觉有点意思，记录下做题的心得😁。&lt;/p&gt;
 &lt;h2 id=&#34;文章目标&#34;&gt;文章目标&lt;/h2&gt;
 &lt;p&gt;通过阅读本文，可以彻底搞懂二分查找的基本原理及各种变体，可以独立完成下面的力扣题目&lt;/p&gt;
@@ -876,10 +876,10 @@ $$
         </item>
         <item>
         <title>LeetCode区间问题总结</title>
-        <link>http://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
+        <link>https://github.bugxch.io/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sun, 16 Aug 2020 22:31:31 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://github.bugxch.io/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg" alt="Featured image of post LeetCode区间问题总结" /&gt;&lt;p&gt;上周五考试没有过，其中专业级第二题是关于区间的问题，在leetcode上找到类似的题目，总结复习下。&lt;/p&gt;
 &lt;h2 id=&#34;引子&#34;&gt;引子&lt;/h2&gt;
 &lt;p&gt;先看这道题，&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/corporate-flight-bookings/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1026,10 +1026,10 @@ $$
         </item>
         <item>
         <title>广度优先搜索详解</title>
-        <link>http://blog.bugxch.top/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 08 Aug 2020 11:24:24 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;p&gt;总结一下广度优先搜索的原理和用法。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Depth-first-tree.svg/640px-Depth-first-tree.svg.png?1596857354686&#34;
 	
@@ -1972,10 +1972,10 @@ $$
         </item>
         <item>
         <title>01背包问题详解</title>
-        <link>http://blog.bugxch.top/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;p&gt;背包问题是非常经典的动态规划问题，但是中文书籍和资料很少有把这个问题说得清晰明了的，问题表述不清，递推公式错误，不一而足，我在彻底想清楚这个问题后，觉得很有必要记录下整个思考过程。&lt;/p&gt;
 &lt;h2 id=&#34;原始问题&#34;&gt;原始问题&lt;/h2&gt;
 &lt;p&gt;当前有$n$件物品，第$i$件物品的重量为$w_i$，价值为$p_i$，当前有一个容量为$C$的背包。此处物品的重量，价值以及背包的容量都是非负整数。从这些物品中精心挑选若干件装入包中，这若干件被挑选的物品&lt;strong&gt;总重量不超过背包容量$C$，总价值尽量大&lt;/strong&gt;，那么所有可能的挑选方法得到的&lt;/p&gt;

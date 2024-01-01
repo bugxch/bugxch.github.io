@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>配置 on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/%E9%85%8D%E7%BD%AE/</link>
+        <link>https://github.bugxch.io/tags/%E9%85%8D%E7%BD%AE/</link>
         <description>Recent content in 配置 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Fri, 20 Jul 2018 23:08:38 +0000</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 20 Jul 2018 23:08:38 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Source Insight 基础配置</title>
-        <link>http://blog.bugxch.top/p/source-insight-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</link>
+        <link>https://github.bugxch.io/p/source-insight-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Fri, 20 Jul 2018 23:08:38 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/source-insight-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://github.bugxch.io/p/source-insight-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;p&gt;我们提交的代码，要求不能有多余的空格与 TAB 键，而且代码是在 linux 环境中编译和运行的，而我们经常使用 source insight 编辑代码，因此有必要针对性地配置以省去反复去掉空格和 TAB 键的麻烦。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201812/sourceinsight.png?raw=true&#34;
 	

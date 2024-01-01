@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>shell on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/shell/</link>
+        <link>https://github.bugxch.io/tags/shell/</link>
         <description>Recent content in shell on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sat, 03 Nov 2018 20:47:24 +0000</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 03 Nov 2018 20:47:24 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>\$(cd \$(dirname $0);pwd)的解释</title>
-        <link>http://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</link>
+        <link>https://github.bugxch.io/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</link>
         <pubDate>Sat, 03 Nov 2018 20:47:24 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</guid>
+        <guid>https://github.bugxch.io/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</guid>
         <description>&lt;p&gt;I love shell.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/i_love_bash.png?raw=true&#34;
 	

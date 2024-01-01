@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>C语言 on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/c%E8%AF%AD%E8%A8%80/</link>
+        <link>https://github.bugxch.io/tags/c%E8%AF%AD%E8%A8%80/</link>
         <description>Recent content in C语言 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Fri, 20 Jul 2018 22:54:24 +0000</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/c%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 20 Jul 2018 22:54:24 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/c%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>C语言补遗</title>
-        <link>http://blog.bugxch.top/p/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E9%81%97/</link>
+        <link>https://github.bugxch.io/p/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E9%81%97/</link>
         <pubDate>Fri, 20 Jul 2018 22:54:24 +0000</pubDate>
         
-        <guid>http://blog.bugxch.top/p/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E9%81%97/</guid>
+        <guid>https://github.bugxch.io/p/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E9%81%97/</guid>
         <description>&lt;p&gt;前些天公司摸底 C 语言考试，得分比较难看，回来发了考试答案，这篇博客把我做错的题目拿出来理一理，补补课。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>转载 on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/%E8%BD%AC%E8%BD%BD/</link>
+        <link>https://github.bugxch.io/tags/%E8%BD%AC%E8%BD%BD/</link>
         <description>Recent content in 转载 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sat, 15 Aug 2020 21:25:46 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/%E8%BD%AC%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Aug 2020 21:25:46 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/%E8%BD%AC%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>C&#43;&#43;中的sort函数详解</title>
-        <link>http://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 15 Aug 2020 21:25:46 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6002ed073ffa7d37b305c866.jpg" alt="Featured image of post C&#43;&#43;中的sort函数详解" /&gt;&lt;p&gt;公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。&lt;/p&gt;
 &lt;h2 id=&#34;总述&#34;&gt;总述&lt;/h2&gt;
 &lt;p&gt;下面是C++的stl中的排序的所有函数，这个系列的博客会逐一介绍，这次的博客先关注最常用的&lt;code&gt;sort&lt;/code&gt;函数。&lt;/p&gt;
@@ -482,10 +482,10 @@
         </item>
         <item>
         <title>[转载]用于深入思考的小工具</title>
-        <link>http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E7%94%A8%E4%BA%8E%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/</link>
+        <link>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E7%94%A8%E4%BA%8E%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/</link>
         <pubDate>Sun, 19 Jul 2020 21:18:11 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E7%94%A8%E4%BA%8E%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/</guid>
+        <guid>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E7%94%A8%E4%BA%8E%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/</guid>
         <description>&lt;p&gt;为了能够进一步探讨创造力，深度思考，学习，以及AI当中的一些话题，我发现我不得不先写一篇post来引入关于思考的一些工具和运作方式，作为后续posts探讨的基石。这篇文章会基于我在medium上的post进行展开。&lt;/p&gt;
 &lt;p&gt;为了掌握一项技能，或者深入一个领域，我们首先要从它们的定义开始入手，即知道，它们是什么，意味着什么。同样的，为了具备创造力，我们首先得弄清楚它最基本的含义是什么。&lt;/p&gt;
 &lt;p&gt;所谓创造，其最基本的一个含义就是能够做出、发展出一些之前没有的东西，重点在于“之前没有”。这里很tricky的一个地方在于，只要是世人看不到的、接触不到的，即可认为是“没有”，而不必是哲学意义上的本来所固有之类的抽象属性。而为了创造出“世人看不到”的东西，你仅仅需要去看到那些其他人看不到的东西就可以了。&lt;/p&gt;

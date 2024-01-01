@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>vs code on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/vs-code/</link>
+        <link>https://github.bugxch.io/tags/vs-code/</link>
         <description>Recent content in vs code on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sun, 26 Jul 2020 08:12:22 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/vs-code/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 26 Jul 2020 08:12:22 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/vs-code/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>使用linux vs code调试C&#43;&#43;程序</title>
-        <link>http://blog.bugxch.top/p/%E4%BD%BF%E7%94%A8linux-vs-code%E8%B0%83%E8%AF%95c-%E7%A8%8B%E5%BA%8F/</link>
+        <link>https://github.bugxch.io/p/%E4%BD%BF%E7%94%A8linux-vs-code%E8%B0%83%E8%AF%95c-%E7%A8%8B%E5%BA%8F/</link>
         <pubDate>Sun, 26 Jul 2020 08:12:22 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E4%BD%BF%E7%94%A8linux-vs-code%E8%B0%83%E8%AF%95c-%E7%A8%8B%E5%BA%8F/</guid>
+        <guid>https://github.bugxch.io/p/%E4%BD%BF%E7%94%A8linux-vs-code%E8%B0%83%E8%AF%95c-%E7%A8%8B%E5%BA%8F/</guid>
         <description>&lt;p&gt;最近练习leetcode编程，我希望在manjaro系统的vs code上可以单步调试C++代码，找了很多资料都不能正常运行，所以参考&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/docs/cpp/cpp-debug&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;官方资料&lt;/a&gt;自己整好了，记录一下。&lt;/p&gt;
 &lt;h2 id=&#34;预置条件&#34;&gt;预置条件&lt;/h2&gt;

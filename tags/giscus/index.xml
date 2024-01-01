@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>giscus on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/giscus/</link>
+        <link>https://github.bugxch.io/tags/giscus/</link>
         <description>Recent content in giscus on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sun, 08 May 2022 06:53:47 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/giscus/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 May 2022 06:53:47 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/giscus/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo博客更换giscus评论系统</title>
-        <link>http://blog.bugxch.top/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://github.bugxch.io/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 May 2022 06:53:47 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://github.bugxch.io/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;p&gt;之前的blog换过很多个评论系统，这次换成giscus试试。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6276f9af0947543129ae0168.jpg&#34;
 	

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>BFS on 巴巴变的博客</title>
-        <link>http://blog.bugxch.top/tags/bfs/</link>
+        <link>https://github.bugxch.io/tags/bfs/</link>
         <description>Recent content in BFS on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sat, 08 Aug 2020 11:24:24 +0800</lastBuildDate><atom:link href="http://blog.bugxch.top/tags/bfs/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 08 Aug 2020 11:24:24 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/bfs/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>广度优先搜索详解</title>
-        <link>http://blog.bugxch.top/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://github.bugxch.io/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 08 Aug 2020 11:24:24 +0800</pubDate>
         
-        <guid>http://blog.bugxch.top/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://github.bugxch.io/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;p&gt;总结一下广度优先搜索的原理和用法。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Depth-first-tree.svg/640px-Depth-first-tree.svg.png?1596857354686&#34;
 	
