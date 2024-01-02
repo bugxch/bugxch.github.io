@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>设计模式 on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+        <link>https://blog.bugxch.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
         <description>Recent content in 设计模式 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sun, 02 May 2021 21:43:54 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 02 May 2021 21:43:54 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Factory Method模式精解（C&#43;&#43;版本）</title>
-        <link>https://github.bugxch.io/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://blog.bugxch.top/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Sun, 02 May 2021 21:43:54 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://blog.bugxch.top/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608eae16d1a9ae528f502e1a.png" alt="Featured image of post Factory Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;继续之前的设计模式第四弹，这次是大名鼎鼎的工厂方法模式。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -291,10 +291,10 @@
         </item>
         <item>
         <title>Template Method模式精解（C&#43;&#43;版本）</title>
-        <link>https://github.bugxch.io/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://blog.bugxch.top/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Fri, 30 Apr 2021 19:52:15 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://blog.bugxch.top/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608bef5dd1a9ae528f268767.png" alt="Featured image of post Template Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;设计模式第三弹，设计模式&lt;strong&gt;行为型模式&lt;/strong&gt;中的模板方法，也比较简单。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -546,10 +546,10 @@
         </item>
         <item>
         <title>Adapter模式精解（C&#43;&#43;版本）</title>
-        <link>https://github.bugxch.io/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://blog.bugxch.top/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Thu, 29 Apr 2021 22:39:41 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://blog.bugxch.top/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608ac85bd1a9ae528fde126e.png" alt="Featured image of post Adapter模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;本篇是设计模式第二篇，适配器模式，比较好理解。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -732,10 +732,10 @@
         </item>
         <item>
         <title>Iterator模式精解（C&#43;&#43;版本）</title>
-        <link>https://github.bugxch.io/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
+        <link>https://blog.bugxch.top/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</link>
         <pubDate>Sat, 10 Apr 2021 22:15:09 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
+        <guid>https://blog.bugxch.top/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6086d967d1a9ae528f307ce1.jpg" alt="Featured image of post Iterator模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;从本文章开始，参考结城浩的&lt;a class=&#34;link&#34; href=&#34;https://www.ituring.com.cn/book/1811&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《图解设计模式》&lt;/a&gt;写23种设计模式的系列介绍文章，结合网络上其他的设计模式的内容，使用C++的语言编写这些设计模式，记录自己的设计模式的心得。&lt;/p&gt;
 &lt;h2 id=&#34;设计模式分类&#34;&gt;设计模式分类&lt;/h2&gt;

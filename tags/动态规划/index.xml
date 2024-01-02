@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>动态规划 on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+        <link>https://blog.bugxch.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
         <description>Recent content in 动态规划 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>01背包问题详解</title>
-        <link>https://github.bugxch.io/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://blog.bugxch.top/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://blog.bugxch.top/p/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;p&gt;背包问题是非常经典的动态规划问题，但是中文书籍和资料很少有把这个问题说得清晰明了的，问题表述不清，递推公式错误，不一而足，我在彻底想清楚这个问题后，觉得很有必要记录下整个思考过程。&lt;/p&gt;
 &lt;h2 id=&#34;原始问题&#34;&gt;原始问题&lt;/h2&gt;
 &lt;p&gt;当前有$n$件物品，第$i$件物品的重量为$w_i$，价值为$p_i$，当前有一个容量为$C$的背包。此处物品的重量，价值以及背包的容量都是非负整数。从这些物品中精心挑选若干件装入包中，这若干件被挑选的物品&lt;strong&gt;总重量不超过背包容量$C$，总价值尽量大&lt;/strong&gt;，那么所有可能的挑选方法得到的&lt;/p&gt;

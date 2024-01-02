@@ -2,457 +2,457 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/</link>
+        <link>https://blog.bugxch.top/tags/</link>
         <description>Recent content in Tags on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Wed, 25 Jan 2023 21:16:42 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 25 Jan 2023 21:16:42 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>r2s</title>
-        <link>https://github.bugxch.io/tags/r2s/</link>
+        <link>https://blog.bugxch.top/tags/r2s/</link>
         <pubDate>Wed, 25 Jan 2023 21:16:42 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/r2s/</guid>
+        <guid>https://blog.bugxch.top/tags/r2s/</guid>
         <description></description>
         </item>
         <item>
         <title>驾考</title>
-        <link>https://github.bugxch.io/tags/%E9%A9%BE%E8%80%83/</link>
+        <link>https://blog.bugxch.top/tags/%E9%A9%BE%E8%80%83/</link>
         <pubDate>Mon, 02 Jan 2023 11:30:42 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E9%A9%BE%E8%80%83/</guid>
+        <guid>https://blog.bugxch.top/tags/%E9%A9%BE%E8%80%83/</guid>
         <description></description>
         </item>
         <item>
         <title>总结</title>
-        <link>https://github.bugxch.io/tags/%E6%80%BB%E7%BB%93/</link>
+        <link>https://blog.bugxch.top/tags/%E6%80%BB%E7%BB%93/</link>
         <pubDate>Mon, 02 Jan 2023 11:30:42 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://blog.bugxch.top/tags/%E6%80%BB%E7%BB%93/</guid>
         <description></description>
         </item>
         <item>
         <title>NAS</title>
-        <link>https://github.bugxch.io/tags/nas/</link>
+        <link>https://blog.bugxch.top/tags/nas/</link>
         <pubDate>Mon, 19 Dec 2022 16:35:51 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/nas/</guid>
+        <guid>https://blog.bugxch.top/tags/nas/</guid>
         <description></description>
         </item>
         <item>
         <title>基金</title>
-        <link>https://github.bugxch.io/tags/%E5%9F%BA%E9%87%91/</link>
+        <link>https://blog.bugxch.top/tags/%E5%9F%BA%E9%87%91/</link>
         <pubDate>Sat, 14 May 2022 09:46:46 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E5%9F%BA%E9%87%91/</guid>
+        <guid>https://blog.bugxch.top/tags/%E5%9F%BA%E9%87%91/</guid>
         <description></description>
         </item>
         <item>
         <title>CSAPP</title>
-        <link>https://github.bugxch.io/tags/csapp/</link>
+        <link>https://blog.bugxch.top/tags/csapp/</link>
         <pubDate>Sun, 08 May 2022 07:32:49 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/csapp/</guid>
+        <guid>https://blog.bugxch.top/tags/csapp/</guid>
         <description></description>
         </item>
         <item>
         <title>blog</title>
-        <link>https://github.bugxch.io/tags/blog/</link>
+        <link>https://blog.bugxch.top/tags/blog/</link>
         <pubDate>Sun, 08 May 2022 06:53:47 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/blog/</guid>
+        <guid>https://blog.bugxch.top/tags/blog/</guid>
         <description></description>
         </item>
         <item>
         <title>giscus</title>
-        <link>https://github.bugxch.io/tags/giscus/</link>
+        <link>https://blog.bugxch.top/tags/giscus/</link>
         <pubDate>Sun, 08 May 2022 06:53:47 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/giscus/</guid>
+        <guid>https://blog.bugxch.top/tags/giscus/</guid>
         <description></description>
         </item>
         <item>
         <title>双系统</title>
-        <link>https://github.bugxch.io/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://blog.bugxch.top/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Fri, 06 May 2022 08:59:46 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.bugxch.top/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description></description>
         </item>
         <item>
         <title>感想</title>
-        <link>https://github.bugxch.io/tags/%E6%84%9F%E6%83%B3/</link>
+        <link>https://blog.bugxch.top/tags/%E6%84%9F%E6%83%B3/</link>
         <pubDate>Wed, 04 May 2022 07:28:27 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E6%84%9F%E6%83%B3/</guid>
+        <guid>https://blog.bugxch.top/tags/%E6%84%9F%E6%83%B3/</guid>
         <description></description>
         </item>
         <item>
         <title>tool</title>
-        <link>https://github.bugxch.io/tags/tool/</link>
+        <link>https://blog.bugxch.top/tags/tool/</link>
         <pubDate>Tue, 03 May 2022 22:11:34 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/tool/</guid>
+        <guid>https://blog.bugxch.top/tags/tool/</guid>
         <description></description>
         </item>
         <item>
         <title>bayes</title>
-        <link>https://github.bugxch.io/tags/bayes/</link>
+        <link>https://blog.bugxch.top/tags/bayes/</link>
         <pubDate>Thu, 21 Apr 2022 20:36:36 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/bayes/</guid>
+        <guid>https://blog.bugxch.top/tags/bayes/</guid>
         <description></description>
         </item>
         <item>
         <title>math</title>
-        <link>https://github.bugxch.io/tags/math/</link>
+        <link>https://blog.bugxch.top/tags/math/</link>
         <pubDate>Thu, 21 Apr 2022 20:36:36 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/math/</guid>
+        <guid>https://blog.bugxch.top/tags/math/</guid>
         <description></description>
         </item>
         <item>
         <title>bayesian</title>
-        <link>https://github.bugxch.io/tags/bayesian/</link>
+        <link>https://blog.bugxch.top/tags/bayesian/</link>
         <pubDate>Wed, 23 Mar 2022 20:13:15 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/bayesian/</guid>
+        <guid>https://blog.bugxch.top/tags/bayesian/</guid>
         <description></description>
         </item>
         <item>
         <title>git</title>
-        <link>https://github.bugxch.io/tags/git/</link>
+        <link>https://blog.bugxch.top/tags/git/</link>
         <pubDate>Tue, 15 Mar 2022 09:20:00 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/git/</guid>
+        <guid>https://blog.bugxch.top/tags/git/</guid>
         <description></description>
         </item>
         <item>
         <title>foldersync</title>
-        <link>https://github.bugxch.io/tags/foldersync/</link>
+        <link>https://blog.bugxch.top/tags/foldersync/</link>
         <pubDate>Wed, 11 Aug 2021 22:31:58 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/foldersync/</guid>
+        <guid>https://blog.bugxch.top/tags/foldersync/</guid>
         <description></description>
         </item>
         <item>
         <title>notes</title>
-        <link>https://github.bugxch.io/tags/notes/</link>
+        <link>https://blog.bugxch.top/tags/notes/</link>
         <pubDate>Wed, 11 Aug 2021 22:31:58 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/notes/</guid>
+        <guid>https://blog.bugxch.top/tags/notes/</guid>
         <description></description>
         </item>
         <item>
         <title>obsidian</title>
-        <link>https://github.bugxch.io/tags/obsidian/</link>
+        <link>https://blog.bugxch.top/tags/obsidian/</link>
         <pubDate>Wed, 11 Aug 2021 22:31:58 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/obsidian/</guid>
+        <guid>https://blog.bugxch.top/tags/obsidian/</guid>
         <description></description>
         </item>
         <item>
         <title>algorithm</title>
-        <link>https://github.bugxch.io/tags/algorithm/</link>
+        <link>https://blog.bugxch.top/tags/algorithm/</link>
         <pubDate>Thu, 06 May 2021 22:33:59 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/algorithm/</guid>
+        <guid>https://blog.bugxch.top/tags/algorithm/</guid>
         <description></description>
         </item>
         <item>
         <title>leetcode</title>
-        <link>https://github.bugxch.io/tags/leetcode/</link>
+        <link>https://blog.bugxch.top/tags/leetcode/</link>
         <pubDate>Thu, 06 May 2021 22:33:59 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/leetcode/</guid>
+        <guid>https://blog.bugxch.top/tags/leetcode/</guid>
         <description></description>
         </item>
         <item>
         <title>设计模式</title>
-        <link>https://github.bugxch.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+        <link>https://blog.bugxch.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
         <pubDate>Sun, 02 May 2021 21:43:54 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+        <guid>https://blog.bugxch.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
         <description></description>
         </item>
         <item>
         <title>迭代器模式</title>
-        <link>https://github.bugxch.io/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/</link>
+        <link>https://blog.bugxch.top/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/</link>
         <pubDate>Sat, 10 Apr 2021 22:15:09 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/</guid>
+        <guid>https://blog.bugxch.top/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/</guid>
         <description></description>
         </item>
         <item>
         <title>设计</title>
-        <link>https://github.bugxch.io/tags/%E8%AE%BE%E8%AE%A1/</link>
+        <link>https://blog.bugxch.top/tags/%E8%AE%BE%E8%AE%A1/</link>
         <pubDate>Fri, 22 Jan 2021 08:07:14 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E8%AE%BE%E8%AE%A1/</guid>
+        <guid>https://blog.bugxch.top/tags/%E8%AE%BE%E8%AE%A1/</guid>
         <description></description>
         </item>
         <item>
         <title>重构</title>
-        <link>https://github.bugxch.io/tags/%E9%87%8D%E6%9E%84/</link>
+        <link>https://blog.bugxch.top/tags/%E9%87%8D%E6%9E%84/</link>
         <pubDate>Fri, 22 Jan 2021 08:07:14 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E9%87%8D%E6%9E%84/</guid>
+        <guid>https://blog.bugxch.top/tags/%E9%87%8D%E6%9E%84/</guid>
         <description></description>
         </item>
         <item>
         <title>回忆</title>
-        <link>https://github.bugxch.io/tags/%E5%9B%9E%E5%BF%86/</link>
+        <link>https://blog.bugxch.top/tags/%E5%9B%9E%E5%BF%86/</link>
         <pubDate>Sat, 02 Jan 2021 22:26:25 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E5%9B%9E%E5%BF%86/</guid>
+        <guid>https://blog.bugxch.top/tags/%E5%9B%9E%E5%BF%86/</guid>
         <description></description>
         </item>
         <item>
         <title>c&#43;&#43;</title>
-        <link>https://github.bugxch.io/tags/c&#43;&#43;/</link>
+        <link>https://blog.bugxch.top/tags/c&#43;&#43;/</link>
         <pubDate>Sun, 16 Aug 2020 22:31:31 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/c&#43;&#43;/</guid>
+        <guid>https://blog.bugxch.top/tags/c&#43;&#43;/</guid>
         <description></description>
         </item>
         <item>
         <title>区间</title>
-        <link>https://github.bugxch.io/tags/%E5%8C%BA%E9%97%B4/</link>
+        <link>https://blog.bugxch.top/tags/%E5%8C%BA%E9%97%B4/</link>
         <pubDate>Sun, 16 Aug 2020 22:31:31 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E5%8C%BA%E9%97%B4/</guid>
+        <guid>https://blog.bugxch.top/tags/%E5%8C%BA%E9%97%B4/</guid>
         <description></description>
         </item>
         <item>
         <title>STL</title>
-        <link>https://github.bugxch.io/tags/stl/</link>
+        <link>https://blog.bugxch.top/tags/stl/</link>
         <pubDate>Sat, 15 Aug 2020 21:25:46 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/stl/</guid>
+        <guid>https://blog.bugxch.top/tags/stl/</guid>
         <description></description>
         </item>
         <item>
         <title>转载</title>
-        <link>https://github.bugxch.io/tags/%E8%BD%AC%E8%BD%BD/</link>
+        <link>https://blog.bugxch.top/tags/%E8%BD%AC%E8%BD%BD/</link>
         <pubDate>Sat, 15 Aug 2020 21:25:46 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E8%BD%AC%E8%BD%BD/</guid>
+        <guid>https://blog.bugxch.top/tags/%E8%BD%AC%E8%BD%BD/</guid>
         <description></description>
         </item>
         <item>
         <title>BFS</title>
-        <link>https://github.bugxch.io/tags/bfs/</link>
+        <link>https://blog.bugxch.top/tags/bfs/</link>
         <pubDate>Sat, 08 Aug 2020 11:24:24 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/bfs/</guid>
+        <guid>https://blog.bugxch.top/tags/bfs/</guid>
         <description></description>
         </item>
         <item>
         <title>sliding window</title>
-        <link>https://github.bugxch.io/tags/sliding-window/</link>
+        <link>https://blog.bugxch.top/tags/sliding-window/</link>
         <pubDate>Sun, 02 Aug 2020 15:40:45 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/sliding-window/</guid>
+        <guid>https://blog.bugxch.top/tags/sliding-window/</guid>
         <description></description>
         </item>
         <item>
         <title>manjaro</title>
-        <link>https://github.bugxch.io/tags/manjaro/</link>
+        <link>https://blog.bugxch.top/tags/manjaro/</link>
         <pubDate>Sun, 26 Jul 2020 08:12:22 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/manjaro/</guid>
+        <guid>https://blog.bugxch.top/tags/manjaro/</guid>
         <description></description>
         </item>
         <item>
         <title>vs code</title>
-        <link>https://github.bugxch.io/tags/vs-code/</link>
+        <link>https://blog.bugxch.top/tags/vs-code/</link>
         <pubDate>Sun, 26 Jul 2020 08:12:22 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/vs-code/</guid>
+        <guid>https://blog.bugxch.top/tags/vs-code/</guid>
         <description></description>
         </item>
         <item>
         <title>工具</title>
-        <link>https://github.bugxch.io/tags/%E5%B7%A5%E5%85%B7/</link>
+        <link>https://blog.bugxch.top/tags/%E5%B7%A5%E5%85%B7/</link>
         <pubDate>Sun, 19 Jul 2020 21:18:11 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E5%B7%A5%E5%85%B7/</guid>
+        <guid>https://blog.bugxch.top/tags/%E5%B7%A5%E5%85%B7/</guid>
         <description></description>
         </item>
         <item>
         <title>动态规划</title>
-        <link>https://github.bugxch.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+        <link>https://blog.bugxch.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
         <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+        <guid>https://blog.bugxch.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
         <description></description>
         </item>
         <item>
         <title>AI</title>
-        <link>https://github.bugxch.io/tags/ai/</link>
+        <link>https://blog.bugxch.top/tags/ai/</link>
         <pubDate>Sun, 26 Jan 2020 22:24:10 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/ai/</guid>
+        <guid>https://blog.bugxch.top/tags/ai/</guid>
         <description></description>
         </item>
         <item>
         <title>pytorch</title>
-        <link>https://github.bugxch.io/tags/pytorch/</link>
+        <link>https://blog.bugxch.top/tags/pytorch/</link>
         <pubDate>Fri, 06 Dec 2019 21:53:20 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/pytorch/</guid>
+        <guid>https://blog.bugxch.top/tags/pytorch/</guid>
         <description></description>
         </item>
         <item>
         <title>kindle</title>
-        <link>https://github.bugxch.io/tags/kindle/</link>
+        <link>https://blog.bugxch.top/tags/kindle/</link>
         <pubDate>Sat, 04 May 2019 08:31:00 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/kindle/</guid>
+        <guid>https://blog.bugxch.top/tags/kindle/</guid>
         <description></description>
         </item>
         <item>
         <title>CUDA</title>
-        <link>https://github.bugxch.io/tags/cuda/</link>
+        <link>https://blog.bugxch.top/tags/cuda/</link>
         <pubDate>Sat, 09 Feb 2019 19:02:24 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/cuda/</guid>
+        <guid>https://blog.bugxch.top/tags/cuda/</guid>
         <description></description>
         </item>
         <item>
         <title>ML</title>
-        <link>https://github.bugxch.io/tags/ml/</link>
+        <link>https://blog.bugxch.top/tags/ml/</link>
         <pubDate>Sat, 09 Feb 2019 19:02:24 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/ml/</guid>
+        <guid>https://blog.bugxch.top/tags/ml/</guid>
         <description></description>
         </item>
         <item>
         <title>ONNX</title>
-        <link>https://github.bugxch.io/tags/onnx/</link>
+        <link>https://blog.bugxch.top/tags/onnx/</link>
         <pubDate>Wed, 14 Nov 2018 07:09:58 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/onnx/</guid>
+        <guid>https://blog.bugxch.top/tags/onnx/</guid>
         <description></description>
         </item>
         <item>
         <title>tensorflow</title>
-        <link>https://github.bugxch.io/tags/tensorflow/</link>
+        <link>https://blog.bugxch.top/tags/tensorflow/</link>
         <pubDate>Wed, 14 Nov 2018 07:09:58 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/tensorflow/</guid>
+        <guid>https://blog.bugxch.top/tags/tensorflow/</guid>
         <description></description>
         </item>
         <item>
         <title>python</title>
-        <link>https://github.bugxch.io/tags/python/</link>
+        <link>https://blog.bugxch.top/tags/python/</link>
         <pubDate>Thu, 08 Nov 2018 07:33:12 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/python/</guid>
+        <guid>https://blog.bugxch.top/tags/python/</guid>
         <description></description>
         </item>
         <item>
         <title>文件操作</title>
-        <link>https://github.bugxch.io/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+        <link>https://blog.bugxch.top/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Thu, 08 Nov 2018 07:33:12 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://blog.bugxch.top/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
         <description></description>
         </item>
         <item>
         <title>shell</title>
-        <link>https://github.bugxch.io/tags/shell/</link>
+        <link>https://blog.bugxch.top/tags/shell/</link>
         <pubDate>Sat, 03 Nov 2018 20:47:24 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/shell/</guid>
+        <guid>https://blog.bugxch.top/tags/shell/</guid>
         <description></description>
         </item>
         <item>
         <title>机器学习</title>
-        <link>https://github.bugxch.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+        <link>https://blog.bugxch.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
         <pubDate>Sun, 05 Aug 2018 08:15:17 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+        <guid>https://blog.bugxch.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
         <description></description>
         </item>
         <item>
         <title>书单</title>
-        <link>https://github.bugxch.io/tags/%E4%B9%A6%E5%8D%95/</link>
+        <link>https://blog.bugxch.top/tags/%E4%B9%A6%E5%8D%95/</link>
         <pubDate>Thu, 26 Jul 2018 06:38:02 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E4%B9%A6%E5%8D%95/</guid>
+        <guid>https://blog.bugxch.top/tags/%E4%B9%A6%E5%8D%95/</guid>
         <description></description>
         </item>
         <item>
         <title>计算机</title>
-        <link>https://github.bugxch.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+        <link>https://blog.bugxch.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
         <pubDate>Sat, 21 Jul 2018 21:59:51 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
+        <guid>https://blog.bugxch.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
         <description></description>
         </item>
         <item>
         <title>正则表达式</title>
-        <link>https://github.bugxch.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+        <link>https://blog.bugxch.top/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
         <pubDate>Sat, 21 Jul 2018 21:12:46 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+        <guid>https://blog.bugxch.top/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
         <description></description>
         </item>
         <item>
         <title>社科</title>
-        <link>https://github.bugxch.io/tags/%E7%A4%BE%E7%A7%91/</link>
+        <link>https://blog.bugxch.top/tags/%E7%A4%BE%E7%A7%91/</link>
         <pubDate>Sat, 21 Jul 2018 21:09:13 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E7%A4%BE%E7%A7%91/</guid>
+        <guid>https://blog.bugxch.top/tags/%E7%A4%BE%E7%A7%91/</guid>
         <description></description>
         </item>
         <item>
         <title>转发</title>
-        <link>https://github.bugxch.io/tags/%E8%BD%AC%E5%8F%91/</link>
+        <link>https://blog.bugxch.top/tags/%E8%BD%AC%E5%8F%91/</link>
         <pubDate>Sat, 21 Jul 2018 20:56:11 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E8%BD%AC%E5%8F%91/</guid>
+        <guid>https://blog.bugxch.top/tags/%E8%BD%AC%E5%8F%91/</guid>
         <description></description>
         </item>
         <item>
         <title>整理阅读</title>
-        <link>https://github.bugxch.io/tags/%E6%95%B4%E7%90%86%E9%98%85%E8%AF%BB/</link>
+        <link>https://blog.bugxch.top/tags/%E6%95%B4%E7%90%86%E9%98%85%E8%AF%BB/</link>
         <pubDate>Sat, 21 Jul 2018 20:53:18 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E6%95%B4%E7%90%86%E9%98%85%E8%AF%BB/</guid>
+        <guid>https://blog.bugxch.top/tags/%E6%95%B4%E7%90%86%E9%98%85%E8%AF%BB/</guid>
         <description></description>
         </item>
         <item>
         <title>数据结构</title>
-        <link>https://github.bugxch.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <link>https://blog.bugxch.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
         <pubDate>Fri, 20 Jul 2018 23:18:50 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+        <guid>https://blog.bugxch.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
         <description></description>
         </item>
         <item>
         <title>配置</title>
-        <link>https://github.bugxch.io/tags/%E9%85%8D%E7%BD%AE/</link>
+        <link>https://blog.bugxch.top/tags/%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Fri, 20 Jul 2018 23:08:38 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://blog.bugxch.top/tags/%E9%85%8D%E7%BD%AE/</guid>
         <description></description>
         </item>
         <item>
         <title>C语言</title>
-        <link>https://github.bugxch.io/tags/c%E8%AF%AD%E8%A8%80/</link>
+        <link>https://blog.bugxch.top/tags/c%E8%AF%AD%E8%A8%80/</link>
         <pubDate>Fri, 20 Jul 2018 22:54:24 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/c%E8%AF%AD%E8%A8%80/</guid>
+        <guid>https://blog.bugxch.top/tags/c%E8%AF%AD%E8%A8%80/</guid>
         <description></description>
         </item>
         <item>
         <title>C/C&#43;&#43;</title>
-        <link>https://github.bugxch.io/tags/c/c&#43;&#43;/</link>
+        <link>https://blog.bugxch.top/tags/c/c&#43;&#43;/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/tags/c/c&#43;&#43;/</guid>
+        <guid>https://blog.bugxch.top/tags/c/c&#43;&#43;/</guid>
         <description></description>
         </item>
         

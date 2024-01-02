@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>区间 on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/%E5%8C%BA%E9%97%B4/</link>
+        <link>https://blog.bugxch.top/tags/%E5%8C%BA%E9%97%B4/</link>
         <description>Recent content in 区间 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sun, 16 Aug 2020 22:31:31 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/%E5%8C%BA%E9%97%B4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Aug 2020 22:31:31 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/%E5%8C%BA%E9%97%B4/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LeetCode区间问题总结</title>
-        <link>https://github.bugxch.io/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
+        <link>https://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sun, 16 Aug 2020 22:31:31 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg" alt="Featured image of post LeetCode区间问题总结" /&gt;&lt;p&gt;上周五考试没有过，其中专业级第二题是关于区间的问题，在leetcode上找到类似的题目，总结复习下。&lt;/p&gt;
 &lt;h2 id=&#34;引子&#34;&gt;引子&lt;/h2&gt;
 &lt;p&gt;先看这道题，&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/corporate-flight-bookings/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

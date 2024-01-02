@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>bayes on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/bayes/</link>
+        <link>https://blog.bugxch.top/tags/bayes/</link>
         <description>Recent content in bayes on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Thu, 21 Apr 2022 20:36:36 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/bayes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 21 Apr 2022 20:36:36 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/bayes/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>三门问题精解</title>
-        <link>https://github.bugxch.io/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</link>
+        <link>https://blog.bugxch.top/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</link>
         <pubDate>Thu, 21 Apr 2022 20:36:36 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</guid>
+        <guid>https://blog.bugxch.top/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</guid>
         <description>&lt;p&gt;书接&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/detection/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;上文&lt;/a&gt;，使用贝叶斯定理解释著名的&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh/%E8%92%99%E6%8F%90%E9%9C%8D%E7%88%BE%E5%95%8F%E9%A1%8C&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Monty Hall问题&lt;/a&gt;，思索清楚之后感觉挺有趣，分享下。&lt;/p&gt;

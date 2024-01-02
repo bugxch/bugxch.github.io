@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>kindle on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/kindle/</link>
+        <link>https://blog.bugxch.top/tags/kindle/</link>
         <description>Recent content in kindle on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sat, 04 May 2019 08:31:00 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/kindle/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 04 May 2019 08:31:00 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/kindle/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Kindle最佳排版记录</title>
-        <link>https://github.bugxch.io/p/kindle%E6%9C%80%E4%BD%B3%E6%8E%92%E7%89%88%E8%AE%B0%E5%BD%95/</link>
+        <link>https://blog.bugxch.top/p/kindle%E6%9C%80%E4%BD%B3%E6%8E%92%E7%89%88%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Sat, 04 May 2019 08:31:00 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/p/kindle%E6%9C%80%E4%BD%B3%E6%8E%92%E7%89%88%E8%AE%B0%E5%BD%95/</guid>
+        <guid>https://blog.bugxch.top/p/kindle%E6%9C%80%E4%BD%B3%E6%8E%92%E7%89%88%E8%AE%B0%E5%BD%95/</guid>
         <description>&lt;p&gt;探索了很多遍，下面是我使用calibre的转换书籍功能重新排版书籍的最佳参数，特此记录，这个适用于kindle oasis 2，仅供参考。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;设置输出格式（此处选择AZW3），基础文字大小，以及行高&lt;/li&gt;
@@ -61,10 +61,10 @@
         </item>
         <item>
         <title>Kindle使用小记</title>
-        <link>https://github.bugxch.io/p/kindle%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</link>
+        <link>https://blog.bugxch.top/p/kindle%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</link>
         <pubDate>Fri, 29 Jun 2018 22:17:59 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/p/kindle%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</guid>
+        <guid>https://blog.bugxch.top/p/kindle%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</guid>
         <description>&lt;img src="https://pic.downk.cc/item/5feb4e063ffa7d37b31957b7.jpg" alt="Featured image of post Kindle使用小记" /&gt;&lt;p&gt;今天入手了一直心心念念的顶配级kindle oasis 2，非常感谢老婆大人的资金支持，在&lt;a class=&#34;link&#34; href=&#34;https://item.taobao.com/item.htm?spm=a1z09.2.0.0.59972e8dpJGLWd&amp;amp;id=520077012565&amp;amp;_u=t1hu3bqm1146&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;某宝&lt;/a&gt;上买了美版32G的版本，可以说是顶配版了，字迹清晰，屏幕适中，爱不释手。&lt;/p&gt;
 &lt;h2 id=&#34;基础设置&#34;&gt;基础设置&lt;/h2&gt;

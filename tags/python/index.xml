@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>python on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/python/</link>
+        <link>https://blog.bugxch.top/tags/python/</link>
         <description>Recent content in python on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Thu, 08 Nov 2018 07:33:12 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 08 Nov 2018 07:33:12 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/python/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>python文件操作</title>
-        <link>https://github.bugxch.io/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+        <link>https://blog.bugxch.top/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Thu, 08 Nov 2018 07:33:12 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://blog.bugxch.top/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。&lt;/p&gt;
 &lt;h1 id=&#34;python文件读写&#34;&gt;python文件读写&lt;/h1&gt;
 &lt;h2 id=&#34;基础知识&#34;&gt;基础知识&lt;/h2&gt;
@@ -429,10 +429,10 @@
         </item>
         <item>
         <title>matplot 之 3D 绘图指南</title>
-        <link>https://github.bugxch.io/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/</link>
+        <link>https://blog.bugxch.top/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/</link>
         <pubDate>Sat, 21 Jul 2018 20:39:09 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/</guid>
+        <guid>https://blog.bugxch.top/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/</guid>
         <description>&lt;p&gt;因为梯度下降算法需要绘制 3 维图像，故学习之，日后借鉴。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/3d_demo.png?raw=true&#34;
 	
@@ -1187,10 +1187,10 @@
         </item>
         <item>
         <title>python排序</title>
-        <link>https://github.bugxch.io/p/python%E6%8E%92%E5%BA%8F/</link>
+        <link>https://blog.bugxch.top/p/python%E6%8E%92%E5%BA%8F/</link>
         <pubDate>Sat, 21 Jul 2018 20:28:44 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/p/python%E6%8E%92%E5%BA%8F/</guid>
+        <guid>https://blog.bugxch.top/p/python%E6%8E%92%E5%BA%8F/</guid>
         <description>&lt;p&gt;python基本操作知识积累。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://geekswipe.net/wp-content/uploads/2014/10/Geekswipe-Python-Twitter-bot-Source-Photo-by-Karthikeyan-KC.jpg&#34;
 	

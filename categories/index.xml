@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/categories/</link>
+        <link>https://blog.bugxch.top/categories/</link>
         <description>Recent content in Categories on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Wed, 25 Jan 2023 21:16:42 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 25 Jan 2023 21:16:42 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>技术</title>
-        <link>https://github.bugxch.io/categories/%E6%8A%80%E6%9C%AF/</link>
+        <link>https://blog.bugxch.top/categories/%E6%8A%80%E6%9C%AF/</link>
         <pubDate>Wed, 25 Jan 2023 21:16:42 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/categories/%E6%8A%80%E6%9C%AF/</guid>
+        <guid>https://blog.bugxch.top/categories/%E6%8A%80%E6%9C%AF/</guid>
         <description></description>
         </item>
         <item>
         <title>生活</title>
-        <link>https://github.bugxch.io/categories/%E7%94%9F%E6%B4%BB/</link>
+        <link>https://blog.bugxch.top/categories/%E7%94%9F%E6%B4%BB/</link>
         <pubDate>Mon, 02 Jan 2023 11:30:42 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/categories/%E7%94%9F%E6%B4%BB/</guid>
+        <guid>https://blog.bugxch.top/categories/%E7%94%9F%E6%B4%BB/</guid>
         <description></description>
         </item>
         <item>
         <title>投资</title>
-        <link>https://github.bugxch.io/categories/%E6%8A%95%E8%B5%84/</link>
+        <link>https://blog.bugxch.top/categories/%E6%8A%95%E8%B5%84/</link>
         <pubDate>Mon, 19 Dec 2022 16:35:51 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/categories/%E6%8A%95%E8%B5%84/</guid>
+        <guid>https://blog.bugxch.top/categories/%E6%8A%95%E8%B5%84/</guid>
         <description></description>
         </item>
         <item>
         <title>阅读</title>
-        <link>https://github.bugxch.io/categories/%E9%98%85%E8%AF%BB/</link>
+        <link>https://blog.bugxch.top/categories/%E9%98%85%E8%AF%BB/</link>
         <pubDate>Sat, 14 May 2022 09:46:46 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/categories/%E9%98%85%E8%AF%BB/</guid>
+        <guid>https://blog.bugxch.top/categories/%E9%98%85%E8%AF%BB/</guid>
         <description></description>
         </item>
         <item>
         <title>技艺</title>
-        <link>https://github.bugxch.io/categories/%E6%8A%80%E8%89%BA/</link>
+        <link>https://blog.bugxch.top/categories/%E6%8A%80%E8%89%BA/</link>
         <pubDate>Sun, 08 May 2022 07:32:49 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/categories/%E6%8A%80%E8%89%BA/</guid>
+        <guid>https://blog.bugxch.top/categories/%E6%8A%80%E8%89%BA/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>https://github.bugxch.io/categories/test/</link>
+        <link>https://blog.bugxch.top/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/categories/test/</guid>
+        <guid>https://blog.bugxch.top/categories/test/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         

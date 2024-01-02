@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>重构 on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/%E9%87%8D%E6%9E%84/</link>
+        <link>https://blog.bugxch.top/tags/%E9%87%8D%E6%9E%84/</link>
         <description>Recent content in 重构 on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Fri, 22 Jan 2021 08:07:14 +0800</lastBuildDate><atom:link href="https://github.bugxch.io/tags/%E9%87%8D%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 22 Jan 2021 08:07:14 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/%E9%87%8D%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[转载]表驱动法代码实践</title>
-        <link>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/</link>
+        <link>https://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/</link>
         <pubDate>Fri, 22 Jan 2021 08:07:14 +0800</pubDate>
         
-        <guid>https://github.bugxch.io/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/</guid>
+        <guid>https://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/600a17e53ffa7d37b3da9d49.jpg" alt="Featured image of post [转载]表驱动法代码实践" /&gt;&lt;p&gt;这是一篇转载，点击查看&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/clover-toeic/p/3730362.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;原文链接&lt;/a&gt;。&lt;/p&gt;
 &lt;blockquote&gt;

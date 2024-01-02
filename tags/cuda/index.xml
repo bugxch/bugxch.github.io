@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CUDA on 巴巴变的博客</title>
-        <link>https://github.bugxch.io/tags/cuda/</link>
+        <link>https://blog.bugxch.top/tags/cuda/</link>
         <description>Recent content in CUDA on 巴巴变的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sat, 09 Feb 2019 19:02:24 +0000</lastBuildDate><atom:link href="https://github.bugxch.io/tags/cuda/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 09 Feb 2019 19:02:24 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/tags/cuda/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Manjaro安装CUDA教程</title>
-        <link>https://github.bugxch.io/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</link>
+        <link>https://blog.bugxch.top/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</link>
         <pubDate>Sat, 09 Feb 2019 19:02:24 +0000</pubDate>
         
-        <guid>https://github.bugxch.io/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</guid>
+        <guid>https://blog.bugxch.top/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</guid>
         <description>&lt;p&gt;去年年底安装将我的Thinkpad T450的双系统中的opensuse换成了&lt;a class=&#34;link&#34; href=&#34;https://manjaro.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Manjaro&lt;/a&gt;，折腾安装了下CUDA，是为记录。&lt;/p&gt;
 &lt;h2 id=&#34;基本安装&#34;&gt;基本安装&lt;/h2&gt;
