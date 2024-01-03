@@ -7,7 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Wed, 25 Jan 2023 21:16:42 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Jan 2024 07:31:33 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Test</title>
+        <link>https://blog.bugxch.top/p/test/</link>
+        <pubDate>Thu, 04 Jan 2024 07:31:33 +0800</pubDate>
+        
+        <guid>https://blog.bugxch.top/p/test/</guid>
+        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post Test" /&gt;&lt;h1 id=&#34;附录&#34;&gt;附录&lt;/h1&gt;
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+&lt;h2 id=&#34;版权信息&#34;&gt;版权信息&lt;/h2&gt;
+&lt;p&gt;本文原载于&lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;bugxch的blog&lt;/a&gt;，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>R2S外接风扇设置</title>
         <link>https://blog.bugxch.top/p/r2s%E5%A4%96%E6%8E%A5%E9%A3%8E%E6%89%87%E8%AE%BE%E7%BD%AE/</link>
         <pubDate>Wed, 25 Jan 2023 21:16:42 +0800</pubDate>
@@ -1681,8 +1694,7 @@
     &gt;凯文·凯利70岁生日写的103条人生忠告（中文翻译） | 枫言枫语&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;全文完🚀&lt;/p&gt;
-</description>
+&lt;p&gt;全文完🚀&lt;/p&gt;</description>
         </item>
         <item>
         <title>关于浮点数的迷思</title>
@@ -12323,10 +12335,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>\$(cd \$(dirname $0);pwd)的解释</title>
-        <link>https://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</link>
+        <link>https://blog.bugxch.top/p/%5Ccd-%5Cdirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</link>
         <pubDate>Sat, 03 Nov 2018 20:47:24 +0000</pubDate>
         
-        <guid>https://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</guid>
+        <guid>https://blog.bugxch.top/p/%5Ccd-%5Cdirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</guid>
         <description>&lt;p&gt;I love shell.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/i_love_bash.png?raw=true&#34;
 	

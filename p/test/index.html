@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='I love shell.
-'>
-<title>\$(cd \$(dirname $0);pwd)的解释</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='附录 参考文献 版权信息 本文原载于bugxch的blog，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。'>
+<title>Test</title>
 
-<link rel='canonical' href='https://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/'>
+<link rel='canonical' href='https://blog.bugxch.top/p/test/'>
 
-<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='\$(cd \$(dirname $0);pwd)的解释'>
-<meta property='og:description' content='I love shell.
-'>
-<meta property='og:url' content='https://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Test'>
+<meta property='og:description' content='附录 参考文献 版权信息 本文原载于bugxch的blog，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。'>
+<meta property='og:url' content='https://blog.bugxch.top/p/test/'>
 <meta property='og:site_name' content='巴巴变的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='shell' /><meta property='article:published_time' content='2018-11-03T20:47:24&#43;00:00'/><meta property='article:modified_time' content='2018-11-03T20:47:24&#43;00:00'/>
-<meta name="twitter:title" content="\$(cd \$(dirname $0);pwd)的解释">
-<meta name="twitter:description" content="I love shell.
-">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2024-01-04T07:31:33&#43;08:00'/><meta property='article:modified_time' content='2024-01-04T07:31:33&#43;08:00'/><meta property='og:image' content='https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg' />
+<meta name="twitter:title" content="Test">
+<meta name="twitter:description" content="附录 参考文献 版权信息 本文原载于bugxch的blog，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg' />
     <link rel="shortcut icon" href="%5cfavicon.ico" />
 <style>
     :root {
@@ -325,12 +323,8 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
-      <ol>
-        <li><a href="#语句解释">语句解释</a></li>
-        <li><a href="#为什么不用pwd">为什么不用pwd？</a></li>
-      </ol>
-    </li>
+    <li><a href="#参考文献">参考文献</a></li>
+    <li><a href="#版权信息">版权信息</a></li>
   </ol>
 </nav>
         </div>
@@ -342,23 +336,27 @@
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/test/">
+                
+                    <img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" loading="lazy" alt="Featured image of post Test" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
     <header class="article-category">
-        
-            <a href="/categories/%E6%8A%80%E8%89%BA/" >
-                技艺
-            </a>
         
     </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/">\$(cd \$(dirname $0);pwd)的解释</a>
+            <a href="/p/test/">Test</a>
         </h2>
     
         
@@ -380,7 +378,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2018/11/03</time>
+                <time class="article-time--published">2024/01/04</time>
             </div>
         
 
@@ -395,7 +393,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -410,140 +408,18 @@
     <section class="article-content">
     
     
-    <p>I love shell.</p>
-<p><img src="https://github.com/bugxch/blogpics/blob/master/201807/i_love_bash.png?raw=true"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p>在很多shell脚本中，经常可以看到下面的语句</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">rootDir</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="k">$(</span>dirname <span class="nv">$0</span><span class="k">)</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
-</span></span><span class="line"><span class="cl">...
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>这个语句的作用是获取shell脚本所在目录的绝对路径，这个语句怎么理解？为什么不直接用<code>pwd</code>来获取当前路径呢？</p>
-<h3 id="语句解释">语句解释</h3>
-<p>参考<a class="link" href="https://explainshell.com/explain?cmd=cd&#43;%24%28dirname&#43;%240%29%3B&#43;pwd"  target="_blank" rel="noopener"
-    >explainshell.com - cd $(dirname $0); pwd</a>的解释，拆解如下。</p>
-<ul>
-<li>
-<p><code>dirname</code>的功能是去掉文件路径名中的从右往左数的第一个<code>/</code>及其之后的所有文字，查看<code>dirname</code>的help信息可以看到如下的例子</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">dirname /usr/bin/          -&gt; <span class="s2">&#34;/usr&#34;</span>
-</span></span><span class="line"><span class="cl">dirname dir1/str dir2/str  -&gt; <span class="s2">&#34;dir1&#34;</span> followed by <span class="s2">&#34;dir2&#34;</span>
-</span></span><span class="line"><span class="cl">dirname stdio.h            -&gt; <span class="s2">&#34;.&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p><code>$0</code>，这是bash shell脚本中的位置参数，用来表明输入到命令行中的命令本身。其余的还有<code>$1，$2</code>等等，分别表示输入到命令行中的命令后面带有的第一个参数和第二个参数，依次类推。比如下面的命令</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bash test9.sh <span class="m">10</span> <span class="m">9</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>其中的<code>$0</code>就是<code>test9.sh</code>，10和9分别是<code>$1</code>和<code>$2</code>。</p>
-</li>
-<li>
-<p><code>pwd</code>，这个命令已经很熟悉了，就是打印当前的绝对路径。</p>
-</li>
-</ul>
-<hr>
-<p>有了上面的分析，那<strong>整个命令怎么理解呢</strong>？举例说明，假如我们有如下的脚本<code>test.sh</code>在目录<code>~/DTS/code</code>下</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#/bin/bash</span>
-</span></span><span class="line"><span class="cl"><span class="nv">rootDir</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="k">$(</span>dirname <span class="nv">$0</span><span class="k">)</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;rootDir </span><span class="nv">$rootDir</span><span class="s2">&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>该脚本的功能就是寻找脚本所在目录下的所有的<code>.cc</code>文件。我们在命令行中运行该命令<code>./test.sh</code>，输出的结果是</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bugxch@opensuse:~/DTS/code$ ./test.sh
-</span></span><span class="line"><span class="cl">rootDir /home/bugxch/DTS/code
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>请留意运行该脚本的时候的几个关键要素</p>
-<ul>
-<li>
-<p>调用脚本的路径。我们在目录<code>~/DTS/code/</code>下调用该脚本，也就是<strong>当前目录</strong>了。</p>
-</li>
-<li>
-<p>调用脚本的命令。我们的命令是<code>./test.sh</code>.</p>
-</li>
-</ul>
-<p>结合上面的两条，此时<code>$(dirname $0)</code>的结果就是<code>.</code>，那么<code>cd $(dirname $0)</code>就是<code>cd .</code>，也就是切换命令到<code>~/DTS/code</code>，之后运行<code>pwd</code>，此时获得的就是脚本所在的绝对路径了。</p>
-<h3 id="为什么不用pwd">为什么不用pwd？</h3>
-<p>请注意以下的基本事实</p>
-<blockquote>
-<p>调用shell脚本，就是在调用脚本的<strong>当前目录</strong>下，<strong>逐行执行</strong>脚本中的<strong>每一个命令</strong>。</p>
-</blockquote>
-<p>如果我们修改上面的脚本如下</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#/bin/bash</span>
-</span></span><span class="line"><span class="cl"><span class="nv">rootDir</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="k">$(</span>dirname <span class="nv">$0</span><span class="k">)</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;rootDir </span><span class="nv">$rootDir</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;pwd </span><span class="nv">$pwd</span><span class="s2">&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>并且在<code>~/DTS</code>下输入命令<code>code/test.sh</code>来运行这个脚本，输出结果如下</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bugxch@opensuse:~/DTS$ code/test.sh
-</span></span><span class="line"><span class="cl">rootDir /home/bugxch/DTS/code
-</span></span><span class="line"><span class="cl"><span class="nb">pwd</span> /home/bugxch/DTS
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>第2个pwd不是脚本所在的目录，而是<strong>我们输入命令的目录</strong>。正如那个基本事实所示，在该目录下运行该脚本相当于逐行敲入脚本中每一句之后执行，所以在<code>~/DTS</code>调用脚本中的<code>pwd</code>，就相当于在该目录下敲入<code>pwd</code>，因此结果就是当前路径。</p>
-<p>之所以不能直接使用<code>pwd</code>获取脚本所在目录，是因为如果在脚本目录之外调用该脚本，返回的是调用命令所在的目录而不是脚本所在目录。</p>
+    <h1 id="附录">附录</h1>
+<h2 id="参考文献">参考文献</h2>
+<h2 id="版权信息">版权信息</h2>
+<p>本文原载于<a class="link" href="http://blog.bugxch.top"  target="_blank" rel="noopener"
+    >bugxch的blog</a>，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。</p>
+
 </section>
 
 
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/shell/">shell</a>
         
     </section>
 
@@ -593,80 +469,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">CSAPP读书笔记</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">程序的机器级表示</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/hugo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2giscus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">hugo博客更换giscus评论系统</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/%E5%AE%8C%E5%85%A8%E5%B9%B2%E5%87%80%E5%8D%B8%E8%BD%BD%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">完全干净卸载双系统</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">工具服务总结</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     

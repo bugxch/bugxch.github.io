@@ -10704,10 +10704,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>\$(cd \$(dirname $0);pwd)的解释</title>
-        <link>https://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</link>
+        <link>https://blog.bugxch.top/p/%5Ccd-%5Cdirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</link>
         <pubDate>Sat, 03 Nov 2018 20:47:24 +0000</pubDate>
         
-        <guid>https://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</guid>
+        <guid>https://blog.bugxch.top/p/%5Ccd-%5Cdirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</guid>
         <description>&lt;p&gt;I love shell.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/bugxch/blogpics/blob/master/201807/i_love_bash.png?raw=true&#34;
 	

@@ -3,12 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.bugxch.top/</loc>
-    <lastmod>2023-01-25T21:16:42+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.bugxch.top/categories/</loc>
-    <lastmod>2023-01-25T21:16:42+08:00</lastmod>
+    <lastmod>2024-01-04T07:31:33+08:00</lastmod>
   </url><url>
     <loc>https://blog.bugxch.top/post/</loc>
+    <lastmod>2024-01-04T07:31:33+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.bugxch.top/p/test/</loc>
+    <lastmod>2024-01-04T07:31:33+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.bugxch.top/categories/</loc>
     <lastmod>2023-01-25T21:16:42+08:00</lastmod>
   </url><url>
     <loc>https://blog.bugxch.top/tags/r2s/</loc>
@@ -287,7 +290,7 @@
     <loc>https://blog.bugxch.top/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2018-11-08T07:33:12+00:00</lastmod>
   </url><url>
-    <loc>https://blog.bugxch.top/p//cd-/dirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</loc>
+    <loc>https://blog.bugxch.top/p/%5Ccd-%5Cdirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/</loc>
     <lastmod>2018-11-03T20:47:24+00:00</lastmod>
   </url><url>
     <loc>https://blog.bugxch.top/tags/shell/</loc>

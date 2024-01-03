@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='卡片笔记写作法的学习总结，部署实践。
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='I love shell.
 '>
-<title>初识卡片笔记写作法</title>
+<title>\$(cd \$(dirname $0);pwd)的解释</title>
 
-<link rel='canonical' href='https://blog.bugxch.top/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/'>
+<link rel='canonical' href='https://blog.bugxch.top/p/%5Ccd-%5Cdirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='初识卡片笔记写作法'>
-<meta property='og:description' content='卡片笔记写作法的学习总结，部署实践。
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='\$(cd \$(dirname $0);pwd)的解释'>
+<meta property='og:description' content='I love shell.
 '>
-<meta property='og:url' content='https://blog.bugxch.top/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/'>
+<meta property='og:url' content='https://blog.bugxch.top/p/%5Ccd-%5Cdirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/'>
 <meta property='og:site_name' content='巴巴变的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='notes' /><meta property='article:tag' content='obsidian' /><meta property='article:tag' content='foldersync' /><meta property='article:published_time' content='2021-08-11T22:31:58&#43;08:00'/><meta property='article:modified_time' content='2021-08-11T22:31:58&#43;08:00'/><meta property='og:image' content='https://pic.imgdb.cn/item/6113da595132923bf8329013.png' />
-<meta name="twitter:title" content="初识卡片笔记写作法">
-<meta name="twitter:description" content="卡片笔记写作法的学习总结，部署实践。
-"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://pic.imgdb.cn/item/6113da595132923bf8329013.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='shell' /><meta property='article:published_time' content='2018-11-03T20:47:24&#43;00:00'/><meta property='article:modified_time' content='2018-11-03T20:47:24&#43;00:00'/>
+<meta name="twitter:title" content="\$(cd \$(dirname $0);pwd)的解释">
+<meta name="twitter:description" content="I love shell.
+">
     <link rel="shortcut icon" href="%5cfavicon.ico" />
 <style>
     :root {
@@ -326,12 +325,10 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#基本思想及原理">基本思想及原理</a></li>
-    <li><a href="#笔记软件及部署">笔记软件及部署</a>
+    <li>
       <ol>
-        <li><a href="#全平台笔记软件">全平台笔记软件</a></li>
-        <li><a href="#安卓手机与pc同步">安卓手机与PC同步</a></li>
-        <li><a href="#辅助技能">辅助技能</a></li>
+        <li><a href="#语句解释">语句解释</a></li>
+        <li><a href="#为什么不用pwd">为什么不用pwd？</a></li>
       </ol>
     </li>
   </ol>
@@ -345,16 +342,8 @@
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/">
-                
-                    <img src="https://pic.imgdb.cn/item/6113da595132923bf8329013.png" loading="lazy" alt="Featured image of post 初识卡片笔记写作法" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
@@ -369,7 +358,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E5%88%9D%E8%AF%86%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%86%99%E4%BD%9C%E6%B3%95/">初识卡片笔记写作法</a>
+            <a href="/p/%5Ccd-%5Cdirname-0pwd%E7%9A%84%E8%A7%A3%E9%87%8A/">\$(cd \$(dirname $0);pwd)的解释</a>
         </h2>
     
         
@@ -391,7 +380,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2021/08/11</time>
+                <time class="article-time--published">2018/11/03</time>
             </div>
         
 
@@ -421,11 +410,8 @@
     <section class="article-content">
     
     
-    <p>卡片笔记写作法的学习总结，部署实践。</p>
-<h2 id="基本思想及原理">基本思想及原理</h2>
-<p>最近在阅读<a class="link" href="https://book.douban.com/subject/35503571/"  target="_blank" rel="noopener"
-    >卡片笔记写作法</a>，在正式出版差不多一周的时间，这本书登上了豆瓣的非虚构图书排行榜的No.2，评分高达8.0，</p>
-<p><img src="https://pic.imgdb.cn/item/6113dc455132923bf838d9fa.png"
+    <p>I love shell.</p>
+<p><img src="https://github.com/bugxch/blogpics/blob/master/201807/i_love_bash.png?raw=true"
 	
 	
 	
@@ -433,40 +419,123 @@
 	
 	
 ></p>
-<p>顺藤摸瓜，我花了几天时间仔细搜罗了相关的资料文档，发现这是非常好的达到长期主义知识复利的工具，总结下资料，写个博客记录下。<a class="link" href="https://zettelkasten.de/introduction/zh/"  target="_blank" rel="noopener"
-    >卢曼卡片盒笔记法介绍 (Introduction to the Zettelkasten Method) • Zettelkasten Method</a>是翻译的比较权威的阐述卡片笔记写作法精髓的文章。</p>
-<h2 id="笔记软件及部署">笔记软件及部署</h2>
-<p>我选择使用<a class="link" href="https://obsidian.md/"  target="_blank" rel="noopener"
-    >Obsidian</a> +<a class="link" href="https://www.jianguoyun.com/#/"  target="_blank" rel="noopener"
-    >坚果云</a> +<a class="link" href="https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite&amp;hl=en_US&amp;gl=US"  target="_blank" rel="noopener"
-    >FolderSync</a>作为PC与安卓手机的笔记系统。</p>
-<h3 id="全平台笔记软件">全平台笔记软件</h3>
-<p><a class="link" href="https://obsidian.md/"  target="_blank" rel="noopener"
-    >Obsidian</a>当前的版本是v0.12.12，我上周发现的宝藏笔记软件，最大的特点</p>
-<ol>
-<li>非常私密和安全。所有的资料和文档都保存在本地PC和手机，如果需要同步文档可以付费或者通过其他的同步软件实现；</li>
-<li>个人免费。</li>
-<li>支持md文档，支持笔记双向链接，支持Windows/Linux/Mac/Android/ios客户端。</li>
-</ol>
-<p>这个软件的介绍文档和资料已经很多了，可以参考下面的链接进行学习</p>
-<ol>
-<li><a class="link" href="https://www.bilibili.com/video/BV1jB4y1c7p2"  target="_blank" rel="noopener"
-    >持续更新44集全网最全obsidian教程|搬运分享非原创_哔哩哔哩_bilibili</a>，B站上推荐非常多视频教程；</li>
-<li><a class="link" href="https://www.bilibili.com/video/BV1SA411i7BG"  target="_blank" rel="noopener"
-    >Obsidian：目前我们眼中最美最好用的免费笔记/知识管理软件_哔哩哔哩_bilibili</a>，B站上的另一个比较简单的介绍视频，时长比较短；</li>
-<li><a class="link" href="https://sspai.com/post/63481"  target="_blank" rel="noopener"
-    >玩转 Obsidian | 基础设置篇 - 少数派</a>，比较早介绍该款软件的文章</li>
-<li><a class="link" href="https://publish.obsidian.md/chinesehelp/01&#43;2021%E6%96%B0%E6%95%99%E7%A8%8B/2021%E5%B9%B4%E6%96%B0%E6%95%99%E7%A8%8B"  target="_blank" rel="noopener"
-    >2021年新教程 - Obsidian中文教程 - Obsidian Publish</a>，官方中文教程，也是使用obsidian发布的，可以从中看到笔记的链接图。</li>
-</ol>
-<h3 id="安卓手机与pc同步">安卓手机与PC同步</h3>
-<p>具体参考<a class="link" href="https://help.jianguoyun.com/?p=2887"  target="_blank" rel="noopener"
-    >如何使用FolderSync在安卓手机上同步文件夹到坚果云？</a>，按照文章的步骤设置使用即可。</p>
-<h3 id="辅助技能">辅助技能</h3>
-<p><a class="link" href="https://einverne.github.io/post/2021/04/obsidian-markdown-webclip.html"  target="_blank" rel="noopener"
-    >Obsidian 使用篇一：使用 markdown-clipper 全文保存网页 | Verne in GitHub</a>，这篇文章介绍了两个非常好用插件，可以通过chrome或者edge将网页的信息摘录到本地的闪念笔记里面，也可以通过插件将网页的内容转换成为md保存在本地。</p>
+<p>在很多shell脚本中，经常可以看到下面的语句</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">rootDir</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="k">$(</span>dirname <span class="nv">$0</span><span class="k">)</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个语句的作用是获取shell脚本所在目录的绝对路径，这个语句怎么理解？为什么不直接用<code>pwd</code>来获取当前路径呢？</p>
+<h3 id="语句解释">语句解释</h3>
+<p>参考<a class="link" href="https://explainshell.com/explain?cmd=cd&#43;%24%28dirname&#43;%240%29%3B&#43;pwd"  target="_blank" rel="noopener"
+    >explainshell.com - cd $(dirname $0); pwd</a>的解释，拆解如下。</p>
+<ul>
+<li>
+<p><code>dirname</code>的功能是去掉文件路径名中的从右往左数的第一个<code>/</code>及其之后的所有文字，查看<code>dirname</code>的help信息可以看到如下的例子</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">dirname /usr/bin/          -&gt; <span class="s2">&#34;/usr&#34;</span>
+</span></span><span class="line"><span class="cl">dirname dir1/str dir2/str  -&gt; <span class="s2">&#34;dir1&#34;</span> followed by <span class="s2">&#34;dir2&#34;</span>
+</span></span><span class="line"><span class="cl">dirname stdio.h            -&gt; <span class="s2">&#34;.&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><code>$0</code>，这是bash shell脚本中的位置参数，用来表明输入到命令行中的命令本身。其余的还有<code>$1，$2</code>等等，分别表示输入到命令行中的命令后面带有的第一个参数和第二个参数，依次类推。比如下面的命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bash test9.sh <span class="m">10</span> <span class="m">9</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中的<code>$0</code>就是<code>test9.sh</code>，10和9分别是<code>$1</code>和<code>$2</code>。</p>
+</li>
+<li>
+<p><code>pwd</code>，这个命令已经很熟悉了，就是打印当前的绝对路径。</p>
+</li>
+</ul>
 <hr>
-<p>全文完🚀</p>
+<p>有了上面的分析，那<strong>整个命令怎么理解呢</strong>？举例说明，假如我们有如下的脚本<code>test.sh</code>在目录<code>~/DTS/code</code>下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#/bin/bash</span>
+</span></span><span class="line"><span class="cl"><span class="nv">rootDir</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="k">$(</span>dirname <span class="nv">$0</span><span class="k">)</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;rootDir </span><span class="nv">$rootDir</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该脚本的功能就是寻找脚本所在目录下的所有的<code>.cc</code>文件。我们在命令行中运行该命令<code>./test.sh</code>，输出的结果是</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bugxch@opensuse:~/DTS/code$ ./test.sh
+</span></span><span class="line"><span class="cl">rootDir /home/bugxch/DTS/code
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>请留意运行该脚本的时候的几个关键要素</p>
+<ul>
+<li>
+<p>调用脚本的路径。我们在目录<code>~/DTS/code/</code>下调用该脚本，也就是<strong>当前目录</strong>了。</p>
+</li>
+<li>
+<p>调用脚本的命令。我们的命令是<code>./test.sh</code>.</p>
+</li>
+</ul>
+<p>结合上面的两条，此时<code>$(dirname $0)</code>的结果就是<code>.</code>，那么<code>cd $(dirname $0)</code>就是<code>cd .</code>，也就是切换命令到<code>~/DTS/code</code>，之后运行<code>pwd</code>，此时获得的就是脚本所在的绝对路径了。</p>
+<h3 id="为什么不用pwd">为什么不用pwd？</h3>
+<p>请注意以下的基本事实</p>
+<blockquote>
+<p>调用shell脚本，就是在调用脚本的<strong>当前目录</strong>下，<strong>逐行执行</strong>脚本中的<strong>每一个命令</strong>。</p>
+</blockquote>
+<p>如果我们修改上面的脚本如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#/bin/bash</span>
+</span></span><span class="line"><span class="cl"><span class="nv">rootDir</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="k">$(</span>dirname <span class="nv">$0</span><span class="k">)</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;rootDir </span><span class="nv">$rootDir</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;pwd </span><span class="nv">$pwd</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>并且在<code>~/DTS</code>下输入命令<code>code/test.sh</code>来运行这个脚本，输出结果如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bugxch@opensuse:~/DTS$ code/test.sh
+</span></span><span class="line"><span class="cl">rootDir /home/bugxch/DTS/code
+</span></span><span class="line"><span class="cl"><span class="nb">pwd</span> /home/bugxch/DTS
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第2个pwd不是脚本所在的目录，而是<strong>我们输入命令的目录</strong>。正如那个基本事实所示，在该目录下运行该脚本相当于逐行敲入脚本中每一句之后执行，所以在<code>~/DTS</code>调用脚本中的<code>pwd</code>，就相当于在该目录下敲入<code>pwd</code>，因此结果就是当前路径。</p>
+<p>之所以不能直接使用<code>pwd</code>获取脚本所在目录，是因为如果在脚本目录之外调用该脚本，返回的是调用命令所在的目录而不是脚本所在目录。</p>
 </section>
 
 
@@ -474,11 +543,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/notes/">notes</a>
-        
-            <a href="/tags/obsidian/">obsidian</a>
-        
-            <a href="/tags/foldersync/">foldersync</a>
+            <a href="/tags/shell/">shell</a>
         
     </section>
 
