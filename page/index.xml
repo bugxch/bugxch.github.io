@@ -35,8 +35,8 @@
     &gt;费曼学习法&lt;/a&gt;，利用写作完成知识输出，可以加深对知识的理解。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;2024年1月1日，网站主题切换成&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Stack | Hugo Themes&lt;/a&gt;，并适用github actions自动编译和部署&lt;/li&gt;
+&lt;li&gt;2024年1月1日，网站主题切换成 &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack | Hugo Themes&lt;/a&gt;，并使用github actions 自动编译和部署&lt;/li&gt;
 &lt;li&gt;2021年10月，网站主题更换成hexo的&lt;a class=&#34;link&#34; href=&#34;https://github.com/HEIGE-PCloud/DoIt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;DoIt主题&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;2020年12月27日， 将网站的主题从hexo的even切换到LoveIt&lt;/li&gt;
