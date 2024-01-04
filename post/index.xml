@@ -7,7 +7,30 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Wed, 25 Jan 2023 21:16:42 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Jan 2024 22:51:35 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Test</title>
+        <link>https://blog.bugxch.top/p/test/</link>
+        <pubDate>Thu, 04 Jan 2024 22:51:35 +0800</pubDate>
+        
+        <guid>https://blog.bugxch.top/p/test/</guid>
+        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post Test" /&gt;&lt;h1 id=&#34;附录&#34;&gt;附录&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6596c1b8871b83018a61bb8e.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DEFG4657.JPG&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+&lt;h2 id=&#34;版权信息&#34;&gt;版权信息&lt;/h2&gt;
+&lt;p&gt;本文原载于&lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;bugxch的blog&lt;/a&gt;，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>R2S外接风扇设置</title>
         <link>https://blog.bugxch.top/p/r2s%E5%A4%96%E6%8E%A5%E9%A3%8E%E6%89%87%E8%AE%BE%E7%BD%AE/</link>
         <pubDate>Wed, 25 Jan 2023 21:16:42 +0800</pubDate>
@@ -18914,29 +18937,6 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://labrick.cc/2017/08/20/wechat-article-to-kindle/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kindle订阅整理成册的微信公众号文章&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-        </item>
-        <item>
-        <title> 测试结果</title>
-        <link>https://blog.bugxch.top/p/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.bugxch.top/p/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/</guid>
-        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post  测试结果" /&gt;&lt;h1 id=&#34;附录&#34;&gt;附录&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6596c1b8871b83018a61bb8e.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;DEFG4657.JPG&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
-&lt;h2 id=&#34;版权信息&#34;&gt;版权信息&lt;/h2&gt;
-&lt;p&gt;本文原载于 &lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;bugxch的blog&lt;/a&gt;，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。&lt;/p&gt;
-</description>
         </item>
         
     </channel>
