@@ -7,7 +7,275 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Wed, 25 Jan 2023 21:16:42 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Jan 2024 18:39:39 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>摄影基础知识之一</title>
+        <link>https://blog.bugxch.top/p/%E6%91%84%E5%BD%B1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/</link>
+        <pubDate>Fri, 05 Jan 2024 18:39:39 +0800</pubDate>
+        
+        <guid>https://blog.bugxch.top/p/%E6%91%84%E5%BD%B1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/</guid>
+        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post 摄影基础知识之一" /&gt;&lt;p&gt;这一篇主要讲传感器和焦距。&lt;/p&gt;
+&lt;h1 id=&#34;基础概念&#34;&gt;基础概念&lt;/h1&gt;
+&lt;h2 id=&#34;底大一级压死人相机传感器&#34;&gt;“底大一级压死人“——相机传感器&lt;/h2&gt;
+&lt;p&gt;下面是各种不同相机的sensor图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pica.zhimg.com/v2-ef119faeeae5cb9cb4069acf9a930ebf_r.jpg?source=1def8aca&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6597ec11871b83018ada3a95.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;得到App_2024-01-05_19-38-08.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Sensor 如何成像？&lt;/li&gt;
+&lt;li&gt;为什么 sensor 越大越好？Sensor 大小如何影响成像质量？&lt;/li&gt;
+&lt;li&gt;是不是像素越高画质越好？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;成像原理&#34;&gt;成像原理&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/EM_spectrum_zh-hans.svg/1280px-EM_spectrum_zh-hans.svg.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/317022375/answer/634056922&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;华为P30 Pro使用的超光谱Quad Bayer RYYB CMOS相比传统RGB排列有何异同呢？ - 知乎&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://hojenjen.com/bayer-rggb-color-filter/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;什麼是 RGGB 色彩濾鏡 ? 認識 RGGB 色彩濾鏡，數位相機如何補捉色彩&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/21363254&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;色界丨动物眼里的世界是什么颜色？ - 知乎&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.sohu.com/a/127427281_171986&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;好奇心日报｜为什么光的三原色是红绿蓝，颜色的三原色是红黄蓝？&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/345785096&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;感光的视锥细胞和视杆细胞，都负责什么工作？ - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;大小于成像质量的关系&#34;&gt;大小于成像质量的关系&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更大的传感器会获得更纯净的照片，更好的暗光性能，以及更好的「虚化」。小尺寸传感器想要获得相同的结果，需要以更低的 ISO、更长的快门时间以及更大的光圈。具体可以参考 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/cashmood/article/details/112799415&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;成像质量、像素个数、感光元件尺寸的关系_摄像头像素与成像像数的关系-CSDN博客&lt;/a&gt;。
+为了容纳更大的传感器尺寸，相机和镜头的体积也成倍增长。为了让光线均匀的铺满在传感器上，复杂的&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/search?q=%E5%85%89%E5%AD%A6%E8%AE%BE%E8%AE%A1&amp;amp;search_source=Entity&amp;amp;hybrid_search_source=Entity&amp;amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2352149505%7D&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;光学设计&lt;/a&gt;会让镜头的重量成倍的提升。并且随之提升的还有成本，也就是金钱。而小尺寸传感器就恰好相反，体积、重量、成本也随之降低。不严谨的说，传感器尺寸与&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/search?q=%E6%88%90%E5%83%8F%E8%B4%A8%E9%87%8F&amp;amp;search_source=Entity&amp;amp;hybrid_search_source=Entity&amp;amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2352149505%7D&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;成像质量&lt;/a&gt;成正比，也与体积重量和价格成正比。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;像素越多越好&#34;&gt;像素越多越好？&lt;/h3&gt;
+&lt;p&gt;补充手机常见sensor尺寸和排名&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-9563490d860272362f8c053947efbc81_720w.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么手机厂商对于CMOS传感器尺寸如此执着？从光学角度来说，传感器的尺寸越大，获得的进光量就越多，拍摄出的成片自然就越清晰，即便在光线条件很差的情况下，也能获得更丰富的细节和更准确的曝光。同时大底还有提升动态范围、降低画面噪点的作用。硬件上的这种差距，表现出来就是俗话说的“底大一级压死人”。
+一英寸大底在手机上应用，可以带来更大的进光量，理论上会有更好的基础画质、更好的暗光画质、更好的色彩表达和细节纹理。但我们都知道，手机影像在计算摄影时代，硬件带来的只是画质的基础保障和下限控制，其上限还是算法决定的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为什么底大一级压死人？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关于sensor的尺寸，&lt;a class=&#34;link&#34; href=&#34;https://www.igao7.com/news/202210/AXQ8aiC8LTB7I07C.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;百款手机CMOS速查：相机传感器天梯与排名(23.12.12) | 爱搞机&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;影响成像的宽容度，可以参考&lt;a class=&#34;link&#34; href=&#34;https://maoao530.github.io/2017/07/29/camera-base-intro/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Camera概念 | 风中老狼的博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;像素，尺寸和宽容度的关系，&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/cashmood/article/details/112799415&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;成像质量、像素个数、感光元件尺寸的关系_同样大小的感光元件,分辨率越高,像元尺寸越小,其成像质量-CSDN博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.ziiwan.com/articles/270.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;(2023.10更新)最新手机cmos传感器天梯图排行榜-智玩网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cn.technode.com/post/2022-11-26/cmos/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么手机都在卷一英寸大底？ - 动点科技&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.dxomark.com/huawei-mate-60-pro-plus-camera-test/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Huawei Mate 60 Pro+ Camera test | DXOMARK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;主流旗舰对比&#34;&gt;主流旗舰对比&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-b6b0d1fda854963378de5d930fbf323d_720w.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;统计当前主流旗舰手机的相机配置，下面是从网站&lt;a class=&#34;link&#34; href=&#34;https://www.gsmarena.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GSMArena.com&lt;/a&gt;中拿到的三款手机的相机参数&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;手机&lt;/th&gt;
+&lt;th&gt;&lt;a class=&#34;link&#34; href=&#34;https://consumer.huawei.com/cn/phones/mate60-pro-plus/specs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HUAWEI Mate 60 Pro+&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.mi.com/xiaomi-14-pro/specs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Xiaomi 14 Pro&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.vivo.com.cn/vivo/param/x100pro&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vivo X100 Pro&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oppo.com/cn/smartphones/series-find-x/find-x6-pro/specs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OPPO Find X6 Pro&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.apple.com/hk/en/iphone-15-pro/specs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;iPhone 15 Pro and 15 Pro Max&lt;/a&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;发布时间&lt;/td&gt;
+&lt;td&gt;2023.9&lt;/td&gt;
+&lt;td&gt;2023.10&lt;/td&gt;
+&lt;td&gt;2023.11&lt;/td&gt;
+&lt;td&gt;2023.3&lt;/td&gt;
+&lt;td&gt;2023.9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;广角（主摄）镜头&lt;/td&gt;
+&lt;td&gt;48 MP, f/1.4-f/4.0, 24mm (wide), PDAF, Laser AF, Is&lt;/td&gt;
+&lt;td&gt;50 MP, f/1.4-f/4.0, 23mm (wide), &lt;strong&gt;1/1.31&amp;quot;&lt;/strong&gt;, 1.2µm, dual pixel PDAF, Laser AF, Is&lt;/td&gt;
+&lt;td&gt;50 MP, f/1.8, 23mm (wide), &lt;strong&gt;1/0.98&amp;quot;&lt;/strong&gt;, PDAF, Laser AF, Is&lt;/td&gt;
+&lt;td&gt;50 MP, f/1.8, 23mm (wide), &lt;strong&gt;1.0&amp;quot;&lt;/strong&gt;-type, 1.6µm, multi-directional PDAF, Laser AF, Is&lt;/td&gt;
+&lt;td&gt;48 MP, f/1.8, 24mm (wide), &lt;strong&gt;1/1.28&amp;quot;&lt;/strong&gt;, 1.22µm, dual pixel PDAF, sensor-shift OIS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;超广角镜头&lt;/td&gt;
+&lt;td&gt;48 MP, f/3.0, 90mm (periscope telephoto), PDAF, Is, 3.5x optical zoom&lt;/td&gt;
+&lt;td&gt;50 MP, f/2.2, 14mm, 115˚ (ultrawide), AF&lt;/td&gt;
+&lt;td&gt;50 MP, f/2.0, 15mm, 119˚ (ultrawide), &lt;strong&gt;1/2.76&amp;quot;&lt;/strong&gt;, AF&lt;/td&gt;
+&lt;td&gt;50 MP, f/2.2, 15mm, 110˚ (ultrawide), &lt;strong&gt;1/1.56&amp;quot;&lt;/strong&gt;, 1.0µm, multi-directional PDAF&lt;/td&gt;
+&lt;td&gt;12 MP, f/2.2, 13mm, 120˚ (ultrawide), &lt;strong&gt;1/2.55&amp;quot;&lt;/strong&gt;, 1.4µm, dual pixel PDAF&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;长焦镜头&lt;/td&gt;
+&lt;td&gt;48 MP, f/1.4-f/4.0, 24mm (wide), PDAF, Laser AF, Is&lt;/td&gt;
+&lt;td&gt;50 MP, f/2.0, 75mm (telephoto), PDAF (10cm - ∞), Is, 3.2x optical zoom&lt;/td&gt;
+&lt;td&gt;50 MP, f/2.5, 100mm (periscope telephoto), &lt;strong&gt;1/2&amp;quot;&lt;/strong&gt;, 0.7µm, PDAF (18cm - ∞), Is, 4.3x optical zoom&lt;/td&gt;
+&lt;td&gt;50 MP, f/2.6, 65mm (periscope telephoto), &lt;strong&gt;1/1.56&amp;quot;&lt;/strong&gt;, 1.0µm, 2.8x optical zoom, multi-directional PDAF, Is&lt;/td&gt;
+&lt;td&gt;12 MP, f/2.8, 120mm (periscope telephoto), &lt;strong&gt;1/3.06&amp;quot;&lt;/strong&gt;, 1.12µm, dual pixel PDAF, 3D sensor‑shift OIS, 5x optical zoom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;手机相机cmos传感器天梯图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.ziiwan.com/wp-content/uploads/2023/09/waefawefawefawef-scaled.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;大师之眼人文之眼焦距&#34;&gt;“大师之眼”“人文之眼”（焦距）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6597ec53871b83018adb3740.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;得到App_2024-01-05_19-38-57.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;焦距数字越小，我们称之为焦距越短，拍摄的视野就越宽，取景范围就越广，画面中容纳的景物也就越多，但是每个景物在画面中占的面积就越小。
+焦距数字越大，我们称之为焦距越长，拍摄的视野就越窄，取景范围就越窄，画面中容纳的景物也就越少，但是每个景物在画面中占的面积就越大&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;具体的对比可以参考下图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6597ec66871b83018adb7c45.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;得到App_2024-01-05_19-38-51.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;不同的焦距，镜头的厚度和大小不同
+&lt;img src=&#34;https://pic.imgdb.cn/item/6597ec86871b83018adbf25a.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;得到App_2024-01-05_19-39-41.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;50mm定焦镜头&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6597ec9d871b83018adc54df.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;得到App_2024-01-05_19-39-45.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;70-200mm变焦镜头&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;补充手机光学变焦和计算变焦得知识。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不同焦段适用范围和对象不同。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;长焦，老法师打鸟的专用焦段，因为透视的原因有非常强的&lt;a class=&#34;link&#34; href=&#34;https://www.nphoto.net/tutorial/2018-07/25/4bbd27f2818e3e2e.shtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;空间压缩感觉&lt;/a&gt;，但是需要防抖比较好，光圈一般不会太大&lt;/li&gt;
+&lt;li&gt;广角，一般适用于风景，可以将比较小的空间拍得很大，比如链家得那些房产照片，但是在画面的边缘会发生畸变。&lt;/li&gt;
+&lt;li&gt;中长焦，适用人像人文题材，50mm焦段被称为大师焦段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6597ecc8871b83018add013e.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;night-4694750.jpg&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;手机的光学变焦&#34;&gt;手机的光学变焦&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/150176254&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;你必须要知道的真相：所谓的“光学变焦”手机，其实是偷换概念 - 知乎&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://m.huxiu.com/article/496174.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;安卓旗舰“告别”潜望式长焦镜头，为什么？-虎嗅网&lt;/a&gt;，潜望式镜头的弊端，需要优秀的防抖能力，光圈不会做得很大，成本比较高
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/90265292&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;潜望式镜头——最易懂的解释 - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/24158624&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;关于拜耳阵列的实际像素问题？ - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sony-semicon.com/cn/technology/mobile/quad-bayer-coding.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quad Bayer Coding | 手机图像传感器 | 技术 | Sony Semiconductor Solutions Group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/u010538116/article/details/107015297&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图像传感器之Bayer阵列_拜耳型图像传感器_小菜菜13的博客-CSDN博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/158088019&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Raw格式图像原理简述 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/351855688&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为何适马放弃研发更锐、更有胶片质感的Foveon X3传感器？ - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.edmundoptics.cn/knowledge-center/application-notes/imaging/understanding-camera-sensors-for-machine-vision-applications/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;成像电子元件101：了解适用于机器视觉应用的相机传感器 | 爱特蒙特光学&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/36389453&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;相机越贵画质越好？聊聊CMOS设计 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gsmarena.com/how_the_ryyb_sensor_on_the_huawei_p30_pro_works-news-37007.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How the RYYB sensor on the Huawei P30 Pro works - GSMArena.com news &amp;mdash; 华为 P30 Pro 上的 RYYB 传感器如何工作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_34207106/article/details/80387121&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;三种Bayer数据的插值算法（CCD插值算法）_bayer插值_simple_96的博客-CSDN博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/594229060&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;bayer插值算法(1):邻近插值算法 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bhphotovideo.com/explora/photography/tips-and-solutions/is-bigger-better-sensor-size-examined&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Is Bigger Better? Sensor Size Examined | B&amp;amp;H eXplora&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;版权信息&#34;&gt;版权信息&lt;/h1&gt;
+&lt;p&gt;本文原载于&lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;bugxch的blog&lt;/a&gt;，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>R2S外接风扇设置</title>
         <link>https://blog.bugxch.top/p/r2s%E5%A4%96%E6%8E%A5%E9%A3%8E%E6%89%87%E8%AE%BE%E7%BD%AE/</link>
         <pubDate>Wed, 25 Jan 2023 21:16:42 +0800</pubDate>
