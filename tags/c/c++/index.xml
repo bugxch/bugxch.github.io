@@ -12,16 +12,8 @@
         <pubDate>Wed, 27 Apr 2022 16:04:05 +0800</pubDate>
         
         <guid>https://blog.bugxch.top/p/%E5%85%B3%E4%BA%8E%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%B7%E6%80%9D/</guid>
-        <description>&lt;p&gt;这两天研究了下CSAPP中的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_ch2/#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://pic.imgdb.cn/item/6268f90d239250f7c59e8af0.jpg" alt="Featured image of post 关于浮点数的迷思" /&gt;&lt;p&gt;这两天研究了下CSAPP中的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_ch2/#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;浮点数的知识&lt;/a&gt;，结合这些知识，终于可以解答之前关于float的一些迷思。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6268f90d239250f7c59e8af0.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
 &lt;h4 id=&#34;c语言中浮点数相等的比较为什么不能用&#34;&gt;C语言中浮点数相等的比较为什么不能用==?&lt;/h4&gt;
 &lt;p&gt;A：浮点数的舍入方法引发的。如果要搞清楚这个问题，需要明白下面的两个知识点。&lt;/p&gt;
 &lt;ol&gt;
@@ -93,22 +85,7 @@
         <pubDate>Fri, 22 Apr 2022 17:13:44 +0800</pubDate>
         
         <guid>https://blog.bugxch.top/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</guid>
-        <description>&lt;p&gt;疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.bugxch.top/&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+        <description>&lt;img src="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg" alt="Featured image of post 信息的表示和处理" /&gt;&lt;p&gt;疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。&lt;/p&gt;
 &lt;h2 id=&#34;计算机的字长&#34;&gt;计算机的字长&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;每一台计算机都有字长，指明指针数据的标称大小，字长决定了的最重要的系统参数是虚拟地址空间的最大大小。&lt;/p&gt;

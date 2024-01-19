@@ -955,18 +955,8 @@
         <pubDate>Sun, 08 May 2022 07:27:38 +0800</pubDate>
         
         <guid>https://blog.bugxch.top/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</guid>
-        <description>&lt;p&gt;继续之前的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_notes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://pic.imgdb.cn/item/6277012f0947543129b619f5.jpg" alt="Featured image of post 程序的机器级表示" /&gt;&lt;p&gt;继续之前的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_notes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;CSAPP读书笔记&lt;/a&gt;，这是第3章的读书笔记。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6277012f0947543129b619f5.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;img&#34;
-	
-	
-&gt;&lt;/p&gt;
 &lt;p&gt;第3章介绍计算机的底层机器编码，包括常见的基本数据、为了执行机器指令而设置的寄存器、算术和逻辑操作以及控制的指令。3.7节详细介绍了&lt;strong&gt;过程&lt;/strong&gt;的概念，最后是其他数据结构在计算机机器代码的表示。&lt;/p&gt;
 &lt;h2 id=&#34;实验工具&#34;&gt;实验工具&lt;/h2&gt;
 &lt;p&gt;要想研究底层机器指令，最直观的就是汇编程序，参考书本里面的介绍，以linux系统的gcc程序为工具，有两种方式可以得到。如下图所示，是一个 &lt;code&gt;hello.c&lt;/code&gt;的程序从高级语言程序编译成机器代码的过程。&lt;/p&gt;
@@ -1394,15 +1384,7 @@
         <pubDate>Tue, 03 May 2022 22:11:34 +0800</pubDate>
         
         <guid>https://blog.bugxch.top/p/%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1%E6%80%BB%E7%BB%93/</guid>
-        <description>&lt;p&gt;工欲善其事，必先利其器。对自己工具软件的一次总结。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/62725d110947543129526ae2.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+        <description>&lt;img src="https://pic.imgdb.cn/item/62725d110947543129526ae2.png" alt="Featured image of post 工具服务总结" /&gt;&lt;p&gt;工欲善其事，必先利其器。对自己工具软件的一次总结。&lt;/p&gt;
 &lt;p&gt;下面表格是对我当前电脑配置的软件工具的总结。&lt;/p&gt;
 &lt;h2 id=&#34;软件列表&#34;&gt;软件列表&lt;/h2&gt;
 &lt;table&gt;
@@ -1746,16 +1728,8 @@
         <pubDate>Wed, 27 Apr 2022 16:04:05 +0800</pubDate>
         
         <guid>https://blog.bugxch.top/p/%E5%85%B3%E4%BA%8E%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%B7%E6%80%9D/</guid>
-        <description>&lt;p&gt;这两天研究了下CSAPP中的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_ch2/#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://pic.imgdb.cn/item/6268f90d239250f7c59e8af0.jpg" alt="Featured image of post 关于浮点数的迷思" /&gt;&lt;p&gt;这两天研究了下CSAPP中的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_ch2/#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;浮点数的知识&lt;/a&gt;，结合这些知识，终于可以解答之前关于float的一些迷思。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6268f90d239250f7c59e8af0.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
 &lt;h4 id=&#34;c语言中浮点数相等的比较为什么不能用&#34;&gt;C语言中浮点数相等的比较为什么不能用==?&lt;/h4&gt;
 &lt;p&gt;A：浮点数的舍入方法引发的。如果要搞清楚这个问题，需要明白下面的两个知识点。&lt;/p&gt;
 &lt;ol&gt;
@@ -1827,22 +1801,7 @@
         <pubDate>Fri, 22 Apr 2022 17:13:44 +0800</pubDate>
         
         <guid>https://blog.bugxch.top/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</guid>
-        <description>&lt;p&gt;疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.bugxch.top/&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+        <description>&lt;img src="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg" alt="Featured image of post 信息的表示和处理" /&gt;&lt;p&gt;疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。&lt;/p&gt;
 &lt;h2 id=&#34;计算机的字长&#34;&gt;计算机的字长&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;每一台计算机都有字长，指明指针数据的标称大小，字长决定了的最重要的系统参数是虚拟地址空间的最大大小。&lt;/p&gt;
@@ -2262,17 +2221,9 @@ $$&lt;/p&gt;
         <pubDate>Thu, 21 Apr 2022 20:36:36 +0800</pubDate>
         
         <guid>https://blog.bugxch.top/p/%E4%B8%89%E9%97%A8%E9%97%AE%E9%A2%98%E7%B2%BE%E8%A7%A3/</guid>
-        <description>&lt;p&gt;书接&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/detection/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://cdn.pixabay.com/photo/2018/10/01/13/53/droplet-3716288_960_720.jpg" alt="Featured image of post 三门问题精解" /&gt;&lt;p&gt;书接&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/detection/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;上文&lt;/a&gt;，使用贝叶斯定理解释著名的&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh/%E8%92%99%E6%8F%90%E9%9C%8D%E7%88%BE%E5%95%8F%E9%A1%8C&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Monty Hall问题&lt;/a&gt;，思索清楚之后感觉挺有趣，分享下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.pixabay.com/photo/2018/10/01/13/53/droplet-3716288_960_720.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
 &lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;參賽者會看見三扇門，其中一扇門的裏面有一輛汽車，選中裏面是汽車的那扇門，就可以贏得該輛汽車，另外兩扇門裏面則都是一隻山羊。當參賽者選定了一扇門，&lt;strong&gt;主持人會開啟另一扇是山羊的門&lt;/strong&gt;；並問：「要不要換一扇門？」&lt;/p&gt;
@@ -2433,7 +2384,8 @@ $$&lt;/p&gt;
     &gt;Monty Hall Problem: Solution Explained Simply - Statistics How To&lt;/a&gt;，一篇精湛的统计学分析&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;全文完🚀&lt;/p&gt;</description>
+&lt;p&gt;全文完🚀&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>新冠检测后面的数学定理</title>
