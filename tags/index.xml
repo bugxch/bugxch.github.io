@@ -24,7 +24,7 @@
         <description></description>
         </item>
         <item>
-        <title>r2s</title>
+        <title>R2s</title>
         <link>https://blog.bugxch.top/tags/r2s/</link>
         <pubDate>Wed, 25 Jan 2023 21:16:42 +0800</pubDate>
         
@@ -72,7 +72,7 @@
         <description></description>
         </item>
         <item>
-        <title>blog</title>
+        <title>Blog</title>
         <link>https://blog.bugxch.top/tags/blog/</link>
         <pubDate>Sun, 08 May 2022 06:53:47 +0800</pubDate>
         
@@ -80,7 +80,7 @@
         <description></description>
         </item>
         <item>
-        <title>giscus</title>
+        <title>Giscus</title>
         <link>https://blog.bugxch.top/tags/giscus/</link>
         <pubDate>Sun, 08 May 2022 06:53:47 +0800</pubDate>
         
@@ -104,7 +104,7 @@
         <description></description>
         </item>
         <item>
-        <title>tool</title>
+        <title>Tool</title>
         <link>https://blog.bugxch.top/tags/tool/</link>
         <pubDate>Tue, 03 May 2022 22:11:34 +0800</pubDate>
         
@@ -112,7 +112,15 @@
         <description></description>
         </item>
         <item>
-        <title>bayes</title>
+        <title>C/C&#43;&#43;</title>
+        <link>https://blog.bugxch.top/tags/c/c&#43;&#43;/</link>
+        <pubDate>Wed, 27 Apr 2022 16:04:05 +0800</pubDate>
+        
+        <guid>https://blog.bugxch.top/tags/c/c&#43;&#43;/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Bayes</title>
         <link>https://blog.bugxch.top/tags/bayes/</link>
         <pubDate>Thu, 21 Apr 2022 20:36:36 +0800</pubDate>
         
@@ -120,7 +128,7 @@
         <description></description>
         </item>
         <item>
-        <title>math</title>
+        <title>Math</title>
         <link>https://blog.bugxch.top/tags/math/</link>
         <pubDate>Thu, 21 Apr 2022 20:36:36 +0800</pubDate>
         
@@ -128,7 +136,7 @@
         <description></description>
         </item>
         <item>
-        <title>bayesian</title>
+        <title>Bayesian</title>
         <link>https://blog.bugxch.top/tags/bayesian/</link>
         <pubDate>Wed, 23 Mar 2022 20:13:15 +0800</pubDate>
         
@@ -136,7 +144,7 @@
         <description></description>
         </item>
         <item>
-        <title>git</title>
+        <title>Git</title>
         <link>https://blog.bugxch.top/tags/git/</link>
         <pubDate>Tue, 15 Mar 2022 09:20:00 +0800</pubDate>
         
@@ -144,7 +152,7 @@
         <description></description>
         </item>
         <item>
-        <title>foldersync</title>
+        <title>Foldersync</title>
         <link>https://blog.bugxch.top/tags/foldersync/</link>
         <pubDate>Wed, 11 Aug 2021 22:31:58 +0800</pubDate>
         
@@ -152,7 +160,7 @@
         <description></description>
         </item>
         <item>
-        <title>notes</title>
+        <title>Notes</title>
         <link>https://blog.bugxch.top/tags/notes/</link>
         <pubDate>Wed, 11 Aug 2021 22:31:58 +0800</pubDate>
         
@@ -160,7 +168,7 @@
         <description></description>
         </item>
         <item>
-        <title>obsidian</title>
+        <title>Obsidian</title>
         <link>https://blog.bugxch.top/tags/obsidian/</link>
         <pubDate>Wed, 11 Aug 2021 22:31:58 +0800</pubDate>
         
@@ -168,7 +176,7 @@
         <description></description>
         </item>
         <item>
-        <title>algorithm</title>
+        <title>Algorithm</title>
         <link>https://blog.bugxch.top/tags/algorithm/</link>
         <pubDate>Thu, 06 May 2021 22:33:59 +0800</pubDate>
         
@@ -176,7 +184,7 @@
         <description></description>
         </item>
         <item>
-        <title>leetcode</title>
+        <title>Leetcode</title>
         <link>https://blog.bugxch.top/tags/leetcode/</link>
         <pubDate>Thu, 06 May 2021 22:33:59 +0800</pubDate>
         
@@ -224,7 +232,7 @@
         <description></description>
         </item>
         <item>
-        <title>c&#43;&#43;</title>
+        <title>C&#43;&#43;</title>
         <link>https://blog.bugxch.top/tags/c&#43;&#43;/</link>
         <pubDate>Sun, 16 Aug 2020 22:31:31 +0800</pubDate>
         
@@ -264,7 +272,7 @@
         <description></description>
         </item>
         <item>
-        <title>sliding window</title>
+        <title>Sliding Window</title>
         <link>https://blog.bugxch.top/tags/sliding-window/</link>
         <pubDate>Sun, 02 Aug 2020 15:40:45 +0800</pubDate>
         
@@ -272,7 +280,7 @@
         <description></description>
         </item>
         <item>
-        <title>manjaro</title>
+        <title>Manjaro</title>
         <link>https://blog.bugxch.top/tags/manjaro/</link>
         <pubDate>Sun, 26 Jul 2020 08:12:22 +0800</pubDate>
         
@@ -280,7 +288,7 @@
         <description></description>
         </item>
         <item>
-        <title>vs code</title>
+        <title>Vs Code</title>
         <link>https://blog.bugxch.top/tags/vs-code/</link>
         <pubDate>Sun, 26 Jul 2020 08:12:22 +0800</pubDate>
         
@@ -312,7 +320,7 @@
         <description></description>
         </item>
         <item>
-        <title>pytorch</title>
+        <title>Pytorch</title>
         <link>https://blog.bugxch.top/tags/pytorch/</link>
         <pubDate>Fri, 06 Dec 2019 21:53:20 +0000</pubDate>
         
@@ -320,7 +328,7 @@
         <description></description>
         </item>
         <item>
-        <title>kindle</title>
+        <title>Kindle</title>
         <link>https://blog.bugxch.top/tags/kindle/</link>
         <pubDate>Sat, 04 May 2019 08:31:00 +0000</pubDate>
         
@@ -352,7 +360,7 @@
         <description></description>
         </item>
         <item>
-        <title>tensorflow</title>
+        <title>Tensorflow</title>
         <link>https://blog.bugxch.top/tags/tensorflow/</link>
         <pubDate>Wed, 14 Nov 2018 07:09:58 +0000</pubDate>
         
@@ -360,7 +368,7 @@
         <description></description>
         </item>
         <item>
-        <title>python</title>
+        <title>Python</title>
         <link>https://blog.bugxch.top/tags/python/</link>
         <pubDate>Thu, 08 Nov 2018 07:33:12 +0000</pubDate>
         
@@ -376,7 +384,7 @@
         <description></description>
         </item>
         <item>
-        <title>shell</title>
+        <title>Shell</title>
         <link>https://blog.bugxch.top/tags/shell/</link>
         <pubDate>Sat, 03 Nov 2018 20:47:24 +0000</pubDate>
         
@@ -461,14 +469,6 @@
         <pubDate>Fri, 20 Jul 2018 22:54:24 +0000</pubDate>
         
         <guid>https://blog.bugxch.top/tags/c%E8%AF%AD%E8%A8%80/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>C/C&#43;&#43;</title>
-        <link>https://blog.bugxch.top/tags/c/c&#43;&#43;/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.bugxch.top/tags/c/c&#43;&#43;/</guid>
         <description></description>
         </item>
         
