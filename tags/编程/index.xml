@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>编程 on 巴巴变的博客</title>
+        <link>https://blog.bugxch.top/tags/%E7%BC%96%E7%A8%8B/</link>
+        <description>Recent content in 编程 on 巴巴变的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>bugxch</copyright><atom:link href="https://blog.bugxch.top/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-17-h8am7ef/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-17-h8am7ef/</guid>
+        <description>&lt;h2 id=&#34;cmake-学习笔记生成头文件_liyuanbhu的博客-csdn博客&#34;&gt;CMake 学习笔记（生成头文件）_liyuanbhu的博客-CSDN博客&lt;/h2&gt;
+&lt;p&gt;#编程&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#编程 试试新的结果&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一般命名为 config.h。 CMake 有个 configure_file() 命令专门用来做这个事情。 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/liyuanbhu/article/details/131758291#WCREFX-878916&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

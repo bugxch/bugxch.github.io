@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Wucais on 巴巴变的博客</title>
+        <link>https://blog.bugxch.top/wucai/</link>
+        <description>Recent content in Wucais on 巴巴变的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>bugxch</copyright><atom:link href="https://blog.bugxch.top/wucai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/04/wucai-2023-04-07-h83ema7/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/04/wucai-2023-04-07-h83ema7/</guid>
+        <description>&lt;h2 id=&#34;五彩插件安装和使用说明的意思解释含义_五彩用户反馈&#34;&gt;【五彩插件】安装和使用说明的意思、解释、含义_五彩用户反馈&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;refox插件默认不是自动更新的，建议设置成自动更新，以便拥有最新功能，设置地 &lt;a class=&#34;link&#34; href=&#34;https://feedback.dotalk.cn/note/dA0a1390eb.html#WCREFX-367357&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;非常不错的插件管理软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-17-h8am7dh/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-17-h8am7dh/</guid>
+        <description>&lt;h2 id=&#34;设计模式概念和七大原则-腾讯云开发者社区-腾讯云&#34;&gt;设计模式概念和七大原则-腾讯云开发者社区-腾讯云&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;尽量使用合成/聚合，而不是通过继承达到复用的目的 &lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1650116#WCREFX-879038&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-17-h8am7ef/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-17-h8am7ef/</guid>
+        <description>&lt;h2 id=&#34;cmake-学习笔记生成头文件_liyuanbhu的博客-csdn博客&#34;&gt;CMake 学习笔记（生成头文件）_liyuanbhu的博客-CSDN博客&lt;/h2&gt;
+&lt;p&gt;#编程&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#编程 试试新的结果&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一般命名为 config.h。 CMake 有个 configure_file() 命令专门用来做这个事情。 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/liyuanbhu/article/details/131758291#WCREFX-878916&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-19-h8ahkbc/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-19-h8ahkbc/</guid>
+        <description>&lt;h2 id=&#34;more-effective-c---walmartcom&#34;&gt;More Effective C++ - Walmart.com&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Proven methods for improving program efficiency, including incisive examinations of the time/space costs of C++ language features&lt;/li&gt;
+&lt;li&gt;Comprehensive descriptions of advanced techniques used by C++ experts, including placement new, virtual constructors, smart pointers, reference counting, proxy classes, and double-dispatching&lt;/li&gt;
+&lt;li&gt;Examples of the profound impact of exception handling on the structure and behavior of C++ classes and functions&lt;/li&gt;
+&lt;li&gt;Practical treatments of new language features, including bool, mutable, explicit, namespaces, member templates, the Standard Template Library, and more. If your compilers don&amp;rsquo;t yet support these features, Meyers shows you how to get the job done without them. &lt;a class=&#34;link&#34; href=&#34;https://www.walmart.com/ip/More-Effective-C-9780201633719/501744#WCREFX-889522&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-23-h8a257a/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-23-h8a257a/</guid>
+        <description>&lt;h2 id=&#34;c奇异递归模板模式---shuo-ouyang---博客园&#34;&gt;C++奇异递归模板模式 - shuo-ouyang - 博客园&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CRTP的全称是Curiously Recurring Template Pattern，中文可以翻译成奇异递归模板模式。 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/shuo-ouyang/p/15773193.html#WCREFX-915087&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;看起来比较靠谱的CRTP的介绍 #C++&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-23-h8a257h/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-23-h8a257h/</guid>
+        <description>&lt;h2 id=&#34;c-单例模式总结与剖析---行者孙---博客园&#34;&gt;C++ 单例模式总结与剖析 - 行者孙 - 博客园&lt;/h2&gt;
+&lt;p&gt;#设计模式&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;这篇文章是分析透彻比较全面的介绍C++单例模式的文章 #设计模式&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;If control enters the declaration concurrently while the variable is being initialized, the concurrent execution shall wait for completion of the initialization.&lt;/li&gt;
+&lt;li&gt;如果当变量在初始化的时候，并发同时进入声明语句，并发线程将会阻塞等待初始化结束。 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/sunchaothu/p/10389842.html#WCREFX-915086&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;非常不错的单例模式的写法 #设计模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-24-h8akh87/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-24-h8akh87/</guid>
+        <description>&lt;h2 id=&#34;c右值引用移动语义完美转发上篇_右值引用主要用于移动语义和完美转发_yngz_miao的博客-csdn博客&#34;&gt;【C++】右值引用、移动语义、完美转发（上篇）_右值引用主要用于移动语义和完美转发_Yngz_Miao的博客-CSDN博客&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;对于getValue()产生的临时值，如果不是被右值引用k绑定，在表达式结束之后就销毁了。但，既然被右值引用k绑定后，getValue()产生的临时值会被续命，它的生命周期将会通过右值引用得以延续，和变量k的声明周期一样长。 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_38410730/article/details/105517378#WCREFX-922180&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;左值引用的变量会为自己绑定的变量续命，本来返回之后就没有了，现在和k的生命一样长&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-24-h8akhae/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-24-h8akhae/</guid>
+        <description>&lt;h2 id=&#34;c11移动构造函数的功能和用法&#34;&gt;C++11移动构造函数的功能和用法&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;事实上，对于程序执行过程中产生的临时对象，往往只用于传递数据（没有其它的用处），并且会很快会被销毁。因此在使用临时对象初始化新对象时，我们可以将其包含的指针成员指向的内存资源直接移给新对象所有，无需再新拷贝一份，这大大提高了初始化的执行效率。 &lt;a class=&#34;link&#34; href=&#34;http://c.biancheng.net/view/vip_8694.html#WCREFX-922562&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;程序中间生成的临时变量，如果没有其他的使用，发生了赋值或者复制的动作时候就可以使用移动语义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-24-h8akhh5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-24-h8akhh5/</guid>
+        <description>&lt;h2 id=&#34;c移动语义及拷贝优化--阿振的博客&#34;&gt;C++移动语义及拷贝优化 | 阿振的博客&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;比较清晰的右值引用的说明&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;编译器只对右值引用才能调用转移构造函数和转移赋值函数，而所有命名对象都只能是左值引。如果已知一个命名对象不再被使用而想对它调用转移构造函数和转移赋值函数，也就是把一个左值引用当做右值引用来使用，怎么实现呢？标准库提供了函数 std::move，这个函数以非常简单的方式将左值引用转换为右值引用。 &lt;a class=&#34;link&#34; href=&#34;https://theonegis.github.io/cxx/C-%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E5%8F%8A%E6%8B%B7%E8%B4%9D%E4%BC%98%E5%8C%96/index.html#WCREFX-922017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;可以看到并没有拷贝构造或者移动构造的发生。虽然理论上说，f1()函数的返回值是局部变量，会有一次拷贝构造的发生，但是实际并没有。这是因为编译器帮我们做了优化，减少了不必要的拷贝。&lt;/li&gt;
+&lt;li&gt;g++和clang++都提供了-fno-elide-constructors选项可以关闭拷贝优化，我们重新进行编译运行g++-8 foo.cpp -std=c++11 -fno-elide-constructors &amp;amp;&amp;amp; ./a.out &lt;a class=&#34;link&#34; href=&#34;https://theonegis.github.io/cxx/C-%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E5%8F%8A%E6%8B%B7%E8%B4%9D%E4%BC%98%E5%8C%96/index.html#WCREFX-922055&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;通过编译选项可以优化C++中的拷贝优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;顺便提一下，在C++11以前，我们的编程习惯是为了减少不必要的复制操作，我们可能会把需要返回的对象以对象引用（左值引用，当时还没有右值引用的说法）的形式传进函数，这样在函数之外我们也可以不用拷贝获得该对象。&lt;/li&gt;
+&lt;li&gt;所以C++移动语义和拷贝优化确实是C++规范中很重要的特征，对我们写程序有很大的影响。&lt;/li&gt;
+&lt;li&gt;顺便提一下STL中的容器都提供了对右值引用的重载，所以当我们自定义类中实现了移动构造函数，使用STL容器的时候就没有多大的拷贝开销了，效率会有很大的提升。 &lt;a class=&#34;link&#34; href=&#34;https://theonegis.github.io/cxx/C-%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E5%8F%8A%E6%8B%B7%E8%B4%9D%E4%BC%98%E5%8C%96/index.html#WCREFX-922078&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;C++ 11的移动语义可以大幅提高对象的拷贝性能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-24-h8akhkh/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/07/wucai-2023-07-24-h8akhkh/</guid>
+        <description>&lt;h2 id=&#34;c11右值引用一看即懂&#34;&gt;C++11右值引用（一看即懂）&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;和常量左值引用不同的是，右值引用还可以对右值进行修改。例如 &lt;a class=&#34;link&#34; href=&#34;http://c.biancheng.net/view/7829.html#WCREFX-922494&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;右值引用之后可以通过引用修改原来的数据，右值只能通过这样的方式进行修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2023/10/wucai-2023-10-02-h827577/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2023/10/wucai-2023-10-02-h827577/</guid>
+        <description>&lt;h2 id=&#34;深扒威联通nas八千字还原真实优缺点附赠新手入门优化指南-聚超值&#34;&gt;深扒威联通NAS！八千字还原真实优缺点！附赠新手入门优化指南！-聚超值&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;备利用率满足用户对文档、照片、影音等传统文件存储和应用的需求，同时大幅减少关键功能的手动部署时间，并支持用户围绕存储自行添加功能。 &lt;a class=&#34;link&#34; href=&#34;https://best.pconline.com.cn/yuanchuang/12110061.html#WCREFX-1427570&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;设备&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;满足用户对文档、照片、影音等传统文件存储 &lt;a class=&#34;link&#34; href=&#34;https://best.pconline.com.cn/yuanchuang/12110061.html#WCREFX-1427569&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-16-h88336d/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-16-h88336d/</guid>
+        <description>&lt;h2 id=&#34;digital-camera-sensor-sizeshow-it-influences-your-photography&#34;&gt;Digital Camera Sensor Sizes:How it Influences Your Photography&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Sensor sizes currently have many possibilities, depending on their use, price point and desired portability. The relative size for many of these is shown below:&lt;/li&gt;
+&lt;li&gt;Canon&amp;rsquo;s 1Ds/5D and Nikon D3 series are the most common full frame sensors. Canon cameras such as the Rebel/60D/7D all have a 1.6X crop factor, whereas mainstream Nikon SLR cameras have a 1.5X crop factor. The above chart excludes the 1.3X crop factor, which is used in Canon&amp;rsquo;s 1D series cameras. &lt;a class=&#34;link&#34; href=&#34;https://www.cambridgeincolour.com/tutorials/digital-camera-sensor-size.htm#WCREFX-2427557&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#博客&lt;/li&gt;
+&lt;li&gt;不同画幅的大小比较&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-17-h883eb9/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-17-h883eb9/</guid>
+        <description>&lt;h2 id=&#34;picgo安装插件compress---花好月圆&#34;&gt;PicGo安装插件compress - 花好月圆&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;compress用于 PicGo 的图片压缩插件,非常好用。极大的节约图床储存和服务器流量 &lt;a class=&#34;link&#34; href=&#34;https://bearcai.com/index.php/archives/44/#WCREFX-2433330&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#picgo 上传压缩图片的方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-19-h87ek5k/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-19-h87ek5k/</guid>
+        <description>&lt;h2 id=&#34;dataview翻译-by-寡人---obsidian中文教程---obsidian-publish&#34;&gt;Dataview翻译 by 寡人 - Obsidian中文教程 - Obsidian Publish&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;可以看到，二者很像，可以清楚的看到其中的对应关系，tablename对应着source等等。 &lt;a class=&#34;link&#34; href=&#34;https://publish.obsidian.md/chinesehelp/01&amp;#43;2021%E6%96%B0%E6%95%99%E7%A8%8B/Dataview%E7%BF%BB%E8%AF%91&amp;#43;by&amp;#43;%E5%AF%A1%E4%BA%BA#WCREFX-2462524&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#ob dataview高级用法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-19-h87em96/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-19-h87em96/</guid>
+        <description>&lt;h2 id=&#34;obsidian-插件篇之-dataview--verne-in-github&#34;&gt;Obsidian 插件篇之 Dataview | Verne in GitHub&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在过去的使用过程中，我并没有太多的需求要去使用这一款插件，大部分的场景我都会直接使用搜索(Ctrl+Shift+F)关键字或标签来做到。但随着现在笔记越来越多，我产生了一个需求，比如我想要查看我笔记中打了某个标签的笔记列表，我想查看某个时间段中我记录的关于某个人物的笔记，又或者我会在笔记中将我看过的影视作品记录下来，我想查看过去我看过的某个导演的作品列表，这一些都可以通过 Dataview 结合 Obsidian 来达到。 &lt;a class=&#34;link&#34; href=&#34;https://einverne.github.io/post/2021/12/obsidian-dataview-plugin.html#WCREFX-2460051&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#ob 非常不错的教程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-19-h87emfm/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-19-h87emfm/</guid>
+        <description>&lt;h2 id=&#34;dataviewjs的奇技淫巧---经验分享---obsidian-中文论坛&#34;&gt;Dataviewjs的奇技淫巧 - 经验分享 - Obsidian 中文论坛&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataviewjs&lt;/li&gt;
+&lt;li&gt;Dataviewjs 是 Dataview 插件的高级功能，与 templater 一样，它也使用 javascript 语言&lt;/li&gt;
+&lt;li&gt;想要使用它也很简单，与 dataview 类似，只要在代码块前面加上 dataviewjs &lt;a class=&#34;link&#34; href=&#34;https://forum-zh.obsidian.md/t/topic/5954#WCREFX-2459959&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#ob 比较高级的用法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-19-h87emk3/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/01/wucai-2024-01-19-h87emk3/</guid>
+        <description>&lt;h2 id=&#34;解决beyond-compare相同文件出现差异问题-beyond-compare中文网站&#34;&gt;解决Beyond Compare相同文件出现差异问题-Beyond Compare中文网站&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Beyond Compare是一款高效精准的文件和文件夹比较工具，可以采用多种方式比较文件的内容差异，其主要比较方式包括：CRC比较、二进制比较、基于规则的比较等。有的用户在比较文件夹时，采用二进制比较的方式来对比文件夹内包含的子文件，但是出现这样的困惑：明明是相同的文件，比较结果却显示文件存在差异，这是为什么呢？以下内容以案例形式，给大家详细讲解Beyond Compare对比相同文件出现差异的原因和解决方案。 &lt;a class=&#34;link&#34; href=&#34;https://www.beyondcompare.cc/wenti/cha-yi-wenti.html#WCREFX-2459487&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-07-h87m77k/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-07-h87m77k/</guid>
+        <description>&lt;h2 id=&#34;通信中正交的含义---知乎&#34;&gt;通信中正交的含义 - 知乎&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;p&gt;$$
+m\times n
+$$
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/26193196#WCREFX-2618248&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-07-h87m7kf/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-07-h87m7kf/</guid>
+        <description>&lt;h2 id=&#34;小众传感器却有看家般锐利精细画质-富士x-trans相机推荐_无反相机_什么值得买&#34;&gt;小众传感器却有看家般锐利精细画质 富士X-Trans相机推荐_无反相机_什么值得买&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://a.zdmimg.com/201808/31/5b88f67ff34544083.jpg_e1080.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/apz20n87/#WCREFX-2617816&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#博客 不同传感器的阵列&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-17-h87k3ka/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-17-h87k3ka/</guid>
+        <description>&lt;h2 id=&#34;gemini---google-deepmind&#34;&gt;Gemini - Google DeepMind&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;reas &lt;a class=&#34;link&#34; href=&#34;https://deepmind.google/technologies/gemini/#WCREFX-2656975&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-17-h87km22/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-17-h87km22/</guid>
+        <description>&lt;h2 id=&#34;新年新开始从为什么到写什么带你重新认识日记---少数派&#34;&gt;新年新开始：从为什么到写什么，带你重新认识日记 - 少数派&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;大脑偏好消极的想法，而且会寻找各种线索来佐证它。&lt;/li&gt;
+&lt;li&gt;如果你是个低能量的人，总是在想「我是个糟糕的家伙」，大脑就会迅速寻找相关的证据来佐证你的猜测，当恐惧和回避的情绪进入潜意识，会导致你在负面的情绪中越陷越深，甚至无法自拔。&lt;/li&gt;
+&lt;li&gt;将自己的想法写在纸上，你就会很轻易地看到大脑是如何蛊惑你的。事实上，当你集中地把自己的想法诉诸纸上，大脑的恐吓就会瞬间失效。&lt;/li&gt;
+&lt;li&gt;因为书写需要调用理性思维，当书写动作的优先级高于情绪，大脑皮层的语言区和书写区开始接管主体，负面情绪便会得到缓冲。 &lt;a class=&#34;link&#34; href=&#34;https://sspai.com/post/86356#WCREFX-2655306&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#心理健康 难怪比较低潮时候写博客和日记非常有用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-17-h87km3h/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-17-h87km3h/</guid>
+        <description>&lt;h2 id=&#34;谈谈老年抑郁症_成都市第四人民医院&#34;&gt;谈谈老年抑郁症_成都市第四人民医院&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;老年抑郁症在症状上有其特殊性，具体来说有以下九个方面：&lt;/li&gt;
+&lt;li&gt;1、兴趣丧失，无愉快感；&lt;/li&gt;
+&lt;li&gt;2、精力减退、精神不振、疲乏无力；&lt;/li&gt;
+&lt;li&gt;3、言行减少，好独处，不愿与人交往；&lt;/li&gt;
+&lt;li&gt;4、自我评价下降，自责自罪，有内疚感；&lt;/li&gt;
+&lt;li&gt;5、反复出现想死的念头或有自杀倾向，据研究，患抑郁症的老人有10%以上会采取自杀行为；&lt;/li&gt;
+&lt;li&gt;6、对前途悲观失望，有厌世心理；&lt;/li&gt;
+&lt;li&gt;7、自觉病情严重，有疑病倾向，据调查，60%的老年抑郁症患者会出现疑病症状；&lt;/li&gt;
+&lt;li&gt;8、睡眠欠佳，失眠早醒；&lt;/li&gt;
+&lt;li&gt;9、食欲不振或体重明显减轻。此外，也会有记忆力明显下降、反应迟钝的症状，80%左右的老年患者会出现记忆力衰退。&lt;/li&gt;
+&lt;li&gt;老年抑郁症如不进行治疗，会越来越严重。有多种类型的抗抑郁药物可治疗老年忧郁症。抗抑郁药物服药两周后才会有效果，康复后，还需要继续服用6个月至1年，以防复发。不要在医生不知情的情况下改变抗抑郁药物的用量。但所有的抗抑郁药物都会有副作用，但这些副作用也会随时间消失。&lt;/li&gt;
+&lt;li&gt;患者情绪最不佳的时段通常会在早上，所以要避免在这一时段外出活动。亲友可轮流陪伴患者外出走走，如逛街、运动或参与其它休闲活动。抑郁症患者有时会被误解为懒惰、散漫，其实这只是生病时的症状。&lt;/li&gt;
+&lt;li&gt;由于老年人的身体状况不如年轻时稳定，所以治疗老年抑郁症比较困难。最令医生感到头痛的是许多老年患者经常会不依照提示服药，所以家人必须督促患者依时依分量服药，否则难以完全康复。&lt;/li&gt;
+&lt;li&gt;恢复老年抑郁症患者的正常活动非常重要。抑郁症患者不能只靠服药来治疗，最重要的是让他们恢复正常的活动。在这方面，家人的鼓励与督促非常重要，通常医生会和家人一起为患者安排每目的活动表，如上午打太极拳、下午打麻将、傍晚和朋友喝茶聊天等，总之一定要让他们感到很忙。&lt;/li&gt;
+&lt;li&gt;老年重性抑郁症的发病率因不同的人群而相差十倍左右。在共患躯体疾病的人群中，其发病率较高。在所有人群中，抑郁症状发生率比重性抑郁症的发病率高2~4倍。虽然有如此高的发病率，但老年抑郁症常常没有被识别，也没有得到有效治疗。&lt;/li&gt;
+&lt;li&gt;老年抑郁症病因学很复杂，除老年人本身易感素质外，还涉及众多年龄相关的生物-社会-心理因素。研究发现高度神经质和／或长期困境的老年人是早期干预的对象。现有研究提示纹状体额叶功能障碍可能是促发老年抑郁发作的机制。 &lt;a class=&#34;link&#34; href=&#34;https://www.cd-psychologist.com/4120/tszk/manxingjingshenkangfuke/2013/0107/17858.html#WCREFX-2655486&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-26-h8d6e78/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-26-h8d6e78/</guid>
+        <description>&lt;h2 id=&#34;stephen-wolfram自述---阮一峰的网络日志&#34;&gt;Stephen Wolfram自述 - 阮一峰的网络日志&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1991年，公司盈利良好，已经可以上市了。但是，我决定不上市。我希望它始终是我自己的公司，这样我就能做自己想做的事情&amp;mdash;-那些长期的项目，比如我的科学研究。 &lt;a class=&#34;link&#34; href=&#34;https://www.ruanyifeng.com/blog/2011/07/stephen_wolfram.html#WCREFX-2747809&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;我总是想做我自己的东西，使得我不可避免要成立自己的公司。这里面有一种交换关系，如果你愿意做更多乏味的事情，你可能赚到更多的钱；如果你不太关心钱，你可能就会得到更多的智力乐趣。 &lt;a class=&#34;link&#34; href=&#34;https://www.ruanyifeng.com/blog/2011/07/stephen_wolfram.html#WCREFX-2747813&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-27-h8dc222/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-27-h8dc222/</guid>
+        <description>&lt;h2 id=&#34;处理器简史powerpc-01牢不可破的-aim-联盟---少数派&#34;&gt;处理器简史｜PowerPC 01：牢不可破的 AIM 联盟 - 少数派&lt;/h2&gt;
+&lt;p&gt;#处理器架构 #星标 #架构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#架构 介绍RISC处理器的发展历程&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;John Cocke 打造的 IBM 801 最后在 1986 年被分离出来，作为 IBM RISC 技术个人计算机、即 RT PC 的芯片 IBM ROMP 投入市场，但并没有获得多大成功。前文说到的 David Patterson 和 Carlo H. Sequin 也没闲着，最终造出了 RISC-I 芯片，其仅含有 44420 个晶体管，相比之下，那个时代 CISC 设计的平均数量约 100000 个，虽然被精简到只有 32 条指令，但其性能却完全超过了其他任何单芯片，1983 年，他们又完成了晶体管数量更少、性能却是前者 3 倍的 RISC-II。 &lt;a class=&#34;link&#34; href=&#34;https://sspai.com/post/77570#WCREFX-2754297&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构&lt;/li&gt;
+&lt;li&gt;CISC架构的优势在于使用更少的晶体管（4万个）获得更高的计算性能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;见此情景，IBM 再接再厉，继续在 801 的基础上挖掘其潜能，进一步加强其超标量的属性，并为此添加了更多执行单元，包括独立的浮点与定点单元，并加入了分支预测，最后开发出了具有实验性质的猎豹芯片，并又在其基础上研发出黑豹芯片。 &lt;a class=&#34;link&#34; href=&#34;https://sspai.com/post/77570#WCREFX-2754378&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#架构&lt;/li&gt;
+&lt;li&gt;什么是超标量？浮点和定点单元分开，提升了处理的并行度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-28-h8dc9b9/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-28-h8dc9b9/</guid>
+        <description>&lt;h2 id=&#34;through-the-agesapple-cpu-architecture&#34;&gt;Through the Ages:Apple CPU Architecture&lt;/h2&gt;
+&lt;p&gt;#处理器架构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;了解苹果A芯片架构演进过程，有助于从另一个角度理解cpu的架构&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;When your CPU uses a simpler RISC instruction set, these steps each take a single cycle, and you can line up these operations concurrently. In each clock cycle, you can get 3 instruction running, 1 at each of the 3 stages, in parallel. This results in (on average) one machine code operation executed per clock cycle. &lt;a class=&#34;link&#34; href=&#34;https://jacobbartlett.substack.com/p/through-the-ages-apple-cpu-architecture#WCREFX-2768912&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 使用精简指令集可以将硬件流水起来，提高处理器的吞吐量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-01-h8df67c/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-01-h8df67c/</guid>
+        <description>&lt;h2 id=&#34;细说cache-l1l2l3tlb---知乎&#34;&gt;细说Cache-L1/L2/L3/TLB - 知乎&lt;/h2&gt;
+&lt;p&gt;#处理器架构 #星标&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;详细说明了计算机中的cache的结构&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;现在的CPU中有好几个等级的缓存。通常L1和L2缓存都是每个CPU一个的, L1缓存有分为L1i和L1d，分别用来存储指令和数据。L2缓存是不区分指令和数据的。L3缓存多个核心共用一个，通常也不区分指令和数据。 还有一种缓存叫TLB，它主要用来缓存MMU使用的页表，通常我们讲缓存（cache)的时候是不算它的。 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/31875174#WCREFX-2799599&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 cache的分层，下面是一些问题&lt;/li&gt;
+&lt;li&gt;指令的retire具体是如何定义的？outstanding的指令retire是什么意思？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-02-h8d938d/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-02-h8d938d/</guid>
+        <description>&lt;h2 id=&#34;科技爱好者周刊第-291-期ai-没有护城河---阮一峰的网络日志&#34;&gt;科技爱好者周刊（第 291 期）：AI 没有护城河 - 阮一峰的网络日志&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;电动车的重量普遍比同级别燃油车重20%，原因是电池很重。举例来说，特斯拉 Model Y 单单是电池，就重770公斤，相比之下，一辆大众甲壳虫燃油车的整体重量也只有820公斤，而后者的续航还要大于前者。&lt;/li&gt;
+&lt;li&gt;电动车多出来的重量，会造成轮胎更快的磨损，导致更大的污染。 &lt;a class=&#34;link&#34; href=&#34;https://www.ruanyifeng.com/blog/2024/03/weekly-issue-291.html#WCREFX-2808698&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;正如我的同事 Chris Ford 对我说的：&amp;ldquo;软件耦合是由人类交流促成的。&amp;rdquo; 如果我可以轻松与代码作者交谈，那么我就更容易对代码有更深入的了解，因此我的代码更容易耦合到该代码。&lt;/li&gt;
+&lt;li&gt;应对康威定律的第一步是不要与之抗争。我仍然记得一位技术主管，他刚刚被任命为​​一个大型新项目的架构师，该项目由分布在世界各地不同城市的六个团队组成。&amp;ldquo;我做出了第一个架构决定&amp;rdquo;，他告诉我：&amp;ldquo;就是这个系统将有六个主要的子系统。我不知道它们会是什么子系统，但肯定会有六个。&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;为了适应康威定律，现在有一种策略，就是一旦定下软件架构，就相应改变组织结构，让紧密耦合模块的开发者更容易沟通。 &lt;a class=&#34;link&#34; href=&#34;https://www.ruanyifeng.com/blog/2024/03/weekly-issue-291.html#WCREFX-2808752&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-02-h8d93me/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-02-h8d93me/</guid>
+        <description>&lt;h2 id=&#34;發佈京華老宋体7月29日更新v1007---知乎&#34;&gt;【發佈】京華老宋体(7月29日更新v1.007) - 知乎&lt;/h2&gt;
+&lt;p&gt;#搜罗 #星标&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#搜罗 比较好的字体&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

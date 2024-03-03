@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>架构 on 巴巴变的博客</title>
+        <link>https://blog.bugxch.top/tags/%E6%9E%B6%E6%9E%84/</link>
+        <description>Recent content in 架构 on 巴巴变的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>bugxch</copyright><atom:link href="https://blog.bugxch.top/tags/%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-27-h8dc222/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/02/wucai-2024-02-27-h8dc222/</guid>
+        <description>&lt;h2 id=&#34;处理器简史powerpc-01牢不可破的-aim-联盟---少数派&#34;&gt;处理器简史｜PowerPC 01：牢不可破的 AIM 联盟 - 少数派&lt;/h2&gt;
+&lt;p&gt;#处理器架构 #星标 #架构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#架构 介绍RISC处理器的发展历程&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;John Cocke 打造的 IBM 801 最后在 1986 年被分离出来，作为 IBM RISC 技术个人计算机、即 RT PC 的芯片 IBM ROMP 投入市场，但并没有获得多大成功。前文说到的 David Patterson 和 Carlo H. Sequin 也没闲着，最终造出了 RISC-I 芯片，其仅含有 44420 个晶体管，相比之下，那个时代 CISC 设计的平均数量约 100000 个，虽然被精简到只有 32 条指令，但其性能却完全超过了其他任何单芯片，1983 年，他们又完成了晶体管数量更少、性能却是前者 3 倍的 RISC-II。 &lt;a class=&#34;link&#34; href=&#34;https://sspai.com/post/77570#WCREFX-2754297&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构&lt;/li&gt;
+&lt;li&gt;CISC架构的优势在于使用更少的晶体管（4万个）获得更高的计算性能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;见此情景，IBM 再接再厉，继续在 801 的基础上挖掘其潜能，进一步加强其超标量的属性，并为此添加了更多执行单元，包括独立的浮点与定点单元，并加入了分支预测，最后开发出了具有实验性质的猎豹芯片，并又在其基础上研发出黑豹芯片。 &lt;a class=&#34;link&#34; href=&#34;https://sspai.com/post/77570#WCREFX-2754378&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#架构&lt;/li&gt;
+&lt;li&gt;什么是超标量？浮点和定点单元分开，提升了处理的并行度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
