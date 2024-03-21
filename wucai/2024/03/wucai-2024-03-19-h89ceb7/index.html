@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='GPU入门 | 李乾坤的博客 页面笔记 划线列表 一个 SM 里面有多个 subcore，每个 subcore 有一个 32 thread 的 warp scheduler 和 dispatcher, 在一个 warp 中的所有线程都会同时执行相同的指令'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='GPU入门 | 李乾坤的博客 页面笔记 划线列表 CPU和GPU的主要区别在于它们的设计目标。CPU的设计初衷是执行顺序指令，一直以来，为提高顺序执行'>
 <title></title>
 
 <link rel='canonical' href='https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-19-h89ceb7/'>
 
 <link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content=''>
-<meta property='og:description' content='GPU入门 | 李乾坤的博客 页面笔记 划线列表 一个 SM 里面有多个 subcore，每个 subcore 有一个 32 thread 的 warp scheduler 和 dispatcher, 在一个 warp 中的所有线程都会同时执行相同的指令'>
+<meta property='og:description' content='GPU入门 | 李乾坤的博客 页面笔记 划线列表 CPU和GPU的主要区别在于它们的设计目标。CPU的设计初衷是执行顺序指令，一直以来，为提高顺序执行'>
 <meta property='og:url' content='https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-19-h89ceb7/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Wucai' />
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="GPU入门 | 李乾坤的博客 页面笔记 划线列表 一个 SM 里面有多个 subcore，每个 subcore 有一个 32 thread 的 warp scheduler 和 dispatcher, 在一个 warp 中的所有线程都会同时执行相同的指令">
+<meta name="twitter:description" content="GPU入门 | 李乾坤的博客 页面笔记 划线列表 CPU和GPU的主要区别在于它们的设计目标。CPU的设计初衷是执行顺序指令，一直以来，为提高顺序执行">
     <link rel="shortcut icon" href="%5cfavicon.ico" />
 <style>
     :root {
@@ -407,6 +407,12 @@
 <h2 id="页面笔记">页面笔记</h2>
 <h2 id="划线列表">划线列表</h2>
 <ul>
+<li>CPU和GPU的主要区别在于它们的设计目标。CPU的设计初衷是执行顺序指令，一直以来，为提高顺序执行性能，CPU设计中引入了许多功能。其重点在于减少指令执行时延，使CPU能够尽可能快地执行一系列指令。这些功能包括指令流水线、乱序执行、预测执行和多级缓存等（此处仅列举部分）。而GPU则专为大规模并行和高吞吐量而设计，但这种设计导致了中等至高程度的指令时延。这一设计方向受其在视频游戏、图形处理、数值计算以及现如今的深度学习中的广泛应用所影响，所有这些应用都需要以极高的速度执行大量线性代数和数值计算，因此人们倾注了大量精力以提升这些设备的吞吐量 <a class="link" href="https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3080641"  target="_blank" rel="noopener"
+    >Link</a>
+<ul>
+<li>#处理器架构 cpu更重视缩短指令的延迟，gpu允许指令有比较长的时延，但是一定要大的吞吐量</li>
+</ul>
+</li>
 <li>一个 SM 里面有多个 subcore，每个 subcore 有一个 32 thread 的 warp scheduler 和 dispatcher, 在一个 warp 中的所有线程都会同时执行相同的指令，但是输入的数据不同，这种机制也被称为 SIMD（单指令多数据）或 SIMT（单指令多线程）模型。 <a class="link" href="https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3047818"  target="_blank" rel="noopener"
     >Link</a>
 <ul>

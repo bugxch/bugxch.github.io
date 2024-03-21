@@ -26206,10 +26206,210 @@ $$
 &lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
 &lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;CPU和GPU的主要区别在于它们的设计目标。CPU的设计初衷是执行顺序指令，一直以来，为提高顺序执行性能，CPU设计中引入了许多功能。其重点在于减少指令执行时延，使CPU能够尽可能快地执行一系列指令。这些功能包括指令流水线、乱序执行、预测执行和多级缓存等（此处仅列举部分）。而GPU则专为大规模并行和高吞吐量而设计，但这种设计导致了中等至高程度的指令时延。这一设计方向受其在视频游戏、图形处理、数值计算以及现如今的深度学习中的广泛应用所影响，所有这些应用都需要以极高的速度执行大量线性代数和数值计算，因此人们倾注了大量精力以提升这些设备的吞吐量 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3080641&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 cpu更重视缩短指令的延迟，gpu允许指令有比较长的时延，但是一定要大的吞吐量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;一个 SM 里面有多个 subcore，每个 subcore 有一个 32 thread 的 warp scheduler 和 dispatcher, 在一个 warp 中的所有线程都会同时执行相同的指令，但是输入的数据不同，这种机制也被称为 SIMD（单指令多数据）或 SIMT（单指令多线程）模型。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3047818&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;#处理器架构 什么是simt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fa6c/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fa6c/</guid>
+        <description>&lt;h2 id=&#34;cpu-和-gpu---异构计算的演进与发展---面向信仰编程&#34;&gt;CPU 和 GPU - 异构计算的演进与发展 - 面向信仰编程&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;计算机图形领域的圣杯是实时的全局光照，实现更好的光线追踪可以帮助我们在屏幕上渲染更加真实的图像，然而全局光照需要 GPU 进行大量的计算，而实时的全局光照更是对性能有着非常高的要求。传统的 GPU 架构并不擅长光线追踪等任务，所以 Nvidia 在 Turing 架构中首次引入了光线追踪核心（Ray-Tracing Core、RT Core）。 &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/#fn:18https:/draveness.me/heterogeneous-computing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 新增光追模块&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89faa8/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89faa8/</guid>
+        <description>&lt;h2 id=&#34;cpu-和-gpu---异构计算的演进与发展---面向信仰编程&#34;&gt;CPU 和 GPU - 异构计算的演进与发展 - 面向信仰编程&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU 和 GPU - 异构计算的演进与发展 &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/https:/draveness.me/heterogeneous-computing#WCREFX-3080234&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 非常不错的介绍材料&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;越小的晶体管在开关时消耗的能量越少，既然晶体管需要一些时间充电和放电，那么消耗的能量也就越少，速度也越快，而这也解释了为什么增加 CPU 的电压可以提高它的运行速度。除此之外，更小的晶体管间隔使得信号的传输变得更快，这也能够加快 CPU 的处理速度5。 &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/https:/draveness.me/heterogeneous-computing#WCREFX-3080248&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;L1 缓存中区分数据缓存和指令缓存以提高缓存的命中率。 &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/https:/draveness.me/heterogeneous-computing#WCREFX-3080257&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 区分dcache和icahce的目的是为了提升缓存的命中率？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最初的 GPU 仅仅是为了更快地创建和渲染图片，它们广泛存在于个人主机上承担着图像渲染的任务，但是随着机器学习等技术的发展，GPU 中出现了更多种类的专用核心来支撑特定的场景，我们在这里介绍两种 GPU 中存在的专用核心：张量核心（Tensor Core）和光线追踪核心（Ray-Tracing Core）： &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/https:/draveness.me/heterogeneous-computing#WCREFX-3080505&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 为了执行新任务，增加新的计算单元&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fac2/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fac2/</guid>
+        <description>&lt;h2 id=&#34;cpu-architecture---what-does-a-split-cache-means-and-how-is-it-usefulif-it-is---stack-overflow&#34;&gt;cpu architecture - What does a &amp;lsquo;Split&amp;rsquo; cache means. And how is it useful(if it is)? - Stack Overflow&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What does a &amp;lsquo;Split&amp;rsquo; cache means. And how is it useful(if it is)? &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/55752699/what-does-a-split-cache-means-and-how-is-it-usefulif-it-is#WCREFX-3080287&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 为什么cache分为dcache和icache，而且在L2就不再区分了？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fahc/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fahc/</guid>
+        <description>&lt;h2 id=&#34;nvdla-primer--nvdla-documentation&#34;&gt;NVDLA Primer — NVDLA Documentation&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Independent. When operating independently, each functional block is configured for when and what it executes, with each block working on its assigned task (akin to independent layers in a Deep Learning framework). Independent operation begins and ends with the assigned block performing memory-to-memory operations, in and out of main system memory or dedicated SRAM memory.&lt;/li&gt;
+&lt;li&gt;Fused. Fused operation is similar to independent operation, however, some blocks can be assembled as a pipeline.&lt;/li&gt;
+&lt;li&gt;This improves performance by bypassing the round trip through memory, instead having blocks communicate with each other through small FIFOs (i.e., the convolution core can pass data to the Single Data Point Processor, which can pass data to the Planar Data Processor, and in turn to the Cross-channel Data Processor). &lt;a class=&#34;link&#34; href=&#34;http://nvdla.org/primer.html#WCREFX-3079952&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 从架构图来看，&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;DLA主要用于深度学习的推理，包括卷积、激活、pooling、norm以及reashape的操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;支持独立执行，每个单元自己访问SRAM，也支持类似UB融合的操作，数据在不同的单元流动，只在最后计算完毕之后运输到DDR&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Support for sparse weight compression saves memory bandwidth. Built-in Winograd convolution support improves compute efficiency for certain sizes of filters. Batch convolution, can save additional memory bandwidth by reusing weights when running multiple inferences in parallel. &lt;a class=&#34;link&#34; href=&#34;http://nvdla.org/primer.html#WCREFX-3079974&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 卷积支持稀疏卷积、wino卷积以及权值共享多batch卷积&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fbaf/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fbaf/</guid>
+        <description>&lt;h2 id=&#34;适用于新一代机器人开发的-jetson-orin--nvidia&#34;&gt;适用于新一代机器人开发的 Jetson Orin | NVIDIA&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;on Orin™ 模组算力 &lt;a class=&#34;link&#34; href=&#34;https://www.nvidia.cn/autonomous-machines/embedded-systems/jetson-orin/#WCREFX-3077940&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fbd7/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fbd7/</guid>
+        <description>&lt;h2 id=&#34;自主机器ai-的未来--nvidia&#34;&gt;自主机器：AI 的未来 | NVIDIA&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AI 正在变革各行各业并应对全球挑战NVIDIA Jetson™ 平台提供用于开发和部署 AI 赋能机器人、无人机、IVA 应用和自主机器的工具，助力这场变革。 &lt;a class=&#34;link&#34; href=&#34;https://www.nvidia.cn/autonomous-machines/#WCREFX-3078240&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 应用前景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;全新 Jetson Orin™ 平台还能实现每秒高达 275 万亿次浮点运算的算力，其性能是上一代产品的 8 倍。从入门级的 Jetson Orin Nano™，到具备最高性能的 Jetson AGX Orin，Jetson Orin™ 基于同一架构提供 7 种不同的模组，无疑是机器人新时代的理想平台。 &lt;a class=&#34;link&#34; href=&#34;https://www.nvidia.cn/autonomous-machines/#WCREFX-3078258&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 相同硬件架构，覆盖中高端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fk9h/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-21-h89fk9h/</guid>
+        <description>&lt;h2 id=&#34;vpi---vision-programming-interfacearchitecture&#34;&gt;VPI - Vision Programming Interface:Architecture&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PVA&lt;/li&gt;
+&lt;li&gt;The Programmable Vision Accelerator (PVA) is a processor in NVIDIA® Jetson AGX Orin™ and NVIDIA® Jetson Orin™ NX devices that is specialized for image processing and computer vision algorithms.&lt;/li&gt;
+&lt;li&gt;Use the PVA backend when you need to leave the GPU free to run other tasks that only it can perform, such as deep learning inference stages and algorithms only implemented on CUDA backend.&lt;/li&gt;
+&lt;li&gt;PVA hardware is much more power-efficient than CPU and CUDA hardware. Therefore, use the PVA backend where possible if power is at a premium.&lt;/li&gt;
+&lt;li&gt;Each Jetson AGX Orin or Jetson XOrin NX device comprises one PVA processor, each one contains two vector processors. Therefore, the device can execute at most two independent PVA tasks concurrently.&lt;/li&gt;
+&lt;li&gt;When multiple VPI streams have the PVA backend enabled, they each choose one available PVA vector processor in round-robin succession. &lt;a class=&#34;link&#34; href=&#34;https://docs.nvidia.com/vpi/architecture.html#WCREFX-3079752&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson NV没有公开PVA的硬件资料，PVA的概述，Programmable Vision Accelerator（可编程视觉加速器）。从文档来看，&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;PVA具有更高的能效（超过cpu和cuda硬件），如果是功耗敏感性的任务，则应该尽量使用PVA完成；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;协处理器，主要用于深度学习的推理以及CUDA的算法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;每个AVG Orin和Xorin NX设备有一个PVA处理器，每个处理器中有2个vector处理器，因此一个设备可以最多独立处理2个PVA任务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
