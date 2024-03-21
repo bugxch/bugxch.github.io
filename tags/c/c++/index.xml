@@ -4520,11 +4520,13 @@ $$
         <guid>https://blog.bugxch.top/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/</guid>
         <description>&lt;p&gt;接上一篇博客&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/2017/12/13/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%A1%A5%E7%A0%81%EF%BC%9F/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《为什么会有补码？》&lt;/a&gt;，我仅仅分析了整数在计算机中表示方式，但是计算机中的浮点数又是如何表示的呢？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://rh6stzxdcl1wf9gj1fkj14uc-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/Fig-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/bridge-8291058_1280.jpg?imageSlim&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;bridge-8291058_1280.jpg&#34;
 	
 	
 &gt;&lt;/p&gt;
@@ -4694,7 +4696,7 @@ $$&lt;/p&gt;
 &lt;td&gt;0000010000000001&lt;/td&gt;
 &lt;td&gt;-14&lt;/td&gt;
 &lt;td&gt;$1 + 1 \times 2^{-10}$&lt;/td&gt;
-&lt;td&gt;$2^{-14} + 2^{-24}$&lt;/td&gt;
+&lt;td&gt;$2^{-14}+2^{-24}$&lt;/td&gt;
 &lt;td&gt;$6.11\times 10^5$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
