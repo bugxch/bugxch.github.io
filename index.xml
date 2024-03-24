@@ -21346,6 +21346,98 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/weread/%E5%AE%9E%E6%88%98ai%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E5%AE%9E%E6%88%98ai%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;元数据&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 实战AI大模型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/12/cpplatform_f2ycapw1h8dry5gsurzztk/t7_cpplatform_f2ycapw1h8dry5gsurzztk1710313514.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 实战AI大模型|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 实战AI大模型&lt;/li&gt;
+&lt;li&gt;作者： 尤洋&lt;/li&gt;
+&lt;li&gt;简介： 《实战AI大模型》是一本旨在填补人工智能（AI）领域（特别是AI大模型）理论与实践之间鸿沟的实用手册。书中介绍了AI大模型的基础知识和关键技术，如Transformer、BERT、ALBERT、T5、GPT系列、InstructGPT、ChatGPT、GPT 4、PaLM和视觉模型等，并详细解释了这些模型的技术原理、实际应用以及高性能计算（HPC）技术的使用，如并行计算和内存优化。
+同时，《实战AI大模型》还提供了实践案例，详细介绍了如何使用Colossal AI训练各种模型。无论是人工智能初学者还是经验丰富的实践者，都能从本书学到实用的知识和技能，从而在迅速发展的AI领域中找到适合自己的方向。&lt;/li&gt;
+&lt;li&gt;出版时间 2023-11-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787111738787&lt;/li&gt;
+&lt;li&gt;分类： 计算机-人工智能&lt;/li&gt;
+&lt;li&gt;出版社： 机械工业出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/50b32330813ab89edg018f29&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;高亮划线&lt;/h1&gt;
+&lt;h2 id=&#34;封面&#34;&gt;封面&lt;/h2&gt;
+&lt;h2 id=&#34;版权信息&#34;&gt;版权信息&lt;/h2&gt;
+&lt;h2 id=&#34;作者简介&#34;&gt;作者简介&lt;/h2&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;h2 id=&#34;第1章-深度学习中的ai大模型&#34;&gt;第1章 深度学习中的AI大模型&lt;/h2&gt;
+&lt;h3 id=&#34;11-ai大模型在人工智能领域的兴起&#34;&gt;1.1 AI大模型在人工智能领域的兴起&lt;/h3&gt;
+&lt;h3 id=&#34;12-深度学习框架入门&#34;&gt;1.2 深度学习框架入门&lt;/h3&gt;
+&lt;h2 id=&#34;第2章-分布式系统ai大模型的诞生之所&#34;&gt;第2章 分布式系统：AI大模型的诞生之所&lt;/h2&gt;
+&lt;h3 id=&#34;21-深度学习与分布式系统&#34;&gt;2.1 深度学习与分布式系统&lt;/h3&gt;
+&lt;h3 id=&#34;22-ai大模型训练方法&#34;&gt;2.2 AI大模型训练方法&lt;/h3&gt;
+&lt;h3 id=&#34;23-异构训练&#34;&gt;2.3 异构训练&lt;/h3&gt;
+&lt;h3 id=&#34;24-实战分布式训练&#34;&gt;2.4 实战分布式训练&lt;/h3&gt;
+&lt;h2 id=&#34;第3章-分布式训练上千台机器如何共同起舞&#34;&gt;第3章 分布式训练：上千台机器如何共同起舞&lt;/h2&gt;
+&lt;h3 id=&#34;31-并行策略基础原理&#34;&gt;3.1 并行策略基础原理&lt;/h3&gt;
+&lt;h3 id=&#34;32-高级并行策略基础原理&#34;&gt;3.2 高级并行策略基础原理&lt;/h3&gt;
+&lt;h3 id=&#34;33-实战分布式训练&#34;&gt;3.3 实战分布式训练&lt;/h3&gt;
+&lt;h2 id=&#34;第4章-ai大模型时代的奠基石-transformer模型&#34;&gt;第4章 AI大模型时代的奠基石 Transformer模型&lt;/h2&gt;
+&lt;h3 id=&#34;41-自然语言处理基础&#34;&gt;4.1 自然语言处理基础&lt;/h3&gt;
+&lt;h3 id=&#34;42-transformer详解&#34;&gt;4.2 Transformer详解&lt;/h3&gt;
+&lt;h3 id=&#34;43-transformer的变体与扩展&#34;&gt;4.3 Transformer的变体与扩展&lt;/h3&gt;
+&lt;h2 id=&#34;第5章-ai大幅度提升google搜索质量bert模型&#34;&gt;第5章 AI大幅度提升Google搜索质量：BERT模型&lt;/h2&gt;
+&lt;h3 id=&#34;51-bert模型详解&#34;&gt;5.1 BERT模型详解&lt;/h3&gt;
+&lt;h3 id=&#34;52-高效降低内存使用的albert模型&#34;&gt;5.2 高效降低内存使用的ALBERT模型&lt;/h3&gt;
+&lt;h3 id=&#34;53-bert模型实战训练&#34;&gt;5.3 BERT模型实战训练&lt;/h3&gt;
+&lt;h2 id=&#34;第6章-统一自然语言处理范式的t5模型&#34;&gt;第6章 统一自然语言处理范式的T5模型&lt;/h2&gt;
+&lt;h3 id=&#34;61-t5模型详解&#34;&gt;6.1 T5模型详解&lt;/h3&gt;
+&lt;h3 id=&#34;62-统一bert和gpt的bart模型&#34;&gt;6.2 统一BERT和GPT的BART模型&lt;/h3&gt;
+&lt;h3 id=&#34;63-统一语言学习范式的ul2框架&#34;&gt;6.3 统一语言学习范式的UL2框架&lt;/h3&gt;
+&lt;h3 id=&#34;64-t5模型预训练方法和关键技术&#34;&gt;6.4 T5模型预训练方法和关键技术&lt;/h3&gt;
+&lt;h2 id=&#34;第7章-作为通用人工智能起点的gpt系列模型&#34;&gt;第7章 作为通用人工智能起点的GPT系列模型&lt;/h2&gt;
+&lt;h3 id=&#34;71-gpt系列模型的起源&#34;&gt;7.1 GPT系列模型的起源&lt;/h3&gt;
+&lt;h3 id=&#34;72-gpt-2模型详解&#34;&gt;7.2 GPT-2模型详解&lt;/h3&gt;
+&lt;h3 id=&#34;73-gpt-3模型详解&#34;&gt;7.3 GPT-3模型详解&lt;/h3&gt;
+&lt;h3 id=&#34;74-gpt-3模型构建与训练实战&#34;&gt;7.4 GPT-3模型构建与训练实战&lt;/h3&gt;
+&lt;h2 id=&#34;第8章-兴起新一代人工智能浪潮chatgpt模型&#34;&gt;第8章 兴起新一代人工智能浪潮：ChatGPT模型&lt;/h2&gt;
+&lt;h3 id=&#34;81-能与互联网交互的webgpt&#34;&gt;8.1 能与互联网交互的WebGPT&lt;/h3&gt;
+&lt;h3 id=&#34;82-能与人类交互的instructgpt模型&#34;&gt;8.2 能与人类交互的InstructGPT模型&lt;/h3&gt;
+&lt;h3 id=&#34;83-chatgpt和gpt-4&#34;&gt;8.3 ChatGPT和GPT-4&lt;/h3&gt;
+&lt;h3 id=&#34;84-构建会话系统模型&#34;&gt;8.4 构建会话系统模型&lt;/h3&gt;
+&lt;h2 id=&#34;第9章-百花齐放的自然语言模型switch-transfomer和palm&#34;&gt;第9章 百花齐放的自然语言模型：Switch Transfomer和PaLM&lt;/h2&gt;
+&lt;h3 id=&#34;91-万亿参数稀疏大模型switch-transformer&#34;&gt;9.1 万亿参数稀疏大模型Switch Transformer&lt;/h3&gt;
+&lt;h3 id=&#34;92-palm模型优化语言模型性能&#34;&gt;9.2 PaLM模型：优化语言模型性能&lt;/h3&gt;
+&lt;h3 id=&#34;93-palm实战训练&#34;&gt;9.3 PaLM实战训练&lt;/h3&gt;
+&lt;h2 id=&#34;第10章-实现transformer向计算机视觉进军的vit模型&#34;&gt;第10章 实现Transformer向计算机视觉进军的ViT模型&lt;/h2&gt;
+&lt;h3 id=&#34;101-transformer在计算机视觉中的应用&#34;&gt;10.1 Transformer在计算机视觉中的应用&lt;/h3&gt;
+&lt;h3 id=&#34;102-视觉大模型的进一步发展transformer与卷积的融合&#34;&gt;10.2 视觉大模型的进一步发展：Transformer与卷积的融合&lt;/h3&gt;
+&lt;h3 id=&#34;103-vit模型构建与训练实战&#34;&gt;10.3 ViT模型构建与训练实战&lt;/h3&gt;
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+&lt;h2 id=&#34;文后&#34;&gt;文后&lt;/h2&gt;
+&lt;h1 id=&#34;读书笔记&#34;&gt;读书笔记&lt;/h1&gt;
+&lt;h2 id=&#34;作者简介-1&#34;&gt;作者简介&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 尤洋，清华大学硕士，加州伯克利大学博士，新加坡国立大学计算机系校长青年教授(Presidential Young Professor)。曾创造ImageNet、BEKT、AlphuFold、ViT训练速度的世界纪录，相关技术被广泛应用于谷歌、微软、英特尔、英伟达等科技公司。  ^6733360-7PWbheS5J
+- 💭 牛
+- ⏱ 2024-03-24 21:43:49&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/weread/%E5%AF%8C%E5%A3%AB%E5%BE%AE%E5%8D%95%E6%91%84%E5%BD%B1%E5%85%A5%E9%97%A8/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -21495,6 +21587,562 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;第15章-城市建筑与夜景摄影技巧&#34;&gt;第15章 城市建筑与夜景摄影技巧&lt;/h2&gt;
 &lt;h3 id=&#34;拍摄建筑的技巧&#34;&gt;拍摄建筑的技巧&lt;/h3&gt;
 &lt;h3 id=&#34;拍摄夜景的技巧&#34;&gt;拍摄夜景的技巧&lt;/h3&gt;
+&lt;h1 id=&#34;读书笔记&#34;&gt;读书笔记&lt;/h1&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E5%B9%B6%E8%A1%8C%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E5%B9%B6%E8%A1%8C%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;元数据&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 并行算法设计与性能优化&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://wfqqreader-1252317822.image.myqcloud.com/cover/73/622073/t7_622073.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 并行算法设计与性能优化|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 并行算法设计与性能优化&lt;/li&gt;
+&lt;li&gt;作者： 刘文志 著&lt;/li&gt;
+&lt;li&gt;简介： 并行计算领域著名专家撰写，百度深度学习研究院“杰出科学家”吴韧鼎力推荐。结合大量示例和伪代码，全面讲解通过并行算法设计实现单核/多核代码、GPU和处理器的性能优化与并行化秘技，并首次提出实现复杂度的全新度量标准。&lt;/li&gt;
+&lt;li&gt;出版时间 2015-05-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787111501022&lt;/li&gt;
+&lt;li&gt;分类： 计算机-编程设计&lt;/li&gt;
+&lt;li&gt;出版社： 机械工业出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/b4d329c0597df9b4d745d2a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;高亮划线&lt;/h1&gt;
+&lt;h2 id=&#34;封面&#34;&gt;封面&lt;/h2&gt;
+&lt;h2 id=&#34;版权信息&#34;&gt;版权信息&lt;/h2&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌  第5章简单介绍了指令级依赖和循环级依赖，并给出许多如何去除依赖的示例，最后以简单介绍处理器硬件支持的寄存器重命名结束。 ^622073-3-5140-5206&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 比较重要 - ⏱ 2024-03-24 13:33:10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第1章-绪论&#34;&gt;第1章 绪论&lt;/h2&gt;
+&lt;h3 id=&#34;11-并行和向量化的作用&#34;&gt;1.1 并行和向量化的作用&lt;/h3&gt;
+&lt;h3 id=&#34;12-为什么要并行或向量化&#34;&gt;1.2 为什么要并行或向量化&lt;/h3&gt;
+&lt;h3 id=&#34;13-为什么向量化或并行难&#34;&gt;1.3 为什么向量化或并行难&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 任务/数据划分：并行意味着多个控制流同时执行，而向量化意味着同时操作多个数据，并行需要在各个控制流之间划分任务和数据并去除依赖，向量化则需要处理向量内要处理的数据的依赖关系。数据/任务的划分方式不但决定了编程时的难易程度，而且划分带来的负载均衡和通信问题往往也会对程序的最终性能产生决定性的影响。
+⏱ 2024-03-24 13:38:38 ^622073-7-1370-1518&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 可扩展性的问题基本上没有解决办法，因为开发人员不能完全正确地预测在目前还不存在的硬件上发生的事情。通常的缓解方法是要求在开发项目时，留下足够的设计文档，使源码有足够的、准确的注释。这样在核心数增多可扩展性出现问题时，开发人员能够尽快定位问题，找到可能的解决办法。
+⏱ 2024-03-24 13:44:00 ^622073-7-3508-3639&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 只能自动向量化一些简单的代码，即使能自动向量化代码，通常也不是最优的；·只能自动并行化简单代码，编译器在自动并行化方面做得通常比自动向量化还要差；·不能找出并行冲突的地方；·不能协调资源访问。
+⏱ 2024-03-24 13:46:13 ^622073-7-6501-6690&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;14-并行的替代方法&#34;&gt;1.4 并行的替代方法&lt;/h3&gt;
+&lt;h3 id=&#34;15-进程线程与处理器&#34;&gt;1.5 进程、线程与处理器&lt;/h3&gt;
+&lt;h3 id=&#34;16-并行硬件平台&#34;&gt;1.6 并行硬件平台&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 GPU是为了渲染大量像素而设计的，并不关心某个像素的处理时间，而关注单位时间内能够处理的像素数量，因此带宽比延迟更重要。考虑到渲染的大量像素之间通常并不相关，因此GPU将大量的晶体管用于并行计算，故在同样数目的晶体管上，具有比CPU更高的计算能力。
+⏱ 2024-03-24 17:25:33 ^622073-10-4538-4662&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 由于GPU将更大比例的晶体管用于计算，相对来说用于缓存的比例就比CPU小，因此通常局部性满足CPU要求而不满足GPU要求的应用不适合GPU。由于GPU通过大量线程的并行来隐藏访存延迟，一些数据局部性非常差的应用反而能够在GPU上获得很好的收益。另外一些计算访存比低的应用在GPU上很难获得非常高的性能收益，但是这并不意味着在GPU实现会比在CPU上实现差。CPU+GPU异构计算需要在GPU和CPU之间传输数据，而这个带宽比内存的访问带宽还要小，因此那种需要在GPU和CPU之间进行大量、频繁数据交互的解决方案可能不适合在GPU上实现。
+⏱ 2024-03-24 17:27:35 ^622073-10-4872-5140&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 ARM支持的向量指令集称为NEON。NEON具有16个长度为128位的向量寄存器（这些寄存器以q开头，也可表示为32个64位寄存器，以d开头），可同时操作向量寄存器的16个字节，因此使用向量指令可获得更高的性能和带宽。
+⏱ 2024-03-24 17:28:17 ^622073-10-5473-5582&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;17-向量化和多核技术不是万能的&#34;&gt;1.7 向量化和多核技术不是万能的&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌  对于软件开发人员来说，一些问题很容易向量化和并行，但是也有一些不行；有些问题适合向量化和并行，但是程序却不容易编写。很难将算法划分为几百、几千个控制流，因为人脑很难维护这些控制流的状态空间。实际上自动向量化和自动并行化是解决这些问题的首选（软件开发人员编写串行代码，编译器或硬件给多个处理器有效地分发指令），但是现在的自动向量化和自动并行化工具仍旧非常弱。 ^622073-11-942-1120&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 编译器是未来 - ⏱ 2024-03-24 17:29:37&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;18-本章小结&#34;&gt;1.8 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第2章-现代处理器特性&#34;&gt;第2章 现代处理器特性&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 处理器的处理速度远快于内存读写速度，为了减少访问数据时的延迟，现代主流处理器主要采用了两种方式：·利用程序的局部性特点，采用了一系列小而快的缓存以保存正在访问和将要被访问的数据，以近似于内存的价格获得近似于缓存的速度；·利用并行性，在一个控制流由于高延迟的操作而阻塞时，执行另一个控制流。
+⏱ 2024-03-24 17:31:03 ^622073-13-790-996&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;21-指令级并行&#34;&gt;2.1 指令级并行&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 乱序执行会重排指令的执行顺序，这要求处理器的发射能力大于其执行能力。如果处理器的发射能力和指令的执行能力一致，那么ROB中就不会有指令等待重新排列执行顺序。由于处理器执行不同指令的速度并不相同，因此其发射能力并不一定比执行最快的指令的吞吐量大，比如主流X86 CPU一个周期能够处理4条整数加法指令，但是其指令发射能力也是一个周期4条。
+⏱ 2024-03-24 18:07:07 ^622073-14-2407-2575&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;22-向量化并行&#34;&gt;2.2 向量化并行&lt;/h3&gt;
+&lt;h3 id=&#34;23-线程级并行&#34;&gt;2.3 线程级并行&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 ·锁：在单核上，多个线程执行锁或者临界区时，实际上只有一个线程在执行临界区代码，而核心也只支持一个线程执行，因此不存在冲突。如果某个线程持有锁，那么只是其他线程不会被调度到CPU上执行，影响的只是持有和释放锁的时间，处理器时刻在运行着。但是在多核上运行时，锁或临界区会导致其余处理器空闲而只允许一个处理器执行持有锁的那个线程，这是一个串行的过程，会影响性能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;·负载均衡：在单核上不用考虑负载均衡，因为各个线程轮流执行，当一个线程执行完时，便会执行另一个线程，不存在线程等待问题。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⏱ 2024-03-24 18:26:06 ^622073-16-3486&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;24-缓存&#34;&gt;2.4 缓存&lt;/h3&gt;
+&lt;h3 id=&#34;25-虚拟存储器和tlb&#34;&gt;2.5 虚拟存储器和TLB&lt;/h3&gt;
+&lt;h3 id=&#34;26-numa技术&#34;&gt;2.6 NUMA技术&lt;/h3&gt;
+&lt;h3 id=&#34;27-本章小结&#34;&gt;2.7 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第3章-算法性能和程序性能的度量与分析&#34;&gt;第3章 算法性能和程序性能的度量与分析&lt;/h2&gt;
+&lt;h3 id=&#34;31-算法分析的性能度量标准&#34;&gt;3.1 算法分析的性能度量标准&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 ；从计算机架构的进展来说，目前数据读写越来越成为多核向量处理器性能的瓶颈（内存墙）。这意味着大部分时间花费在访问存储器上面的算法都不适合使用时间复杂度来估计性能，比如上面提到的矩阵加法
+⏱ 2024-03-24 20:33:30 ^622073-22-2729-2821&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;32-程序和指令的性能度量标准&#34;&gt;3.2 程序和指令的性能度量标准&lt;/h3&gt;
+&lt;h3 id=&#34;33-程序性能优化的度量标准&#34;&gt;3.3 程序性能优化的度量标准&lt;/h3&gt;
+&lt;h3 id=&#34;34-程序性能分析实用工具&#34;&gt;3.4 程序性能分析实用工具&lt;/h3&gt;
+&lt;h3 id=&#34;35-本章小结&#34;&gt;3.5 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第4章-串行代码性能优化&#34;&gt;第4章 串行代码性能优化&lt;/h2&gt;
+&lt;h3 id=&#34;41-系统级别&#34;&gt;4.1 系统级别&lt;/h3&gt;
+&lt;h3 id=&#34;42-应用级别&#34;&gt;4.2 应用级别&lt;/h3&gt;
+&lt;h3 id=&#34;43-算法级别&#34;&gt;4.3 算法级别&lt;/h3&gt;
+&lt;h3 id=&#34;44-函数级别&#34;&gt;4.4 函数级别&lt;/h3&gt;
+&lt;h3 id=&#34;45-循环级别&#34;&gt;4.5 循环级别&lt;/h3&gt;
+&lt;h3 id=&#34;46-语句级别&#34;&gt;4.6 语句级别&lt;/h3&gt;
+&lt;h3 id=&#34;47-指令级别&#34;&gt;4.7 指令级别&lt;/h3&gt;
+&lt;h3 id=&#34;48-本章小结&#34;&gt;4.8 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第5章-依赖分析&#34;&gt;第5章 依赖分析&lt;/h2&gt;
+&lt;h3 id=&#34;51-指令级依赖&#34;&gt;5.1 指令级依赖&lt;/h3&gt;
+&lt;h3 id=&#34;52-循环级依赖&#34;&gt;5.2 循环级依赖&lt;/h3&gt;
+&lt;h3 id=&#34;53-寄存器重命名&#34;&gt;5.3 寄存器重命名&lt;/h3&gt;
+&lt;h3 id=&#34;54-本章小结&#34;&gt;5.4 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第6章-并行编程模型及环境&#34;&gt;第6章 并行编程模型及环境&lt;/h2&gt;
+&lt;h3 id=&#34;61-并行编程模型&#34;&gt;6.1 并行编程模型&lt;/h3&gt;
+&lt;h3 id=&#34;62-常见并行编程环境&#34;&gt;6.2 常见并行编程环境&lt;/h3&gt;
+&lt;h3 id=&#34;63-本章小结&#34;&gt;6.3 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第7章-并行算法设计方法&#34;&gt;第7章 并行算法设计方法&lt;/h2&gt;
+&lt;h3 id=&#34;71-划分&#34;&gt;7.1 划分&lt;/h3&gt;
+&lt;h3 id=&#34;72-通信&#34;&gt;7.2 通信&lt;/h3&gt;
+&lt;h3 id=&#34;73-结果归并&#34;&gt;7.3 结果归并&lt;/h3&gt;
+&lt;h3 id=&#34;74-负载均衡&#34;&gt;7.4 负载均衡&lt;/h3&gt;
+&lt;h3 id=&#34;75-本章小结&#34;&gt;7.5 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第8章-并行算法缺陷&#34;&gt;第8章 并行算法缺陷&lt;/h2&gt;
+&lt;h3 id=&#34;81-启动结束时间&#34;&gt;8.1 启动结束时间&lt;/h3&gt;
+&lt;h3 id=&#34;82-负载均衡&#34;&gt;8.2 负载均衡&lt;/h3&gt;
+&lt;h3 id=&#34;83-竞写&#34;&gt;8.3 竞写&lt;/h3&gt;
+&lt;h3 id=&#34;84-锁&#34;&gt;8.4 锁&lt;/h3&gt;
+&lt;h3 id=&#34;85-饿死&#34;&gt;8.5 饿死&lt;/h3&gt;
+&lt;h3 id=&#34;86-伪共享&#34;&gt;8.6 伪共享&lt;/h3&gt;
+&lt;h3 id=&#34;87-原子操作&#34;&gt;8.7 原子操作&lt;/h3&gt;
+&lt;h3 id=&#34;88-存储器栅栏&#34;&gt;8.8 存储器栅栏&lt;/h3&gt;
+&lt;h3 id=&#34;89-缓存一致性&#34;&gt;8.9 缓存一致性&lt;/h3&gt;
+&lt;h3 id=&#34;810-顺序一致性&#34;&gt;8.10 顺序一致性&lt;/h3&gt;
+&lt;h3 id=&#34;811-volatile同步错误&#34;&gt;8.11 volatile同步错误&lt;/h3&gt;
+&lt;h3 id=&#34;812-本章小结&#34;&gt;8.12 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第9章-并行编程模式实践&#34;&gt;第9章 并行编程模式实践&lt;/h2&gt;
+&lt;h3 id=&#34;91-map模式&#34;&gt;9.1 map模式&lt;/h3&gt;
+&lt;h3 id=&#34;92-reduce模式&#34;&gt;9.2 reduce模式&lt;/h3&gt;
+&lt;h3 id=&#34;93-结合map和reduce模式&#34;&gt;9.3 结合map和reduce模式&lt;/h3&gt;
+&lt;h3 id=&#34;94-scan模式&#34;&gt;9.4 scan模式&lt;/h3&gt;
+&lt;h3 id=&#34;95-zipunzip模式&#34;&gt;9.5 zip/unzip模式&lt;/h3&gt;
+&lt;h3 id=&#34;96-流水线模式&#34;&gt;9.6 流水线模式&lt;/h3&gt;
+&lt;h3 id=&#34;97-本章小结&#34;&gt;9.7 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第10章-如何并行遗留代码&#34;&gt;第10章 如何并行遗留代码&lt;/h2&gt;
+&lt;h3 id=&#34;101-找出软件的计算热点&#34;&gt;10.1 找出软件的计算热点&lt;/h3&gt;
+&lt;h3 id=&#34;102-判断是否并行化热点&#34;&gt;10.2 判断是否并行化热点&lt;/h3&gt;
+&lt;h3 id=&#34;103-设计算法并实现&#34;&gt;10.3 设计算法并实现&lt;/h3&gt;
+&lt;h3 id=&#34;104-将实现后的代码嵌入原软件&#34;&gt;10.4 将实现后的代码嵌入原软件&lt;/h3&gt;
+&lt;h3 id=&#34;105-示例如何并行化word2vec&#34;&gt;10.5 示例：如何并行化word2vec&lt;/h3&gt;
+&lt;h3 id=&#34;106-本章小结&#34;&gt;10.6 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第11章-超级并行&#34;&gt;第11章 超级并行&lt;/h2&gt;
+&lt;h3 id=&#34;111-超级并行方式编程&#34;&gt;11.1 超级并行方式编程&lt;/h3&gt;
+&lt;h3 id=&#34;112-矩阵乘法&#34;&gt;11.2 矩阵乘法&lt;/h3&gt;
+&lt;h3 id=&#34;113-本章小结&#34;&gt;11.3 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第12章-并行算法设计的一般准则&#34;&gt;第12章 并行算法设计的一般准则&lt;/h2&gt;
+&lt;h3 id=&#34;121-并行算法设计14准则&#34;&gt;12.1 并行算法设计14准则&lt;/h3&gt;
+&lt;h3 id=&#34;122-本章小结&#34;&gt;12.2 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;附录a-整型数据与浮点数据&#34;&gt;附录A 整型数据与浮点数据&lt;/h2&gt;
+&lt;h1 id=&#34;读书笔记&#34;&gt;读书笔记&lt;/h1&gt;
+&lt;h2 id=&#34;前言-1&#34;&gt;前言&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 代码性能优化和并行技术被许多顶级开发人员看成“不传之秘”或“只可意会，不可言传”的技术。本书将会把这些“不传之秘”一一展示在开发者面前，并且解释为什么。由于代码性能的具体细节非常难以解释清楚，笔者尽量在高层解释，避免陷入细节里。在写作此书时，我并没有查到世界上有类似的写给普通开发者的书籍，本书可算是第一本  ^6733360-7PVEHFsQJ
+- 💭 略牛
+- ⏱ 2024-03-24 13:26:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-1&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 第5章简单介绍了指令级依赖和循环级依赖，并给出许多如何去除依赖的示例，最后以简单介绍处理器硬件支持的寄存器重命名结束。  ^6733360-7PVF9fitA
+- 💭 比较重要
+- ⏱ 2024-03-24 13:33:15&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;12-为什么要并行或向量化-1&#34;&gt;1.2 为什么要并行或向量化&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-2&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 现实世界中人类对计算能力的需求永无止境。  ^6733360-7PVFmQQqk
+- 💭 算力需求无止境
+- ⏱ 2024-03-24 13:36:36&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-3&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 现代的GCC能够向量化和并行一些非常简单的代码，但是对于复杂一些的程序基本上无能为力。实际上，即使是简单的代码，自动向量化或并行的性能也很难做到完美（通常性能比手工编写的要差很多）。  ^6733360-7PVFpyWDH
+- 💭 猜测编译器和芯片自动向量化能力不高
+- ⏱ 2024-03-24 13:37:16&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;16-并行硬件平台-1&#34;&gt;1.6 并行硬件平台&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-4&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 为了减小使用SIMD指令的复杂度，Intel寄希望于编译器，实际上Intel的编译器向量化能力非常不错，但是通常手工编写的向量代码性能会更好。在MIC上编程时，软件开发人员的工作由显式使用向量指令转化为改写C代码和增加编译制导语句以让编译器产生更好的向量指令。  ^6733360-7PVUh7RU0
+- 💭 软件的空间
+- ⏱ 2024-03-24 17:24:14&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;17-向量化和多核技术不是万能的-1&#34;&gt;1.7 向量化和多核技术不是万能的&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-5&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 对于软件开发人员来说，一些问题很容易向量化和并行，但是也有一些不行；有些问题适合向量化和并行，但是程序却不容易编写。很难将算法划分为几百、几千个控制流，因为人脑很难维护这些控制流的状态空间。实际上自动向量化和自动并行化是解决这些问题的首选（软件开发人员编写串行代码，编译器或硬件给多个处理器有效地分发指令），但是现在的自动向量化和自动并行化工具仍旧非常弱。  ^6733360-7PVUDEGVd
+- 💭 编译器是未来
+- ⏱ 2024-03-24 17:29:47&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;21-指令级并行-1&#34;&gt;2.1 指令级并行&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-6&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 乱序执行需要在执行指令前知道指令之间的依赖关系，如果两条指令之间有依赖，那么这两条指令就不能乱序执行。现代处理器对乱序执行有不同程度的支持，比如大多数的Intel X86桌面处理器和服务器处理器上都具有重排缓冲区（ReOrder Buffer，ROB），并且具有远多于逻辑寄存器数量的物理寄存器以支持寄存器重命名。  ^6733360-7PVX0vRtn
+- 💭 有依赖就不能乱序执行
+- ⏱ 2024-03-24 18:05:57&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-7&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 许多处理器支持一个周期发射2条或多条指令，但是多条指令要满足一条条的条件，比如有些处理器要求没有依赖关系、有些处理器只允许访存指令和计算指令同时发射，而Intel Xeon PHI处理器两个周期可以为一个线程发射两条指令，但是这两条指令要没有背靠背的依赖。  ^6733360-7PVXHfoNZ
+- 💭 估计NPU也有要求
+- ⏱ 2024-03-24 18:16:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;22-向量化并行-1&#34;&gt;2.2 向量化并行&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-8&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 使用SIMD指令要求开发人员非常熟悉指令的类型、吞吐量和延迟。因为不同的处理器对SIMD指令的支持程度不同，这不但表现在指令类型很不相同，还表现在同一指令在不同的架构处理器上的延迟和吞吐量可能也不相同，或者某些指令存在某些未公开的性能缺陷。  ^6733360-7PVXV79r5
+- 💭 不是每条指令都是高性能的
+- ⏱ 2024-03-24 18:19:53&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-9&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 SIMT指定了逻辑向量宽度，而隐藏了物理向量宽度，软件开发人员依据逻辑向量宽度来编写代码，这提高了代码性能的可移植性。比如AMD GCN，其逻辑向量宽度为256字节，而物理向量宽度为64字节，如果AMD为了性能将其物理向量宽度改为128字节（不改变其他条件），那么为AMD GCN架构编写的代码不用修改，在物理向量长度增加后的架构上其性能也会得到相应的提升。而在支持AVX指令集的硬件上运行使用SSE指令集编写的程序却不能得到相应的性能提升。  ^6733360-7PVY39OY9
+- 💭 抽象更好？
+- ⏱ 2024-03-24 18:21:52&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;24-缓存-1&#34;&gt;2.4 缓存&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-10&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 软件开发人员应当意识到：对于性能限制在内存/缓存上的程序来说，缓存能够显著增加程序的实际性能，因此要编写缓存友好的代码，同时在多核的条件下要注意避免伪共享问题导致的性能损失。  ^6733360-7PVYpLgFo
+- 💭 编写缓存友好程序
+- ⏱ 2024-03-24 18:27:26&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-11&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 由于处理器具有多级缓存，那么如何保证缓存中的数据和内存中的数据是一致的，这由处理器的缓存一致性协议来保证。  ^6733360-7PVYtpN9w
+- 💭 Cache一致性概念
+- ⏱ 2024-03-24 18:28:20&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-12&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 典型的硬件指令预取会在缓存因失效而从内存载入一个缓存线的同时，请求紧随其后的另一个缓存线  ^6733360-7PW5ybgVf
+- 💭 cache line预取
+- ⏱ 2024-03-24 20:16:23&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-13&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 缓存以缓存线为基本单位读写，每条缓存线可保存L（现代机器上L一般为64）个字节。数据在缓存间上下移动时以缓存线为单位，即不可能出现只加载半条缓存线的情况。对于软件开发人员来说，缓存的总量和缓存线的大小相当重要，另外缓存的层次结构、缓存映射策略也需要了解。  ^6733360-7PW5DICaQ
+- 💭 cache line非常重要
+- ⏱ 2024-03-24 20:17:45&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;25-虚拟存储器和tlb-1&#34;&gt;2.5 虚拟存储器和TLB&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-14&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 虚拟存储器使用虚拟地址寻址，而物理存储器使用物理地址寻址，因此硬件执行访存操作时需要将虚拟地址翻译成物理地址，操作系统和存储器管理单元（Memory Management Unit，MMU）硬件配合来完成这一工作。由于从虚拟地址到物理地址的转换非常耗时，处理器和操作系统主要使用了两个优化来减少转换次数。  ^6733360-7PW60O4Xh
+- 💭 虚拟地址到物理地址转换非常耗时
+- ⏱ 2024-03-24 20:23:26&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-15&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 ·TLB，TLB用于缓存已经翻译的虚拟地址，通过利用访问页的局部性来减少翻译次数。由于虚拟地址和物理地址之间的转换非常耗时且TLB不命中的代价很大，因此TLB的映射策略通常设计为全相联。实际上，在一些硬件上，缓存层次中也使用多层TLB来减少地址翻译代价。一些需要对多维数据进行访问的程序在大数据量的情况下，通常存在TLB不命中的情况。  ^6733360-7PW6lItnS
+- 💭 tlb的具体含义
+- ⏱ 2024-03-24 20:28:35&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;31-算法分析的性能度量标准-1&#34;&gt;3.1 算法分析的性能度量标准&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-16&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 对于具体的代码而言，依据在某种处理器上运行的性能瓶颈不同而采用实现复杂度的不同方面来度量。对于一个计算限制的算法，应当使用计算复杂度和指令复杂度；而对于一个存储器限制的算法，应当使用访存复杂度来分析。  ^6733360-7PW6Xzxkk
+- 💭 不同的bound情况使用不同的指标衡量
+- ⏱ 2024-03-24 20:37:54&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-17&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 由于各种现代向量多核处理器具有不同的特点，比如X86CPU是为延迟优化的，在考虑计算复杂度时权重应该以延迟为准；而GPU是为吞吐量优化的，考虑计算复杂度时权重应当以吞吐量倒数为准。但这并不绝对，一些优化良好的X86 CPU代码有很好的指令级并行能力，也应当从吞吐量倒数考虑。  ^6733360-7PW72gXr9
+- 💭 借鉴这一思路，比较好的计算复杂度应该以吞吐量为准
+- ⏱ 2024-03-24 20:39:04&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-18&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 O（2n×α+β×n+γ×n）  ^6733360-7PW7e5Q8m
+- 💭 这个没有考虑到加载和计算之间匹配的问题
+- ⏱ 2024-03-24 20:41:59&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-19&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 从某种程度上说，指令复杂度的分析是人的大脑对程序指令在具体处理器上执行的分析，因此非常复杂和困难，也更容易出错，笔者通常使用一些编译器工具协助分析。  ^6733360-7PW7QUAmx
+- 💭 指令复杂度类似于vf的复杂度，更复杂更容易出错
+- ⏱ 2024-03-24 20:51:32&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-20&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 通常使用执行代码关键路径所需要的时钟周期数来表示指令复杂度  ^6733360-7PW7YTZYn
+- 💭 找出最长的关键路径非常关键
+- ⏱ 2024-03-24 20:53:30&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-21&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 但对于顶级代码优化人员来说，指令复杂度是优化的终极法宝。代码优化的过程，就是指令复杂度降低的过程。  ^6733360-7PW83RxH8
+- 💭 当前的优化是非常重要技能
+- ⏱ 2024-03-24 20:54:44&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-22&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 指令复杂度分析通常关注耗时最长的循环，通常分析此循环内部的指令数量，不同指令是否能够同时发射、执行等，通过这些信息来重构代码，以便生成的指令能够更好地在处理器上执行。  ^6733360-7PW85KzE3
+- 💭 指令复杂度分析的有效手段和方法
+- ⏱ 2024-03-24 20:55:11&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;32-程序和指令的性能度量标准-1&#34;&gt;3.2 程序和指令的性能度量标准&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-23&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 通常程序中最耗时的部分就是小循环，因此如何表征对循环的优化效果就非常重要  ^6733360-7PW8AsZdn
+- 💭 为什么小循环最耗时？因为和大循环相比，启动时间相同，计算时间比较短，没法隐藏启动时间？
+- ⏱ 2024-03-24 21:02:45&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-24&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 假设测试发现上面的代码段在某个具体配置下耗时T个时钟周期，那么其CPI为：T/num  ^6733360-7PW8DJVpO
+- 💭 这是衡量vf的非常重要的性能指标
+- ⏱ 2024-03-24 21:03:34&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-25&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 循环的CPI通常由其依赖链（指整个循环中相互依赖的运算或访存，也称为关键路径）决定，减少循环CPI的过程就是减小或去掉循环内依赖链的过程。  ^6733360-7PW8PcEF7
+- 💭 非常重要的想法，也是vf的优化手段
+- ⏱ 2024-03-24 21:06:23&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-26&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 循环的CPI通常由其依赖链（指整个循环中相互依赖的运算或访存，也称为关键路径）决定，减少循环CPI的过程就是减小或去掉循环内依赖链的过程。  ^6733360-7PW8NsoU3
+- 💭 非常重要的思想
+- ⏱ 2024-03-24 21:05:57&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-27&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 相对指令的整体延迟来说，还需要关注指令发射时间，因为在现在的乱序执行的硬件上，发射时间也是指令性能能够达到的一个上限。  ^6733360-7PWa4l9bP
+- 💭 发射对应的应该是commit
+- ⏱ 2024-03-24 21:25:23&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-28&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 由于对吞吐量优化的技术不要求尽快得到数据，而要求在单位时间做更多的运算，因此硬件往往采用更多频率更低的计算单元，采用“人海战术”取胜。由于这种小而简单的单元工作频率和电压都较低，因此耗能少，能够在给定的能耗下集成更多的核心，进而在不增加功耗的前提下提高整体的吞吐量。目前无论是X86 CPU还是GPU都采用了这种思路来提高性能。  ^6733360-7PW9JCcF3
+- 💭 使用基于寄存器的访问，最大的好处和收益应该是延迟更小，吞吐量更大
+- ⏱ 2024-03-24 21:20:17&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-29&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 吞吐量倒数表示在某个架构上，某种指令的吞吐量的倒数。吞吐量倒数表示平均下来某种指令最少需要的时钟周期数，是一种下限，而延迟则是一个上限  ^6733360-7PW9NeLaJ
+- 💭 是一个非常不错的视角，吞吐量倒数是上限，延迟是下限
+- ⏱ 2024-03-24 21:21:10&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E5%B9%B6%E8%A1%8C%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E5%B9%B6%E8%A1%8C%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;元数据&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 并行编程方法与优化实践&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/91/YueWen_788123/t7_YueWen_788123.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 并行编程方法与优化实践|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 并行编程方法与优化实践&lt;/li&gt;
+&lt;li&gt;作者： 刘文志&lt;/li&gt;
+&lt;li&gt;简介： 本书关注C程序设计语言的向量化和并行化扩展，以及算法到硬件的映射。本书不但包括如何使用SSE/AVX向量化扩展、如何使用OpenMP编译制导语句优化运行在X86多核处理器上的代码的性能，还包括如何使用NEON向量化扩展、OpenMP编译制导语句优化运行在移动处理器（ARM）上的代码性能优化，以及使用CUDA和OpenCL优化运行在图形处理器（GPU）上的代码性能优化及并行。不但有实际的各个扩展解析或语言的介绍说明，还有丰富的算法优化实例。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;出版时间 2015-06-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787111501947&lt;/li&gt;
+&lt;li&gt;分类： 计算机-编程设计&lt;/li&gt;
+&lt;li&gt;出版社： 机械工业出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/9a4324105c069b9a4849836&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;高亮划线&lt;/h1&gt;
+&lt;h2 id=&#34;封面&#34;&gt;封面&lt;/h2&gt;
+&lt;h2 id=&#34;版权信息&#34;&gt;版权信息&lt;/h2&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 10年前，并行计算还是大实验室里教授们的研究对象，而今天，多核处理器和GPU的普及已经使得普通人就可以研究它们。对于软件开发人员来说，如果不掌握并行计算和代码性能优化技术，在不久的将来就会被淘汰。
+⏱ 2024-03-24 13:24:26 ^788123-3-2569-2667&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第1章-x86-sseavx指令集&#34;&gt;第1章 X86 SSE/AVX指令集&lt;/h2&gt;
+&lt;h3 id=&#34;11-sse内置函数&#34;&gt;1.1 SSE内置函数&lt;/h3&gt;
+&lt;h4 id=&#34;111-算术运算&#34;&gt;1.1.1 算术运算&lt;/h4&gt;
+&lt;h4 id=&#34;112-逻辑运算&#34;&gt;1.1.2 逻辑运算&lt;/h4&gt;
+&lt;h4 id=&#34;113-比较&#34;&gt;1.1.3 比较&lt;/h4&gt;
+&lt;h4 id=&#34;114-加载和存储&#34;&gt;1.1.4 加载和存储&lt;/h4&gt;
+&lt;h3 id=&#34;12-avx内置函数&#34;&gt;1.2 AVX内置函数&lt;/h3&gt;
+&lt;h4 id=&#34;121-算术运算&#34;&gt;1.2.1 算术运算&lt;/h4&gt;
+&lt;h4 id=&#34;122-逻辑运算&#34;&gt;1.2.2 逻辑运算&lt;/h4&gt;
+&lt;h4 id=&#34;123-比较&#34;&gt;1.2.3 比较&lt;/h4&gt;
+&lt;h4 id=&#34;124-加载和存储&#34;&gt;1.2.4 加载和存储&lt;/h4&gt;
+&lt;h3 id=&#34;13-优化实例及分析&#34;&gt;1.3 优化实例及分析&lt;/h3&gt;
+&lt;h4 id=&#34;131-如何测得cpu的浮点峰值性能&#34;&gt;1.3.1 如何测得CPU的浮点峰值性能&lt;/h4&gt;
+&lt;h4 id=&#34;132-积分计算圆周率π&#34;&gt;1.3.2 积分计算圆周率π&lt;/h4&gt;
+&lt;h4 id=&#34;133-稀疏矩阵向量乘法&#34;&gt;1.3.3 稀疏矩阵向量乘法&lt;/h4&gt;
+&lt;h4 id=&#34;134-二维单通道图像离散卷积&#34;&gt;1.3.4 二维单通道图像离散卷积&lt;/h4&gt;
+&lt;h3 id=&#34;14-本章小结&#34;&gt;1.4 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第2章-arm-neon-simd指令优化&#34;&gt;第2章 ARM NEON SIMD指令优化&lt;/h2&gt;
+&lt;h3 id=&#34;21-neon指令集综述&#34;&gt;2.1 NEON指令集综述&lt;/h3&gt;
+&lt;h3 id=&#34;22-arm-a15处理器性能&#34;&gt;2.2 ARM A15处理器性能&lt;/h3&gt;
+&lt;h3 id=&#34;23-neon支持的操作&#34;&gt;2.3 NEON支持的操作&lt;/h3&gt;
+&lt;h4 id=&#34;231-基本算术运算&#34;&gt;2.3.1 基本算术运算&lt;/h4&gt;
+&lt;h4 id=&#34;232-基本比较运算&#34;&gt;2.3.2 基本比较运算&lt;/h4&gt;
+&lt;h4 id=&#34;233-基本数据类型转换及舍入运算&#34;&gt;2.3.3 基本数据类型转换及舍入运算&lt;/h4&gt;
+&lt;h4 id=&#34;234-基本位运算&#34;&gt;2.3.4 基本位运算&lt;/h4&gt;
+&lt;h4 id=&#34;235-基本逻辑运算&#34;&gt;2.3.5 基本逻辑运算&lt;/h4&gt;
+&lt;h4 id=&#34;236-基本设置加载存储操作&#34;&gt;2.3.6 基本设置加载存储操作&lt;/h4&gt;
+&lt;h4 id=&#34;237-特殊操作&#34;&gt;2.3.7 特殊操作&lt;/h4&gt;
+&lt;h3 id=&#34;24-应用实例&#34;&gt;2.4 应用实例&lt;/h3&gt;
+&lt;h4 id=&#34;241-彩色图像转灰度图像&#34;&gt;2.4.1 彩色图像转灰度图像&lt;/h4&gt;
+&lt;h4 id=&#34;242-矩阵转置&#34;&gt;2.4.2 矩阵转置&lt;/h4&gt;
+&lt;h4 id=&#34;243-矩阵乘&#34;&gt;2.4.3 矩阵乘&lt;/h4&gt;
+&lt;h3 id=&#34;25-本章小结&#34;&gt;2.5 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第3章-openmp程序设计&#34;&gt;第3章 OpenMP程序设计&lt;/h2&gt;
+&lt;h3 id=&#34;31-openmp编程模型&#34;&gt;3.1 OpenMP编程模型&lt;/h3&gt;
+&lt;h4 id=&#34;311-openmp执行模型&#34;&gt;3.1.1 OpenMP执行模型&lt;/h4&gt;
+&lt;h4 id=&#34;312-openmp存储器模型&#34;&gt;3.1.2 OpenMP存储器模型&lt;/h4&gt;
+&lt;h3 id=&#34;32-环境变量&#34;&gt;3.2 环境变量&lt;/h3&gt;
+&lt;h3 id=&#34;33-函数&#34;&gt;3.3 函数&lt;/h3&gt;
+&lt;h4 id=&#34;331-普通函数&#34;&gt;3.3.1 普通函数&lt;/h4&gt;
+&lt;h4 id=&#34;332-锁函数&#34;&gt;3.3.2 锁函数&lt;/h4&gt;
+&lt;h3 id=&#34;34-openmp编译制导语句&#34;&gt;3.4 OpenMP编译制导语句&lt;/h3&gt;
+&lt;h4 id=&#34;341-常用的openmp构造&#34;&gt;3.4.1 常用的OpenMP构造&lt;/h4&gt;
+&lt;h4 id=&#34;342-常用的openmp子句&#34;&gt;3.4.2 常用的OpenMP子句&lt;/h4&gt;
+&lt;h3 id=&#34;35-openmp异构并行计算&#34;&gt;3.5 OpenMP异构并行计算&lt;/h3&gt;
+&lt;h3 id=&#34;36-openmp程序优化&#34;&gt;3.6 OpenMP程序优化&lt;/h3&gt;
+&lt;h4 id=&#34;361-openmp程序优化准则&#34;&gt;3.6.1 OpenMP程序优化准则&lt;/h4&gt;
+&lt;h4 id=&#34;362-openmp并行优化实例&#34;&gt;3.6.2 OpenMP并行优化实例&lt;/h4&gt;
+&lt;h3 id=&#34;37-本章小结&#34;&gt;3.7 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第4章-基于gpu的异构并行计算环境cuda与opencl&#34;&gt;第4章 基于GPU的异构并行计算环境：CUDA与OpenCL&lt;/h2&gt;
+&lt;h3 id=&#34;41-gpu计算概述&#34;&gt;4.1 GPU计算概述&lt;/h3&gt;
+&lt;h4 id=&#34;411-gpu计算历史&#34;&gt;4.1.1 GPU计算历史&lt;/h4&gt;
+&lt;h4 id=&#34;412-cuda概述&#34;&gt;4.1.2 CUDA概述&lt;/h4&gt;
+&lt;h4 id=&#34;413-opencl概述&#34;&gt;4.1.3 OpenCL概述&lt;/h4&gt;
+&lt;h3 id=&#34;42-异构并行计算模型&#34;&gt;4.2 异构并行计算模型&lt;/h3&gt;
+&lt;h4 id=&#34;421-平台模型&#34;&gt;4.2.1 平台模型&lt;/h4&gt;
+&lt;h4 id=&#34;422-执行模型&#34;&gt;4.2.2 执行模型&lt;/h4&gt;
+&lt;h4 id=&#34;423-存储器模型&#34;&gt;4.2.3 存储器模型&lt;/h4&gt;
+&lt;h4 id=&#34;424-编程模型&#34;&gt;4.2.4 编程模型&lt;/h4&gt;
+&lt;h3 id=&#34;43-c语言接口&#34;&gt;4.3 C语言接口&lt;/h3&gt;
+&lt;h4 id=&#34;431-opencl-c语言&#34;&gt;4.3.1 OpenCL C语言&lt;/h4&gt;
+&lt;h4 id=&#34;432-cuda-c语言&#34;&gt;4.3.2 CUDA C语言&lt;/h4&gt;
+&lt;h3 id=&#34;44-基于gpu的异构并行计算性能优化&#34;&gt;4.4 基于GPU的异构并行计算性能优化&lt;/h3&gt;
+&lt;h4 id=&#34;441-总体优化准则&#34;&gt;4.4.1 总体优化准则&lt;/h4&gt;
+&lt;h4 id=&#34;442-全局存储器优化&#34;&gt;4.4.2 全局存储器优化&lt;/h4&gt;
+&lt;h4 id=&#34;443-合并访问&#34;&gt;4.4.3 合并访问&lt;/h4&gt;
+&lt;h4 id=&#34;444-局部存储器&#34;&gt;4.4.4 局部存储器&lt;/h4&gt;
+&lt;h4 id=&#34;445-存储体冲突&#34;&gt;4.4.5 存储体冲突&lt;/h4&gt;
+&lt;h4 id=&#34;446-常量存储器优化&#34;&gt;4.4.6 常量存储器优化&lt;/h4&gt;
+&lt;h4 id=&#34;447-cuda纹理存储器优化&#34;&gt;4.4.7 CUDA纹理存储器优化&lt;/h4&gt;
+&lt;h4 id=&#34;448-寄存器及私有存储器优化&#34;&gt;4.4.8 寄存器及私有存储器优化&lt;/h4&gt;
+&lt;h4 id=&#34;449-工作组数目及大小&#34;&gt;4.4.9 工作组数目及大小&lt;/h4&gt;
+&lt;h4 id=&#34;4410-占用率&#34;&gt;4.4.10 占用率&lt;/h4&gt;
+&lt;h4 id=&#34;4411-指令优化&#34;&gt;4.4.11 指令优化&lt;/h4&gt;
+&lt;h4 id=&#34;4412-分支优化&#34;&gt;4.4.12 分支优化&lt;/h4&gt;
+&lt;h4 id=&#34;4413-数据传输优化&#34;&gt;4.4.13 数据传输优化&lt;/h4&gt;
+&lt;h3 id=&#34;45-gpu与cpu精度差别&#34;&gt;4.5 GPU与CPU精度差别&lt;/h3&gt;
+&lt;h3 id=&#34;46-矩阵转置&#34;&gt;4.6 矩阵转置&lt;/h3&gt;
+&lt;h4 id=&#34;461-初次实现&#34;&gt;4.6.1 初次实现&lt;/h4&gt;
+&lt;h4 id=&#34;462-满足合并访问的实现&#34;&gt;4.6.2 满足合并访问的实现&lt;/h4&gt;
+&lt;h4 id=&#34;463-没有存储体冲突的实现&#34;&gt;4.6.3 没有存储体冲突的实现&lt;/h4&gt;
+&lt;h3 id=&#34;47-矩阵乘法&#34;&gt;4.7 矩阵乘法&lt;/h3&gt;
+&lt;h4 id=&#34;471-初次实现&#34;&gt;4.7.1 初次实现&lt;/h4&gt;
+&lt;h4 id=&#34;472-矩阵分块实现&#34;&gt;4.7.2 矩阵分块实现&lt;/h4&gt;
+&lt;h3 id=&#34;48-本章小结&#34;&gt;4.8 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第5章-openacc&#34;&gt;第5章 OpenACC&lt;/h2&gt;
+&lt;h3 id=&#34;51-openacc编程模型&#34;&gt;5.1 OpenACC编程模型&lt;/h3&gt;
+&lt;h4 id=&#34;511-执行模型&#34;&gt;5.1.1 执行模型&lt;/h4&gt;
+&lt;h4 id=&#34;512-存储器模型&#34;&gt;5.1.2 存储器模型&lt;/h4&gt;
+&lt;h3 id=&#34;52-编译制导语句&#34;&gt;5.2 编译制导语句&lt;/h3&gt;
+&lt;h4 id=&#34;521-kernels构造&#34;&gt;5.2.1 kernels构造&lt;/h4&gt;
+&lt;h4 id=&#34;522-parallel构造&#34;&gt;5.2.2 parallel构造&lt;/h4&gt;
+&lt;h4 id=&#34;523-线程配置相关子句&#34;&gt;5.2.3 线程配置相关子句&lt;/h4&gt;
+&lt;h4 id=&#34;524-data构造&#34;&gt;5.2.4 data构造&lt;/h4&gt;
+&lt;h4 id=&#34;525-loop构造&#34;&gt;5.2.5 loop构造&lt;/h4&gt;
+&lt;h4 id=&#34;526-atomic构造&#34;&gt;5.2.6 atomic构造&lt;/h4&gt;
+&lt;h4 id=&#34;527-dtype子句&#34;&gt;5.2.7 dtype子句&lt;/h4&gt;
+&lt;h4 id=&#34;528-reduction子句&#34;&gt;5.2.8 reduction子句&lt;/h4&gt;
+&lt;h4 id=&#34;529-变量可见性子句&#34;&gt;5.2.9 变量可见性子句&lt;/h4&gt;
+&lt;h4 id=&#34;5210-if子句&#34;&gt;5.2.10 if子句&lt;/h4&gt;
+&lt;h4 id=&#34;5211-async和wait&#34;&gt;5.2.11 async和wait&lt;/h4&gt;
+&lt;h3 id=&#34;53-openacc和cuda协作&#34;&gt;5.3 OpenACC和CUDA协作&lt;/h3&gt;
+&lt;h4 id=&#34;531-cuda使用openacc生产的数据&#34;&gt;5.3.1 CUDA使用OpenACC生产的数据&lt;/h4&gt;
+&lt;h4 id=&#34;532-openacc使用cuda生产的数据&#34;&gt;5.3.2 OpenACC使用CUDA生产的数据&lt;/h4&gt;
+&lt;h3 id=&#34;54-两小时性能提升10倍&#34;&gt;5.4 两小时性能提升10倍&lt;/h3&gt;
+&lt;h3 id=&#34;55-本章小结&#34;&gt;5.5 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第6章-多核向量处理器架构及opencl程序映射&#34;&gt;第6章 多核向量处理器架构及OpenCL程序映射&lt;/h2&gt;
+&lt;h3 id=&#34;61-多核向量处理器架构&#34;&gt;6.1 多核向量处理器架构&lt;/h3&gt;
+&lt;h4 id=&#34;611-intel-haswell-cpu架构&#34;&gt;6.1.1 Intel Haswell CPU架构&lt;/h4&gt;
+&lt;h4 id=&#34;612-arm-a15多核向量处理器架构&#34;&gt;6.1.2 ARM A15多核向量处理器架构&lt;/h4&gt;
+&lt;h4 id=&#34;613-amd-gcn-gpu架构&#34;&gt;6.1.3 AMD GCN GPU架构&lt;/h4&gt;
+&lt;h4 id=&#34;614-nvidia-kepler和maxwell-gpu架构&#34;&gt;6.1.4 NVIDIA Kepler和Maxwell GPU架构&lt;/h4&gt;
+&lt;h3 id=&#34;62-opencl程序在多核向量处理器上的映射&#34;&gt;6.2 OpenCL程序在多核向量处理器上的映射&lt;/h3&gt;
+&lt;h4 id=&#34;621-opencl程序在多核向量cpu上的映射&#34;&gt;6.2.1 OpenCL程序在多核向量CPU上的映射&lt;/h4&gt;
+&lt;h4 id=&#34;622-opencl程序在nvidia-gpu上的映射&#34;&gt;6.2.2 OpenCL程序在NVIDIA GPU上的映射&lt;/h4&gt;
+&lt;h4 id=&#34;623-opencl程序在amd-gcn上的映射&#34;&gt;6.2.3 OpenCL程序在AMD GCN上的映射&lt;/h4&gt;
+&lt;h3 id=&#34;63-本章小结&#34;&gt;6.3 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第7章-利用多种技术优化图像处理中的算法性能&#34;&gt;第7章 利用多种技术优化图像处理中的算法性能&lt;/h2&gt;
+&lt;h3 id=&#34;71-图像滤波&#34;&gt;7.1 图像滤波&lt;/h3&gt;
+&lt;h4 id=&#34;711-均值滤波&#34;&gt;7.1.1 均值滤波&lt;/h4&gt;
+&lt;h4 id=&#34;712-中值滤波&#34;&gt;7.1.2 中值滤波&lt;/h4&gt;
+&lt;h3 id=&#34;72-图像直方图&#34;&gt;7.2 图像直方图&lt;/h3&gt;
+&lt;h4 id=&#34;721-openmp实现&#34;&gt;7.2.1 OpenMP实现&lt;/h4&gt;
+&lt;h4 id=&#34;722-cuda实现&#34;&gt;7.2.2 CUDA实现&lt;/h4&gt;
+&lt;h3 id=&#34;73-曼德勃罗集&#34;&gt;7.3 曼德勃罗集&lt;/h3&gt;
+&lt;h4 id=&#34;731-串行算法&#34;&gt;7.3.1 串行算法&lt;/h4&gt;
+&lt;h4 id=&#34;732-不适合进行向量化&#34;&gt;7.3.2 不适合进行向量化&lt;/h4&gt;
+&lt;h4 id=&#34;733-openmp实现&#34;&gt;7.3.3 OpenMP实现&lt;/h4&gt;
+&lt;h4 id=&#34;734-cuda实现&#34;&gt;7.3.4 CUDA实现&lt;/h4&gt;
+&lt;h3 id=&#34;74-本章小结&#34;&gt;7.4 本章小结&lt;/h3&gt;
+&lt;h2 id=&#34;第8章-利用多种技术优化线性代数中的算法性能&#34;&gt;第8章 利用多种技术优化线性代数中的算法性能&lt;/h2&gt;
+&lt;h3 id=&#34;81-两向量距离&#34;&gt;8.1 两向量距离&lt;/h3&gt;
+&lt;h4 id=&#34;811-串行代码&#34;&gt;8.1.1 串行代码&lt;/h4&gt;
+&lt;h4 id=&#34;812-循环展开代码&#34;&gt;8.1.2 循环展开代码&lt;/h4&gt;
+&lt;h4 id=&#34;813-avx指令加速&#34;&gt;8.1.3 AVX指令加速&lt;/h4&gt;
+&lt;h4 id=&#34;814-neon实现&#34;&gt;8.1.4 NEON实现&lt;/h4&gt;
+&lt;h4 id=&#34;815-cuda实现&#34;&gt;8.1.5 CUDA实现&lt;/h4&gt;
+&lt;h3 id=&#34;82-稠密矩阵与向量乘法&#34;&gt;8.2 稠密矩阵与向量乘法&lt;/h3&gt;
+&lt;h4 id=&#34;821-串行算法&#34;&gt;8.2.1 串行算法&lt;/h4&gt;
+&lt;h4 id=&#34;822-avx指令加速&#34;&gt;8.2.2 AVX指令加速&lt;/h4&gt;
+&lt;h4 id=&#34;823-neon实现&#34;&gt;8.2.3 NEON实现&lt;/h4&gt;
+&lt;h4 id=&#34;824-cuda实现&#34;&gt;8.2.4 CUDA实现&lt;/h4&gt;
+&lt;h4 id=&#34;825-openmp实现&#34;&gt;8.2.5 OpenMP实现&lt;/h4&gt;
+&lt;h3 id=&#34;83-本章小结&#34;&gt;8.3 本章小结&lt;/h3&gt;
 &lt;h1 id=&#34;读书笔记&#34;&gt;读书笔记&lt;/h1&gt;
 &lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
 </description>
@@ -26210,16 +26858,53 @@ $$
 &lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
 &lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://qiankunli.github.io/public/upload/machine/gpu_arch.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108196&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 nv的硬件架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;CPU和GPU的主要区别在于它们的设计目标。CPU的设计初衷是执行顺序指令，一直以来，为提高顺序执行性能，CPU设计中引入了许多功能。其重点在于减少指令执行时延，使CPU能够尽可能快地执行一系列指令。这些功能包括指令流水线、乱序执行、预测执行和多级缓存等（此处仅列举部分）。而GPU则专为大规模并行和高吞吐量而设计，但这种设计导致了中等至高程度的指令时延。这一设计方向受其在视频游戏、图形处理、数值计算以及现如今的深度学习中的广泛应用所影响，所有这些应用都需要以极高的速度执行大量线性代数和数值计算，因此人们倾注了大量精力以提升这些设备的吞吐量 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3080641&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;#处理器架构 cpu更重视缩短指令的延迟，gpu允许指令有比较长的时延，但是一定要大的吞吐量&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;GPU的编程方式是SIMD(Single Instruction Multiple Data)意味着所有Core的计算操作完全是在相同的时间内进行的，但是输入的数据有所不同。如果这个工作给到CPU来做，需要N的时间才可以做完，但是给到GPU只需要一个时钟周期就可以完成。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108187&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jeson #处理器架构 gpu的编程方式也是SIMD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GPU 的线程切换不同于 CPU，在 CPU 上切换线程需要保存现场，将所有寄存器都存到主存中，GPU 的线程切换只是切换了寄存器组（一个 SM 中有高达 64k 个寄存器），延迟超级低，几乎没有成本。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108312&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 寄存器组的好处是延迟很低，可以快速存储和切换数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;张量核心与普通的 CUDA 核心其实有很大的区别，CUDA 核心在每个时钟周期都可以准确的执行一次整数或者浮点数的运算，时钟的速度和核心的数量都会影响整体性能。张量核心通过牺牲一定的精度可以在每个时钟计算执行一次 4 x 4 的矩阵运算。PS：就像ALU 只需要加法器就行了（乘法指令转换为多个加法指令），但为了提高性能，直接做了一个乘法器和加法器并存。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108325&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 这里的张量core类似于AIC的功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;一个 SM 里面有多个 subcore，每个 subcore 有一个 32 thread 的 warp scheduler 和 dispatcher, 在一个 warp 中的所有线程都会同时执行相同的指令，但是输入的数据不同，这种机制也被称为 SIMD（单指令多数据）或 SIMT（单指令多线程）模型。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3047818&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;#处理器架构 什么是simt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;但是因为 SRAM 比较小, 所以基本原则就是: 每次往 SRAM 移动数据的, 都可能多的用这个数据. 避免来来回回的移动数据. 这种 idea 直接促成了最近大火的 FlashAttention. FlashAttention 发现很多操作计算量不大, 但是 latency 很高, 那肯定是不符合上述的 “每次往 SRAM 移动数据的”. 怎么解决呢?Attention 基本上是由 matrix multiplication 和 softmax 构成的. 我们已经知道了 matrix multiplication 是可以分块做的, 所以就剩下 softmax 能不能分块做? softmax 其实也是可以很简单的被分块做的. 所以就有了 FlashAttention. &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3109399&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#性能优化 flash attention的想法源头&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -26239,7 +26924,7 @@ $$
 &lt;li&gt;计算机图形领域的圣杯是实时的全局光照，实现更好的光线追踪可以帮助我们在屏幕上渲染更加真实的图像，然而全局光照需要 GPU 进行大量的计算，而实时的全局光照更是对性能有着非常高的要求。传统的 GPU 架构并不擅长光线追踪等任务，所以 Nvidia 在 Turing 架构中首次引入了光线追踪核心（Ray-Tracing Core、RT Core）。 &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/#fn:18https:/draveness.me/heterogeneous-computing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;#jetson 新增光追模块&lt;/li&gt;
+&lt;li&gt;#jetson 新增光追模块，图形领域的圣杯&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -26268,6 +26953,12 @@ $$
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;#处理器架构 区分dcache和icahce的目的是为了提升缓存的命中率？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;除了上述这些组件之外，SM 中还包含特殊函数的计算单元（Special Functions Unit、SPU）以及用于存储和缓存数据的寄存器文件（Register File）、共享内存（Shared Memory）、一级缓存和通用缓存。 &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/https:/draveness.me/heterogeneous-computing#WCREFX-3108115&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 这些单元npu也有&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;最初的 GPU 仅仅是为了更快地创建和渲染图片，它们广泛存在于个人主机上承担着图像渲染的任务，但是随着机器学习等技术的发展，GPU 中出现了更多种类的专用核心来支撑特定的场景，我们在这里介绍两种 GPU 中存在的专用核心：张量核心（Tensor Core）和光线追踪核心（Ray-Tracing Core）： &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/https:/draveness.me/heterogeneous-computing#WCREFX-3080505&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -26414,6 +27105,26 @@ $$
 &lt;li&gt;每个AVG Orin和Xorin NX设备有一个PVA处理器，每个处理器中有2个vector处理器，因此一个设备可以最多独立处理2个PVA任务&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-24-h89d8hm/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-24-h89d8hm/</guid>
+        <description>&lt;h2 id=&#34;理解cuda中的threadblockgrid和warp---知乎&#34;&gt;理解CUDA中的thread,block,grid和warp - 知乎&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;当一个kernel被执行时，grid中的线程块被分配到SM上，一个线程块的thread只能在一个SM上调度，SM一般可以调度多个线程块，大量的thread可能被分到不同的SM上。每个thread拥有它自己的程序计数器和状态寄存器，并且用该线程自己的数据执行指令，这就是所谓的Single Instruction Multiple Thread(SIMT)。 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/123170285#WCREFX-3109444&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson SIMT的基础概念&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

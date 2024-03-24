@@ -736,16 +736,53 @@ $$
 &lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
 &lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://qiankunli.github.io/public/upload/machine/gpu_arch.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108196&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 nv的硬件架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;CPU和GPU的主要区别在于它们的设计目标。CPU的设计初衷是执行顺序指令，一直以来，为提高顺序执行性能，CPU设计中引入了许多功能。其重点在于减少指令执行时延，使CPU能够尽可能快地执行一系列指令。这些功能包括指令流水线、乱序执行、预测执行和多级缓存等（此处仅列举部分）。而GPU则专为大规模并行和高吞吐量而设计，但这种设计导致了中等至高程度的指令时延。这一设计方向受其在视频游戏、图形处理、数值计算以及现如今的深度学习中的广泛应用所影响，所有这些应用都需要以极高的速度执行大量线性代数和数值计算，因此人们倾注了大量精力以提升这些设备的吞吐量 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3080641&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;#处理器架构 cpu更重视缩短指令的延迟，gpu允许指令有比较长的时延，但是一定要大的吞吐量&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;GPU的编程方式是SIMD(Single Instruction Multiple Data)意味着所有Core的计算操作完全是在相同的时间内进行的，但是输入的数据有所不同。如果这个工作给到CPU来做，需要N的时间才可以做完，但是给到GPU只需要一个时钟周期就可以完成。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108187&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jeson #处理器架构 gpu的编程方式也是SIMD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GPU 的线程切换不同于 CPU，在 CPU 上切换线程需要保存现场，将所有寄存器都存到主存中，GPU 的线程切换只是切换了寄存器组（一个 SM 中有高达 64k 个寄存器），延迟超级低，几乎没有成本。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108312&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 寄存器组的好处是延迟很低，可以快速存储和切换数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;张量核心与普通的 CUDA 核心其实有很大的区别，CUDA 核心在每个时钟周期都可以准确的执行一次整数或者浮点数的运算，时钟的速度和核心的数量都会影响整体性能。张量核心通过牺牲一定的精度可以在每个时钟计算执行一次 4 x 4 的矩阵运算。PS：就像ALU 只需要加法器就行了（乘法指令转换为多个加法指令），但为了提高性能，直接做了一个乘法器和加法器并存。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108325&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 这里的张量core类似于AIC的功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;一个 SM 里面有多个 subcore，每个 subcore 有一个 32 thread 的 warp scheduler 和 dispatcher, 在一个 warp 中的所有线程都会同时执行相同的指令，但是输入的数据不同，这种机制也被称为 SIMD（单指令多数据）或 SIMT（单指令多线程）模型。 &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3047818&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;#处理器架构 什么是simt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;但是因为 SRAM 比较小, 所以基本原则就是: 每次往 SRAM 移动数据的, 都可能多的用这个数据. 避免来来回回的移动数据. 这种 idea 直接促成了最近大火的 FlashAttention. FlashAttention 发现很多操作计算量不大, 但是 latency 很高, 那肯定是不符合上述的 “每次往 SRAM 移动数据的”. 怎么解决呢?Attention 基本上是由 matrix multiplication 和 softmax 构成的. 我们已经知道了 matrix multiplication 是可以分块做的, 所以就剩下 softmax 能不能分块做? softmax 其实也是可以很简单的被分块做的. 所以就有了 FlashAttention. &lt;a class=&#34;link&#34; href=&#34;https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3109399&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#性能优化 flash attention的想法源头&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -765,7 +802,7 @@ $$
 &lt;li&gt;计算机图形领域的圣杯是实时的全局光照，实现更好的光线追踪可以帮助我们在屏幕上渲染更加真实的图像，然而全局光照需要 GPU 进行大量的计算，而实时的全局光照更是对性能有着非常高的要求。传统的 GPU 架构并不擅长光线追踪等任务，所以 Nvidia 在 Turing 架构中首次引入了光线追踪核心（Ray-Tracing Core、RT Core）。 &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/#fn:18https:/draveness.me/heterogeneous-computing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;#jetson 新增光追模块&lt;/li&gt;
+&lt;li&gt;#jetson 新增光追模块，图形领域的圣杯&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -794,6 +831,12 @@ $$
     &gt;Link&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;#处理器架构 区分dcache和icahce的目的是为了提升缓存的命中率？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;除了上述这些组件之外，SM 中还包含特殊函数的计算单元（Special Functions Unit、SPU）以及用于存储和缓存数据的寄存器文件（Register File）、共享内存（Shared Memory）、一级缓存和通用缓存。 &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/https:/draveness.me/heterogeneous-computing#WCREFX-3108115&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 这些单元npu也有&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;最初的 GPU 仅仅是为了更快地创建和渲染图片，它们广泛存在于个人主机上承担着图像渲染的任务，但是随着机器学习等技术的发展，GPU 中出现了更多种类的专用核心来支撑特定的场景，我们在这里介绍两种 GPU 中存在的专用核心：张量核心（Tensor Core）和光线追踪核心（Ray-Tracing Core）： &lt;a class=&#34;link&#34; href=&#34;https://draveness.me/heterogeneous-computing/https:/draveness.me/heterogeneous-computing#WCREFX-3080505&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -940,6 +983,26 @@ $$
 &lt;li&gt;每个AVG Orin和Xorin NX设备有一个PVA处理器，每个处理器中有2个vector处理器，因此一个设备可以最多独立处理2个PVA任务&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-24-h89d8hm/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-24-h89d8hm/</guid>
+        <description>&lt;h2 id=&#34;理解cuda中的threadblockgrid和warp---知乎&#34;&gt;理解CUDA中的thread,block,grid和warp - 知乎&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;当一个kernel被执行时，grid中的线程块被分配到SM上，一个线程块的thread只能在一个SM上调度，SM一般可以调度多个线程块，大量的thread可能被分到不同的SM上。每个thread拥有它自己的程序计数器和状态寄存器，并且用该线程自己的数据执行指令，这就是所谓的Single Instruction Multiple Thread(SIMT)。 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/123170285#WCREFX-3109444&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson SIMT的基础概念&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
