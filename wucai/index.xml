@@ -1009,6 +1009,183 @@ $$
 &lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
 </description>
         </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h89735h/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h89735h/</guid>
+        <description>&lt;h2 id=&#34;nvidiadeep-learning-accelerator-swnvidia-dla-sw-the-recipes-and-tools-for-running-deep-learning-workloads-on-nvidia&#34;&gt;NVIDIA/Deep-Learning-Accelerator-SW:NVIDIA DLA-SW, the recipes and tools for running deep learning workloads on NVIDIA&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Deep Learning Accelerator &lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/Deep-Learning-Accelerator-SW#WCREFX-3130686&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson DLA的架构和能效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h8973c7/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h8973c7/</guid>
+        <description>&lt;h2 id=&#34;daily-note-2024-03-25&#34;&gt;Daily Note 2024-03-25&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;亮点一是Winograd卷积法，针对于尺寸较小卷积核，可以节省一半的乘法器数量与功耗；二是采用压缩传输算法，将传输数据带宽降低一半。 &lt;a class=&#34;link&#34; href=&#34;https://marker.dotalk.cn/#/?noteidx=H8973C7&amp;amp;wucairefx=WCREFX-3130665&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h8973ee/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h8973ee/</guid>
+        <description>&lt;h2 id=&#34;英伟达全面分析五明星芯片xavier史上最复杂最庞大的soc---知乎&#34;&gt;英伟达全面分析（五），明星芯片Xavier，史上最复杂最庞大的SoC - 知乎&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;jetson比较全面的介绍&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;DLA与PVA是两个专用ASIC，DLA用于推理 ，PVA用于加速传统视觉算法。 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/485798446#WCREFX-3130781&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 处理器架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可编程视觉加速器PVA &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/485798446#WCREFX-3130817&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;PVA的材料很少&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h8973em/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h8973em/</guid>
+        <description>&lt;h2 id=&#34;一篇文章回答你关于nvidia-dla的所有疑问-腾讯云开发者社区-腾讯云&#34;&gt;一篇文章回答你关于NVIDIA DLA的所有疑问-腾讯云开发者社区-腾讯云&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一篇文章回答你关于NVIDIA DLA的所有疑问 &lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/2205567#WCREFX-3130746&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson DLA的全文介绍&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h897863/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h897863/</guid>
+        <description>&lt;h2 id=&#34;nvidia-jetson-explained--ai-jobsnet&#34;&gt;Nvidia Jetson explained | ai-jobs.net&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Jetson Nano: This entry-level module is designed for low-power, low-cost AI applications. It features a quad-core ARM Cortex-A57 CPU coupled with a 128-core Nvidia Maxwell GPU.&lt;/li&gt;
+&lt;li&gt;Jetson Xavier NX: This module strikes a balance between performance and power efficiency. It is equipped with a six-core Nvidia Carmel ARM CPU and a 384-core Nvidia Volta GPU.&lt;/li&gt;
+&lt;li&gt;Jetson AGX Xavier: This high-end module is designed for demanding AI workloads. It boasts an eight-core Nvidia Carmel ARM CPU and a 512-core Nvidia Volta GPU. &lt;a class=&#34;link&#34; href=&#34;https://ai-jobs.net/insights/nvidia-jetson-explained/#WCREFX-3128468&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 不同级别的产品&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Use Cases and Examples &lt;a class=&#34;link&#34; href=&#34;https://ai-jobs.net/insights/nvidia-jetson-explained/#WCREFX-3128482&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson 应用场景包括自动驾驶、工业机器人、人形机器人、智慧城市（交通管理）、医疗等行业&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h8978ck/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h8978ck/</guid>
+        <description>&lt;h2 id=&#34;请问英伟达gpu的tensor-core和cuda-core是什么区别&#34;&gt;请问英伟达GPU的tensor core和cuda core是什么区别？&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tesla1.0 （2006年, 代表GeForce8800) -&amp;gt; Tesla2.0 (GT200) -&amp;gt; Fermi(算力可以支撑深度学习啦) -&amp;gt; Kepler(core增长) -&amp;gt; Maxwell（core继续增长） -&amp;gt; Pascal（算力提升）-&amp;gt; Volta(第一代tensor core) -&amp;gt; Turning(第二代 tensor core) -&amp;gt; Ampere(第三代tensor core)。 &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/451127498#WCREFX-3128261&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#jetson gpu架构演进的趋势&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如下右图GPU典型架构，每一行一个control和cache对应有多个Core，代表着同样指令在同一时刻可由多个Core执行，这样并行的设计使GPU可以并行执行几千个线程，而其内存访问的延时被计算掩盖。 &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/451127498#WCREFX-3128370&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 gpu和cpu的架构演进历史&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h89d72b/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h89d72b/</guid>
+        <description>&lt;h2 id=&#34;yuv格式简介yuv444yuv422yuv420_yuv422-yuv420-csdn博客&#34;&gt;YUV格式简介、YUV444、YUV422、YUV420_yuv422 yuv420-CSDN博客&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;YUV格式简介、YUV444、YUV422、YUV420 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/yu540135101/article/details/107121769#WCREFX-3122263&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;aipp的个格式信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h89d78c/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/03/wucai-2024-03-25-h89d78c/</guid>
+        <description>&lt;h2 id=&#34;为什么视频编码器要输入yuv420格式---知乎&#34;&gt;为什么视频编码器要输入YUV420格式？ - 知乎&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;为什么视频编码器要输入YUV420格式 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/452676366#WCREFX-3122317&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;aipp的这个看起来更详细&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
         
     </channel>
 </rss>
