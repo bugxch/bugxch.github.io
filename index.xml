@@ -26069,6 +26069,14 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;作者简介&#34;&gt;作者简介&lt;/h2&gt;
 &lt;h2 id=&#34;序&#34;&gt;序&lt;/h2&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在计算机体系结构领域，无论对于在校生还是从业者，加州大学伯克利分校的David Patterson博士和斯坦福大学的John Hennessy博士的两部经典著作Computer Organization and Design: The Hardware/Software Interface和Computer Architecture: A Quantitative Approach都是必读的。
+⏱ 2024-04-01 19:25:36 ^3300065662-5-679-933&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 南加州大学教授Michel Dubois博士是IEEE会士，笔者认为他的著作Parallel Computer Organization and Design看来是一部非常优秀的讲解CPU设计的书籍，内容详实逻辑清晰。然而，笔者在校时Michel Dubois博士开设的课程并没有得到学生的追捧，究其原因有其个人风格的关系，但是归根结底还是偏重于高屋建瓴，这有可能会让学生对于CPU设计的“道”和“术”无法顺畅地相互印证
+⏱ 2024-04-01 19:26:26 ^3300065662-5-1307-1545&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;第1章-cpu架构与流水线技术概述&#34;&gt;第1章 CPU架构与流水线技术概述&lt;/h2&gt;
 &lt;h3 id=&#34;11-复杂指令集与精简指令集概述&#34;&gt;1.1 复杂指令集与精简指令集概述&lt;/h3&gt;
 &lt;h3 id=&#34;12-arm指令集概述&#34;&gt;1.2 ARM指令集概述&lt;/h3&gt;
@@ -27435,6 +27443,20 @@ $$
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-01-h89ahdh/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-01-h89ahdh/</guid>
+        <description>&lt;h2 id=&#34;resize---harmonyhus-blog&#34;&gt;Resize - HarmonyHu’s Blog&lt;/h2&gt;
+&lt;p&gt;#星标 #算子&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#算子 双线性插值中align corners和half pixel清晰的解释&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
 &lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
 </description>
         </item>
