@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='元数据 [!abstract] 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版） 书名： 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版） 作者：'>
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3-risc-v%E7%89%88%E5%8E%9F%E4%B9%A6%E7%AC%AC2%E7%89%88/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content=''>
+<meta property='og:description' content='元数据 [!abstract] 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版） 书名： 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版） 作者：'>
+<meta property='og:url' content='https://blog.bugxch.top/weread/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3-risc-v%E7%89%88%E5%8E%9F%E4%B9%A6%E7%AC%AC2%E7%89%88/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版） 书名： 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版） 作者：">
+    <link rel="shortcut icon" href="%5cfavicon.ico" />
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue8037ab3c5772f21a937200919ce7a89_163234_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bugxch'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/hoho2006'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:635426349@qq.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1704065269185" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4407" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M874.666667 181.333333H149.333333c-40.533333 0-74.666667 34.133333-74.666666 74.666667v512c0 40.533333 34.133333 74.666667 74.666666 74.666667h725.333334c40.533333 0 74.666667-34.133333 74.666666-74.666667V256c0-40.533333-34.133333-74.666667-74.666666-74.666667z m-725.333334 64h725.333334c6.4 0 10.666667 4.266667 10.666666 10.666667v25.6L512 516.266667l-373.333333-234.666667V256c0-6.4 4.266667-10.666667 10.666666-10.666667z m725.333334 533.333334H149.333333c-6.4 0-10.666667-4.266667-10.666666-10.666667V356.266667l356.266666 224c4.266667 4.266667 10.666667 4.266667 17.066667 4.266666s12.8-2.133333 17.066667-4.266666l356.266666-224V768c0 6.4-4.266667 10.666667-10.666666 10.666667z" fill="currentColor" p-id="4408"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://blog.bugxch.top/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#封面">封面</a></li>
+    <li><a href="#版权信息">版权信息</a></li>
+    <li><a href="#译者简介">译者简介</a></li>
+    <li><a href="#赞誉">赞誉</a></li>
+    <li><a href="#译者序">译者序</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#作者简介">作者简介</a></li>
+    <li><a href="#第1章-计算机抽象及相关技术">第1章 计算机抽象及相关技术</a>
+      <ol>
+        <li><a href="#12-计算机体系结构中的7个伟大思想">1.2 计算机体系结构中的7个伟大思想</a></li>
+        <li><a href="#13-程序表象之下">1.3 程序表象之下</a></li>
+        <li><a href="#14-箱盖后的硬件">1.4 箱盖后的硬件</a></li>
+        <li><a href="#15-处理器和存储制造技术">1.5 处理器和存储制造技术</a></li>
+        <li><a href="#16-性能">1.6 性能</a></li>
+        <li><a href="#17-功耗墙">1.7 功耗墙</a></li>
+        <li><a href="#18-沧海巨变从单处理器向多处理器转变">1.8 沧海巨变：从单处理器向多处理器转变</a></li>
+        <li><a href="#19-实例评测intel-core-i7">1.9 实例：评测Intel Core i7</a></li>
+        <li><a href="#110-性能提升使用python语言编写矩阵乘法程序">1.10 性能提升：使用Python语言编写矩阵乘法程序</a></li>
+        <li><a href="#111-谬误与陷阱">1.11 谬误与陷阱</a></li>
+        <li><a href="#112-本章小结">1.12 本章小结</a></li>
+        <li><a href="#113-历史视角和拓展阅读">1.13 历史视角和拓展阅读</a></li>
+        <li><a href="#114-自学">1.14 自学</a></li>
+        <li><a href="#115-练习">1.15 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第2章-指令计算机的语言">第2章 指令：计算机的语言</a>
+      <ol>
+        <li><a href="#21-引言">2.1 引言</a></li>
+        <li><a href="#22-计算机硬件的操作">2.2 计算机硬件的操作</a></li>
+        <li><a href="#23-计算机硬件的操作数">2.3 计算机硬件的操作数</a></li>
+        <li><a href="#24-有符号数与无符号数">2.4 有符号数与无符号数</a></li>
+        <li><a href="#25-计算机中的指令表示">2.5 计算机中的指令表示</a></li>
+        <li><a href="#26-逻辑操作">2.6 逻辑操作</a></li>
+        <li><a href="#27-用于决策的指令">2.7 用于决策的指令</a></li>
+        <li><a href="#28-计算机硬件对过程的支持">2.8 计算机硬件对过程的支持</a></li>
+        <li><a href="#29-人机交互">2.9 人机交互</a></li>
+        <li><a href="#210-对大立即数的risc-v编址和寻址">2.10 对大立即数的RISC-V编址和寻址</a></li>
+        <li><a href="#211-并行性与指令同步">2.11 并行性与指令：同步</a></li>
+        <li><a href="#212-翻译并启动程序">2.12 翻译并启动程序</a></li>
+        <li><a href="#213-以c排序程序为例的汇总整理">2.13 以C排序程序为例的汇总整理</a></li>
+        <li><a href="#214-数组与指针">2.14 数组与指针</a></li>
+        <li><a href="#215-高级专题编译c语言和解释java语言">2.15 高级专题：编译C语言和解释Java语言</a></li>
+        <li><a href="#216-实例mips指令">2.16 实例：MIPS指令</a></li>
+        <li><a href="#217-实例armv732位指令">2.17 实例：ARMv7（32位）指令</a></li>
+        <li><a href="#218-实例armv864位指令">2.18 实例：ARMv8（64位）指令</a></li>
+        <li><a href="#219-实例x86指令">2.19 实例：x86指令</a></li>
+        <li><a href="#220-实例risc-v指令系统的剩余部分">2.20 实例：RISC-V指令系统的剩余部分</a></li>
+        <li><a href="#221-性能提升使用c语言编写矩阵乘法程序">2.21 性能提升：使用C语言编写矩阵乘法程序</a></li>
+        <li><a href="#222-谬误与陷阱">2.22 谬误与陷阱</a></li>
+        <li><a href="#223-本章小结">2.23 本章小结</a></li>
+        <li><a href="#224-历史视角和扩展阅读">2.24 历史视角和扩展阅读</a></li>
+        <li><a href="#225-自学">2.25 自学</a></li>
+        <li><a href="#226-练习">2.26 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第3章-计算机的算术运算">第3章 计算机的算术运算</a>
+      <ol>
+        <li><a href="#31-引言">3.1 引言</a></li>
+        <li><a href="#32-加法和减法">3.2 加法和减法</a></li>
+        <li><a href="#33-乘法">3.3 乘法</a></li>
+        <li><a href="#34-除法">3.4 除法</a></li>
+        <li><a href="#35-浮点运算">3.5 浮点运算</a></li>
+        <li><a href="#36-并行性与计算机算术子字并行">3.6 并行性与计算机算术：子字并行</a></li>
+        <li><a href="#37-实例x86中的simd扩展和高级向量扩展">3.7 实例：x86中的SIMD扩展和高级向量扩展</a></li>
+        <li><a href="#38-性能提升子字并行和矩阵乘法">3.8 性能提升：子字并行和矩阵乘法</a></li>
+        <li><a href="#39-谬误与陷阱">3.9 谬误与陷阱</a></li>
+        <li><a href="#310-本章小结">3.10 本章小结</a></li>
+        <li><a href="#311-历史视角和拓展阅读">3.11 历史视角和拓展阅读</a></li>
+        <li><a href="#312-自学">3.12 自学</a></li>
+        <li><a href="#313-练习">3.13 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第4章-处理器">第4章 处理器</a>
+      <ol>
+        <li><a href="#41-引言">4.1 引言</a></li>
+        <li><a href="#42-逻辑设计的一般方法">4.2 逻辑设计的一般方法</a></li>
+        <li><a href="#43-建立数据通路">4.3 建立数据通路</a></li>
+        <li><a href="#44-一个简单的实现方案">4.4 一个简单的实现方案</a></li>
+        <li><a href="#45-多周期实现">4.5 多周期实现</a></li>
+        <li><a href="#46-流水线概述">4.6 流水线概述</a></li>
+        <li><a href="#47-流水线数据通路和控制">4.7 流水线数据通路和控制</a></li>
+        <li><a href="#48-数据冒险前递与停顿">4.8 数据冒险：前递与停顿</a></li>
+        <li><a href="#49-控制冒险">4.9 控制冒险</a></li>
+        <li><a href="#410-例外">4.10 例外</a></li>
+        <li><a href="#411-指令间的并行性">4.11 指令间的并行性</a></li>
+        <li><a href="#412-实例arm-cortex-a53和intel-core-i7-6700">4.12 实例：ARM Cortex-A53和Intel Core i7 6700</a></li>
+        <li><a href="#413-性能提升指令级并行和矩阵乘法">4.13 性能提升：指令级并行和矩阵乘法</a></li>
+        <li><a href="#414-高级专题数字设计概述使用硬件设计语言进行流水线建模以及更多流水线示例">4.14 高级专题：数字设计概述——使用硬件设计语言进行流水线建模以及更多流水线示例</a></li>
+        <li><a href="#415-谬误与陷阱">4.15 谬误与陷阱</a></li>
+        <li><a href="#416-本章小结">4.16 本章小结</a></li>
+        <li><a href="#417-历史视角和拓展阅读">4.17 历史视角和拓展阅读</a></li>
+        <li><a href="#418-自学">4.18 自学</a></li>
+        <li><a href="#419-练习">4.19 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第5章-大而快层次化存储">第5章 大而快：层次化存储</a>
+      <ol>
+        <li><a href="#51-引言">5.1 引言</a></li>
+        <li><a href="#52-存储技术">5.2 存储技术</a></li>
+        <li><a href="#53-cache基础">5.3 cache基础</a></li>
+        <li><a href="#54-cache的性能评估和改进">5.4 cache的性能评估和改进</a></li>
+        <li><a href="#55-可靠的存储器层次">5.5 可靠的存储器层次</a></li>
+        <li><a href="#56-虚拟机">5.6 虚拟机</a></li>
+        <li><a href="#57-虚拟存储">5.7 虚拟存储</a></li>
+        <li><a href="#58-存储层次结构的一般框架">5.8 存储层次结构的一般框架</a></li>
+        <li><a href="#59-使用有限状态自动机控制简单的cache">5.9 使用有限状态自动机控制简单的cache</a></li>
+        <li><a href="#510-并行和存储层次结构cache一致性">5.10 并行和存储层次结构：cache一致性</a></li>
+        <li><a href="#511-并行与存储层次结构廉价磁盘冗余阵列">5.11 并行与存储层次结构：廉价磁盘冗余阵列</a></li>
+        <li><a href="#512-高级专题实现cache控制器">5.12 高级专题：实现cache控制器</a></li>
+        <li><a href="#513-实例arm-cortex-a53和intel-core-i7的存储层次结构">5.13 实例：ARM Cortex-A53和Intel Core i7的存储层次结构</a></li>
+        <li><a href="#514-实例risc-v系统的其他部分和特殊指令">5.14 实例：RISC-V系统的其他部分和特殊指令</a></li>
+        <li><a href="#515-性能提升cache分块和矩阵乘法">5.15 性能提升：cache分块和矩阵乘法</a></li>
+        <li><a href="#516-谬误与陷阱">5.16 谬误与陷阱</a></li>
+        <li><a href="#517-本章小结">5.17 本章小结</a></li>
+        <li><a href="#518-历史视角和拓展阅读">5.18 历史视角和拓展阅读</a></li>
+        <li><a href="#519-自学">5.19 自学</a></li>
+        <li><a href="#520-练习">5.20 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第6章-并行处理器从客户端到云">第6章 并行处理器：从客户端到云</a>
+      <ol>
+        <li><a href="#61-引言">6.1 引言</a></li>
+        <li><a href="#62-创建并行处理程序的难点">6.2 创建并行处理程序的难点</a></li>
+        <li><a href="#63-sisdmimdsimdspmd和向量机">6.3 SISD、MIMD、SIMD、SPMD和向量机</a></li>
+        <li><a href="#64-硬件多线程">6.4 硬件多线程</a></li>
+        <li><a href="#65-多核及其他共享内存多处理器">6.5 多核及其他共享内存多处理器</a></li>
+        <li><a href="#66-gpu简介">6.6 GPU简介</a></li>
+        <li><a href="#67-领域定制体系结构">6.7 领域定制体系结构</a></li>
+        <li><a href="#68-集群仓储级计算机和其他消息传递多处理器">6.8 集群、仓储级计算机和其他消息传递多处理器</a></li>
+        <li><a href="#69-多处理器网络拓扑简介">6.9 多处理器网络拓扑简介</a></li>
+        <li><a href="#610-与外界通信集群网络">6.10 与外界通信：集群网络</a></li>
+        <li><a href="#611-多处理器测试基准和性能模型">6.11 多处理器测试基准和性能模型</a></li>
+        <li><a href="#612-实例评测google-tpuv3超级计算机和nvidia-volta-gpu集群">6.12 实例：评测Google TPUv3超级计算机和NVIDIA Volta GPU集群</a></li>
+        <li><a href="#613-性能提升多处理器和矩阵乘法">6.13 性能提升：多处理器和矩阵乘法</a></li>
+        <li><a href="#614-谬误与陷阱">6.14 谬误与陷阱</a></li>
+        <li><a href="#615-本章小结">6.15 本章小结</a></li>
+        <li><a href="#616-历史视角和拓展阅读">6.16 历史视角和拓展阅读</a></li>
+        <li><a href="#617-自学">6.17 自学</a></li>
+        <li><a href="#618-练习">6.18 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#附录a-逻辑设计基础">附录A 逻辑设计基础</a></li>
+    <li><a href="#术语表">术语表</a></li>
+    <li><a href="#文后">文后</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3-risc-v%E7%89%88%E5%8E%9F%E4%B9%A6%E7%AC%AC2%E7%89%88/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据">元数据</h1>
+<blockquote>
+<p>[!abstract] 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版）</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/49/cpplatform_wrzsezedv6rtg5ujlyzyzg/t7_cpplatform_wrzsezedv6rtg5ujlyzyzg1699933995.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版）|200"
+	
+	
+></li>
+<li>书名： 计算机组成与设计：硬件/软件接口 RISC-V版（原书第2版）</li>
+<li>作者： 戴维·A.帕特森 约翰·L.亨尼斯</li>
+<li>简介： 本书由2017年图灵奖得主Patterson和Hennessy共同撰写，是计算机体系结构领域的经典书籍，强调软硬件协同设计及其对性能的影响。本书采用开源的RISC-V指令系统体系结构, 讲解硬件技术、指令、算术运算、流水线、存储层次、I/O以及并行处理器等。第2版将RV64切换为RV32以降低学习难度，新增关于领域定制体系结构（DSA）的讨论以反映新的技术趋势。此外，每一章都增加了“性能提升”和“自学”章节，并更新了大量练习题。本书适合计算机体系结构领域的专业技术人员参考，也适合高等院校计算机相关专业的学生阅读。</li>
+<li>出版时间 2023-07-01 00:00:00</li>
+<li>ISBN： 9787111727972</li>
+<li>分类： 计算机-编程设计</li>
+<li>出版社： 机械工业出版社</li>
+<li>PC地址：https://weread.qq.com/web/reader/ecc32510813ab84d1g019c12</li>
+</ul>
+</blockquote>
+<h1 id="高亮划线">高亮划线</h1>
+<h2 id="封面">封面</h2>
+<h2 id="版权信息">版权信息</h2>
+<h2 id="译者简介">译者简介</h2>
+<h2 id="赞誉">赞誉</h2>
+<h2 id="译者序">译者序</h2>
+<h2 id="前言">前言</h2>
+<blockquote>
+<p>📌 我们认为，在学习计算机科学与工程时，除了掌握计算的基本原理外，还应该了解该领域的最新进展。同时，我们还认为，各种计算领域中的读者都应学习计算机系统的组成理论，因为这是决定计算机系统的功能、性能、能耗甚至最终成功的关键。
+⏱ 2024-04-07 07:08:09 ^3300077619-6-589-698</p>
+</blockquote>
+<h2 id="作者简介">作者简介</h2>
+<h2 id="第1章-计算机抽象及相关技术">第1章 计算机抽象及相关技术</h2>
+<h3 id="12-计算机体系结构中的7个伟大思想">1.2 计算机体系结构中的7个伟大思想</h3>
+<h3 id="13-程序表象之下">1.3 程序表象之下</h3>
+<h3 id="14-箱盖后的硬件">1.4 箱盖后的硬件</h3>
+<h3 id="15-处理器和存储制造技术">1.5 处理器和存储制造技术</h3>
+<h3 id="16-性能">1.6 性能</h3>
+<h3 id="17-功耗墙">1.7 功耗墙</h3>
+<h3 id="18-沧海巨变从单处理器向多处理器转变">1.8 沧海巨变：从单处理器向多处理器转变</h3>
+<h3 id="19-实例评测intel-core-i7">1.9 实例：评测Intel Core i7</h3>
+<h3 id="110-性能提升使用python语言编写矩阵乘法程序">1.10 性能提升：使用Python语言编写矩阵乘法程序</h3>
+<h3 id="111-谬误与陷阱">1.11 谬误与陷阱</h3>
+<h3 id="112-本章小结">1.12 本章小结</h3>
+<h3 id="113-历史视角和拓展阅读">1.13 历史视角和拓展阅读</h3>
+<h3 id="114-自学">1.14 自学</h3>
+<h3 id="115-练习">1.15 练习</h3>
+<h2 id="第2章-指令计算机的语言">第2章 指令：计算机的语言</h2>
+<h3 id="21-引言">2.1 引言</h3>
+<h3 id="22-计算机硬件的操作">2.2 计算机硬件的操作</h3>
+<h3 id="23-计算机硬件的操作数">2.3 计算机硬件的操作数</h3>
+<h3 id="24-有符号数与无符号数">2.4 有符号数与无符号数</h3>
+<h3 id="25-计算机中的指令表示">2.5 计算机中的指令表示</h3>
+<h3 id="26-逻辑操作">2.6 逻辑操作</h3>
+<h3 id="27-用于决策的指令">2.7 用于决策的指令</h3>
+<h3 id="28-计算机硬件对过程的支持">2.8 计算机硬件对过程的支持</h3>
+<h3 id="29-人机交互">2.9 人机交互</h3>
+<h3 id="210-对大立即数的risc-v编址和寻址">2.10 对大立即数的RISC-V编址和寻址</h3>
+<h3 id="211-并行性与指令同步">2.11 并行性与指令：同步</h3>
+<h3 id="212-翻译并启动程序">2.12 翻译并启动程序</h3>
+<h3 id="213-以c排序程序为例的汇总整理">2.13 以C排序程序为例的汇总整理</h3>
+<h3 id="214-数组与指针">2.14 数组与指针</h3>
+<h3 id="215-高级专题编译c语言和解释java语言">2.15 高级专题：编译C语言和解释Java语言</h3>
+<h3 id="216-实例mips指令">2.16 实例：MIPS指令</h3>
+<h3 id="217-实例armv732位指令">2.17 实例：ARMv7（32位）指令</h3>
+<h3 id="218-实例armv864位指令">2.18 实例：ARMv8（64位）指令</h3>
+<h3 id="219-实例x86指令">2.19 实例：x86指令</h3>
+<h3 id="220-实例risc-v指令系统的剩余部分">2.20 实例：RISC-V指令系统的剩余部分</h3>
+<h3 id="221-性能提升使用c语言编写矩阵乘法程序">2.21 性能提升：使用C语言编写矩阵乘法程序</h3>
+<h3 id="222-谬误与陷阱">2.22 谬误与陷阱</h3>
+<h3 id="223-本章小结">2.23 本章小结</h3>
+<h3 id="224-历史视角和扩展阅读">2.24 历史视角和扩展阅读</h3>
+<h3 id="225-自学">2.25 自学</h3>
+<h3 id="226-练习">2.26 练习</h3>
+<h2 id="第3章-计算机的算术运算">第3章 计算机的算术运算</h2>
+<h3 id="31-引言">3.1 引言</h3>
+<h3 id="32-加法和减法">3.2 加法和减法</h3>
+<h3 id="33-乘法">3.3 乘法</h3>
+<h3 id="34-除法">3.4 除法</h3>
+<h3 id="35-浮点运算">3.5 浮点运算</h3>
+<h3 id="36-并行性与计算机算术子字并行">3.6 并行性与计算机算术：子字并行</h3>
+<h3 id="37-实例x86中的simd扩展和高级向量扩展">3.7 实例：x86中的SIMD扩展和高级向量扩展</h3>
+<h3 id="38-性能提升子字并行和矩阵乘法">3.8 性能提升：子字并行和矩阵乘法</h3>
+<h3 id="39-谬误与陷阱">3.9 谬误与陷阱</h3>
+<h3 id="310-本章小结">3.10 本章小结</h3>
+<h3 id="311-历史视角和拓展阅读">3.11 历史视角和拓展阅读</h3>
+<h3 id="312-自学">3.12 自学</h3>
+<h3 id="313-练习">3.13 练习</h3>
+<h2 id="第4章-处理器">第4章 处理器</h2>
+<h3 id="41-引言">4.1 引言</h3>
+<h3 id="42-逻辑设计的一般方法">4.2 逻辑设计的一般方法</h3>
+<h3 id="43-建立数据通路">4.3 建立数据通路</h3>
+<h3 id="44-一个简单的实现方案">4.4 一个简单的实现方案</h3>
+<h3 id="45-多周期实现">4.5 多周期实现</h3>
+<h3 id="46-流水线概述">4.6 流水线概述</h3>
+<h3 id="47-流水线数据通路和控制">4.7 流水线数据通路和控制</h3>
+<h3 id="48-数据冒险前递与停顿">4.8 数据冒险：前递与停顿</h3>
+<h3 id="49-控制冒险">4.9 控制冒险</h3>
+<h3 id="410-例外">4.10 例外</h3>
+<h3 id="411-指令间的并行性">4.11 指令间的并行性</h3>
+<h3 id="412-实例arm-cortex-a53和intel-core-i7-6700">4.12 实例：ARM Cortex-A53和Intel Core i7 6700</h3>
+<h3 id="413-性能提升指令级并行和矩阵乘法">4.13 性能提升：指令级并行和矩阵乘法</h3>
+<h3 id="414-高级专题数字设计概述使用硬件设计语言进行流水线建模以及更多流水线示例">4.14 高级专题：数字设计概述——使用硬件设计语言进行流水线建模以及更多流水线示例</h3>
+<h3 id="415-谬误与陷阱">4.15 谬误与陷阱</h3>
+<h3 id="416-本章小结">4.16 本章小结</h3>
+<h3 id="417-历史视角和拓展阅读">4.17 历史视角和拓展阅读</h3>
+<h3 id="418-自学">4.18 自学</h3>
+<h3 id="419-练习">4.19 练习</h3>
+<h2 id="第5章-大而快层次化存储">第5章 大而快：层次化存储</h2>
+<h3 id="51-引言">5.1 引言</h3>
+<h3 id="52-存储技术">5.2 存储技术</h3>
+<h3 id="53-cache基础">5.3 cache基础</h3>
+<h3 id="54-cache的性能评估和改进">5.4 cache的性能评估和改进</h3>
+<h3 id="55-可靠的存储器层次">5.5 可靠的存储器层次</h3>
+<h3 id="56-虚拟机">5.6 虚拟机</h3>
+<h3 id="57-虚拟存储">5.7 虚拟存储</h3>
+<h3 id="58-存储层次结构的一般框架">5.8 存储层次结构的一般框架</h3>
+<h3 id="59-使用有限状态自动机控制简单的cache">5.9 使用有限状态自动机控制简单的cache</h3>
+<h3 id="510-并行和存储层次结构cache一致性">5.10 并行和存储层次结构：cache一致性</h3>
+<h3 id="511-并行与存储层次结构廉价磁盘冗余阵列">5.11 并行与存储层次结构：廉价磁盘冗余阵列</h3>
+<h3 id="512-高级专题实现cache控制器">5.12 高级专题：实现cache控制器</h3>
+<h3 id="513-实例arm-cortex-a53和intel-core-i7的存储层次结构">5.13 实例：ARM Cortex-A53和Intel Core i7的存储层次结构</h3>
+<h3 id="514-实例risc-v系统的其他部分和特殊指令">5.14 实例：RISC-V系统的其他部分和特殊指令</h3>
+<h3 id="515-性能提升cache分块和矩阵乘法">5.15 性能提升：cache分块和矩阵乘法</h3>
+<h3 id="516-谬误与陷阱">5.16 谬误与陷阱</h3>
+<h3 id="517-本章小结">5.17 本章小结</h3>
+<h3 id="518-历史视角和拓展阅读">5.18 历史视角和拓展阅读</h3>
+<h3 id="519-自学">5.19 自学</h3>
+<h3 id="520-练习">5.20 练习</h3>
+<h2 id="第6章-并行处理器从客户端到云">第6章 并行处理器：从客户端到云</h2>
+<h3 id="61-引言">6.1 引言</h3>
+<h3 id="62-创建并行处理程序的难点">6.2 创建并行处理程序的难点</h3>
+<h3 id="63-sisdmimdsimdspmd和向量机">6.3 SISD、MIMD、SIMD、SPMD和向量机</h3>
+<h3 id="64-硬件多线程">6.4 硬件多线程</h3>
+<h3 id="65-多核及其他共享内存多处理器">6.5 多核及其他共享内存多处理器</h3>
+<h3 id="66-gpu简介">6.6 GPU简介</h3>
+<h3 id="67-领域定制体系结构">6.7 领域定制体系结构</h3>
+<h3 id="68-集群仓储级计算机和其他消息传递多处理器">6.8 集群、仓储级计算机和其他消息传递多处理器</h3>
+<h3 id="69-多处理器网络拓扑简介">6.9 多处理器网络拓扑简介</h3>
+<h3 id="610-与外界通信集群网络">6.10 与外界通信：集群网络</h3>
+<h3 id="611-多处理器测试基准和性能模型">6.11 多处理器测试基准和性能模型</h3>
+<h3 id="612-实例评测google-tpuv3超级计算机和nvidia-volta-gpu集群">6.12 实例：评测Google TPUv3超级计算机和NVIDIA Volta GPU集群</h3>
+<h3 id="613-性能提升多处理器和矩阵乘法">6.13 性能提升：多处理器和矩阵乘法</h3>
+<h3 id="614-谬误与陷阱">6.14 谬误与陷阱</h3>
+<h3 id="615-本章小结">6.15 本章小结</h3>
+<h3 id="616-历史视角和拓展阅读">6.16 历史视角和拓展阅读</h3>
+<h3 id="617-自学">6.17 自学</h3>
+<h3 id="618-练习">6.18 练习</h3>
+<h2 id="附录a-逻辑设计基础">附录A 逻辑设计基础</h2>
+<h2 id="术语表">术语表</h2>
+<h2 id="文后">文后</h2>
+<h1 id="读书笔记">读书笔记</h1>
+<h1 id="本书评论">本书评论</h1>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
