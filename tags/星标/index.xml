@@ -603,6 +603,62 @@ return 0;
     &gt;https://en.wikipedia.org/wiki/YUV&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2768/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2768/</guid>
+        <description>&lt;h2 id=&#34;the-annotated-transformer&#34;&gt;The Annotated Transformer&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 有注解的transformer的论文解读&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f276b/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f276b/</guid>
+        <description>&lt;h2 id=&#34;the-annotated-transformer&#34;&gt;The Annotated Transformer&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 transformer的比较注解&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f27e9/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f27e9/</guid>
+        <description>&lt;h2 id=&#34;u-net-a-pytorch-implementation-in-60-lines-of-code&#34;&gt;U-Net A PyTorch Implementation in 60 lines of Code&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 使用pytorch的60行完成一个Unet&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2fba/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2fba/</guid>
+        <description>&lt;h2 id=&#34;深入浅出pytorch--深入浅出pytorch&#34;&gt;深入浅出PyTorch — 深入浅出PyTorch&lt;/h2&gt;
+&lt;p&gt;#星标 #网络工具&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络工具 利用pytorch构建网络模型并进行推理和部署&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
         
     </channel>
 </rss>

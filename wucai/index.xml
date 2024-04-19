@@ -1903,7 +1903,9 @@ return 0;
         
         <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-10-h8f59d8/</guid>
         <description>&lt;h2 id=&#34;swin-transformer&#34;&gt;Swin Transformer&lt;/h2&gt;
+&lt;p&gt;#网络结构&lt;/p&gt;
 &lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 非常不错的介绍swin transformer的文章&lt;/p&gt;
 &lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;img src=&#34;https://amaarora.github.io/images/swin-transformer-block.png&#34;
@@ -1919,7 +1921,182 @@ return 0;
 &lt;li&gt;#网络结构 swin transformer结构&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://amaarora.github.io/images/window-partition.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://amaarora.github.io/posts/2022-07-04-swintransformerv1.html#WCREFX-3444486&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#网络结构 swin transformer的结构&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;While the Transformer architecture before this paper had proved to be performing better than CNNs on the ImageNet dataset, it was yet to be utilised as a general purpose backbone for other tasks such as object detection &amp;amp; semantic segmentation. This paper solves that problem and Swin Transformers can capably serve as general purpose backbones for computer vision. &lt;a class=&#34;link&#34; href=&#34;https://amaarora.github.io/posts/2022-07-04-swintransformerv1.html#WCREFX-3476556&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;transformer证明了在更通用的物体检测以及分割上也很不错&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://amaarora.github.io/images/swin-transformer.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://amaarora.github.io/posts/2022-07-04-swintransformerv1.html#WCREFX-3476579&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The global computation leads to quadratic complexity with respect to the number of tokens, making it unsuitable for many vision problems requiring an immense set of tokens for dense prediction or to represent a high-resolution image &lt;a class=&#34;link&#34; href=&#34;https://amaarora.github.io/posts/2022-07-04-swintransformerv1.html#WCREFX-3477153&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;global attention计算复杂度是token的平方，复杂度很高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-18-h8fhfk5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-18-h8fhfk5/</guid>
+        <description>&lt;h2 id=&#34;wiki端到端体验ascend-c算子开发&#34;&gt;Wiki:端到端体验Ascend C算子开发&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;中 &lt;a class=&#34;link&#34; href=&#34;https://wiki.huawei.com/domains/40579/wiki/57221/WIKI202308281901551#WCREFX-3460832&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2768/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2768/</guid>
+        <description>&lt;h2 id=&#34;the-annotated-transformer&#34;&gt;The Annotated Transformer&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 有注解的transformer的论文解读&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f276b/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f276b/</guid>
+        <description>&lt;h2 id=&#34;the-annotated-transformer&#34;&gt;The Annotated Transformer&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 transformer的比较注解&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f27e9/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f27e9/</guid>
+        <description>&lt;h2 id=&#34;u-net-a-pytorch-implementation-in-60-lines-of-code&#34;&gt;U-Net A PyTorch Implementation in 60 lines of Code&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 使用pytorch的60行完成一个Unet&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2dac/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2dac/</guid>
+        <description>&lt;h2 id=&#34;onnx-toolreadme_cnmd-at-main--thanatosshinjionnx-tool&#34;&gt;onnx-tool/README_CN.md at main · ThanatosShinji/onnx-tool&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;你可以用onnx_tool.Model类去加载任意ONNX模型，变成易于编辑的python类实例，你可以:&lt;/li&gt;
+&lt;li&gt;用onnx_tool.Graph类去改变图结构;&lt;/li&gt;
+&lt;li&gt;用onnx_tool.Node类去改变每个Op的属性和输入输出Tensor;&lt;/li&gt;
+&lt;li&gt;用onnx_tool.Tensor改变任意Tensor的数据类型和数据内容.&lt;/li&gt;
+&lt;li&gt;修改完成后，只需要调用Graph或者Model类的save_model接口可以保存所有的修改内容到新的ONNX模型. &lt;a class=&#34;link&#34; href=&#34;https://github.com/ThanatosShinji/onnx-tool/blob/main/README_CN.md#WCREFX-3475073&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#模型转换 修改onnx模型的工具，建立自己的工作流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2dc9/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2dc9/</guid>
+        <description>&lt;h2 id=&#34;onnx-toolbenchmarkexamplespy-at-main--thanatosshinjionnx-to&#34;&gt;onnx-tool/benchmark/examples.py at main · ThanatosShinji/onnx-to&lt;/h2&gt;
+&lt;p&gt;#模型转换&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#模型转换 这个是onnx tool的集大成的用例，需要好好研究&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;update examples.py &lt;a class=&#34;link&#34; href=&#34;https://github.com/ThanatosShinji/onnx-tool/blob/main/benchmark/examples.py#WCREFX-3475119&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2e5k/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2e5k/</guid>
+        <description>&lt;h2 id=&#34;daquexianonnx-simplifiersimplify-your-onnx-model&#34;&gt;daquexian/onnx-simplifier:Simplify your onnx model&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://github.com/daquexian/onnx-simplifier/raw/master/imgs/comparison.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/daquexian/onnx-simplifier#WCREFX-3473097&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#模型转换 使用工具转换模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2fba/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2fba/</guid>
+        <description>&lt;h2 id=&#34;深入浅出pytorch--深入浅出pytorch&#34;&gt;深入浅出PyTorch — 深入浅出PyTorch&lt;/h2&gt;
+&lt;p&gt;#星标 #网络工具&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络工具 利用pytorch构建网络模型并进行推理和部署&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
 &lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
 </description>
         </item>

@@ -19041,6 +19041,143 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/weread/cmake%E6%9E%84%E5%BB%BA%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%8D%B7/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/cmake%E6%9E%84%E5%BB%BA%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%8D%B7/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;元数据&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!abstract] CMake构建实战：项目开发卷&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/21/cpplatform_hgrvh6q168ggeaz5up338a/t7_cpplatform_hgrvh6q168ggeaz5up338a1711450092.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; CMake构建实战：项目开发卷|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： CMake构建实战：项目开发卷&lt;/li&gt;
+&lt;li&gt;作者： 许宏旭&lt;/li&gt;
+&lt;li&gt;简介： 本书主要介绍C和C++程序构建的相关知识，包括直接调用C和C++编译器完成构建的基础内容，以及使用CMake完成项目构建的相关内容。全书先介绍市面上C和C++的主流编译器及其相关命令行工具、Makefile等的使用，抽象出与项目构建相关的概念模型，再介绍CMake脚本语言的基础语法、常用命令等，最后介绍与CMake项目构建相关的内容。本书含有两个实践章节，借助CMake脚本语言，分别构建了快速排序算法程序、手写数字识别库及配套命令行工具。 本书适合有C和C++编程基础，希望了解或应用CMake工具的人阅读，也适合想要构建跨平台C和C++程序的开发人员阅读。&lt;/li&gt;
+&lt;li&gt;出版时间 2024-02-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787115616647&lt;/li&gt;
+&lt;li&gt;分类： 计算机-计算机综合&lt;/li&gt;
+&lt;li&gt;出版社： 人民邮电出版社有限公司&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/3f932c50813ab8a65g0193d0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;高亮划线&lt;/h1&gt;
+&lt;h2 id=&#34;封面&#34;&gt;封面&lt;/h2&gt;
+&lt;h2 id=&#34;版权信息&#34;&gt;版权信息&lt;/h2&gt;
+&lt;h2 id=&#34;内容提要&#34;&gt;内容提要&lt;/h2&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;h3 id=&#34;本书读者&#34;&gt;本书读者&lt;/h3&gt;
+&lt;h2 id=&#34;第1章-构建之旅&#34;&gt;第1章 构建之旅&lt;/h2&gt;
+&lt;h3 id=&#34;11-单源文件程序您好世界&#34;&gt;1.1 单源文件程序：您好，世界&lt;/h3&gt;
+&lt;h3 id=&#34;12-构建多源程序&#34;&gt;1.2 构建多源程序&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 链接器的作用，就是把这些目标文件链接在一起，解析其中未定义的符号引用
+⏱ 2024-04-16 12:48:45 ^3300091899-8-3395-3429&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 人生中宝贵的十几秒又消逝了，话不多说，同样修改（实例中通过复制并覆盖的方式修改）并重新编译main.cpp
+⏱ 2024-04-16 12:50:33 ^3300091899-8-5505-5558&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;13-构建静态库&#34;&gt;1.3 构建静态库&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 另外，因为库总是要被其他开发者使用的，所以提供一个声明了全部功能函数的头文件十分有必要。这样，开发者只需引用提供的头文件，然后链接静态库，就可以使用该库开发好的实用功能了！
+⏱ 2024-04-16 12:54:07 ^3300091899-9-1018-1104&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;14-构建动态库&#34;&gt;1.4 构建动态库&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 如果某个静态库相当通用而被很多程序静态链接，将是对空间的巨大浪费。这里不仅是指编译后的程序文件的体积，更重要的是指程序运行时占用的内存空间。
+⏱ 2024-04-16 12:59:15 ^3300091899-10-620-690&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 同时，多个程序也可以共享一个动态库，换句话说，任何程序都能够在运行时将同一个动态库的目标代码动态链接到自己的程序中执行，而且这份动态库的代码在内存中可以只装载一份。
+⏱ 2024-04-16 12:59:52 ^3300091899-10-1052-1134&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;15-引用第三方库&#34;&gt;1.5 引用第三方库&lt;/h3&gt;
+&lt;h3 id=&#34;16-旅行笔记&#34;&gt;1.6 旅行笔记&lt;/h3&gt;
+&lt;h2 id=&#34;第2章-cmake简介&#34;&gt;第2章 CMake简介&lt;/h2&gt;
+&lt;h3 id=&#34;21-为什么使用cmake&#34;&gt;2.1 为什么使用CMake&lt;/h3&gt;
+&lt;h3 id=&#34;22-安装cmake&#34;&gt;2.2 安装CMake&lt;/h3&gt;
+&lt;h3 id=&#34;23-您好cmake&#34;&gt;2.3 您好，CMake!&lt;/h3&gt;
+&lt;h2 id=&#34;第3章-基础语法&#34;&gt;第3章 基础语法&lt;/h2&gt;
+&lt;h3 id=&#34;31-cmake程序&#34;&gt;3.1 CMake程序&lt;/h3&gt;
+&lt;h3 id=&#34;32-注释&#34;&gt;3.2 注释&lt;/h3&gt;
+&lt;h3 id=&#34;33-命令调用&#34;&gt;3.3 命令调用&lt;/h3&gt;
+&lt;h3 id=&#34;34-命令参数&#34;&gt;3.4 命令参数&lt;/h3&gt;
+&lt;h3 id=&#34;35-变量&#34;&gt;3.5 变量&lt;/h3&gt;
+&lt;h3 id=&#34;36-列表&#34;&gt;3.6 列表&lt;/h3&gt;
+&lt;h3 id=&#34;37-控制结构&#34;&gt;3.7 控制结构&lt;/h3&gt;
+&lt;h3 id=&#34;38-条件语法&#34;&gt;3.8 条件语法&lt;/h3&gt;
+&lt;h3 id=&#34;39-命令定义&#34;&gt;3.9 命令定义&lt;/h3&gt;
+&lt;h3 id=&#34;310-小结&#34;&gt;3.10 小结&lt;/h3&gt;
+&lt;h2 id=&#34;第4章-常用命令&#34;&gt;第4章 常用命令&lt;/h2&gt;
+&lt;h3 id=&#34;41-数值操作命令math&#34;&gt;4.1 数值操作命令：math&lt;/h3&gt;
+&lt;h3 id=&#34;42-字符串操作命令string&#34;&gt;4.2 字符串操作命令：string&lt;/h3&gt;
+&lt;h3 id=&#34;43-列表操作命令list&#34;&gt;4.3 列表操作命令：list&lt;/h3&gt;
+&lt;h3 id=&#34;44-文件操作命令file&#34;&gt;4.4 文件操作命令：file&lt;/h3&gt;
+&lt;h3 id=&#34;45-路径操作命令cmake_path&#34;&gt;4.5 路径操作命令：cmake_path&lt;/h3&gt;
+&lt;h3 id=&#34;46-路径操作命令get_filename_component&#34;&gt;4.6 路径操作命令：get_filename_component&lt;/h3&gt;
+&lt;h3 id=&#34;47-配置模板文件configure_file&#34;&gt;4.7 配置模板文件：configure_file&lt;/h3&gt;
+&lt;h3 id=&#34;48-日志输出命令message&#34;&gt;4.8 日志输出命令：message&lt;/h3&gt;
+&lt;h3 id=&#34;49-执行程序execute_process&#34;&gt;4.9 执行程序：execute_process&lt;/h3&gt;
+&lt;h3 id=&#34;410-引用cmake程序include&#34;&gt;4.10 引用CMake程序：include&lt;/h3&gt;
+&lt;h3 id=&#34;411-执行代码片段cmake_language&#34;&gt;4.11 执行代码片段：cmake_language&lt;/h3&gt;
+&lt;h3 id=&#34;412-监控变量variable_watch&#34;&gt;4.12 监控变量：variable_watch&lt;/h3&gt;
+&lt;h2 id=&#34;第5章-实践cmake快速排序&#34;&gt;第5章 实践：CMake快速排序&lt;/h2&gt;
+&lt;h2 id=&#34;第6章-cmake构建初探&#34;&gt;第6章 CMake构建初探&lt;/h2&gt;
+&lt;h3 id=&#34;61-cmake项目的生命周期&#34;&gt;6.1 CMake项目的生命周期&lt;/h3&gt;
+&lt;h3 id=&#34;62-项目配置与缓存变量&#34;&gt;6.2 项目配置与缓存变量&lt;/h3&gt;
+&lt;h3 id=&#34;63-cmake命令行的使用&#34;&gt;6.3 CMake命令行的使用&lt;/h3&gt;
+&lt;h3 id=&#34;64-使用visual-studio打开cmake项目&#34;&gt;6.4 使用Visual Studio打开CMake项目&lt;/h3&gt;
+&lt;h3 id=&#34;65-小结&#34;&gt;6.5 小结&lt;/h3&gt;
+&lt;h2 id=&#34;第7章-构建目标和属性&#34;&gt;第7章 构建目标和属性&lt;/h2&gt;
+&lt;h3 id=&#34;71-二进制构建目标&#34;&gt;7.1 二进制构建目标&lt;/h3&gt;
+&lt;h3 id=&#34;72-伪构建目标&#34;&gt;7.2 伪构建目标&lt;/h3&gt;
+&lt;h3 id=&#34;73-子目录&#34;&gt;7.3 子目录&lt;/h3&gt;
+&lt;h3 id=&#34;74-项目project&#34;&gt;7.4 项目：project&lt;/h3&gt;
+&lt;h3 id=&#34;75-属性get_propertyset_property&#34;&gt;7.5 属性：get_property、set_property&lt;/h3&gt;
+&lt;h3 id=&#34;76-属性相关命令&#34;&gt;7.6 属性相关命令&lt;/h3&gt;
+&lt;h3 id=&#34;77-自定义构建规则add_custom_command&#34;&gt;7.7 自定义构建规则：add_custom_command&lt;/h3&gt;
+&lt;h3 id=&#34;78-自定义构建目标add_custom_target&#34;&gt;7.8 自定义构建目标：add_custom_target&lt;/h3&gt;
+&lt;h3 id=&#34;79-设置依赖关系add_dependencies&#34;&gt;7.9 设置依赖关系：add_dependencies&lt;/h3&gt;
+&lt;h3 id=&#34;710-小结&#34;&gt;7.10 小结&lt;/h3&gt;
+&lt;h2 id=&#34;第8章-生成器表达式&#34;&gt;第8章 生成器表达式&lt;/h2&gt;
+&lt;h3 id=&#34;81-支持生成器表达式的命令&#34;&gt;8.1 支持生成器表达式的命令&lt;/h3&gt;
+&lt;h3 id=&#34;82-布尔型生成器表达式&#34;&gt;8.2 布尔型生成器表达式&lt;/h3&gt;
+&lt;h3 id=&#34;83-字符串生成器表达式&#34;&gt;8.3 字符串生成器表达式&lt;/h3&gt;
+&lt;h3 id=&#34;84-小结&#34;&gt;8.4 小结&lt;/h3&gt;
+&lt;h2 id=&#34;第9章-模块&#34;&gt;第9章 模块&lt;/h2&gt;
+&lt;h3 id=&#34;91-引用功能模块&#34;&gt;9.1 引用功能模块&lt;/h3&gt;
+&lt;h3 id=&#34;92-常用的预置功能模块&#34;&gt;9.2 常用的预置功能模块&lt;/h3&gt;
+&lt;h3 id=&#34;93-查找模块&#34;&gt;9.3 查找模块&lt;/h3&gt;
+&lt;h3 id=&#34;94-编写自定义查找模块&#34;&gt;9.4 编写自定义查找模块&lt;/h3&gt;
+&lt;h3 id=&#34;95-小结&#34;&gt;9.5 小结&lt;/h3&gt;
+&lt;h2 id=&#34;第10章-策略与向后兼容&#34;&gt;第10章 策略与向后兼容&lt;/h2&gt;
+&lt;h3 id=&#34;101-cmake策略以cmp0115为例&#34;&gt;10.1 CMake策略（以CMP0115为例）&lt;/h3&gt;
+&lt;h3 id=&#34;102-指定cmake最低版本要求cmake_minimum_required&#34;&gt;10.2 指定CMake最低版本要求：cmake_minimum_required&lt;/h3&gt;
+&lt;h3 id=&#34;103-管理策略行为cmake_policy&#34;&gt;10.3 管理策略行为：cmake_policy&lt;/h3&gt;
+&lt;h3 id=&#34;104-渐进式重构cmake程序&#34;&gt;10.4 渐进式重构CMake程序&lt;/h3&gt;
+&lt;h3 id=&#34;105-小结&#34;&gt;10.5 小结&lt;/h3&gt;
+&lt;h2 id=&#34;第11章-实践基于onnxruntime的手写数字识别库&#34;&gt;第11章 实践：基于onnxruntime的手写数字识别库&lt;/h2&gt;
+&lt;h3 id=&#34;111-前期设计&#34;&gt;11.1 前期设计&lt;/h3&gt;
+&lt;h3 id=&#34;112-第三方库&#34;&gt;11.2 第三方库&lt;/h3&gt;
+&lt;h3 id=&#34;113-cmake目录程序&#34;&gt;11.3 CMake目录程序&lt;/h3&gt;
+&lt;h3 id=&#34;114-代码实现&#34;&gt;11.4 代码实现&lt;/h3&gt;
+&lt;h3 id=&#34;115-构建和运行&#34;&gt;11.5 构建和运行&lt;/h3&gt;
+&lt;h3 id=&#34;116-小结&#34;&gt;11.6 小结&lt;/h3&gt;
+&lt;h1 id=&#34;读书笔记&#34;&gt;读书笔记&lt;/h1&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/weread/understanding-photography/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -19185,6 +19322,238 @@ $$&lt;/p&gt;
 &lt;p&gt;📌 反馈环是提高绩效最有效的办法之一。如果在我们合作共事的过程中，能不断地提出并接收到反馈，便能学得更快，完成得更多。反馈有助于我们避免误解，营造共担责任的氛围，同时减少对权力和规则的需求。  ^6733360-7oS4U52UV
 - 💭 反馈是提高技能的关键环节
 - ⏱ 2021-03-17 16:53:15&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%BF%AB%E4%B9%90%E7%9A%84%E4%BA%BA/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%BF%AB%E4%B9%90%E7%9A%84%E4%BA%BA/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;元数据&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 世界上最快乐的人&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://wfqqreader-1252317822.image.myqcloud.com/cover/188/38458188/t7_38458188.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 世界上最快乐的人|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 世界上最快乐的人&lt;/li&gt;
+&lt;li&gt;作者： 咏给·明就仁波切&lt;/li&gt;
+&lt;li&gt;简介： 2002年明就仁波切参加美国威斯康星大学理查德·戴维森主持的实验研究，被测出大脑中的快乐指数在禅定状态中跃升了百分之七百，一度让科学家以为仪器坏了，被《时代周刊》杂志誉为“世界上最快乐的人”。享誉世界心灵导师、禅修大师明就仁波切，在本书中，阐述了他是如何通过佛法禅修克服童年时代的恐慌症，获得内在真正的快乐的。他首先描述了自己亲身经历的禅修困境与状态，然后通过个人体验以及现代的科学研究，揭开快乐的秘密，最后给出具体的方法，以便人们在日常生活中利用自己的身体感官知觉去做各种禅修练习，达到非比寻常的快乐。&lt;/li&gt;
+&lt;li&gt;出版时间 2013-10-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787544349635&lt;/li&gt;
+&lt;li&gt;分类： 哲学宗教-宗教&lt;/li&gt;
+&lt;li&gt;出版社： 海南出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/23a32e80724ad34c23a600b&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;高亮划线&lt;/h1&gt;
+&lt;h2 id=&#34;封面&#34;&gt;封面&lt;/h2&gt;
+&lt;h2 id=&#34;推荐序-如何才能得到真正的快乐&#34;&gt;推荐序 如何才能得到真正的快乐&lt;/h2&gt;
+&lt;h2 id=&#34;第一部-我们为何不快乐&#34;&gt;第一部 我们为何不快乐&lt;/h2&gt;
+&lt;h3 id=&#34;第一章-旅程的起点&#34;&gt;第一章 旅程的起点&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在梵文中，“佛”是对“觉醒者”的称呼。佛陀体悟的是自己
+⏱ 2024-04-13 20:01:05 ^38458188-4-4747-4803&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第二章-内在的交响乐&#34;&gt;第二章 内在的交响乐&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 事实上，科学家们对“心”的活动的研究愈精细，就愈接近佛法对“心”的理解——“心”是一种不断的活动，而不是一个明确的实体。
+⏱ 2024-04-13 21:09:51 ^38458188-5-1738-1798&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 穿着僧袍、顶着响亮的头衔在全球巡回讲学的好处之一就是：通常不可能理会普通人的一些人，都把我当成重要人物，乐意和我交谈。与世界各地的科学家对话时，我很惊异地发现，科学界几乎有一个共识：正因为大脑是如此被建构的，所以大脑的确可以对日常生活的态度产生实质的改变
+⏱ 2024-04-13 21:13:51 ^38458188-5-3773-3900&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在我听过的对大脑的比喻当中，最有趣的是加州大学圣地亚哥分校神经科学系系主任罗伯特·李文斯顿医生（Robert B, Livingston, M.D.）所提出的。他在1987年“心与生命学会”首次研讨会中，把大脑比喻为“一个和谐且纪律良好的交响乐团”。他解释道，大脑就像交响乐团，由许多组的演奏者构成，通过共同合作而产生特定的结果，例如动作、想法、情绪、记忆和生理感受等。当你看到别人打哈欠、眨眼、打喷嚏，甚至只是举起手臂，尽管这些动作看起来似乎相当简单，但这些简单动作所涉及的参与者数量，以及参与者之间的各种互动，却形成异常复杂的画面
+⏱ 2024-04-13 21:14:46 ^38458188-5-4155-4422&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 仅仅知道人脑由这三层不同的构造所组成的事实，就已经够令人惊讶了。更神奇的是，任何一个念头的产生都必须经过脑干、脑边缘区域与皮质层这三层构造之间一系列复杂的互动。此外，每一个念头、感受或经验似乎都是一组不同的互动关系，所涉及的大脑区域也都是独特的，不是其他念头所能启动的区域。
+⏱ 2024-04-13 21:50:20 ^38458188-5-9582-9719&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第三章-超越心超越脑&#34;&gt;第三章 超越心，超越脑&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这些受限、焦虑、恐惧等感受，只不过是神经元在饶舌而已；在本质上，这些感受都只是习性，而习性是能够断除的。
+⏱ 2024-04-13 22:40:33 ^38458188-6-1267-1319&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 现在我要告诉你一个大秘密——任何时刻，将注意力安住在往来于心中的一切，这就是禅修；以这样的方式安住，就是体验本然心。
+⏱ 2024-04-14 10:14:02 ^38458188-6-8798-8856&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 你也唤醒了新的神经传导路径。当这些路径的连接愈来愈强、愈来愈深时，你就会愈来愈有能力接受每个瞬间从心中蜂拥而过的种种念头。无论有什么纷扰的念头生起，都只会变成激起本然寂静觉性的媒介，而这本然的寂静则包容并渗透、充满这些念头，就好像虚空包裹并渗透、充满现象世界的每个粒子一样。
+⏱ 2024-04-14 10:15:59 ^38458188-6-9768-9905&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第四章-空性&#34;&gt;第四章 空性&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 无论是梦境或清醒时刻，你体验的基础都是相同的，即念头、感受和感官知觉等，都是随着因缘条件的变化而不断变化的。如果你能将这样的对照谨记在心，那么，清醒时刻所经历的一切就会失去对你的影响力。念头就是念头，情绪就是情绪，感官知觉就是感官知觉。这一切在清醒的日常生活中轻易且快速地来来去去，正如同在梦境中一般。
+⏱ 2024-04-14 10:57:28 ^38458188-7-6295-6446&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 。然而量子理论对宇宙现象的诠释，仍停留在一种相当抽象的数学叙述阶段。不过我们也要记住，数学是一种符号语言，是一种以数字和符号代替文字所写成的诗歌，表达潜藏于世俗经验背后的实相。
+⏱ 2024-04-14 11:32:58 ^38458188-7-11854-11942&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第五章-感知的相对性&#34;&gt;第五章 感知的相对性&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 早期的英文译者可能都忽略了空性较微妙的一层意义：空性是由这无限可能性所生起的一切，无论是念头、字句、星球或桌子，都不是真实存在的“事物（thing）”，而是许多因缘条件聚合的结果。如果其中任何一项因缘条件改变或去除了，就会出现另一个完全不同的结果
+⏱ 2024-04-14 11:35:49 ^38458188-8-562-685&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 大脑在感知过程中所扮演的活跃角色，是决定我们内心一般状态的关键。对于那些勇于尝试心智训练，想要逐步改变多年积习的人来说，这个活跃的角色开启一种可能性，即通过不断的修心训练可让大脑发展出新的神经元连接。这不仅能转化既有的感知，更可消除焦虑、无助感和痛苦等心理状态，进而迈向较持久的喜乐与平静状态。
+⏱ 2024-04-14 11:46:23 ^38458188-8-3581-3728&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌  佛法的修持提供了一种替代方法，让我们放弃原本基于恐惧的生存观点，而把生命当作是一连串奇特和美妙事件的展示，并以这种态度去体验生命 ^38458188-8-4431-4495&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 有意思 - ⏱ 2024-04-14 11:47:39&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 消融主体和客体的分别，并不表示所领会到的一切境相就会变成模糊的一大团。你的感知经验仍然会有主体和客体的分别，只是与此同时，你也会了解到这种分别实质上只是概念性的。换句话说，你所感知的事物和感知事物的心并没有什么不同。
+⏱ 2024-04-14 11:51:05 ^38458188-8-5772-5880&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 从佛教的观点来看，时间的本质是空性的，就如同空间与在空间中移动物体的本质一样。试图以愈来愈小的单位审视时间的努力，到了某种程度之后，必然会瓦解。你可以利用禅修来体验对时间的感知，试着将时间分解为愈来愈小的单位，直到再也无法命名或下定义的地步。达到这种地步时，你就进入了一种超越言语、超越观念、超越概念的体验。
+⏱ 2024-04-14 12:00:53 ^38458188-8-10897-11051&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 虽然西方人特别重视自由的能力，但观察事件的行为本身会以随机、不可预测的方式，影响到观察结果的这种概念，所负的责任似乎太过沉重了。相形之下，把自己当作受害者，而将责任或过错归咎于自身之外的人或力量，可就容易多了。然而，如果我们正视现代科学的新发现，我们就应该为自身每一瞬间的经验担负起责任。
+⏱ 2024-04-14 12:04:59 ^38458188-8-12420-12564&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 我们也会以崭新的观点来看待身边的人，不再把他们当作是威胁我们个人安全或快乐的人，而是体会到，他们只不过是不认识自身本质无限可能性的人罢了。由于我们自身的本质并不会被“是这样”或“是那样”的任意武断区别所限制，它不会只具备某些能力而欠缺其他能力，所以我们绝对有能力应付任何境遇所带来的任何挑战，并在其中发掘自我。
+⏱ 2024-04-14 12:05:49 ^38458188-8-12714-12869&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第六章-天赋明性&#34;&gt;第六章 天赋明性&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这个禅修一开始也是先挺直身体坐着，自然地呼吸，让心逐渐地放松。“当心安住时，”在尼泊尔小小的讲堂里，父亲这样指示我们，“让自己觉察所有掠过自心的念头、情绪和感官知觉。当你看着它们经过时，就问问自己：‘心和掠过心的念头有任何差异吗？思考者和思考者所感知的念头有任何差异吗？’持续以这些问题来审视你的念头，三分钟之后停下来。”我们就这样坐着，有些人显得烦躁紧张，有些人则忐忑不安，但我们都专心观察自己的心，并且问自己念头和思考者之间是否存在任何差异。
+⏱ 2024-04-14 12:37:05 ^38458188-9-1461-1684&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 不过，认为事物存在于“外界”或“内在”的这种习性，是很难完全断舍的。这意味着要放下你所珍爱的幻相，认出从自心投射出的一切，即你认为是“他”（外界）的一切，事实上都只是自心自然的显现罢了。而这也意味着要放下“关于实相”的想法，如实地体验实相的相续之流。不过，你也不需要完全摆脱自己的感知，不需要把自己孤立在山洞中或到山里闭关：你无须刻意地投入，只要以一种在梦中体验对境的方式来看待一切情境，就能尽情地体验这一切经历，如此，发生在眼前的种种经验，就会开始让你感到惊奇连连。
+⏱ 2024-04-14 12:44:42 ^38458188-9-6475&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第七章-悲心&#34;&gt;第七章 悲心&lt;/h3&gt;
+&lt;h3 id=&#34;第八章-我们为何不快乐&#34;&gt;第八章 我们为何不快乐？&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 生活在这个世界，却不愿意接受它的相对性差异，就跟企图逃避生为左撇子或右撇子一样可笑与困难。这样逃避又有什么意义呢？对涅槃更正确的诠释是，采用一种更开阔的观点来看相对世界中的种种体验，即接纳所有体验，不论快乐或痛苦，全都是觉性的展现。
+⏱ 2024-04-14 13:15:42 ^38458188-11-6754-6870&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 佛陀将贪着比喻为饮用海洋中的咸水，喝得愈多，就愈口渴。同样的道理，当我们的心被贪着所制约时，无论拥有多少，我们永远都无法真正感到满足。我们失去了区别什么是“快乐的直接体验”，什么又是“暂时让我们快乐的对境”的能力。所以，我们不仅变得愈来愈依赖外境，也强化了“依赖外境给予我们快乐”的这种神经元模式的制约。
+⏱ 2024-04-14 13:20:39 ^38458188-11-7918-8070&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 先不管动机好坏，你会发现自己不断重复相同的模式，却期待结果有所不同。这些年来，与我共事的大部分人都告诉我，他们总是期盼着一个星期赶快过去，好享受轻松的周末时光。但是当周末结束，回到办公室时，又开始寄望一星期赶快过去，梦想着下个周末的到来。
+⏱ 2024-04-14 14:04:09 ^38458188-11-12010-12129&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第二部-安住自心的方法&#34;&gt;第二部 安住自心的方法&lt;/h2&gt;
+&lt;h3 id=&#34;第九章-找到平衡点&#34;&gt;第九章 找到平衡点&lt;/h3&gt;
+&lt;h3 id=&#34;第十章-单纯地安住&#34;&gt;第十章 单纯地安住&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 开始禅修时要慢慢来。我父亲曾经很谨慎地告诉包括我在内的所有新学生，初学禅修时最有效的方法，就是一天当中让心安住的次数要多，但每次安住的时间要短。他说，不然你可能会觉得禅修愈来愈无聊，或对自己的进展感到很失望，到最后干脆就放弃了。这种短时间、多次的方法，就像古书中所说的“涓滴挹注，终能满怀”。
+⏱ 2024-04-14 16:42:51 ^38458188-14-3640-3786&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第十一章-安住在对境上&#34;&gt;第十一章 安住在对境上&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 身为一个好奇的孩子，我当然一定得知道这个转化为什么会发生。只要看着这个过程一会儿，我就明白了：当我让自己纯然地观照某个知觉时，我全心投入当下所发生的一切情境之中，这让我看到自己的心有一部分在抗拒痛苦的感觉，另一部分则在催促自己要客观地看着它。看着同时间发生的两种矛盾、冲突时，我可以看到自己的心在处理“逃避”与“接受”的中间过程。结果，觉察心的活动竟然变得比“逃避”或“接受”还要有趣得多。看着自心在运作真是棒极了！我想，这就是我所能给予“明性”最实际的定义了：明性就是能够观照自心同时在多种层面上运作的一种能力。
+⏱ 2024-04-16 11:37:00 ^38458188-15-4083-4340&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 就这样交替练习“专注于对境”，以及“让心安住于赤裸的觉性”，你就会开始体会神经科学家们所说的基本真理：我们所感知的一切，其实只是产生于心中的一种重建罢了。换句话说，所见之物和能见之心，两者是没有分别的
+⏱ 2024-04-16 18:09:56 ^38458188-15-7524-7624&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 西塔琴演奏家松了一大口气，回到自己的茅屋开始弹琴。他听着琴声，不求自己的演奏是否臻至完美，也不期待从演奏或修持中得到什么成果。由于他学会了单纯地修持，而不期待成果，因此，几年之后他自己也成为一位大成就者。
+⏱ 2024-04-16 20:51:51 ^38458188-15-10064-10166&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第十二章-善用念头和情绪&#34;&gt;第十二章 善用念头和情绪&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 将纯然的注意力集中在当下的体验上，就是禅修。即使神经元以“我不知道怎么禅修”的念头出现，只要你能看着它，那么它也可以成为禅修的助缘。
+⏱ 2024-04-17 08:49:31 ^38458188-16-7936-8002&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第十三章-慈悲&#34;&gt;第十三章 慈悲&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 当然，这个故事是要告诉我们，不应期待立即的结果，而是要循序渐进地学习禅修。由于我们的“自”与“他”二元观是长久累积的习性，因此不能奢求马上就能将之克服。假使我们太急于一头栽入悲心之道，就会跟刚刚那位轻率放弃所拥有一切的仁兄一样。这还算好，最糟的是，可能还会因为后悔自己的善行，而给自己制造一堆经年累月才能完全克服的心理障碍。
+⏱ 2024-04-20 06:14:38 ^38458188-17-4251-4413&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第十四章-修持的方法时间与地点&#34;&gt;第十四章 修持的方法、时间与地点&lt;/h3&gt;
+&lt;h2 id=&#34;第三部-快乐的心-健康的身&#34;&gt;第三部 快乐的心 健康的身&lt;/h2&gt;
+&lt;h3 id=&#34;第十五章-问题与可能性&#34;&gt;第十五章 问题与可能性&lt;/h3&gt;
+&lt;h3 id=&#34;第十六章-从内在做起&#34;&gt;第十六章 从内在做起&lt;/h3&gt;
+&lt;h3 id=&#34;第十七章-快乐的生物学&#34;&gt;第十七章 快乐的生物学&lt;/h3&gt;
+&lt;h3 id=&#34;第十八章-向前迈进&#34;&gt;第十八章 向前迈进&lt;/h3&gt;
+&lt;h1 id=&#34;读书笔记&#34;&gt;读书笔记&lt;/h1&gt;
+&lt;h2 id=&#34;第二章-内在的交响乐-1&#34;&gt;第二章 内在的交响乐&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 大脑这个区域受到损伤的人很难制造新的记忆，对于海马回受伤前的一切，他们记得清清楚楚，但海马回受伤后所遇见的任何人与发生的任何事，他们一瞬间就忘记了。海马回也是大脑中最先受到阿兹海默症及精神分裂症、重度忧郁症、躁郁症等精神疾病影响的区域之一。  ^6733360-7QqBFdPuy
+- 💭 讲海马体最清楚的了
+- ⏱ 2024-04-13 21:46:50&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-1&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在那一瞬间，我突然“开窍了”。我体悟到无论是以“我”的心还是以“我”的观点去思考，或者如窗外的山峦与天空般广阔开放地去体验万物，两者其实无二无别。  ^6733360-7QqCetIZ8
+- 💭 没太懂
+- ⏱ 2024-04-13 21:55:31&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第四章-空性-1&#34;&gt;第四章 空性&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-2&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这样叙述绝对真理和相对真理之间的关系，虽然非常理智，却无法提供我们了解这种关系所需要的直觉性领会，或以现代语言来说，一种“本能式”的领悟。  ^6733360-7QrpREO0t
+- 💭 直觉性领悟很重要
+- ⏱ 2024-04-14 10:33:21&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第五章-感知的相对性-1&#34;&gt;第五章 感知的相对性&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-3&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 佛法的修持提供了一种替代方法，让我们放弃原本基于恐惧的生存观点，而把生命当作是一连串奇特和美妙事件的展示，并以这种态度去体验生命  ^6733360-7QruJY8xX
+- 💭 有意思
+- ⏱ 2024-04-14 11:47:48&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-4&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 由于这样的转换很难用理智去领会，为了更进一步了解这一点，我要再度以梦境为例。做梦的时候，如果你能认出自己正在经历的一切只不过是梦，那么你就能认识到，你在梦中所经历的一切都只发生在自己的心中。认识到这一点之后，你就能让自己脱离“梦中难题”“梦中之苦”或“梦中限制”。梦境虽然仍持续着，但是，“梦是梦”的认识会让你从梦中情境的痛苦和不悦中解脱出来。恐惧、苦恼及痛苦都会被一种几近孩子般的惊奇感所取代：“哇，你看，我的心竟然能够制造出这样的东西来！”  ^6733360-7QruZBNX9
+- 💭 这个比喻非常妙
+- ⏱ 2024-04-14 11:51:39&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-5&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在亚原子层次上，物理学家遇到一个非常有趣的问题，也就是当他们试图测量粒子在亚原子空间中的确切位置时，便无法百分之百精准测量粒子的速度；而当他们企图测量粒子的速度时，则无法精准确认粒子的位置。想要同时准确测量粒子的位置和速度时所遇到的问题，就是海森堡测不准原理 ①所要解释的原理，海森堡测不准原理是以提出这项原理的量子力学先驱之一的华纳·海森堡（Werner Heisenberg）而命名的。  ^6733360-7Qrv392Pu
+- 💭 讲得很清晰哦
+- ⏱ 2024-04-14 11:52:31&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第六章-天赋明性-1&#34;&gt;第六章 天赋明性&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-6&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 那么他们通常就会接受医生的建议，去做这原本不能忍受的事，甚至花钱也在所不惜。坐在蒸气室里，他们想着：“流了这么多汗真好！真是舒服极了！”他们之所以能够这样做，是因为他们转换了自己对炎热和流汗的心理感知。由此可知，炎热和流汗其实只是被赋予不同意义的现象罢了。如果医生还告诉他们，做完蒸气浴后冲个冷水澡会促进血液循环，那么他们就会学着接受寒冷，甚至还会觉得这真是个提神的好方法呢。  ^6733360-7QryWGweV
+- 💭 核心例子
+- ⏱ 2024-04-14 12:52:00&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第八章-我们为何不快乐-1&#34;&gt;第八章 我们为何不快乐？&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-7&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 虽然人们生活在物质充裕的文明中，也常面带微笑，但是，他们眼中却不时流露出不满，甚至是绝望。在我的公开或私人谈话中，人们也总绕着“如何变得更好、更强”或“如何克服‘自我憎恶’”之类的问题打转。  ^6733360-7QrzPvGW6
+- 💭 有人说过每个人都生活在寂静的绝望中
+- ⏱ 2024-04-14 13:05:31&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第十一章-安住在对境上-1&#34;&gt;第十一章 安住在对境上&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论-8&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在“有所缘的禅修”中，我们利用自己的感官作为安住自心的方法。我们可以利用眼根来禅修形状和颜色，以耳根来禅修声音，以鼻根来禅修气味，以舌根来禅修味道，以身根来禅修身体的知觉。如此，透过感官接收到的各种信息就会成为我们修持的珍贵资源。  ^6733360-7Qt5W97YU
+- 💭 厉害
+- ⏱ 2024-04-15 13:02:25&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
 </description>
@@ -22659,6 +23028,84 @@ $$&lt;/p&gt;
 &lt;p&gt;📌 魏格纳教授以此为基础通过一系列后续实验证明，用逃避、压抑的方式去控制疼痛、创伤和困扰都会导致这些症状以更负面的方式回归。那么该如何忘掉这只白色北极熊呢？积极心理学给出了一个方法：我不去想它，我去想什么？我可以去想孩子的笑脸，春天的鲜花。灿烂的阳光。用积极的一些体验来转移、替代和升华我们的消极体验。  ^6733360-7PdFyVWmx
 - 💭 替代想想
 - ⏱ 2024-02-24 15:26:04&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%8F%98%E8%80%81%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9A%84%E7%A7%91%E5%AD%A6%E6%8A%97%E8%A1%B0%E8%80%81%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%8F%98%E8%80%81%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9A%84%E7%A7%91%E5%AD%A6%E6%8A%97%E8%A1%B0%E8%80%81%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;元数据&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 我们为什么会变老：写给大家的科学抗衰老指南&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/12/cpplatform_irabcb4jd1yqcyo4iqjnxv/t7_cpplatform_irabcb4jd1yqcyo4iqjnxv1702523086.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 我们为什么会变老：写给大家的科学抗衰老指南|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 我们为什么会变老：写给大家的科学抗衰老指南&lt;/li&gt;
+&lt;li&gt;作者： 贝丝·贝内特&lt;/li&gt;
+&lt;li&gt;简介： 皱纹、白发和放错地方的钥匙，这些都是明显的变老迹象。难以置信的是，人体细胞和器官中所有导致衰老的微小事件从我们二十多岁起就开始恶化。
+在《我们为什么会变老》一书中，资深生物学教授、遗传学家贝丝·贝内特对衰老科学进行了深入浅出的讲解：我们的身体为何以及如何衰老。她使用现实世界的类比解释身体中发生的各种化学变化和细胞衰老过程，以及基础研究实验室最新发现的抗衰老解决方案。本书带领读者了解我们的身体内部和外部随着年龄的增长会发生哪些变化，这些与衰老相关的变化是如何发生的，以及减轻这些不良影响的干预措施如何发挥作用。
+除了解释衰老的成因和机制，作者还细致地探究了衰老对我们每个人都极为重要的身体器官和系统（皮肤、肌肉、骨骼、心血管和大脑）的影响。在每一对应的章节，她都为读者提供了诸多基于科学的实证有效的干预措施。这些措施的作用和意义不仅在于延缓衰老和延长寿命，更在于提升每个人都渴求的健康生活品质。&lt;/li&gt;
+&lt;li&gt;出版时间 2023-12-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787571432430&lt;/li&gt;
+&lt;li&gt;分类： 医学健康-医学&lt;/li&gt;
+&lt;li&gt;出版社： 北京科学技术出版社有限公司&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/2a232860813ab864fg016d60&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;高亮划线&lt;/h1&gt;
+&lt;h2 id=&#34;封面&#34;&gt;封面&lt;/h2&gt;
+&lt;h2 id=&#34;版权信息&#34;&gt;版权信息&lt;/h2&gt;
+&lt;h2 id=&#34;文前&#34;&gt;文前&lt;/h2&gt;
+&lt;h2 id=&#34;第一章-什么是衰老我们为什么会变老&#34;&gt;第一章 什么是衰老？我们为什么会变老？&lt;/h2&gt;
+&lt;h2 id=&#34;第二章-衰老的原因或进化学解释&#34;&gt;第二章 衰老的原因或进化学解释&lt;/h2&gt;
+&lt;h2 id=&#34;第三章-衰老的机制&#34;&gt;第三章 衰老的机制&lt;/h2&gt;
+&lt;h2 id=&#34;第四章-皮肤&#34;&gt;第四章 皮肤&lt;/h2&gt;
+&lt;h2 id=&#34;第五章-肌肉&#34;&gt;第五章 肌肉&lt;/h2&gt;
+&lt;h2 id=&#34;第六章-骨骼&#34;&gt;第六章 骨骼&lt;/h2&gt;
+&lt;h2 id=&#34;第七章-心血管系统&#34;&gt;第七章 心血管系统&lt;/h2&gt;
+&lt;h2 id=&#34;第八章-大脑与认知能力衰退&#34;&gt;第八章 大脑与认知能力衰退&lt;/h2&gt;
+&lt;h2 id=&#34;第九章-干预措施一可采取的行动&#34;&gt;第九章 干预措施一：可采取的行动&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这类干预措施中最著名的两种就是热量限制（或者更广义地说，饮食限制）和运动。这两种措施实施成本相对廉价，而且已被证明在影响健康寿命，甚至实际寿命方面可能都极其有效
+⏱ 2024-04-12 11:21:01 ^3300081436-12-1446-1526&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 一种可能的解释是，热量限制改善了机体对胰岛素（insulin，控制血糖和脂肪储存的激素）的敏感性。这种敏感性可衡量机体对碳水化合物的反应有多快多好。换句话说，对胰岛素敏感性的提升意味着机体对摄入热量的利用率更高了，这就像拥有一辆更省油的汽车：你可以用更少的汽油开更远的路。另一种可能的解释与线粒体活动有关，下面将简短回顾这个问题。
+⏱ 2024-04-12 14:49:36 ^3300081436-12-3595-3786&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 既然你已相信热量限制是有益的，我就可以多说一些了。当研究人员只限制小鼠从脂质中摄入的热量，而不减少其总热量摄入时，它们的寿命没有显示出任何改善。而当蛋白质被限制摄入，同时允许动物尽情享用其他食物时，它们获得的寿命增长相当于热量限制时的一半。
+⏱ 2024-04-12 14:52:08 ^3300081436-12-7438-7558&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 重要事实：在任何年龄段进行负重训练都能带来巨大的回报。
+⏱ 2024-04-12 11:12:57 ^3300081436-12-18712-18739&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 研究人员对芬兰一些经常蒸桑拿的中年男性进行了研究，以探究蒸桑拿的效果。研究人员将每周蒸一次桑拿的男性与经常蒸桑拿的男性进行比较后发现，蒸桑拿爱好者患上几种心脏病的风险以及全因死亡率大大降低了（每周蒸2～3次桑拿的对照组降低了78%，每周蒸4～7次桑拿的对照组降低了39%）
+⏱ 2024-04-13 19:36:52 ^3300081436-12-19462-19598&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第十章-干预措施二可使用的药物和补充剂&#34;&gt;第十章 干预措施二：可使用的药物和补充剂&lt;/h2&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;h1 id=&#34;读书笔记&#34;&gt;读书笔记&lt;/h1&gt;
+&lt;h2 id=&#34;第九章-干预措施一可采取的行动-1&#34;&gt;第九章 干预措施一：可采取的行动&lt;/h2&gt;
+&lt;h3 id=&#34;划线评论&#34;&gt;划线评论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 记得吗？当机体摄入碳水化合物时，胰腺会释放胰岛素，胰岛素通常会激活全身的细胞，特别是肌肉和肝脏的细胞，来捕获血液中的糖（因为碳水化合物会快速分解为葡萄糖）。然而，含大量碳水化合物的食物，尤其是精加工食品中的单糖，会导致机体不断释放胰岛素。而且，血液中的糖如果没有及时被需要它的细胞获取，就会迅速被储存在脂肪细胞中。  ^6733360-7QqrXa2bM
+- 💭 为啥吃碳水会变胖
+- ⏱ 2024-04-13 19:18:34&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;本书评论&#34;&gt;本书评论&lt;/h1&gt;
 </description>
@@ -28495,7 +28942,9 @@ return 0;
         
         <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-10-h8f59d8/</guid>
         <description>&lt;h2 id=&#34;swin-transformer&#34;&gt;Swin Transformer&lt;/h2&gt;
+&lt;p&gt;#网络结构&lt;/p&gt;
 &lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 非常不错的介绍swin transformer的文章&lt;/p&gt;
 &lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;img src=&#34;https://amaarora.github.io/images/swin-transformer-block.png&#34;
@@ -28511,7 +28960,182 @@ return 0;
 &lt;li&gt;#网络结构 swin transformer结构&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://amaarora.github.io/images/window-partition.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://amaarora.github.io/posts/2022-07-04-swintransformerv1.html#WCREFX-3444486&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#网络结构 swin transformer的结构&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;While the Transformer architecture before this paper had proved to be performing better than CNNs on the ImageNet dataset, it was yet to be utilised as a general purpose backbone for other tasks such as object detection &amp;amp; semantic segmentation. This paper solves that problem and Swin Transformers can capably serve as general purpose backbones for computer vision. &lt;a class=&#34;link&#34; href=&#34;https://amaarora.github.io/posts/2022-07-04-swintransformerv1.html#WCREFX-3476556&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;transformer证明了在更通用的物体检测以及分割上也很不错&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://amaarora.github.io/images/swin-transformer.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://amaarora.github.io/posts/2022-07-04-swintransformerv1.html#WCREFX-3476579&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The global computation leads to quadratic complexity with respect to the number of tokens, making it unsuitable for many vision problems requiring an immense set of tokens for dense prediction or to represent a high-resolution image &lt;a class=&#34;link&#34; href=&#34;https://amaarora.github.io/posts/2022-07-04-swintransformerv1.html#WCREFX-3477153&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;global attention计算复杂度是token的平方，复杂度很高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-18-h8fhfk5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-18-h8fhfk5/</guid>
+        <description>&lt;h2 id=&#34;wiki端到端体验ascend-c算子开发&#34;&gt;Wiki:端到端体验Ascend C算子开发&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;中 &lt;a class=&#34;link&#34; href=&#34;https://wiki.huawei.com/domains/40579/wiki/57221/WIKI202308281901551#WCREFX-3460832&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2768/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2768/</guid>
+        <description>&lt;h2 id=&#34;the-annotated-transformer&#34;&gt;The Annotated Transformer&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 有注解的transformer的论文解读&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f276b/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f276b/</guid>
+        <description>&lt;h2 id=&#34;the-annotated-transformer&#34;&gt;The Annotated Transformer&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 transformer的比较注解&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f27e9/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f27e9/</guid>
+        <description>&lt;h2 id=&#34;u-net-a-pytorch-implementation-in-60-lines-of-code&#34;&gt;U-Net A PyTorch Implementation in 60 lines of Code&lt;/h2&gt;
+&lt;p&gt;#星标 #网络结构&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络结构 使用pytorch的60行完成一个Unet&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2dac/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2dac/</guid>
+        <description>&lt;h2 id=&#34;onnx-toolreadme_cnmd-at-main--thanatosshinjionnx-tool&#34;&gt;onnx-tool/README_CN.md at main · ThanatosShinji/onnx-tool&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;你可以用onnx_tool.Model类去加载任意ONNX模型，变成易于编辑的python类实例，你可以:&lt;/li&gt;
+&lt;li&gt;用onnx_tool.Graph类去改变图结构;&lt;/li&gt;
+&lt;li&gt;用onnx_tool.Node类去改变每个Op的属性和输入输出Tensor;&lt;/li&gt;
+&lt;li&gt;用onnx_tool.Tensor改变任意Tensor的数据类型和数据内容.&lt;/li&gt;
+&lt;li&gt;修改完成后，只需要调用Graph或者Model类的save_model接口可以保存所有的修改内容到新的ONNX模型. &lt;a class=&#34;link&#34; href=&#34;https://github.com/ThanatosShinji/onnx-tool/blob/main/README_CN.md#WCREFX-3475073&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#模型转换 修改onnx模型的工具，建立自己的工作流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2dc9/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2dc9/</guid>
+        <description>&lt;h2 id=&#34;onnx-toolbenchmarkexamplespy-at-main--thanatosshinjionnx-to&#34;&gt;onnx-tool/benchmark/examples.py at main · ThanatosShinji/onnx-to&lt;/h2&gt;
+&lt;p&gt;#模型转换&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#模型转换 这个是onnx tool的集大成的用例，需要好好研究&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;update examples.py &lt;a class=&#34;link&#34; href=&#34;https://github.com/ThanatosShinji/onnx-tool/blob/main/benchmark/examples.py#WCREFX-3475119&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2e5k/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2e5k/</guid>
+        <description>&lt;h2 id=&#34;daquexianonnx-simplifiersimplify-your-onnx-model&#34;&gt;daquexian/onnx-simplifier:Simplify your onnx model&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://github.com/daquexian/onnx-simplifier/raw/master/imgs/comparison.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/daquexian/onnx-simplifier#WCREFX-3473097&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#模型转换 使用工具转换模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2fba/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-19-h8f2fba/</guid>
+        <description>&lt;h2 id=&#34;深入浅出pytorch--深入浅出pytorch&#34;&gt;深入浅出PyTorch — 深入浅出PyTorch&lt;/h2&gt;
+&lt;p&gt;#星标 #网络工具&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#网络工具 利用pytorch构建网络模型并进行推理和部署&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
 &lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
 </description>
         </item>
