@@ -29140,6 +29140,146 @@ return 0;
 </description>
         </item>
         <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-20-h8fka3f/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-20-h8fka3f/</guid>
+        <description>&lt;h2 id=&#34;torchnnfunctionalgrid_sample--pytorch-22-documentation&#34;&gt;torch.nn.functional.grid_sample — PyTorch 2.2 documentation&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Currently, only spatial (4-D) and volumetric (5-D) input are supported. &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/docs/stable/generated/torch.nn.functional.grid_sample.html#WCREFX-3486044&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;当前的torch仅仅支持4d和5d的grid sample&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;grid specifies the sampling pixel locations normalized by the input spatial dimensions. &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/docs/stable/generated/torch.nn.functional.grid_sample.html#WCREFX-3486061&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#算子 grid是按照x的输入坐标归一化处理的维度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-22-h8f32f5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-22-h8f32f5/</guid>
+        <description>&lt;h2 id=&#34;2020-年-8月-随笔档案---shine-lee---博客园&#34;&gt;2020 年 8月 随笔档案 - shine-lee - 博客园&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;乍一看到某个问题，你会觉得很简单，其实你并没有理解其复杂性。当你把问题搞清楚之后，又会发现真的很复杂，于是你就拿出一套复杂的方案来。实际上，你的工作只做了一半，大多数人也都会到此为止……。但是，真正伟大的人还会继续向前，直至找到问题的关键和深层次原因，然后再拿出一个优雅的、堪称完美的有效方案。&lt;/li&gt;
+&lt;li&gt;—— from 乔布斯 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/shine-lee/p/archive/2020/08#WCREFX-3515100&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#格言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-22-h8f3h6b/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-22-h8f3h6b/</guid>
+        <description>&lt;h2 id=&#34;cuda-编程入门---hpc-wiki&#34;&gt;CUDA 编程入门 - HPC Wiki&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;而 GPU 的设计哲学是吞吐量（throughput）比延迟更加重要。也就是说，GPU 的设计目标是让大量的数据可以同时被处理。GPU 使用大量的晶体管来堆砌大量的运算单元，通过同时让许多运算单元共享同一个控制单元，以节约晶体管。对于分支预测、乱序执行等控制单元，GPU 采用了 “不预测、不乱序” 的策略。这样的设计使得 GPU 在执行逻辑简单、并行度高的任务时能够发挥出其最大的性能。虽然 GPU 上单条数据处理的时间可能比用 CPU 更长，但 GPU 单位时间内处理完成的数据要要多得多。 &lt;a class=&#34;link&#34; href=&#34;https://hpcwiki.io/gpu/cuda/#WCREFX-3513611&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;我们打个比方：如果我们现在想证明一个复杂的数学命题，那么是一位陈景润解得快，还是 100 名大一学生解得快？大概率是前者，因为陈景润先生有着深厚的功底与丰富的经验，并且 “证明命题” 这一过程很难并行。&lt;/li&gt;
+&lt;li&gt;但如果我们现在想要计算 10000 道 100 以内的乘除法呢？那么大概率是 100 名大一学生算得快。因为，虽然一名大一学生计算一道 100 以内的乘除法的速度比不上陈景润先生计算一道 100 以内的乘除法的速度，但 100 名大一学生一起工作，速度一定会比一位陈景润先生要快。 &lt;a class=&#34;link&#34; href=&#34;https://hpcwiki.io/gpu/cuda/#WCREFX-3513618&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 比喻非常贴切&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在 2006 年，NVIDIA 推翻了传统而设计，发布了一个革命性的 GPU 架构 - Tesla。在 Tesla 架构中，没有了专门负责处理某一个步骤的硬件单元，取而代之的则是 Stream Multiprocessor (SM) 。每个 SM 都像一个小型 CPU 一样，可以执行其支持的指令集中的任何程序。这也就代表着，每一个 SM 都有能力执行渲染管线中的每个部分。这种设计避免了某一个步骤成为瓶颈而其他步骤的运算单元闲置的情况：我只需要根据不同的游戏负载，为每个步骤分配一定数量的 SM 即可。 &lt;a class=&#34;link&#34; href=&#34;https://hpcwiki.io/gpu/cuda/#WCREFX-3513653&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 2006年才推翻之前的做法，做了创新性的架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;从此，GPU 成为了 General-Purpose Graphics Processing Unit (GPGPU)。 &lt;a class=&#34;link&#34; href=&#34;https://hpcwiki.io/gpu/cuda/#WCREFX-3513749&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;GPU + CUDA = GPGPU&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;异步执行：CUDA Kernel 是异步执行的，也就是说，所谓的 “调用” Kernel 只不过是 CPU 向 GPU 的任务队列里提交了一个任务，随后 CPU 就会继续执行接下来的指令，并不会等待 GPU 将这个 Kernel 执行完。这样设计的目的是：可以同时让 CPU 与 GPU 有活干，同时发掘出二者的潜力。如果想让 CPU 等待 GPU 上的所有 Kernel 均执行完（即，让两个设备同步），请调用 cudaDeviceSynchronize()。 &lt;a class=&#34;link&#34; href=&#34;https://hpcwiki.io/gpu/cuda/#WCREFX-3528696&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;启动 CUDA Kernel 的时候会创建一个 Grid。这个 Grid 里包含若干 Block，每个 Block 里包含若干 Thread。 &lt;a class=&#34;link&#34; href=&#34;https://hpcwiki.io/gpu/cuda/#WCREFX-3533669&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;存算比 &lt;a class=&#34;link&#34; href=&#34;https://hpcwiki.io/gpu/cuda/#WCREFX-3533707&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;这里应该是算存比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-22-h8f3h78/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-22-h8f3h78/</guid>
+        <description>&lt;h2 id=&#34;a-history-of-nvidia-stream-multiprocessor&#34;&gt;A history of NVidia Stream Multiprocessor&lt;/h2&gt;
+&lt;p&gt;#处理器架构 #星标&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#处理器架构 非常不错的处理器架构的介绍文章&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-22-h8fa576/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-22-h8fa576/</guid>
+        <description>&lt;h2 id=&#34;nvidia-jetson-agx-orin-64gb-益登科技&#34;&gt;NVIDIA Jetson AGX Orin 64GB-益登科技&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TECHNICAL SPECIFICATION &lt;a class=&#34;link&#34; href=&#34;https://www.edomtech.com/zh-tw/product-detail/nvidia-jetson-agx-orin-64gb/#WCREFX-3505953&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#处理器架构 更详细的jetson架构的介绍知识&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-23-h8fb383/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-23-h8fb383/</guid>
+        <description>&lt;h2 id=&#34;cuda-c-best-practices-guide&#34;&gt;CUDA C++ Best Practices Guide&lt;/h2&gt;
+&lt;p&gt;#处理器架构 #星标&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#处理器架构 cuda处理器的最佳编程实践&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
         <title>收集</title>
         <link>https://blog.bugxch.top/%E6%94%B6%E9%9B%86/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
