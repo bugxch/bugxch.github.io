@@ -29280,6 +29280,36 @@ return 0;
 </description>
         </item>
         <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/05/wucai-2024-05-04-h85d5hm/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/05/wucai-2024-05-04-h85d5hm/</guid>
+        <description>&lt;h2 id=&#34;cmake应用集成gtest进行单元测试---知乎&#34;&gt;cmake应用：集成gtest进行单元测试 - 知乎&lt;/h2&gt;
+&lt;p&gt;#软件工程&lt;/p&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;p&gt;#软件工程 cmake + gtest教程&lt;/p&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/wucai/2024/05/wucai-2024-05-04-h85dc55/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/wucai/2024/05/wucai-2024-05-04-h85dc55/</guid>
+        <description>&lt;h2 id=&#34;cmake-保姆级教程下--爱编程的大丙&#34;&gt;CMake 保姆级教程（下） | 爱编程的大丙&lt;/h2&gt;
+&lt;h2 id=&#34;页面笔记&#34;&gt;页面笔记&lt;/h2&gt;
+&lt;h2 id=&#34;划线列表&#34;&gt;划线列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在生成可执行程序的时候，动态库不会被打包到可执行程序内部。当可执行程序启动之后动态库也不会被加载到内存，只有可执行程序调用了动态库中的函数的时候，动态库才会被加载到内存中，且多个进程可以共用内存中的同一个动态库，所以动态库又叫共享库。 &lt;a class=&#34;link&#34; href=&#34;https://subingwen.cn/cmake/CMake-advanced/index.html#WCREFX-3655779&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;全文剪藏&#34;&gt;全文剪藏&lt;/h2&gt;
+</description>
+        </item>
+        <item>
         <title>收集</title>
         <link>https://blog.bugxch.top/%E6%94%B6%E9%9B%86/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
