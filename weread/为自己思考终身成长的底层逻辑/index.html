@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='CUDA C&#43;&#43; Best Practices Guide #处理器架构 #星标 页面笔记 #处理器架构 cuda处理器的最佳编程实践 划线列表 全文剪藏'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='元数据 [!abstract] 为自己思考:终身成长的底层逻辑 书名： 为自己思考:终身成长的底层逻辑 作者： 奥赞·瓦罗尔 简介： ★ 宝藏潜力作家新作！前作《像火箭科学家一样'>
 <title></title>
 
-<link rel='canonical' href='https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-23-h8fb383/'>
+<link rel='canonical' href='https://blog.bugxch.top/weread/%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%80%9D%E8%80%83%E7%BB%88%E8%BA%AB%E6%88%90%E9%95%BF%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/'>
 
 <link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content=''>
-<meta property='og:description' content='CUDA C&#43;&#43; Best Practices Guide #处理器架构 #星标 页面笔记 #处理器架构 cuda处理器的最佳编程实践 划线列表 全文剪藏'>
-<meta property='og:url' content='https://blog.bugxch.top/wucai/2024/04/wucai-2024-04-23-h8fb383/'>
+<meta property='og:description' content='元数据 [!abstract] 为自己思考:终身成长的底层逻辑 书名： 为自己思考:终身成长的底层逻辑 作者： 奥赞·瓦罗尔 简介： ★ 宝藏潜力作家新作！前作《像火箭科学家一样'>
+<meta property='og:url' content='https://blog.bugxch.top/weread/%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%80%9D%E8%80%83%E7%BB%88%E8%BA%AB%E6%88%90%E9%95%BF%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/'>
 <meta property='og:site_name' content='巴巴变的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Wucai' /><meta property='article:tag' content='处理器架构' /><meta property='article:tag' content='星标' />
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="CUDA C&#43;&#43; Best Practices Guide #处理器架构 #星标 页面笔记 #处理器架构 cuda处理器的最佳编程实践 划线列表 全文剪藏">
+<meta name="twitter:description" content="元数据 [!abstract] 为自己思考:终身成长的底层逻辑 书名： 为自己思考:终身成长的底层逻辑 作者： 奥赞·瓦罗尔 简介： ★ 宝藏潜力作家新作！前作《像火箭科学家一样">
     <link rel="shortcut icon" href="%5cfavicon.ico" />
 
   
@@ -344,10 +344,65 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#cuda-c-best-practices-guide">CUDA C++ Best Practices Guide</a></li>
-    <li><a href="#页面笔记">页面笔记</a></li>
-    <li><a href="#划线列表">划线列表</a></li>
-    <li><a href="#全文剪藏">全文剪藏</a></li>
+    <li><a href="#封面">封面</a></li>
+    <li><a href="#版权信息">版权信息</a></li>
+    <li><a href="#献词">献词</a></li>
+    <li><a href="#格言">格言</a></li>
+    <li><a href="#前言-该醒来了">前言 该醒来了</a></li>
+    <li><a href="#本书想对你说的话">本书想对你说的话</a></li>
+    <li><a href="#第一部分-死亡">第一部分 死亡</a>
+      <ol>
+        <li><a href="#第一章-忘掉所学">第一章 忘掉所学</a></li>
+        <li><a href="#第二章-弃旧">第二章 弃旧</a></li>
+        <li><a href="#第三章-排毒">第三章 排毒</a></li>
+      </ol>
+    </li>
+    <li><a href="#第二部分-新生">第二部分 新生</a>
+      <ol>
+        <li><a href="#第四章-独特的你非凡的你">第四章 独特的你，非凡的你</a></li>
+        <li><a href="#第五章-发现你的使命">第五章 发现你的使命</a></li>
+      </ol>
+    </li>
+    <li><a href="#第三部分-内在的旅程">第三部分 内在的旅程</a>
+      <ol>
+        <li><a href="#第六章-解锁内在的智慧">第六章 解锁内在的智慧</a></li>
+        <li><a href="#第七章-释放玩耍的力量">第七章 释放玩耍的力量</a></li>
+        <li><a href="#第八章-大胆创造">第八章 大胆创造</a></li>
+      </ol>
+    </li>
+    <li><a href="#第四部分-外在的旅程">第四部分 外在的旅程</a>
+      <ol>
+        <li><a href="#第九章-是谁在胡扯">第九章 是谁在胡扯</a></li>
+        <li><a href="#第十章-看向别人不看的地方">第十章 看向别人不看的地方</a></li>
+        <li><a href="#第十一章-我不是你的上师">第十一章 我不是你的上师</a></li>
+      </ol>
+    </li>
+    <li><a href="#第五部分-彻底转变">第五部分 彻底转变</a>
+      <ol>
+        <li><a href="#第十二章-放开手让未来自然发生">第十二章 放开手，让未来自然发生</a></li>
+        <li><a href="#第十三章-蜕变">第十三章 蜕变</a></li>
+      </ol>
+    </li>
+    <li><a href="#结语">结语</a></li>
+    <li><a href="#接下来做什么">接下来做什么？</a></li>
+    <li><a href="#为自己思考导读手册">为自己思考导读手册</a>
+      <ol>
+        <li><a href="#第一部分-死亡-1">第一部分 死亡</a></li>
+        <li><a href="#第二部分-新生-1">第二部分 新生</a></li>
+        <li><a href="#第三部分-内在的旅程-1">第三部分 内在的旅程</a></li>
+        <li><a href="#第四部分-外在的旅程-1">第四部分 外在的旅程</a></li>
+        <li><a href="#第五部分-彻底转变-1">第五部分 彻底转变</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#第一部分-死亡-2">第一部分 死亡</a>
+      <ol>
+        <li><a href="#划线评论">划线评论</a></li>
+        <li><a href="#划线评论-1">划线评论</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -367,7 +422,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/wucai/2024/04/wucai-2024-04-23-h8fb383/"></a>
+            <a href="/weread/%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%80%9D%E8%80%83%E7%BB%88%E8%BA%AB%E6%88%90%E9%95%BF%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/"></a>
         </h2>
     
         
@@ -391,7 +446,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 4 分钟
                 </time>
             </div>
         
@@ -406,26 +461,121 @@
     <section class="article-content">
     
     
-    <h2 id="cuda-c-best-practices-guide">CUDA C++ Best Practices Guide</h2>
-<p>#处理器架构 #星标</p>
-<h2 id="页面笔记">页面笔记</h2>
-<p>#处理器架构 cuda处理器的最佳编程实践</p>
-<h2 id="划线列表">划线列表</h2>
-<h2 id="全文剪藏">全文剪藏</h2>
+    <h1 id="元数据">元数据</h1>
+<blockquote>
+<p>[!abstract] 为自己思考:终身成长的底层逻辑</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/86/cpplatform_mrnm9vtecf11tm8wr7xowq/t7_cpplatform_mrnm9vtecf11tm8wr7xowq1697016056.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" 为自己思考:终身成长的底层逻辑|200"
+	
+	
+></li>
+<li>书名： 为自己思考:终身成长的底层逻辑</li>
+<li>作者： 奥赞·瓦罗尔</li>
+<li>简介： ★ 宝藏潜力作家新作！前作《像火箭科学家一样思考》入选2021年度得到年度书单
+★ 英文版上市第一周，登顶美国亚马逊新书畅销榜首位
+★ 被评为《华尔街日报》畅销书
+★写给那些“想要醒来”的人，在信息茧房中掌握独立思考的底层逻辑和方法。
+生活中，我们经常会面临像《黑客帝国》红蓝药丸一样的选择题。当你在被他人规划的生活中逐渐麻木，就像活在《黑客帝国》中的虚拟世界，失去自我，失去独立思考能力。但你实在受够了，你迫切想要挣脱现状，那你就需要这本书。迈入未知需要勇气，但不要害怕，本书正是为了帮助你从麻木中醒来，挖掘内在的天赋而存在的。
+本书将替代那颗“红色药丸”，帮你打破思维囚室，唤醒你的潜在天赋，成为真正的自己。拒绝随波逐流，真理只存在于你的内心。（文末附赠导读手册）。</li>
+<li>出版时间 2023-10-01 00:00:00</li>
+<li>ISBN： 9787559671790</li>
+<li>分类： 哲学宗教-思维科学</li>
+<li>出版社： 北京联合出版公司</li>
+<li>PC地址：https://weread.qq.com/web/reader/dc1326c0813ab8376g017276</li>
+</ul>
+</blockquote>
+<h1 id="高亮划线">高亮划线</h1>
+<h2 id="封面">封面</h2>
+<h2 id="版权信息">版权信息</h2>
+<h2 id="献词">献词</h2>
+<h2 id="格言">格言</h2>
+<h2 id="前言-该醒来了">前言 该醒来了</h2>
+<h2 id="本书想对你说的话">本书想对你说的话</h2>
+<h2 id="第一部分-死亡">第一部分 死亡</h2>
+<h3 id="第一章-忘掉所学">第一章 忘掉所学</h3>
+<h3 id="第二章-弃旧">第二章 弃旧</h3>
+<h3 id="第三章-排毒">第三章 排毒</h3>
+<h2 id="第二部分-新生">第二部分 新生</h2>
+<h3 id="第四章-独特的你非凡的你">第四章 独特的你，非凡的你</h3>
+<h3 id="第五章-发现你的使命">第五章 发现你的使命</h3>
+<h2 id="第三部分-内在的旅程">第三部分 内在的旅程</h2>
+<h3 id="第六章-解锁内在的智慧">第六章 解锁内在的智慧</h3>
+<h3 id="第七章-释放玩耍的力量">第七章 释放玩耍的力量</h3>
+<h3 id="第八章-大胆创造">第八章 大胆创造</h3>
+<h2 id="第四部分-外在的旅程">第四部分 外在的旅程</h2>
+<h3 id="第九章-是谁在胡扯">第九章 是谁在胡扯</h3>
+<h3 id="第十章-看向别人不看的地方">第十章 看向别人不看的地方</h3>
+<h3 id="第十一章-我不是你的上师">第十一章 我不是你的上师</h3>
+<h2 id="第五部分-彻底转变">第五部分 彻底转变</h2>
+<h3 id="第十二章-放开手让未来自然发生">第十二章 放开手，让未来自然发生</h3>
+<h3 id="第十三章-蜕变">第十三章 蜕变</h3>
+<h2 id="结语">结语</h2>
+<h2 id="接下来做什么">接下来做什么？</h2>
+<h2 id="为自己思考导读手册">为自己思考导读手册</h2>
+<h3 id="第一部分-死亡-1">第一部分 死亡</h3>
+<blockquote>
+<p>📌 我们以后不要再问孩子：“今天你在学校都学了些什么呀？”而是改为：“今天你对什么事情感到好奇？”“你想深入了解什么问题？”“你准备怎样找到答案？”任何经过用心设计、能帮助学生独立思考并质疑世俗认知的问题都可以。
+⏱ 2024-04-25 20:22:50 ^3300074147-28-957-1061</p>
+</blockquote>
+<blockquote>
+<p>📌 和别人交流时，我们的目标不是评判对方或批评对方，而是要带着好奇心了解对方的观点。每当你发现一个新的视角，你就改变了自己对世界的看法
+⏱ 2024-04-25 20:24:07 ^3300074147-28-2456-2521</p>
+</blockquote>
+<blockquote>
+<p>📌 我的意思不是说，你不大可能把每件事都做完——我是说，你绝对做不完。这话听起来可能有点让人郁闷，但我们应该感到释然才对。唯有意识到不可能面面俱到，我才能把精力聚焦在真正重要的事情上。我对“摄入”的东西更挑剔了。我们的目标是要有意识地、仔细地甄别手中待抛的小球，清楚地知道哪一个掉了是没关系的。这样，你就可以专心致志地抛好那些最重要的球
+⏱ 2024-04-25 20:27:15 ^3300074147-28-5748-5914</p>
+</blockquote>
+<blockquote>
+<p>📌 令你成为出色的软件工程师的，是你写的软件的质量，而不是你开会的时长；令你的产品大卖特卖的，是它优异的特性，而不是拍电视广告时摄影机的角度。当我们忙于应付那些“不得不做”的微末小事时，我们也避开了更为复杂的、能够帮助我们升级进阶的大事。想好哪些事情是重要的，然后孜孜不倦地优先做它们。把“选出真正该做的事”列入你的待办清单。不要再去尽力完成更多事情，开始做真正重要的事情吧
+⏱ 2024-04-25 20:18:23 ^3300074147-28-6043-6228</p>
+</blockquote>
+<h3 id="第二部分-新生-1">第二部分 新生</h3>
+<blockquote>
+<p>📌 一样东西之所以能脱颖而出，正是因为它与众不同。如果你融入了背景板——如果你不曾展现出自己的特质，没有指纹，没有对比，没有任何特异之处——你就会泯然众人，谁也看不见你。你已经变成了背景板。
+⏱ 2024-04-25 20:29:20 ^3300074147-29-819-912</p>
+</blockquote>
+<blockquote>
+<p>📌 一旦把组成“你”的核心要素解构出来，就从零开始，重构一个全新的自己。但是，不要拷贝原有的东西。去重新想象，用崭新的方式把你的核心特质重新组合起来，找出潜在的崭新未来
+⏱ 2024-04-25 20:30:45 ^3300074147-29-2007-2089</p>
+</blockquote>
+<blockquote>
+<p>📌 去追随你的好奇心。你觉得哪些事情很有趣？那些能勾起你好奇心的事不是偶然发生的，它们会为你指出该去的方向。记下自己何时感到浑身是劲、跃跃欲试，也记下何时感到厌倦、无聊和疲惫。要学会察觉身体的反应，当你感受到生命的活力时，看看身体向你发送了什么信号。以后你就可以遵循这些信号的指引了
+⏱ 2024-04-25 20:31:57 ^3300074147-29-3233-3372</p>
+</blockquote>
+<h3 id="第三部分-内在的旅程-1">第三部分 内在的旅程</h3>
+<blockquote>
+<p>📌 没有玩乐权利的员工是没有原创性的。处于自动驾驶模式、被既定的规则和边界限制住的时候，你没法想出新点子。如果你不停地重复做着相同的日常事项，就无法发现周围的可能性。如果你不享受正在做的事，就不可能达到这个领域的最高水准。真正的目标在于，你要有充分的意识，什么时候切换到玩乐模式，什么时候再切换回来。当我们要构思新创意、寻找不同的解决办法时，玩乐最有帮助。但到了执行的时候，就要更加严肃认真才行。
+⏱ 2024-05-03 09:21:51 ^3300074147-30-4087-4283</p>
+</blockquote>
+<h3 id="第四部分-外在的旅程-1">第四部分 外在的旅程</h3>
+<h3 id="第五部分-彻底转变-1">第五部分 彻底转变</h3>
+<h1 id="读书笔记">读书笔记</h1>
+<h2 id="第一部分-死亡-2">第一部分 死亡</h2>
+<h3 id="划线评论">划线评论</h3>
+<blockquote>
+<p>📌 部族  ^6733360-7QIM3eUou
+- 💭 这里的部族换成群体更合适
+- ⏱ 2024-04-25 20:25:31</p>
+</blockquote>
+<h3 id="划线评论-1">划线评论</h3>
+<blockquote>
+<p>📌 我们总是忙着跟鳄鱼打得不可开交，而不是穿越沼泽。我们把时间花在最熟悉的事情上，比如回邮件、参加没完没了的会议，而不是做完手上的项目或推出新产品。  ^6733360-7QIMes5AG
+- 💭 不该参加的会议就不用去
+- ⏱ 2024-04-25 20:28:17</p>
+</blockquote>
+<h1 id="本书评论">本书评论</h1>
 
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/%E5%A4%84%E7%90%86%E5%99%A8%E6%9E%B6%E6%9E%84/">处理器架构</a>
-        
-            <a href="/tags/%E6%98%9F%E6%A0%87/">星标</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -472,67 +622,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/wucai/2024/03/wucai-2024-03-01-h8df67c/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title"></h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/wucai/2024/04/wucai-2024-04-06-h8fed58/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title"></h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/wucai/2024/04/wucai-2024-04-22-h8f3h78/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title"></h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/wucai/2024/02/wucai-2024-02-27-h8dc222/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title"></h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
