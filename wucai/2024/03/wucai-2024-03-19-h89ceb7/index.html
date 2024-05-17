@@ -432,7 +432,7 @@
 <li>GPU的编程方式是SIMD(Single Instruction Multiple Data)意味着所有Core的计算操作完全是在相同的时间内进行的，但是输入的数据有所不同。如果这个工作给到CPU来做，需要N的时间才可以做完，但是给到GPU只需要一个时钟周期就可以完成。 <a class="link" href="https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108187"  target="_blank" rel="noopener"
     >Link</a>
 <ul>
-<li>#jeson #处理器架构 gpu的编程方式也是SIMD</li>
+<li>#jetson #处理器架构 gpu的编程方式也是SIMD</li>
 </ul>
 </li>
 <li>GPU 的线程切换不同于 CPU，在 CPU 上切换线程需要保存现场，将所有寄存器都存到主存中，GPU 的线程切换只是切换了寄存器组（一个 SM 中有高达 64k 个寄存器），延迟超级低，几乎没有成本。 <a class="link" href="https://qiankunli.github.io/2021/08/18/gpu.html#WCREFX-3108312"  target="_blank" rel="noopener"
