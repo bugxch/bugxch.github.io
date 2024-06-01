@@ -8,12 +8,12 @@
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
         <lastBuildDate>Sat, 01 Jun 2024 21:56:31 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>CSAPP之五——优化程序性能</title>
-        <link>https://blog.bugxch.top/p/csapp%E4%B9%8B%E4%BA%94%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/</link>
-        <pubDate>Sat, 01 Jun 2024 21:55:40 +0800</pubDate>
+        <title>CSAPP之四——处理器体系结构</title>
+        <link>https://blog.bugxch.top/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</link>
+        <pubDate>Sat, 01 Jun 2024 21:54:52 +0800</pubDate>
         
-        <guid>https://blog.bugxch.top/p/csapp%E4%B9%8B%E4%BA%94%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/</guid>
-        <description>&lt;img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/staircase-7718335_1280.jpg?imageSlim" alt="Featured image of post CSAPP之五——优化程序性能" /&gt;&lt;p&gt;这是CSAPP第五章，作者想通过自己定义的Y86-64的ISA指令集定义、设计、编码以及制造一个简单的单周期流水线化的处理器。作者的思路也非常清晰，包括了上述的所有步骤，在每一步描述了嵌入了处理器设计的基本原则以及需要注意的技术细节。&lt;/p&gt;
+        <guid>https://blog.bugxch.top/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</guid>
+        <description>&lt;img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/staircase-7718335_1280.jpg?imageSlim" alt="Featured image of post CSAPP之四——处理器体系结构" /&gt;&lt;p&gt;这是CSAPP第五章，作者想通过自己定义的Y86-64的ISA指令集定义、设计、编码以及制造一个简单的单周期流水线化的处理器。作者的思路也非常清晰，包括了上述的所有步骤，在每一步描述了嵌入了处理器设计的基本原则以及需要注意的技术细节。&lt;/p&gt;
 &lt;h1 id=&#34;参考文献&#34;&gt;参考文献&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/35038473/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
