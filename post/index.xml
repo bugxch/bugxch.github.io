@@ -7,25 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sat, 18 May 2024 06:52:44 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>处理器体系结构</title>
-        <link>https://blog.bugxch.top/p/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</link>
-        <pubDate>Sat, 18 May 2024 06:50:08 +0800</pubDate>
+        <lastBuildDate>Sat, 01 Jun 2024 21:56:31 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CSAPP之五——优化程序性能</title>
+        <link>https://blog.bugxch.top/p/csapp%E4%B9%8B%E4%BA%94%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/</link>
+        <pubDate>Sat, 01 Jun 2024 21:55:40 +0800</pubDate>
         
-        <guid>https://blog.bugxch.top/p/%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</guid>
-        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post 处理器体系结构" /&gt;&lt;h1 id=&#34;基础假设&#34;&gt;基础假设&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/20240601213456.png?imageSlim&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image.png&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;流水线处理这里比较有趣&lt;/p&gt;
-&lt;h1 id=&#34;参考文献&#34;&gt;参考文献&lt;/h1&gt;
+        <guid>https://blog.bugxch.top/p/csapp%E4%B9%8B%E4%BA%94%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/</guid>
+        <description>&lt;img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/fish-8265114_1280.jpg" alt="Featured image of post CSAPP之五——优化程序性能" /&gt;&lt;h1 id=&#34;参考文献&#34;&gt;参考文献&lt;/h1&gt;
 &lt;h1 id=&#34;版权信息&#34;&gt;版权信息&lt;/h1&gt;
 &lt;p&gt;本文原载于 &lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;巴巴变的博客&lt;/a&gt;，遵循 CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
