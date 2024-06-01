@@ -25,7 +25,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
-&lt;h3 id=&#34;堆栈操作&#34;&gt;堆栈操作&lt;/h3&gt;
+&lt;h2 id=&#34;堆栈操作&#34;&gt;堆栈操作&lt;/h2&gt;
 &lt;p&gt;作者在4.1.6和4.3.3两次提到堆栈操作的特殊性，此处做一个基本的回顾。堆栈指令包括 &lt;code&gt;popq&lt;/code&gt; 和 &lt;code&gt;pushq&lt;/code&gt; 两条，作者设计假定栈顶的地址始终保存在寄存器 &lt;code&gt;%rsp&lt;/code&gt; 中，参考&lt;a class=&#34;link&#34; href=&#34;https://blog.bugxch.top/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;程序的机器级表示&lt;/a&gt;中的内容，有如下示意图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6278fd150947543129801e44.png&#34;
@@ -74,13 +74,13 @@
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;上面的操作可以保证，&lt;strong&gt;&lt;code&gt;%rsp&lt;/code&gt; 始终指向栈顶元素的起始地址&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;条件传送-vs-条件分支&#34;&gt;条件传送 vs 条件分支&lt;/h3&gt;
+&lt;h2 id=&#34;条件传送-vs-条件分支&#34;&gt;条件传送 vs 条件分支&lt;/h2&gt;
 &lt;h1 id=&#34;参考文献&#34;&gt;参考文献&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/35038473/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;汇编语言（第4版） (豆瓣)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;版权信息&#34;&gt;版权信息&lt;/h1&gt;
+&lt;hr&gt;
 &lt;p&gt;本文原载于 &lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;巴巴变的博客&lt;/a&gt;，遵循 CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
 </description>
