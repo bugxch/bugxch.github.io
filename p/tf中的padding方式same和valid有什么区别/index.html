@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。\n">
 <title>tf中的padding方式SAME和VALID有什么区别?</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/tf%E4%B8%AD%E7%9A%84padding%E6%96%B9%E5%BC%8Fsame%E5%92%8Cvalid%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='tf中的padding方式SAME和VALID有什么区别?'>
-<meta property='og:description' content='Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="tf中的padding方式SAME和VALID有什么区别?">
+<meta property='og:description' content="Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/tf%E4%B8%AD%E7%9A%84padding%E6%96%B9%E5%BC%8Fsame%E5%92%8Cvalid%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='tensorflow' /><meta property='article:tag' content='ONNX' /><meta property='article:published_time' content='2018-11-14T07:09:58&#43;00:00'/><meta property='article:modified_time' content='2020-03-21T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="tf中的padding方式SAME和VALID有什么区别?">
-<meta name="twitter:description" content="Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。
-">
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+<meta name="twitter:description" content="Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。\n">
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -100,7 +97,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -278,31 +275,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -310,7 +288,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -318,10 +296,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -436,9 +415,9 @@
     
     
     <p>Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。</p>
-<h2 id="tensorflow的计算公式">Tensorflow的计算公式</h2>
-<h3 id="二维卷积接口">二维卷积接口</h3>
-<div class="highlight"><div class="chroma">
+<h2 id="tensorflow的计算公式">Tensorflow的计算公式
+</h2><h3 id="二维卷积接口">二维卷积接口
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -450,8 +429,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="padding计算公式">padding计算公式</h3>
-<p>需要注意padding的配置，如果是字符串就有<code>SAME</code>和<code>VALID</code>两种配置，如果是数字list就明确表明padding在各个维度的数量。</p>
+</div><h3 id="padding计算公式">padding计算公式
+</h3><p>需要注意padding的配置，如果是字符串就有<code>SAME</code>和<code>VALID</code>两种配置，如果是数字list就明确表明padding在各个维度的数量。</p>
 <p>首先，<code>padding</code>如果表示确切的数字，其维度是input维度的2倍，因为每个维度两个边需要补pad，比如宽度的左边和右边，高度的上边和下边，但是tensorflow中不会给N维度以及C维度补pad，仅仅在W和H维度补pad，因此对于<code>NHWC</code>，<code>padding =[[0, 0], [pad_top, pad_bottom], [pad_left, pad_right], [0, 0]] </code>，对于<code>NCHW</code>的pad的顺序换过来。</p>
 <p>然后，如果输入的是字符串选项，补的pad都可以映射到padding这个参数上，</p>
 <ul>
@@ -576,8 +555,8 @@ $$
 </span></span><span class="line"><span class="cl">    <span class="n">Sum</span> <span class="n">of</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span> <span class="ow">is</span>  <span class="mf">0.0</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="onnx计算公式">ONNX计算公式</h2>
-<p>onnx的接口，参考IR定义如下</p>
+</div><h2 id="onnx计算公式">ONNX计算公式
+</h2><p>onnx的接口，参考IR定义如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -870,8 +849,8 @@ $$</p>
 <p><code>SAME_UPPER</code>和<code>SAME_LOWER</code>对应$P_a$是奇数的情况，如果是偶数，结果一样，如果是奇数，那么<code>SAME_UPPER</code>放小半部分$\lfloor{P_a/2}\rfloor$，<code>SAME_LOWER</code>放大半部分$P_a - \lfloor{P_a/2}\rfloor$。</p>
 </li>
 </ul>
-<h2 id="举例">举例</h2>
-<p>在<a class="link" href="https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t"  target="_blank" rel="noopener"
+<h2 id="举例">举例
+</h2><p>在<a class="link" href="https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t"  target="_blank" rel="noopener"
     >python - What is the difference between &lsquo;SAME&rsquo; and &lsquo;VALID&rsquo; padding in tf.nn.max_pool of tensorflow? - Stack Overflow</a>上有一个比较具体的例子，可以看到，使用<code>SAME</code>模式可以使得stride刚好完整取完所有的input而不会有剩余或者短缺。</p>
 <ul>
 <li>
@@ -910,8 +889,8 @@ $$</p>
 </div><p>在这个例子中$W_i = 13, W_k = 6, S = 5$。</p>
 </li>
 </ul>
-<h2 id="参考资料">参考资料</h2>
-<ul>
+<h2 id="参考资料">参考资料
+</h2><ul>
 <li><a class="link" href="https://blog.csdn.net/wuzqChom/article/details/74785643"  target="_blank" rel="noopener"
     >TensorFlow中CNN的两种padding方式“SAME”和“VALID” - wuzqChom的博客 - CSDN博客</a></li>
 <li><a class="link" href="https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t"  target="_blank" rel="noopener"
@@ -974,7 +953,7 @@ $$</p>
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -1141,7 +1120,7 @@ $$</p>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

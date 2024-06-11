@@ -14,8 +14,8 @@
         
         <guid>https://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg" alt="Featured image of post LeetCode区间问题总结" /&gt;&lt;p&gt;上周五考试没有过，其中专业级第二题是关于区间的问题，在leetcode上找到类似的题目，总结复习下。&lt;/p&gt;
-&lt;h2 id=&#34;引子&#34;&gt;引子&lt;/h2&gt;
-&lt;p&gt;先看这道题，&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/corporate-flight-bookings/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;引子&#34;&gt;引子
+&lt;/h2&gt;&lt;p&gt;先看这道题，&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/corporate-flight-bookings/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1109. 航班预订统计&lt;/a&gt;，题目是这样的&lt;/p&gt;
 &lt;p&gt;这里有&lt;code&gt;n&lt;/code&gt; 个航班，它们分别从 1 到 n 进行编号。&lt;/p&gt;
 &lt;p&gt;我们这儿有一份航班预订表，表中第 &lt;code&gt;i&lt;/code&gt; 条预订记录 &lt;code&gt;bookings[i] = [i, j, k]&lt;/code&gt; 意味着我们在从 &lt;code&gt;i&lt;/code&gt; 到&lt;code&gt; j&lt;/code&gt; 的每个航班上预订了 &lt;code&gt;k&lt;/code&gt; 个座位。&lt;/p&gt;
@@ -30,8 +30,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;输出&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;55&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;45&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;解题思路&#34;&gt;解题思路&lt;/h3&gt;
-&lt;p&gt;将这道题的示例画一张表格表示一下，就是下面的结果&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;解题思路&#34;&gt;解题思路
+&lt;/h3&gt;&lt;p&gt;将这道题的示例画一张表格表示一下，就是下面的结果&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -144,18 +144,18 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度为$O(n)$。&lt;/p&gt;
-&lt;h2 id=&#34;通用框架&#34;&gt;通用框架&lt;/h2&gt;
-&lt;p&gt;「待补充」&lt;/p&gt;
-&lt;h2 id=&#34;典型题目&#34;&gt;典型题目&lt;/h2&gt;
-&lt;p&gt;「待补充」&lt;/p&gt;
-&lt;h3 id=&#34;no-986-区间列表交集&#34;&gt;No. 986 区间列表交集&lt;/h3&gt;
-&lt;p&gt;题目的链接参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/interval-list-intersections/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;通用框架&#34;&gt;通用框架
+&lt;/h2&gt;&lt;p&gt;「待补充」&lt;/p&gt;
+&lt;h2 id=&#34;典型题目&#34;&gt;典型题目
+&lt;/h2&gt;&lt;p&gt;「待补充」&lt;/p&gt;
+&lt;h3 id=&#34;no-986-区间列表交集&#34;&gt;No. 986 区间列表交集
+&lt;/h3&gt;&lt;p&gt;题目的链接参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/interval-list-intersections/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;986. 区间列表的交集 - 力扣（LeetCode）&lt;/a&gt;，&lt;/p&gt;
-&lt;h3 id=&#34;no-452-引爆气球&#34;&gt;No. 452 引爆气球&lt;/h3&gt;
-&lt;p&gt;题目链接参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;no-452-引爆气球&#34;&gt;No. 452 引爆气球
+&lt;/h3&gt;&lt;p&gt;题目链接参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;452. 用最少数量的箭引爆气球 - 力扣（LeetCode）&lt;/a&gt;，这道题目使用&lt;strong&gt;贪心法&lt;/strong&gt;，将气球的坐标放在坐标轴上，然后从0开始从左到右逐气球扫描，查看是否有交集，图示如下。&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;p&gt;「待补充」&lt;/p&gt;</description>
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;p&gt;「待补充」&lt;/p&gt;</description>
         </item>
         
     </channel>

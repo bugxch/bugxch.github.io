@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='因为梯度下降算法需要绘制 3 维图像，故学习之，日后借鉴。
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="因为梯度下降算法需要绘制 3 维图像，故学习之，日后借鉴。\n">
 <title>matplot 之 3D 绘图指南</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='matplot 之 3D 绘图指南'>
-<meta property='og:description' content='因为梯度下降算法需要绘制 3 维图像，故学习之，日后借鉴。
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="matplot 之 3D 绘图指南">
+<meta property='og:description' content="因为梯度下降算法需要绘制 3 维图像，故学习之，日后借鉴。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/matplot-%E4%B9%8B-3d-%E7%BB%98%E5%9B%BE%E6%8C%87%E5%8D%97/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:published_time' content='2018-07-21T20:39:09&#43;00:00'/><meta property='article:modified_time' content='2018-07-21T20:39:09&#43;00:00'/>
 <meta name="twitter:title" content="matplot 之 3D 绘图指南">
-<meta name="twitter:description" content="因为梯度下降算法需要绘制 3 维图像，故学习之，日后借鉴。
-">
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+<meta name="twitter:description" content="因为梯度下降算法需要绘制 3 维图像，故学习之，日后借鉴。\n">
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -100,7 +97,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -278,31 +275,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -310,7 +288,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -318,10 +296,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -468,8 +447,8 @@
 	
 >
 3D 图形分为如下几类：</p>
-<h2 id="线形图">线形图</h2>
-<p><code>Axes3D.plot(xs,ys,**args,**kwargs)</code></p>
+<h2 id="线形图">线形图
+</h2><p><code>Axes3D.plot(xs,ys,**args,**kwargs)</code></p>
 <p>绘制 2D 或者 3D 的数据。</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -548,8 +527,8 @@
 	
 ></p>
 <p>从这个例子可以看出，matplot 画图的基本步骤包括：导入必要的模块，创建 figure 对象，设置 3D 的 ax，创建自变量，写出函数关系式，绘制图形。</p>
-<h2 id="散点图">散点图</h2>
-<p><code>Axes3D.scatter(*xs*, *ys*, *zs=0*, *zdir='z'*, *s=20*, *c=None*, *depthshade=True*, **args*, **\*kwargs*)</code></p>
+<h2 id="散点图">散点图
+</h2><p><code>Axes3D.scatter(*xs*, *ys*, *zs=0*, *zdir='z'*, *s=20*, *c=None*, *depthshade=True*, **args*, **\*kwargs*)</code></p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -678,8 +657,8 @@
 	
 	
 ></p>
-<h2 id="线框图">线框图</h2>
-<p><code>Axes3D.plot_wireframe(X, Y, Z, args, kwargs)</code></p>
+<h2 id="线框图">线框图
+</h2><p><code>Axes3D.plot_wireframe(X, Y, Z, args, kwargs)</code></p>
 <p>绘制 3D 的线框图，其中的参数<code>rstride</code>和<code>cstride</code>表示对输入数据的采样，它们不能和<code>rcount</code>以及<code>ccount</code>同时使用，不然会产生错误，后者表示从输入数据中采样多少以生成线框图。</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -786,8 +765,8 @@
 	
 	
 ></p>
-<h2 id="表面图">表面图</h2>
-<p><code>Axes3D.plot_surface(X, Y, Z, *args, **kwargs)</code></p>
+<h2 id="表面图">表面图
+</h2><p><code>Axes3D.plot_surface(X, Y, Z, *args, **kwargs)</code></p>
 <p>默认使用纯色为阴影着色，不过它也可以通过 <em>cmap</em> 支持颜色映射。</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -959,8 +938,8 @@
 	
 ></p>
 <p>表面光滑细致多了。</p>
-<h2 id="2d3d-图形共存">2D/3D 图形共存</h2>
-<p>这篇文章主要是用来画 3 维图形的，以上的几个图形已经够用，下面介绍一些其他的技能。现在的是在 2D 中画 3D 图形。直接上代码和图像</p>
+<h2 id="2d3d-图形共存">2D/3D 图形共存
+</h2><p>这篇文章主要是用来画 3 维图形的，以上的几个图形已经够用，下面介绍一些其他的技能。现在的是在 2D 中画 3D 图形。直接上代码和图像</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1070,8 +1049,8 @@
 	
 ></p>
 <p>从上面的代码，可以看出如何设置坐标轴的取值范围，设置 label 的方法。</p>
-<h2 id="加入文字">加入文字</h2>
-<p><code>Axes3D.text(x, y, z, s, zdir=None, **kwargs)</code></p>
+<h2 id="加入文字">加入文字
+</h2><p><code>Axes3D.text(x, y, z, s, zdir=None, **kwargs)</code></p>
 <p>在画图中我们可能需要在特定位置加入文字说明，下面就是一个例子</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1224,7 +1203,7 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -1391,7 +1370,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

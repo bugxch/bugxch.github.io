@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。\n">
 <title>python文件操作</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='python文件操作'>
-<meta property='og:description' content='在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="python文件操作">
+<meta property='og:description' content="在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:tag' content='文件操作' /><meta property='article:published_time' content='2018-11-08T07:33:12&#43;00:00'/><meta property='article:modified_time' content='2018-11-08T07:33:12&#43;00:00'/>
 <meta name="twitter:title" content="python文件操作">
-<meta name="twitter:description" content="在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。
-">
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+<meta name="twitter:description" content="在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。\n">
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -100,7 +97,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -278,31 +275,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -310,7 +288,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -318,10 +296,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -436,9 +415,9 @@
     
     
     <p>在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。</p>
-<h1 id="python文件读写">python文件读写</h1>
-<h2 id="基础知识">基础知识</h2>
-<p>在python中使用下面的语句打开一个文本</p>
+<h1 id="python文件读写">python文件读写
+</h1><h2 id="基础知识">基础知识
+</h2><p>在python中使用下面的语句打开一个文本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -502,10 +481,10 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样写的好处是文件可以自动关闭，即便有异常抛出也可以。</p>
-<h2 id="python文件读写-1">python文件读写</h2>
-<p>这一段介绍python本身的文件读写功能。</p>
-<h3 id="文本文件">文本文件</h3>
-<p>以之前的基础知识为例，读取文本文件很简单，使用文件对象的方法有</p>
+<h2 id="python文件读写-1">python文件读写
+</h2><p>这一段介绍python本身的文件读写功能。</p>
+<h3 id="文本文件">文本文件
+</h3><p>以之前的基础知识为例，读取文本文件很简单，使用文件对象的方法有</p>
 <ul>
 <li><code>read</code>，直接读取文本的所有内容，也可以使用<code>f.read(size)</code>读取size字节的数据</li>
 </ul>
@@ -594,8 +573,8 @@
 </span></span><span class="line"><span class="cl">10.255616
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="二进制文件">二进制文件</h3>
-<p>二进制文件的读写和文本文件读写的方法类似，最大的区别是打开的选项必须要加一个<code>b</code>。</p>
+</div><h3 id="二进制文件">二进制文件
+</h3><p>二进制文件的读写和文本文件读写的方法类似，最大的区别是打开的选项必须要加一个<code>b</code>。</p>
 <ul>
 <li>写入二进制文件</li>
 </ul>
@@ -693,8 +672,8 @@
 </span></span><span class="line"><span class="cl"> -1.3733053  -0.7128385  -1.1449672   1.4563532 <span class="o">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="numpy文件读写">numpy文件读写</h2>
-<p>numpy是python的一个数据处理的模块，它的文件读写功能使用起来更加强大和便捷。在日常工作中，常常需要比对数据，因此有必要将数据保存成txt文档进行比对，此处的文件读写都是围绕数据展开。将数据保存在文本文件中是日常工作的一个大痛点和需求，下面的命令就可以实现这样的目标。</p>
+</div><h2 id="numpy文件读写">numpy文件读写
+</h2><p>numpy是python的一个数据处理的模块，它的文件读写功能使用起来更加强大和便捷。在日常工作中，常常需要比对数据，因此有必要将数据保存成txt文档进行比对，此处的文件读写都是围绕数据展开。将数据保存在文本文件中是日常工作的一个大痛点和需求，下面的命令就可以实现这样的目标。</p>
 <blockquote>
 <p>numpy的数据读写是成对使用的。</p>
 </blockquote>
@@ -839,8 +818,8 @@
 </div><p>完美保存数据的精度和维度信息。</p>
 </li>
 </ul>
-<h2 id="参考资料">参考资料</h2>
-<ul>
+<h2 id="参考资料">参考资料
+</h2><ul>
 <li><a class="link" href="https://docs.python.org/3/tutorial/inputoutput.html"  target="_blank" rel="noopener"
     >7. Input and Output — Python 3.7.1 documentation</a>，python官方介绍输入输出的文档</li>
 <li><a class="link" href="https://www.datacamp.com/community/tutorials/reading-writing-files-python"  target="_blank" rel="noopener"
@@ -891,7 +870,7 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -1058,7 +1037,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

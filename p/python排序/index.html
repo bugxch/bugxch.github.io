@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='python基本操作知识积累。
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="python基本操作知识积累。\n">
 <title>python排序</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/python%E6%8E%92%E5%BA%8F/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='python排序'>
-<meta property='og:description' content='python基本操作知识积累。
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="python排序">
+<meta property='og:description' content="python基本操作知识积累。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/python%E6%8E%92%E5%BA%8F/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:published_time' content='2018-07-21T20:28:44&#43;00:00'/><meta property='article:modified_time' content='2018-07-21T20:28:44&#43;00:00'/>
 <meta name="twitter:title" content="python排序">
-<meta name="twitter:description" content="python基本操作知识积累。
-">
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+<meta name="twitter:description" content="python基本操作知识积累。\n">
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -100,7 +97,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -278,31 +275,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -310,7 +288,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -318,10 +296,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -442,8 +421,8 @@
 	
 ></p>
 <p>排序是一个基本的数据操作，本文列举下 python 和 numpy 中的基本排序操作，以备后查。</p>
-<h2 id="列表排序">列表排序</h2>
-<p>列表排序常用<code>reverse/sort/sorted</code>这三种方法，举例如下</p>
+<h2 id="列表排序">列表排序
+</h2><p>列表排序常用<code>reverse/sort/sorted</code>这三种方法，举例如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -490,8 +469,8 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
 </span></span><span class="line"><span class="cl"><span class="n">Out</span><span class="p">[</span><span class="mi">35</span><span class="p">]:</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="c1">#生成新列表</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="字典排序">字典排序</h2>
-<p>可以使用 sorted 对字典排序，<code>sorted</code>的函数原型如下所示</p>
+</div><h2 id="字典排序">字典排序
+</h2><p>可以使用 sorted 对字典排序，<code>sorted</code>的函数原型如下所示</p>
 <p><code>sorted(iterable, cmp=None, key=None, reverse=False) --&gt; new sorted list</code>，其中<code>iterable</code>代指可以迭代的数据类型，<code>key</code>表示按照什么排序，可以使用<code>lambda</code>函数，举例如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -563,8 +542,8 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
 </span></span><span class="line"><span class="cl"><span class="p">[(</span><span class="s1">&#39;dave&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="numpy-中的向量和矩阵的排序">numpy 中的向量和矩阵的排序</h2>
-<p>numpy 中的排序方法与之前的类似，使用<code>sort</code>即可，不过 numpy 多了一个<code>axis</code>的选项，表示按行（axis = 1）还是按照列进行排序 (axis = 0)，具体举例如下</p>
+</div><h2 id="numpy-中的向量和矩阵的排序">numpy 中的向量和矩阵的排序
+</h2><p>numpy 中的排序方法与之前的类似，使用<code>sort</code>即可，不过 numpy 多了一个<code>axis</code>的选项，表示按行（axis = 1）还是按照列进行排序 (axis = 0)，具体举例如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -605,8 +584,8 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="参考资料">参考资料</h2>
-<ul>
+<h2 id="参考资料">参考资料
+</h2><ul>
 <li><a class="link" href="https://segmentfault.com/a/1190000004959880"  target="_blank" rel="noopener"
     >Python dict sort 排序 按照 key，value - All About Python - SegmentFault</a></li>
 <li><a class="link" href="https://docs.python.org/3/howto/sorting.html"  target="_blank" rel="noopener"
@@ -653,7 +632,7 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -820,7 +799,7 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

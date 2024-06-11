@@ -34,8 +34,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这个语句的作用是获取shell脚本所在目录的绝对路径，这个语句怎么理解？为什么不直接用&lt;code&gt;pwd&lt;/code&gt;来获取当前路径呢？&lt;/p&gt;
-&lt;h3 id=&#34;语句解释&#34;&gt;语句解释&lt;/h3&gt;
-&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://explainshell.com/explain?cmd=cd&amp;#43;%24%28dirname&amp;#43;%240%29%3B&amp;#43;pwd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;语句解释&#34;&gt;语句解释
+&lt;/h3&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://explainshell.com/explain?cmd=cd&amp;#43;%24%28dirname&amp;#43;%240%29%3B&amp;#43;pwd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;explainshell.com - cd $(dirname $0); pwd&lt;/a&gt;的解释，拆解如下。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -104,8 +104,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;结合上面的两条，此时&lt;code&gt;$(dirname $0)&lt;/code&gt;的结果就是&lt;code&gt;.&lt;/code&gt;，那么&lt;code&gt;cd $(dirname $0)&lt;/code&gt;就是&lt;code&gt;cd .&lt;/code&gt;，也就是切换命令到&lt;code&gt;~/DTS/code&lt;/code&gt;，之后运行&lt;code&gt;pwd&lt;/code&gt;，此时获得的就是脚本所在的绝对路径了。&lt;/p&gt;
-&lt;h3 id=&#34;为什么不用pwd&#34;&gt;为什么不用pwd？&lt;/h3&gt;
-&lt;p&gt;请注意以下的基本事实&lt;/p&gt;
+&lt;h3 id=&#34;为什么不用pwd&#34;&gt;为什么不用pwd？
+&lt;/h3&gt;&lt;p&gt;请注意以下的基本事实&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;调用shell脚本，就是在调用脚本的&lt;strong&gt;当前目录&lt;/strong&gt;下，&lt;strong&gt;逐行执行&lt;/strong&gt;脚本中的&lt;strong&gt;每一个命令&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;

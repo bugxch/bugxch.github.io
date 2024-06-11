@@ -14,8 +14,8 @@
         
         <guid>https://blog.bugxch.top/p/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/60940147d1a9ae528fdc3a1d.png" alt="Featured image of post 二分查找——从入门到精通" /&gt;&lt;p&gt;最近在准备考试，做了一些二分搜索的题目，感觉有点意思，记录下做题的心得😁。&lt;/p&gt;
-&lt;h2 id=&#34;文章目标&#34;&gt;文章目标&lt;/h2&gt;
-&lt;p&gt;通过阅读本文，可以彻底搞懂二分查找的基本原理及各种变体，可以独立完成下面的力扣题目&lt;/p&gt;
+&lt;h2 id=&#34;文章目标&#34;&gt;文章目标
+&lt;/h2&gt;&lt;p&gt;通过阅读本文，可以彻底搞懂二分查找的基本原理及各种变体，可以独立完成下面的力扣题目&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -56,8 +56,8 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;基本原理&#34;&gt;基本原理&lt;/h2&gt;
-&lt;p&gt;在计算机科学中，二分搜索又被成为&lt;strong&gt;半区间&lt;/strong&gt;搜索，对数搜索或者二分chop，它用于在排序数列中找到目标值的位置。算法不断比较数列中间元素与目标值，&lt;/p&gt;
+&lt;h2 id=&#34;基本原理&#34;&gt;基本原理
+&lt;/h2&gt;&lt;p&gt;在计算机科学中，二分搜索又被成为&lt;strong&gt;半区间&lt;/strong&gt;搜索，对数搜索或者二分chop，它用于在排序数列中找到目标值的位置。算法不断比较数列中间元素与目标值，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;如果目标值与中间元素匹配，那直接返回中间的位置；&lt;/li&gt;
 &lt;li&gt;如果目标值比中间元素小，继续搜索低半边的数列；&lt;/li&gt;
@@ -183,19 +183,19 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;关键技术细节&#34;&gt;关键技术细节&lt;/h3&gt;
-&lt;blockquote&gt;
+&lt;/div&gt;&lt;h3 id=&#34;关键技术细节&#34;&gt;关键技术细节
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky&lt;/em&gt;  &amp;ndash; &lt;strong&gt;Donald Knuth&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;就像高德纳所说，二分法的思想简单且易于理解，但是二分法的细节却藏了很多坑，&lt;strong&gt;魔鬼就在细节中&lt;/strong&gt;。为了透彻理解二分法的实现，有必要对上面的代码的下面3个技术细节（标记为&lt;code&gt;detail&lt;/code&gt;注释的地方）进行深究。&lt;/p&gt;
-&lt;h4 id=&#34;循环的入口条件&#34;&gt;循环的入口条件&lt;/h4&gt;
-&lt;p&gt;代码16行，为什么循环的入口条件是&lt;code&gt;left &amp;lt;= right&lt;/code&gt;？&lt;/p&gt;
+&lt;h4 id=&#34;循环的入口条件&#34;&gt;循环的入口条件
+&lt;/h4&gt;&lt;p&gt;代码16行，为什么循环的入口条件是&lt;code&gt;left &amp;lt;= right&lt;/code&gt;？&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;无论何时$[left, right]$表示&lt;strong&gt;可能包含目标值&lt;/strong&gt;的搜索区间&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;注意这是个&lt;strong&gt;左闭右闭&lt;/strong&gt;的闭区间，单纯从数学角度出发，这个区间&lt;strong&gt;最短的长度就是1&lt;/strong&gt;，也就是$left = right$的时候。如果$left &amp;gt;  right$了，那$[left, right]$就是&lt;strong&gt;空集&lt;/strong&gt;，这个集合&lt;strong&gt;肯定不包含目标值&lt;/strong&gt;，也就&lt;strong&gt;没有继续搜索的必要&lt;/strong&gt;了，所以循环退出。&lt;/p&gt;
-&lt;h4 id=&#34;中点计算&#34;&gt;中点计算&lt;/h4&gt;
-&lt;p&gt;为什么是&lt;code&gt;mid = left + ((right - left) &amp;gt;&amp;gt; 1)&lt;/code&gt;，也就是数学的$floor((left + right) / 2)$?
+&lt;h4 id=&#34;中点计算&#34;&gt;中点计算
+&lt;/h4&gt;&lt;p&gt;为什么是&lt;code&gt;mid = left + ((right - left) &amp;gt;&amp;gt; 1)&lt;/code&gt;，也就是数学的$floor((left + right) / 2)$?
 这里的中点转换成数学表示就是
 $$
 \begin{align}
@@ -224,8 +224,8 @@ $$
 &lt;p&gt;当搜索区间的&lt;strong&gt;左右两端点挨着&lt;/strong&gt;的时候（即$right = left + 1)$，floor函数计算的中点mid是left，ceil函数计算的中点mid是right&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;请记住这个&lt;strong&gt;特殊的区间情况&lt;/strong&gt;，至于为何基础模板选择floor而没有选择ceil，在后面的变化类型一节很关键。&lt;/p&gt;
-&lt;h4 id=&#34;搜索区间调整&#34;&gt;搜索区间调整&lt;/h4&gt;
-&lt;p&gt;在每次判断与target的差距之后，搜索区间为什么是这么调整的？
+&lt;h4 id=&#34;搜索区间调整&#34;&gt;搜索区间调整
+&lt;/h4&gt;&lt;p&gt;在每次判断与target的差距之后，搜索区间为什么是这么调整的？
 二分法另一个容易搞错的问题是区间调整，$left$和$right$好像可以选择$mid$的3个边界值$mid, mid - 1, mid + 1$中的任意一个，其实&lt;strong&gt;调整的原则&lt;/strong&gt;很简单，&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
@@ -270,10 +270,10 @@ $$
 &lt;li&gt;保证&lt;strong&gt;任意判断分支为true时最后都可以跳出循环，尤其当$right = left + 1$时&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;深入探究&#34;&gt;深入探究&lt;/h3&gt;
-&lt;p&gt;上一小节讨论了3个关键技术细节，循环入口条件、中点计算和搜索区间调整，下面可以看到在满足上面的原则基础上，它们都可以变化。&lt;/p&gt;
-&lt;h4 id=&#34;分支合并&#34;&gt;分支合并&lt;/h4&gt;
-&lt;p&gt;当前的基础代码有3个判断分支，是否可以将3个分支合并成2个呢？下面的基础模板就可以。&lt;/p&gt;
+&lt;h3 id=&#34;深入探究&#34;&gt;深入探究
+&lt;/h3&gt;&lt;p&gt;上一小节讨论了3个关键技术细节，循环入口条件、中点计算和搜索区间调整，下面可以看到在满足上面的原则基础上，它们都可以变化。&lt;/p&gt;
+&lt;h4 id=&#34;分支合并&#34;&gt;分支合并
+&lt;/h4&gt;&lt;p&gt;当前的基础代码有3个判断分支，是否可以将3个分支合并成2个呢？下面的基础模板就可以。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -425,8 +425,8 @@ $$
 &lt;p&gt;所以方案2的结果是错的。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;中点计算变更&#34;&gt;中点计算变更&lt;/h4&gt;
-&lt;p&gt;上面的方案2，因为不满足第2条原则而失败，那有没有办法通过改变其他部分而满足原则呢？第1个判断分支如果为true，当$right = left + 1$时，根据代码第6行，$mid = left$，所以进入分支之后$left = mid = left$，那可以将第6行的代码改成下面这样，&lt;/p&gt;
+&lt;h4 id=&#34;中点计算变更&#34;&gt;中点计算变更
+&lt;/h4&gt;&lt;p&gt;上面的方案2，因为不满足第2条原则而失败，那有没有办法通过改变其他部分而满足原则呢？第1个判断分支如果为true，当$right = left + 1$时，根据代码第6行，$mid = left$，所以进入分支之后$left = mid = left$，那可以将第6行的代码改成下面这样，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -463,8 +463,8 @@ $$
 &lt;blockquote&gt;
 &lt;p&gt;可以通过调整中点的计算方式，满足原则2，从而避免死循环&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;判断条件变更&#34;&gt;判断条件变更&lt;/h4&gt;
-&lt;p&gt;需要注意，其他2个的模板的循环条件为$left &amp;lt; right$，当$left \ge right$时退出，如果$left = right$，那么搜索的区间只剩下一个元素，跳出循环之后别忘了要检查这个元素是否满足条件。如果最后的这个元素依然不是target，那么所有的元素也不是了，所以在最后我们加了一个判断，&lt;/p&gt;
+&lt;h4 id=&#34;判断条件变更&#34;&gt;判断条件变更
+&lt;/h4&gt;&lt;p&gt;需要注意，其他2个的模板的循环条件为$left &amp;lt; right$，当$left \ge right$时退出，如果$left = right$，那么搜索的区间只剩下一个元素，跳出循环之后别忘了要检查这个元素是否满足条件。如果最后的这个元素依然不是target，那么所有的元素也不是了，所以在最后我们加了一个判断，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -477,10 +477,10 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; unsuccessful
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;变种题目&#34;&gt;变种题目&lt;/h2&gt;
-&lt;p&gt;理解上面的分析过程之后，进入进阶版的二分法题目。&lt;/p&gt;
-&lt;h3 id=&#34;重复元素左边界&#34;&gt;重复元素左边界&lt;/h3&gt;
-&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/first-bad-version/?utm_source=LCUS&amp;amp;utm_medium=ip_redirect&amp;amp;utm_campaign=transfer2china&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h2 id=&#34;变种题目&#34;&gt;变种题目
+&lt;/h2&gt;&lt;p&gt;理解上面的分析过程之后，进入进阶版的二分法题目。&lt;/p&gt;
+&lt;h3 id=&#34;重复元素左边界&#34;&gt;重复元素左边界
+&lt;/h3&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/first-bad-version/?utm_source=LCUS&amp;amp;utm_medium=ip_redirect&amp;amp;utm_campaign=transfer2china&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;278. 第一个错误的版本&lt;/a&gt;，从某个版本开始，版本就已经不可用了，但是在这个版本之前，所有的版本均可用，需要找出第一个不可用的版本。假如说，我们有100个版本，从第70个版本开始不用，那么怎么快速找到70呢？如下所示&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/609726b8d1a9ae528f1f0aa7.png&#34;
 	
@@ -602,8 +602,8 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;重复元素右边界&#34;&gt;重复元素右边界&lt;/h3&gt;
-&lt;p&gt;假如我们要查找序列$[1,2,3,4,4,5,6,6,7,7,9,10,10,10]$中的&lt;strong&gt;最右边&lt;/strong&gt;的10的index，该如何处理？从分支判断入手，&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;重复元素右边界&#34;&gt;重复元素右边界
+&lt;/h3&gt;&lt;p&gt;假如我们要查找序列$[1,2,3,4,4,5,6,6,7,7,9,10,10,10]$中的&lt;strong&gt;最右边&lt;/strong&gt;的10的index，该如何处理？从分支判断入手，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;如果$A[mid] \lt 10$，那么最右边的10可能位于区间$[mid + 1, right]$区间，调整$left = mid + 1$；&lt;/li&gt;
 &lt;li&gt;如果$A[mid] =  10$，这个$A[mid]$可能是最右边的10，也可能不是，但是$A[mid - 1]$肯定不是最右边的10了，所以目标值可能位于区间$[mid, right]$区间，调整$left = mid$；&lt;/li&gt;
@@ -661,8 +661,8 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;旋转数组无重复元素&#34;&gt;旋转数组（无重复元素）&lt;/h3&gt;
-&lt;p&gt;来做文章目标中的&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h3 id=&#34;旋转数组无重复元素&#34;&gt;旋转数组（无重复元素）
+&lt;/h3&gt;&lt;p&gt;来做文章目标中的&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;153. 寻找旋转排序数组中的最小值&lt;/a&gt;这道题，具体看看示例2中的题目怎么做&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6097b8f2d1a9ae528f55525f.png&#34;
 	
@@ -749,8 +749,8 @@ $$
 &lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;判断是否在$right = left +1$时，每个分支可以跳出循环，可以👍，完毕。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;旋转数组-包含重复元素左边界&#34;&gt;旋转数组（ 包含重复元素）左边界&lt;/h3&gt;
-&lt;p&gt;再来看&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;旋转数组-包含重复元素左边界&#34;&gt;旋转数组（ 包含重复元素）左边界
+&lt;/h3&gt;&lt;p&gt;再来看&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;154. 寻找旋转排序数组中的最小值 II - 力扣（LeetCode）&lt;/a&gt;，这个题目与上面有点区别，就是它有重复元素，如下图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6097c494d1a9ae528fa7f417.png&#34;
 	
@@ -865,8 +865,8 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;考察$right = left + 1$时候，三个分支都可以顺利跳出循环，搞定👍&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ol&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000016825704&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;二分查找、二分边界查找算法的模板代码总结 - SegmentFault 思否&lt;/a&gt;，给我很多启发的一篇文章&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Binary_search_algorithm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

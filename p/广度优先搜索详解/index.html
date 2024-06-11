@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='总结一下广度优先搜索的原理和用法。
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="总结一下广度优先搜索的原理和用法。\n">
 <title>广度优先搜索详解</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='广度优先搜索详解'>
-<meta property='og:description' content='总结一下广度优先搜索的原理和用法。
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="广度优先搜索详解">
+<meta property='og:description' content="总结一下广度优先搜索的原理和用法。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='leetcode' /><meta property='article:tag' content='BFS' /><meta property='article:published_time' content='2020-08-08T11:24:24&#43;08:00'/><meta property='article:modified_time' content='2020-08-08T11:24:24&#43;08:00'/>
 <meta name="twitter:title" content="广度优先搜索详解">
-<meta name="twitter:description" content="总结一下广度优先搜索的原理和用法。
-">
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+<meta name="twitter:description" content="总结一下广度优先搜索的原理和用法。\n">
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -100,7 +97,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -278,31 +275,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -310,7 +288,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -318,10 +296,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -463,8 +442,8 @@
 	
 	
 ></p>
-<h2 id="引子">引子</h2>
-<p>先看这道题<a class="link" href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/"  target="_blank" rel="noopener"
+<h2 id="引子">引子
+</h2><p>先看这道题<a class="link" href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/"  target="_blank" rel="noopener"
     >104. 二叉树的最大深度</a>，题目中给出一个二叉树，求这个二叉树的最大深度。例子中给出下面的二叉树</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -483,8 +462,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这个如何解决呢？肉眼可见，最大深度是3。</p>
-<h3 id="构建二叉树">构建二叉树</h3>
-<p>首先为了便于调试，需要构建一颗二叉树，题目中的给出的是二叉树的层序遍历的结果，我们用<code>INT_MAX</code>代替null，使用如下函数构造二叉树</p>
+<h3 id="构建二叉树">构建二叉树
+</h3><p>首先为了便于调试，需要构建一颗二叉树，题目中的给出的是二叉树的层序遍历的结果，我们用<code>INT_MAX</code>代替null，使用如下函数构造二叉树</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -632,17 +611,17 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="递归解法">递归解法</h3>
-<p>二叉树的比较普遍的解法是使用递归，我们需要找出递归的关系式，然后用程序写出来。递归解决问题的思路包括下面两点</p>
-<h4 id="描述变量">描述变量</h4>
-<p>我们有一个关于目标变量的描述，在这个题目中目标变量是整棵树的最大深度，放弃整体的概念，假设你站在根节点往下看，会看到它有左右两个子树，每棵树又有自己的节点和深度。所以假定推导的变量是</p>
+</div><h3 id="递归解法">递归解法
+</h3><p>二叉树的比较普遍的解法是使用递归，我们需要找出递归的关系式，然后用程序写出来。递归解决问题的思路包括下面两点</p>
+<h4 id="描述变量">描述变量
+</h4><p>我们有一个关于目标变量的描述，在这个题目中目标变量是整棵树的最大深度，放弃整体的概念，假设你站在根节点往下看，会看到它有左右两个子树，每棵树又有自己的节点和深度。所以假定推导的变量是</p>
 <blockquote>
 <p><code>maxdepth[node]</code>表示以<code>node</code>为根节点的树的最大深度</p>
 </blockquote>
-<h4 id="递归关系式">递归关系式</h4>
-<p>查看这个值和左右子树的关系是什么？3这个node的最大深度是9这个node最大深度和20这个node的最大深度的最大值 + 1，重新表述下就是下面的关系式<code>maxD[node] = max(maxD[node-&gt;left], maxD[node-&gt;right]) + 1</code>。</p>
-<h4 id="终止条件">终止条件</h4>
-<p>终止条件比较简单，在访问到null节点的时候返回0即可，因为以这个节点为根的树是不存在的，所以深度为0。于是有下面的代码</p>
+<h4 id="递归关系式">递归关系式
+</h4><p>查看这个值和左右子树的关系是什么？3这个node的最大深度是9这个node最大深度和20这个node的最大深度的最大值 + 1，重新表述下就是下面的关系式<code>maxD[node] = max(maxD[node-&gt;left], maxD[node-&gt;right]) + 1</code>。</p>
+<h4 id="终止条件">终止条件
+</h4><p>终止条件比较简单，在访问到null节点的时候返回0即可，因为以这个节点为根的树是不存在的，所以深度为0。于是有下面的代码</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -667,8 +646,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="广度优先搜索算法bfs">广度优先搜索算法（BFS）</h3>
-<p>不使用递归，还有另一种解法，一层层观察整棵树，第一层1个节点，第二层2个节点，第三层2个节点。每一层的节点之间使用左右子树联系起来，所以根据第1层的节点可以访问第2层的节点，根据第2层的节点可以访问第3层的节点，所以可以这么做。记录整棵树最深的深度是<code>maxdepth = 0</code>，</p>
+</div><h3 id="广度优先搜索算法bfs">广度优先搜索算法（BFS）
+</h3><p>不使用递归，还有另一种解法，一层层观察整棵树，第一层1个节点，第二层2个节点，第三层2个节点。每一层的节点之间使用左右子树联系起来，所以根据第1层的节点可以访问第2层的节点，根据第2层的节点可以访问第3层的节点，所以可以这么做。记录整棵树最深的深度是<code>maxdepth = 0</code>，</p>
 <ol>
 <li>访问第一层的根节点，如果非空则<code>maxdepth++</code>，否则返回；</li>
 <li>查看第一层的根节点是否有左右子树，有的话再分别访问左子树和右子树，<code>maxdepth++</code>；</li>
@@ -769,9 +748,9 @@
 	
 	
 ></p>
-<h2 id="数据结构">数据结构</h2>
-<h3 id="队列">队列</h3>
-<p>使用<strong>队列</strong>保存每一层的节点，如下图所示，队列是先进先出的数据结构，包括如下的属性和方法</p>
+<h2 id="数据结构">数据结构
+</h2><h3 id="队列">队列
+</h3><p>使用<strong>队列</strong>保存每一层的节点，如下图所示，队列是先进先出的数据结构，包括如下的属性和方法</p>
 <p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/02/Queue.png"
 	
 	
@@ -787,8 +766,8 @@
 <li>出队（pop），队列头弹出，队列长度-1，front++；</li>
 <li>入队（push），队列尾添加元素，队列长度+1，rear++</li>
 </ul>
-<h3 id="stl中的queue">STL中的queue</h3>
-<p>C++的stl使用queue表示队列，常用的操作和属性如下表所示</p>
+<h3 id="stl中的queue">STL中的queue
+</h3><p>C++的stl使用queue表示队列，常用的操作和属性如下表所示</p>
 <ul>
 <li><code>front()</code>：返回 queue 中第一个元素的引用。如果 queue 是常量，就返回一个常引用；如果 queue 为空，返回值是未定义的。</li>
 <li><code>back()</code>：返回 queue 中最后一个元素的引用。如果 queue 是常量，就返回一个常引用；如果 queue 为空，返回值是未定义的。</li>
@@ -857,9 +836,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="典型题目">典型题目</h2>
-<h3 id="二叉树的右视图">二叉树的右视图</h3>
-<p>题目链接见<a class="link" href="https://leetcode-cn.com/problems/binary-tree-right-side-view/"  target="_blank" rel="noopener"
+</div><h2 id="典型题目">典型题目
+</h2><h3 id="二叉树的右视图">二叉树的右视图
+</h3><p>题目链接见<a class="link" href="https://leetcode-cn.com/problems/binary-tree-right-side-view/"  target="_blank" rel="noopener"
     >199. 二叉树的右视图 - 力扣（LeetCode）</a>，如果有了上面题目的框架，这个题目其实很简单，既然每次遍历队列保存的<strong>这一层所有节点</strong>，而且节点的顺序是从左到右保存的，所以可以在每一层遍历的时候将队列的最后一个node加入到这个vector中，代码如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -927,8 +906,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="二叉树中所有距离为-k-的结点">二叉树中所有距离为 K 的结点</h3>
-<p>题目见<a class="link" href="https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/"  target="_blank" rel="noopener"
+</div><h3 id="二叉树中所有距离为-k-的结点">二叉树中所有距离为 K 的结点
+</h3><p>题目见<a class="link" href="https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/"  target="_blank" rel="noopener"
     >863. 二叉树中所有距离为 K 的结点 - 力扣（LeetCode）</a>，这道题稍微有点复杂，观察给出的例子（如下图），与5的节点距离为2的节点除了4和7之外还有1，如果仅仅给出4和7是比较简单的，只要以5为根节点，记录depth = 1，套用引子中的程序，将depth = K + 1的所有的节点列出来即可。</p>
 <p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/06/28/sketch0.png"
 	
@@ -1186,8 +1165,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="颜色交替的最短路径">颜色交替的最短路径</h3>
-<p>题目见<a class="link" href="https://leetcode-cn.com/problems/shortest-path-with-alternating-colors/"  target="_blank" rel="noopener"
+</div><h3 id="颜色交替的最短路径">颜色交替的最短路径
+</h3><p>题目见<a class="link" href="https://leetcode-cn.com/problems/shortest-path-with-alternating-colors/"  target="_blank" rel="noopener"
     >1129. 颜色交替的最短路径 - 力扣（LeetCode）</a>，这道题难度要大一点，但是后面的方法仍然是BFS，代码如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1379,11 +1358,11 @@
 <li>使用<code>visited</code>三维数组标识节点是否被访问过的信息；</li>
 <li>使用队列<code>myQueue</code>保存BFS中的node，这个队列中的元素是<code>&lt;node, expectColor&gt;</code>，即从<code>node</code>出发，从<code>node</code>起始的边的颜色，如果存在这样的边，那么将这条边的终点node和它的下一条不同颜色的边push进队列，循环往复直到所有的边都被访问到为止。</li>
 </ol>
-<h3 id="接雨水-ii">接雨水 II</h3>
-<p>题目见<a class="link" href="https://leetcode-cn.com/problems/trapping-rain-water-ii/"  target="_blank" rel="noopener"
+<h3 id="接雨水-ii">接雨水 II
+</h3><p>题目见<a class="link" href="https://leetcode-cn.com/problems/trapping-rain-water-ii/"  target="_blank" rel="noopener"
     >407. 接雨水 II - 力扣（LeetCode）</a>，「待补充」。</p>
-<h2 id="参考资料">参考资料</h2>
-<ul>
+<h2 id="参考资料">参考资料
+</h2><ul>
 <li><a class="link" href="https://www.wikiwand.com/zh-hans/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"  target="_blank" rel="noopener"
     >深度优先搜索 - Wikiwand</a>，维基百科介绍</li>
 <li><a class="link" href="https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/bfs-kuang-jia"  target="_blank" rel="noopener"
@@ -1436,7 +1415,7 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -1609,7 +1588,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

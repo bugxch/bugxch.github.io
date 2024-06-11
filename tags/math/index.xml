@@ -16,8 +16,8 @@
         <description>&lt;img src="https://cdn.pixabay.com/photo/2018/10/01/13/53/droplet-3716288_960_720.jpg" alt="Featured image of post 三门问题精解" /&gt;&lt;p&gt;书接&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/detection/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;上文&lt;/a&gt;，使用贝叶斯定理解释著名的&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh/%E8%92%99%E6%8F%90%E9%9C%8D%E7%88%BE%E5%95%8F%E9%A1%8C&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Monty Hall问题&lt;/a&gt;，思索清楚之后感觉挺有趣，分享下。&lt;/p&gt;
-&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;问题描述&#34;&gt;问题描述
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;參賽者會看見三扇門，其中一扇門的裏面有一輛汽車，選中裏面是汽車的那扇門，就可以贏得該輛汽車，另外兩扇門裏面則都是一隻山羊。當參賽者選定了一扇門，&lt;strong&gt;主持人會開啟另一扇是山羊的門&lt;/strong&gt;；並問：「要不要換一扇門？」&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Monty_open_door.svg/440px-Monty_open_door.svg.png&#34;
@@ -29,8 +29,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我想大多数人的答案应该是无论换不换门，结果都是一样，赢得比赛的概率是1/2，但是实际的答案是，&lt;strong&gt;换一扇门赢面更大&lt;/strong&gt;，准确得说换一扇门赢得比赛的概率是不换门的2倍。为什么会是这样呢？&lt;/p&gt;
-&lt;h2 id=&#34;分析解答&#34;&gt;分析解答&lt;/h2&gt;
-&lt;p&gt;为了对这个问题做精确的解答，我们有必要对问题的描述做更详细的澄清。当前的这个游戏满足如下的条件：&lt;/p&gt;
+&lt;h2 id=&#34;分析解答&#34;&gt;分析解答
+&lt;/h2&gt;&lt;p&gt;为了对这个问题做精确的解答，我们有必要对问题的描述做更详细的澄清。当前的这个游戏满足如下的条件：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;參賽者在三扇門中挑選一扇。他並不知道內裏有甚麼。&lt;/li&gt;
 &lt;li&gt;主持人知道每扇門後面有什麼。&lt;/li&gt;
@@ -43,8 +43,8 @@
 &lt;/li&gt;
 &lt;li&gt;參賽者會被問是否保持他的原來選擇，還是轉而選擇剩下的那一道門。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;朴素分析&#34;&gt;朴素分析&lt;/h3&gt;
-&lt;p&gt;使用穷举法分析概率，假设3扇门的编号分别是1，2，3，根据最初选择的编号，以及奖品所在门的编号，可以画出下面的表格&lt;/p&gt;
+&lt;h3 id=&#34;朴素分析&#34;&gt;朴素分析
+&lt;/h3&gt;&lt;p&gt;使用穷举法分析概率，假设3扇门的编号分别是1，2，3，根据最初选择的编号，以及奖品所在门的编号，可以画出下面的表格&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -112,8 +112,8 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;上面的表格囊括了所有的情况。第一行的结果很明显，第二行的情况是，主持人肯定会打开编号3的门（因为只有这个门的后面不是奖品），所以如果换门肯定就是换到2号门，那么就赢了，其他的情况类似。这时，可以数一数后面两列的结果，换门有6次赢，是不换门的2倍（只有3次赢）。&lt;/p&gt;
-&lt;h3 id=&#34;贝叶斯定理&#34;&gt;贝叶斯定理&lt;/h3&gt;
-&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/detection/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;贝叶斯定理&#34;&gt;贝叶斯定理
+&lt;/h3&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/detection/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;新冠检测后面的数学定理&lt;/a&gt;里面的贝叶斯定理，我们推算下这个令人吊诡的结论是如何产生的。我们假设有三扇门的编号分别是A、B和C。在没有任何其他信息的情况下，你选择了A作为答案。此时&lt;/p&gt;
 &lt;p&gt;$$
 Pr(A) = Pr(B) = Pr(C) = \frac{1}{3}
@@ -144,8 +144,8 @@ Pr(E) &amp;amp;= Pr(A)Pr(E|A) + Pr(B)Pr(E|B) + Pr(C)Pr(E|C)\
 \end{align}
 $$&lt;/p&gt;
 &lt;p&gt;带入上面的公式，可以得到$Pr(A|E) = \frac{1}{3}$和$Pr(B|E) = \frac{2}{3}$&lt;/p&gt;
-&lt;h2 id=&#34;为什么会错&#34;&gt;为什么会错？&lt;/h2&gt;
-&lt;p&gt;我们的大脑在分析这个问题时，做了不切实际的假设，并且对这个假设深信不疑。我们习惯于分析&lt;strong&gt;相互独立的随机事件&lt;/strong&gt;，最典型的例子是抛硬币，抛掷一枚硬币正面朝上的概率是0.5，我们得到这个结论的依据是&lt;strong&gt;特定结果数量与结果总数的比例&lt;/strong&gt;，正面的情况是1，总的结果是2，所以概率是1/2。这就是为什么我们认为无论更换与否，赢得的概率一样的原因。但是实际的情况并不是这样的，&lt;strong&gt;选择换门与否并不是相互独立随机事件&lt;/strong&gt;，下面我们做更进一步的说明。&lt;/p&gt;
+&lt;h2 id=&#34;为什么会错&#34;&gt;为什么会错？
+&lt;/h2&gt;&lt;p&gt;我们的大脑在分析这个问题时，做了不切实际的假设，并且对这个假设深信不疑。我们习惯于分析&lt;strong&gt;相互独立的随机事件&lt;/strong&gt;，最典型的例子是抛硬币，抛掷一枚硬币正面朝上的概率是0.5，我们得到这个结论的依据是&lt;strong&gt;特定结果数量与结果总数的比例&lt;/strong&gt;，正面的情况是1，总的结果是2，所以概率是1/2。这就是为什么我们认为无论更换与否，赢得的概率一样的原因。但是实际的情况并不是这样的，&lt;strong&gt;选择换门与否并不是相互独立随机事件&lt;/strong&gt;，下面我们做更进一步的说明。&lt;/p&gt;
 &lt;p&gt;第一步，随机选择一扇门，这个的确是随机的，无论选择哪一扇门，最终赢得比赛的概率是1/3。但是整个事件的随机独立性在蒙蒂选择打开哪扇门的时候发生了变化，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;他事先不知道没有被你选中的那两扇门后面奖品的情况，他&lt;strong&gt;随机选择&lt;/strong&gt;任意扇门；&lt;/li&gt;
@@ -157,8 +157,8 @@ $$&lt;/p&gt;
 &lt;li&gt;第二种情况，他倾向于选择没有奖品的那扇门，这次的选择不是随机的，而是有意识的选择，尤其当两扇门中有一扇有奖品的时候，他&lt;strong&gt;必然&lt;/strong&gt;会选择没有奖品的那扇门，此时选择那扇门的概率是1，而不是1/2。这样的选择具有&lt;strong&gt;倾向性&lt;/strong&gt;，而不是&lt;strong&gt;随机决策&lt;/strong&gt;的结果。实际上，他排除了不是奖品的那扇门，所以&lt;strong&gt;剩下来的那扇门有奖品的概率更高&lt;/strong&gt;，而不是和他选择打开的那扇门的概率相同。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这里是另一种分析的思路，初始选择中，假设你选择了A，那么A门有奖品的概率是$\frac{1}{3}$，B门和C门有奖品的概率是$\frac{2}{3}$。B门和C门至少有一扇门是没有奖品的，蒙蒂知道奖品的位置，他打开那扇没有奖品的门，假设是C门。那剩下B门有奖品的概率就变成了$\frac{2}{3}$！&lt;strong&gt;蒙蒂帮你排除了没有奖品的那扇门&lt;/strong&gt;，所以你换门之后赢得的概率一定是$\frac{2}{3}$！&lt;/p&gt;
-&lt;h2 id=&#34;问题变种&#34;&gt;问题变种&lt;/h2&gt;
-&lt;p&gt;这个问题的变种是，在你选定门之后，节目组请另一个嘉宾在你没有选定的两扇门里面随机选定一扇门，那扇门后面没有山羊，那么他打开其中任意一扇门，显示是山羊，此时更换选择的赢面是否更大？注意，这个嘉宾事先不清楚奖品在那一扇门后面。&lt;/p&gt;
+&lt;h2 id=&#34;问题变种&#34;&gt;问题变种
+&lt;/h2&gt;&lt;p&gt;这个问题的变种是，在你选定门之后，节目组请另一个嘉宾在你没有选定的两扇门里面随机选定一扇门，那扇门后面没有山羊，那么他打开其中任意一扇门，显示是山羊，此时更换选择的赢面是否更大？注意，这个嘉宾事先不清楚奖品在那一扇门后面。&lt;/p&gt;
 &lt;p&gt;答案是否，无论是否更换选择，两个的概率都是1/2。参考之前的贝叶斯定理的推理，假设同前，你选了A门，那么此时嘉宾需要在B和C门直接选一个门，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;$Pr(E|A) = 1/2$，因为如果奖品在A门后面，这里的概率分两步，第一步是选择C门，嘉宾选择的概率是1/2，第二步是C门后面是羊的概率，此时是1，所以最终的概率是1/2 * 1 = 1/2；&lt;/li&gt;
@@ -166,8 +166,8 @@ $$&lt;/p&gt;
 &lt;li&gt;$Pr(E|C) = 0$，第二步C门后面是羊的概率是0，所以按照上面的分析最终的概率是1/2*0 =0。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;可以看出无论更换与否，中奖的概率都是一样的。&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ol&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.maa.org/external_archive/devlin/devlin_12_05.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Monty Hall revisited&lt;/a&gt;，问题的数学推导&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh/%E8%92%99%E6%8F%90%E9%9C%8D%E7%88%BE%E5%95%8F%E9%A1%8C&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。\n">
 <title>正则表达式详解（下）</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='正则表达式详解（下）'>
-<meta property='og:description' content='书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="正则表达式详解（下）">
+<meta property='og:description' content="书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3%E4%B8%8B/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='正则表达式' /><meta property='article:published_time' content='2018-07-21T21:10:56&#43;00:00'/><meta property='article:modified_time' content='2018-07-21T21:10:56&#43;00:00'/>
 <meta name="twitter:title" content="正则表达式详解（下）">
-<meta name="twitter:description" content="书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。
-">
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+<meta name="twitter:description" content="书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。\n">
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -100,7 +97,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -278,31 +275,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -310,7 +288,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -318,10 +296,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -432,8 +411,8 @@
     
     
     <p>书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。</p>
-<h2 id="匹配字符串">匹配字符串</h2>
-<p>python 的 re 模块支持正则表达式，基本步骤是使用 compile 编译正则表达式为 pattern 实例，之后使用实例匹配目标文本（一般使用方法 match 和 search）。先来看一个简单的例子，</p>
+<h2 id="匹配字符串">匹配字符串
+</h2><p>python 的 re 模块支持正则表达式，基本步骤是使用 compile 编译正则表达式为 pattern 实例，之后使用实例匹配目标文本（一般使用方法 match 和 search）。先来看一个简单的例子，</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -680,8 +659,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以将<code>group(0)</code>理解成没有分组符号匹配的所有字符，而之后的编号代表分组依次匹配的子串。</p>
-<h2 id="修改字符串">修改字符串</h2>
-<p>模块级别的字符串修改方法如下表所示。</p>
+<h2 id="修改字符串">修改字符串
+</h2><p>模块级别的字符串修改方法如下表所示。</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -723,8 +702,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">[</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;test, short and sweet, of split().&#39;</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="替换字符串">替换字符串</h2>
-<ul>
+</div><h2 id="替换字符串">替换字符串
+</h2><ul>
 <li><code>.sub</code>(<em>replacement</em>, <em>string</em>[, <em>count=0</em>]) 将 string 中所有符合 pattern 模式替换成 replacement，count 表示替换的次数。看如下的例子</li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -796,10 +775,10 @@
 </span></span><span class="line"><span class="cl"><span class="s1">&#39;subsection</span><span class="si">{First}</span><span class="s1">&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="使用正则表达式">使用正则表达式</h2>
-<p>考虑使用正则表达式之前，先想想是否可以使用字符串方法就能解决问题。如果仅仅匹配和替换固定字符串，python 自带的字符串方法速度更快，效率更高，不是每个字符串的替换都需要使用正则表达式。</p>
-<h2 id="未尽事宜">未尽事宜</h2>
-<p>相信以上介绍的内容能够解决大部分的字符处理问题，但是对于专业大数据处理可能还需要了解正则表达式更多的内容，比如不同语言的正则表达式语法，以及复杂正则表达式的匹配效率。这些比较深入的知识可以参考 Jeffrey E.F. Friedl 的<a class="link" href="http://datamining.xmu.edu.cn/documentation/books/mastering_regular_expressions.pdf"  target="_blank" rel="noopener"
+</div><h2 id="使用正则表达式">使用正则表达式
+</h2><p>考虑使用正则表达式之前，先想想是否可以使用字符串方法就能解决问题。如果仅仅匹配和替换固定字符串，python 自带的字符串方法速度更快，效率更高，不是每个字符串的替换都需要使用正则表达式。</p>
+<h2 id="未尽事宜">未尽事宜
+</h2><p>相信以上介绍的内容能够解决大部分的字符处理问题，但是对于专业大数据处理可能还需要了解正则表达式更多的内容，比如不同语言的正则表达式语法，以及复杂正则表达式的匹配效率。这些比较深入的知识可以参考 Jeffrey E.F. Friedl 的<a class="link" href="http://datamining.xmu.edu.cn/documentation/books/mastering_regular_expressions.pdf"  target="_blank" rel="noopener"
     >《精通正则表达式》</a>，里面有非常专业的解释，相信它可以帮你解决正则表达式的绝大部分疑问。</p>
 <p><img src="http://image-7.verycd.com/ff45820ed025353061ccb475dc49c57d109161/%E7%B2%BE%E9%80%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.jpg"
 	
@@ -852,7 +831,7 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -1019,7 +998,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

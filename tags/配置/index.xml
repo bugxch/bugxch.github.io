@@ -23,13 +23,13 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我们的配置基本上都在 Preference 的菜单里，下面逐个介绍如何设置。&lt;/p&gt;
-&lt;h3 id=&#34;处理-tab-和空格&#34;&gt;处理 TAB 和空格&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;处理-tab-和空格&#34;&gt;处理 TAB 和空格
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;去掉每行末尾的空格和 TAB 键&lt;/strong&gt;：设置&lt;code&gt;Options-&amp;gt;Perferences-&amp;gt;Files-&amp;gt; Remove extra white space when saving&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;TAB 键可见&lt;/strong&gt;：设置&lt;code&gt;Options-&amp;gt;Document Options-&amp;gt;Editing Options-&amp;gt;Visible tabs&lt;/code&gt;，就可以在代码里面看到 TAB 键。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;处理换行键&#34;&gt;处理换行键&lt;/h3&gt;
-&lt;p&gt;*nix 系统和 Windows 系统文件中的换行符不同。&lt;/p&gt;
+&lt;h3 id=&#34;处理换行键&#34;&gt;处理换行键
+&lt;/h3&gt;&lt;p&gt;*nix 系统和 Windows 系统文件中的换行符不同。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;*nix 系统中的换行符只有一个字符，&lt;code&gt;\n&lt;/code&gt;；&lt;/li&gt;
 &lt;li&gt;Windows 系统中的换行由两个字符组成，&lt;code&gt;\r\n&lt;/code&gt;；&lt;/li&gt;
@@ -42,19 +42,19 @@
 &lt;/ol&gt;
 &lt;p&gt;在 linux 下，可以使用命令&lt;code&gt;unix2dos&lt;/code&gt;把 linux 文件格式转换成 windows 文件格式，命令&lt;code&gt;dos2unix&lt;/code&gt;把 windows 格式转换成 linux 文件格式。&lt;/p&gt;
 &lt;p&gt;为了保证在 Windows 环境下打开文件之后仍然保持 linxu 的文件的显示正确，设置&lt;code&gt;Preference-&amp;gt;Other-&amp;gt;Default file format&lt;/code&gt;为 Unix(LF)。&lt;/p&gt;
-&lt;h3 id=&#34;标题栏显示文件完整路径&#34;&gt;标题栏显示文件完整路径&lt;/h3&gt;
-&lt;p&gt;这个功能在查看文档路径是非常有用，去掉&lt;code&gt;Preference-&amp;gt;Display-&amp;gt;Options-&amp;gt;Trim long path names while elipses&lt;/code&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;文件名首字母不要大写&#34;&gt;文件名首字母不要大写&lt;/h3&gt;
-&lt;p&gt;勾选&lt;code&gt;Preference-&amp;gt;Display-&amp;gt;Options-&amp;gt;Show exact case of file names&lt;/code&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;其他设置&#34;&gt;其他设置&lt;/h3&gt;
-&lt;p&gt;将 Preference 下面的所有 tab 页都过一遍。&lt;/p&gt;
-&lt;h4 id=&#34;general&#34;&gt;General&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;标题栏显示文件完整路径&#34;&gt;标题栏显示文件完整路径
+&lt;/h3&gt;&lt;p&gt;这个功能在查看文档路径是非常有用，去掉&lt;code&gt;Preference-&amp;gt;Display-&amp;gt;Options-&amp;gt;Trim long path names while elipses&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;文件名首字母不要大写&#34;&gt;文件名首字母不要大写
+&lt;/h3&gt;&lt;p&gt;勾选&lt;code&gt;Preference-&amp;gt;Display-&amp;gt;Options-&amp;gt;Show exact case of file names&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;其他设置&#34;&gt;其他设置
+&lt;/h3&gt;&lt;p&gt;将 Preference 下面的所有 tab 页都过一遍。&lt;/p&gt;
+&lt;h4 id=&#34;general&#34;&gt;General
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Project File Synchronization-&amp;gt;Remove missing file from project&lt;/code&gt;选上可以避免因文件找不到而弹出错误对话框；&lt;/li&gt;
 &lt;li&gt;把&lt;code&gt;Misc-&amp;gt;Use stricter confirmation dialog&lt;/code&gt;选项去掉可以使确认时不输入”yes”。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;typing&#34;&gt;Typing&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;typing&#34;&gt;Typing
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;ource Editing-&amp;gt;Indent commands affect #-preprocessor statements&lt;/code&gt;去掉后（默认值），进行多行缩进时不会影响预处理语句（如 #if…#endif）。&lt;/p&gt;
 &lt;/li&gt;
@@ -69,42 +69,42 @@
 &lt;p&gt;注意 Browsing in Lists 里其实有两个功能，但一般我们只能看到 Match syllables while typing 这一条，应该是 si 的菜单设计没有做好，导致在中文 windows 下不能显示全，另一个功能是 Match members while typing，用于打开 / 关闭按成员变量名来检索类 / 结构体的功能。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;files&#34;&gt;Files&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;files&#34;&gt;Files
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Opening Files-&amp;gt;Sharing: Let other programs modify files&lt;/code&gt;，以共享方式打开文件，这个很重要，保证可以在其它编辑中同时编辑该文件。典型的场景就是用 ide 环境去动态编译调试，而用 si 静态阅读；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Customize &#39;Open&#39; Command...&lt;/code&gt;，用于设置 Ctrl+O 打开的页面，默认选项是 Project File list view in Project Window，建议保持默认。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Saving Files-&amp;gt;Preserve Undo data and revision marks after saving&lt;/code&gt;，如果发现保存后就不能 undo 了，请检查该选项是否选中。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Remove extra white space when saving&lt;/code&gt;。保存时自动去除每行尾部的空格和 tab。建议选中。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;languages&#34;&gt;Languages&lt;/h4&gt;
-&lt;p&gt;自定义其它编程语言的语法解析，这个… 还是另写一篇来讲吧。&lt;/p&gt;
+&lt;h4 id=&#34;languages&#34;&gt;Languages
+&lt;/h4&gt;&lt;p&gt;自定义其它编程语言的语法解析，这个… 还是另写一篇来讲吧。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;Conditional Parsing&lt;/code&gt;不要错过了，这里的 Conditions 功能实在让人喜欢。Conditions 是什么意思呢？我们的代码中一般都会有一些开关宏，通过在 Conditions 中配置这些宏的默认值，可以让 si 把配置为不开启的宏视为无效代码，从而不进行符号检索。&lt;/p&gt;
 &lt;p&gt;如果源代码中的开关宏太多，还可以使用 Condition Parsing 中的 Scan Files 来自动找出所有开关宏。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;symbol-lookups&#34;&gt;Symbol Lookups&lt;/h4&gt;
-&lt;p&gt;没有特别的。&lt;/p&gt;
-&lt;h4 id=&#34;display&#34;&gt;Display&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;symbol-lookups&#34;&gt;Symbol Lookups
+&lt;/h4&gt;&lt;p&gt;没有特别的。&lt;/p&gt;
+&lt;h4 id=&#34;display&#34;&gt;Display
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;显示配置和个人喜好和显示器的状态有关，偶用的 x60 小本，屏幕资源有限，所以在 Display Elements 里把 Project Window, Status Bar, Tool Bar，Clip Window 都关了，基本用快捷键可以代替它们。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Options-&amp;gt;Horizontal scroll bars for each new window&lt;/code&gt;。很多大师都教导我们说一行不要写太多代码。在这个指导思想下，我们不需要这个东东。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Show exact case of file names&lt;/code&gt;。如果看不惯 si 把所有的文件名首字母都大写就勾上这个选项吧。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Tile source and destination windows for Source Link commands&lt;/code&gt;。Source Link 很多时候用于外部命令输出结果的解析（如 Make, lint），这个功能会把解析结果与目标窗口自动 tile，很实用。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Trim long path names with ellipses&lt;/code&gt;。这个建议不要选中。事实上这个主要影响标题栏，但一般来说标题栏上的空间是充裕的，选上之后往往会令我们不知道所编辑文件的具体位置。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;color&#34;&gt;Color&lt;/h4&gt;
-&lt;p&gt;自己配置。&lt;/p&gt;
-&lt;h4 id=&#34;syntax-decorations&#34;&gt;&lt;strong&gt;Syntax Decorations&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;color&#34;&gt;Color
+&lt;/h4&gt;&lt;p&gt;自己配置。&lt;/p&gt;
+&lt;h4 id=&#34;syntax-decorations&#34;&gt;&lt;strong&gt;Syntax Decorations&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;可以把一些符号转换成特殊形式显示，如 -&amp;gt; 转换成→。如果要使用该功能，不能开启&lt;code&gt;Syntax Formatting-&amp;gt;Basics-&amp;gt;Use only color formatting&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Auto annotations&lt;/code&gt;下的三个功能都比较有用;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Show arrows at goto statements&lt;/code&gt;可以在 goto 时显示一个向上或向下的箭头，表示是向上 goto 还是向下 goto，不过我们还是尽量不要用 goto 了。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Annotate closing braces with end-statement&lt;/code&gt;。在”}” 后显示标识，表示该”}” 与哪个 if/switch 配对，而下面的&lt;code&gt;Annotate closing braces only for long blocks&lt;/code&gt;则是一个补充选项，表示只在较长的语句块时才显示标识。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;syntax-formatting&#34;&gt;Syntax Formatting&lt;/h4&gt;
-&lt;p&gt;如果让大家说出喜欢 si 的几个理由，我想语法着色一定会是其中之一。&lt;/p&gt;
+&lt;h4 id=&#34;syntax-formatting&#34;&gt;Syntax Formatting
+&lt;/h4&gt;&lt;p&gt;如果让大家说出喜欢 si 的几个理由，我想语法着色一定会是其中之一。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Basics-&amp;gt;Use only color formatting&lt;/code&gt;。只启用 style 中关于颜色的设置。其它如粗体、斜体、阴影等都不启用。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Apply Styles for Lanugage Elements&lt;/code&gt;。把分类启用 style，都选上吧。&lt;/li&gt;
@@ -119,8 +119,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;其他的没有什么特别的了，最后简单说下 si 的配置文件。可以通过&lt;code&gt;Options-&amp;gt;Load Configuration/Save Configuration&lt;/code&gt;来导入 / 导出配置，可以导出全部，也可以导出某几个部分（如 style）。si 的配置有两级，一是全局配置，一是项目配置。出入方便考虑，统一一个配置就好了，在创建项目时选择用全局配置（默认值）。&lt;/p&gt;
-&lt;h3 id=&#34;参考文档&#34;&gt;参考文档&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;参考文档&#34;&gt;参考文档
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/TskyFree/article/details/8121951&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Windows、Unix、Mac 不同操作系统的换行问题 - 剖析回车符 \ r 和换行符 \ n - CSDN 博客&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/lanmanck/article/details/8638391&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

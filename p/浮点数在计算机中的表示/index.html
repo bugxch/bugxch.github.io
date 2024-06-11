@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='接上一篇博客《为什么会有补码？》，我仅仅分析了整数在计算机中表示方式，但是计算机中的浮点数又是如何表示的呢？
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="接上一篇博客《为什么会有补码？》，我仅仅分析了整数在计算机中表示方式，但是计算机中的浮点数又是如何表示的呢？\n">
 <title>浮点数在计算机中的表示</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='浮点数在计算机中的表示'>
-<meta property='og:description' content='接上一篇博客《为什么会有补码？》，我仅仅分析了整数在计算机中表示方式，但是计算机中的浮点数又是如何表示的呢？
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="浮点数在计算机中的表示">
+<meta property='og:description' content="接上一篇博客《为什么会有补码？》，我仅仅分析了整数在计算机中表示方式，但是计算机中的浮点数又是如何表示的呢？\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:tag' content='CSAPP' /><meta property='article:published_time' content='2018-07-21T08:19:45&#43;00:00'/><meta property='article:modified_time' content='2018-07-21T08:19:45&#43;00:00'/>
 <meta name="twitter:title" content="浮点数在计算机中的表示">
-<meta name="twitter:description" content="接上一篇博客《为什么会有补码？》，我仅仅分析了整数在计算机中表示方式，但是计算机中的浮点数又是如何表示的呢？
-">
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+<meta name="twitter:description" content="接上一篇博客《为什么会有补码？》，我仅仅分析了整数在计算机中表示方式，但是计算机中的浮点数又是如何表示的呢？\n">
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -100,7 +97,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -278,31 +275,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -310,7 +288,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -318,10 +296,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -447,8 +426,8 @@
 	
 	
 ></p>
-<h2 id="引子">引子</h2>
-<p>首先，使用之前博客的程序，可以看到如下的这些实数在计算机中的计算结果是</p>
+<h2 id="引子">引子
+</h2><p>首先，使用之前博客的程序，可以看到如下的这些实数在计算机中的计算结果是</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -482,9 +461,9 @@
 </table></div>
 <p>右边的计算机中的数值表示是按照<a class="link" href="https://ieeexplore.ieee.org/document/4610935/"  target="_blank" rel="noopener"
     >《IEEE 754-2008》</a>的标准存储数据的，具体的规定如下所示。</p>
-<h2 id="ieee-754-标准">IEEE 754 标准</h2>
-<h3 id="表示形式">表示形式</h3>
-<p>IEEE 754规定了二进制浮点数在计算中的存储方式，我们以C语言中的float为例来具体说明。无论是32位系统还是64位系统，计算机中的float占用4个字节，我们就使用这些字节来存储任意的浮点数，可以参考下图</p>
+<h2 id="ieee-754-标准">IEEE 754 标准
+</h2><h3 id="表示形式">表示形式
+</h3><p>IEEE 754规定了二进制浮点数在计算中的存储方式，我们以C语言中的float为例来具体说明。无论是32位系统还是64位系统，计算机中的float占用4个字节，我们就使用这些字节来存储任意的浮点数，可以参考下图</p>
 <p><img src="https://pic.imgdb.cn/item/62672c03239250f7c5f6394d.gif"
 	
 	
@@ -510,8 +489,8 @@ $$</p>
 <li>确认E。它是个非负正数，按照第1步计算出来的结果，我们的指数应该是6。但是，IEEE规定根据二进制计算浮点数时，需要给指数减去一个偏置值，对于float类型这个数为127，对于double类型，这个数是1023。因此反过来，在将数字转换成二进制存储的时候，要加上这个偏置值，因此 E=6+127=133。</li>
 <li>综合以上的所有计算结果，最后在计算机中存储的形式是 <code>01000010110011001010010110100001</code>，转换成16进制就是 <code>42CCA5A2</code>。</li>
 </ol>
-<h3 id="特别规定">特别规定</h3>
-<p>依照上面的方法，可以依次确认其他3个浮点数的表示形式。这都是比较常规的<strong>规格化</strong>数据的处理方法，IEEE针对一些特殊的数字（绝对值特别接近0的数字或者无穷大无穷小），引入了一些特殊的规定，称为<strong>非规格化</strong>表示方法，总结如下。</p>
+<h3 id="特别规定">特别规定
+</h3><p>依照上面的方法，可以依次确认其他3个浮点数的表示形式。这都是比较常规的<strong>规格化</strong>数据的处理方法，IEEE针对一些特殊的数字（绝对值特别接近0的数字或者无穷大无穷小），引入了一些特殊的规定，称为<strong>非规格化</strong>表示方法，总结如下。</p>
 <p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20240322210012.png?imageSlim"
 	
 	
@@ -538,8 +517,8 @@ $$</p>
 </ul>
 </li>
 </ul>
-<h2 id="float16的浮点表示">float16的浮点表示</h2>
-<p>参考<a class="link" href="https://www.wikiwand.com/zh-hans/%E5%8D%8A%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%E6%95%B0"  target="_blank" rel="noopener"
+<h2 id="float16的浮点表示">float16的浮点表示
+</h2><p>参考<a class="link" href="https://www.wikiwand.com/zh-hans/%E5%8D%8A%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%E6%95%B0"  target="_blank" rel="noopener"
     >半精度浮点数</a>，基于上面的理解，我们可以研究下float16的一些特点。float16是用16个bit表示浮点数，不同的bit位的表示如下</p>
 <p><img src="https://pic.imgdb.cn/item/6268ee4a239250f7c584e614.png"
 	
@@ -703,8 +682,8 @@ $$</p>
 </span></span><span class="line"><span class="cl">    <span class="n">udata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">(</span><span class="n">udata</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="参考资料">参考资料</h2>
-<ul>
+</div><h2 id="参考资料">参考资料
+</h2><ul>
 <li><a class="link" href="http://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html"  target="_blank" rel="noopener"
     >浮点数的二进制表示 - 阮一峰的网络日志</a></li>
 <li><a class="link" href="https://www.wikiwand.com/en/IEEE_754"  target="_blank" rel="noopener"
@@ -761,7 +740,7 @@ $$</p>
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -940,7 +919,7 @@ $$</p>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

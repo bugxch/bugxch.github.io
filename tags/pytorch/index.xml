@@ -22,8 +22,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;安装插件&#34;&gt;安装插件&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;安装插件&#34;&gt;安装插件
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;TensorboardX，TensorboardX支持scalar, image, figure, histogram, audio, text, graph, onnx_graph, embedding, pr_curve and videosummaries等不同的可视化展示方式，具体介绍移步至项目Github 观看详情。使用下面的命令安装&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -47,8 +47,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;具体过程&#34;&gt;具体过程&lt;/h2&gt;
-&lt;p&gt;参考代码&lt;/p&gt;
+&lt;h2 id=&#34;具体过程&#34;&gt;具体过程
+&lt;/h2&gt;&lt;p&gt;参考代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -97,8 +97,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;然后按照命令行提示打开即可。&lt;/p&gt;
-&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;参考链接&#34;&gt;参考链接
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pytorchtutorial.com/pytorch-tensorboardx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PyTorch 使用 TensorboardX 进行网络可视化-PyTorch 中文网&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/46eb3004beca&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

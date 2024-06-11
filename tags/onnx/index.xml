@@ -14,9 +14,9 @@
         
         <guid>https://blog.bugxch.top/p/tf%E4%B8%AD%E7%9A%84padding%E6%96%B9%E5%BC%8Fsame%E5%92%8Cvalid%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
         <description>&lt;p&gt;Tensorflow中的padding有两种方式，其中的SAME方式比较特殊，可能产生非对称pad的情况，之前在验证一个tensorflow的网络时踩到这个坑。&lt;/p&gt;
-&lt;h2 id=&#34;tensorflow的计算公式&#34;&gt;Tensorflow的计算公式&lt;/h2&gt;
-&lt;h3 id=&#34;二维卷积接口&#34;&gt;二维卷积接口&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;tensorflow的计算公式&#34;&gt;Tensorflow的计算公式
+&lt;/h2&gt;&lt;h3 id=&#34;二维卷积接口&#34;&gt;二维卷积接口
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -28,8 +28,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;padding计算公式&#34;&gt;padding计算公式&lt;/h3&gt;
-&lt;p&gt;需要注意padding的配置，如果是字符串就有&lt;code&gt;SAME&lt;/code&gt;和&lt;code&gt;VALID&lt;/code&gt;两种配置，如果是数字list就明确表明padding在各个维度的数量。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;padding计算公式&#34;&gt;padding计算公式
+&lt;/h3&gt;&lt;p&gt;需要注意padding的配置，如果是字符串就有&lt;code&gt;SAME&lt;/code&gt;和&lt;code&gt;VALID&lt;/code&gt;两种配置，如果是数字list就明确表明padding在各个维度的数量。&lt;/p&gt;
 &lt;p&gt;首先，&lt;code&gt;padding&lt;/code&gt;如果表示确切的数字，其维度是input维度的2倍，因为每个维度两个边需要补pad，比如宽度的左边和右边，高度的上边和下边，但是tensorflow中不会给N维度以及C维度补pad，仅仅在W和H维度补pad，因此对于&lt;code&gt;NHWC&lt;/code&gt;，&lt;code&gt;padding =[[0, 0], [pad_top, pad_bottom], [pad_left, pad_right], [0, 0]] &lt;/code&gt;，对于&lt;code&gt;NCHW&lt;/code&gt;的pad的顺序换过来。&lt;/p&gt;
 &lt;p&gt;然后，如果输入的是字符串选项，补的pad都可以映射到padding这个参数上，&lt;/p&gt;
 &lt;ul&gt;
@@ -154,8 +154,8 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Sum&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;is&lt;/span&gt;  &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;onnx计算公式&#34;&gt;ONNX计算公式&lt;/h2&gt;
-&lt;p&gt;onnx的接口，参考IR定义如下&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;onnx计算公式&#34;&gt;ONNX计算公式
+&lt;/h2&gt;&lt;p&gt;onnx的接口，参考IR定义如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -448,8 +448,8 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;SAME_UPPER&lt;/code&gt;和&lt;code&gt;SAME_LOWER&lt;/code&gt;对应$P_a$是奇数的情况，如果是偶数，结果一样，如果是奇数，那么&lt;code&gt;SAME_UPPER&lt;/code&gt;放小半部分$\lfloor{P_a/2}\rfloor$，&lt;code&gt;SAME_LOWER&lt;/code&gt;放大半部分$P_a - \lfloor{P_a/2}\rfloor$。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;举例&#34;&gt;举例&lt;/h2&gt;
-&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;举例&#34;&gt;举例
+&lt;/h2&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;python - What is the difference between &amp;lsquo;SAME&amp;rsquo; and &amp;lsquo;VALID&amp;rsquo; padding in tf.nn.max_pool of tensorflow? - Stack Overflow&lt;/a&gt;上有一个比较具体的例子，可以看到，使用&lt;code&gt;SAME&lt;/code&gt;模式可以使得stride刚好完整取完所有的input而不会有剩余或者短缺。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -488,8 +488,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;在这个例子中$W_i = 13, W_k = 6, S = 5$。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/wuzqChom/article/details/74785643&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;TensorFlow中CNN的两种padding方式“SAME”和“VALID” - wuzqChom的博客 - CSDN博客&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

@@ -15,9 +15,9 @@
         <guid>https://blog.bugxch.top/p/manjaro%E5%AE%89%E8%A3%85cuda%E6%95%99%E7%A8%8B/</guid>
         <description>&lt;p&gt;去年年底安装将我的Thinkpad T450的双系统中的opensuse换成了&lt;a class=&#34;link&#34; href=&#34;https://manjaro.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Manjaro&lt;/a&gt;，折腾安装了下CUDA，是为记录。&lt;/p&gt;
-&lt;h2 id=&#34;基本安装&#34;&gt;基本安装&lt;/h2&gt;
-&lt;h3 id=&#34;nvidia显卡安装&#34;&gt;NVIDIA显卡安装&lt;/h3&gt;
-&lt;p&gt;Manjaro系统安装显卡比较简单，它有一个命令&lt;/p&gt;
+&lt;h2 id=&#34;基本安装&#34;&gt;基本安装
+&lt;/h2&gt;&lt;h3 id=&#34;nvidia显卡安装&#34;&gt;NVIDIA显卡安装
+&lt;/h3&gt;&lt;p&gt;Manjaro系统安装显卡比较简单，它有一个命令&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -61,9 +61,9 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;从上图可知，我的显卡型号是GeForce 940M，显卡的驱动版本是415.27。&lt;/p&gt;
-&lt;h3 id=&#34;cuda安装&#34;&gt;CUDA安装&lt;/h3&gt;
-&lt;h4 id=&#34;安装命令&#34;&gt;安装命令&lt;/h4&gt;
-&lt;p&gt;Manjaro的CUDA安装也是异常简单，一行命令搞定&lt;/p&gt;
+&lt;h3 id=&#34;cuda安装&#34;&gt;CUDA安装
+&lt;/h3&gt;&lt;h4 id=&#34;安装命令&#34;&gt;安装命令
+&lt;/h4&gt;&lt;p&gt;Manjaro的CUDA安装也是异常简单，一行命令搞定&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -73,8 +73,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这行命令可能需要花费一些时间，请耐心等待。&lt;/p&gt;
-&lt;h4 id=&#34;验证安装&#34;&gt;验证安装&lt;/h4&gt;
-&lt;p&gt;完成之后，我们进入cuda的安装路径，我的路径是&lt;code&gt;/opt/cuda&lt;/code&gt;，你可以使用下面的命令将CUDA的示例程序拷贝到你的用户主目录下，之后编译程序&lt;/p&gt;
+&lt;h4 id=&#34;验证安装&#34;&gt;验证安装
+&lt;/h4&gt;&lt;p&gt;完成之后，我们进入cuda的安装路径，我的路径是&lt;code&gt;/opt/cuda&lt;/code&gt;，你可以使用下面的命令将CUDA的示例程序拷贝到你的用户主目录下，之后编译程序&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -99,10 +99,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在窗口中查看最后一行的结果是否为pass，如果是则表示CUDA安装成功。&lt;/p&gt;
-&lt;h2 id=&#34;双显卡配置&#34;&gt;双显卡配置&lt;/h2&gt;
-&lt;p&gt;我的电脑有两个显卡，一个是intel的集成显卡，一个是NVIDIA的独显。&lt;/p&gt;
-&lt;h3 id=&#34;安装显卡切换程序&#34;&gt;安装显卡切换程序&lt;/h3&gt;
-&lt;p&gt;Manjaro的双显卡配置有点问题，Bumblebee还是有点问题，使用下面的命令重新安装&lt;/p&gt;
+&lt;h2 id=&#34;双显卡配置&#34;&gt;双显卡配置
+&lt;/h2&gt;&lt;p&gt;我的电脑有两个显卡，一个是intel的集成显卡，一个是NVIDIA的独显。&lt;/p&gt;
+&lt;h3 id=&#34;安装显卡切换程序&#34;&gt;安装显卡切换程序
+&lt;/h3&gt;&lt;p&gt;Manjaro的双显卡配置有点问题，Bumblebee还是有点问题，使用下面的命令重新安装&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -137,8 +137,8 @@
 &lt;li&gt;找到并且改为：GRUB_CMLINE_LINUX_DEFAULT=&amp;ldquo;quiet &lt;strong&gt;acpi_osi=! acpi_osi=Linux acpi_osi=’Windows 2015’ pcie_port_pm=off&lt;/strong&gt; resume=&amp;hellip;&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;运行sudo update-grub，重启&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;测试显卡性能&#34;&gt;测试显卡性能&lt;/h3&gt;
-&lt;p&gt;使用下面的shell命令安装显卡测试程序&lt;/p&gt;
+&lt;h3 id=&#34;测试显卡性能&#34;&gt;测试显卡性能
+&lt;/h3&gt;&lt;p&gt;使用下面的shell命令安装显卡测试程序&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -194,8 +194,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;optirun nvidia-smi &lt;span class=&#34;c1&#34;&gt;# 查看CPU情况&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@joelognn/installing-tensorflow-1-6-0-gpu-on-manjaro-linux-9657fa63478&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Installing Tensorflow 1.6.0 + GPU on Manjaro Linux – Dr. Joe Logan – Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/yangruiGB2312/p/9004335.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

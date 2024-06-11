@@ -14,14 +14,14 @@
         
         <guid>https://blog.bugxch.top/p/factory-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608eae16d1a9ae528f502e1a.png" alt="Featured image of post Factory Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;继续之前的设计模式第四弹，这次是大名鼎鼎的工厂方法模式。&lt;/p&gt;
-&lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;使用情景&#34;&gt;使用情景
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method是创建型模式，使一个类的实例化延迟到其子类。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Factory有工厂的意思，简单来看，这个模式利用到了上一篇的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/dp_3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Template Method模式&lt;/a&gt;用来生成具体的实例，说得更清楚一点，工厂方法模式将创建对象的过程延迟到子类实现，其他的父类的步骤保持完整。&lt;/p&gt;
-&lt;h2 id=&#34;问题引入&#34;&gt;问题引入&lt;/h2&gt;
-&lt;p&gt;想象一个养殖业的农民，他刚开始仅仅在养马场养马，每个马都需要养殖长大之后在市面出售，后来他获得足够的利润之后，扩展业务也养牛，但是在牛场养牛，每头牛也是需要养殖长大之后在市面出售的。在刚开始的时候，我们需要记录每只马的养殖过程，后面还要记录它的售价。如果你前面只有养马的程序（包括生产、饲养、销售的过程），比如下面这样&lt;/p&gt;
+&lt;h2 id=&#34;问题引入&#34;&gt;问题引入
+&lt;/h2&gt;&lt;p&gt;想象一个养殖业的农民，他刚开始仅仅在养马场养马，每个马都需要养殖长大之后在市面出售，后来他获得足够的利润之后，扩展业务也养牛，但是在牛场养牛，每头牛也是需要养殖长大之后在市面出售的。在刚开始的时候，我们需要记录每只马的养殖过程，后面还要记录它的售价。如果你前面只有养马的程序（包括生产、饲养、销售的过程），比如下面这样&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -126,8 +126,8 @@
 &lt;li&gt;&lt;strong&gt;高耦合&lt;/strong&gt;，这个大类中的函数有一处需要添加分支，每个函数就都需要变化，但是每个函数实际是售卖动物的不耦合的步骤（生产不影响饲养，饲养不影响售卖），这些步骤之间耦合太紧，导致“霰弹式修改”；&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;分支瘫痪&lt;/strong&gt;，添加的类别越多，代码的&lt;code&gt;if/else/switch&lt;/code&gt;的分支越多，最后陷入分支瘫痪的状态。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
-&lt;p&gt;按照&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/20406704/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案
+&lt;/h2&gt;&lt;p&gt;按照&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/20406704/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《设计模式解析》&lt;/a&gt;中的原则，设计模式需要遵循如下的一些原则：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
@@ -142,8 +142,8 @@
 &lt;li&gt;动物被售卖，不同的动物&lt;strong&gt;售卖的价格&lt;/strong&gt;均不同；&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;可以看出可以将之前的方案拆解成两个类&lt;code&gt;Farm&lt;/code&gt;和&lt;code&gt;Animal&lt;/code&gt;，而且生产、饲养和售卖的方式都是&lt;strong&gt;可变&lt;/strong&gt;的，所以这些方法&lt;strong&gt;都是虚方法&lt;/strong&gt;。对于具体的动物，生成具体的农场和动物。&lt;/p&gt;
-&lt;h2 id=&#34;uml表示及其代码&#34;&gt;UML表示及其代码&lt;/h2&gt;
-&lt;p&gt;参考解决方案的内容，我们画出这些类的UML的图，如下所示&lt;/p&gt;
+&lt;h2 id=&#34;uml表示及其代码&#34;&gt;UML表示及其代码
+&lt;/h2&gt;&lt;p&gt;参考解决方案的内容，我们画出这些类的UML的图，如下所示&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/608f4683d1a9ae528ff55eb5.png&#34;
 	
 	
@@ -296,8 +296,8 @@
         
         <guid>https://blog.bugxch.top/p/template-method%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608bef5dd1a9ae528f268767.png" alt="Featured image of post Template Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;设计模式第三弹，设计模式&lt;strong&gt;行为型模式&lt;/strong&gt;中的模板方法，也比较简单。&lt;/p&gt;
-&lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;使用情景&#34;&gt;使用情景
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method是行为型模式，使得子类可以不改变算法的结构（步骤）即可重定义该算法的某些特定步骤。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;模板方法将整个算法转换为一系列独立的步骤， 以便子类能对其进行扩展， 同时还可让超类中所定义的结构保持完整。可以设想我们上学时候临摹毛笔字，你可以使用墨汁沿着田字格中的汉字临摹，也可以使用红墨水临摹，无论用哪种颜色的墨水，最后完成的字的形状是一样的。&lt;/p&gt;
@@ -312,15 +312,15 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;汉字的字形就是模板，每个学生使用不同的工具或者墨水按照模板习字，就是模板方法。&lt;/p&gt;
-&lt;h2 id=&#34;问题引入&#34;&gt;问题引入&lt;/h2&gt;
-&lt;p&gt;Template Method就是带有模板功能的模式，它有下面的特点：&lt;/p&gt;
+&lt;h2 id=&#34;问题引入&#34;&gt;问题引入
+&lt;/h2&gt;&lt;p&gt;Template Method就是带有模板功能的模式，它有下面的特点：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;组成模板的方法被定义在父类中，但是这些方法是抽象方法，具体的方法实现由各个子类实现；&lt;/li&gt;
 &lt;li&gt;父类中定义了&lt;strong&gt;处理流程的框架&lt;/strong&gt;，这个流程由上面定义的这些方法&lt;strong&gt;按照特定的步骤完成&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;打一个比方，如果我们村里的每个人盖一座房子，无论是谁都需要完成如下的步骤，准备材料，设计图纸，雇佣施工队，开工建设，完成这些步骤之后才能盖起一座完整的房子。但是不同的人使用的材料不同，设计的图纸不同，施工队的质量也不一样，依照主人的品味和资金实力每一个步骤不同的人做就有不同的效果。这里的所有步骤就是模板方法，不同的人就是子类。&lt;/p&gt;
-&lt;h2 id=&#34;uml表示及代码&#34;&gt;UML表示及代码&lt;/h2&gt;
-&lt;p&gt;参考《图解设计模式》中第三章的例子，UML图及代码如下所示&lt;/p&gt;
+&lt;h2 id=&#34;uml表示及代码&#34;&gt;UML表示及代码
+&lt;/h2&gt;&lt;p&gt;参考《图解设计模式》中第三章的例子，UML图及代码如下所示&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/608bf6c0d1a9ae528f6ea0ee.png&#34;
 	
 	
@@ -551,20 +551,20 @@
         
         <guid>https://blog.bugxch.top/p/adapter%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/608ac85bd1a9ae528fde126e.png" alt="Featured image of post Adapter模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;本篇是设计模式第二篇，适配器模式，比较好理解。&lt;/p&gt;
-&lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;使用情景&#34;&gt;使用情景
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;适配器模式是一种&lt;strong&gt;结构型&lt;/strong&gt;设计模式， 它能使接口&lt;strong&gt;不兼容&lt;/strong&gt;的对象能够相互合作。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如果你有出国的经验，那么在出国前肯定会在淘宝买一个电源的转接插头带在身上，在国外旅行时为手机或者PC充电。为什么需要这个东西？参考这篇&lt;a class=&#34;link&#34; href=&#34;https://www.skyscanner.net/news/international-travel-plug-adapter-guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;国际旅行电源适配器指南&lt;/a&gt;，从文章中可以看出，每个不同的国家和地区的电源插座的形状和电压都不同，比如中国家用交流电是220V，而印度是230V，从电压的角度出发，你也需要一个东西将230V的电源转换成为稳定的220V，才能给电脑供电。&lt;/p&gt;
-&lt;h2 id=&#34;问题引入&#34;&gt;问题引入&lt;/h2&gt;
-&lt;p&gt;那我们的问题自然就是如果我去印度旅行，如何使用工具将230V的电源转换成220V呢？&lt;/p&gt;
-&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
-&lt;p&gt;解决方案也很简单，使用一个电源适配器即可，它负责将230V电源转换成为220V供我使用。&lt;/p&gt;
-&lt;h2 id=&#34;uml表示及代码&#34;&gt;UML表示及代码&lt;/h2&gt;
-&lt;p&gt;参考《图解设计模式》的章节，我们有两种适配器模式。&lt;/p&gt;
-&lt;h3 id=&#34;基于继承的适配器模式&#34;&gt;基于继承的适配器模式&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/608ac9f7d1a9ae528ff52c22.png&#34;
+&lt;h2 id=&#34;问题引入&#34;&gt;问题引入
+&lt;/h2&gt;&lt;p&gt;那我们的问题自然就是如果我去印度旅行，如何使用工具将230V的电源转换成220V呢？&lt;/p&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案
+&lt;/h2&gt;&lt;p&gt;解决方案也很简单，使用一个电源适配器即可，它负责将230V电源转换成为220V供我使用。&lt;/p&gt;
+&lt;h2 id=&#34;uml表示及代码&#34;&gt;UML表示及代码
+&lt;/h2&gt;&lt;p&gt;参考《图解设计模式》的章节，我们有两种适配器模式。&lt;/p&gt;
+&lt;h3 id=&#34;基于继承的适配器模式&#34;&gt;基于继承的适配器模式
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/608ac9f7d1a9ae528ff52c22.png&#34;
 	
 	
 	
@@ -673,8 +673,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;基于委托的适配器模式&#34;&gt;基于委托的适配器模式&lt;/h3&gt;
-&lt;p&gt;另外一种形式是基于委托的模式，这里的“委托”意思是我将本来需要我自己做的事情，交给别人来做，适配器&lt;code&gt;PrintBanner&lt;/code&gt;将接口的功能&lt;strong&gt;委托&lt;/strong&gt;给&lt;code&gt;Banner&lt;/code&gt;去做。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;基于委托的适配器模式&#34;&gt;基于委托的适配器模式
+&lt;/h3&gt;&lt;p&gt;另外一种形式是基于委托的模式，这里的“委托”意思是我将本来需要我自己做的事情，交给别人来做，适配器&lt;code&gt;PrintBanner&lt;/code&gt;将接口的功能&lt;strong&gt;委托&lt;/strong&gt;给&lt;code&gt;Banner&lt;/code&gt;去做。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/608ace89d1a9ae528f402db1.png&#34;
 	
 	
@@ -738,19 +738,19 @@
         <guid>https://blog.bugxch.top/p/iterator%E6%A8%A1%E5%BC%8F%E7%B2%BE%E8%A7%A3c-%E7%89%88%E6%9C%AC/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6086d967d1a9ae528f307ce1.jpg" alt="Featured image of post Iterator模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;从本文章开始，参考结城浩的&lt;a class=&#34;link&#34; href=&#34;https://www.ituring.com.cn/book/1811&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《图解设计模式》&lt;/a&gt;写23种设计模式的系列介绍文章，结合网络上其他的设计模式的内容，使用C++的语言编写这些设计模式，记录自己的设计模式的心得。&lt;/p&gt;
-&lt;h2 id=&#34;设计模式分类&#34;&gt;设计模式分类&lt;/h2&gt;
-&lt;p&gt;在开始设计模式的系列文章之前，先对设计模式的分类做一个说明，下面的说明摘选自&lt;a class=&#34;link&#34; href=&#34;http://c.biancheng.net/view/1320.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;设计模式分类&#34;&gt;设计模式分类
+&lt;/h2&gt;&lt;p&gt;在开始设计模式的系列文章之前，先对设计模式的分类做一个说明，下面的说明摘选自&lt;a class=&#34;link&#34; href=&#34;http://c.biancheng.net/view/1320.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GoF 的 23 种设计模式的分类和功能&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;设计模式有两种分类方法，即根据模式的目的来分和根据模式的作用的范围来分。&lt;/p&gt;
-&lt;h3 id=&#34;根据目的来分&#34;&gt;根据目的来分&lt;/h3&gt;
-&lt;p&gt;根据模式是用来完成什么工作来划分，这种方式可分为创建型模式、结构型模式和行为型模式 3 种。&lt;/p&gt;
+&lt;h3 id=&#34;根据目的来分&#34;&gt;根据目的来分
+&lt;/h3&gt;&lt;p&gt;根据模式是用来完成什么工作来划分，这种方式可分为创建型模式、结构型模式和行为型模式 3 种。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;创建型模式&lt;/strong&gt;：用于描述“怎样创建对象”，它的主要特点是“将对象的创建与使用分离”。GoF 中提供了单例、原型、工厂方法、抽象工厂、建造者等 5 种创建型模式。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;结构型模式&lt;/strong&gt;：用于描述如何将类或对象按某种布局组成更大的结构，GoF 中提供了代理、适配器、桥接、装饰、外观、享元、组合等 7 种结构型模式。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;行为型模式&lt;/strong&gt;：用于描述类或对象之间怎样相互协作共同完成单个对象都无法单独完成的任务，以及怎样分配职责。GoF 中提供了模板方法、策略、命令、职责链、状态、观察者、中介者、迭代器、访问者、备忘录、解释器等 11 种行为型模式。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;根据作用范围来分&#34;&gt;根据作用范围来分&lt;/h3&gt;
-&lt;p&gt;根据模式是主要用于类上还是主要用于对象上来分，这种方式可分为类模式和对象模式两种。&lt;/p&gt;
+&lt;h3 id=&#34;根据作用范围来分&#34;&gt;根据作用范围来分
+&lt;/h3&gt;&lt;p&gt;根据模式是主要用于类上还是主要用于对象上来分，这种方式可分为类模式和对象模式两种。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;类模式：用于处理类与子类之间的关系，这些关系通过继承来建立，是静态的，在编译时刻便确定下来了。GoF中的工厂方法、（类）适配器、模板方法、解释器属于该模式。&lt;/li&gt;
 &lt;li&gt;对象模式：用于处理对象之间的关系，这些关系可以通过组合或聚合来实现，在运行时刻是可以变化的，更具动态性。GoF 中除了以上 4 种，其他的都是对象模式。&lt;/li&gt;
@@ -764,13 +764,13 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;使用情景&#34;&gt;使用情景&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;使用情景&#34;&gt;使用情景
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;迭代器模式是一种行为设计模式， 提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象内部表示。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;C++中比较典型类似与std的vector的前向迭代器&lt;code&gt;begin()&lt;/code&gt;和&lt;code&gt;end()&lt;/code&gt;，以及后向迭代器&lt;code&gt;rbegin()&lt;/code&gt;和&lt;code&gt;rend()&lt;/code&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;问题引入&#34;&gt;问题引入&lt;/h2&gt;
-&lt;p&gt;可以设想元素聚合成集合的方式，最简单的方式是顺序存储的数组或者列表，但是也有例如树、图和其他复杂的数据结构。所以，如果要遍历集合中的元素，有下面的两个问题需要解决：&lt;/p&gt;
+&lt;h2 id=&#34;问题引入&#34;&gt;问题引入
+&lt;/h2&gt;&lt;p&gt;可以设想元素聚合成集合的方式，最简单的方式是顺序存储的数组或者列表，但是也有例如树、图和其他复杂的数据结构。所以，如果要遍历集合中的元素，有下面的两个问题需要解决：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;如何在不改变元素的前提下，遍历各种不同的集合？&lt;/li&gt;
 &lt;li&gt;同一个集合如果有不同的遍历方式（比如树有前中后序3种不同的遍历顺序），如果在不改变集合的前提下，比较容易扩展这些功能呢？&lt;/li&gt;
@@ -785,8 +785,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
-&lt;p&gt;为了满足开闭原则，我们将定义一个迭代器的类，将迭代从集合种抽象出来，作为一个行为的迭代器处理。如下图所示，对于一个树结构，我们定义了两个迭代器的类，DFS和BFS两个迭代器，这样可以将元素遍历和树本身进行解耦。&lt;/p&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案
+&lt;/h2&gt;&lt;p&gt;为了满足开闭原则，我们将定义一个迭代器的类，将迭代从集合种抽象出来，作为一个行为的迭代器处理。如下图所示，对于一个树结构，我们定义了两个迭代器的类，DFS和BFS两个迭代器，这样可以将元素遍历和树本身进行解耦。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://refactoringguru.cn/images/patterns/diagrams/iterator/solution1.png?id=2f5fbcce6099d8ea09b2&#34;
 	
 	
@@ -795,8 +795,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;uml表示&#34;&gt;UML表示&lt;/h2&gt;
-&lt;p&gt;我们以《图解设计模式》中遍历书架中的书本为例，有如下的UML图&lt;/p&gt;
+&lt;h2 id=&#34;uml表示&#34;&gt;UML表示
+&lt;/h2&gt;&lt;p&gt;我们以《图解设计模式》中遍历书架中的书本为例，有如下的UML图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6079a1d38322e6675cca8bee.png&#34;
 	
 	
@@ -813,8 +813,8 @@
 &lt;li&gt;Iterator表示集合的迭代器的接口，书架的迭代器实现它；
 需要说明的是，此处的迭代器只有一种前向的迭代器，也可以定义后向遍历的迭代器。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;c代码&#34;&gt;C++代码&lt;/h2&gt;
-&lt;p&gt;我们使用C++按照上面的UML图片实现这个设计模式。&lt;/p&gt;
+&lt;h2 id=&#34;c代码&#34;&gt;C++代码
+&lt;/h2&gt;&lt;p&gt;我们使用C++按照上面的UML图片实现这个设计模式。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
@@ -1100,18 +1100,18 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;《黎曼猜想》
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;分析角色&#34;&gt;分析角色&lt;/h2&gt;
-&lt;p&gt;这个模式有实际上由两个角色，&lt;strong&gt;集合以及集合的迭代器&lt;/strong&gt;，这两个事物由分为抽象和具体两种。我们所举的例子中&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;分析角色&#34;&gt;分析角色
+&lt;/h2&gt;&lt;p&gt;这个模式有实际上由两个角色，&lt;strong&gt;集合以及集合的迭代器&lt;/strong&gt;，这两个事物由分为抽象和具体两种。我们所举的例子中&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;BookShelf&lt;/code&gt;就是具体的集合，它实现自抽象的集合接口&lt;code&gt;Aggregate&lt;/code&gt;；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;BookShelfIterator&lt;/code&gt;是具体的迭代器，它实现自抽象的迭代器接口&lt;code&gt;Iterator&lt;/code&gt;。
 迭代器接口中定义了迭代器的遍历的所有方法，&lt;code&gt;HasNext&lt;/code&gt;以及&lt;code&gt;Next&lt;/code&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这里需要注意的是，在C++的版本里面集合的接口中不仅定义了创建迭代器的方法&lt;code&gt;CreateIterator&lt;/code&gt;，而且定义了集合的个数&lt;code&gt;Count&lt;/code&gt;和集合获取当前元素的方法&lt;code&gt;getBookAt&lt;/code&gt;，这是因为迭代器中的方法实现依赖这些接口。&lt;/p&gt;
-&lt;h2 id=&#34;扩展修改&#34;&gt;扩展修改&lt;/h2&gt;
-&lt;p&gt;大家可以思考一下为什么我们需要这个模式呢？设计模式的初衷是实现代码的&lt;strong&gt;复用和可扩展&lt;/strong&gt;，这个模式体现在哪里呢？&lt;/p&gt;
-&lt;h3 id=&#34;遍历方法和集合本身解耦&#34;&gt;遍历方法和集合本身解耦&lt;/h3&gt;
-&lt;p&gt;迭代器模式的重要作用是&lt;strong&gt;将集合的遍历和实现分离开来&lt;/strong&gt;，换句话说，无论实现如何变化，我依然可以使用原来的方法进行遍历，也就是说&lt;strong&gt;遍历这个动作本身&lt;/strong&gt;不会因为书架的实现发生变化而变化，所以下面的代码是不变的&lt;/p&gt;
+&lt;h2 id=&#34;扩展修改&#34;&gt;扩展修改
+&lt;/h2&gt;&lt;p&gt;大家可以思考一下为什么我们需要这个模式呢？设计模式的初衷是实现代码的&lt;strong&gt;复用和可扩展&lt;/strong&gt;，这个模式体现在哪里呢？&lt;/p&gt;
+&lt;h3 id=&#34;遍历方法和集合本身解耦&#34;&gt;遍历方法和集合本身解耦
+&lt;/h3&gt;&lt;p&gt;迭代器模式的重要作用是&lt;strong&gt;将集合的遍历和实现分离开来&lt;/strong&gt;，换句话说，无论实现如何变化，我依然可以使用原来的方法进行遍历，也就是说&lt;strong&gt;遍历这个动作本身&lt;/strong&gt;不会因为书架的实现发生变化而变化，所以下面的代码是不变的&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1125,8 +1125,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;我们依然仅仅依靠&lt;code&gt;HasNext&lt;/code&gt;以及&lt;code&gt;Next&lt;/code&gt;接口就可以完成对于书架本身的遍历。&lt;/p&gt;
-&lt;h3 id=&#34;遍历需求易于扩展&#34;&gt;遍历需求易于扩展&lt;/h3&gt;
-&lt;p&gt;不妨设想一下，假如我们需要在原来的书架上新增一种遍历方式，从后向前实现后向遍历，这个代码该怎么修改呢？应该完成如下的工作：&lt;/p&gt;
+&lt;h3 id=&#34;遍历需求易于扩展&#34;&gt;遍历需求易于扩展
+&lt;/h3&gt;&lt;p&gt;不妨设想一下，假如我们需要在原来的书架上新增一种遍历方式，从后向前实现后向遍历，这个代码该怎么修改呢？应该完成如下的工作：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在原来的书架类中新增后向遍历的iter指针；&lt;/li&gt;
 &lt;li&gt;书架类中包含创建后向迭代器的方法；&lt;/li&gt;
@@ -1518,8 +1518,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;《重构》
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ol&gt;
+&lt;/div&gt;&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://design-patterns.readthedocs.io/zh_CN/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;图说设计模式 — Graphic Design Patterns&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://edu.heibai.org/%E5%9B%BE%E8%A7%A3%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

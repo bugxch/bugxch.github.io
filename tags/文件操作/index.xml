@@ -14,9 +14,9 @@
         
         <guid>https://blog.bugxch.top/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。&lt;/p&gt;
-&lt;h1 id=&#34;python文件读写&#34;&gt;python文件读写&lt;/h1&gt;
-&lt;h2 id=&#34;基础知识&#34;&gt;基础知识&lt;/h2&gt;
-&lt;p&gt;在python中使用下面的语句打开一个文本&lt;/p&gt;
+&lt;h1 id=&#34;python文件读写&#34;&gt;python文件读写
+&lt;/h1&gt;&lt;h2 id=&#34;基础知识&#34;&gt;基础知识
+&lt;/h2&gt;&lt;p&gt;在python中使用下面的语句打开一个文本&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -80,10 +80,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这样写的好处是文件可以自动关闭，即便有异常抛出也可以。&lt;/p&gt;
-&lt;h2 id=&#34;python文件读写-1&#34;&gt;python文件读写&lt;/h2&gt;
-&lt;p&gt;这一段介绍python本身的文件读写功能。&lt;/p&gt;
-&lt;h3 id=&#34;文本文件&#34;&gt;文本文件&lt;/h3&gt;
-&lt;p&gt;以之前的基础知识为例，读取文本文件很简单，使用文件对象的方法有&lt;/p&gt;
+&lt;h2 id=&#34;python文件读写-1&#34;&gt;python文件读写
+&lt;/h2&gt;&lt;p&gt;这一段介绍python本身的文件读写功能。&lt;/p&gt;
+&lt;h3 id=&#34;文本文件&#34;&gt;文本文件
+&lt;/h3&gt;&lt;p&gt;以之前的基础知识为例，读取文本文件很简单，使用文件对象的方法有&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;read&lt;/code&gt;，直接读取文本的所有内容，也可以使用&lt;code&gt;f.read(size)&lt;/code&gt;读取size字节的数据&lt;/li&gt;
 &lt;/ul&gt;
@@ -172,8 +172,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.255616
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;二进制文件&#34;&gt;二进制文件&lt;/h3&gt;
-&lt;p&gt;二进制文件的读写和文本文件读写的方法类似，最大的区别是打开的选项必须要加一个&lt;code&gt;b&lt;/code&gt;。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;二进制文件&#34;&gt;二进制文件
+&lt;/h3&gt;&lt;p&gt;二进制文件的读写和文本文件读写的方法类似，最大的区别是打开的选项必须要加一个&lt;code&gt;b&lt;/code&gt;。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;写入二进制文件&lt;/li&gt;
 &lt;/ul&gt;
@@ -271,8 +271,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; -1.3733053  -0.7128385  -1.1449672   1.4563532 &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;numpy文件读写&#34;&gt;numpy文件读写&lt;/h2&gt;
-&lt;p&gt;numpy是python的一个数据处理的模块，它的文件读写功能使用起来更加强大和便捷。在日常工作中，常常需要比对数据，因此有必要将数据保存成txt文档进行比对，此处的文件读写都是围绕数据展开。将数据保存在文本文件中是日常工作的一个大痛点和需求，下面的命令就可以实现这样的目标。&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;numpy文件读写&#34;&gt;numpy文件读写
+&lt;/h2&gt;&lt;p&gt;numpy是python的一个数据处理的模块，它的文件读写功能使用起来更加强大和便捷。在日常工作中，常常需要比对数据，因此有必要将数据保存成txt文档进行比对，此处的文件读写都是围绕数据展开。将数据保存在文本文件中是日常工作的一个大痛点和需求，下面的命令就可以实现这样的目标。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;numpy的数据读写是成对使用的。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -417,8 +417,8 @@
 &lt;/div&gt;&lt;p&gt;完美保存数据的精度和维度信息。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/tutorial/inputoutput.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;7. Input and Output — Python 3.7.1 documentation&lt;/a&gt;，python官方介绍输入输出的文档&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.datacamp.com/community/tutorials/reading-writing-files-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

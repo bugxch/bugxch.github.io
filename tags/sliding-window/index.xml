@@ -22,8 +22,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;引子&#34;&gt;引子&lt;/h2&gt;
-&lt;p&gt;首先来看leetcode中No. 3的&lt;strong&gt;无重复字符的最长子串&lt;/strong&gt;这个题目，参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;引子&#34;&gt;引子
+&lt;/h2&gt;&lt;p&gt;首先来看leetcode中No. 3的&lt;strong&gt;无重复字符的最长子串&lt;/strong&gt;这个题目，参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;题目链接&lt;/a&gt;，题目很简单&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;给定一个字符串，请你找出其中不含有重复字符的 &lt;strong&gt;最长子串&lt;/strong&gt; 的长度。&lt;/p&gt;
@@ -87,8 +87,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;所以我们有一个更通用的实现框架。&lt;/p&gt;
-&lt;h2 id=&#34;通用框架&#34;&gt;通用框架&lt;/h2&gt;
-&lt;p&gt;维护一个&lt;strong&gt;滑动窗口&lt;/strong&gt;，&lt;/p&gt;
+&lt;h2 id=&#34;通用框架&#34;&gt;通用框架
+&lt;/h2&gt;&lt;p&gt;维护一个&lt;strong&gt;滑动窗口&lt;/strong&gt;，&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;窗口的边界是$[left, right)$，刚开始窗口的长度为0，即left = right = 0；&lt;/li&gt;
@@ -205,10 +205,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;类似题目&#34;&gt;类似题目&lt;/h2&gt;
-&lt;p&gt;下面使用上面的框架解答一下其他的滑动窗口的类似题目&lt;/p&gt;
-&lt;h3 id=&#34;最小覆盖子串---力扣leetcode&#34;&gt;最小覆盖子串 - 力扣（LeetCode）&lt;/h3&gt;
-&lt;p&gt;题目见&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/minimum-window-substring/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h2 id=&#34;类似题目&#34;&gt;类似题目
+&lt;/h2&gt;&lt;p&gt;下面使用上面的框架解答一下其他的滑动窗口的类似题目&lt;/p&gt;
+&lt;h3 id=&#34;最小覆盖子串---力扣leetcode&#34;&gt;最小覆盖子串 - 力扣（LeetCode）
+&lt;/h3&gt;&lt;p&gt;题目见&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/minimum-window-substring/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;76. 最小覆盖子串 - 力扣（LeetCode）&lt;/a&gt;：给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字符的最小子串。&lt;/p&gt;
 &lt;p&gt;示例：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -216,12 +216,12 @@
 &lt;strong&gt;输出:&lt;/strong&gt; &amp;ldquo;BANC&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;也是同样的做法，但是需要搞清楚几个问题&lt;/p&gt;
-&lt;h4 id=&#34;何时扩展窗口&#34;&gt;何时扩展窗口？&lt;/h4&gt;
-&lt;p&gt;如果窗口中没有将所有的T中的字符包含，那么向右扩展窗口。&lt;/p&gt;
-&lt;h4 id=&#34;何时更新长度&#34;&gt;何时更新长度？&lt;/h4&gt;
-&lt;p&gt;扩展窗口之后，检查窗口的字符集合。如果当前窗口包含了所有的T中的字符，那么更新子串的起始位置id及长度。&lt;/p&gt;
-&lt;h4 id=&#34;何时缩减窗口&#34;&gt;何时缩减窗口？&lt;/h4&gt;
-&lt;p&gt;更新长度之后，窗口的左端右移，缩减窗口。于是有了下面的代码&lt;/p&gt;
+&lt;h4 id=&#34;何时扩展窗口&#34;&gt;何时扩展窗口？
+&lt;/h4&gt;&lt;p&gt;如果窗口中没有将所有的T中的字符包含，那么向右扩展窗口。&lt;/p&gt;
+&lt;h4 id=&#34;何时更新长度&#34;&gt;何时更新长度？
+&lt;/h4&gt;&lt;p&gt;扩展窗口之后，检查窗口的字符集合。如果当前窗口包含了所有的T中的字符，那么更新子串的起始位置id及长度。&lt;/p&gt;
+&lt;h4 id=&#34;何时缩减窗口&#34;&gt;何时缩减窗口？
+&lt;/h4&gt;&lt;p&gt;更新长度之后，窗口的左端右移，缩减窗口。于是有了下面的代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -336,8 +336,8 @@
 &lt;li&gt;&lt;code&gt;minLen&lt;/code&gt;用来记录最短的子串长度，刚开始初始化为字符串的长度+1；&lt;/li&gt;
 &lt;li&gt;我们用&lt;code&gt;matchCount&lt;/code&gt;标记匹配的字符的个数，如果匹配了一个字符就加一，否则减一，匹配的标准是该字符的出现次数在window中&lt;strong&gt;不少于&lt;/strong&gt;在need中出现的次数。注意，这个&lt;strong&gt;参数在扩展窗口时增加，在缩减窗口时减少&lt;/strong&gt;，增加或减少之后即刻与need比较判断。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;424-替换后的最长重复字符&#34;&gt;424. 替换后的最长重复字符&lt;/h3&gt;
-&lt;p&gt;题目见&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/longest-repeating-character-replacement/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;424-替换后的最长重复字符&#34;&gt;424. 替换后的最长重复字符
+&lt;/h3&gt;&lt;p&gt;题目见&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/longest-repeating-character-replacement/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;424. 替换后的最长重复字符 - 力扣（LeetCode）&lt;/a&gt;，题目也比较简单，维护滑动窗口，每次在扩展窗口时候检查当前的窗口中的最多的字符的个数与替换的数量k的和是否大于等于窗口的长度？&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;如果是，则更新窗口的长度，窗口继续扩展；&lt;/li&gt;
@@ -408,8 +408,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;1004-最大连续1的个数-iii&#34;&gt;1004. 最大连续1的个数 III&lt;/h3&gt;
-&lt;p&gt;题目见&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/max-consecutive-ones-iii/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h3 id=&#34;1004-最大连续1的个数-iii&#34;&gt;1004. 最大连续1的个数 III
+&lt;/h3&gt;&lt;p&gt;题目见&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/max-consecutive-ones-iii/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1004. 最大连续1的个数 III - 力扣（LeetCode）&lt;/a&gt;，与上一题目类似，直接看代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -464,8 +464,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;可以看出这个代码与上一题目非常相似，通用框架都是默认扩展窗口，如果不满足某些条件再缩减窗口。&lt;/p&gt;
-&lt;h3 id=&#34;992-k个不同整数的数组&#34;&gt;992. K个不同整数的数组&lt;/h3&gt;
-&lt;p&gt;题目见&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/subarrays-with-k-different-integers/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;992-k个不同整数的数组&#34;&gt;992. K个不同整数的数组
+&lt;/h3&gt;&lt;p&gt;题目见&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/subarrays-with-k-different-integers/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;992. K 个不同整数的子数组 - 力扣（LeetCode）&lt;/a&gt;，这个比上面的两道题要复杂点，两次使用双指针解决，基本思路是：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;维护像之前一样的滑动窗口，如果当前的窗口不满足条件，那么向右扩张；&lt;/li&gt;
@@ -634,12 +634,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;数据结构&#34;&gt;数据结构&lt;/h2&gt;
-&lt;h3 id=&#34;哈希表&#34;&gt;哈希表&lt;/h3&gt;
-&lt;p&gt;上面的示例都用到了哈希表，又称为散列表，具体的定义可以参考&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh/%E5%93%88%E5%B8%8C%E8%A1%A8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h2 id=&#34;数据结构&#34;&gt;数据结构
+&lt;/h2&gt;&lt;h3 id=&#34;哈希表&#34;&gt;哈希表
+&lt;/h3&gt;&lt;p&gt;上面的示例都用到了哈希表，又称为散列表，具体的定义可以参考&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh/%E5%93%88%E5%B8%8C%E8%A1%A8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;哈希表&lt;/a&gt;。与一般的顺序访问的数组等数据结构不同，哈希表将查询的数据映射到表中的位置来记录，加快了查询的速度（类似于数组的下表和数组的值的映射关系）。一般而言，哈希表的查询，插入和删除的性能是$O(1)$。&lt;/p&gt;
-&lt;h3 id=&#34;c-stl-中的哈希表&#34;&gt;C++ STL 中的哈希表&lt;/h3&gt;
-&lt;p&gt;C++在stl中使用&lt;code&gt;unordered_map&lt;/code&gt;的数据结构保存哈希表，基本的用法如下所示&lt;/p&gt;
+&lt;h3 id=&#34;c-stl-中的哈希表&#34;&gt;C++ STL 中的哈希表
+&lt;/h3&gt;&lt;p&gt;C++在stl中使用&lt;code&gt;unordered_map&lt;/code&gt;的数据结构保存哈希表，基本的用法如下所示&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -850,8 +850,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;如果哈希表中没有这个键值，&lt;strong&gt;那么它会自动添加进去，并赋给它初值&lt;/strong&gt;，所以在查询某个键是否存在时，不要用这样的方法。&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/hua-dong-chuang-kou-ji-qiao-jin-jie&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;我写了首诗，把滑动窗口算法算法变成了默写题 - labuladong的算法小抄&lt;/a&gt;，非常通俗易懂的算法说明，基本上按照这个顺序来刷题的&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.geeksforgeeks.org/unordered_map-in-cpp-stl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

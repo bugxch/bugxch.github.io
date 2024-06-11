@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。\n">
 <title>C&#43;&#43;中的sort函数详解</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='C&#43;&#43;中的sort函数详解'>
-<meta property='og:description' content='公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="C++中的sort函数详解">
+<meta property='og:description' content="公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='STL' /><meta property='article:tag' content='c&#43;&#43;' /><meta property='article:tag' content='转载' /><meta property='article:published_time' content='2020-08-15T21:25:46&#43;08:00'/><meta property='article:modified_time' content='2020-08-15T21:25:46&#43;08:00'/><meta property='og:image' content='https://pic.imgdb.cn/item/6002ed073ffa7d37b305c866.jpg' />
-<meta name="twitter:title" content="C&#43;&#43;中的sort函数详解">
-<meta name="twitter:description" content="公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。
-"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="C++中的sort函数详解">
+<meta name="twitter:description" content="公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://pic.imgdb.cn/item/6002ed073ffa7d37b305c866.jpg' />
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -101,7 +98,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -279,31 +276,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -311,7 +289,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -319,10 +297,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -452,8 +431,8 @@
     
     
     <p>公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。</p>
-<h2 id="总述">总述</h2>
-<p>下面是C++的stl中的排序的所有函数，这个系列的博客会逐一介绍，这次的博客先关注最常用的<code>sort</code>函数。</p>
+<h2 id="总述">总述
+</h2><p>下面是C++的stl中的排序的所有函数，这个系列的博客会逐一介绍，这次的博客先关注最常用的<code>sort</code>函数。</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -492,20 +471,20 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="sort函数">sort函数</h2>
-<h3 id="使用范围">使用范围</h3>
-<p>C++ STL 标准库中的 sort() 函数，本质就是一个模板函数。正如表 1 中描述的，该函数专门用来对容器或普通数组中指定范围内的元素进行排序，排序规则默认以元素值的大小做升序排序，除此之外我们也可以选择标准库提供的其它排序规则（比如<code>std::greater&lt;T&gt;</code>降序排序规则），甚至还可以自定义排序规则。</p>
+<h2 id="sort函数">sort函数
+</h2><h3 id="使用范围">使用范围
+</h3><p>C++ STL 标准库中的 sort() 函数，本质就是一个模板函数。正如表 1 中描述的，该函数专门用来对容器或普通数组中指定范围内的元素进行排序，排序规则默认以元素值的大小做升序排序，除此之外我们也可以选择标准库提供的其它排序规则（比如<code>std::greater&lt;T&gt;</code>降序排序规则），甚至还可以自定义排序规则。</p>
 <p>需要注意的是，sort() 函数受到底层实现方式的限制，它仅适用于普通数组和部分类型的容器。换句话说，只有普通数组和具备以下条件的容器，才能使用 sort() 函数：</p>
 <ol>
 <li>容器支持的迭代器类型必须为随机访问迭代器。这意味着，sort() 只对 array、vector、deque 这 3 个容器提供支持；</li>
 <li>如果对容器中指定区域的元素做默认升序排序，则元素类型必须支持<code>&lt;</code>小于运算符；同样，如果选用标准库提供的其它排序规则，元素类型也必须支持该规则底层实现所用的比较运算符；</li>
 <li>sort() 函数在实现排序时，需要交换容器中元素的存储位置。这种情况下，如果容器中存储的是自定义的类对象，则该类的内部必须提供移动构造函数和移动赋值运算符。</li>
 </ol>
-<h3 id="局限">局限</h3>
-<p><code>sort</code>函数不保证排序的<a class="link" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7"  target="_blank" rel="noopener"
+<h3 id="局限">局限
+</h3><p><code>sort</code>函数不保证排序的<a class="link" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7"  target="_blank" rel="noopener"
     >稳定性</a>，即如果被排序的序列中有多个相同值的元素，并不能保证排序之后他们的相对位置保持不变。</p>
-<h3 id="使用方法">使用方法</h3>
-<p>值得一提的是，sort() 函数位于<code>&lt;algorithm&gt;</code>头文件中，因此在使用该函数前，程序中应包含如下语句：</p>
+<h3 id="使用方法">使用方法
+</h3><p>值得一提的是，sort() 函数位于<code>&lt;algorithm&gt;</code>头文件中，因此在使用该函数前，程序中应包含如下语句：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -598,9 +577,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="再探自定义比较函数">再探自定义比较函数</h2>
-<h3 id="一元谓词和二元谓词">一元谓词和二元谓词</h3>
-<p>sort的自定义比较函数在C++中成为<strong>谓词</strong>，在泛型编程中作为参数使用。按照接受参数的个数不同，谓词分为一元谓词和二元谓词两种。</p>
+</div><h2 id="再探自定义比较函数">再探自定义比较函数
+</h2><h3 id="一元谓词和二元谓词">一元谓词和二元谓词
+</h3><p>sort的自定义比较函数在C++中成为<strong>谓词</strong>，在泛型编程中作为参数使用。按照接受参数的个数不同，谓词分为一元谓词和二元谓词两种。</p>
 <ul>
 <li>
 <p>一元谓词，比如<code>for_each</code>中使用，因为该算法是顺序遍历容器中的每个元素，对每个元素进行操作，所以是一元谓词，如下面的代码片段</p>
@@ -627,8 +606,8 @@
 <p>二元谓词，sort算法是对容器的两个元素进行比较，所以接受两个参数，比如上面的<code>mycomp</code>函数。</p>
 </li>
 </ul>
-<h3 id="lambda表达式与可调用对象">lambda表达式与可调用对象</h3>
-<p>谓词就是一个可调用对象(callable object)，在C++中可调用对象包括4种类型：函数、函数指针、重载函数调用符的类（可以像函数一样使用的类）以及<strong>lambda表达式</strong>。其实在上面的代码片段中，已经在sort算法中使用过函数以及重载函数调用符的类。此处重点介绍一下lambda表达式。lambda表达式的介绍很多，此处直接贴出来参考资料3中的总结表格</p>
+<h3 id="lambda表达式与可调用对象">lambda表达式与可调用对象
+</h3><p>谓词就是一个可调用对象(callable object)，在C++中可调用对象包括4种类型：函数、函数指针、重载函数调用符的类（可以像函数一样使用的类）以及<strong>lambda表达式</strong>。其实在上面的代码片段中，已经在sort算法中使用过函数以及重载函数调用符的类。此处重点介绍一下lambda表达式。lambda表达式的介绍很多，此处直接贴出来参考资料3中的总结表格</p>
 <p><img src="https://pic.imgdb.cn/item/6132a81044eaada739e80e13.png"
 	
 	
@@ -770,8 +749,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>当上面的函数返回为<code>true</code>时候，那么将<code>a</code>排在<code>b</code>的前面，上面的代码种当<code>a &lt; b</code>时结果为<code>true</code>，所以小的元素排在前面，下面通过做题来示例它的用法。</p>
-<h3 id="具体题目">具体题目</h3>
-<p>参考<a class="link" href="https://leetcode-cn.com/problems/rank-teams-by-votes/"  target="_blank" rel="noopener"
+<h3 id="具体题目">具体题目
+</h3><p>参考<a class="link" href="https://leetcode-cn.com/problems/rank-teams-by-votes/"  target="_blank" rel="noopener"
     >1366. 通过投票对团队排名 - 力扣（LeetCode）</a>，具体的代码如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -908,8 +887,8 @@
 <li>如果在两个选手在所有的名次上票数均相同，那么最后按照人名排序（第35行）</li>
 </ul>
 <p>这里的代码告诉了<code>sort</code>函数该如何对当前所有选手中的两个选手的名次进行排序，它会将其中的两两进行比较给出答案（如何两两比较，我们不用关心），<strong>从微观层面告诉<code>sort</code>函数的两个元素的操作方法</strong>，它就能将所有的选手按照这个方法排好序，这个就是lambda表达式的意义。</p>
-<h2 id="参考资料">参考资料</h2>
-<ol>
+<h2 id="参考资料">参考资料
+</h2><ol>
 <li><a class="link" href="http://c.biancheng.net/view/7457.html"  target="_blank" rel="noopener"
     >C++ sort()排序函数用法详解</a>，c语言中文网的介绍</li>
 <li><a class="link" href="https://www.geeksforgeeks.org/sort-c-stl/"  target="_blank" rel="noopener"
@@ -962,7 +941,7 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -1141,7 +1120,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

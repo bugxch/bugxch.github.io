@@ -14,9 +14,9 @@
         
         <guid>https://blog.bugxch.top/p/python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。&lt;/p&gt;
-&lt;h1 id=&#34;python文件读写&#34;&gt;python文件读写&lt;/h1&gt;
-&lt;h2 id=&#34;基础知识&#34;&gt;基础知识&lt;/h2&gt;
-&lt;p&gt;在python中使用下面的语句打开一个文本&lt;/p&gt;
+&lt;h1 id=&#34;python文件读写&#34;&gt;python文件读写
+&lt;/h1&gt;&lt;h2 id=&#34;基础知识&#34;&gt;基础知识
+&lt;/h2&gt;&lt;p&gt;在python中使用下面的语句打开一个文本&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -80,10 +80,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这样写的好处是文件可以自动关闭，即便有异常抛出也可以。&lt;/p&gt;
-&lt;h2 id=&#34;python文件读写-1&#34;&gt;python文件读写&lt;/h2&gt;
-&lt;p&gt;这一段介绍python本身的文件读写功能。&lt;/p&gt;
-&lt;h3 id=&#34;文本文件&#34;&gt;文本文件&lt;/h3&gt;
-&lt;p&gt;以之前的基础知识为例，读取文本文件很简单，使用文件对象的方法有&lt;/p&gt;
+&lt;h2 id=&#34;python文件读写-1&#34;&gt;python文件读写
+&lt;/h2&gt;&lt;p&gt;这一段介绍python本身的文件读写功能。&lt;/p&gt;
+&lt;h3 id=&#34;文本文件&#34;&gt;文本文件
+&lt;/h3&gt;&lt;p&gt;以之前的基础知识为例，读取文本文件很简单，使用文件对象的方法有&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;read&lt;/code&gt;，直接读取文本的所有内容，也可以使用&lt;code&gt;f.read(size)&lt;/code&gt;读取size字节的数据&lt;/li&gt;
 &lt;/ul&gt;
@@ -172,8 +172,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.255616
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;二进制文件&#34;&gt;二进制文件&lt;/h3&gt;
-&lt;p&gt;二进制文件的读写和文本文件读写的方法类似，最大的区别是打开的选项必须要加一个&lt;code&gt;b&lt;/code&gt;。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;二进制文件&#34;&gt;二进制文件
+&lt;/h3&gt;&lt;p&gt;二进制文件的读写和文本文件读写的方法类似，最大的区别是打开的选项必须要加一个&lt;code&gt;b&lt;/code&gt;。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;写入二进制文件&lt;/li&gt;
 &lt;/ul&gt;
@@ -271,8 +271,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; -1.3733053  -0.7128385  -1.1449672   1.4563532 &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;numpy文件读写&#34;&gt;numpy文件读写&lt;/h2&gt;
-&lt;p&gt;numpy是python的一个数据处理的模块，它的文件读写功能使用起来更加强大和便捷。在日常工作中，常常需要比对数据，因此有必要将数据保存成txt文档进行比对，此处的文件读写都是围绕数据展开。将数据保存在文本文件中是日常工作的一个大痛点和需求，下面的命令就可以实现这样的目标。&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;numpy文件读写&#34;&gt;numpy文件读写
+&lt;/h2&gt;&lt;p&gt;numpy是python的一个数据处理的模块，它的文件读写功能使用起来更加强大和便捷。在日常工作中，常常需要比对数据，因此有必要将数据保存成txt文档进行比对，此处的文件读写都是围绕数据展开。将数据保存在文本文件中是日常工作的一个大痛点和需求，下面的命令就可以实现这样的目标。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;numpy的数据读写是成对使用的。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -417,8 +417,8 @@
 &lt;/div&gt;&lt;p&gt;完美保存数据的精度和维度信息。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/tutorial/inputoutput.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;7. Input and Output — Python 3.7.1 documentation&lt;/a&gt;，python官方介绍输入输出的文档&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.datacamp.com/community/tutorials/reading-writing-files-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -469,8 +469,8 @@
 	
 &gt;
 3D 图形分为如下几类：&lt;/p&gt;
-&lt;h2 id=&#34;线形图&#34;&gt;线形图&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Axes3D.plot(xs,ys,**args,**kwargs)&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;线形图&#34;&gt;线形图
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Axes3D.plot(xs,ys,**args,**kwargs)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;绘制 2D 或者 3D 的数据。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -549,8 +549,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;从这个例子可以看出，matplot 画图的基本步骤包括：导入必要的模块，创建 figure 对象，设置 3D 的 ax，创建自变量，写出函数关系式，绘制图形。&lt;/p&gt;
-&lt;h2 id=&#34;散点图&#34;&gt;散点图&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Axes3D.scatter(*xs*, *ys*, *zs=0*, *zdir=&#39;z&#39;*, *s=20*, *c=None*, *depthshade=True*, **args*, **\*kwargs*)&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;散点图&#34;&gt;散点图
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Axes3D.scatter(*xs*, *ys*, *zs=0*, *zdir=&#39;z&#39;*, *s=20*, *c=None*, *depthshade=True*, **args*, **\*kwargs*)&lt;/code&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -679,8 +679,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;线框图&#34;&gt;线框图&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Axes3D.plot_wireframe(X, Y, Z, args, kwargs)&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;线框图&#34;&gt;线框图
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Axes3D.plot_wireframe(X, Y, Z, args, kwargs)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;绘制 3D 的线框图，其中的参数&lt;code&gt;rstride&lt;/code&gt;和&lt;code&gt;cstride&lt;/code&gt;表示对输入数据的采样，它们不能和&lt;code&gt;rcount&lt;/code&gt;以及&lt;code&gt;ccount&lt;/code&gt;同时使用，不然会产生错误，后者表示从输入数据中采样多少以生成线框图。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -787,8 +787,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;表面图&#34;&gt;表面图&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Axes3D.plot_surface(X, Y, Z, *args, **kwargs)&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;表面图&#34;&gt;表面图
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Axes3D.plot_surface(X, Y, Z, *args, **kwargs)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;默认使用纯色为阴影着色，不过它也可以通过 &lt;em&gt;cmap&lt;/em&gt; 支持颜色映射。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -960,8 +960,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;表面光滑细致多了。&lt;/p&gt;
-&lt;h2 id=&#34;2d3d-图形共存&#34;&gt;2D/3D 图形共存&lt;/h2&gt;
-&lt;p&gt;这篇文章主要是用来画 3 维图形的，以上的几个图形已经够用，下面介绍一些其他的技能。现在的是在 2D 中画 3D 图形。直接上代码和图像&lt;/p&gt;
+&lt;h2 id=&#34;2d3d-图形共存&#34;&gt;2D/3D 图形共存
+&lt;/h2&gt;&lt;p&gt;这篇文章主要是用来画 3 维图形的，以上的几个图形已经够用，下面介绍一些其他的技能。现在的是在 2D 中画 3D 图形。直接上代码和图像&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1071,8 +1071,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;从上面的代码，可以看出如何设置坐标轴的取值范围，设置 label 的方法。&lt;/p&gt;
-&lt;h2 id=&#34;加入文字&#34;&gt;加入文字&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Axes3D.text(x, y, z, s, zdir=None, **kwargs)&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;加入文字&#34;&gt;加入文字
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Axes3D.text(x, y, z, s, zdir=None, **kwargs)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;在画图中我们可能需要在特定位置加入文字说明，下面就是一个例子&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1203,8 +1203,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;排序是一个基本的数据操作，本文列举下 python 和 numpy 中的基本排序操作，以备后查。&lt;/p&gt;
-&lt;h2 id=&#34;列表排序&#34;&gt;列表排序&lt;/h2&gt;
-&lt;p&gt;列表排序常用&lt;code&gt;reverse/sort/sorted&lt;/code&gt;这三种方法，举例如下&lt;/p&gt;
+&lt;h2 id=&#34;列表排序&#34;&gt;列表排序
+&lt;/h2&gt;&lt;p&gt;列表排序常用&lt;code&gt;reverse/sort/sorted&lt;/code&gt;这三种方法，举例如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1251,8 +1251,8 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;35&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#生成新列表&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;字典排序&#34;&gt;字典排序&lt;/h2&gt;
-&lt;p&gt;可以使用 sorted 对字典排序，&lt;code&gt;sorted&lt;/code&gt;的函数原型如下所示&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;字典排序&#34;&gt;字典排序
+&lt;/h2&gt;&lt;p&gt;可以使用 sorted 对字典排序，&lt;code&gt;sorted&lt;/code&gt;的函数原型如下所示&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sorted(iterable, cmp=None, key=None, reverse=False) --&amp;gt; new sorted list&lt;/code&gt;，其中&lt;code&gt;iterable&lt;/code&gt;代指可以迭代的数据类型，&lt;code&gt;key&lt;/code&gt;表示按照什么排序，可以使用&lt;code&gt;lambda&lt;/code&gt;函数，举例如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1324,8 +1324,8 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;dave&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;jane&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;john&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;numpy-中的向量和矩阵的排序&#34;&gt;numpy 中的向量和矩阵的排序&lt;/h2&gt;
-&lt;p&gt;numpy 中的排序方法与之前的类似，使用&lt;code&gt;sort&lt;/code&gt;即可，不过 numpy 多了一个&lt;code&gt;axis&lt;/code&gt;的选项，表示按行（axis = 1）还是按照列进行排序 (axis = 0)，具体举例如下&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;numpy-中的向量和矩阵的排序&#34;&gt;numpy 中的向量和矩阵的排序
+&lt;/h2&gt;&lt;p&gt;numpy 中的排序方法与之前的类似，使用&lt;code&gt;sort&lt;/code&gt;即可，不过 numpy 多了一个&lt;code&gt;axis&lt;/code&gt;的选项，表示按行（axis = 1）还是按照列进行排序 (axis = 0)，具体举例如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1366,8 +1366,8 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000004959880&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Python dict sort 排序 按照 key，value - All About Python - SegmentFault&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/howto/sorting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

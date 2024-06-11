@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='这是一篇转载，点击查看原文链接。
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="这是一篇转载，点击查看原文链接。\n">
 <title>[转载]表驱动法代码实践</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='[转载]表驱动法代码实践'>
-<meta property='og:description' content='这是一篇转载，点击查看原文链接。
-'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="[转载]表驱动法代码实践">
+<meta property='og:description' content="这是一篇转载，点击查看原文链接。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/%E8%BD%AC%E8%BD%BD%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:tag' content='重构' /><meta property='article:tag' content='设计' /><meta property='article:published_time' content='2021-01-22T08:07:14&#43;08:00'/><meta property='article:modified_time' content='2021-01-22T08:07:14&#43;08:00'/><meta property='og:image' content='https://pic.imgdb.cn/item/600a17e53ffa7d37b3da9d49.jpg' />
 <meta name="twitter:title" content="[转载]表驱动法代码实践">
-<meta name="twitter:description" content="这是一篇转载，点击查看原文链接。
-"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="这是一篇转载，点击查看原文链接。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://pic.imgdb.cn/item/600a17e53ffa7d37b3da9d49.jpg' />
-    <link rel="shortcut icon" href="%5cfavicon.ico" />
+    <link rel="shortcut icon" href="/%5cfavicon.ico" />
 
   
 
@@ -101,7 +98,7 @@
             <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
             <h2 class="site-description">平凡的生活也值得记录</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -279,31 +276,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://blog.bugxch.top/" selected>中文</option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -311,7 +289,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -319,10 +297,11 @@
 
 
 
-                    <span>暗色模式</span>
-                </li>
-            
-        </div>
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -472,8 +451,8 @@
 <p>数据压倒一切。如果选择了正确的数据结构并把一切组织的井井有条，正确的算法就不言自明。编程的核心是数据结构，而不是算法. &ndash; Rob Pike</p>
 </blockquote>
 <p>本文基于这样的认识：数据是易变的，逻辑是稳定的。本文例举的编程实现多为代码片段，但不影响描述的完整性。本文例举的编程虽然基于C语言，但其编程思想也适用于其他语言。此外，本文不涉及语言相关的运行效率讨论。</p>
-<h2 id="概念提出">概念提出</h2>
-<p>所谓表驱动法(Table-Driven Approach)简而言之就是用查表的方法获取数据。此处的“表”通常为数组，但可视为数据库的一种体现。根据字典中的部首检字表查找读音未知的汉字就是典型的表驱动法，即以每个字的字形为依据，计算出一个索引值，并映射到对应的页数。相比一页一页地顺序翻字典查字，部首检字法效率极高。</p>
+<h2 id="概念提出">概念提出
+</h2><p>所谓表驱动法(Table-Driven Approach)简而言之就是用查表的方法获取数据。此处的“表”通常为数组，但可视为数据库的一种体现。根据字典中的部首检字表查找读音未知的汉字就是典型的表驱动法，即以每个字的字形为依据，计算出一个索引值，并映射到对应的页数。相比一页一页地顺序翻字典查字，部首检字法效率极高。</p>
 <p>具体到编程方面，在数据不多时可用逻辑判断语句(if…else或switch…case)来获取值；但随着数据的增多，逻辑语句会越来越长，此时表驱动法的优势就开始显现。例如，用36进制(A表示10，B表示11，…)表示更大的数字，逻辑判断语句如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -544,10 +523,10 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>使用表驱动法时需要关注两个问题：一是如何查表，从表中读取正确的数据；二是表里存放什么，如数值或函数指针。前者参见1.1节“查表方式”内容，后者参见1.2节“实战示例”内容。</p>
-<h3 id="查表方式">查表方式</h3>
-<p>常用的查表方式有直接查找、索引查找和分段查找等。</p>
-<h4 id="直接查找">直接查找</h4>
-<p>即直接通过数组下标获取到数据。如果熟悉哈希表的话，可以很容易看出这种查表方式就是哈希表的直接访问法。如获取星期名称，逻辑判断语句如下：</p>
+<h3 id="查表方式">查表方式
+</h3><p>常用的查表方式有直接查找、索引查找和分段查找等。</p>
+<h4 id="直接查找">直接查找
+</h4><p>即直接通过数组下标获取到数据。如果熟悉哈希表的话，可以很容易看出这种查表方式就是哈希表的直接访问法。如获取星期名称，逻辑判断语句如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -593,11 +572,11 @@
 </div>
 </div><p>类似哈希表特性，表驱动法适用于无需有序遍历数据，且数据量大小可提前预测的情况。对于过于复杂和庞大的判断，可将数据存为文件，需要时加载文件初始化数组，从而在不修改程序的情况下调整里面的数值。</p>
 <p>有时，访问之前需要先进行一次键值转换。如表驱动法表示端口忙闲时，需将槽位端口号映射为全局编号。所生成的端口数目大小的数组，其下标对应全局端口编号，元素值表示相应端口的忙闲状态。</p>
-<h4 id="索引查找">索引查找</h4>
-<p>有时通过一次键值转换，依然无法把数据(如英文单词等)转为键值。此时可将转换的对应关系写到一个索引表里，即索引访问。</p>
+<h4 id="索引查找">索引查找
+</h4><p>有时通过一次键值转换，依然无法把数据(如英文单词等)转为键值。此时可将转换的对应关系写到一个索引表里，即索引访问。</p>
 <p>如现有100件商品，4位编号，范围从0000到9999。此时只需要申请一个长度为100的数组，且对应2位键值。但将4位的编号转换为2位的键值，可能过于复杂或没有规律，最合适的方法是建立一个保存该转换关系的索引表。采用索引访问既节省内存，又方便维护。比如索引A表示通过名称访问，索引B表示通过编号访问。</p>
-<h4 id="分段查找">分段查找</h4>
-<p>通过确定数据所处的范围确定分类(下标)。有的数据可分成若干区间，即具有阶梯性，如分数等级。此时可将每个区间的上限(或下限)存到一个表中，将对应的值存到另一表中，通过第一个表确定所处的区段，再由区段下标在第二个表里读取相应数值。注意要留意端点，可用二分法查找，另外可考虑通过索引方法来代替。如根据分数查绩效等级：</p>
+<h4 id="分段查找">分段查找
+</h4><p>通过确定数据所处的范围确定分类(下标)。有的数据可分成若干区间，即具有阶梯性，如分数等级。此时可将每个区间的上限(或下限)存到一个表中，将对应的值存到另一表中，通过第一个表确定所处的区段，再由区段下标在第二个表里读取相应数值。注意要留意端点，可用二分法查找，另外可考虑通过索引方法来代替。如根据分数查绩效等级：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -687,10 +666,10 @@
 </div>
 </div><p>该表结构已具备的数据库的雏形，并可扩展支持更为复杂的数据。其查表方式通常为索引查找，偶尔也为分段查找；当索引具有规律性(如连续整数)时，退化为直接查找。</p>
 <p>使用分段查找法时应注意边界，将每一分段范围的上界值都考虑在内。找出所有不在最高一级范围内的值，然后把剩下的值全部归入最高一级中。有时需要人为地为最高一级范围添加一个上界。同时应小心不要错误地用“&lt;”来代替“&lt;=”。要保证循环在找出属于最高一级范围内的值后恰当地结束，同时也要保证恰当处理范围边界。</p>
-<h3 id="实战示例">实战示例</h3>
-<p>本节多数示例取自实际项目。表形式为一维数组、二维数组和结构体数组；表内容有数据、字符串和函数指针。基于表驱动的思想，表形式和表内容可衍生出丰富的组合。</p>
-<h4 id="字符统计">字符统计</h4>
-<p>问题：统计用户输入的一串数字中每个数字出现的次数。普通解法主体代码如下：</p>
+<h3 id="实战示例">实战示例
+</h3><p>本节多数示例取自实际项目。表形式为一维数组、二维数组和结构体数组；表内容有数据、字符串和函数指针。基于表驱动的思想，表形式和表内容可衍生出丰富的组合。</p>
+<h4 id="字符统计">字符统计
+</h4><p>问题：统计用户输入的一串数字中每个数字出现的次数。普通解法主体代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -753,8 +732,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>上述实现考虑到0也为数字字符。该解法也可扩展至统计所有ASCII可见字符。</p>
-<h4 id="月天校验">月天校验</h4>
-<p>问题：对给定年份和月份的天数进行校验(需区分平年和闰年)。普通解法主体代码如下：</p>
+<h4 id="月天校验">月天校验
+</h4><p>问题：对给定年份和月份的天数进行校验(需区分平年和闰年)。普通解法主体代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -904,8 +883,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="名称构造">名称构造</h4>
-<p>问题：根据WAN接口承载的业务类型(Bitmap)构造业务类型名称字符串。普通解法主体代码如下：</p>
+</div><h4 id="名称构造">名称构造
+</h4><p>问题：根据WAN接口承载的业务类型(Bitmap)构造业务类型名称字符串。普通解法主体代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -984,8 +963,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>新的实现将数据和逻辑分离，维护起来非常方便。只要逻辑(规则)不变，则唯一可能的改动就是数据(paSvrNames)。</p>
-<h4 id="值名解析">值名解析</h4>
-<p>问题：根据枚举变量取值输出其对应的字符串，如PORT_FE(1)输出“Fe”。</p>
+<h4 id="值名解析">值名解析
+</h4><p>问题：根据枚举变量取值输出其对应的字符串，如PORT_FE(1)输出“Fe”。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1162,8 +1141,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>gUniNameMap</code>在实际项目中有十余个条目，若采用逻辑链实现将非常冗长。</p>
-<h4 id="取值映射">取值映射</h4>
-<p>问题：不同模块间同一参数枚举值取值可能有所差异，需要适配。此处不再给出普通的switch…case或if…else if…else结构，而直接示出以下表驱动实现：</p>
+<h4 id="取值映射">取值映射
+</h4><p>问题：不同模块间同一参数枚举值取值可能有所差异，需要适配。此处不再给出普通的switch…case或if…else if…else结构，而直接示出以下表驱动实现：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1421,8 +1400,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="版本控制">版本控制</h4>
-<p>问题：控制OLT与ONU之间的版本协商。ONU本地设置三比特控制字，其中bit2(MSB)~bit0(LSB)分别对应0x21、0x30和0xAA版本号；且bitX为0表示上报对应版本号，bitX为1表示不上报对应版本号。其他版本号如0x20、0x13和0x1必须上报，即不受控制。最初的实现采用if…else if…else结构，代码非常冗长，如下：</p>
+</div><h4 id="版本控制">版本控制
+</h4><p>问题：控制OLT与ONU之间的版本协商。ONU本地设置三比特控制字，其中bit2(MSB)~bit0(LSB)分别对应0x21、0x30和0xAA版本号；且bitX为0表示上报对应版本号，bitX为1表示不上报对应版本号。其他版本号如0x20、0x13和0x1必须上报，即不受控制。最初的实现采用if…else if…else结构，代码非常冗长，如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1612,8 +1591,8 @@
 </span></span><span class="line"><span class="cl"><span class="n">pstSendTlv</span><span class="o">-&gt;</span><span class="n">ucLength</span> <span class="o">=</span> <span class="n">INFO_TYPE_VERS_LEN</span> <span class="o">+</span> <span class="n">index</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="消息处理">消息处理</h4>
-<p>问题：终端输入不同的打印命令，调用相应的打印函数，以控制不同级别的打印。</p>
+</div><h4 id="消息处理">消息处理
+</h4><p>问题：终端输入不同的打印命令，调用相应的打印函数，以控制不同级别的打印。</p>
 <p>这是一段消息(事件)驱动程序。本模块接收其他模块(如串口驱动)发送的消息，根据消息中的打印级别字符串和开关模式，调用不同函数进行处理。常见的实现方法如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1981,11 +1960,11 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="掩码表">掩码表</h4>
-<p>参见<a class="link" href="https://www.cnblogs.com/clover-toeic/p/3732444.html"  target="_blank" rel="noopener"
+</div><h4 id="掩码表">掩码表
+</h4><p>参见<a class="link" href="https://www.cnblogs.com/clover-toeic/p/3732444.html"  target="_blank" rel="noopener"
     >采用掩码方式简化产品国家地区支持能力的表示 - clover_toeic - 博客园</a>一文。该例实现中用到消息、掩码、函数指针等概念。</p>
-<h2 id="编程思想">编程思想</h2>
-<p>表驱动法属于数据驱动编程的一种，其核心思想在《Unix编程艺术》和《代码大全2》中均有阐述。两者均认为人类阅读复杂数据结构远比复杂的控制流程容易，即<strong>相对于程序逻辑，人类更擅长于处理数据</strong>。本节将由Unix设计原则中的“分离原则”和“表示原则”展开。</p>
+<h2 id="编程思想">编程思想
+</h2><p>表驱动法属于数据驱动编程的一种，其核心思想在《Unix编程艺术》和《代码大全2》中均有阐述。两者均认为人类阅读复杂数据结构远比复杂的控制流程容易，即<strong>相对于程序逻辑，人类更擅长于处理数据</strong>。本节将由Unix设计原则中的“分离原则”和“表示原则”展开。</p>
 <blockquote>
 <p><strong>分离原则：策略同机制分离，接口同引擎分离</strong></p>
 </blockquote>
@@ -2002,16 +1981,16 @@
 <li>系统级设计，如DSL。</li>
 </ul>
 <p>注意，数据驱动编程不是全新的编程模型，只是一种设计思路，在Unix/Linux开源社区应用很多。数据驱动编程中，数据不但表示某个对象的状态，实际上还定义程序的流程，这点不同于面向对象设计中的数据“封装”。</p>
-<h2 id="附录">附录</h2>
-<h3 id="网友观点">网友观点</h3>
-<p>(以下观点摘自博客园网友“七心葵”的回帖，非常具有启发性。)</p>
+<h2 id="附录">附录
+</h2><h3 id="网友观点">网友观点
+</h3><p>(以下观点摘自博客园网友“七心葵”的回帖，非常具有启发性。)</p>
 <p>Booch的《面向对象分析与设计》一书中，提到所有的程序设计语言大概有3个源流：结构化编程、面向对象编程、数据驱动编程。我认为数据驱动编程的本质是“参数化抽象”的思想，不同于OO的“规范化抽象”的思想。</p>
 <p>数据驱动编程在网络游戏开发过程中很常用，但是少有人专门提到这个词。数据驱动编程有很多名字：元编程，解释器/虚拟机，LOP/微语言/DSL等。包括声明式编程、标记语言、甚至所见即所得的拖放控件，都算是数据驱动编程的一种吧。</p>
 <p>数据驱动编程可以帮助处理复杂性，和结构化编程、OO 均可相容。(正交的角度)将变和不变的部分分离，策略和机制分离，由此联想到的还有：(数据和代码的分离，微语言和解释器的分离，被生成代码和代码生成器的分离)；更近一步：(微内核插件式体系结构)。</p>
 <p>元编程应该说是更加泛化的数据驱动编程，元编程不是新加入一个间接层，而是退居一步，使得当前的层变成一个间接层。元编程分为静态元编程(编译时)和动态元编程(运行时)，静态元编程本质上是一种代码生成技术或者编译器技术；动态元编程一般通过解释器(或虚拟机)加以实现。</p>
 <p>数据驱动编程当然也不应该说是“反抽象的”，但的确与“OO抽象”的思维方式是迥然不同，泾渭分明的，如TAOUP一书中所述：“在Unix的模块化传统和围绕OO语言发展起来的使用模式之间，存在着紧张的对立关系”应该说数据驱动编程的思路与结构化编程和OO是正交的，更类似一种“跳出三界外，不在五行中”的做法。</p>
-<h3 id="编程和人的关系">编程和人的关系</h3>
-<p>人类心智的限制，一切的背后都有人的因素作为依据：</p>
+<h3 id="编程和人的关系">编程和人的关系
+</h3><p>人类心智的限制，一切的背后都有人的因素作为依据：</p>
 <ol>
 <li>
 <p>人同时关注的信息数量：7+-2 (所以要分模块)</p>
@@ -2034,8 +2013,8 @@
 </li>
 </ol>
 <p>另外，开一个有意思的玩笑，Unix编程艺术艺术的英文缩写为TAOUP，我觉得可以理解为UP之TAO——向上抛出之道——将复杂的易变的逻辑作为数据或更高层代码抛给上层！</p>
-<h3 id="函数指针">函数指针</h3>
-<p>“消息处理”一节示例中的函数指针有点插件结构的味道。可对这些插件进行方便替换，新增，删除，从而改变程序的行为。而这种改变，对事件处理函数的查找又是隔离的(隔离变化)。</p>
+<h3 id="函数指针">函数指针
+</h3><p>“消息处理”一节示例中的函数指针有点插件结构的味道。可对这些插件进行方便替换，新增，删除，从而改变程序的行为。而这种改变，对事件处理函数的查找又是隔离的(隔离变化)。</p>
 <p>函数指针非常有用，但使用时需注意其缺陷：无法检查参数(parameter)和返回值(return value)的类型。因为函数已经退化成指针，而指针不携带这些类型信息。缺少类型检查，当参数或返回值不一致时，可能会造成严重的错误。</p>
 <p>例如，定义三个函数，分别具有两个参数：</p>
 <div class="highlight"><div class="chroma">
@@ -2128,7 +2107,7 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+        renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -2307,7 +2286,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

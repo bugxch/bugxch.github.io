@@ -14,8 +14,8 @@
         
         <guid>https://blog.bugxch.top/p/leetcode%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg" alt="Featured image of post LeetCode区间问题总结" /&gt;&lt;p&gt;上周五考试没有过，其中专业级第二题是关于区间的问题，在leetcode上找到类似的题目，总结复习下。&lt;/p&gt;
-&lt;h2 id=&#34;引子&#34;&gt;引子&lt;/h2&gt;
-&lt;p&gt;先看这道题，&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/corporate-flight-bookings/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;引子&#34;&gt;引子
+&lt;/h2&gt;&lt;p&gt;先看这道题，&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/corporate-flight-bookings/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1109. 航班预订统计&lt;/a&gt;，题目是这样的&lt;/p&gt;
 &lt;p&gt;这里有&lt;code&gt;n&lt;/code&gt; 个航班，它们分别从 1 到 n 进行编号。&lt;/p&gt;
 &lt;p&gt;我们这儿有一份航班预订表，表中第 &lt;code&gt;i&lt;/code&gt; 条预订记录 &lt;code&gt;bookings[i] = [i, j, k]&lt;/code&gt; 意味着我们在从 &lt;code&gt;i&lt;/code&gt; 到&lt;code&gt; j&lt;/code&gt; 的每个航班上预订了 &lt;code&gt;k&lt;/code&gt; 个座位。&lt;/p&gt;
@@ -30,8 +30,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;输出&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;55&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;45&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;解题思路&#34;&gt;解题思路&lt;/h3&gt;
-&lt;p&gt;将这道题的示例画一张表格表示一下，就是下面的结果&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;解题思路&#34;&gt;解题思路
+&lt;/h3&gt;&lt;p&gt;将这道题的示例画一张表格表示一下，就是下面的结果&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -144,18 +144,18 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度为$O(n)$。&lt;/p&gt;
-&lt;h2 id=&#34;通用框架&#34;&gt;通用框架&lt;/h2&gt;
-&lt;p&gt;「待补充」&lt;/p&gt;
-&lt;h2 id=&#34;典型题目&#34;&gt;典型题目&lt;/h2&gt;
-&lt;p&gt;「待补充」&lt;/p&gt;
-&lt;h3 id=&#34;no-986-区间列表交集&#34;&gt;No. 986 区间列表交集&lt;/h3&gt;
-&lt;p&gt;题目的链接参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/interval-list-intersections/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;通用框架&#34;&gt;通用框架
+&lt;/h2&gt;&lt;p&gt;「待补充」&lt;/p&gt;
+&lt;h2 id=&#34;典型题目&#34;&gt;典型题目
+&lt;/h2&gt;&lt;p&gt;「待补充」&lt;/p&gt;
+&lt;h3 id=&#34;no-986-区间列表交集&#34;&gt;No. 986 区间列表交集
+&lt;/h3&gt;&lt;p&gt;题目的链接参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/interval-list-intersections/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;986. 区间列表的交集 - 力扣（LeetCode）&lt;/a&gt;，&lt;/p&gt;
-&lt;h3 id=&#34;no-452-引爆气球&#34;&gt;No. 452 引爆气球&lt;/h3&gt;
-&lt;p&gt;题目链接参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;no-452-引爆气球&#34;&gt;No. 452 引爆气球
+&lt;/h3&gt;&lt;p&gt;题目链接参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;452. 用最少数量的箭引爆气球 - 力扣（LeetCode）&lt;/a&gt;，这道题目使用&lt;strong&gt;贪心法&lt;/strong&gt;，将气球的坐标放在坐标轴上，然后从0开始从左到右逐气球扫描，查看是否有交集，图示如下。&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;p&gt;「待补充」&lt;/p&gt;</description>
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;p&gt;「待补充」&lt;/p&gt;</description>
         </item>
         <item>
         <title>C&#43;&#43;中的sort函数详解</title>
@@ -164,8 +164,8 @@
         
         <guid>https://blog.bugxch.top/p/c-%E4%B8%AD%E7%9A%84sort%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/6002ed073ffa7d37b305c866.jpg" alt="Featured image of post C&#43;&#43;中的sort函数详解" /&gt;&lt;p&gt;公司认证的leetcode题目中经常会用到sort函数，不是很熟悉，今天系统学习总结下。&lt;/p&gt;
-&lt;h2 id=&#34;总述&#34;&gt;总述&lt;/h2&gt;
-&lt;p&gt;下面是C++的stl中的排序的所有函数，这个系列的博客会逐一介绍，这次的博客先关注最常用的&lt;code&gt;sort&lt;/code&gt;函数。&lt;/p&gt;
+&lt;h2 id=&#34;总述&#34;&gt;总述
+&lt;/h2&gt;&lt;p&gt;下面是C++的stl中的排序的所有函数，这个系列的博客会逐一介绍，这次的博客先关注最常用的&lt;code&gt;sort&lt;/code&gt;函数。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -204,20 +204,20 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;sort函数&#34;&gt;sort函数&lt;/h2&gt;
-&lt;h3 id=&#34;使用范围&#34;&gt;使用范围&lt;/h3&gt;
-&lt;p&gt;C++ STL 标准库中的 sort() 函数，本质就是一个模板函数。正如表 1 中描述的，该函数专门用来对容器或普通数组中指定范围内的元素进行排序，排序规则默认以元素值的大小做升序排序，除此之外我们也可以选择标准库提供的其它排序规则（比如&lt;code&gt;std::greater&amp;lt;T&amp;gt;&lt;/code&gt;降序排序规则），甚至还可以自定义排序规则。&lt;/p&gt;
+&lt;h2 id=&#34;sort函数&#34;&gt;sort函数
+&lt;/h2&gt;&lt;h3 id=&#34;使用范围&#34;&gt;使用范围
+&lt;/h3&gt;&lt;p&gt;C++ STL 标准库中的 sort() 函数，本质就是一个模板函数。正如表 1 中描述的，该函数专门用来对容器或普通数组中指定范围内的元素进行排序，排序规则默认以元素值的大小做升序排序，除此之外我们也可以选择标准库提供的其它排序规则（比如&lt;code&gt;std::greater&amp;lt;T&amp;gt;&lt;/code&gt;降序排序规则），甚至还可以自定义排序规则。&lt;/p&gt;
 &lt;p&gt;需要注意的是，sort() 函数受到底层实现方式的限制，它仅适用于普通数组和部分类型的容器。换句话说，只有普通数组和具备以下条件的容器，才能使用 sort() 函数：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;容器支持的迭代器类型必须为随机访问迭代器。这意味着，sort() 只对 array、vector、deque 这 3 个容器提供支持；&lt;/li&gt;
 &lt;li&gt;如果对容器中指定区域的元素做默认升序排序，则元素类型必须支持&lt;code&gt;&amp;lt;&lt;/code&gt;小于运算符；同样，如果选用标准库提供的其它排序规则，元素类型也必须支持该规则底层实现所用的比较运算符；&lt;/li&gt;
 &lt;li&gt;sort() 函数在实现排序时，需要交换容器中元素的存储位置。这种情况下，如果容器中存储的是自定义的类对象，则该类的内部必须提供移动构造函数和移动赋值运算符。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;局限&#34;&gt;局限&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sort&lt;/code&gt;函数不保证排序的&lt;a class=&#34;link&#34; href=&#34;https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;局限&#34;&gt;局限
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sort&lt;/code&gt;函数不保证排序的&lt;a class=&#34;link&#34; href=&#34;https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;稳定性&lt;/a&gt;，即如果被排序的序列中有多个相同值的元素，并不能保证排序之后他们的相对位置保持不变。&lt;/p&gt;
-&lt;h3 id=&#34;使用方法&#34;&gt;使用方法&lt;/h3&gt;
-&lt;p&gt;值得一提的是，sort() 函数位于&lt;code&gt;&amp;lt;algorithm&amp;gt;&lt;/code&gt;头文件中，因此在使用该函数前，程序中应包含如下语句：&lt;/p&gt;
+&lt;h3 id=&#34;使用方法&#34;&gt;使用方法
+&lt;/h3&gt;&lt;p&gt;值得一提的是，sort() 函数位于&lt;code&gt;&amp;lt;algorithm&amp;gt;&lt;/code&gt;头文件中，因此在使用该函数前，程序中应包含如下语句：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -310,9 +310,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;再探自定义比较函数&#34;&gt;再探自定义比较函数&lt;/h2&gt;
-&lt;h3 id=&#34;一元谓词和二元谓词&#34;&gt;一元谓词和二元谓词&lt;/h3&gt;
-&lt;p&gt;sort的自定义比较函数在C++中成为&lt;strong&gt;谓词&lt;/strong&gt;，在泛型编程中作为参数使用。按照接受参数的个数不同，谓词分为一元谓词和二元谓词两种。&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;再探自定义比较函数&#34;&gt;再探自定义比较函数
+&lt;/h2&gt;&lt;h3 id=&#34;一元谓词和二元谓词&#34;&gt;一元谓词和二元谓词
+&lt;/h3&gt;&lt;p&gt;sort的自定义比较函数在C++中成为&lt;strong&gt;谓词&lt;/strong&gt;，在泛型编程中作为参数使用。按照接受参数的个数不同，谓词分为一元谓词和二元谓词两种。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;一元谓词，比如&lt;code&gt;for_each&lt;/code&gt;中使用，因为该算法是顺序遍历容器中的每个元素，对每个元素进行操作，所以是一元谓词，如下面的代码片段&lt;/p&gt;
@@ -339,8 +339,8 @@
 &lt;p&gt;二元谓词，sort算法是对容器的两个元素进行比较，所以接受两个参数，比如上面的&lt;code&gt;mycomp&lt;/code&gt;函数。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;lambda表达式与可调用对象&#34;&gt;lambda表达式与可调用对象&lt;/h3&gt;
-&lt;p&gt;谓词就是一个可调用对象(callable object)，在C++中可调用对象包括4种类型：函数、函数指针、重载函数调用符的类（可以像函数一样使用的类）以及&lt;strong&gt;lambda表达式&lt;/strong&gt;。其实在上面的代码片段中，已经在sort算法中使用过函数以及重载函数调用符的类。此处重点介绍一下lambda表达式。lambda表达式的介绍很多，此处直接贴出来参考资料3中的总结表格&lt;/p&gt;
+&lt;h3 id=&#34;lambda表达式与可调用对象&#34;&gt;lambda表达式与可调用对象
+&lt;/h3&gt;&lt;p&gt;谓词就是一个可调用对象(callable object)，在C++中可调用对象包括4种类型：函数、函数指针、重载函数调用符的类（可以像函数一样使用的类）以及&lt;strong&gt;lambda表达式&lt;/strong&gt;。其实在上面的代码片段中，已经在sort算法中使用过函数以及重载函数调用符的类。此处重点介绍一下lambda表达式。lambda表达式的介绍很多，此处直接贴出来参考资料3中的总结表格&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6132a81044eaada739e80e13.png&#34;
 	
 	
@@ -482,8 +482,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;当上面的函数返回为&lt;code&gt;true&lt;/code&gt;时候，那么将&lt;code&gt;a&lt;/code&gt;排在&lt;code&gt;b&lt;/code&gt;的前面，上面的代码种当&lt;code&gt;a &amp;lt; b&lt;/code&gt;时结果为&lt;code&gt;true&lt;/code&gt;，所以小的元素排在前面，下面通过做题来示例它的用法。&lt;/p&gt;
-&lt;h3 id=&#34;具体题目&#34;&gt;具体题目&lt;/h3&gt;
-&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/rank-teams-by-votes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;具体题目&#34;&gt;具体题目
+&lt;/h3&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://leetcode-cn.com/problems/rank-teams-by-votes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1366. 通过投票对团队排名 - 力扣（LeetCode）&lt;/a&gt;，具体的代码如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -620,8 +620,8 @@
 &lt;li&gt;如果在两个选手在所有的名次上票数均相同，那么最后按照人名排序（第35行）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这里的代码告诉了&lt;code&gt;sort&lt;/code&gt;函数该如何对当前所有选手中的两个选手的名次进行排序，它会将其中的两两进行比较给出答案（如何两两比较，我们不用关心），&lt;strong&gt;从微观层面告诉&lt;code&gt;sort&lt;/code&gt;函数的两个元素的操作方法&lt;/strong&gt;，它就能将所有的选手按照这个方法排好序，这个就是lambda表达式的意义。&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-&lt;ol&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://c.biancheng.net/view/7457.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;C++ sort()排序函数用法详解&lt;/a&gt;，c语言中文网的介绍&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.geeksforgeeks.org/sort-c-stl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -639,19 +639,19 @@
         <description>&lt;img src="https://raw.githubusercontent.com/bugxch/blogpics/master/202001/c%2B%2B.jpg" alt="Featured image of post 《CPlusPlus Primer Plus》第九章习题及答案" /&gt;&lt;p&gt;假期做题，记录下。&lt;/p&gt;
 &lt;p&gt;此处是复习题的答案，编程练习题的答案见&lt;a class=&#34;link&#34; href=&#34;https://github.com/bugxch/Solutions_C-PrimerPlus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;bugxch/Solutions_C-PrimerPlus&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;answer-1&#34;&gt;Answer #1&lt;/h3&gt;
-&lt;p&gt;a) 形参在函数调用时候创建，在函数返回时销毁，自动存储变量，无链接性，所以是自动变量；&lt;/p&gt;
+&lt;h3 id=&#34;answer-1&#34;&gt;Answer #1
+&lt;/h3&gt;&lt;p&gt;a) 形参在函数调用时候创建，在函数返回时销毁，自动存储变量，无链接性，所以是自动变量；&lt;/p&gt;
 &lt;p&gt;b) 文件共享的变量具有外部链接性，所以使用静态存储外部链接性的变量，比如在A文件中定义，在B中使用extern关键字引用；&lt;/p&gt;
 &lt;p&gt;c) 内部链接性，静态存储变量，可以使用static修饰符，或者使用未命名的命名空间；&lt;/p&gt;
 &lt;p&gt;d) 无链接性，但是是静态存储变量，在函数内部使用static修饰符定义&lt;/p&gt;
-&lt;h3 id=&#34;answer-2&#34;&gt;Answer #2&lt;/h3&gt;
-&lt;p&gt;有一下几点区别：&lt;/p&gt;
+&lt;h3 id=&#34;answer-2&#34;&gt;Answer #2
+&lt;/h3&gt;&lt;p&gt;有一下几点区别：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;using声明仅仅导入特定的名称，但是using编译命令将导入一个名称空间的所有名称；&lt;/li&gt;
 &lt;li&gt;假如名称空间和声明区域定义了相同的名称。using声明中如果该名称与局部名称发生冲突，编译器会发出警告，但是using编译指令导入的而名称会被局部版本隐藏。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;answer-3&#34;&gt;Answer #3&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;answer-3&#34;&gt;Answer #3
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -685,8 +685,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;answer-4&#34;&gt;Answer #4&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;answer-4&#34;&gt;Answer #4
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -724,8 +724,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;answer-5&#34;&gt;Answer #5&lt;/h3&gt;
-&lt;p&gt;因为两个函数的形参和顺序一样，仅仅是返回值不同，因此无法使用函数重载。如果在不同的文件中使用，这两个函数的作用域不同，有两种方式实现，&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;answer-5&#34;&gt;Answer #5
+&lt;/h3&gt;&lt;p&gt;因为两个函数的形参和顺序一样，仅仅是返回值不同，因此无法使用函数重载。如果在不同的文件中使用，这两个函数的作用域不同，有两种方式实现，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;可以使用static关键字，&lt;/li&gt;
 &lt;/ol&gt;
@@ -740,8 +740,8 @@
 &lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;将函数的声明和定义放在未命名的名称空间中&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;answer-6&#34;&gt;Answer #6&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;answer-6&#34;&gt;Answer #6
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -757,8 +757,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;another&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;: 10, -4
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;answer-7&#34;&gt;Answer #7&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;answer-7&#34;&gt;Answer #7
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
