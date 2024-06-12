@@ -580,8 +580,6 @@
   </url><url>
     <loc>https://blog.bugxch.top/omnivore/</loc>
   </url><url>
-    <loc>https://blog.bugxch.top/categories/reading/</loc>
-  </url><url>
     <loc>https://blog.bugxch.top/categories/test/</loc>
   </url><url>
     <loc>https://blog.bugxch.top/weread/</loc>
@@ -589,5 +587,7 @@
     <loc>https://blog.bugxch.top/%E6%94%B6%E9%9B%86/</loc>
   </url><url>
     <loc>https://blog.bugxch.top/search/</loc>
+  </url><url>
+    <loc>https://blog.bugxch.top/categories/reading/</loc>
   </url>
 </urlset>
