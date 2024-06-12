@@ -7,15 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Thu, 13 Jun 2024 07:12:54 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>阅读</title>
-        <link>https://blog.bugxch.top/categories/%E9%98%85%E8%AF%BB/</link>
-        <pubDate>Thu, 13 Jun 2024 07:12:54 +0800</pubDate>
-        
-        <guid>https://blog.bugxch.top/categories/%E9%98%85%E8%AF%BB/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Sat, 01 Jun 2024 21:54:52 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>技艺</title>
         <link>https://blog.bugxch.top/categories/%E6%8A%80%E8%89%BA/</link>
         <pubDate>Sat, 01 Jun 2024 21:54:52 +0800</pubDate>
@@ -40,12 +32,12 @@
         <description></description>
         </item>
         <item>
-        <title>Test</title>
-        <link>https://blog.bugxch.top/categories/test/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <title>阅读</title>
+        <link>https://blog.bugxch.top/categories/%E9%98%85%E8%AF%BB/</link>
+        <pubDate>Sat, 14 May 2022 09:46:46 +0800</pubDate>
         
-        <guid>https://blog.bugxch.top/categories/test/</guid>
-        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://blog.bugxch.top/categories/%E9%98%85%E8%AF%BB/</guid>
+        <description></description>
         </item>
         
     </channel>
