@@ -40,9 +40,9 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;于是，我又在&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/fenlei/nascunchufuwuqi/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;最新NAS存储新品推荐_什么值得买&lt;/a&gt;下面泡了一段时间，发现NAS用的最多的就是群晖和威联通，鉴于威联通颜值能打，而且看到论坛里面的讨论这么全面，将来入手遇到问题也能方便找到解决方案，最终放弃了某宝非常便宜的方案，买了入门款的威联通TS216，先把这个玩熟，等过几年用的差不多了，升级的时候再换更高级的吧。&lt;/p&gt;
-&lt;h2 id=&#34;基本配置&#34;&gt;基本配置
+&lt;h2 id=&#34;基本配置&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e6%9c%ac%e9%85%8d%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基本配置
 &lt;/h2&gt;&lt;p&gt;这个东西买回来很快，但是我发现要真的玩起来还是有比较高的学习成本的，下面是我边学边练的折腾记录。&lt;/p&gt;
-&lt;h3 id=&#34;安装系统&#34;&gt;安装系统
+&lt;h3 id=&#34;安装系统&#34;&gt;&lt;a href=&#34;#%e5%ae%89%e8%a3%85%e7%b3%bb%e7%bb%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;安装系统
 &lt;/h3&gt;&lt;p&gt;我刚开始安装的是西数红盘4T plus，后来发现同步照片的时候NAS炒豆子的声音太大了，所以后来又买了两条m.2的闪迪500G固态硬盘，2个硬盘600大洋，所以整个一套下来应该花了3400大洋（还是蛮肉疼的）。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/63a02668b1fccdcd3673a92d.png&#34;
 	
@@ -67,7 +67,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;远程访问&#34;&gt;远程访问
+&lt;h3 id=&#34;远程访问&#34;&gt;&lt;a href=&#34;#%e8%bf%9c%e7%a8%8b%e8%ae%bf%e9%97%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;远程访问
 &lt;/h3&gt;&lt;p&gt;家用NAS需要能在外部访问才能发挥它最大的威力，这一节从下面的几个步骤一步步做介绍，我主要参考了&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/a0dq84nr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;威联通 TS-451D外网高速访问：公网IP、DSM主机、端口映射、DDNS动态域名设置_NAS存储_什么值得买&lt;/a&gt;，基本上照着配置即可。需要注意两点：&lt;/p&gt;
 &lt;ol&gt;
@@ -102,10 +102,10 @@
 &lt;p&gt;如果没有外网IP，可以使用威联通自带的myCloud和DDNS服务，但是速度比较慢，设置系统查看状态应该可以，但是下载上传文件就勉为其难了。更好的方案是使用有偿的服务，比如上面易有云就提供内网穿透服务，最高到8M速度，我后来没有用。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;域名映射&#34;&gt;域名映射
+&lt;h4 id=&#34;域名映射&#34;&gt;&lt;a href=&#34;#%e5%9f%9f%e5%90%8d%e6%98%a0%e5%b0%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;域名映射
 &lt;/h4&gt;&lt;p&gt;如果外网IP申请下来，一般是在浏览器中直接输入外网IP地址和端口号，但是外网IP会因为光猫重新上电而发生变化，这个就不太方便，所以可以绑定域名，自动DDNS解析解决这个问题。我参考&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/a5ozer6k/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;威联通使用腾讯DNSPod域名DDNS解析完全小白指南+HTTPS证书部署（阿里、华为等国内主流云服务商通用）_NAS存储_什么值得买&lt;/a&gt;设置好的，但是没有做最后的证书配置。&lt;/p&gt;
-&lt;h3 id=&#34;安装app&#34;&gt;安装APP
+&lt;h3 id=&#34;安装app&#34;&gt;&lt;a href=&#34;#%e5%ae%89%e8%a3%85app&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;安装APP
 &lt;/h3&gt;&lt;p&gt;以我一周左右的使用经验来看，最有的APP有下面几个，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qsirch，智能搜索各种文档，甚至支持图片的OCR识别后的内容搜索，非常好用，高级搜索功能非常好玩，甚至可以根据相机的镜头筛选照片；&lt;/li&gt;
@@ -121,18 +121,18 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/awx0wop4/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;QNAP威联通发布Qsirch 5.0搜索神器，图片搜索和归档更便捷好用_软件应用_什么值得买&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;应用设置&#34;&gt;应用设置
-&lt;/h2&gt;&lt;h3 id=&#34;同步obsidian笔记&#34;&gt;同步Obsidian笔记
+&lt;h2 id=&#34;应用设置&#34;&gt;&lt;a href=&#34;#%e5%ba%94%e7%94%a8%e8%ae%be%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;应用设置
+&lt;/h2&gt;&lt;h3 id=&#34;同步obsidian笔记&#34;&gt;&lt;a href=&#34;#%e5%90%8c%e6%ad%a5obsidian%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;同步Obsidian笔记
 &lt;/h3&gt;&lt;p&gt;从去年开始，我在&lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top/takesmartnotes/#%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;初识卡片笔记写作法 - 不写，就无法思考&lt;/a&gt;里面使用Obsidian，之前也使用过坚果云 + folerSync同步PC端，但是同步效果不理想。这次使用NAS，我发现APP Center里面有&lt;a class=&#34;link&#34; href=&#34;https://www.resilio.com/individuals/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; Resilio Sync&lt;/a&gt;，顺便就google了下，发现很适合NAS啊，可以参考&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/459403503&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Resilio Sync | 全平台多设备文件同步/传输终极产品 - 知乎&lt;/a&gt;。这个软件特点是可以多达60M+的速率在所有安装该软件的跨平台设备上同步，但是需要保证多个同步文件夹中至少有一个是在线的。所以，我的做法是在NAS上安装该软件作为共享的源文件夹，然后在PC和手机端分别安装并同步这个源文件夹，都赋予读写权限，这样无论哪一端的修改都会同步到其他两端。我在手机上安装后使用，可以实现瞬时同步，体验极佳。&lt;/p&gt;
-&lt;h3 id=&#34;同步博客&#34;&gt;同步博客
+&lt;h3 id=&#34;同步博客&#34;&gt;&lt;a href=&#34;#%e5%90%8c%e6%ad%a5%e5%8d%9a%e5%ae%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;同步博客
 &lt;/h3&gt;&lt;p&gt;使用类似的方法，我将hugo博客的文件夹也放在了NAS上，PC端与其同步，这样就能实现二者的同步了。&lt;/p&gt;
-&lt;h3 id=&#34;搭建书屋&#34;&gt;搭建书屋
+&lt;h3 id=&#34;搭建书屋&#34;&gt;&lt;a href=&#34;#%e6%90%ad%e5%bb%ba%e4%b9%a6%e5%b1%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;搭建书屋
 &lt;/h3&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/a992p6e0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;NAS指南 篇三：打造最强家用NAS之私人书库搭建教程_NAS存储_什么值得买&lt;/a&gt;就能搭建起个人书库，唯一的缺憾是不能批量上传，我把中亚上面的几乎所有电子书和文档全部上传到NAS电子书服务器上了。&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考资料
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/a0dq84nr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;威联通 TS-451D外网高速访问：公网IP、DSM主机、端口映射、DDNS动态域名设置_NAS存储_什么值得买&lt;/a&gt;&lt;/li&gt;
@@ -155,7 +155,7 @@
         <guid>https://blog.bugxch.top/p/%E6%8C%87%E6%95%B0%E5%9F%BA%E9%87%91%E6%8A%95%E8%B5%84%E6%8C%87%E5%8D%97%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/627f0a6d09475431294c2403.jpg" alt="Featured image of post 《指数基金投资指南》笔记" /&gt;&lt;p&gt;疫情期间，复习下之前的指数基金投资指南。&lt;/p&gt;
 &lt;p&gt;这本书我在2018年10月左右第一次读完的，从那个时候开始投资基金到现在差不多3年半的时间。经历过还算完整的高峰和低谷，直到去年底收益倒还不错，但是今年开年到现在亏损比较严重，刚好疫情居家隔离，正好把这本书复习下，重新理解下之前不甚明了的概念，梳理下内容，系统化投资策略。&lt;/p&gt;
-&lt;h2 id=&#34;我的理念&#34;&gt;我的理念
+&lt;h2 id=&#34;我的理念&#34;&gt;&lt;a href=&#34;#%e6%88%91%e7%9a%84%e7%90%86%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;我的理念
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;凡是投资收益强过银行的长期定存收益的方法，都值得学习。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -168,11 +168,11 @@
 &lt;p&gt;金融市场充满波动，有高峰有低谷，赚钱赚的就是这个利差。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;波动越大，不确定性越大，风险越大，但是峰谷差值越大，利润也越大。&lt;/p&gt;
-&lt;h2 id=&#34;基础知识&#34;&gt;基础知识
+&lt;h2 id=&#34;基础知识&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基础知识
 &lt;/h2&gt;&lt;p&gt;这本书的核心内容是基金介绍和指数基金挑选这两个章节，展开说说。&lt;/p&gt;
-&lt;h3 id=&#34;基金分类&#34;&gt;基金分类
+&lt;h3 id=&#34;基金分类&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e9%87%91%e5%88%86%e7%b1%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基金分类
 &lt;/h3&gt;&lt;p&gt;我把书里面介绍的基金分类罗列在下面的表格里面，一目了然。&lt;/p&gt;
-&lt;h4 id=&#34;宽基指数&#34;&gt;宽基指数
+&lt;h4 id=&#34;宽基指数&#34;&gt;&lt;a href=&#34;#%e5%ae%bd%e5%9f%ba%e6%8c%87%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;宽基指数
 &lt;/h4&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -277,9 +277,9 @@
 &lt;li&gt;中证800：大中盘股，沪深300+中证500。&lt;/li&gt;
 &lt;li&gt;中证1000：小盘股为主，除去中证800外，最大的1 000只小盘股&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;行业基金&#34;&gt;行业基金
+&lt;h4 id=&#34;行业基金&#34;&gt;&lt;a href=&#34;#%e8%a1%8c%e4%b8%9a%e5%9f%ba%e9%87%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;行业基金
 &lt;/h4&gt;&lt;p&gt;行业分类很多，作者在这里主要推荐日用消费品和医疗保健行业的指数，此外有一部分强周期的行业指数，在底部购入也会比较好。&lt;/p&gt;
-&lt;h5 id=&#34;消费行业&#34;&gt;消费行业
+&lt;h5 id=&#34;消费行业&#34;&gt;&lt;a href=&#34;#%e6%b6%88%e8%b4%b9%e8%a1%8c%e4%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;消费行业
 &lt;/h5&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -315,7 +315,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h5 id=&#34;医药行业&#34;&gt;医药行业
+&lt;h5 id=&#34;医药行业&#34;&gt;&lt;a href=&#34;#%e5%8c%bb%e8%8d%af%e8%a1%8c%e4%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;医药行业
 &lt;/h5&gt;&lt;ul&gt;
 &lt;li&gt;中证医药指数：又称中证800医药指数，是从中证800指数中挑选医药行业。&lt;/li&gt;
 &lt;li&gt;中证医药100指数：挑选了100家大型医药股，每只股票买入相同的金额。&lt;/li&gt;
@@ -334,7 +334,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h5 id=&#34;养老行业&#34;&gt;养老行业
+&lt;h5 id=&#34;养老行业&#34;&gt;&lt;a href=&#34;#%e5%85%bb%e8%80%81%e8%a1%8c%e4%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;养老行业
 &lt;/h5&gt;&lt;p&gt;覆盖范围较广，人口老龄化越来越严重，长期来看试一个比较好的品类&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6280c9b8094754312965816f.png&#34;
 	
@@ -344,7 +344,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h5 id=&#34;金融行业&#34;&gt;金融行业
+&lt;h5 id=&#34;金融行业&#34;&gt;&lt;a href=&#34;#%e9%87%91%e8%9e%8d%e8%a1%8c%e4%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;金融行业
 &lt;/h5&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;银行业&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -369,9 +369,9 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;总结下，基本上如果已经关注了上面的4只指数，就没必要再单独购买持有了。&lt;/p&gt;
-&lt;h5 id=&#34;地产&#34;&gt;地产
+&lt;h5 id=&#34;地产&#34;&gt;&lt;a href=&#34;#%e5%9c%b0%e4%ba%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;地产
 &lt;/h5&gt;&lt;p&gt;现在基本是下行周期了，长期看恢复乏力，不需要关注。&lt;/p&gt;
-&lt;h5 id=&#34;军工行业&#34;&gt;军工行业
+&lt;h5 id=&#34;军工行业&#34;&gt;&lt;a href=&#34;#%e5%86%9b%e5%b7%a5%e8%a1%8c%e4%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;军工行业
 &lt;/h5&gt;&lt;p&gt;祖国终将统一，祖国必将统一。这个品种与国家政策影响比较大，投资难度较高。但是，我国最近几年军事工业发展迅猛，可以从&lt;a class=&#34;link&#34; href=&#34;https://chinapower.csis.org/analysis-jiangnan-shipyard/?lang=zh-hans&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;江南造船厂分析报告&lt;/a&gt;看到国内第三艘航母即将下水，未来可期&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6280e8000947543129cbb053.png&#34;
@@ -382,9 +382,9 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h5 id=&#34;白酒&#34;&gt;白酒
+&lt;h5 id=&#34;白酒&#34;&gt;&lt;a href=&#34;#%e7%99%bd%e9%85%92&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;白酒
 &lt;/h5&gt;&lt;p&gt;目前比较惨，目前国内的白酒基本上已经包括在消费行业指数里面了。&lt;/p&gt;
-&lt;h5 id=&#34;环保&#34;&gt;环保
+&lt;h5 id=&#34;环保&#34;&gt;&lt;a href=&#34;#%e7%8e%af%e4%bf%9d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;环保
 &lt;/h5&gt;&lt;p&gt;国内环保长线发展，值得关注。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6280eac00947543129d4e7aa.png&#34;
 	
@@ -394,7 +394,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;其他要点&#34;&gt;其他要点
+&lt;h3 id=&#34;其他要点&#34;&gt;&lt;a href=&#34;#%e5%85%b6%e4%bb%96%e8%a6%81%e7%82%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;其他要点
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;避开规模较小的指数基金&lt;/strong&gt;。可能强制赎回，导致投资中断，这一条可以在基金的基础资料中看到，一般而言&lt;strong&gt;少于1亿规模&lt;/strong&gt;就不要申购了。&lt;/li&gt;
 &lt;li&gt;增强型基金在追踪指数的基础上，去做一些操作来赚取超额收益，但是具体的操作不公开，有一定的风险。指数基金投资尽量挑选&lt;strong&gt;费用较低、规模较大、历史悠久、误差较小&lt;/strong&gt;的指数基金产品，或者是挑选有一定超额收益的&lt;strong&gt;增强型指数基金&lt;/strong&gt;。&lt;/li&gt;
@@ -409,12 +409,12 @@
 &lt;li&gt;基金分场内基金和场外基金两种。相对于场外基金仅有”申购赎回”的交易渠道，场内基金还有“买入卖出”的渠道。但是，这里推荐&lt;strong&gt;场外基金&lt;/strong&gt;的投资方式，操作方便，省心省力，对于一般的工薪族来说足够。&lt;/li&gt;
 &lt;li&gt;联结基金复制场内的指数，通过场外基金的方式申购和赎回，一般看到的ETF（交易型开放式指数基金）的联结基金就属于这一类。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;价值投资核心理念&#34;&gt;价值投资核心理念
+&lt;h2 id=&#34;价值投资核心理念&#34;&gt;&lt;a href=&#34;#%e4%bb%b7%e5%80%bc%e6%8a%95%e8%b5%84%e6%a0%b8%e5%bf%83%e7%90%86%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;价值投资核心理念
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;判断清楚价格与价值的关系，在&lt;strong&gt;价格&lt;/strong&gt;低于&lt;strong&gt;价值&lt;/strong&gt;的时买入，在&lt;strong&gt;价格高于价值&lt;/strong&gt;的时&lt;strong&gt;售出&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;这就是价值投资的核心理念，要求能够合理预估投资产品的价值。所以自然就引出两个问题：如何评估股票的价值，评估后如何实操？&lt;/p&gt;
-&lt;h3 id=&#34;如何估值股票&#34;&gt;如何估值股票
+&lt;h3 id=&#34;如何估值股票&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e4%bd%95%e4%bc%b0%e5%80%bc%e8%82%a1%e7%a5%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如何估值股票
 &lt;/h3&gt;&lt;p&gt;常见的股票估值由下面的评估指标。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -465,14 +465,14 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;投资实操&#34;&gt;投资实操
+&lt;h3 id=&#34;投资实操&#34;&gt;&lt;a href=&#34;#%e6%8a%95%e8%b5%84%e5%ae%9e%e6%93%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;投资实操
 &lt;/h3&gt;&lt;p&gt;书中介绍了两种不同的方法，大概总结以下&lt;/p&gt;
-&lt;h4 id=&#34;盈利收益率法&#34;&gt;盈利收益率法
+&lt;h4 id=&#34;盈利收益率法&#34;&gt;&lt;a href=&#34;#%e7%9b%88%e5%88%a9%e6%94%b6%e7%9b%8a%e7%8e%87%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;盈利收益率法
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;当盈利收益率大于10%时，开始定投，分批买入。当盈利收益率低于6.4%时，暂停定投，分批卖出。其他区段，坚定持有&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;按照这个说法，其实参考上面的估值表格，当前可以分批买入恒生指数以上的所有的指数了。盈利收益率法也是有它的&lt;strong&gt;局限性&lt;/strong&gt;的。盈利收益率的使用条件比较苛刻，只适合于流通性比较好、盈利比较稳定的品种。如果是盈利增长速度较快，或者盈利波动比较大的指数基金，则不适合使用盈利收益率法。&lt;/p&gt;
-&lt;h4 id=&#34;博格公式法&#34;&gt;博格公式法
+&lt;h4 id=&#34;博格公式法&#34;&gt;&lt;a href=&#34;#%e5%8d%9a%e6%a0%bc%e5%85%ac%e5%bc%8f%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;博格公式法
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;指数基金未来的年复合收益率 = 指数基金的投资初期股息率 + 指数基金每年的市盈率变化率 + 指数基金的每年的盈利变化率&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -484,7 +484,7 @@
 &lt;/ul&gt;
 &lt;p&gt;在前2个指标比较低的时候买入，然后持有后等待均值回归。需要注意的是，对于盈利不稳定或者周期性比较强的行业，可以使用市净率替换市盈率进行评估，即在市净率比较低的时候买入。&lt;/p&gt;
 &lt;p&gt;对于&lt;strong&gt;长期亏损&lt;/strong&gt;的企业，上面的两个方法均不适用，放弃即可。&lt;/p&gt;
-&lt;h4 id=&#34;实操公式&#34;&gt;实操公式
+&lt;h4 id=&#34;实操公式&#34;&gt;&lt;a href=&#34;#%e5%ae%9e%e6%93%8d%e5%85%ac%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;实操公式
 &lt;/h4&gt;&lt;p&gt;上面的内容已经基本上把这本书的精华讲完了，后面作者补充了一些内容，比较有价值的是实操的具体公式。这个是&lt;strong&gt;定期不定额&lt;/strong&gt;的投资方法的公式&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6288937009475431290bbfb3.png&#34;
 	
@@ -504,7 +504,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这里的$n$是投资的放大系数，一般设置成1就可以了，如果资金比较充裕，设置成2也可以。&lt;/p&gt;
-&lt;h4 id=&#34;年龄与投资比例&#34;&gt;年龄与投资比例
+&lt;h4 id=&#34;年龄与投资比例&#34;&gt;&lt;a href=&#34;#%e5%b9%b4%e9%be%84%e4%b8%8e%e6%8a%95%e8%b5%84%e6%af%94%e4%be%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;年龄与投资比例
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;指数基金是一种风险比较高的资产，我们可以用100减去自己当前的年龄，用得到的数值加上百分号就是适合投入到指数基金中的资金比例。&lt;/p&gt;
 &lt;/blockquote&gt;

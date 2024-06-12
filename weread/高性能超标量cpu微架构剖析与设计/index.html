@@ -66,7 +66,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -226,7 +226,179 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#封面">封面</a></li>
+    <li><a href="#版权信息">版权信息</a></li>
+    <li><a href="#作者简介">作者简介</a></li>
+    <li><a href="#序">序</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#第1章-cpu架构与流水线技术概述">第1章 CPU架构与流水线技术概述</a>
+      <ol>
+        <li><a href="#11-复杂指令集与精简指令集概述">1.1 复杂指令集与精简指令集概述</a></li>
+        <li><a href="#12-arm指令集概述">1.2 ARM指令集概述</a></li>
+        <li><a href="#13-risc-v指令集概述">1.3 RISC-V指令集概述</a></li>
+        <li><a href="#14-mips指令集概述">1.4 MIPS指令集概述</a></li>
+        <li><a href="#15-超标量cpu设计概述">1.5 超标量CPU设计概述</a></li>
+      </ol>
+    </li>
+    <li><a href="#第2章-cpu前端与指令缓存设计">第2章 CPU前端与指令缓存设计</a>
+      <ol>
+        <li><a href="#21-内存的层次结构与缓存的基本架构">2.1 内存的层次结构与缓存的基本架构</a></li>
+        <li><a href="#22-指令缓存分类与访问读取">2.2 指令缓存分类与访问读取</a></li>
+        <li><a href="#23-指令缓存的替换策略选择">2.3 指令缓存的替换策略选择</a></li>
+        <li><a href="#24-指令缓存的性能衡量标准与硬件预取设计">2.4 指令缓存的性能衡量标准与硬件预取设计</a></li>
+        <li><a href="#25-tlb与缓存的组织方式">2.5 TLB与缓存的组织方式</a></li>
+        <li><a href="#26-微操作缓存与循环缓冲器设计">2.6 微操作缓存与循环缓冲器设计</a></li>
+        <li><a href="#27-指令提取单元设计">2.7 指令提取单元设计</a></li>
+        <li><a href="#28-指令译码单元设计">2.8 指令译码单元设计</a></li>
+      </ol>
+    </li>
+    <li><a href="#第3章-分支预测单元设计">第3章 分支预测单元设计</a>
+      <ol>
+        <li><a href="#31-分支预测的原理">3.1 分支预测的原理</a></li>
+        <li><a href="#32-分支跳转方向预测">3.2 分支跳转方向预测</a></li>
+        <li><a href="#33-分支跳转目标预测">3.3 分支跳转目标预测</a></li>
+        <li><a href="#34-分支预测单元与取指令单元解耦合设计">3.4 分支预测单元与取指令单元解耦合设计</a></li>
+        <li><a href="#35-分支预测单元的设计思路">3.5 分支预测单元的设计思路</a></li>
+      </ol>
+    </li>
+    <li><a href="#第4章-寄存器重命名单元设计">第4章 寄存器重命名单元设计</a>
+      <ol>
+        <li><a href="#41-寄存器重命名技术概述">4.1 寄存器重命名技术概述</a></li>
+        <li><a href="#42-寄存器重命名的原理与过程概述">4.2 寄存器重命名的原理与过程概述</a></li>
+        <li><a href="#43-寄存器重命名技术的设计空间">4.3 寄存器重命名技术的设计空间</a></li>
+        <li><a href="#44-寄存器重命名的映射方法">4.4 寄存器重命名的映射方法</a></li>
+        <li><a href="#45-寄存器重命名可能的实现方案">4.5 寄存器重命名可能的实现方案</a></li>
+        <li><a href="#46-寄存器重命名的实现过程">4.6 寄存器重命名的实现过程</a></li>
+      </ol>
+    </li>
+    <li><a href="#第5章-发射队列设">第5章 发射队列设</a>
+      <ol>
+        <li><a href="#51-发射队列的原理">5.1 发射队列的原理</a></li>
+        <li><a href="#52-发射队列设计空间">5.2 发射队列设计空间</a></li>
+        <li><a href="#53-操作数获取策略">5.3 操作数获取策略</a></li>
+        <li><a href="#54-发射队列的工作机制">5.4 发射队列的工作机制</a></li>
+        <li><a href="#55-发射队列在超标量cpu中的应用">5.5 发射队列在超标量CPU中的应用</a></li>
+      </ol>
+    </li>
+    <li><a href="#第6章-执行单元设计">第6章 执行单元设计</a>
+      <ol>
+        <li><a href="#61-算术逻辑运算单元设计">6.1 算术逻辑运算单元设计</a></li>
+        <li><a href="#62-定点乘法运算设计">6.2 定点乘法运算设计</a></li>
+        <li><a href="#63-单指令多数据simd设计">6.3 单指令多数据SIMD设计</a></li>
+        <li><a href="#64-旁路网络设计">6.4 旁路网络设计</a></li>
+      </ol>
+    </li>
+    <li><a href="#第7章-浮点运算单元设计">第7章 浮点运算单元设计</a>
+      <ol>
+        <li><a href="#71-浮点数据格式与运算标准ieee754">7.1 浮点数据格式与运算标准——IEEE754</a></li>
+        <li><a href="#72-浮点加法运算原理与设计">7.2 浮点加法运算原理与设计</a></li>
+        <li><a href="#73-浮点乘法运算原理与设计">7.3 浮点乘法运算原理与设计</a></li>
+        <li><a href="#74-浮点除法开方运算原理与设计">7.4 浮点除法/开方运算原理与设计</a></li>
+      </ol>
+    </li>
+    <li><a href="#第8章-访存单元设计">第8章 访存单元设计</a>
+      <ol>
+        <li><a href="#81-内存模型概述">8.1 内存模型概述</a></li>
+        <li><a href="#82-数据缓存概述">8.2 数据缓存概述</a></li>
+        <li><a href="#83-数据缓存控制设计">8.3 数据缓存控制设计</a></li>
+        <li><a href="#84-数据缓存预取技术">8.4 数据缓存预取技术</a></li>
+      </ol>
+    </li>
+    <li><a href="#第9章-重排序缓冲设计">第9章 重排序缓冲设计</a>
+      <ol>
+        <li><a href="#91-重排序缓冲的原理">9.1 重排序缓冲的原理</a></li>
+        <li><a href="#92-重排序缓冲的设计空间">9.2 重排序缓冲的设计空间</a></li>
+        <li><a href="#93-重排序缓冲运行示例">9.3 重排序缓冲运行示例</a></li>
+      </ol>
+    </li>
+    <li><a href="#第10章-高性能cpu设计实例intel-p6微架构">第10章 高性能CPU设计实例：Intel P6微架构</a>
+      <ol>
+        <li><a href="#101-intel-p6微架构概述">10.1 Intel P6微架构概述</a></li>
+        <li><a href="#102-intel-p6微架构的流水线设计">10.2 Intel P6微架构的流水线设计</a></li>
+        <li><a href="#103-intel-p6微架构前端设计">10.3 Intel P6微架构前端设计</a></li>
+        <li><a href="#104-intel-p6微架构乱序执行引擎设计">10.4 Intel P6微架构乱序执行引擎设计</a></li>
+        <li><a href="#105-intel-p6微架构内存子系统设计">10.5 Intel P6微架构内存子系统设计</a></li>
+      </ol>
+    </li>
+    <li><a href="#文后">文后</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#15-超标量cpu设计概述-1">1.5 超标量CPU设计概述</a>
+      <ol>
+        <li><a href="#划线评论">划线评论</a></li>
+        <li><a href="#划线评论-1">划线评论</a></li>
+        <li><a href="#划线评论-2">划线评论</a></li>
+        <li><a href="#划线评论-3">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#第2章-cpu前端与指令缓存设计-1">第2章 CPU前端与指令缓存设计</a>
+      <ol>
+        <li><a href="#划线评论-4">划线评论</a></li>
+        <li><a href="#划线评论-5">划线评论</a></li>
+        <li><a href="#划线评论-6">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#22-指令缓存分类与访问读取-1">2.2 指令缓存分类与访问读取</a>
+      <ol>
+        <li><a href="#划线评论-7">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#24-指令缓存的性能衡量标准与硬件预取设计-1">2.4 指令缓存的性能衡量标准与硬件预取设计</a>
+      <ol>
+        <li><a href="#划线评论-8">划线评论</a></li>
+        <li><a href="#划线评论-9">划线评论</a></li>
+        <li><a href="#划线评论-10">划线评论</a></li>
+        <li><a href="#划线评论-11">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#26-微操作缓存与循环缓冲器设计-1">2.6 微操作缓存与循环缓冲器设计</a>
+      <ol>
+        <li><a href="#划线评论-12">划线评论</a></li>
+        <li><a href="#划线评论-13">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#63-单指令多数据simd设计-1">6.3 单指令多数据SIMD设计</a>
+      <ol>
+        <li><a href="#划线评论-14">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#第8章-访存单元设计-1">第8章 访存单元设计</a>
+      <ol>
+        <li><a href="#划线评论-15">划线评论</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -276,7 +448,7 @@
     <section class="article-content">
     
     
-    <h1 id="元数据">元数据
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
 </h1><blockquote>
 <p>[!abstract] 高性能超标量CPU：微架构剖析与设计</p>
 <ul>
@@ -302,12 +474,12 @@
 <li>PC地址：https://weread.qq.com/web/reader/b6a32d70813ab8026g012fd1</li>
 </ul>
 </blockquote>
-<h1 id="高亮划线">高亮划线
-</h1><h2 id="封面">封面
-</h2><h2 id="版权信息">版权信息
-</h2><h2 id="作者简介">作者简介
-</h2><h2 id="序">序
-</h2><h2 id="前言">前言
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="作者简介"><a href="#%e4%bd%9c%e8%80%85%e7%ae%80%e4%bb%8b" class="header-anchor"></a>作者简介
+</h2><h2 id="序"><a href="#%e5%ba%8f" class="header-anchor"></a>序
+</h2><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
 </h2><blockquote>
 <p>📌 在计算机体系结构领域，无论对于在校生还是从业者，加州大学伯克利分校的David Patterson博士和斯坦福大学的John Hennessy博士的两部经典著作Computer Organization and Design: The Hardware/Software Interface和Computer Architecture: A Quantitative Approach都是必读的。
 ⏱ 2024-04-01 19:25:36 ^3300065662-5-679-933</p>
@@ -316,8 +488,8 @@
 <p>📌 南加州大学教授Michel Dubois博士是IEEE会士，笔者认为他的著作Parallel Computer Organization and Design看来是一部非常优秀的讲解CPU设计的书籍，内容详实逻辑清晰。然而，笔者在校时Michel Dubois博士开设的课程并没有得到学生的追捧，究其原因有其个人风格的关系，但是归根结底还是偏重于高屋建瓴，这有可能会让学生对于CPU设计的“道”和“术”无法顺畅地相互印证
 ⏱ 2024-04-01 19:26:26 ^3300065662-5-1307-1545</p>
 </blockquote>
-<h2 id="第1章-cpu架构与流水线技术概述">第1章 CPU架构与流水线技术概述
-</h2><h3 id="11-复杂指令集与精简指令集概述">1.1 复杂指令集与精简指令集概述
+<h2 id="第1章-cpu架构与流水线技术概述"><a href="#%e7%ac%ac1%e7%ab%a0-cpu%e6%9e%b6%e6%9e%84%e4%b8%8e%e6%b5%81%e6%b0%b4%e7%ba%bf%e6%8a%80%e6%9c%af%e6%a6%82%e8%bf%b0" class="header-anchor"></a>第1章 CPU架构与流水线技术概述
+</h2><h3 id="11-复杂指令集与精简指令集概述"><a href="#11-%e5%a4%8d%e6%9d%82%e6%8c%87%e4%bb%a4%e9%9b%86%e4%b8%8e%e7%b2%be%e7%ae%80%e6%8c%87%e4%bb%a4%e9%9b%86%e6%a6%82%e8%bf%b0" class="header-anchor"></a>1.1 复杂指令集与精简指令集概述
 </h3><blockquote>
 <p>📌 此处需要说明，整型类指令大部分一般一个时钟周期能执行完运算，浮点类指令只有极少数可以做到一个时钟周期能执行完成，大部分的执行都是几个时钟周期
 ⏱ 2024-04-05 10:25:14 ^3300065662-7-3617-3687</p>
@@ -326,10 +498,10 @@
 <p>📌 RISC强调使用寄存器而不是内存，因为寄存器是访问最快的可用资源。RISC中的通用寄存器放置在与运算单元和控制单元接近的位置上，指令对寄存器中存储的操作数进行操作。
 ⏱ 2024-04-05 10:43:55 ^3300065662-7-4036-4118</p>
 </blockquote>
-<h3 id="12-arm指令集概述">1.2 ARM指令集概述
-</h3><h3 id="13-risc-v指令集概述">1.3 RISC-V指令集概述
-</h3><h3 id="14-mips指令集概述">1.4 MIPS指令集概述
-</h3><h3 id="15-超标量cpu设计概述">1.5 超标量CPU设计概述
+<h3 id="12-arm指令集概述"><a href="#12-arm%e6%8c%87%e4%bb%a4%e9%9b%86%e6%a6%82%e8%bf%b0" class="header-anchor"></a>1.2 ARM指令集概述
+</h3><h3 id="13-risc-v指令集概述"><a href="#13-risc-v%e6%8c%87%e4%bb%a4%e9%9b%86%e6%a6%82%e8%bf%b0" class="header-anchor"></a>1.3 RISC-V指令集概述
+</h3><h3 id="14-mips指令集概述"><a href="#14-mips%e6%8c%87%e4%bb%a4%e9%9b%86%e6%a6%82%e8%bf%b0" class="header-anchor"></a>1.4 MIPS指令集概述
+</h3><h3 id="15-超标量cpu设计概述"><a href="#15-%e8%b6%85%e6%a0%87%e9%87%8fcpu%e8%ae%be%e8%ae%a1%e6%a6%82%e8%bf%b0" class="header-anchor"></a>1.5 超标量CPU设计概述
 </h3><blockquote>
 <p>📌 在超标量CPU中，指令分发器(Dispatcher)决定了哪些指令可以并行运行，并将每个指令分发到多个执行单元。
 ⏱ 2024-04-05 20:26:13 ^3300065662-11-880-936</p>
@@ -354,14 +526,14 @@
 <p>📌 回到CPU设计本身，在超标量CPU中将指令分发给N个并行单元的硬件开销是比较大的，因此指令发射的宽度目前做不了太大（开销大，收益小，权衡下来不划算
 ⏱ 2024-04-06 06:56:03 ^3300065662-11-9152-9225</p>
 </blockquote>
-<h2 id="第2章-cpu前端与指令缓存设计">第2章 CPU前端与指令缓存设计
+<h2 id="第2章-cpu前端与指令缓存设计"><a href="#%e7%ac%ac2%e7%ab%a0-cpu%e5%89%8d%e7%ab%af%e4%b8%8e%e6%8c%87%e4%bb%a4%e7%bc%93%e5%ad%98%e8%ae%be%e8%ae%a1" class="header-anchor"></a>第2章 CPU前端与指令缓存设计
 </h2><blockquote>
 <p>📌  对于ARM架构的CPU来说，前端转换实际上是两个步骤：将ARM指令转换成宏操作(Macro-operations)，然后将宏操作翻译成微操作进行分发（需要注意的是，在一个时钟周期内能够处理的指令、宏操作和微操作的数量是有限制的）。 ^3300065662-12-1275-1390</p>
 </blockquote>
 <ul>
 <li>💭 这个限制典型值是多少 - ⏱ 2024-04-06 06:58:46</li>
 </ul>
-<h3 id="21-内存的层次结构与缓存的基本架构">2.1 内存的层次结构与缓存的基本架构
+<h3 id="21-内存的层次结构与缓存的基本架构"><a href="#21-%e5%86%85%e5%ad%98%e7%9a%84%e5%b1%82%e6%ac%a1%e7%bb%93%e6%9e%84%e4%b8%8e%e7%bc%93%e5%ad%98%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%9e%b6%e6%9e%84" class="header-anchor"></a>2.1 内存的层次结构与缓存的基本架构
 </h3><blockquote>
 <p>📌 通常，为了支持数据访问和指令获取的重叠，CPU有两个一级缓存，一个用于程序数据（数据缓存，Data Cache），一个用于程序指令（指令缓存，Instruction Cache）。这样的一级缓存也被称为哈佛缓存(Harvard Cache)
 ⏱ 2024-04-06 09:00:46 ^3300065662-13-1483-1603</p>
@@ -370,25 +542,25 @@
 <p>📌 多级缓存的各级缓存均由硬件管理，其基本原理是缓存越大，访问的地址就越有可能出现在缓存中，但缓存也越慢。较大的缓存速度较慢，因为对存储器的访问时间主要由连线延迟（地址线、行线、列线）决定，并且不会随着技术规模的扩大而改善
 ⏱ 2024-04-06 09:21:00 ^3300065662-13-1748-1857</p>
 </blockquote>
-<h3 id="22-指令缓存分类与访问读取">2.2 指令缓存分类与访问读取
+<h3 id="22-指令缓存分类与访问读取"><a href="#22-%e6%8c%87%e4%bb%a4%e7%bc%93%e5%ad%98%e5%88%86%e7%b1%bb%e4%b8%8e%e8%ae%bf%e9%97%ae%e8%af%bb%e5%8f%96" class="header-anchor"></a>2.2 指令缓存分类与访问读取
 </h3><blockquote>
 <p>📌 为了能够快速读写，有效位信息的存储一般基于寄存器而非静态存储器。
 ⏱ 2024-04-06 09:36:59 ^3300065662-14-744-776</p>
 </blockquote>
-<h3 id="23-指令缓存的替换策略选择">2.3 指令缓存的替换策略选择
-</h3><h3 id="24-指令缓存的性能衡量标准与硬件预取设计">2.4 指令缓存的性能衡量标准与硬件预取设计
+<h3 id="23-指令缓存的替换策略选择"><a href="#23-%e6%8c%87%e4%bb%a4%e7%bc%93%e5%ad%98%e7%9a%84%e6%9b%bf%e6%8d%a2%e7%ad%96%e7%95%a5%e9%80%89%e6%8b%a9" class="header-anchor"></a>2.3 指令缓存的替换策略选择
+</h3><h3 id="24-指令缓存的性能衡量标准与硬件预取设计"><a href="#24-%e6%8c%87%e4%bb%a4%e7%bc%93%e5%ad%98%e7%9a%84%e6%80%a7%e8%83%bd%e8%a1%a1%e9%87%8f%e6%a0%87%e5%87%86%e4%b8%8e%e7%a1%ac%e4%bb%b6%e9%a2%84%e5%8f%96%e8%ae%be%e8%ae%a1" class="header-anchor"></a>2.4 指令缓存的性能衡量标准与硬件预取设计
 </h3><blockquote>
 <p>📌  当CPU前端对指令的供应变慢时，流水线的发射宽度和执行资源无论多么丰富都会被浪费。 ^3300065662-16-2667-2708</p>
 </blockquote>
 <ul>
 <li>💭 指令预取也可能是指令执行的瓶颈 - ⏱ 2024-04-06 10:43:44</li>
 </ul>
-<h3 id="25-tlb与缓存的组织方式">2.5 TLB与缓存的组织方式
+<h3 id="25-tlb与缓存的组织方式"><a href="#25-tlb%e4%b8%8e%e7%bc%93%e5%ad%98%e7%9a%84%e7%bb%84%e7%bb%87%e6%96%b9%e5%bc%8f" class="header-anchor"></a>2.5 TLB与缓存的组织方式
 </h3><blockquote>
 <p>📌 CPU层所操作的内存地址称作虚拟地址（逻辑地址），并不是物理的内存地址，从虚拟地址至物理地址的映射由硬件内存管理单元(Memory Management Unit, MMU)来执行
 ⏱ 2024-03-07 14:04:20 ^3300065662-17-527-617</p>
 </blockquote>
-<h3 id="26-微操作缓存与循环缓冲器设计">2.6 微操作缓存与循环缓冲器设计
+<h3 id="26-微操作缓存与循环缓冲器设计"><a href="#26-%e5%be%ae%e6%93%8d%e4%bd%9c%e7%bc%93%e5%ad%98%e4%b8%8e%e5%be%aa%e7%8e%af%e7%bc%93%e5%86%b2%e5%99%a8%e8%ae%be%e8%ae%a1" class="header-anchor"></a>2.6 微操作缓存与循环缓冲器设计
 </h3><blockquote>
 <p>📌 微操作可以编码为固定长度的CISC指令，从而节省微操作缓存面积，但代价是识别重命名、分发和执行每个微操作字段所需的译码逻辑开销。
 ⏱ 2024-04-06 22:27:41 ^3300065662-18-1749-1813</p>
@@ -407,162 +579,162 @@
 <ul>
 <li>💭 还可以这么玩儿 - ⏱ 2024-04-06 22:30:17</li>
 </ul>
-<h3 id="27-指令提取单元设计">2.7 指令提取单元设计
+<h3 id="27-指令提取单元设计"><a href="#27-%e6%8c%87%e4%bb%a4%e6%8f%90%e5%8f%96%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1" class="header-anchor"></a>2.7 指令提取单元设计
 </h3><blockquote>
 <p>📌 指令队列的作用在于解耦取指单元和译码单元两边的流水线，平衡取指单元流水线中断（如缓存未命中）造成的“气泡”和后级单元流水线阻塞造成的效率降低。其存储的指令条目数根据设计性能的需求定义，至少大于取指单元流水线深度乘以指令发射宽度，才能在理论上保证不会出现流水线“气泡”（理想情况）。如果指令队列的深度过大，在控制类指令的路径上可能会造成提取到过多错误路径指令而导致无谓的功耗开销，所以设计深度要平衡各方面的因素考虑。
 ⏱ 2024-04-07 06:52:08 ^3300065662-19-1219-1426</p>
 </blockquote>
-<h3 id="28-指令译码单元设计">2.8 指令译码单元设计
-</h3><h2 id="第3章-分支预测单元设计">第3章 分支预测单元设计
-</h2><h3 id="31-分支预测的原理">3.1 分支预测的原理
-</h3><h3 id="32-分支跳转方向预测">3.2 分支跳转方向预测
-</h3><h3 id="33-分支跳转目标预测">3.3 分支跳转目标预测
-</h3><h3 id="34-分支预测单元与取指令单元解耦合设计">3.4 分支预测单元与取指令单元解耦合设计
-</h3><h3 id="35-分支预测单元的设计思路">3.5 分支预测单元的设计思路
-</h3><h2 id="第4章-寄存器重命名单元设计">第4章 寄存器重命名单元设计
-</h2><h3 id="41-寄存器重命名技术概述">4.1 寄存器重命名技术概述
-</h3><h3 id="42-寄存器重命名的原理与过程概述">4.2 寄存器重命名的原理与过程概述
-</h3><h3 id="43-寄存器重命名技术的设计空间">4.3 寄存器重命名技术的设计空间
-</h3><h3 id="44-寄存器重命名的映射方法">4.4 寄存器重命名的映射方法
-</h3><h3 id="45-寄存器重命名可能的实现方案">4.5 寄存器重命名可能的实现方案
-</h3><h3 id="46-寄存器重命名的实现过程">4.6 寄存器重命名的实现过程
-</h3><h2 id="第5章-发射队列设">第5章 发射队列设
-</h2><h3 id="51-发射队列的原理">5.1 发射队列的原理
-</h3><h3 id="52-发射队列设计空间">5.2 发射队列设计空间
-</h3><h3 id="53-操作数获取策略">5.3 操作数获取策略
-</h3><h3 id="54-发射队列的工作机制">5.4 发射队列的工作机制
-</h3><h3 id="55-发射队列在超标量cpu中的应用">5.5 发射队列在超标量CPU中的应用
-</h3><h2 id="第6章-执行单元设计">第6章 执行单元设计
-</h2><h3 id="61-算术逻辑运算单元设计">6.1 算术逻辑运算单元设计
-</h3><h3 id="62-定点乘法运算设计">6.2 定点乘法运算设计
-</h3><h3 id="63-单指令多数据simd设计">6.3 单指令多数据SIMD设计
-</h3><h3 id="64-旁路网络设计">6.4 旁路网络设计
-</h3><h2 id="第7章-浮点运算单元设计">第7章 浮点运算单元设计
-</h2><h3 id="71-浮点数据格式与运算标准ieee754">7.1 浮点数据格式与运算标准——IEEE754
-</h3><h3 id="72-浮点加法运算原理与设计">7.2 浮点加法运算原理与设计
-</h3><h3 id="73-浮点乘法运算原理与设计">7.3 浮点乘法运算原理与设计
-</h3><h3 id="74-浮点除法开方运算原理与设计">7.4 浮点除法/开方运算原理与设计
-</h3><h2 id="第8章-访存单元设计">第8章 访存单元设计
-</h2><h3 id="81-内存模型概述">8.1 内存模型概述
-</h3><h3 id="82-数据缓存概述">8.2 数据缓存概述
-</h3><h3 id="83-数据缓存控制设计">8.3 数据缓存控制设计
-</h3><h3 id="84-数据缓存预取技术">8.4 数据缓存预取技术
-</h3><h2 id="第9章-重排序缓冲设计">第9章 重排序缓冲设计
-</h2><h3 id="91-重排序缓冲的原理">9.1 重排序缓冲的原理
-</h3><h3 id="92-重排序缓冲的设计空间">9.2 重排序缓冲的设计空间
-</h3><h3 id="93-重排序缓冲运行示例">9.3 重排序缓冲运行示例
-</h3><h2 id="第10章-高性能cpu设计实例intel-p6微架构">第10章 高性能CPU设计实例：Intel P6微架构
-</h2><h3 id="101-intel-p6微架构概述">10.1 Intel P6微架构概述
-</h3><h3 id="102-intel-p6微架构的流水线设计">10.2 Intel P6微架构的流水线设计
-</h3><h3 id="103-intel-p6微架构前端设计">10.3 Intel P6微架构前端设计
-</h3><h3 id="104-intel-p6微架构乱序执行引擎设计">10.4 Intel P6微架构乱序执行引擎设计
-</h3><h3 id="105-intel-p6微架构内存子系统设计">10.5 Intel P6微架构内存子系统设计
-</h3><h2 id="文后">文后
-</h2><h1 id="读书笔记">读书笔记
-</h1><h2 id="15-超标量cpu设计概述-1">1.5 超标量CPU设计概述
-</h2><h3 id="划线评论">划线评论
+<h3 id="28-指令译码单元设计"><a href="#28-%e6%8c%87%e4%bb%a4%e8%af%91%e7%a0%81%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1" class="header-anchor"></a>2.8 指令译码单元设计
+</h3><h2 id="第3章-分支预测单元设计"><a href="#%e7%ac%ac3%e7%ab%a0-%e5%88%86%e6%94%af%e9%a2%84%e6%b5%8b%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1" class="header-anchor"></a>第3章 分支预测单元设计
+</h2><h3 id="31-分支预测的原理"><a href="#31-%e5%88%86%e6%94%af%e9%a2%84%e6%b5%8b%e7%9a%84%e5%8e%9f%e7%90%86" class="header-anchor"></a>3.1 分支预测的原理
+</h3><h3 id="32-分支跳转方向预测"><a href="#32-%e5%88%86%e6%94%af%e8%b7%b3%e8%bd%ac%e6%96%b9%e5%90%91%e9%a2%84%e6%b5%8b" class="header-anchor"></a>3.2 分支跳转方向预测
+</h3><h3 id="33-分支跳转目标预测"><a href="#33-%e5%88%86%e6%94%af%e8%b7%b3%e8%bd%ac%e7%9b%ae%e6%a0%87%e9%a2%84%e6%b5%8b" class="header-anchor"></a>3.3 分支跳转目标预测
+</h3><h3 id="34-分支预测单元与取指令单元解耦合设计"><a href="#34-%e5%88%86%e6%94%af%e9%a2%84%e6%b5%8b%e5%8d%95%e5%85%83%e4%b8%8e%e5%8f%96%e6%8c%87%e4%bb%a4%e5%8d%95%e5%85%83%e8%a7%a3%e8%80%a6%e5%90%88%e8%ae%be%e8%ae%a1" class="header-anchor"></a>3.4 分支预测单元与取指令单元解耦合设计
+</h3><h3 id="35-分支预测单元的设计思路"><a href="#35-%e5%88%86%e6%94%af%e9%a2%84%e6%b5%8b%e5%8d%95%e5%85%83%e7%9a%84%e8%ae%be%e8%ae%a1%e6%80%9d%e8%b7%af" class="header-anchor"></a>3.5 分支预测单元的设计思路
+</h3><h2 id="第4章-寄存器重命名单元设计"><a href="#%e7%ac%ac4%e7%ab%a0-%e5%af%84%e5%ad%98%e5%99%a8%e9%87%8d%e5%91%bd%e5%90%8d%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1" class="header-anchor"></a>第4章 寄存器重命名单元设计
+</h2><h3 id="41-寄存器重命名技术概述"><a href="#41-%e5%af%84%e5%ad%98%e5%99%a8%e9%87%8d%e5%91%bd%e5%90%8d%e6%8a%80%e6%9c%af%e6%a6%82%e8%bf%b0" class="header-anchor"></a>4.1 寄存器重命名技术概述
+</h3><h3 id="42-寄存器重命名的原理与过程概述"><a href="#42-%e5%af%84%e5%ad%98%e5%99%a8%e9%87%8d%e5%91%bd%e5%90%8d%e7%9a%84%e5%8e%9f%e7%90%86%e4%b8%8e%e8%bf%87%e7%a8%8b%e6%a6%82%e8%bf%b0" class="header-anchor"></a>4.2 寄存器重命名的原理与过程概述
+</h3><h3 id="43-寄存器重命名技术的设计空间"><a href="#43-%e5%af%84%e5%ad%98%e5%99%a8%e9%87%8d%e5%91%bd%e5%90%8d%e6%8a%80%e6%9c%af%e7%9a%84%e8%ae%be%e8%ae%a1%e7%a9%ba%e9%97%b4" class="header-anchor"></a>4.3 寄存器重命名技术的设计空间
+</h3><h3 id="44-寄存器重命名的映射方法"><a href="#44-%e5%af%84%e5%ad%98%e5%99%a8%e9%87%8d%e5%91%bd%e5%90%8d%e7%9a%84%e6%98%a0%e5%b0%84%e6%96%b9%e6%b3%95" class="header-anchor"></a>4.4 寄存器重命名的映射方法
+</h3><h3 id="45-寄存器重命名可能的实现方案"><a href="#45-%e5%af%84%e5%ad%98%e5%99%a8%e9%87%8d%e5%91%bd%e5%90%8d%e5%8f%af%e8%83%bd%e7%9a%84%e5%ae%9e%e7%8e%b0%e6%96%b9%e6%a1%88" class="header-anchor"></a>4.5 寄存器重命名可能的实现方案
+</h3><h3 id="46-寄存器重命名的实现过程"><a href="#46-%e5%af%84%e5%ad%98%e5%99%a8%e9%87%8d%e5%91%bd%e5%90%8d%e7%9a%84%e5%ae%9e%e7%8e%b0%e8%bf%87%e7%a8%8b" class="header-anchor"></a>4.6 寄存器重命名的实现过程
+</h3><h2 id="第5章-发射队列设"><a href="#%e7%ac%ac5%e7%ab%a0-%e5%8f%91%e5%b0%84%e9%98%9f%e5%88%97%e8%ae%be" class="header-anchor"></a>第5章 发射队列设
+</h2><h3 id="51-发射队列的原理"><a href="#51-%e5%8f%91%e5%b0%84%e9%98%9f%e5%88%97%e7%9a%84%e5%8e%9f%e7%90%86" class="header-anchor"></a>5.1 发射队列的原理
+</h3><h3 id="52-发射队列设计空间"><a href="#52-%e5%8f%91%e5%b0%84%e9%98%9f%e5%88%97%e8%ae%be%e8%ae%a1%e7%a9%ba%e9%97%b4" class="header-anchor"></a>5.2 发射队列设计空间
+</h3><h3 id="53-操作数获取策略"><a href="#53-%e6%93%8d%e4%bd%9c%e6%95%b0%e8%8e%b7%e5%8f%96%e7%ad%96%e7%95%a5" class="header-anchor"></a>5.3 操作数获取策略
+</h3><h3 id="54-发射队列的工作机制"><a href="#54-%e5%8f%91%e5%b0%84%e9%98%9f%e5%88%97%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%9c%ba%e5%88%b6" class="header-anchor"></a>5.4 发射队列的工作机制
+</h3><h3 id="55-发射队列在超标量cpu中的应用"><a href="#55-%e5%8f%91%e5%b0%84%e9%98%9f%e5%88%97%e5%9c%a8%e8%b6%85%e6%a0%87%e9%87%8fcpu%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8" class="header-anchor"></a>5.5 发射队列在超标量CPU中的应用
+</h3><h2 id="第6章-执行单元设计"><a href="#%e7%ac%ac6%e7%ab%a0-%e6%89%a7%e8%a1%8c%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1" class="header-anchor"></a>第6章 执行单元设计
+</h2><h3 id="61-算术逻辑运算单元设计"><a href="#61-%e7%ae%97%e6%9c%af%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1" class="header-anchor"></a>6.1 算术逻辑运算单元设计
+</h3><h3 id="62-定点乘法运算设计"><a href="#62-%e5%ae%9a%e7%82%b9%e4%b9%98%e6%b3%95%e8%bf%90%e7%ae%97%e8%ae%be%e8%ae%a1" class="header-anchor"></a>6.2 定点乘法运算设计
+</h3><h3 id="63-单指令多数据simd设计"><a href="#63-%e5%8d%95%e6%8c%87%e4%bb%a4%e5%a4%9a%e6%95%b0%e6%8d%aesimd%e8%ae%be%e8%ae%a1" class="header-anchor"></a>6.3 单指令多数据SIMD设计
+</h3><h3 id="64-旁路网络设计"><a href="#64-%e6%97%81%e8%b7%af%e7%bd%91%e7%bb%9c%e8%ae%be%e8%ae%a1" class="header-anchor"></a>6.4 旁路网络设计
+</h3><h2 id="第7章-浮点运算单元设计"><a href="#%e7%ac%ac7%e7%ab%a0-%e6%b5%ae%e7%82%b9%e8%bf%90%e7%ae%97%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1" class="header-anchor"></a>第7章 浮点运算单元设计
+</h2><h3 id="71-浮点数据格式与运算标准ieee754"><a href="#71-%e6%b5%ae%e7%82%b9%e6%95%b0%e6%8d%ae%e6%a0%bc%e5%bc%8f%e4%b8%8e%e8%bf%90%e7%ae%97%e6%a0%87%e5%87%86ieee754" class="header-anchor"></a>7.1 浮点数据格式与运算标准——IEEE754
+</h3><h3 id="72-浮点加法运算原理与设计"><a href="#72-%e6%b5%ae%e7%82%b9%e5%8a%a0%e6%b3%95%e8%bf%90%e7%ae%97%e5%8e%9f%e7%90%86%e4%b8%8e%e8%ae%be%e8%ae%a1" class="header-anchor"></a>7.2 浮点加法运算原理与设计
+</h3><h3 id="73-浮点乘法运算原理与设计"><a href="#73-%e6%b5%ae%e7%82%b9%e4%b9%98%e6%b3%95%e8%bf%90%e7%ae%97%e5%8e%9f%e7%90%86%e4%b8%8e%e8%ae%be%e8%ae%a1" class="header-anchor"></a>7.3 浮点乘法运算原理与设计
+</h3><h3 id="74-浮点除法开方运算原理与设计"><a href="#74-%e6%b5%ae%e7%82%b9%e9%99%a4%e6%b3%95%e5%bc%80%e6%96%b9%e8%bf%90%e7%ae%97%e5%8e%9f%e7%90%86%e4%b8%8e%e8%ae%be%e8%ae%a1" class="header-anchor"></a>7.4 浮点除法/开方运算原理与设计
+</h3><h2 id="第8章-访存单元设计"><a href="#%e7%ac%ac8%e7%ab%a0-%e8%ae%bf%e5%ad%98%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1" class="header-anchor"></a>第8章 访存单元设计
+</h2><h3 id="81-内存模型概述"><a href="#81-%e5%86%85%e5%ad%98%e6%a8%a1%e5%9e%8b%e6%a6%82%e8%bf%b0" class="header-anchor"></a>8.1 内存模型概述
+</h3><h3 id="82-数据缓存概述"><a href="#82-%e6%95%b0%e6%8d%ae%e7%bc%93%e5%ad%98%e6%a6%82%e8%bf%b0" class="header-anchor"></a>8.2 数据缓存概述
+</h3><h3 id="83-数据缓存控制设计"><a href="#83-%e6%95%b0%e6%8d%ae%e7%bc%93%e5%ad%98%e6%8e%a7%e5%88%b6%e8%ae%be%e8%ae%a1" class="header-anchor"></a>8.3 数据缓存控制设计
+</h3><h3 id="84-数据缓存预取技术"><a href="#84-%e6%95%b0%e6%8d%ae%e7%bc%93%e5%ad%98%e9%a2%84%e5%8f%96%e6%8a%80%e6%9c%af" class="header-anchor"></a>8.4 数据缓存预取技术
+</h3><h2 id="第9章-重排序缓冲设计"><a href="#%e7%ac%ac9%e7%ab%a0-%e9%87%8d%e6%8e%92%e5%ba%8f%e7%bc%93%e5%86%b2%e8%ae%be%e8%ae%a1" class="header-anchor"></a>第9章 重排序缓冲设计
+</h2><h3 id="91-重排序缓冲的原理"><a href="#91-%e9%87%8d%e6%8e%92%e5%ba%8f%e7%bc%93%e5%86%b2%e7%9a%84%e5%8e%9f%e7%90%86" class="header-anchor"></a>9.1 重排序缓冲的原理
+</h3><h3 id="92-重排序缓冲的设计空间"><a href="#92-%e9%87%8d%e6%8e%92%e5%ba%8f%e7%bc%93%e5%86%b2%e7%9a%84%e8%ae%be%e8%ae%a1%e7%a9%ba%e9%97%b4" class="header-anchor"></a>9.2 重排序缓冲的设计空间
+</h3><h3 id="93-重排序缓冲运行示例"><a href="#93-%e9%87%8d%e6%8e%92%e5%ba%8f%e7%bc%93%e5%86%b2%e8%bf%90%e8%a1%8c%e7%a4%ba%e4%be%8b" class="header-anchor"></a>9.3 重排序缓冲运行示例
+</h3><h2 id="第10章-高性能cpu设计实例intel-p6微架构"><a href="#%e7%ac%ac10%e7%ab%a0-%e9%ab%98%e6%80%a7%e8%83%bdcpu%e8%ae%be%e8%ae%a1%e5%ae%9e%e4%be%8bintel-p6%e5%be%ae%e6%9e%b6%e6%9e%84" class="header-anchor"></a>第10章 高性能CPU设计实例：Intel P6微架构
+</h2><h3 id="101-intel-p6微架构概述"><a href="#101-intel-p6%e5%be%ae%e6%9e%b6%e6%9e%84%e6%a6%82%e8%bf%b0" class="header-anchor"></a>10.1 Intel P6微架构概述
+</h3><h3 id="102-intel-p6微架构的流水线设计"><a href="#102-intel-p6%e5%be%ae%e6%9e%b6%e6%9e%84%e7%9a%84%e6%b5%81%e6%b0%b4%e7%ba%bf%e8%ae%be%e8%ae%a1" class="header-anchor"></a>10.2 Intel P6微架构的流水线设计
+</h3><h3 id="103-intel-p6微架构前端设计"><a href="#103-intel-p6%e5%be%ae%e6%9e%b6%e6%9e%84%e5%89%8d%e7%ab%af%e8%ae%be%e8%ae%a1" class="header-anchor"></a>10.3 Intel P6微架构前端设计
+</h3><h3 id="104-intel-p6微架构乱序执行引擎设计"><a href="#104-intel-p6%e5%be%ae%e6%9e%b6%e6%9e%84%e4%b9%b1%e5%ba%8f%e6%89%a7%e8%a1%8c%e5%bc%95%e6%93%8e%e8%ae%be%e8%ae%a1" class="header-anchor"></a>10.4 Intel P6微架构乱序执行引擎设计
+</h3><h3 id="105-intel-p6微架构内存子系统设计"><a href="#105-intel-p6%e5%be%ae%e6%9e%b6%e6%9e%84%e5%86%85%e5%ad%98%e5%ad%90%e7%b3%bb%e7%bb%9f%e8%ae%be%e8%ae%a1" class="header-anchor"></a>10.5 Intel P6微架构内存子系统设计
+</h3><h2 id="文后"><a href="#%e6%96%87%e5%90%8e" class="header-anchor"></a>文后
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="15-超标量cpu设计概述-1"><a href="#15-%e8%b6%85%e6%a0%87%e9%87%8fcpu%e8%ae%be%e8%ae%a1%e6%a6%82%e8%bf%b0-1" class="header-anchor"></a>1.5 超标量CPU设计概述
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 超标量乱序对指令级并行处理是在执行过程中而不是编译过程中，是硬件（而不是编译器）通过不同的信息来决定的。相比编译器，硬件能够感知程序的动态特性，包括缓存未命中，最近的分支等。当然，编译器对代码拥有更宏观的视角，而硬件是没有的。  ^6733360-7Qf04nNIV
 - 💭 编译器视角更大
 - ⏱ 2024-04-06 06:39:27</p>
 </blockquote>
-<h3 id="划线评论-1">划线评论
+<h3 id="划线评论-1"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 编译器也可以重命名寄存器，但只能重命名为架构寄存器，其数量受ISA限制。  ^6733360-7Qf0jiI9G
 - 💭 架构寄存器是ISA手册里面的寄存器，实际物理寄存器更多
 - ⏱ 2024-04-06 06:43:07</p>
 </blockquote>
-<h3 id="划线评论-2">划线评论
+<h3 id="划线评论-2"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 两个加载/存储槽，两个浮点运算槽，一个定点运算槽和一个定点与分支指令共用的指令槽。一般每个指令槽字段可以设计为16～32-bit，长指令的大小设计为80～160-bit。  ^6733360-7Qf0pRjPC
 - 💭 指令槽的概念
 - ⏱ 2024-04-06 06:44:44</p>
 </blockquote>
-<h3 id="划线评论-3">划线评论
+<h3 id="划线评论-3"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 超标量乱序执行的优点是能够最大限度地在指令流中发现尽可能多的指令级并行，并且在同一时刻执行更多的指令。即在指令执行过程中可以动态调度，指令次序可以被调整以达到最优执行。不像VLIW，指令停顿只能单纯等待，静态调度也无法优化处理缓存未命中和分支预测失败。即一旦编译器在编译时无法看到尽可能多的指令级并行，那么编译器就需要插入更多的NOPs，伤害代码密度。  ^6733360-7Qf1dzTeS
 - 💭 静态调度是编译器插入nops保证的
 - ⏱ 2024-04-06 06:56:59</p>
 </blockquote>
-<h2 id="第2章-cpu前端与指令缓存设计-1">第2章 CPU前端与指令缓存设计
-</h2><h3 id="划线评论-4">划线评论
+<h2 id="第2章-cpu前端与指令缓存设计-1"><a href="#%e7%ac%ac2%e7%ab%a0-cpu%e5%89%8d%e7%ab%af%e4%b8%8e%e6%8c%87%e4%bb%a4%e7%bc%93%e5%ad%98%e8%ae%be%e8%ae%a1-1" class="header-anchor"></a>第2章 CPU前端与指令缓存设计
+</h2><h3 id="划线评论-4"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 对于ARM架构的CPU来说，前端转换实际上是两个步骤：将ARM指令转换成宏操作(Macro-operations)，然后将宏操作翻译成微操作进行分发（需要注意的是，在一个时钟周期内能够处理的指令、宏操作和微操作的数量是有限制的）。  ^6733360-7Qf1lP6BP
 - 💭 这个限制典型值是多少
 - ⏱ 2024-04-06 06:59:00</p>
 </blockquote>
-<h3 id="划线评论-5">划线评论
+<h3 id="划线评论-5"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 具体来说，指令提取单元会根据设计的提取窗口（也就是一个时钟周期提取的指令块中的指令数）获取一个指令块，它可以识别提取窗口内（以及跨窗口）的指令。然后译码单元会将指令转换为一个或多个宏操作，也有可能将多个指令融合到单个宏操作中。同时，寄存器被重命名为临时保存中间结果的内部寄存器堆，允许微操作在不违反架构寄存器之间的数据依赖性的情况下乱序(Out-of-Order)执行。之后将宏操作转换为微操作，并将微操作分发(Dispatch)到属于适当功能单元的发射队列(Issue Queue)，一般一个发射队列对应两个或者多个执行流水线。当一条指令成功执行完成时，就会退出并将其结果提交给相应的寄存器。写回/退出阶段跟踪“退出指针(Retire Pointer)”，负责维护一个重排序缓冲(Reorder Buffer)，因为之前的乱序执行，此处用于保存有关指令和微操作状态来顺序提交和写回，是一个保序的操作。  ^6733360-7Qf2bvLdm
 - 💭 宏观视野
 - ⏱ 2024-04-06 07:11:44</p>
 </blockquote>
-<h3 id="划线评论-6">划线评论
+<h3 id="划线评论-6"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 在正常情况下，高性能CPU设计为每个周期可以维持一个取指令操作[需要注意的是，此处的一个取指令操作并不意味着仅仅取一条指令，一般是N条指令的集合，被称为指令块（Fetch Bundle或Fetch Block）]，每个周期都必须计算一个新的取指地址。  ^6733360-7Qf98tPR7
 - 💭 bundle从这里来的
 - ⏱ 2024-04-06 08:57:52</p>
 </blockquote>
-<h2 id="22-指令缓存分类与访问读取-1">2.2 指令缓存分类与访问读取
-</h2><h3 id="划线评论-7">划线评论
+<h2 id="22-指令缓存分类与访问读取-1"><a href="#22-%e6%8c%87%e4%bb%a4%e7%bc%93%e5%ad%98%e5%88%86%e7%b1%bb%e4%b8%8e%e8%ae%bf%e9%97%ae%e8%af%bb%e5%8f%96-1" class="header-anchor"></a>2.2 指令缓存分类与访问读取
+</h2><h3 id="划线评论-7"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 图2-6所示为一个四路(4-Way)组相联型缓存的架构，即缓存中的组数为S=2s，每组包含四行。四个标签和数据存储条目分别使用内存地址的s和s+w位从四路并行获取，然后将标签存储器中的标签与每路中块地址的标签进行比较。每路返回一个命中或未命中指示，可以触发未命中或选择命中路返回的缓存行。顺便一提，直接映射缓存可以看作是单路(1-Way)组相联缓存。  ^6733360-7QfeNrn6T
 - 💭 这里没有说清楚
 - ⏱ 2024-04-06 10:24:18</p>
 </blockquote>
-<h2 id="24-指令缓存的性能衡量标准与硬件预取设计-1">2.4 指令缓存的性能衡量标准与硬件预取设计
-</h2><h3 id="划线评论-8">划线评论
+<h2 id="24-指令缓存的性能衡量标准与硬件预取设计-1"><a href="#24-%e6%8c%87%e4%bb%a4%e7%bc%93%e5%ad%98%e7%9a%84%e6%80%a7%e8%83%bd%e8%a1%a1%e9%87%8f%e6%a0%87%e5%87%86%e4%b8%8e%e7%a1%ac%e4%bb%b6%e9%a2%84%e5%8f%96%e8%ae%be%e8%ae%a1-1" class="header-anchor"></a>2.4 指令缓存的性能衡量标准与硬件预取设计
+</h2><h3 id="划线评论-8"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 指第一次将内存块写入缓存所无法避免的未命中，也被称为冷未命中，因为这种未命中发生在缓存冷（空）时  ^6733360-7QffLePDE
 - 💭 这种是天然无法消除的
 - ⏱ 2024-04-06 10:39:02</p>
 </blockquote>
-<h3 id="划线评论-9">划线评论
+<h3 id="划线评论-9"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-9" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 出于性能优化考虑，超标量CPU的缓存设计通常会加入预取(Prefetch)，这是一种尝试在程序访问数据之前将数据写入缓存的技术。预取减少了程序等待获取数据的时间，因此可以加快程序执行速度。然而，预取是以额外带宽使用作为代价的，因为需要预测CPU将来可能需要哪些数据。这种预测永远不可能是完美的，因此CPU可能永远不会使用一些预取的内存块。  ^6733360-7QffXugky
 - 💭 程序预取是非常不错的减少强制未命中的对策
 - ⏱ 2024-04-06 10:42:03</p>
 </blockquote>
-<h3 id="划线评论-10">划线评论
+<h3 id="划线评论-10"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-10" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 当CPU前端对指令的供应变慢时，流水线的发射宽度和执行资源无论多么丰富都会被浪费。  ^6733360-7Qfg6snDn
 - 💭 指令预取也可能是指令执行的瓶颈
 - ⏱ 2024-04-06 10:44:15</p>
 </blockquote>
-<h3 id="划线评论-11">划线评论
+<h3 id="划线评论-11"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-11" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 但是，乱序执行通常无法隐藏指令提取延迟，而指令提取阶段产生的停顿通常占整体停顿的较大一部分。指令的硬件预取(Instruction Hardware Prefetch)作为提升性能的特性由于应运而生  ^6733360-7Qfga8F6G
 - 💭 硬件预取看起来会是非常重要的提升ILP的手段
 - ⏱ 2024-04-06 10:45:10</p>
 </blockquote>
-<h2 id="26-微操作缓存与循环缓冲器设计-1">2.6 微操作缓存与循环缓冲器设计
-</h2><h3 id="划线评论-12">划线评论
+<h2 id="26-微操作缓存与循环缓冲器设计-1"><a href="#26-%e5%be%ae%e6%93%8d%e4%bd%9c%e7%bc%93%e5%ad%98%e4%b8%8e%e5%be%aa%e7%8e%af%e7%bc%93%e5%86%b2%e5%99%a8%e8%ae%be%e8%ae%a1-1" class="header-anchor"></a>2.6 微操作缓存与循环缓冲器设计
+</h2><h3 id="划线评论-12"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-12" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 ntel的解决方案是将CISC指令翻译成类似RISC的指令，也就是说指令在译码阶段被转换为固定长度的微操作(Micro-operation，μop)。微操作遵循RISC设计理念中的固定长度和加载存储执行模型(load-store execution model)。这些固定长度的微操作使指令发射和执行逻辑更简单，并且对指令集架构(ISA)隐藏，以确保向后兼容。这种ISA级别的抽象使CPU供应商能够根据他们的自定义微架构以不同的方式实现x86指令  ^6733360-7QfRD2TVZ
 - 💭 npu指令集设计看起来模仿了CISC的做法
 - ⏱ 2024-04-06 20:17:14</p>
 </blockquote>
-<h3 id="划线评论-13">划线评论
+<h3 id="划线评论-13"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-13" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 从指令缓存提取的指令需要进行译码操作，而从微操作缓存或循环缓存中提取的微操作可以绕过指令译码单元，从而节省了译码单元的流水线延迟和功耗。循环缓冲区存储在较小循环的微操作中，而剩余的微操作存储在微操作缓存中。因此，任何增加从微操作缓存或循环缓冲区馈送到后端的微操作百分比的技术都可以提高性能和功耗效率。  ^6733360-7Qg0mDUdw
 - 💭 还可以这么玩儿
 - ⏱ 2024-04-06 22:30:37</p>
 </blockquote>
-<h2 id="63-单指令多数据simd设计-1">6.3 单指令多数据SIMD设计
-</h2><h3 id="划线评论-14">划线评论
+<h2 id="63-单指令多数据simd设计-1"><a href="#63-%e5%8d%95%e6%8c%87%e4%bb%a4%e5%a4%9a%e6%95%b0%e6%8d%aesimd%e8%ae%be%e8%ae%a1-1" class="header-anchor"></a>6.3 单指令多数据SIMD设计
+</h2><h3 id="划线评论-14"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-14" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 单指令多数据(Single Instruction Multiple Data, SIMD)是提高数据并行处理能力的重要手段。顾名思义，SIMD指令对多组数据并行运行相同的指令，SIMD的操作数来自矢量寄存器。  ^6733360-7PvQhi4vy
 - 💭 矢量寄存器实现SIMD
 - ⏱ 2024-03-07 14:09:45</p>
 </blockquote>
-<h2 id="第8章-访存单元设计-1">第8章 访存单元设计
-</h2><h3 id="划线评论-15">划线评论
+<h2 id="第8章-访存单元设计-1"><a href="#%e7%ac%ac8%e7%ab%a0-%e8%ae%bf%e5%ad%98%e5%8d%95%e5%85%83%e8%ae%be%e8%ae%a1-1" class="header-anchor"></a>第8章 访存单元设计
+</h2><h3 id="划线评论-15"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-15" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 综上所述，LSU集复杂功能、高性能、低功耗等需求于一体，对于芯片的整体PPA(Power-Performance-Area)具有决定性的影响。因此，如何设计一款完全符合需求的LSU是高性能CPU设计中最具挑战性的工作。  ^6733360-7PvQqDePI
 - 💭 挑战
 - ⏱ 2024-03-07 14:12:03</p>
 </blockquote>
-<h1 id="本书评论">本书评论
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
 </h1>
 </section>
 

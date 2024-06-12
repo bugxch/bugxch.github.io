@@ -67,7 +67,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -227,7 +227,47 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#问题描述">问题描述</a></li>
+    <li><a href="#分析解答">分析解答</a>
+      <ol>
+        <li><a href="#朴素分析">朴素分析</a></li>
+        <li><a href="#贝叶斯定理">贝叶斯定理</a></li>
+      </ol>
+    </li>
+    <li><a href="#为什么会错">为什么会错？</a></li>
+    <li><a href="#问题变种">问题变种</a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="has-image main-article">
@@ -276,7 +316,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 21, 2022</time>
+                <time class="article-time--published">2022/04/21</time>
             </div>
         
 
@@ -309,7 +349,7 @@
     <p>书接<a class="link" href="https://bugxch.github.io/detection/"  target="_blank" rel="noopener"
     >上文</a>，使用贝叶斯定理解释著名的<a class="link" href="https://www.wikiwand.com/zh/%E8%92%99%E6%8F%90%E9%9C%8D%E7%88%BE%E5%95%8F%E9%A1%8C"  target="_blank" rel="noopener"
     >Monty Hall问题</a>，思索清楚之后感觉挺有趣，分享下。</p>
-<h2 id="问题描述">问题描述
+<h2 id="问题描述"><a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"></a>问题描述
 </h2><blockquote>
 <p>參賽者會看見三扇門，其中一扇門的裏面有一輛汽車，選中裏面是汽車的那扇門，就可以贏得該輛汽車，另外兩扇門裏面則都是一隻山羊。當參賽者選定了一扇門，<strong>主持人會開啟另一扇是山羊的門</strong>；並問：「要不要換一扇門？」</p>
 </blockquote>
@@ -322,7 +362,7 @@
 	
 ></p>
 <p>我想大多数人的答案应该是无论换不换门，结果都是一样，赢得比赛的概率是1/2，但是实际的答案是，<strong>换一扇门赢面更大</strong>，准确得说换一扇门赢得比赛的概率是不换门的2倍。为什么会是这样呢？</p>
-<h2 id="分析解答">分析解答
+<h2 id="分析解答"><a href="#%e5%88%86%e6%9e%90%e8%a7%a3%e7%ad%94" class="header-anchor"></a>分析解答
 </h2><p>为了对这个问题做精确的解答，我们有必要对问题的描述做更详细的澄清。当前的这个游戏满足如下的条件：</p>
 <ul>
 <li>參賽者在三扇門中挑選一扇。他並不知道內裏有甚麼。</li>
@@ -336,7 +376,7 @@
 </li>
 <li>參賽者會被問是否保持他的原來選擇，還是轉而選擇剩下的那一道門。</li>
 </ul>
-<h3 id="朴素分析">朴素分析
+<h3 id="朴素分析"><a href="#%e6%9c%b4%e7%b4%a0%e5%88%86%e6%9e%90" class="header-anchor"></a>朴素分析
 </h3><p>使用穷举法分析概率，假设3扇门的编号分别是1，2，3，根据最初选择的编号，以及奖品所在门的编号，可以画出下面的表格</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -405,7 +445,7 @@
 </tbody>
 </table></div>
 <p>上面的表格囊括了所有的情况。第一行的结果很明显，第二行的情况是，主持人肯定会打开编号3的门（因为只有这个门的后面不是奖品），所以如果换门肯定就是换到2号门，那么就赢了，其他的情况类似。这时，可以数一数后面两列的结果，换门有6次赢，是不换门的2倍（只有3次赢）。</p>
-<h3 id="贝叶斯定理">贝叶斯定理
+<h3 id="贝叶斯定理"><a href="#%e8%b4%9d%e5%8f%b6%e6%96%af%e5%ae%9a%e7%90%86" class="header-anchor"></a>贝叶斯定理
 </h3><p>参考<a class="link" href="https://bugxch.github.io/detection/"  target="_blank" rel="noopener"
     >新冠检测后面的数学定理</a>里面的贝叶斯定理，我们推算下这个令人吊诡的结论是如何产生的。我们假设有三扇门的编号分别是A、B和C。在没有任何其他信息的情况下，你选择了A作为答案。此时</p>
 <p>$$
@@ -437,7 +477,7 @@ Pr(E) &amp;= Pr(A)Pr(E|A) + Pr(B)Pr(E|B) + Pr(C)Pr(E|C)\
 \end{align}
 $$</p>
 <p>带入上面的公式，可以得到$Pr(A|E) = \frac{1}{3}$和$Pr(B|E) = \frac{2}{3}$</p>
-<h2 id="为什么会错">为什么会错？
+<h2 id="为什么会错"><a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bc%9a%e9%94%99" class="header-anchor"></a>为什么会错？
 </h2><p>我们的大脑在分析这个问题时，做了不切实际的假设，并且对这个假设深信不疑。我们习惯于分析<strong>相互独立的随机事件</strong>，最典型的例子是抛硬币，抛掷一枚硬币正面朝上的概率是0.5，我们得到这个结论的依据是<strong>特定结果数量与结果总数的比例</strong>，正面的情况是1，总的结果是2，所以概率是1/2。这就是为什么我们认为无论更换与否，赢得的概率一样的原因。但是实际的情况并不是这样的，<strong>选择换门与否并不是相互独立随机事件</strong>，下面我们做更进一步的说明。</p>
 <p>第一步，随机选择一扇门，这个的确是随机的，无论选择哪一扇门，最终赢得比赛的概率是1/3。但是整个事件的随机独立性在蒙蒂选择打开哪扇门的时候发生了变化，</p>
 <ol>
@@ -450,7 +490,7 @@ $$</p>
 <li>第二种情况，他倾向于选择没有奖品的那扇门，这次的选择不是随机的，而是有意识的选择，尤其当两扇门中有一扇有奖品的时候，他<strong>必然</strong>会选择没有奖品的那扇门，此时选择那扇门的概率是1，而不是1/2。这样的选择具有<strong>倾向性</strong>，而不是<strong>随机决策</strong>的结果。实际上，他排除了不是奖品的那扇门，所以<strong>剩下来的那扇门有奖品的概率更高</strong>，而不是和他选择打开的那扇门的概率相同。</li>
 </ul>
 <p>这里是另一种分析的思路，初始选择中，假设你选择了A，那么A门有奖品的概率是$\frac{1}{3}$，B门和C门有奖品的概率是$\frac{2}{3}$。B门和C门至少有一扇门是没有奖品的，蒙蒂知道奖品的位置，他打开那扇没有奖品的门，假设是C门。那剩下B门有奖品的概率就变成了$\frac{2}{3}$！<strong>蒙蒂帮你排除了没有奖品的那扇门</strong>，所以你换门之后赢得的概率一定是$\frac{2}{3}$！</p>
-<h2 id="问题变种">问题变种
+<h2 id="问题变种"><a href="#%e9%97%ae%e9%a2%98%e5%8f%98%e7%a7%8d" class="header-anchor"></a>问题变种
 </h2><p>这个问题的变种是，在你选定门之后，节目组请另一个嘉宾在你没有选定的两扇门里面随机选定一扇门，那扇门后面没有山羊，那么他打开其中任意一扇门，显示是山羊，此时更换选择的赢面是否更大？注意，这个嘉宾事先不清楚奖品在那一扇门后面。</p>
 <p>答案是否，无论是否更换选择，两个的概率都是1/2。参考之前的贝叶斯定理的推理，假设同前，你选了A门，那么此时嘉宾需要在B和C门直接选一个门，</p>
 <ul>
@@ -459,7 +499,7 @@ $$</p>
 <li>$Pr(E|C) = 0$，第二步C门后面是羊的概率是0，所以按照上面的分析最终的概率是1/2*0 =0。</li>
 </ul>
 <p>可以看出无论更换与否，中奖的概率都是一样的。</p>
-<h2 id="参考资料">参考资料
+<h2 id="参考资料"><a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-anchor"></a>参考资料
 </h2><ol>
 <li><a class="link" href="https://www.maa.org/external_archive/devlin/devlin_12_05.html"  target="_blank" rel="noopener"
     >Monty Hall revisited</a>，问题的数学推导</li>

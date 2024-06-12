@@ -66,7 +66,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -226,7 +226,55 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#基本安装">基本安装</a>
+      <ol>
+        <li><a href="#nvidia显卡安装">NVIDIA显卡安装</a></li>
+        <li><a href="#cuda安装">CUDA安装</a>
+          <ol>
+            <li><a href="#安装命令">安装命令</a></li>
+            <li><a href="#验证安装">验证安装</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#双显卡配置">双显卡配置</a>
+      <ol>
+        <li><a href="#安装显卡切换程序">安装显卡切换程序</a></li>
+        <li><a href="#测试显卡性能">测试显卡性能</a></li>
+      </ol>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -267,7 +315,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Feb 09, 2019</time>
+                <time class="article-time--published">2019/02/09</time>
             </div>
         
 
@@ -299,11 +347,18 @@
     
     <p>去年年底安装将我的Thinkpad T450的双系统中的opensuse换成了<a class="link" href="https://manjaro.org/"  target="_blank" rel="noopener"
     >Manjaro</a>，折腾安装了下CUDA，是为记录。</p>
-<h2 id="基本安装">基本安装
-</h2><h3 id="nvidia显卡安装">NVIDIA显卡安装
+<h2 id="基本安装"><a href="#%e5%9f%ba%e6%9c%ac%e5%ae%89%e8%a3%85" class="header-anchor"></a>基本安装
+</h2><h3 id="nvidia显卡安装"><a href="#nvidia%e6%98%be%e5%8d%a1%e5%ae%89%e8%a3%85" class="header-anchor"></a>NVIDIA显卡安装
 </h3><p>Manjaro系统安装显卡比较简单，它有一个命令</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo mhwd -a <span style="color:#f92672">[</span>pci or usb connection<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>free or nonfree drivers<span style="color:#f92672">]</span> <span style="color:#ae81ff">0300</span>
-</span></span></code></pre></div><p>其中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo mhwd -a <span class="o">[</span>pci or usb connection<span class="o">]</span> <span class="o">[</span>free or nonfree drivers<span class="o">]</span> <span class="m">0300</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中</p>
 <ul>
 <li><strong>-a</strong>: 自动检测和安装合适的显卡驱动</li>
 <li><strong>[pci or usb]</strong>: 为通过PCI或者USB连接的设置安装驱动</li>
@@ -311,10 +366,24 @@
 <li><strong>0300</strong>: 确认即将安装的显卡的驱动</li>
 </ul>
 <p>我们要安装英伟达的驱动，只要使用下面的一行命令即可搞定</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo mhwd -a pci nonfree <span style="color:#ae81ff">0300</span>
-</span></span></code></pre></div><p>等待安装结束，使用如下命令查看是否已经安装完成</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nvidia-smi
-</span></span></code></pre></div><p>我的显示结果如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo mhwd -a pci nonfree <span class="m">0300</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>等待安装结束，使用如下命令查看是否已经安装完成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nvidia-smi
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我的显示结果如下</p>
 <p><img src="https://github.com/bugxch/blogpics/blob/master/201902/smi.png?raw=true"
 	
 	
@@ -324,66 +393,140 @@
 	
 ></p>
 <p>从上图可知，我的显卡型号是GeForce 940M，显卡的驱动版本是415.27。</p>
-<h3 id="cuda安装">CUDA安装
-</h3><h4 id="安装命令">安装命令
+<h3 id="cuda安装"><a href="#cuda%e5%ae%89%e8%a3%85" class="header-anchor"></a>CUDA安装
+</h3><h4 id="安装命令"><a href="#%e5%ae%89%e8%a3%85%e5%91%bd%e4%bb%a4" class="header-anchor"></a>安装命令
 </h4><p>Manjaro的CUDA安装也是异常简单，一行命令搞定</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo pacman -S cuda cudnn
-</span></span></code></pre></div><p>这行命令可能需要花费一些时间，请耐心等待。</p>
-<h4 id="验证安装">验证安装
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo pacman -S cuda cudnn
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这行命令可能需要花费一些时间，请耐心等待。</p>
+<h4 id="验证安装"><a href="#%e9%aa%8c%e8%af%81%e5%ae%89%e8%a3%85" class="header-anchor"></a>验证安装
 </h4><p>完成之后，我们进入cuda的安装路径，我的路径是<code>/opt/cuda</code>，你可以使用下面的命令将CUDA的示例程序拷贝到你的用户主目录下，之后编译程序</p>
-<pre tabindex="0"><code class="language-shel" data-lang="shel">cp -r /opt/cuda/samples ~
-cd ~/samples
-make
-</code></pre><p>此时就使用nvcc编译器开始编译CUDA的sample程序，这个花费时间更长，应该在半小时左右，等待编译结束，使用下面的命令验证是否成功</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd ~/samples/bin/x86_64/linux/release
-</span></span><span style="display:flex;"><span>./deviceQuery
-</span></span></code></pre></div><p>在窗口中查看最后一行的结果是否为pass，如果是则表示CUDA安装成功。</p>
-<h2 id="双显卡配置">双显卡配置
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cp -r /opt/cuda/samples ~
+</span></span><span class="line"><span class="cl">cd ~/samples
+</span></span><span class="line"><span class="cl">make
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时就使用nvcc编译器开始编译CUDA的sample程序，这个花费时间更长，应该在半小时左右，等待编译结束，使用下面的命令验证是否成功</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> ~/samples/bin/x86_64/linux/release
+</span></span><span class="line"><span class="cl">./deviceQuery
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在窗口中查看最后一行的结果是否为pass，如果是则表示CUDA安装成功。</p>
+<h2 id="双显卡配置"><a href="#%e5%8f%8c%e6%98%be%e5%8d%a1%e9%85%8d%e7%bd%ae" class="header-anchor"></a>双显卡配置
 </h2><p>我的电脑有两个显卡，一个是intel的集成显卡，一个是NVIDIA的独显。</p>
-<h3 id="安装显卡切换程序">安装显卡切换程序
+<h3 id="安装显卡切换程序"><a href="#%e5%ae%89%e8%a3%85%e6%98%be%e5%8d%a1%e5%88%87%e6%8d%a2%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>安装显卡切换程序
 </h3><p>Manjaro的双显卡配置有点问题，Bumblebee还是有点问题，使用下面的命令重新安装</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 依赖</span>
-</span></span><span style="display:flex;"><span>sudo pacman -S virtualgl lib32-virtualgl lib32-primus primus
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 安装双显卡切换程序bumblebee</span>
-</span></span><span style="display:flex;"><span>sudo mhwd -f -i pci video-hybrid-intel-nvidia-bumblebee
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 允许服务</span>
-</span></span><span style="display:flex;"><span>sudo systemctl enable bumblebeed
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加用户</span>
-</span></span><span style="display:flex;"><span>sudo gpasswd -a $USER bumblebee
-</span></span></code></pre></div><p>为了防止重启之后不能进入登录界面，需要做如下的配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 依赖</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S virtualgl lib32-virtualgl lib32-primus primus
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装双显卡切换程序bumblebee</span>
+</span></span><span class="line"><span class="cl">sudo mhwd -f -i pci video-hybrid-intel-nvidia-bumblebee
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 允许服务</span>
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> bumblebeed
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加用户</span>
+</span></span><span class="line"><span class="cl">sudo gpasswd -a <span class="nv">$USER</span> bumblebee
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>为了防止重启之后不能进入登录界面，需要做如下的配置</p>
 <ol>
 <li>打开 /etc/default/grub</li>
 <li>找到并且改为：GRUB_CMLINE_LINUX_DEFAULT=&ldquo;quiet <strong>acpi_osi=! acpi_osi=Linux acpi_osi=’Windows 2015’ pcie_port_pm=off</strong> resume=&hellip;&rdquo;</li>
 <li>运行sudo update-grub，重启</li>
 </ol>
-<h3 id="测试显卡性能">测试显卡性能
+<h3 id="测试显卡性能"><a href="#%e6%b5%8b%e8%af%95%e6%98%be%e5%8d%a1%e6%80%a7%e8%83%bd" class="header-anchor"></a>测试显卡性能
 </h3><p>使用下面的shell命令安装显卡测试程序</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 安装测试软件</span>
-</span></span><span style="display:flex;"><span>sudo pacman -S mesa-demos
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集成显卡性能</span>
-</span></span><span style="display:flex;"><span>glxgears -info
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 独显性能</span>
-</span></span><span style="display:flex;"><span>optirun glxgears -info
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或者</span>
-</span></span><span style="display:flex;"><span>primusrun glxgears -info
-</span></span></code></pre></div><p>需要注意的是，之后运行的所有程序，如果需要使用独立显卡，需要在命令的前面加上<code>optirun</code>或者<code>primusrun</code>的前缀。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 打开nvida面板</span>
-</span></span><span style="display:flex;"><span>optirun -b none nvidia-settings -c :8
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 不依赖Bumblebee来使用CUDA</span>
-</span></span><span style="display:flex;"><span>sudo tee /proc/acpi/bbswitch <span style="color:#f92672">&lt;&lt;&lt;</span> <span style="color:#e6db74">&#39;ON&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用完CUDA 停止NVIDIA显卡</span>
-</span></span><span style="display:flex;"><span>sudo rmmod nvidia_uvm nvidia <span style="color:#f92672">&amp;&amp;</span> sudo tee /proc/acpi/bbswitch <span style="color:#f92672">&lt;&lt;&lt;</span> OFF
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>inxi -G <span style="color:#75715e"># 查看显卡情况</span>
-</span></span><span style="display:flex;"><span>optirun nvidia-smi <span style="color:#75715e"># 查看CPU情况</span>
-</span></span></code></pre></div><h2 id="参考资料">参考资料
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 安装测试软件</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S mesa-demos
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 集成显卡性能</span>
+</span></span><span class="line"><span class="cl">glxgears -info
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 独显性能</span>
+</span></span><span class="line"><span class="cl">optirun glxgears -info
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者</span>
+</span></span><span class="line"><span class="cl">primusrun glxgears -info
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>需要注意的是，之后运行的所有程序，如果需要使用独立显卡，需要在命令的前面加上<code>optirun</code>或者<code>primusrun</code>的前缀。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 打开nvida面板</span>
+</span></span><span class="line"><span class="cl">optirun -b none nvidia-settings -c :8
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 不依赖Bumblebee来使用CUDA</span>
+</span></span><span class="line"><span class="cl">sudo tee /proc/acpi/bbswitch <span class="o">&lt;&lt;&lt;</span> <span class="s1">&#39;ON&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用完CUDA 停止NVIDIA显卡</span>
+</span></span><span class="line"><span class="cl">sudo rmmod nvidia_uvm nvidia <span class="o">&amp;&amp;</span> sudo tee /proc/acpi/bbswitch <span class="o">&lt;&lt;&lt;</span> OFF
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">inxi -G <span class="c1"># 查看显卡情况</span>
+</span></span><span class="line"><span class="cl">optirun nvidia-smi <span class="c1"># 查看CPU情况</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考资料"><a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-anchor"></a>参考资料
 </h2><ul>
 <li><a class="link" href="https://medium.com/@joelognn/installing-tensorflow-1-6-0-gpu-on-manjaro-linux-9657fa63478"  target="_blank" rel="noopener"
     >Installing Tensorflow 1.6.0 + GPU on Manjaro Linux – Dr. Joe Logan – Medium</a></li>

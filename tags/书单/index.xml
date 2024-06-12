@@ -24,7 +24,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;操作系统&#34;&gt;操作系统
+&lt;h2 id=&#34;操作系统&#34;&gt;&lt;a href=&#34;#%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;操作系统
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/25813550/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;《计算机组成与设计：硬件/软件接口》&lt;/strong&gt;&lt;/a&gt;，从硬件和软件接口的角度讲述计算机运行的基本原理，结合矩阵运算的例子，从编译器，代码，芯片内部并行处理等角度大大提高了程序运行的效率。书籍侧重从软硬件的角度如何提高程序运行的效率，降低功耗，和当前的AI core中的加速算子的工作联系紧密，值得细读。&lt;/li&gt;
@@ -35,7 +35,7 @@
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://akaedu.github.io/book/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Linux C编程一站式学习&lt;/strong&gt;&lt;/a&gt;，结合C语言学习&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;深度学习&#34;&gt;深度学习
+&lt;h2 id=&#34;深度学习&#34;&gt;&lt;a href=&#34;#%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;深度学习
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://zh.gluon.ai/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;动手学深度学习&lt;/a&gt;，新的深度学习框架&lt;/li&gt;
@@ -47,7 +47,7 @@
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;http://lamda.nju.edu.cn/weixs/book/CNN_book.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;《解析卷积神经网络—深度学习实践手册》&lt;/strong&gt;&lt;/a&gt;，学习卷积神经网络的必读书目&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;编程基础&#34;&gt;编程基础
+&lt;h2 id=&#34;编程基础&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e7%a8%8b%e5%9f%ba%e7%a1%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编程基础
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/1319751/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;《C++Primer Plus》&lt;/strong&gt;&lt;/a&gt;，C++学习经典书籍，我在github上建立了个仓库，专门上传本书中的各章的答案，精读&lt;/li&gt;
@@ -68,7 +68,7 @@
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.oreilly.com/openbook/make3/book/index.csp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《make projects with GNU》&lt;/a&gt;，系统学习makefile工程的好书&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;社科&#34;&gt;社科
+&lt;h2 id=&#34;社科&#34;&gt;&lt;a href=&#34;#%e7%a4%be%e7%a7%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;社科
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/26824237/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《大国大城》&lt;/a&gt;，2017年初在上海书城看到的描述城市化发展的好书&lt;/li&gt;

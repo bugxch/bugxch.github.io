@@ -66,7 +66,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -226,7 +226,184 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#封面">封面</a></li>
+    <li><a href="#版权信息">版权信息</a></li>
+    <li><a href="#内容提要">内容提要</a></li>
+    <li><a href="#前言">前言</a>
+      <ol>
+        <li><a href="#本书读者">本书读者</a></li>
+      </ol>
+    </li>
+    <li><a href="#第1章-构建之旅">第1章 构建之旅</a>
+      <ol>
+        <li><a href="#11-单源文件程序您好世界">1.1 单源文件程序：您好，世界</a></li>
+        <li><a href="#12-构建多源程序">1.2 构建多源程序</a></li>
+        <li><a href="#13-构建静态库">1.3 构建静态库</a></li>
+        <li><a href="#14-构建动态库">1.4 构建动态库</a></li>
+        <li><a href="#15-引用第三方库">1.5 引用第三方库</a></li>
+        <li><a href="#16-旅行笔记">1.6 旅行笔记</a></li>
+      </ol>
+    </li>
+    <li><a href="#第2章-cmake简介">第2章 CMake简介</a>
+      <ol>
+        <li><a href="#21-为什么使用cmake">2.1 为什么使用CMake</a></li>
+        <li><a href="#22-安装cmake">2.2 安装CMake</a></li>
+        <li><a href="#23-您好cmake">2.3 您好，CMake!</a></li>
+      </ol>
+    </li>
+    <li><a href="#第3章-基础语法">第3章 基础语法</a>
+      <ol>
+        <li><a href="#31-cmake程序">3.1 CMake程序</a></li>
+        <li><a href="#32-注释">3.2 注释</a></li>
+        <li><a href="#33-命令调用">3.3 命令调用</a></li>
+        <li><a href="#34-命令参数">3.4 命令参数</a></li>
+        <li><a href="#35-变量">3.5 变量</a></li>
+        <li><a href="#36-列表">3.6 列表</a></li>
+        <li><a href="#37-控制结构">3.7 控制结构</a></li>
+        <li><a href="#38-条件语法">3.8 条件语法</a></li>
+        <li><a href="#39-命令定义">3.9 命令定义</a></li>
+        <li><a href="#310-小结">3.10 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第4章-常用命令">第4章 常用命令</a>
+      <ol>
+        <li><a href="#41-数值操作命令math">4.1 数值操作命令：math</a></li>
+        <li><a href="#42-字符串操作命令string">4.2 字符串操作命令：string</a></li>
+        <li><a href="#43-列表操作命令list">4.3 列表操作命令：list</a></li>
+        <li><a href="#44-文件操作命令file">4.4 文件操作命令：file</a></li>
+        <li><a href="#45-路径操作命令cmake_path">4.5 路径操作命令：cmake_path</a></li>
+        <li><a href="#46-路径操作命令get_filename_component">4.6 路径操作命令：get_filename_component</a></li>
+        <li><a href="#47-配置模板文件configure_file">4.7 配置模板文件：configure_file</a></li>
+        <li><a href="#48-日志输出命令message">4.8 日志输出命令：message</a></li>
+        <li><a href="#49-执行程序execute_process">4.9 执行程序：execute_process</a></li>
+        <li><a href="#410-引用cmake程序include">4.10 引用CMake程序：include</a></li>
+        <li><a href="#411-执行代码片段cmake_language">4.11 执行代码片段：cmake_language</a></li>
+        <li><a href="#412-监控变量variable_watch">4.12 监控变量：variable_watch</a></li>
+      </ol>
+    </li>
+    <li><a href="#第5章-实践cmake快速排序">第5章 实践：CMake快速排序</a></li>
+    <li><a href="#第6章-cmake构建初探">第6章 CMake构建初探</a>
+      <ol>
+        <li><a href="#61-cmake项目的生命周期">6.1 CMake项目的生命周期</a></li>
+        <li><a href="#62-项目配置与缓存变量">6.2 项目配置与缓存变量</a></li>
+        <li><a href="#63-cmake命令行的使用">6.3 CMake命令行的使用</a></li>
+        <li><a href="#64-使用visual-studio打开cmake项目">6.4 使用Visual Studio打开CMake项目</a></li>
+        <li><a href="#65-小结">6.5 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第7章-构建目标和属性">第7章 构建目标和属性</a>
+      <ol>
+        <li><a href="#71-二进制构建目标">7.1 二进制构建目标</a></li>
+        <li><a href="#72-伪构建目标">7.2 伪构建目标</a></li>
+        <li><a href="#73-子目录">7.3 子目录</a></li>
+        <li><a href="#74-项目project">7.4 项目：project</a></li>
+        <li><a href="#75-属性get_propertyset_property">7.5 属性：get_property、set_property</a></li>
+        <li><a href="#76-属性相关命令">7.6 属性相关命令</a></li>
+        <li><a href="#77-自定义构建规则add_custom_command">7.7 自定义构建规则：add_custom_command</a></li>
+        <li><a href="#78-自定义构建目标add_custom_target">7.8 自定义构建目标：add_custom_target</a></li>
+        <li><a href="#79-设置依赖关系add_dependencies">7.9 设置依赖关系：add_dependencies</a></li>
+        <li><a href="#710-小结">7.10 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第8章-生成器表达式">第8章 生成器表达式</a>
+      <ol>
+        <li><a href="#81-支持生成器表达式的命令">8.1 支持生成器表达式的命令</a></li>
+        <li><a href="#82-布尔型生成器表达式">8.2 布尔型生成器表达式</a></li>
+        <li><a href="#83-字符串生成器表达式">8.3 字符串生成器表达式</a></li>
+        <li><a href="#84-小结">8.4 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第9章-模块">第9章 模块</a>
+      <ol>
+        <li><a href="#91-引用功能模块">9.1 引用功能模块</a></li>
+        <li><a href="#92-常用的预置功能模块">9.2 常用的预置功能模块</a></li>
+        <li><a href="#93-查找模块">9.3 查找模块</a></li>
+        <li><a href="#94-编写自定义查找模块">9.4 编写自定义查找模块</a></li>
+        <li><a href="#95-小结">9.5 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第10章-策略与向后兼容">第10章 策略与向后兼容</a>
+      <ol>
+        <li><a href="#101-cmake策略以cmp0115为例">10.1 CMake策略（以CMP0115为例）</a></li>
+        <li><a href="#102-指定cmake最低版本要求cmake_minimum_required">10.2 指定CMake最低版本要求：cmake_minimum_required</a></li>
+        <li><a href="#103-管理策略行为cmake_policy">10.3 管理策略行为：cmake_policy</a></li>
+        <li><a href="#104-渐进式重构cmake程序">10.4 渐进式重构CMake程序</a></li>
+        <li><a href="#105-小结">10.5 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第11章-实践基于onnxruntime的手写数字识别库">第11章 实践：基于onnxruntime的手写数字识别库</a>
+      <ol>
+        <li><a href="#111-前期设计">11.1 前期设计</a></li>
+        <li><a href="#112-第三方库">11.2 第三方库</a></li>
+        <li><a href="#113-cmake目录程序">11.3 CMake目录程序</a></li>
+        <li><a href="#114-代码实现">11.4 代码实现</a></li>
+        <li><a href="#115-构建和运行">11.5 构建和运行</a></li>
+        <li><a href="#116-小结">11.6 小结</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#前言-1">前言</a>
+      <ol>
+        <li><a href="#划线评论">划线评论</a></li>
+        <li><a href="#划线评论-1">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#14-构建动态库-1">1.4 构建动态库</a>
+      <ol>
+        <li><a href="#划线评论-2">划线评论</a></li>
+        <li><a href="#划线评论-3">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#15-引用第三方库-1">1.5 引用第三方库</a>
+      <ol>
+        <li><a href="#划线评论-4">划线评论</a></li>
+        <li><a href="#划线评论-5">划线评论</a></li>
+        <li><a href="#划线评论-6">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#16-旅行笔记-1">1.6 旅行笔记</a>
+      <ol>
+        <li><a href="#划线评论-7">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#第7章-构建目标和属性-1">第7章 构建目标和属性</a>
+      <ol>
+        <li><a href="#划线评论-8">划线评论</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -276,7 +453,7 @@
     <section class="article-content">
     
     
-    <h1 id="元数据">元数据
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
 </h1><blockquote>
 <p>[!abstract] CMake构建实战：项目开发卷</p>
 <ul>
@@ -300,15 +477,15 @@
 <li>PC地址：https://weread.qq.com/web/reader/3f932c50813ab8a65g0193d0</li>
 </ul>
 </blockquote>
-<h1 id="高亮划线">高亮划线
-</h1><h2 id="封面">封面
-</h2><h2 id="版权信息">版权信息
-</h2><h2 id="内容提要">内容提要
-</h2><h2 id="前言">前言
-</h2><h3 id="本书读者">本书读者
-</h3><h2 id="第1章-构建之旅">第1章 构建之旅
-</h2><h3 id="11-单源文件程序您好世界">1.1 单源文件程序：您好，世界
-</h3><h3 id="12-构建多源程序">1.2 构建多源程序
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="内容提要"><a href="#%e5%86%85%e5%ae%b9%e6%8f%90%e8%a6%81" class="header-anchor"></a>内容提要
+</h2><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><h3 id="本书读者"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%bb%e8%80%85" class="header-anchor"></a>本书读者
+</h3><h2 id="第1章-构建之旅"><a href="#%e7%ac%ac1%e7%ab%a0-%e6%9e%84%e5%bb%ba%e4%b9%8b%e6%97%85" class="header-anchor"></a>第1章 构建之旅
+</h2><h3 id="11-单源文件程序您好世界"><a href="#11-%e5%8d%95%e6%ba%90%e6%96%87%e4%bb%b6%e7%a8%8b%e5%ba%8f%e6%82%a8%e5%a5%bd%e4%b8%96%e7%95%8c" class="header-anchor"></a>1.1 单源文件程序：您好，世界
+</h3><h3 id="12-构建多源程序"><a href="#12-%e6%9e%84%e5%bb%ba%e5%a4%9a%e6%ba%90%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>1.2 构建多源程序
 </h3><blockquote>
 <p>📌 C++更是经常因为编译速度慢而被大家诟病
 ⏱ 2024-05-16 17:24:38 ^3300091899-8-1470-1490</p>
@@ -325,7 +502,7 @@
 <p>📌 make构建工具会根据Makefile规则文件来进行构建
 ⏱ 2024-05-16 17:32:54 ^3300091899-8-6286-6314</p>
 </blockquote>
-<h3 id="13-构建静态库">1.3 构建静态库
+<h3 id="13-构建静态库"><a href="#13-%e6%9e%84%e5%bb%ba%e9%9d%99%e6%80%81%e5%ba%93" class="header-anchor"></a>1.3 构建静态库
 </h3><blockquote>
 <p>📌 另外，因为库总是要被其他开发者使用的，所以提供一个声明了全部功能函数的头文件十分有必要。这样，开发者只需引用提供的头文件，然后链接静态库，就可以使用该库开发好的实用功能了！
 ⏱ 2024-04-16 12:54:07 ^3300091899-9-1018-1104</p>
@@ -334,7 +511,7 @@
 <p>📌 此处并没有写静态库的完整文件名，因为GCC编译器会自动根据这个基本名称，加上前缀“lib”和扩展名“.a”去搜索
 ⏱ 2024-04-20 17:12:45 ^3300091899-9-3367-3423</p>
 </blockquote>
-<h3 id="14-构建动态库">1.4 构建动态库
+<h3 id="14-构建动态库"><a href="#14-%e6%9e%84%e5%bb%ba%e5%8a%a8%e6%80%81%e5%ba%93" class="header-anchor"></a>1.4 构建动态库
 </h3><blockquote>
 <p>📌 如果某个静态库相当通用而被很多程序静态链接，将是对空间的巨大浪费。这里不仅是指编译后的程序文件的体积，更重要的是指程序运行时占用的内存空间。
 ⏱ 2024-04-16 12:59:15 ^3300091899-10-620-690</p>
@@ -367,7 +544,7 @@
 <p>📌 这些信息存储在程序的动态节(dynamic section)中，我们可以通过readelf命令查看
 ⏱ 2024-05-01 19:29:40 ^3300091899-10-9631-9680</p>
 </blockquote>
-<h3 id="15-引用第三方库">1.5 引用第三方库
+<h3 id="15-引用第三方库"><a href="#15-%e5%bc%95%e7%94%a8%e7%ac%ac%e4%b8%89%e6%96%b9%e5%ba%93" class="header-anchor"></a>1.5 引用第三方库
 </h3><blockquote>
 <p>📌 但其缺点也很明显，那就是影响编译时间。因为头文件库本身没有源程序，无法独立编译成目标文件，再被链接到使用它的程序中，这就不可避免地需要反复编译头文件中的程序。另外，分发头文件库也意味着开源是必需的了，毕竟需要用户来编译。这反映了头文件库的封装性相对较差。
 ⏱ 2024-05-01 19:47:16 ^3300091899-11-1578-1705</p>
@@ -380,7 +557,7 @@
 <p>📌 CXXFLAGS和LDFLAGS变量分别代表公共的编译和链接参数。编译参数-I指定了头文件库搜索目录，链接参数-L指定了链接库文件搜索目录，链接参数-Wl,-R指定了RUNPATH的值。
 ⏱ 2024-05-01 20:55:15 ^3300091899-11-10343-10436</p>
 </blockquote>
-<h3 id="16-旅行笔记">1.6 旅行笔记
+<h3 id="16-旅行笔记"><a href="#16-%e6%97%85%e8%a1%8c%e7%ac%94%e8%ae%b0" class="header-anchor"></a>1.6 旅行笔记
 </h3><blockquote>
 <p>📌 目标文件虽然名叫“目标”，但终究不是我们最终想要的目标。因此有构建目标（target，简称目标）这个概念。构建目标是建立在源程序之上的更高层抽象。当我们将一系列源程序组织成一个构建目标，就相当于为这些源程序指定了一些共同的编译和链接参数。
 ⏱ 2024-05-01 21:16:52 ^3300091899-12-1369-1488</p>
@@ -409,8 +586,8 @@
 <p>📌 这种抽象模型大大降低了构建项目时的心智负担。只有在真正实施构建时，我们才需要将该概念模型的拓扑结构翻译成对应平台的编译链接命令，而这一步骤完全可以由CMake代劳。
 ⏱ 2024-05-02 05:51:55 ^3300091899-12-15905-15987</p>
 </blockquote>
-<h2 id="第2章-cmake简介">第2章 CMake简介
-</h2><h3 id="21-为什么使用cmake">2.1 为什么使用CMake
+<h2 id="第2章-cmake简介"><a href="#%e7%ac%ac2%e7%ab%a0-cmake%e7%ae%80%e4%bb%8b" class="header-anchor"></a>第2章 CMake简介
+</h2><h3 id="21-为什么使用cmake"><a href="#21-%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bd%bf%e7%94%a8cmake" class="header-anchor"></a>2.1 为什么使用CMake
 </h3><blockquote>
 <p>📌 除此之外，CMake还支持交叉编译，可以满足更多样的构建需求。
 ⏱ 2024-05-02 05:54:31 ^3300091899-14-2384-2415</p>
@@ -419,57 +596,57 @@
 <p>📌 同时，CMake脚本语言是领域特定语言(Domain Specific Language，DSL)，即专注于某个应用程序领域的计算机语言。对于CMake来说，它所专注的便是构建这个领域，自然也提供了很多用于构建过程的命令，如下载并构建外部的项目、生成配置文件等。
 ⏱ 2024-05-02 05:54:55 ^3300091899-14-3216-3347</p>
 </blockquote>
-<h3 id="22-安装cmake">2.2 安装CMake
-</h3><h3 id="23-您好cmake">2.3 您好，CMake!
-</h3><h2 id="第3章-基础语法">第3章 基础语法
-</h2><h3 id="31-cmake程序">3.1 CMake程序
+<h3 id="22-安装cmake"><a href="#22-%e5%ae%89%e8%a3%85cmake" class="header-anchor"></a>2.2 安装CMake
+</h3><h3 id="23-您好cmake"><a href="#23-%e6%82%a8%e5%a5%bdcmake" class="header-anchor"></a>2.3 您好，CMake!
+</h3><h2 id="第3章-基础语法"><a href="#%e7%ac%ac3%e7%ab%a0-%e5%9f%ba%e7%a1%80%e8%af%ad%e6%b3%95" class="header-anchor"></a>第3章 基础语法
+</h2><h3 id="31-cmake程序"><a href="#31-cmake%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>3.1 CMake程序
 </h3><blockquote>
 <p>📌 另外，在CMakeLists.txt中，可能还会通过add_subdirectory命令将一些子目录追加到构建目录中。当然，这要求子目录中也有一个CMakeLists.txt。
 ⏱ 2024-05-02 06:00:05 ^3300091899-18-810-898</p>
 </blockquote>
-<h3 id="32-注释">3.2 注释
+<h3 id="32-注释"><a href="#32-%e6%b3%a8%e9%87%8a" class="header-anchor"></a>3.2 注释
 </h3><blockquote>
 <p>📌 括号注释依然由#开头，紧接着依次是左方括号[、若干等号=（也可以不加等号）、左方括号[。括号注释的终止标记与起始标记对称，但不含#，即依次由右方括号]、若干等号=、右方括号]构成，其中等号的数量需要与起始标记相同
 ⏱ 2024-05-02 06:03:03 ^3300091899-19-1067-1173</p>
 </blockquote>
-<h3 id="33-命令调用">3.3 命令调用
-</h3><h3 id="34-命令参数">3.4 命令参数
-</h3><h3 id="35-变量">3.5 变量
+<h3 id="33-命令调用"><a href="#33-%e5%91%bd%e4%bb%a4%e8%b0%83%e7%94%a8" class="header-anchor"></a>3.3 命令调用
+</h3><h3 id="34-命令参数"><a href="#34-%e5%91%bd%e4%bb%a4%e5%8f%82%e6%95%b0" class="header-anchor"></a>3.4 命令参数
+</h3><h3 id="35-变量"><a href="#35-%e5%8f%98%e9%87%8f" class="header-anchor"></a>3.5 变量
 </h3><blockquote>
 <p>📌 对于CMake的目录程序而言，每一个目录层级，都有它的一个作用域。子目录的程序被执行前，会先将父目录作用域中的所有变量复制一份到子目录的作用域中。因此，子目录的程序可以访问但无法修改父目录作用域中的变量。对于CMake脚本程序而言，目录作用域相当于只有一层。
 ⏱ 2024-05-02 06:10:03 ^3300091899-22-1223-1352</p>
 </blockquote>
-<h3 id="36-列表">3.6 列表
-</h3><h3 id="37-控制结构">3.7 控制结构
-</h3><h3 id="38-条件语法">3.8 条件语法
-</h3><h3 id="39-命令定义">3.9 命令定义
-</h3><h3 id="310-小结">3.10 小结
-</h3><h2 id="第4章-常用命令">第4章 常用命令
-</h2><h3 id="41-数值操作命令math">4.1 数值操作命令：math
-</h3><h3 id="42-字符串操作命令string">4.2 字符串操作命令：string
-</h3><h3 id="43-列表操作命令list">4.3 列表操作命令：list
-</h3><h3 id="44-文件操作命令file">4.4 文件操作命令：file
-</h3><h3 id="45-路径操作命令cmake_path">4.5 路径操作命令：cmake_path
-</h3><h3 id="46-路径操作命令get_filename_component">4.6 路径操作命令：get_filename_component
-</h3><h3 id="47-配置模板文件configure_file">4.7 配置模板文件：configure_file
-</h3><h3 id="48-日志输出命令message">4.8 日志输出命令：message
-</h3><h3 id="49-执行程序execute_process">4.9 执行程序：execute_process
-</h3><h3 id="410-引用cmake程序include">4.10 引用CMake程序：include
-</h3><h3 id="411-执行代码片段cmake_language">4.11 执行代码片段：cmake_language
-</h3><h3 id="412-监控变量variable_watch">4.12 监控变量：variable_watch
-</h3><h2 id="第5章-实践cmake快速排序">第5章 实践：CMake快速排序
-</h2><h2 id="第6章-cmake构建初探">第6章 CMake构建初探
-</h2><h3 id="61-cmake项目的生命周期">6.1 CMake项目的生命周期
+<h3 id="36-列表"><a href="#36-%e5%88%97%e8%a1%a8" class="header-anchor"></a>3.6 列表
+</h3><h3 id="37-控制结构"><a href="#37-%e6%8e%a7%e5%88%b6%e7%bb%93%e6%9e%84" class="header-anchor"></a>3.7 控制结构
+</h3><h3 id="38-条件语法"><a href="#38-%e6%9d%a1%e4%bb%b6%e8%af%ad%e6%b3%95" class="header-anchor"></a>3.8 条件语法
+</h3><h3 id="39-命令定义"><a href="#39-%e5%91%bd%e4%bb%a4%e5%ae%9a%e4%b9%89" class="header-anchor"></a>3.9 命令定义
+</h3><h3 id="310-小结"><a href="#310-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>3.10 小结
+</h3><h2 id="第4章-常用命令"><a href="#%e7%ac%ac4%e7%ab%a0-%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4" class="header-anchor"></a>第4章 常用命令
+</h2><h3 id="41-数值操作命令math"><a href="#41-%e6%95%b0%e5%80%bc%e6%93%8d%e4%bd%9c%e5%91%bd%e4%bb%a4math" class="header-anchor"></a>4.1 数值操作命令：math
+</h3><h3 id="42-字符串操作命令string"><a href="#42-%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%93%8d%e4%bd%9c%e5%91%bd%e4%bb%a4string" class="header-anchor"></a>4.2 字符串操作命令：string
+</h3><h3 id="43-列表操作命令list"><a href="#43-%e5%88%97%e8%a1%a8%e6%93%8d%e4%bd%9c%e5%91%bd%e4%bb%a4list" class="header-anchor"></a>4.3 列表操作命令：list
+</h3><h3 id="44-文件操作命令file"><a href="#44-%e6%96%87%e4%bb%b6%e6%93%8d%e4%bd%9c%e5%91%bd%e4%bb%a4file" class="header-anchor"></a>4.4 文件操作命令：file
+</h3><h3 id="45-路径操作命令cmake_path"><a href="#45-%e8%b7%af%e5%be%84%e6%93%8d%e4%bd%9c%e5%91%bd%e4%bb%a4cmake_path" class="header-anchor"></a>4.5 路径操作命令：cmake_path
+</h3><h3 id="46-路径操作命令get_filename_component"><a href="#46-%e8%b7%af%e5%be%84%e6%93%8d%e4%bd%9c%e5%91%bd%e4%bb%a4get_filename_component" class="header-anchor"></a>4.6 路径操作命令：get_filename_component
+</h3><h3 id="47-配置模板文件configure_file"><a href="#47-%e9%85%8d%e7%bd%ae%e6%a8%a1%e6%9d%bf%e6%96%87%e4%bb%b6configure_file" class="header-anchor"></a>4.7 配置模板文件：configure_file
+</h3><h3 id="48-日志输出命令message"><a href="#48-%e6%97%a5%e5%bf%97%e8%be%93%e5%87%ba%e5%91%bd%e4%bb%a4message" class="header-anchor"></a>4.8 日志输出命令：message
+</h3><h3 id="49-执行程序execute_process"><a href="#49-%e6%89%a7%e8%a1%8c%e7%a8%8b%e5%ba%8fexecute_process" class="header-anchor"></a>4.9 执行程序：execute_process
+</h3><h3 id="410-引用cmake程序include"><a href="#410-%e5%bc%95%e7%94%a8cmake%e7%a8%8b%e5%ba%8finclude" class="header-anchor"></a>4.10 引用CMake程序：include
+</h3><h3 id="411-执行代码片段cmake_language"><a href="#411-%e6%89%a7%e8%a1%8c%e4%bb%a3%e7%a0%81%e7%89%87%e6%ae%b5cmake_language" class="header-anchor"></a>4.11 执行代码片段：cmake_language
+</h3><h3 id="412-监控变量variable_watch"><a href="#412-%e7%9b%91%e6%8e%a7%e5%8f%98%e9%87%8fvariable_watch" class="header-anchor"></a>4.12 监控变量：variable_watch
+</h3><h2 id="第5章-实践cmake快速排序"><a href="#%e7%ac%ac5%e7%ab%a0-%e5%ae%9e%e8%b7%b5cmake%e5%bf%ab%e9%80%9f%e6%8e%92%e5%ba%8f" class="header-anchor"></a>第5章 实践：CMake快速排序
+</h2><h2 id="第6章-cmake构建初探"><a href="#%e7%ac%ac6%e7%ab%a0-cmake%e6%9e%84%e5%bb%ba%e5%88%9d%e6%8e%a2" class="header-anchor"></a>第6章 CMake构建初探
+</h2><h3 id="61-cmake项目的生命周期"><a href="#61-cmake%e9%a1%b9%e7%9b%ae%e7%9a%84%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" class="header-anchor"></a>6.1 CMake项目的生命周期
 </h3><blockquote>
 <p>📌 不同的构建模式分别对应一系列不同的预置编译链接选项，我们可以根据需求方便地切换。 CMake默认提供如下四种构建模式。
 ⏱ 2024-05-02 06:22:17 ^3300091899-43-5539-5598</p>
 </blockquote>
-<h3 id="62-项目配置与缓存变量">6.2 项目配置与缓存变量
-</h3><h3 id="63-cmake命令行的使用">6.3 CMake命令行的使用
-</h3><h3 id="64-使用visual-studio打开cmake项目">6.4 使用Visual Studio打开CMake项目
-</h3><h3 id="65-小结">6.5 小结
-</h3><h2 id="第7章-构建目标和属性">第7章 构建目标和属性
-</h2><h3 id="71-二进制构建目标">7.1 二进制构建目标
+<h3 id="62-项目配置与缓存变量"><a href="#62-%e9%a1%b9%e7%9b%ae%e9%85%8d%e7%bd%ae%e4%b8%8e%e7%bc%93%e5%ad%98%e5%8f%98%e9%87%8f" class="header-anchor"></a>6.2 项目配置与缓存变量
+</h3><h3 id="63-cmake命令行的使用"><a href="#63-cmake%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%9a%84%e4%bd%bf%e7%94%a8" class="header-anchor"></a>6.3 CMake命令行的使用
+</h3><h3 id="64-使用visual-studio打开cmake项目"><a href="#64-%e4%bd%bf%e7%94%a8visual-studio%e6%89%93%e5%bc%80cmake%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>6.4 使用Visual Studio打开CMake项目
+</h3><h3 id="65-小结"><a href="#65-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>6.5 小结
+</h3><h2 id="第7章-构建目标和属性"><a href="#%e7%ac%ac7%e7%ab%a0-%e6%9e%84%e5%bb%ba%e7%9b%ae%e6%a0%87%e5%92%8c%e5%b1%9e%e6%80%a7" class="header-anchor"></a>第7章 构建目标和属性
+</h2><h3 id="71-二进制构建目标"><a href="#71-%e4%ba%8c%e8%bf%9b%e5%88%b6%e6%9e%84%e5%bb%ba%e7%9b%ae%e6%a0%87" class="header-anchor"></a>7.1 二进制构建目标
 </h3><blockquote>
 <p>📌 不会在构建时被链接到任何一个程序中，仅用于运行时动态链接（通过LoadLibrary或dlopen等API）
 ⏱ 2024-05-02 06:52:20 ^3300091899-49-3999-4053</p>
@@ -478,100 +655,100 @@
 <p>📌 因此，最佳实践是永远一一罗列全部源文件。这样，添加新的源文件必然导致CMakeLists.txt修改。构建项目时，也就会重新配置生成该项目，源文件的变动自然也会被检测到，从而导致相应部分的重新构建。
 ⏱ 2024-05-02 07:57:08 ^3300091899-49-7289-7388</p>
 </blockquote>
-<h3 id="72-伪构建目标">7.2 伪构建目标
-</h3><h3 id="73-子目录">7.3 子目录
-</h3><h3 id="74-项目project">7.4 项目：project
-</h3><h3 id="75-属性get_propertyset_property">7.5 属性：get_property、set_property
-</h3><h3 id="76-属性相关命令">7.6 属性相关命令
-</h3><h3 id="77-自定义构建规则add_custom_command">7.7 自定义构建规则：add_custom_command
-</h3><h3 id="78-自定义构建目标add_custom_target">7.8 自定义构建目标：add_custom_target
-</h3><h3 id="79-设置依赖关系add_dependencies">7.9 设置依赖关系：add_dependencies
-</h3><h3 id="710-小结">7.10 小结
-</h3><h2 id="第8章-生成器表达式">第8章 生成器表达式
-</h2><h3 id="81-支持生成器表达式的命令">8.1 支持生成器表达式的命令
-</h3><h3 id="82-布尔型生成器表达式">8.2 布尔型生成器表达式
-</h3><h3 id="83-字符串生成器表达式">8.3 字符串生成器表达式
-</h3><h3 id="84-小结">8.4 小结
-</h3><h2 id="第9章-模块">第9章 模块
-</h2><h3 id="91-引用功能模块">9.1 引用功能模块
-</h3><h3 id="92-常用的预置功能模块">9.2 常用的预置功能模块
-</h3><h3 id="93-查找模块">9.3 查找模块
-</h3><h3 id="94-编写自定义查找模块">9.4 编写自定义查找模块
-</h3><h3 id="95-小结">9.5 小结
-</h3><h2 id="第10章-策略与向后兼容">第10章 策略与向后兼容
-</h2><h3 id="101-cmake策略以cmp0115为例">10.1 CMake策略（以CMP0115为例）
-</h3><h3 id="102-指定cmake最低版本要求cmake_minimum_required">10.2 指定CMake最低版本要求：cmake_minimum_required
-</h3><h3 id="103-管理策略行为cmake_policy">10.3 管理策略行为：cmake_policy
-</h3><h3 id="104-渐进式重构cmake程序">10.4 渐进式重构CMake程序
-</h3><h3 id="105-小结">10.5 小结
-</h3><h2 id="第11章-实践基于onnxruntime的手写数字识别库">第11章 实践：基于onnxruntime的手写数字识别库
-</h2><h3 id="111-前期设计">11.1 前期设计
-</h3><h3 id="112-第三方库">11.2 第三方库
-</h3><h3 id="113-cmake目录程序">11.3 CMake目录程序
-</h3><h3 id="114-代码实现">11.4 代码实现
-</h3><h3 id="115-构建和运行">11.5 构建和运行
-</h3><h3 id="116-小结">11.6 小结
-</h3><h1 id="读书笔记">读书笔记
-</h1><h2 id="前言-1">前言
-</h2><h3 id="划线评论">划线评论
+<h3 id="72-伪构建目标"><a href="#72-%e4%bc%aa%e6%9e%84%e5%bb%ba%e7%9b%ae%e6%a0%87" class="header-anchor"></a>7.2 伪构建目标
+</h3><h3 id="73-子目录"><a href="#73-%e5%ad%90%e7%9b%ae%e5%bd%95" class="header-anchor"></a>7.3 子目录
+</h3><h3 id="74-项目project"><a href="#74-%e9%a1%b9%e7%9b%aeproject" class="header-anchor"></a>7.4 项目：project
+</h3><h3 id="75-属性get_propertyset_property"><a href="#75-%e5%b1%9e%e6%80%a7get_propertyset_property" class="header-anchor"></a>7.5 属性：get_property、set_property
+</h3><h3 id="76-属性相关命令"><a href="#76-%e5%b1%9e%e6%80%a7%e7%9b%b8%e5%85%b3%e5%91%bd%e4%bb%a4" class="header-anchor"></a>7.6 属性相关命令
+</h3><h3 id="77-自定义构建规则add_custom_command"><a href="#77-%e8%87%aa%e5%ae%9a%e4%b9%89%e6%9e%84%e5%bb%ba%e8%a7%84%e5%88%99add_custom_command" class="header-anchor"></a>7.7 自定义构建规则：add_custom_command
+</h3><h3 id="78-自定义构建目标add_custom_target"><a href="#78-%e8%87%aa%e5%ae%9a%e4%b9%89%e6%9e%84%e5%bb%ba%e7%9b%ae%e6%a0%87add_custom_target" class="header-anchor"></a>7.8 自定义构建目标：add_custom_target
+</h3><h3 id="79-设置依赖关系add_dependencies"><a href="#79-%e8%ae%be%e7%bd%ae%e4%be%9d%e8%b5%96%e5%85%b3%e7%b3%bbadd_dependencies" class="header-anchor"></a>7.9 设置依赖关系：add_dependencies
+</h3><h3 id="710-小结"><a href="#710-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>7.10 小结
+</h3><h2 id="第8章-生成器表达式"><a href="#%e7%ac%ac8%e7%ab%a0-%e7%94%9f%e6%88%90%e5%99%a8%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>第8章 生成器表达式
+</h2><h3 id="81-支持生成器表达式的命令"><a href="#81-%e6%94%af%e6%8c%81%e7%94%9f%e6%88%90%e5%99%a8%e8%a1%a8%e8%be%be%e5%bc%8f%e7%9a%84%e5%91%bd%e4%bb%a4" class="header-anchor"></a>8.1 支持生成器表达式的命令
+</h3><h3 id="82-布尔型生成器表达式"><a href="#82-%e5%b8%83%e5%b0%94%e5%9e%8b%e7%94%9f%e6%88%90%e5%99%a8%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>8.2 布尔型生成器表达式
+</h3><h3 id="83-字符串生成器表达式"><a href="#83-%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%94%9f%e6%88%90%e5%99%a8%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>8.3 字符串生成器表达式
+</h3><h3 id="84-小结"><a href="#84-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>8.4 小结
+</h3><h2 id="第9章-模块"><a href="#%e7%ac%ac9%e7%ab%a0-%e6%a8%a1%e5%9d%97" class="header-anchor"></a>第9章 模块
+</h2><h3 id="91-引用功能模块"><a href="#91-%e5%bc%95%e7%94%a8%e5%8a%9f%e8%83%bd%e6%a8%a1%e5%9d%97" class="header-anchor"></a>9.1 引用功能模块
+</h3><h3 id="92-常用的预置功能模块"><a href="#92-%e5%b8%b8%e7%94%a8%e7%9a%84%e9%a2%84%e7%bd%ae%e5%8a%9f%e8%83%bd%e6%a8%a1%e5%9d%97" class="header-anchor"></a>9.2 常用的预置功能模块
+</h3><h3 id="93-查找模块"><a href="#93-%e6%9f%a5%e6%89%be%e6%a8%a1%e5%9d%97" class="header-anchor"></a>9.3 查找模块
+</h3><h3 id="94-编写自定义查找模块"><a href="#94-%e7%bc%96%e5%86%99%e8%87%aa%e5%ae%9a%e4%b9%89%e6%9f%a5%e6%89%be%e6%a8%a1%e5%9d%97" class="header-anchor"></a>9.4 编写自定义查找模块
+</h3><h3 id="95-小结"><a href="#95-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>9.5 小结
+</h3><h2 id="第10章-策略与向后兼容"><a href="#%e7%ac%ac10%e7%ab%a0-%e7%ad%96%e7%95%a5%e4%b8%8e%e5%90%91%e5%90%8e%e5%85%bc%e5%ae%b9" class="header-anchor"></a>第10章 策略与向后兼容
+</h2><h3 id="101-cmake策略以cmp0115为例"><a href="#101-cmake%e7%ad%96%e7%95%a5%e4%bb%a5cmp0115%e4%b8%ba%e4%be%8b" class="header-anchor"></a>10.1 CMake策略（以CMP0115为例）
+</h3><h3 id="102-指定cmake最低版本要求cmake_minimum_required"><a href="#102-%e6%8c%87%e5%ae%9acmake%e6%9c%80%e4%bd%8e%e7%89%88%e6%9c%ac%e8%a6%81%e6%b1%82cmake_minimum_required" class="header-anchor"></a>10.2 指定CMake最低版本要求：cmake_minimum_required
+</h3><h3 id="103-管理策略行为cmake_policy"><a href="#103-%e7%ae%a1%e7%90%86%e7%ad%96%e7%95%a5%e8%a1%8c%e4%b8%bacmake_policy" class="header-anchor"></a>10.3 管理策略行为：cmake_policy
+</h3><h3 id="104-渐进式重构cmake程序"><a href="#104-%e6%b8%90%e8%bf%9b%e5%bc%8f%e9%87%8d%e6%9e%84cmake%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>10.4 渐进式重构CMake程序
+</h3><h3 id="105-小结"><a href="#105-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>10.5 小结
+</h3><h2 id="第11章-实践基于onnxruntime的手写数字识别库"><a href="#%e7%ac%ac11%e7%ab%a0-%e5%ae%9e%e8%b7%b5%e5%9f%ba%e4%ba%8eonnxruntime%e7%9a%84%e6%89%8b%e5%86%99%e6%95%b0%e5%ad%97%e8%af%86%e5%88%ab%e5%ba%93" class="header-anchor"></a>第11章 实践：基于onnxruntime的手写数字识别库
+</h2><h3 id="111-前期设计"><a href="#111-%e5%89%8d%e6%9c%9f%e8%ae%be%e8%ae%a1" class="header-anchor"></a>11.1 前期设计
+</h3><h3 id="112-第三方库"><a href="#112-%e7%ac%ac%e4%b8%89%e6%96%b9%e5%ba%93" class="header-anchor"></a>11.2 第三方库
+</h3><h3 id="113-cmake目录程序"><a href="#113-cmake%e7%9b%ae%e5%bd%95%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>11.3 CMake目录程序
+</h3><h3 id="114-代码实现"><a href="#114-%e4%bb%a3%e7%a0%81%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>11.4 代码实现
+</h3><h3 id="115-构建和运行"><a href="#115-%e6%9e%84%e5%bb%ba%e5%92%8c%e8%bf%90%e8%a1%8c" class="header-anchor"></a>11.5 构建和运行
+</h3><h3 id="116-小结"><a href="#116-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>11.6 小结
+</h3><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="前言-1"><a href="#%e5%89%8d%e8%a8%80-1" class="header-anchor"></a>前言
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 第7章介绍CMake从配置生成项目、构建项目，到项目被用户使用的完整生命周期，以帮助读者对CMake的功能使用建立宏观认知  ^6733360-7RcT8obzi
 - 💭 看起来是重点
 - ⏱ 2024-05-15 15:33:47</p>
 </blockquote>
-<h3 id="划线评论-1">划线评论
+<h3 id="划线评论-1"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 第11章则综合应用了本书介绍的知识  ^6733360-7RcTaczKd
 - 💭 编写大型软件的样例
 - ⏱ 2024-05-15 15:34:14</p>
 </blockquote>
-<h2 id="14-构建动态库-1">1.4 构建动态库
-</h2><h3 id="划线评论-2">划线评论
+<h2 id="14-构建动态库-1"><a href="#14-%e6%9e%84%e5%bb%ba%e5%8a%a8%e6%80%81%e5%ba%93-1" class="header-anchor"></a>1.4 构建动态库
+</h2><h3 id="划线评论-2"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 地址无关代码(Position-Independent Code，PIC)就是指这种不访问内存绝对地址的代码。如果想让GCC编译器和Clang编译器生成地址无关代码，必须指定一个编译器参数-fPIC。  ^6733360-7QRPcUtdJ
 - 💭 原来是这么回事
 - ⏱ 2024-05-01 19:13:44</p>
 </blockquote>
-<h3 id="划线评论-3">划线评论
+<h3 id="划线评论-3"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 地址无关代码(Position-Independent Code，PIC)就是指这种不访问内存绝对地址的代码。如果想让GCC编译器和Clang编译器生成地址无关代码，必须指定一个编译器参数-fPIC。  ^6733360-7QAos6c4b
 - 💭 原来是这样的
 - ⏱ 2024-04-20 08:11:49</p>
 </blockquote>
-<h2 id="15-引用第三方库-1">1.5 引用第三方库
-</h2><h3 id="划线评论-4">划线评论
+<h2 id="15-引用第三方库-1"><a href="#15-%e5%bc%95%e7%94%a8%e7%ac%ac%e4%b8%89%e6%96%b9%e5%ba%93-1" class="header-anchor"></a>1.5 引用第三方库
+</h2><h3 id="划线评论-4"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 首先来尝试使用Boost中的头文件库。头文件库(header-only library)指只包含头文件（.h、.hpp等）的程序库。使用这种库非常方便，只需在程序中引用它的头文件，无须对库本身进行额外的编译。源程序引用头文件，相当于复制了头文件的内容，这样头文件库实际上也就成为了引用它的程序的一部分。所以使用头文件库只需编译引用它的程序，头文件库代码会自动被编译。  ^6733360-7QRR60fMH
 - 💭 头文件编译
 - ⏱ 2024-05-01 19:42:35</p>
 </blockquote>
-<h3 id="划线评论-5">划线评论
+<h3 id="划线评论-5"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 最典型的例子可能就是C++的标准模板库(Standard Template Library，STL)了。  ^6733360-7QRRrQcne
 - 💭 这个是头文件库？函数的实现也都是在头文件里面吗？
 - ⏱ 2024-05-01 19:47:57</p>
 </blockquote>
-<h3 id="划线评论-6">划线评论
+<h3 id="划线评论-6"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 。BOOST_LIB_DIR变量，与Windows中一样，定义了Boost库的库文件目录。  ^6733360-7QRX81SRa
 - 💭 手动敲了下，要特别注意文件里面的空格和tab键
 - ⏱ 2024-05-01 21:14:41</p>
 </blockquote>
-<h2 id="16-旅行笔记-1">1.6 旅行笔记
-</h2><h3 id="划线评论-7">划线评论
+<h2 id="16-旅行笔记-1"><a href="#16-%e6%97%85%e8%a1%8c%e7%ac%94%e8%ae%b0-1" class="header-anchor"></a>1.6 旅行笔记
+</h2><h3 id="划线评论-7"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 与构建目标自身源程序相关的属性，确定了构建目标的构建要求(build specification)；而与其使用者相关的属性，则决定了构建目标的使用要求(usage requirements)。目标的使用要求，实际上会被传递到该目标使用者的构建要求中。正是这两种需求赋予了构建目标这个概念丰富的内涵，使其称为最核心的抽象概念。  ^6733360-7QRY31p5v
 - 💭 这段太绕了
 - ⏱ 2024-05-01 21:28:43</p>
 </blockquote>
-<h2 id="第7章-构建目标和属性-1">第7章 构建目标和属性
-</h2><h3 id="划线评论-8">划线评论
+<h2 id="第7章-构建目标和属性-1"><a href="#%e7%ac%ac7%e7%ab%a0-%e6%9e%84%e5%bb%ba%e7%9b%ae%e6%a0%87%e5%92%8c%e5%b1%9e%e6%80%a7-1" class="header-anchor"></a>第7章 构建目标和属性
+</h2><h3 id="划线评论-8"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8" class="header-anchor"></a>划线评论
 </h3><blockquote>
 <p>📌 毫不夸张地说，如果学习CMake的目标就是组织简单的C和C++小项目的构建流程，那么阅读掌握本章内容就足够了。  ^6733360-7QSxIxBFv
 - 💭 幸亏多翻了几页
 - ⏱ 2024-05-02 06:33:22</p>
 </blockquote>
-<h1 id="本书评论">本书评论
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
 </h1>
 </section>
 

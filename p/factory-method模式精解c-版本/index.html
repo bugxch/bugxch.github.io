@@ -67,7 +67,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -227,7 +227,41 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#使用情景">使用情景</a></li>
+    <li><a href="#问题引入">问题引入</a></li>
+    <li><a href="#解决方案">解决方案</a></li>
+    <li><a href="#uml表示及其代码">UML表示及其代码</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="has-image main-article">
@@ -276,7 +310,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 02, 2021</time>
+                <time class="article-time--published">2021/05/02</time>
             </div>
         
 
@@ -307,64 +341,119 @@
     
     
     <p>继续之前的设计模式第四弹，这次是大名鼎鼎的工厂方法模式。</p>
-<h2 id="使用情景">使用情景
+<h2 id="使用情景"><a href="#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af" class="header-anchor"></a>使用情景
 </h2><blockquote>
 <p>定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method是创建型模式，使一个类的实例化延迟到其子类。</p>
 </blockquote>
 <p>Factory有工厂的意思，简单来看，这个模式利用到了上一篇的<a class="link" href="https://bugxch.github.io/dp_3/"  target="_blank" rel="noopener"
     >Template Method模式</a>用来生成具体的实例，说得更清楚一点，工厂方法模式将创建对象的过程延迟到子类实现，其他的父类的步骤保持完整。</p>
-<h2 id="问题引入">问题引入
+<h2 id="问题引入"><a href="#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5" class="header-anchor"></a>问题引入
 </h2><p>想象一个养殖业的农民，他刚开始仅仅在养马场养马，每个马都需要养殖长大之后在市面出售，后来他获得足够的利润之后，扩展业务也养牛，但是在牛场养牛，每头牛也是需要养殖长大之后在市面出售的。在刚开始的时候，我们需要记录每只马的养殖过程，后面还要记录它的售价。如果你前面只有养马的程序（包括生产、饲养、销售的过程），比如下面这样</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Farm</span> {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    CreateHorse();
-</span></span><span style="display:flex;"><span>    FeedHorse();
-</span></span><span style="display:flex;"><span>    SellHorse();
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    Horse horse_;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>需要添加金养牛的程序，那么大多数情况会出现一个<code>switch</code>的分支，随着饲养的品种越来越多，最后会在生产、饲养和售卖的各个过程中出现多个<code>switch</code>分支。如果我是农场主，代码会陷入“分支瘫痪”，对维护这一套代码感到厌烦。比如下面这样</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Farm</span> {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    CreateAnimal() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (animaltype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;horse&#34;</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// create horse
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        } <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span> (animaltype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;cow&#34;</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// ceate cow
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        } ...
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// create others
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    FeedAnimal() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (animaltype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;horse&#34;</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// feed horse
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        } <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span> (animaltype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;cow&#34;</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// feed cow
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        } ...
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// feed others
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    SellAnimal() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (animaltype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;horse&#34;</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// sell horse
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        } <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span> (animaltype <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;cow&#34;</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// sell cow
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        } ...
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// sell others
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> animaltype;
-</span></span></code></pre></div><p>这样的方案有什么明显的缺点呢？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Farm</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CreateHorse</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FeedHorse</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SellHorse</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Horse</span> <span class="n">horse_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>需要添加金养牛的程序，那么大多数情况会出现一个<code>switch</code>的分支，随着饲养的品种越来越多，最后会在生产、饲养和售卖的各个过程中出现多个<code>switch</code>分支。如果我是农场主，代码会陷入“分支瘫痪”，对维护这一套代码感到厌烦。比如下面这样</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Farm</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CreateAnimal</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">animaltype</span> <span class="o">==</span> <span class="s">&#34;horse&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// create horse
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">animaltype</span> <span class="o">==</span> <span class="s">&#34;cow&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// ceate cow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// create others
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FeedAnimal</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">animaltype</span> <span class="o">==</span> <span class="s">&#34;horse&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// feed horse
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">animaltype</span> <span class="o">==</span> <span class="s">&#34;cow&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// feed cow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// feed others
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SellAnimal</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">animaltype</span> <span class="o">==</span> <span class="s">&#34;horse&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// sell horse
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">animaltype</span> <span class="o">==</span> <span class="s">&#34;cow&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// sell cow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// sell others
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">animaltype</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样的方案有什么明显的缺点呢？</p>
 <ul>
 <li><strong>高耦合</strong>，这个大类中的函数有一处需要添加分支，每个函数就都需要变化，但是每个函数实际是售卖动物的不耦合的步骤（生产不影响饲养，饲养不影响售卖），这些步骤之间耦合太紧，导致“霰弹式修改”；</li>
 <li><strong>分支瘫痪</strong>，添加的类别越多，代码的<code>if/else/switch</code>的分支越多，最后陷入分支瘫痪的状态。</li>
 </ul>
-<h2 id="解决方案">解决方案
+<h2 id="解决方案"><a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" class="header-anchor"></a>解决方案
 </h2><p>按照<a class="link" href="https://book.douban.com/subject/20406704/"  target="_blank" rel="noopener"
     >《设计模式解析》</a>中的原则，设计模式需要遵循如下的一些原则：</p>
 <blockquote>
@@ -380,7 +469,7 @@
 <li>动物被售卖，不同的动物<strong>售卖的价格</strong>均不同；</li>
 </ul>
 <p>可以看出可以将之前的方案拆解成两个类<code>Farm</code>和<code>Animal</code>，而且生产、饲养和售卖的方式都是<strong>可变</strong>的，所以这些方法<strong>都是虚方法</strong>。对于具体的动物，生成具体的农场和动物。</p>
-<h2 id="uml表示及其代码">UML表示及其代码
+<h2 id="uml表示及其代码"><a href="#uml%e8%a1%a8%e7%a4%ba%e5%8f%8a%e5%85%b6%e4%bb%a3%e7%a0%81" class="header-anchor"></a>UML表示及其代码
 </h2><p>参考解决方案的内容，我们画出这些类的UML的图，如下所示</p>
 <p><img src="https://pic.imgdb.cn/item/608f4683d1a9ae528ff55eb5.png"
 	
@@ -391,71 +480,141 @@
 	
 ></p>
 <p>具体的代码如下所示</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> Sell() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>	Animal(<span style="color:#66d9ef">int</span> price <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">:</span>price_(price), id_(id) {};
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">protected</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> price_;
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> id_;
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Horse</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Animal {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> Sell() {
-</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> id_ <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;: Horse sell &#34;</span> <span style="color:#f92672">&lt;&lt;</span> price_ <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; yuan</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	Horse(<span style="color:#66d9ef">int</span> price <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">:</span> Animal(price, id) {};
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cow</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Animal {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> Sell() {
-</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> id_ <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;: Cow sell &#34;</span> <span style="color:#f92672">&lt;&lt;</span> price_ <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; yuan</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	Cow(<span style="color:#66d9ef">int</span> price <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">:</span> Animal(price, id) {};
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Farm</span> {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> Animal<span style="color:#f92672">*</span> Create(<span style="color:#66d9ef">int</span> id, <span style="color:#66d9ef">int</span> price) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HorseFarm</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Farm {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	Animal<span style="color:#f92672">*</span> Create(<span style="color:#66d9ef">int</span> id, <span style="color:#66d9ef">int</span> price)
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Horse</span>(price, id);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CowFarm</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Farm {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	Animal<span style="color:#f92672">*</span> Create(<span style="color:#66d9ef">int</span> id, <span style="color:#66d9ef">int</span> price)
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Cow</span>(price, id);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	Farm<span style="color:#f92672">*</span> factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HorseFarm();
-</span></span><span style="display:flex;"><span>	Animal<span style="color:#f92672">*</span> horse <span style="color:#f92672">=</span> factory<span style="color:#f92672">-&gt;</span>Create(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">32</span>);
-</span></span><span style="display:flex;"><span>	horse<span style="color:#f92672">-&gt;</span>Sell();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CowFarm();
-</span></span><span style="display:flex;"><span>	Animal<span style="color:#f92672">*</span> cow <span style="color:#f92672">=</span> factory<span style="color:#f92672">-&gt;</span>Create(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">12</span>);
-</span></span><span style="display:flex;"><span>	cow<span style="color:#f92672">-&gt;</span>Sell();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">delete</span> factory;
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">delete</span> horse;
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">delete</span> cow;
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="kt">void</span> <span class="n">Sell</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Animal</span><span class="p">(</span><span class="kt">int</span> <span class="n">price</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">:</span><span class="n">price_</span><span class="p">(</span><span class="n">price</span><span class="p">),</span> <span class="n">id_</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl"><span class="k">protected</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">price_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">id_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Horse</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Animal</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="n">Sell</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">id_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;: Horse sell &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">price_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; yuan</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Horse</span><span class="p">(</span><span class="kt">int</span> <span class="n">price</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">:</span> <span class="n">Animal</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">id</span><span class="p">)</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Cow</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Animal</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="n">Sell</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">id_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;: Cow sell &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">price_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; yuan</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Cow</span><span class="p">(</span><span class="kt">int</span> <span class="n">price</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">:</span> <span class="n">Animal</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">id</span><span class="p">)</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Farm</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">Animal</span><span class="o">*</span> <span class="n">Create</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="kt">int</span> <span class="n">price</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HorseFarm</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Farm</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Animal</span><span class="o">*</span> <span class="n">Create</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="kt">int</span> <span class="n">price</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="k">new</span> <span class="nf">Horse</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CowFarm</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Farm</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Animal</span><span class="o">*</span> <span class="n">Create</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="kt">int</span> <span class="n">price</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="k">new</span> <span class="nf">Cow</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Farm</span><span class="o">*</span> <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HorseFarm</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Animal</span><span class="o">*</span> <span class="n">horse</span> <span class="o">=</span> <span class="n">factory</span><span class="o">-&gt;</span><span class="n">Create</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">horse</span><span class="o">-&gt;</span><span class="n">Sell</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CowFarm</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Animal</span><span class="o">*</span> <span class="n">cow</span> <span class="o">=</span> <span class="n">factory</span><span class="o">-&gt;</span><span class="n">Create</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cow</span><span class="o">-&gt;</span><span class="n">Sell</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">delete</span> <span class="n">factory</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">delete</span> <span class="n">horse</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">delete</span> <span class="n">cow</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 

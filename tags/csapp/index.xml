@@ -24,8 +24,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h1 id=&#34;前置知识&#34;&gt;前置知识
-&lt;/h1&gt;&lt;h2 id=&#34;堆栈操作&#34;&gt;堆栈操作
+&lt;h1 id=&#34;前置知识&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e7%bd%ae%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前置知识
+&lt;/h1&gt;&lt;h2 id=&#34;堆栈操作&#34;&gt;&lt;a href=&#34;#%e5%a0%86%e6%a0%88%e6%93%8d%e4%bd%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;堆栈操作
 &lt;/h2&gt;&lt;p&gt;作者在4.1.6和4.3.3两次提到堆栈操作的特殊性，此处做一个基本的回顾。堆栈指令包括 &lt;code&gt;popq&lt;/code&gt; 和 &lt;code&gt;pushq&lt;/code&gt; 两条，作者设计假定栈顶的地址始终保存在寄存器 &lt;code&gt;%rsp&lt;/code&gt; 中，参考&lt;a class=&#34;link&#34; href=&#34;https://blog.bugxch.top/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;程序的机器级表示&lt;/a&gt;中的内容，有如下示意图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6278fd150947543129801e44.png&#34;
@@ -49,17 +49,33 @@
 &lt;p&gt;基于上面的两点，程序的操作就比较好理解了，初始状态 &lt;code&gt;%rsp&lt;/code&gt; 中地址是0x108，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;将 &lt;code&gt;%rax&lt;/code&gt; 寄存器中的数据push进去，所以堆栈元素要增加8字节，为了将新的元素放到堆栈里面，先执行 &lt;code&gt;%rsp = %rsp - 8&lt;/code&gt;，此时 &lt;code&gt;%rsp&lt;/code&gt; 指向要入栈的新元素的其实地址0x100，这时就可以根据 &lt;code&gt;%rsp&lt;/code&gt; 的其实地址连续存储8个字节的新元素了，这个操作类似于
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;subq &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;rsp &lt;span style=&#34;color:#75715e&#34;&gt;// rsp = rsp - 8
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;movq &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;rbp, (&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;rsp) &lt;span style=&#34;color:#75715e&#34;&gt;// %rbp的元素拷贝到%rsp存储的地址处
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;subq&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rsp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// rsp = rsp - 8
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;movq&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rbp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rsp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// %rbp的元素拷贝到%rsp存储的地址处
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;出栈就是相反的，当前的 &lt;code&gt;%rsp&lt;/code&gt; 保存的就是需要弹出元素的地址，那么可以直接将该地址开始的连续8个字节先拷贝到目的地址，然后 &lt;code&gt;%rsp = %rsp + 8&lt;/code&gt;，此时 &lt;code&gt;%rsp&lt;/code&gt; 指向堆栈的&lt;strong&gt;新的&lt;/strong&gt;最后一个元素的地址。等价于如下的操作
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;movq (&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;rsp), &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;rax
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;subq &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;rsp
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;movq&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rsp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rax&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;subq&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rsp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;上面的操作可以保证，&lt;strong&gt;&lt;code&gt;%rsp&lt;/code&gt; 始终指向栈顶元素的起始地址&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;条件传送-vs-条件分支&#34;&gt;条件传送 vs 条件分支
-&lt;/h2&gt;&lt;h1 id=&#34;参考文献&#34;&gt;参考文献
+&lt;h2 id=&#34;条件传送-vs-条件分支&#34;&gt;&lt;a href=&#34;#%e6%9d%a1%e4%bb%b6%e4%bc%a0%e9%80%81-vs-%e6%9d%a1%e4%bb%b6%e5%88%86%e6%94%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;条件传送 vs 条件分支
+&lt;/h2&gt;&lt;h1 id=&#34;参考文献&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考文献
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/35038473/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;汇编语言（第4版） (豆瓣)&lt;/a&gt;&lt;/li&gt;
@@ -113,7 +129,7 @@
         <description>&lt;img src="https://pic.imgdb.cn/item/6277012f0947543129b619f5.jpg" alt="Featured image of post 程序的机器级表示" /&gt;&lt;p&gt;继续之前的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/csapp_notes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;CSAPP读书笔记&lt;/a&gt;，这是第3章的读书笔记。&lt;/p&gt;
 &lt;p&gt;第3章介绍计算机的底层机器编码，包括常见的基本数据、为了执行机器指令而设置的寄存器、算术和逻辑操作以及控制的指令。3.7节详细介绍了&lt;strong&gt;过程&lt;/strong&gt;的概念，最后是其他数据结构在计算机机器代码的表示。&lt;/p&gt;
-&lt;h2 id=&#34;实验工具&#34;&gt;实验工具
+&lt;h2 id=&#34;实验工具&#34;&gt;&lt;a href=&#34;#%e5%ae%9e%e9%aa%8c%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;实验工具
 &lt;/h2&gt;&lt;p&gt;要想研究底层机器指令，最直观的就是汇编程序，参考书本里面的介绍，以linux系统的gcc程序为工具，有两种方式可以得到。如下图所示，是一个 &lt;code&gt;hello.c&lt;/code&gt;的程序从高级语言程序编译成机器代码的过程。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6278b71f0947543129c38bee.png&#34;
 	
@@ -126,8 +142,15 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;使用&lt;strong&gt;编译器&lt;/strong&gt;运行如下命令&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -Og -S hello.c
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以得到 &lt;code&gt;hello.s&lt;/code&gt;的汇编文件，该文件仅仅包括汇编指令，没有二进制的机器码，如下图所示&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc -Og -S hello.c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;可以得到 &lt;code&gt;hello.s&lt;/code&gt;的汇编文件，该文件仅仅包括汇编指令，没有二进制的机器码，如下图所示&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6278f45e09475431296b2e6b.png&#34;
 	
 	
@@ -140,9 +163,17 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;使用汇编器进一步可以将 &lt;code&gt;hello.s&lt;/code&gt;翻译成机器语言指令，称为&lt;em&gt;可重定位目标程序&lt;/em&gt;，里面全是二进制码，这个就是底层机器指令，肉眼看过去就是一串二进制码，根本不知道是什么东西。可以基于&lt;strong&gt;反汇编&lt;/strong&gt;的方法将该文件反汇编成汇编的代码，&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -Og -c hello.c &lt;span style=&#34;color:#75715e&#34;&gt;#生成hello.o文件&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;objdump -d hello.o &lt;span style=&#34;color:#75715e&#34;&gt;#反汇编文件&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;得到的文件，如下所示&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc -Og -c hello.c &lt;span class=&#34;c1&#34;&gt;#生成hello.o文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;objdump -d hello.o &lt;span class=&#34;c1&#34;&gt;#反汇编文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;得到的文件，如下所示&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6278f59b09475431296e2a64.png&#34;
 	
 	
@@ -154,8 +185,8 @@
 &lt;p&gt;与上面的方法相比，除了汇编指令之外，还有这些指令的二进制编码。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;基础概念&#34;&gt;基础概念
-&lt;/h2&gt;&lt;h3 id=&#34;数据格式和指令&#34;&gt;数据格式和指令
+&lt;h2 id=&#34;基础概念&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e6%a6%82%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基础概念
+&lt;/h2&gt;&lt;h3 id=&#34;数据格式和指令&#34;&gt;&lt;a href=&#34;#%e6%95%b0%e6%8d%ae%e6%a0%bc%e5%bc%8f%e5%92%8c%e6%8c%87%e4%bb%a4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;数据格式和指令
 &lt;/h3&gt;&lt;p&gt;这些是本章的主要内容，也是理解汇编代码的基础。具体的技术细节书本里面已经说清楚了，此处仅仅对于需要特别注意的地方做一个总结。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -238,8 +269,8 @@
 &lt;p&gt;注意第2行的跳转指令的地址二进制编码是03，这个是下一条指令地址的相对值，也就是&lt;strong&gt;跳转的地址（8) = 下一条指令的地址(5) + 偏移量(3)&lt;/strong&gt;。第5行也一样，5 = 0xd + f8(-8)。这样做的好处之一，是可重定位目标程序通过链接器链接之后，指令的虚拟地址发生变化，但是&lt;strong&gt;二进制编码依然保持不变&lt;/strong&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;函数跳转&#34;&gt;函数跳转
-&lt;/h3&gt;&lt;h2 id=&#34;问题解答&#34;&gt;问题解答
+&lt;h3 id=&#34;函数跳转&#34;&gt;&lt;a href=&#34;#%e5%87%bd%e6%95%b0%e8%b7%b3%e8%bd%ac&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;函数跳转
+&lt;/h3&gt;&lt;h2 id=&#34;问题解答&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题解答
 &lt;/h2&gt;&lt;p&gt;学习本章的内容之后，应该可以回答下面的问题&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;为什么switch的case必须是整数？&lt;/p&gt;
@@ -254,7 +285,7 @@
         
         <guid>https://blog.bugxch.top/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</guid>
         <description>&lt;img src="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg" alt="Featured image of post 信息的表示和处理" /&gt;&lt;p&gt;疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。&lt;/p&gt;
-&lt;h2 id=&#34;计算机的字长&#34;&gt;计算机的字长
+&lt;h2 id=&#34;计算机的字长&#34;&gt;&lt;a href=&#34;#%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%9a%84%e5%ad%97%e9%95%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;计算机的字长
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;每一台计算机都有字长，指明指针数据的标称大小，字长决定了的最重要的系统参数是虚拟地址空间的最大大小。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -315,24 +346,45 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;查看上面的表格，32bit和64bit的大部分数据类型的字节长度是一样的，仅有两个不同，long int和char *。可以使用下面的代码查看每个不同类型的字节的大小&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;size of char is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;size of short is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;short&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;size of int is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;size of long is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;size of long long is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;size of double is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;size of float is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;size of char* is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我在自己的64位字长的win10电脑上试了下，除了char *的字节数是4，其他的与上面表格的结果一样。&lt;/p&gt;
-&lt;h2 id=&#34;整数的表示&#34;&gt;整数的表示
-&lt;/h2&gt;&lt;h3 id=&#34;整数范围&#34;&gt;整数范围
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;size of char is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;size of short is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;short&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;size of int is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;size of long is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;size of long long is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;size of double is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;size of float is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;size of char* is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我在自己的64位字长的win10电脑上试了下，除了char *的字节数是4，其他的与上面表格的结果一样。&lt;/p&gt;
+&lt;h2 id=&#34;整数的表示&#34;&gt;&lt;a href=&#34;#%e6%95%b4%e6%95%b0%e7%9a%84%e8%a1%a8%e7%a4%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;整数的表示
+&lt;/h2&gt;&lt;h3 id=&#34;整数范围&#34;&gt;&lt;a href=&#34;#%e6%95%b4%e6%95%b0%e8%8c%83%e5%9b%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;整数范围
 &lt;/h3&gt;&lt;p&gt;整数分为无符号和有符号整数，如果表示整数$w$位比特，那么无符号表示的范围是$[0, 2^w-1]$，有符号整数表示的范围是$[-2^{w-1},2^{w-1}-1]$。下面是一些典型值，&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6263b5f9239250f7c5732b75.png&#34;
 	
@@ -435,16 +487,31 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;代码如下&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;limits.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;int max is %d, int min is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, INT_MAX, INT_MIN);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;char max is %d, char min is %d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, CHAR_MAX, CHAR_MIN);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;补码表示&#34;&gt;补码表示
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;limits.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;int max is %d, int min is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INT_MAX&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INT_MIN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;char max is %d, char min is %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CHAR_MAX&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CHAR_MIN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;补码表示&#34;&gt;&lt;a href=&#34;#%e8%a1%a5%e7%a0%81%e8%a1%a8%e7%a4%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;补码表示
 &lt;/h3&gt;&lt;p&gt;$w$bit的有符号整数数学表示如下，&lt;/p&gt;
 &lt;p&gt;$$
 B 2 T_{w}(\vec{x}) \doteq-x_{w-1} 2^{w-1}+\sum_{i=0}^{w-2} x_{i} 2^{i}
@@ -484,34 +551,55 @@ B2T_{w}(\vec{x}) = B2U_{w}(\vec{x}) - x_{w-1} 2^{w} =  -\left[(2^{w} - 1) -B2U_{
 $$&lt;/p&gt;
 &lt;p&gt;而$(2^{w} - 1) -B2U_{w}(\vec{x}) = x按位取反$，所以可以将这个补码的表示理解成unsigned的数，然后减去长度为$w$的全1的二进制比特，再减去1。&lt;/p&gt;
 &lt;p&gt;所以，0xFA是情况2，补码表示的是 &lt;code&gt;-(~0xFA) - 1 = -0x05 - 1 = -6&lt;/code&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;c语言中无符号和有符号的转换&#34;&gt;C语言中无符号和有符号的转换
+&lt;h3 id=&#34;c语言中无符号和有符号的转换&#34;&gt;&lt;a href=&#34;#c%e8%af%ad%e8%a8%80%e4%b8%ad%e6%97%a0%e7%ac%a6%e5%8f%b7%e5%92%8c%e6%9c%89%e7%ac%a6%e5%8f%b7%e7%9a%84%e8%bd%ac%e6%8d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;C语言中无符号和有符号的转换
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;位宽一样的无符号和有符号的整数之间的转换，遵循&lt;strong&gt;底层的bit不变&lt;/strong&gt;的原则，互相进行转换，也就是说无论如何转换，仅仅是底层bit的解读方法不同而已。&lt;/li&gt;
 &lt;li&gt;C语言中的无符号数和有符号数的二元计算，都会将&lt;strong&gt;有符号数强制转换为无符号整数&lt;/strong&gt;进行计算。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;整数的扩展和截断&#34;&gt;整数的扩展和截断
+&lt;h3 id=&#34;整数的扩展和截断&#34;&gt;&lt;a href=&#34;#%e6%95%b4%e6%95%b0%e7%9a%84%e6%89%a9%e5%b1%95%e5%92%8c%e6%88%aa%e6%96%ad&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;整数的扩展和截断
 &lt;/h3&gt;&lt;p&gt;整数的扩展分为无符号扩展和有符号数的扩展，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;无符号数的扩展就往高位bit填充0；&lt;/li&gt;
 &lt;li&gt;有符号数的扩展方式是符号扩展，即最高位符号位填充空位。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;整数截断逻辑很简单，就是底层的bit表示按照目的的位宽直接截断。这一小节有一个技巧，如果是位宽较小的有符号转换成为位宽较宽的无符号数，则是&lt;strong&gt;保持符号不变，先改变位宽&lt;/strong&gt;，&lt;strong&gt;再进行转换&lt;/strong&gt;，比如下面的代码&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;short&lt;/span&gt; sx &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;12345&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;unsigned&lt;/span&gt; uy &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sx;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;uy = %u: &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, uy);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上面的代码中，第2行等价于(unsigned int)(int)sx，先应用符号扩展将short扩展到int，然后再使用等宽bit位的无符号的转换。&lt;/p&gt;
-&lt;h3 id=&#34;编程建议&#34;&gt;编程建议
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;short&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12345&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;unsigned&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;uy = %u: &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\t&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;上面的代码中，第2行等价于(unsigned int)(int)sx，先应用符号扩展将short扩展到int，然后再使用等宽bit位的无符号的转换。&lt;/p&gt;
+&lt;h3 id=&#34;编程建议&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e7%a8%8b%e5%bb%ba%e8%ae%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编程建议
 &lt;/h3&gt;&lt;p&gt;在实际的软件开发中，尤其要注意无符号整数和有符号整数的转换，比如下面的代码的第4行&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sum_element&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; a[], &lt;span style=&#34;color:#66d9ef&#34;&gt;unsigned&lt;/span&gt; length) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0f&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; length &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;i) result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; a[i];
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; result;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果length的初始值为0，那么length - 1会是一个非常大的正数，导致对于数组a的越界访问。&lt;/p&gt;
-&lt;h2 id=&#34;整数计算&#34;&gt;整数计算
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sum_element&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[],&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;unsigned&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果length的初始值为0，那么length - 1会是一个非常大的正数，导致对于数组a的越界访问。&lt;/p&gt;
+&lt;h2 id=&#34;整数计算&#34;&gt;&lt;a href=&#34;#%e6%95%b4%e6%95%b0%e8%ae%a1%e7%ae%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;整数计算
 &lt;/h2&gt;&lt;p&gt;这一部分的推导看起来比较复杂，刚开始读比较吃力，但是如果看懂了推导中的原则，理解起来就比较清晰了，作者在这一段的推理非常严谨。&lt;/p&gt;
-&lt;h3 id=&#34;整数加法&#34;&gt;整数加法
+&lt;h3 id=&#34;整数加法&#34;&gt;&lt;a href=&#34;#%e6%95%b4%e6%95%b0%e5%8a%a0%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;整数加法
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;无符号加法很简单，直观来讲，就是逐位相加，超过bit表示范围的高位直接截断。有符号数的加法，推理的原则是&lt;strong&gt;有符号数加法补码之和与无符号之和有完全相同的位级表示&lt;/strong&gt;。&lt;/p&gt;
@@ -530,13 +618,13 @@ $$&lt;/p&gt;
 &lt;p&gt;补码的逆元，有一种比较巧妙的方法，所有比特位取反，然后最低位+1，累进相加。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;整数乘法&#34;&gt;整数乘法
+&lt;h3 id=&#34;整数乘法&#34;&gt;&lt;a href=&#34;#%e6%95%b4%e6%95%b0%e4%b9%98%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;整数乘法
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;无符号数乘法也很简单，相乘之后取模；&lt;/li&gt;
 &lt;li&gt;有符号数的乘法，推理的原则是&lt;strong&gt;有符号数加法补码之积与无符号之积有完全相同的位级表示&lt;/strong&gt;。所以可以将有符号数的乘法，先转换成为无符号数的乘法计算，之后再以有符号数的补码解读位级表示即可。&lt;/li&gt;
 &lt;li&gt;与常数的乘积可以转化成为右移位、加法和减法的组合，时钟周期比单纯的乘法更少。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;整数除法&#34;&gt;整数除法
+&lt;h3 id=&#34;整数除法&#34;&gt;&lt;a href=&#34;#%e6%95%b4%e6%95%b0%e9%99%a4%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;整数除法
 &lt;/h3&gt;&lt;p&gt;书里面没有介绍整数的通用除法，详细推理了整数除以2的幂的过程，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;无论无符号还是有符号整数，$x\gg k = \lfloor {x/2^k}\rfloor$；&lt;/li&gt;
@@ -545,16 +633,16 @@ $$&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;习题2.44是掌握整数运算的试金石。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;浮点数表示&#34;&gt;浮点数表示
-&lt;/h2&gt;&lt;h3 id=&#34;ieee-754浮点数的表示法&#34;&gt;IEEE 754浮点数的表示法
+&lt;h2 id=&#34;浮点数表示&#34;&gt;&lt;a href=&#34;#%e6%b5%ae%e7%82%b9%e6%95%b0%e8%a1%a8%e7%a4%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;浮点数表示
+&lt;/h2&gt;&lt;h3 id=&#34;ieee-754浮点数的表示法&#34;&gt;&lt;a href=&#34;#ieee-754%e6%b5%ae%e7%82%b9%e6%95%b0%e7%9a%84%e8%a1%a8%e7%a4%ba%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;IEEE 754浮点数的表示法
 &lt;/h3&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/floatincomputer/#&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;浮点数在计算机中的表示&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;舍入rounding&#34;&gt;舍入（Rounding）
+&lt;h3 id=&#34;舍入rounding&#34;&gt;&lt;a href=&#34;#%e8%88%8d%e5%85%a5rounding&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;舍入（Rounding）
 &lt;/h3&gt;&lt;p&gt;上面的IEEE的浮点数的表示方法解决了二进制bit到浮点数的映射问题，但是如果给定一个任意精度的实数$x$，如果使用给定位宽的浮点数表示这个数呢？这里就要引入舍入的概念。&lt;strong&gt;舍入解决了将数学上的任意精度的实数集合到计算机表示的有限元素的浮点数集合的映射问题&lt;/strong&gt;。从之前的浮点数的表示可以看出，计算机表示的浮点数不可能有无限的精度，将半精度浮点数在数轴上标示出来，它在数轴上的分布是离散的，任意两个离散标示值之间的实数是无穷多的，这些实数如果要用半精度表示就只能通过某种方法&lt;strong&gt;舍入&lt;/strong&gt;到标示的某个值上。以下面的问题为例，&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;半精度浮点数有下面的点，[0.01118, 0.011185, 0.01119]，那么0.011183该如何表示成半精度浮点数结果是什么呢？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;十进制的舍入&#34;&gt;十进制的舍入
+&lt;h4 id=&#34;十进制的舍入&#34;&gt;&lt;a href=&#34;#%e5%8d%81%e8%bf%9b%e5%88%b6%e7%9a%84%e8%88%8d%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;十进制的舍入
 &lt;/h4&gt;&lt;p&gt;直觉告诉我，这个数要么就是0.01118，要么就是0.011185，因为这个数字介于二者之间，如果按照误差尽量小的原则，那么可以计算一下与两个备选数字的差的绝对值，然后舍入到绝对值最小的那个上。这个就是C语言当前使用的舍入方法，称为最接近值的舍入（round to nearest)。这里面还有一个特殊的地方，以对于十进制的数字为例，舍入到最近的整数，如果这个数是两个整数的中间的值，也就是X.5的形式，那么舍入到最近的偶数。比如0.5是0和1的中间值，它举例两个数的举例是一样的，舍入到0，3.5是3和4的中间值，舍入到4。这样做可以最小化一组数的舍入误差的均值。因此，这种舍入方法又称为round to even。除此之外，还有如下的舍入方法&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;向0舍入，数轴上向着0的方向舍入；&lt;/li&gt;
@@ -570,7 +658,7 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;二进制的舍入&#34;&gt;二进制的舍入
+&lt;h4 id=&#34;二进制的舍入&#34;&gt;&lt;a href=&#34;#%e4%ba%8c%e8%bf%9b%e5%88%b6%e7%9a%84%e8%88%8d%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;二进制的舍入
 &lt;/h4&gt;&lt;p&gt;那如何将十进制的舍入类推到二进制的舍入呢？这里包括两个步骤：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;确定舍入的位数，对于某个二进制数$0.001001_{2}$，如果是舍入到小数点后3位，那么这个位数就是3；&lt;/li&gt;
@@ -587,10 +675,10 @@ $$&lt;/p&gt;
 &lt;li&gt;如果$y=1$，那么可能舍入的两个二进制数是$x.xxx1_{2}$和$x.xx(x+1)0_{2}$，两个的中间值是$x.xxx11_2$。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;所以，无论要舍入的小数位是0或者1，需要舍入的中间值一定是$x.xxxy1_2$形式。&lt;/p&gt;
-&lt;h4 id=&#34;问题解答&#34;&gt;问题解答
+&lt;h4 id=&#34;问题解答&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题解答
 &lt;/h4&gt;&lt;p&gt;回到最初的问题，$0.01118_{10}$的二进制表示是0010000110111001，按照浮点数的表示法，也就是$1.0110111001_2\times 2^{-7}$，同样的$0.011185_{10}$的二进制表示是0010000110111010，也就是$1.0110111010_2\times 2^{-7}$，如果按照精确到二进制小数点后10位（因为半精度浮点数的尾数是用10个bit来表示的），那么这两个数的中间数应该是$1.01101110011_2\times 2^{-7}$&lt;/p&gt;
 &lt;p&gt;$0.011183_{10}$，转换成二进制是$1.0110111001110_2 \times 2 ^{-7}$，与中间数的二进制相比，明显大于中间数，所以舍入到比较大的$0.011185_{10}$。如果按照十进制的方式来处理也是一样的，$0.01118_{10}$和$0.011185_{10}$的中间数是$0.0111825_{10}$，明显大于这个中间数，也是舍入到较大的数。&lt;/p&gt;
-&lt;h2 id=&#34;浮点数计算&#34;&gt;浮点数计算
+&lt;h2 id=&#34;浮点数计算&#34;&gt;&lt;a href=&#34;#%e6%b5%ae%e7%82%b9%e6%95%b0%e8%ae%a1%e7%ae%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;浮点数计算
 &lt;/h2&gt;&lt;p&gt;书本里面没有做详细的计算规则的说明，参考&lt;a class=&#34;link&#34; href=&#34;https://courses.engr.illinois.edu/cs357/sp2020/notes/ref-5-rounding.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Rounding - CS 357&lt;/a&gt;做一下说明。两个浮点数做加法需要完成下面的3个步骤：&lt;/p&gt;
 &lt;ol&gt;
@@ -628,7 +716,7 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;引子&#34;&gt;引子
+&lt;h2 id=&#34;引子&#34;&gt;&lt;a href=&#34;#%e5%bc%95%e5%ad%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;引子
 &lt;/h2&gt;&lt;p&gt;首先，使用之前博客的程序，可以看到如下的这些实数在计算机中的计算结果是&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -663,8 +751,8 @@ $$&lt;/p&gt;
 &lt;/table&gt;
 &lt;p&gt;右边的计算机中的数值表示是按照&lt;a class=&#34;link&#34; href=&#34;https://ieeexplore.ieee.org/document/4610935/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《IEEE 754-2008》&lt;/a&gt;的标准存储数据的，具体的规定如下所示。&lt;/p&gt;
-&lt;h2 id=&#34;ieee-754-标准&#34;&gt;IEEE 754 标准
-&lt;/h2&gt;&lt;h3 id=&#34;表示形式&#34;&gt;表示形式
+&lt;h2 id=&#34;ieee-754-标准&#34;&gt;&lt;a href=&#34;#ieee-754-%e6%a0%87%e5%87%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;IEEE 754 标准
+&lt;/h2&gt;&lt;h3 id=&#34;表示形式&#34;&gt;&lt;a href=&#34;#%e8%a1%a8%e7%a4%ba%e5%bd%a2%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;表示形式
 &lt;/h3&gt;&lt;p&gt;IEEE 754规定了二进制浮点数在计算中的存储方式，我们以C语言中的float为例来具体说明。无论是32位系统还是64位系统，计算机中的float占用4个字节，我们就使用这些字节来存储任意的浮点数，可以参考下图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/62672c03239250f7c5f6394d.gif&#34;
 	
@@ -691,7 +779,7 @@ $$&lt;/p&gt;
 &lt;li&gt;确认E。它是个非负正数，按照第1步计算出来的结果，我们的指数应该是6。但是，IEEE规定根据二进制计算浮点数时，需要给指数减去一个偏置值，对于float类型这个数为127，对于double类型，这个数是1023。因此反过来，在将数字转换成二进制存储的时候，要加上这个偏置值，因此 E=6+127=133。&lt;/li&gt;
 &lt;li&gt;综合以上的所有计算结果，最后在计算机中存储的形式是 &lt;code&gt;01000010110011001010010110100001&lt;/code&gt;，转换成16进制就是 &lt;code&gt;42CCA5A2&lt;/code&gt;。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;特别规定&#34;&gt;特别规定
+&lt;h3 id=&#34;特别规定&#34;&gt;&lt;a href=&#34;#%e7%89%b9%e5%88%ab%e8%a7%84%e5%ae%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;特别规定
 &lt;/h3&gt;&lt;p&gt;依照上面的方法，可以依次确认其他3个浮点数的表示形式。这都是比较常规的&lt;strong&gt;规格化&lt;/strong&gt;数据的处理方法，IEEE针对一些特殊的数字（绝对值特别接近0的数字或者无穷大无穷小），引入了一些特殊的规定，称为&lt;strong&gt;非规格化&lt;/strong&gt;表示方法，总结如下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/20240322210012.png?imageSlim&#34;
 	
@@ -719,7 +807,7 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;float16的浮点表示&#34;&gt;float16的浮点表示
+&lt;h2 id=&#34;float16的浮点表示&#34;&gt;&lt;a href=&#34;#float16%e7%9a%84%e6%b5%ae%e7%82%b9%e8%a1%a8%e7%a4%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;float16的浮点表示
 &lt;/h2&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh-hans/%E5%8D%8A%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%E6%95%B0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;半精度浮点数&lt;/a&gt;，基于上面的理解，我们可以研究下float16的一些特点。float16是用16个bit表示浮点数，不同的bit位的表示如下&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/6268ee4a239250f7c584e614.png&#34;
@@ -858,17 +946,33 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;下面的代码可以将所有的半精度浮点数的所有非负数表示出来（严格得说，不包括-0.0），可以都打印出来体会下上面的结论&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; plt
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;udata &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;uint16(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [] &lt;span style=&#34;color:#75715e&#34;&gt;# all of non-negative float16 number&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    p1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(udata&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;view(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;float16))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    udata &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    udata &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;uint16(udata)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;plt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;udata&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uint16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;p1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# all of non-negative float16 number&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;p1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;udata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;view&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;udata&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;udata&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uint16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;udata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考资料
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;浮点数的二进制表示 - 阮一峰的网络日志&lt;/a&gt;&lt;/li&gt;

@@ -66,7 +66,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -226,7 +226,46 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#基本思想">基本思想</a>
+      <ol>
+        <li><a href="#几何直觉">几何直觉</a></li>
+        <li><a href="#公式推导">公式推导</a></li>
+        <li><a href="#牛顿迭代法求极值">牛顿迭代法求极值</a></li>
+        <li><a href="#指令迭代">指令迭代</a></li>
+      </ol>
+    </li>
+    <li><a href="#方程举例">方程举例</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -267,7 +306,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Aug 05, 2018</time>
+                <time class="article-time--published">2018/08/05</time>
             </div>
         
 
@@ -306,10 +345,10 @@
 	
 	
 ></p>
-<h2 id="基本思想">基本思想
+<h2 id="基本思想"><a href="#%e5%9f%ba%e6%9c%ac%e6%80%9d%e6%83%b3" class="header-anchor"></a>基本思想
 </h2><p>牛顿迭代法的具体内容可以参考 <a class="link" href="https://www.wikiwand.com/zh/%E7%89%9B%E9%A1%BF%E6%B3%95"  target="_blank" rel="noopener"
     >牛顿迭代法</a>的维基百科页面。</p>
-<h3 id="几何直觉">几何直觉
+<h3 id="几何直觉"><a href="#%e5%87%a0%e4%bd%95%e7%9b%b4%e8%a7%89" class="header-anchor"></a>几何直觉
 </h3><p>观察本文上面的图片，凭借我们的直觉可以发现，<strong>如果在函数$f(x)$的根附近的点$x_n$上画一条切线，这条切线与$x$轴的交点$x_{n+1}$比$x_n$更加接近方程的根</strong>。如果在$x_{n+1}$这个点继续使用上一次的方法，再画一条切线，可以想见新的切线与$x$轴的交点肯定比$x_{n+1}$更接近根，如此迭代就会越来越逼近方程的根。下面这幅图表示的更清晰</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/NewtonIteration_Ani.gif/600px-NewtonIteration_Ani.gif"
 	
@@ -337,7 +376,7 @@ $$
 </ul>
 </blockquote>
 <p>所以使用牛顿迭代法，首先需要选择离方程的根足够近的起点，而且这个起点的切线斜率不能为0。</p>
-<h3 id="公式推导">公式推导
+<h3 id="公式推导"><a href="#%e5%85%ac%e5%bc%8f%e6%8e%a8%e5%af%bc" class="header-anchor"></a>公式推导
 </h3><p>牛顿迭代法的另一种推导方式是使用泰勒展开式
 $$
 f(x)=f(x_0)+f^\prime(x_0)(x-x_0)+\frac{1}{2}f^{\prime\prime}(x_0)(x-x_0)^2+\dots + \frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n + o(x-x_0)^n
@@ -347,7 +386,7 @@ $$
 f(x)=f(x_0)+f^\prime(x_0)(x-x_0)
 $$
 化简就可以得到之前的方程(2)。</p>
-<h3 id="牛顿迭代法求极值">牛顿迭代法求极值
+<h3 id="牛顿迭代法求极值"><a href="#%e7%89%9b%e9%a1%bf%e8%bf%ad%e4%bb%a3%e6%b3%95%e6%b1%82%e6%9e%81%e5%80%bc" class="header-anchor"></a>牛顿迭代法求极值
 </h3><p>使用牛顿迭代法可以求函数的极值，通过迭代的方法求方程$f(x)$的极值。根据微积分原理，令$f&rsquo;(x) = 0$的$x$就是函数的极值所在，同样利用泰勒公式展开到二阶，有
 $$
 f(x)=f(x_0)+f^\prime(x_0)(x-x_0)+\frac{1}{2}f^{\prime\prime}(x_0)(x-x_0)^2
@@ -361,7 +400,7 @@ $$
 x=x_0-{\frac {f&rsquo;&rsquo;(x_{0})}{f&rsquo;(x_{0})}}
 $$
 这就是牛顿迭代法求极值的理论依据。</p>
-<h3 id="指令迭代">指令迭代
+<h3 id="指令迭代"><a href="#%e6%8c%87%e4%bb%a4%e8%bf%ad%e4%bb%a3" class="header-anchor"></a>指令迭代
 </h3><blockquote>
 <p>假设计算机中有求倒数的指令$y = rec(x) = 1/x$，但是精度不高，如何通过牛顿迭代法提高精度？</p>
 </blockquote>
@@ -375,7 +414,7 @@ $$
 <p>我们利用指令$f$需要对数$a$做指令计算$f(a)$，但是该指令的精度不高，可以转化成求$f^{-1}(x) = a$得根，也就是求$g(x) = f^{-1}(x) - a$的根</p>
 </blockquote>
 <p>比如，假如有求一个数的自然对数的指令vln，那么可以通过计算$f(x) = e^x -a$的根计算$vln(a)$的值。</p>
-<h2 id="方程举例">方程举例
+<h2 id="方程举例"><a href="#%e6%96%b9%e7%a8%8b%e4%b8%be%e4%be%8b" class="header-anchor"></a>方程举例
 </h2><p>下面我们使用牛顿迭代法用C++的代码求解一个数的立方根，假定这个数是$a$，该问题等价于求方程$x^3 = a$的根，也就是求方程$f(x) = x^3 - a$的根。根据牛顿迭代法，可以按照如下的步骤求根</p>
 <ol>
 <li>
@@ -392,43 +431,90 @@ $$</p>
 </li>
 </ol>
 <p>于是，我们的程序如下所示</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;math.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> a,x0,x1,rsl;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> times <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> a;  <span style="color:#75715e">//输入需要求解的数字
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>    x0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span>;
-</span></span><span style="display:flex;"><span>    rsl <span style="color:#f92672">=</span> fabs(x0<span style="color:#f92672">*</span>x0<span style="color:#f92672">*</span>x0 <span style="color:#f92672">-</span> a);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(rsl <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.00001</span>)
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        x1 <span style="color:#f92672">=</span> (<span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3.0</span>)<span style="color:#f92672">*</span>x0 <span style="color:#f92672">+</span> a<span style="color:#f92672">/</span>(<span style="color:#ae81ff">3.0</span><span style="color:#f92672">*</span>x0<span style="color:#f92672">*</span>x0);
-</span></span><span style="display:flex;"><span>        x0 <span style="color:#f92672">=</span> x1;
-</span></span><span style="display:flex;"><span>        rsl <span style="color:#f92672">=</span> fabs(x1<span style="color:#f92672">*</span>x1<span style="color:#f92672">*</span>x1 <span style="color:#f92672">-</span> a);
-</span></span><span style="display:flex;"><span>        times<span style="color:#f92672">++</span>;
-</span></span><span style="display:flex;"><span>        cout <span style="color:#f92672">&lt;&lt;</span> times <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; : &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;actual data -- &#34;</span> <span style="color:#f92672">&lt;&lt;</span> x1<span style="color:#f92672">*</span>x1<span style="color:#f92672">*</span>x1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, result -- &#34;</span> \
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;&lt;</span> rsl <span style="color:#f92672">&lt;&lt;</span> endl;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Final x is &#34;</span><span style="color:#f92672">&lt;&lt;</span> x1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; and result is &#34;</span><span style="color:#f92672">&lt;&lt;</span> x1<span style="color:#f92672">*</span>x1<span style="color:#f92672">*</span>x1 <span style="color:#f92672">&lt;&lt;</span> endl;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>使用这个程序求解-34.5的立方根结果如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> : actual data -- -1271.41, result -- 1236.91
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> : actual data -- -392.257, result -- 357.757
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> : actual data -- -132.242, result -- 97.7418
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> : actual data -- -56.6032, result -- 22.1032
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> : actual data -- -37.2522, result -- 2.75222
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span> : actual data -- -34.5672, result -- 0.0672223
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span> : actual data -- -34.5, result -- 4.35659e-05
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span> : actual data -- -34.5, result -- 1.83391e-11
-</span></span><span style="display:flex;"><span>Final x is -3.25542 and result is -34.5
-</span></span></code></pre></div><p>可以看出通过8轮迭代就找到了-34.5的近似根-3.25542。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">rsl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">times</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>  <span class="c1">//输入需要求解的数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="n">x0</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rsl</span> <span class="o">=</span> <span class="n">fabs</span><span class="p">(</span><span class="n">x0</span><span class="o">*</span><span class="n">x0</span><span class="o">*</span><span class="n">x0</span> <span class="o">-</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">rsl</span> <span class="o">&gt;</span> <span class="mf">0.00001</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mf">3.0</span><span class="p">)</span><span class="o">*</span><span class="n">x0</span> <span class="o">+</span> <span class="n">a</span><span class="o">/</span><span class="p">(</span><span class="mf">3.0</span><span class="o">*</span><span class="n">x0</span><span class="o">*</span><span class="n">x0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x0</span> <span class="o">=</span> <span class="n">x1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rsl</span> <span class="o">=</span> <span class="n">fabs</span><span class="p">(</span><span class="n">x1</span><span class="o">*</span><span class="n">x1</span><span class="o">*</span><span class="n">x1</span> <span class="o">-</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">times</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">times</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; : &#34;</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;actual data -- &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x1</span><span class="o">*</span><span class="n">x1</span><span class="o">*</span><span class="n">x1</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, result -- &#34;</span> \
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;&lt;</span> <span class="n">rsl</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Final x is &#34;</span><span class="o">&lt;&lt;</span> <span class="n">x1</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; and result is &#34;</span><span class="o">&lt;&lt;</span> <span class="n">x1</span><span class="o">*</span><span class="n">x1</span><span class="o">*</span><span class="n">x1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用这个程序求解-34.5的立方根结果如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="m">1</span> : actual data -- -1271.41, result -- 1236.91
+</span></span><span class="line"><span class="cl"><span class="m">2</span> : actual data -- -392.257, result -- 357.757
+</span></span><span class="line"><span class="cl"><span class="m">3</span> : actual data -- -132.242, result -- 97.7418
+</span></span><span class="line"><span class="cl"><span class="m">4</span> : actual data -- -56.6032, result -- 22.1032
+</span></span><span class="line"><span class="cl"><span class="m">5</span> : actual data -- -37.2522, result -- 2.75222
+</span></span><span class="line"><span class="cl"><span class="m">6</span> : actual data -- -34.5672, result -- 0.0672223
+</span></span><span class="line"><span class="cl"><span class="m">7</span> : actual data -- -34.5, result -- 4.35659e-05
+</span></span><span class="line"><span class="cl"><span class="m">8</span> : actual data -- -34.5, result -- 1.83391e-11
+</span></span><span class="line"><span class="cl">Final x is -3.25542 and result is -34.5
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以看出通过8轮迭代就找到了-34.5的近似根-3.25542。</p>
 </section>
 
 

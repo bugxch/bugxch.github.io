@@ -40,9 +40,9 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;于是，我又在&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/fenlei/nascunchufuwuqi/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;最新NAS存储新品推荐_什么值得买&lt;/a&gt;下面泡了一段时间，发现NAS用的最多的就是群晖和威联通，鉴于威联通颜值能打，而且看到论坛里面的讨论这么全面，将来入手遇到问题也能方便找到解决方案，最终放弃了某宝非常便宜的方案，买了入门款的威联通TS216，先把这个玩熟，等过几年用的差不多了，升级的时候再换更高级的吧。&lt;/p&gt;
-&lt;h2 id=&#34;基本配置&#34;&gt;基本配置
+&lt;h2 id=&#34;基本配置&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e6%9c%ac%e9%85%8d%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基本配置
 &lt;/h2&gt;&lt;p&gt;这个东西买回来很快，但是我发现要真的玩起来还是有比较高的学习成本的，下面是我边学边练的折腾记录。&lt;/p&gt;
-&lt;h3 id=&#34;安装系统&#34;&gt;安装系统
+&lt;h3 id=&#34;安装系统&#34;&gt;&lt;a href=&#34;#%e5%ae%89%e8%a3%85%e7%b3%bb%e7%bb%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;安装系统
 &lt;/h3&gt;&lt;p&gt;我刚开始安装的是西数红盘4T plus，后来发现同步照片的时候NAS炒豆子的声音太大了，所以后来又买了两条m.2的闪迪500G固态硬盘，2个硬盘600大洋，所以整个一套下来应该花了3400大洋（还是蛮肉疼的）。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/63a02668b1fccdcd3673a92d.png&#34;
 	
@@ -67,7 +67,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;远程访问&#34;&gt;远程访问
+&lt;h3 id=&#34;远程访问&#34;&gt;&lt;a href=&#34;#%e8%bf%9c%e7%a8%8b%e8%ae%bf%e9%97%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;远程访问
 &lt;/h3&gt;&lt;p&gt;家用NAS需要能在外部访问才能发挥它最大的威力，这一节从下面的几个步骤一步步做介绍，我主要参考了&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/a0dq84nr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;威联通 TS-451D外网高速访问：公网IP、DSM主机、端口映射、DDNS动态域名设置_NAS存储_什么值得买&lt;/a&gt;，基本上照着配置即可。需要注意两点：&lt;/p&gt;
 &lt;ol&gt;
@@ -102,10 +102,10 @@
 &lt;p&gt;如果没有外网IP，可以使用威联通自带的myCloud和DDNS服务，但是速度比较慢，设置系统查看状态应该可以，但是下载上传文件就勉为其难了。更好的方案是使用有偿的服务，比如上面易有云就提供内网穿透服务，最高到8M速度，我后来没有用。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;域名映射&#34;&gt;域名映射
+&lt;h4 id=&#34;域名映射&#34;&gt;&lt;a href=&#34;#%e5%9f%9f%e5%90%8d%e6%98%a0%e5%b0%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;域名映射
 &lt;/h4&gt;&lt;p&gt;如果外网IP申请下来，一般是在浏览器中直接输入外网IP地址和端口号，但是外网IP会因为光猫重新上电而发生变化，这个就不太方便，所以可以绑定域名，自动DDNS解析解决这个问题。我参考&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/a5ozer6k/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;威联通使用腾讯DNSPod域名DDNS解析完全小白指南+HTTPS证书部署（阿里、华为等国内主流云服务商通用）_NAS存储_什么值得买&lt;/a&gt;设置好的，但是没有做最后的证书配置。&lt;/p&gt;
-&lt;h3 id=&#34;安装app&#34;&gt;安装APP
+&lt;h3 id=&#34;安装app&#34;&gt;&lt;a href=&#34;#%e5%ae%89%e8%a3%85app&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;安装APP
 &lt;/h3&gt;&lt;p&gt;以我一周左右的使用经验来看，最有的APP有下面几个，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Qsirch，智能搜索各种文档，甚至支持图片的OCR识别后的内容搜索，非常好用，高级搜索功能非常好玩，甚至可以根据相机的镜头筛选照片；&lt;/li&gt;
@@ -121,18 +121,18 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/awx0wop4/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;QNAP威联通发布Qsirch 5.0搜索神器，图片搜索和归档更便捷好用_软件应用_什么值得买&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;应用设置&#34;&gt;应用设置
-&lt;/h2&gt;&lt;h3 id=&#34;同步obsidian笔记&#34;&gt;同步Obsidian笔记
+&lt;h2 id=&#34;应用设置&#34;&gt;&lt;a href=&#34;#%e5%ba%94%e7%94%a8%e8%ae%be%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;应用设置
+&lt;/h2&gt;&lt;h3 id=&#34;同步obsidian笔记&#34;&gt;&lt;a href=&#34;#%e5%90%8c%e6%ad%a5obsidian%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;同步Obsidian笔记
 &lt;/h3&gt;&lt;p&gt;从去年开始，我在&lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top/takesmartnotes/#%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;初识卡片笔记写作法 - 不写，就无法思考&lt;/a&gt;里面使用Obsidian，之前也使用过坚果云 + folerSync同步PC端，但是同步效果不理想。这次使用NAS，我发现APP Center里面有&lt;a class=&#34;link&#34; href=&#34;https://www.resilio.com/individuals/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; Resilio Sync&lt;/a&gt;，顺便就google了下，发现很适合NAS啊，可以参考&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/459403503&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Resilio Sync | 全平台多设备文件同步/传输终极产品 - 知乎&lt;/a&gt;。这个软件特点是可以多达60M+的速率在所有安装该软件的跨平台设备上同步，但是需要保证多个同步文件夹中至少有一个是在线的。所以，我的做法是在NAS上安装该软件作为共享的源文件夹，然后在PC和手机端分别安装并同步这个源文件夹，都赋予读写权限，这样无论哪一端的修改都会同步到其他两端。我在手机上安装后使用，可以实现瞬时同步，体验极佳。&lt;/p&gt;
-&lt;h3 id=&#34;同步博客&#34;&gt;同步博客
+&lt;h3 id=&#34;同步博客&#34;&gt;&lt;a href=&#34;#%e5%90%8c%e6%ad%a5%e5%8d%9a%e5%ae%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;同步博客
 &lt;/h3&gt;&lt;p&gt;使用类似的方法，我将hugo博客的文件夹也放在了NAS上，PC端与其同步，这样就能实现二者的同步了。&lt;/p&gt;
-&lt;h3 id=&#34;搭建书屋&#34;&gt;搭建书屋
+&lt;h3 id=&#34;搭建书屋&#34;&gt;&lt;a href=&#34;#%e6%90%ad%e5%bb%ba%e4%b9%a6%e5%b1%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;搭建书屋
 &lt;/h3&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/a992p6e0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;NAS指南 篇三：打造最强家用NAS之私人书库搭建教程_NAS存储_什么值得买&lt;/a&gt;就能搭建起个人书库，唯一的缺憾是不能批量上传，我把中亚上面的几乎所有电子书和文档全部上传到NAS电子书服务器上了。&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考资料
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://post.smzdm.com/p/a0dq84nr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;威联通 TS-451D外网高速访问：公网IP、DSM主机、端口映射、DDNS动态域名设置_NAS存储_什么值得买&lt;/a&gt;&lt;/li&gt;

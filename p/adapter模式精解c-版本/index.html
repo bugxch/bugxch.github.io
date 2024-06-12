@@ -67,7 +67,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -227,7 +227,46 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#使用情景">使用情景</a></li>
+    <li><a href="#问题引入">问题引入</a></li>
+    <li><a href="#解决方案">解决方案</a></li>
+    <li><a href="#uml表示及代码">UML表示及代码</a>
+      <ol>
+        <li><a href="#基于继承的适配器模式">基于继承的适配器模式</a></li>
+        <li><a href="#基于委托的适配器模式">基于委托的适配器模式</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="has-image main-article">
@@ -276,7 +315,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 29, 2021</time>
+                <time class="article-time--published">2021/04/29</time>
             </div>
         
 
@@ -307,19 +346,19 @@
     
     
     <p>本篇是设计模式第二篇，适配器模式，比较好理解。</p>
-<h2 id="使用情景">使用情景
+<h2 id="使用情景"><a href="#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af" class="header-anchor"></a>使用情景
 </h2><blockquote>
 <p>适配器模式是一种<strong>结构型</strong>设计模式， 它能使接口<strong>不兼容</strong>的对象能够相互合作。</p>
 </blockquote>
 <p>如果你有出国的经验，那么在出国前肯定会在淘宝买一个电源的转接插头带在身上，在国外旅行时为手机或者PC充电。为什么需要这个东西？参考这篇<a class="link" href="https://www.skyscanner.net/news/international-travel-plug-adapter-guide"  target="_blank" rel="noopener"
     >国际旅行电源适配器指南</a>，从文章中可以看出，每个不同的国家和地区的电源插座的形状和电压都不同，比如中国家用交流电是220V，而印度是230V，从电压的角度出发，你也需要一个东西将230V的电源转换成为稳定的220V，才能给电脑供电。</p>
-<h2 id="问题引入">问题引入
+<h2 id="问题引入"><a href="#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5" class="header-anchor"></a>问题引入
 </h2><p>那我们的问题自然就是如果我去印度旅行，如何使用工具将230V的电源转换成220V呢？</p>
-<h2 id="解决方案">解决方案
+<h2 id="解决方案"><a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" class="header-anchor"></a>解决方案
 </h2><p>解决方案也很简单，使用一个电源适配器即可，它负责将230V电源转换成为220V供我使用。</p>
-<h2 id="uml表示及代码">UML表示及代码
+<h2 id="uml表示及代码"><a href="#uml%e8%a1%a8%e7%a4%ba%e5%8f%8a%e4%bb%a3%e7%a0%81" class="header-anchor"></a>UML表示及代码
 </h2><p>参考《图解设计模式》的章节，我们有两种适配器模式。</p>
-<h3 id="基于继承的适配器模式">基于继承的适配器模式
+<h3 id="基于继承的适配器模式"><a href="#%e5%9f%ba%e4%ba%8e%e7%bb%a7%e6%89%bf%e7%9a%84%e9%80%82%e9%85%8d%e5%99%a8%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>基于继承的适配器模式
 </h3><p><img src="https://pic.imgdb.cn/item/608ac9f7d1a9ae528ff52c22.png"
 	
 	
@@ -331,53 +370,105 @@
 	
 ></p>
 <p>上面的图示中，<code>Banner</code>就是印度的230V电源，<code>PrintBanner</code>是电源适配器，<code>Print</code>表示我的电脑插头，<code>Main</code>函数是我自己。具体的C++代码如下所示</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Banner</span> {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	Banner(std<span style="color:#f92672">::</span>string str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#f92672">:</span> str_(str) {}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">showWithParen</span>() <span style="color:#66d9ef">const</span>
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;(&#34;</span>  <span style="color:#f92672">&lt;&lt;</span> str_ <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;)&#34;</span> <span style="color:#f92672">&lt;&lt;</span>  std<span style="color:#f92672">::</span>endl;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">showWithAster</span>() <span style="color:#66d9ef">const</span>
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;*&#34;</span> <span style="color:#f92672">&lt;&lt;</span> str_ <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;*&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>string str_;
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Print</span> {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> printWeak() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printStrong</span>() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PrintBanner</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Print, Banner {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	PrintBanner(std<span style="color:#f92672">::</span>string str) <span style="color:#f92672">:</span> Banner(str) {}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printWeak</span>() <span style="color:#66d9ef">override</span> {
-</span></span><span style="display:flex;"><span>		showWithParen();
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printStrong</span>() <span style="color:#66d9ef">override</span> {
-</span></span><span style="display:flex;"><span>		showWithAster();
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">auto</span> printBanner <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintBanner(<span style="color:#e6db74">&#34;hello&#34;</span>);
-</span></span><span style="display:flex;"><span>	printBanner<span style="color:#f92672">-&gt;</span>printWeak();
-</span></span><span style="display:flex;"><span>	printBanner<span style="color:#f92672">-&gt;</span>printStrong();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">delete</span> printBanner;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="基于委托的适配器模式">基于委托的适配器模式
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Banner</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Banner</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">str</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">)</span> <span class="o">:</span> <span class="n">str_</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">showWithParen</span><span class="p">()</span> <span class="k">const</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span>  <span class="o">&lt;&lt;</span> <span class="n">str_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span>  <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">showWithAster</span><span class="p">()</span> <span class="k">const</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;*&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">str_</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;*&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">str_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Print</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="kt">void</span> <span class="n">printWeak</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="kt">void</span> <span class="nf">printStrong</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PrintBanner</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Print</span><span class="p">,</span> <span class="n">Banner</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">PrintBanner</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">str</span><span class="p">)</span> <span class="o">:</span> <span class="n">Banner</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">printWeak</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">showWithParen</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">printStrong</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">showWithAster</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">auto</span> <span class="n">printBanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintBanner</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">printBanner</span><span class="o">-&gt;</span><span class="n">printWeak</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="n">printBanner</span><span class="o">-&gt;</span><span class="n">printStrong</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">delete</span> <span class="n">printBanner</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="基于委托的适配器模式"><a href="#%e5%9f%ba%e4%ba%8e%e5%a7%94%e6%89%98%e7%9a%84%e9%80%82%e9%85%8d%e5%99%a8%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>基于委托的适配器模式
 </h3><p>另外一种形式是基于委托的模式，这里的“委托”意思是我将本来需要我自己做的事情，交给别人来做，适配器<code>PrintBanner</code>将接口的功能<strong>委托</strong>给<code>Banner</code>去做。</p>
 <p><img src="https://pic.imgdb.cn/item/608ace89d1a9ae528f402db1.png"
 	
@@ -388,26 +479,51 @@
 	
 >
 具体的程序代码如下（与基于继承的代码仅仅在<code>PrintBanner</code>的类中的内容不同）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PrintBanner</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Print {
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	PrintBanner(std<span style="color:#f92672">::</span>string str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>) {
-</span></span><span style="display:flex;"><span>		banner_ <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Banner(str);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printWeak</span>() <span style="color:#66d9ef">override</span> {
-</span></span><span style="display:flex;"><span>		banner_<span style="color:#f92672">-&gt;</span>showWithParen();
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printStrong</span>() <span style="color:#66d9ef">override</span> {
-</span></span><span style="display:flex;"><span>		banner_<span style="color:#f92672">-&gt;</span>showWithAster();
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">~</span>PrintBanner() {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (banner_ <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nullptr</span>) {
-</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">delete</span> banner_;
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	Banner<span style="color:#f92672">*</span> banner_;
-</span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PrintBanner</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Print</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">PrintBanner</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">str</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">banner_</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Banner</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">printWeak</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">banner_</span><span class="o">-&gt;</span><span class="n">showWithParen</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">printStrong</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">banner_</span><span class="o">-&gt;</span><span class="n">showWithAster</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="o">~</span><span class="n">PrintBanner</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">banner_</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">delete</span> <span class="n">banner_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Banner</span><span class="o">*</span> <span class="n">banner_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 

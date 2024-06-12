@@ -66,7 +66,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -226,7 +226,42 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#匹配字符串">匹配字符串</a></li>
+    <li><a href="#修改字符串">修改字符串</a></li>
+    <li><a href="#替换字符串">替换字符串</a></li>
+    <li><a href="#使用正则表达式">使用正则表达式</a></li>
+    <li><a href="#未尽事宜">未尽事宜</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -267,7 +302,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jul 21, 2018</time>
+                <time class="article-time--published">2018/07/21</time>
             </div>
         
 
@@ -298,22 +333,41 @@
     
     
     <p>书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。</p>
-<h2 id="匹配字符串">匹配字符串
+<h2 id="匹配字符串"><a href="#%e5%8c%b9%e9%85%8d%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>匹配字符串
 </h2><p>python 的 re 模块支持正则表达式，基本步骤是使用 compile 编译正则表达式为 pattern 实例，之后使用实例匹配目标文本（一般使用方法 match 和 search）。先来看一个简单的例子，</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># encoding: UTF-8</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tutorial.  0123456789 _ + -., !@  # $%^&amp;*();\/|&lt;&gt;</span><span style="color:#ae81ff">\&#34;\&#39;</span><span style="color:#e6db74">12345 - 98.7 3.141 .6180 9,000 + 42 55.123.4567 + 1 - (800) - 555 - 2468 foo@demo.net ar.ba@test.co.uk www.demo.com&#34;</span>
-</span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;\d+&#34;</span>, re<span style="color:#f92672">.</span>M)
-</span></span><span style="display:flex;"><span>sear <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern, string)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;sear&#39;</span>, sear)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>mat <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(pattern, string)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;mat&#39;</span>, mat)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>fin <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern, string)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;fin&#39;</span>, fin)
-</span></span></code></pre></div><p>代码第 4 行，使用正则表达式<code>r&quot;\d+&quot;</code>compile 编译一个 pattern 的实例。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># encoding: UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">string</span> <span class="o">=</span> <span class="s2">&#34;Tutorial.  0123456789 _ + -., !@  # $%^&amp;*();\/|&lt;&gt;</span><span class="se">\&#34;\&#39;</span><span class="s2">12345 - 98.7 3.141 .6180 9,000 + 42 55.123.4567 + 1 - (800) - 555 - 2468 foo@demo.net ar.ba@test.co.uk www.demo.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;\d+&#34;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">sear</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sear&#39;</span><span class="p">,</span> <span class="n">sear</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">mat</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="k">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mat&#39;</span><span class="p">,</span> <span class="n">mat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fin</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fin&#39;</span><span class="p">,</span> <span class="n">fin</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>代码第 4 行，使用正则表达式<code>r&quot;\d+&quot;</code>compile 编译一个 pattern 的实例。</p>
 <blockquote>
 <p>为什么要在正则表达式之前加个<code>r</code>呢？</p>
 </blockquote>
@@ -404,16 +458,31 @@
 </tbody>
 </table></div>
 <p>需要说明的是<code>X</code>模式，使用方法如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>charref <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> &amp;[#]                # Start of a numeric entity reference
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> (
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     0[0-7]+         # Octal form
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   | [0-9]+          # Decimal form
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   | x[0-9a-fA-F]+   # Hexadecimal form
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> )
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> ;                   # Trailing semicolon
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>, re<span style="color:#f92672">.</span>VERBOSE)
-</span></span></code></pre></div><p>表达式内部加入了注释，而且可以多行显示，可以使用它表示复杂的表达式，非常方便。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">charref</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2"> &amp;[#]                # Start of a numeric entity reference
+</span></span></span><span class="line"><span class="cl"><span class="s2"> (
+</span></span></span><span class="line"><span class="cl"><span class="s2">     0[0-7]+         # Octal form
+</span></span></span><span class="line"><span class="cl"><span class="s2">   | [0-9]+          # Decimal form
+</span></span></span><span class="line"><span class="cl"><span class="s2">   | x[0-9a-fA-F]+   # Hexadecimal form
+</span></span></span><span class="line"><span class="cl"><span class="s2"> )
+</span></span></span><span class="line"><span class="cl"><span class="s2"> ;                   # Trailing semicolon
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>表达式内部加入了注释，而且可以多行显示，可以使用它表示复杂的表达式，非常方便。</p>
 <blockquote>
 <p>匹配正则表达式的方法</p>
 </blockquote>
@@ -446,11 +515,21 @@
 </tbody>
 </table></div>
 <p>运行上面的代码如下所示</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span>
-</span></span><span style="display:flex;"><span>sear <span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">21</span>), <span style="color:#66d9ef">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0123456789&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>mat <span style="color:#66d9ef">None</span>
-</span></span><span style="display:flex;"><span>fin [<span style="color:#e6db74">&#39;0123456789&#39;</span>, <span style="color:#e6db74">&#39;12345&#39;</span>, <span style="color:#e6db74">&#39;98&#39;</span>, <span style="color:#e6db74">&#39;7&#39;</span>, <span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#e6db74">&#39;141&#39;</span>, <span style="color:#e6db74">&#39;6180&#39;</span>, <span style="color:#e6db74">&#39;9&#39;</span>, <span style="color:#e6db74">&#39;000&#39;</span>, <span style="color:#e6db74">&#39;42&#39;</span>, <span style="color:#e6db74">&#39;55&#39;</span>, <span style="color:#e6db74">&#39;123&#39;</span>, <span style="color:#e6db74">&#39;4567&#39;</span>, <span style="color:#e6db74">&#39;1&#39;</span>, <span style="color:#e6db74">&#39;800&#39;</span>, <span style="color:#e6db74">&#39;555&#39;</span>, <span style="color:#e6db74">&#39;2468&#39;</span>]
-</span></span></code></pre></div><p>sear 匹配成功，返回匹配的对象。mat 匹配失败，fin 匹配成功并且返回了字符列表。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">sear</span> <span class="o">&lt;</span><span class="n">_sre</span><span class="o">.</span><span class="n">SRE_Match</span> <span class="nb">object</span><span class="p">;</span> <span class="n">span</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">21</span><span class="p">),</span> <span class="k">match</span><span class="o">=</span><span class="s1">&#39;0123456789&#39;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">mat</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="n">fin</span> <span class="p">[</span><span class="s1">&#39;0123456789&#39;</span><span class="p">,</span> <span class="s1">&#39;12345&#39;</span><span class="p">,</span> <span class="s1">&#39;98&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;141&#39;</span><span class="p">,</span> <span class="s1">&#39;6180&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;000&#39;</span><span class="p">,</span> <span class="s1">&#39;42&#39;</span><span class="p">,</span> <span class="s1">&#39;55&#39;</span><span class="p">,</span> <span class="s1">&#39;123&#39;</span><span class="p">,</span> <span class="s1">&#39;4567&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;800&#39;</span><span class="p">,</span> <span class="s1">&#39;555&#39;</span><span class="p">,</span> <span class="s1">&#39;2468&#39;</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>sear 匹配成功，返回匹配的对象。mat 匹配失败，fin 匹配成功并且返回了字符列表。</p>
 <p>匹配成功之后对象有如下方法</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -479,16 +558,30 @@
 </tbody>
 </table></div>
 <p><code>group()</code>在上篇中讲过，它在字符捕获时候非常有用，字符的分组从 0 开始，其中第 0 个代表所有匹配的内容，1 代表匹配的第一组，以此类推。比如下面的代码</p>
-<pre tabindex="0"><code>&gt;&gt;&gt; p = re.compile(&#39;(a(b)c)d&#39;)
-&gt;&gt;&gt; m = p.match(&#39;abcd&#39;)
-&gt;&gt;&gt; m.group(0)
-&#39;abcd&#39;
-&gt;&gt;&gt; m.group(1)
-&#39;abc&#39;
-&gt;&gt;&gt; m.group(2)
-&#39;b&#39;
-</code></pre><p>可以将<code>group(0)</code>理解成没有分组符号匹配的所有字符，而之后的编号代表分组依次匹配的子串。</p>
-<h2 id="修改字符串">修改字符串
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt;&gt;&gt; p = re.compile(&#39;(a(b)c)d&#39;)
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; m = p.match(&#39;abcd&#39;)
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; m.group(0)
+</span></span><span class="line"><span class="cl">&#39;abcd&#39;
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; m.group(1)
+</span></span><span class="line"><span class="cl">&#39;abc&#39;
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; m.group(2)
+</span></span><span class="line"><span class="cl">&#39;b&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以将<code>group(0)</code>理解成没有分组符号匹配的所有字符，而之后的编号代表分组依次匹配的子串。</p>
+<h2 id="修改字符串"><a href="#%e4%bf%ae%e6%94%b9%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>修改字符串
 </h2><p>模块级别的字符串修改方法如下表所示。</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -515,42 +608,98 @@
 <ul>
 <li><code>.split</code>(<em>string</em>[, <em>maxsplit=0</em>]) 将字符串分割，其中有参数最大分块，默认将分割成最多的块。</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\W+&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;This is a test, short and sweet, of split().&#39;</span>)
-</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;This&#39;</span>, <span style="color:#e6db74">&#39;is&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;test&#39;</span>, <span style="color:#e6db74">&#39;short&#39;</span>, <span style="color:#e6db74">&#39;and&#39;</span>, <span style="color:#e6db74">&#39;sweet&#39;</span>, <span style="color:#e6db74">&#39;of&#39;</span>, <span style="color:#e6db74">&#39;split&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;This is a test, short and sweet, of split().&#39;</span>, <span style="color:#ae81ff">3</span>)
-</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;This&#39;</span>, <span style="color:#e6db74">&#39;is&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;test, short and sweet, of split().&#39;</span>]
-</span></span></code></pre></div><h2 id="替换字符串">替换字符串
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\W+&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;This is a test, short and sweet, of split().&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;short&#39;</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="s1">&#39;sweet&#39;</span><span class="p">,</span> <span class="s1">&#39;of&#39;</span><span class="p">,</span> <span class="s1">&#39;split&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;This is a test, short and sweet, of split().&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;test, short and sweet, of split().&#39;</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="替换字符串"><a href="#%e6%9b%bf%e6%8d%a2%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>替换字符串
 </h2><ul>
 <li><code>.sub</code>(<em>replacement</em>, <em>string</em>[, <em>count=0</em>]) 将 string 中所有符合 pattern 模式替换成 replacement，count 表示替换的次数。看如下的例子</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile( <span style="color:#e6db74">&#39;(blue|white|red)&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>sub( <span style="color:#e6db74">&#39;colour&#39;</span>, <span style="color:#e6db74">&#39;blue socks and red shoes&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;colour socks and colour shoes&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>sub( <span style="color:#e6db74">&#39;colour&#39;</span>, <span style="color:#e6db74">&#39;blue socks and red shoes&#39;</span>, count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;colour socks and red shoes&#39;</span>
-</span></span></code></pre></div><p>方法<code>subn()</code>与<code>sub()</code>类似，但是它返回一个元组，其中包含替换之后的字符串，以及替换的次数，下面是另一个例子</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile( <span style="color:#e6db74">&#39;(blue|white|red)&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>subn( <span style="color:#e6db74">&#39;colour&#39;</span>, <span style="color:#e6db74">&#39;blue socks and red shoes&#39;</span>)
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;colour socks and colour shoes&#39;</span>, <span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>subn( <span style="color:#e6db74">&#39;colour&#39;</span>, <span style="color:#e6db74">&#39;no colours at all&#39;</span>)
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;no colours at all&#39;</span>, <span style="color:#ae81ff">0</span>)
-</span></span></code></pre></div><p>特别地，替换可以使用分组，这在交换字符串的位置时非常有用。举例如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> strin <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;This is part1 and part2&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#39;(.*)(part1)(.*)(part2)&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\1\4\3\2&#39;</span>, strin)
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;This is part2 and part1&#39;</span>
-</span></span></code></pre></div><p>我们还可以使用之前的名字分组，除了使用<code>\number</code>指代第几个分组之外，还可以使用<code>\g&lt;number&gt;</code>指代已经命名的分组。一个典型的例子如下所示</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#39;section{ (?P&lt;name&gt; [^}]* ) }&#39;</span>, re<span style="color:#f92672">.</span>VERBOSE)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;subsection{\1}&#39;</span>,<span style="color:#e6db74">&#39;section</span><span style="color:#e6db74">{First}</span><span style="color:#e6db74">&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;subsection</span><span style="color:#e6db74">{First}</span><span style="color:#e6db74">&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;subsection{\g&lt;1&gt;}&#39;</span>,<span style="color:#e6db74">&#39;section</span><span style="color:#e6db74">{First}</span><span style="color:#e6db74">&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;subsection</span><span style="color:#e6db74">{First}</span><span style="color:#e6db74">&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;subsection{\g&lt;name&gt;}&#39;</span>,<span style="color:#e6db74">&#39;section</span><span style="color:#e6db74">{First}</span><span style="color:#e6db74">&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;subsection</span><span style="color:#e6db74">{First}</span><span style="color:#e6db74">&#39;</span>
-</span></span></code></pre></div><h2 id="使用正则表达式">使用正则表达式
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span> <span class="s1">&#39;(blue|white|red)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span> <span class="s1">&#39;colour&#39;</span><span class="p">,</span> <span class="s1">&#39;blue socks and red shoes&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;colour socks and colour shoes&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span> <span class="s1">&#39;colour&#39;</span><span class="p">,</span> <span class="s1">&#39;blue socks and red shoes&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;colour socks and red shoes&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>方法<code>subn()</code>与<code>sub()</code>类似，但是它返回一个元组，其中包含替换之后的字符串，以及替换的次数，下面是另一个例子</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span> <span class="s1">&#39;(blue|white|red)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">subn</span><span class="p">(</span> <span class="s1">&#39;colour&#39;</span><span class="p">,</span> <span class="s1">&#39;blue socks and red shoes&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s1">&#39;colour socks and colour shoes&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">subn</span><span class="p">(</span> <span class="s1">&#39;colour&#39;</span><span class="p">,</span> <span class="s1">&#39;no colours at all&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s1">&#39;no colours at all&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>特别地，替换可以使用分组，这在交换字符串的位置时非常有用。举例如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">strin</span> <span class="o">=</span> <span class="s1">&#39;This is part1 and part2&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(.*)(part1)(.*)(part2)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1\4\3\2&#39;</span><span class="p">,</span> <span class="n">strin</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;This is part2 and part1&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们还可以使用之前的名字分组，除了使用<code>\number</code>指代第几个分组之外，还可以使用<code>\g&lt;number&gt;</code>指代已经命名的分组。一个典型的例子如下所示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;section{ (?P&lt;name&gt; [^}]* ) }&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;subsection{\1}&#39;</span><span class="p">,</span><span class="s1">&#39;section</span><span class="si">{First}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;subsection</span><span class="si">{First}</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;subsection{\g&lt;1&gt;}&#39;</span><span class="p">,</span><span class="s1">&#39;section</span><span class="si">{First}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;subsection</span><span class="si">{First}</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;subsection{\g&lt;name&gt;}&#39;</span><span class="p">,</span><span class="s1">&#39;section</span><span class="si">{First}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;subsection</span><span class="si">{First}</span><span class="s1">&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="使用正则表达式"><a href="#%e4%bd%bf%e7%94%a8%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>使用正则表达式
 </h2><p>考虑使用正则表达式之前，先想想是否可以使用字符串方法就能解决问题。如果仅仅匹配和替换固定字符串，python 自带的字符串方法速度更快，效率更高，不是每个字符串的替换都需要使用正则表达式。</p>
-<h2 id="未尽事宜">未尽事宜
+<h2 id="未尽事宜"><a href="#%e6%9c%aa%e5%b0%bd%e4%ba%8b%e5%ae%9c" class="header-anchor"></a>未尽事宜
 </h2><p>相信以上介绍的内容能够解决大部分的字符处理问题，但是对于专业大数据处理可能还需要了解正则表达式更多的内容，比如不同语言的正则表达式语法，以及复杂正则表达式的匹配效率。这些比较深入的知识可以参考 Jeffrey E.F. Friedl 的<a class="link" href="http://datamining.xmu.edu.cn/documentation/books/mastering_regular_expressions.pdf"  target="_blank" rel="noopener"
     >《精通正则表达式》</a>，里面有非常专业的解释，相信它可以帮你解决正则表达式的绝大部分疑问。</p>
 <p><img src="http://image-7.verycd.com/ff45820ed025353061ccb475dc49c57d109161/%E7%B2%BE%E9%80%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.jpg"

@@ -67,7 +67,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -227,7 +227,47 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#c语言中浮点数相等的比较为什么不能用">C语言中浮点数相等的比较为什么不能用==?</a></li>
+            <li><a href="#什么是浮点数的大数吃小数问题原理是什么">什么是浮点数的“大数吃小数”问题？原理是什么？</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="has-image main-article">
@@ -276,7 +316,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 27, 2022</time>
+                <time class="article-time--published">2022/04/27</time>
             </div>
         
 
@@ -308,7 +348,7 @@
     
     <p>这两天研究了下CSAPP中的<a class="link" href="https://bugxch.github.io/csapp_ch2/#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA"  target="_blank" rel="noopener"
     >浮点数的知识</a>，结合这些知识，终于可以解答之前关于float的一些迷思。</p>
-<h4 id="c语言中浮点数相等的比较为什么不能用">C语言中浮点数相等的比较为什么不能用==?
+<h4 id="c语言中浮点数相等的比较为什么不能用"><a href="#c%e8%af%ad%e8%a8%80%e4%b8%ad%e6%b5%ae%e7%82%b9%e6%95%b0%e7%9b%b8%e7%ad%89%e7%9a%84%e6%af%94%e8%be%83%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e8%83%bd%e7%94%a8" class="header-anchor"></a>C语言中浮点数相等的比较为什么不能用==?
 </h4><p>A：浮点数的舍入方法引发的。如果要搞清楚这个问题，需要明白下面的两个知识点。</p>
 <ol>
 <li>计算机判定两个浮点数相等，基于它们的在计算上的二进制的表示的比特位是否相等。</li>
@@ -316,23 +356,46 @@
     >信息的表示和处理</a>中关于浮点数舍入部分的描述和之前的<a class="link" href="https://bugxch.github.io/floatincomputer/#float16%E7%9A%84%E6%B5%AE%E7%82%B9%E8%A1%A8%E7%A4%BA"  target="_blank" rel="noopener"
     >浮点数在计算机中的表示</a>，半精度浮点数可以表示的数中有如下的数[126.3, 126.4, 126.44, 126.5]，它们是离散分布在数轴上的，这3个数对应的二进制的表示分别是$[(1.1111100101)_2\times 2^{6},(1.1111100110)_2\times 2^{6},(1.1111100111)_2\times 2^{6}]$，根据之前分析的round to even的舍入规则，所有位于$[(1.11111001011)_2\times 2^{6},(1.11111001101)_2\times 2^{6}]$之间的浮点数都会舍入到$(1.1111100110)_2\times 2^{6}$，换算过来也就是所有位于$[126.34375,126.40625]$区间的实数都会映射到这个值。如果有下面的语句</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>float16 a <span style="color:#f92672">=</span> <span style="color:#ae81ff">126.4</span>;
-</span></span><span style="display:flex;"><span>float16 b;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (a <span style="color:#f92672">==</span> b) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><p>那么<code>b = 126.35</code>或者<code>b = 126.38</code>或者<code>b = 126.3876</code>都是成立的，因为它们都会在浮点数的表示体系下舍入到126.4。数学上不相等，但是在计算机里面是相等的，这就是数学意义和计算机表示意义上的背离，</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">float16</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">126.4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">float16</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>那么<code>b = 126.35</code>或者<code>b = 126.38</code>或者<code>b = 126.3876</code>都是成立的，因为它们都会在浮点数的表示体系下舍入到126.4。数学上不相等，但是在计算机里面是相等的，这就是数学意义和计算机表示意义上的背离，</p>
 <blockquote>
 <p>浮点数的<code>==</code>和数学意义上严格的相等是<strong>不等价</strong>的。</p>
 </blockquote>
 <p>所以为了追求相等的精确性，可以利用$|a-b|&lt;\epsilon$的方式，将$b$限定在以$a$为中心的很短的绝对值区间上，$\epsilon$越小，二者的相等程度就越高。所以可以使用下面的代码做一个等价的处理</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#define EPSILON 1e-6
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>float16 a <span style="color:#f92672">=</span> <span style="color:#ae81ff">126.4</span>;
-</span></span><span style="display:flex;"><span>float16 b;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">fabs</span>(a <span style="color:#f92672">-</span> b) <span style="color:#f92672">&lt;</span> EPSILON) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><h4 id="什么是浮点数的大数吃小数问题原理是什么">什么是浮点数的“大数吃小数”问题？原理是什么？
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#define EPSILON 1e-6
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">float16</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">126.4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">float16</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nf">fabs</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">EPSILON</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="什么是浮点数的大数吃小数问题原理是什么"><a href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%b5%ae%e7%82%b9%e6%95%b0%e7%9a%84%e5%a4%a7%e6%95%b0%e5%90%83%e5%b0%8f%e6%95%b0%e9%97%ae%e9%a2%98%e5%8e%9f%e7%90%86%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor"></a>什么是浮点数的“大数吃小数”问题？原理是什么？
 </h4><p>A：浮点数在计算中的舍入引发的。在<a class="link" href="https://book.douban.com/subject/26912767/"  target="_blank" rel="noopener"
     >深入理解计算机系统</a>第2章浮点运算的章节，作者提到过</p>
 <blockquote>

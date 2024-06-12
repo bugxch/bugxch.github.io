@@ -66,7 +66,7 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky compact">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -226,7 +226,40 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#问题">问题</a></li>
+    <li><a href="#方法">方法</a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -267,7 +300,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jul 21, 2018</time>
+                <time class="article-time--published">2018/07/21</time>
             </div>
         
 
@@ -308,9 +341,9 @@
 	
 	
 ></p>
-<h2 id="问题">问题
+<h2 id="问题"><a href="#%e9%97%ae%e9%a2%98" class="header-anchor"></a>问题
 </h2><p>梯度下降算法用于求数学方程的极大值极小值问题，这篇文章讲解如何利用梯度下降算法求解方程 $x^5+e^x+3x−3=0$ 的根；</p>
-<h2 id="方法">方法
+<h2 id="方法"><a href="#%e6%96%b9%e6%b3%95" class="header-anchor"></a>方法
 </h2><p>首先来解决第一个问题，从方程的形式我们就能初步判断，它很可能没有闭式解。我能想到的最直观的解决方法就是画出函数图，函数图与 x 轴的交点就是方程的解，那先画个图看看</p>
 <p><img src="https://github.com/bugxch/blogpics/blob/master/201807/figure1.png?raw=true"
 	
@@ -323,37 +356,73 @@
 <p>从函数图像大体可以判断，方程的根在 0 附近，但是很明显 0 不是方程的根，看图只能猜出个大概，那怎么做才能得到更精确的解呢？</p>
 <p>有一个可行的方法在 x = 0 附近找一堆很接近的数字，比如 [−0.5:0.05:1][−0.5:0.05:1]，一个个代入方程的左边，看看<strong>它的值离 0 有多近</strong>：距离 0 越近，说明我们选取的值离方程的根也越近。数学上定义两个数距离就是绝对值，但是因为绝对值不便于计算，所以将其替换成等价的差的平方，即 F(x)=(f(x)−0)2F(x)=(f(x)−0)2，以此度量结果距离 0 的程度，称之为<strong>损失函数</strong>。</p>
 <p>我们代入计算得到如下的结果</p>
-<pre tabindex="0"><code>x: -0.500, f(x): -3.9247, F(x): 15.4034
-x: -0.450, f(x): -3.7308, F(x): 13.9191
-x: -0.400, f(x): -3.5399, F(x): 12.5310
-x: -0.350, f(x): -3.3506, F(x): 11.2263
-x: -0.300, f(x): -3.1616, F(x): 9.9958
-x: -0.250, f(x): -2.9722, F(x): 8.8338
-x: -0.200, f(x): -2.7816, F(x): 7.7372
-x: -0.150, f(x): -2.5894, F(x): 6.7048
-x: -0.100, f(x): -2.3952, F(x): 5.7369
-x: -0.050, f(x): -2.1988, F(x): 4.8346
-x: -0.000, f(x): -2.0000, F(x): 4.0000
-x: 0.050, f(x): -1.7987, F(x): 3.2354
-x: 0.100, f(x): -1.5948, F(x): 2.5434
-x: 0.150, f(x): -1.3881, F(x): 1.9268
-x: 0.200, f(x): -1.1783, F(x): 1.3883
-x: 0.250, f(x): -0.9650, F(x): 0.9312
-x: 0.300, f(x): -0.7477, F(x): 0.5591
-x: 0.350, f(x): -0.5257, F(x): 0.2763
-x: 0.400, f(x): -0.2979, F(x): 0.0888
-x: 0.450, f(x): -0.0632, F(x): 0.0040
-x: 0.500, f(x): 0.1800, F(x): 0.0324
-x: 0.550, f(x): 0.4336, F(x): 0.1880
-x: 0.600, f(x): 0.6999, F(x): 0.4898
-x: 0.650, f(x): 0.9816, F(x): 0.9635
-x: 0.700, f(x): 1.2818, F(x): 1.6431
-x: 0.750, f(x): 1.6043, F(x): 2.5738
-x: 0.800, f(x): 1.9532, F(x): 3.8151
-x: 0.850, f(x): 2.3334, F(x): 5.4445
-x: 0.900, f(x): 2.7501, F(x): 7.5630
-x: 0.950, f(x): 3.2095, F(x): 10.3008
-</code></pre><p>可以看出，x = 0.5，结果已经很接近 0 了，方程的根应该在 0.45~0.50 之间，而且 0.45 时，F(x) 的值更小，说明离 0.45 距离更近。接下来，一个可行的方法是将这段再细分成更小的区间，再如上面这样尝试，直到结果满意为止。但是这样做太过机械，每次需要手动调整区间和步长，有没有一种方法可以自动调整呢？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">x: -0.500, f(x): -3.9247, F(x): 15.4034
+</span></span><span class="line"><span class="cl">x: -0.450, f(x): -3.7308, F(x): 13.9191
+</span></span><span class="line"><span class="cl">x: -0.400, f(x): -3.5399, F(x): 12.5310
+</span></span><span class="line"><span class="cl">x: -0.350, f(x): -3.3506, F(x): 11.2263
+</span></span><span class="line"><span class="cl">x: -0.300, f(x): -3.1616, F(x): 9.9958
+</span></span><span class="line"><span class="cl">x: -0.250, f(x): -2.9722, F(x): 8.8338
+</span></span><span class="line"><span class="cl">x: -0.200, f(x): -2.7816, F(x): 7.7372
+</span></span><span class="line"><span class="cl">x: -0.150, f(x): -2.5894, F(x): 6.7048
+</span></span><span class="line"><span class="cl">x: -0.100, f(x): -2.3952, F(x): 5.7369
+</span></span><span class="line"><span class="cl">x: -0.050, f(x): -2.1988, F(x): 4.8346
+</span></span><span class="line"><span class="cl">x: -0.000, f(x): -2.0000, F(x): 4.0000
+</span></span><span class="line"><span class="cl">x: 0.050, f(x): -1.7987, F(x): 3.2354
+</span></span><span class="line"><span class="cl">x: 0.100, f(x): -1.5948, F(x): 2.5434
+</span></span><span class="line"><span class="cl">x: 0.150, f(x): -1.3881, F(x): 1.9268
+</span></span><span class="line"><span class="cl">x: 0.200, f(x): -1.1783, F(x): 1.3883
+</span></span><span class="line"><span class="cl">x: 0.250, f(x): -0.9650, F(x): 0.9312
+</span></span><span class="line"><span class="cl">x: 0.300, f(x): -0.7477, F(x): 0.5591
+</span></span><span class="line"><span class="cl">x: 0.350, f(x): -0.5257, F(x): 0.2763
+</span></span><span class="line"><span class="cl">x: 0.400, f(x): -0.2979, F(x): 0.0888
+</span></span><span class="line"><span class="cl">x: 0.450, f(x): -0.0632, F(x): 0.0040
+</span></span><span class="line"><span class="cl">x: 0.500, f(x): 0.1800, F(x): 0.0324
+</span></span><span class="line"><span class="cl">x: 0.550, f(x): 0.4336, F(x): 0.1880
+</span></span><span class="line"><span class="cl">x: 0.600, f(x): 0.6999, F(x): 0.4898
+</span></span><span class="line"><span class="cl">x: 0.650, f(x): 0.9816, F(x): 0.9635
+</span></span><span class="line"><span class="cl">x: 0.700, f(x): 1.2818, F(x): 1.6431
+</span></span><span class="line"><span class="cl">x: 0.750, f(x): 1.6043, F(x): 2.5738
+</span></span><span class="line"><span class="cl">x: 0.800, f(x): 1.9532, F(x): 3.8151
+</span></span><span class="line"><span class="cl">x: 0.850, f(x): 2.3334, F(x): 5.4445
+</span></span><span class="line"><span class="cl">x: 0.900, f(x): 2.7501, F(x): 7.5630
+</span></span><span class="line"><span class="cl">x: 0.950, f(x): 3.2095, F(x): 10.3008
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以看出，x = 0.5，结果已经很接近 0 了，方程的根应该在 0.45~0.50 之间，而且 0.45 时，F(x) 的值更小，说明离 0.45 距离更近。接下来，一个可行的方法是将这段再细分成更小的区间，再如上面这样尝试，直到结果满意为止。但是这样做太过机械，每次需要手动调整区间和步长，有没有一种方法可以自动调整呢？</p>
 <p>再回到我们的问题，求解方程的根，就是找到一个点使得损失函数最小，我们画出来这个函数的曲线看看</p>
 <p><img src="https://github.com/bugxch/blogpics/blob/master/201807/f2.png?raw=true"
 	
@@ -390,89 +459,181 @@ x: 0.950, f(x): 3.2095, F(x): 10.3008
 </ul>
 <p>这三个参数中，迭代次数和精度可以作为迭代的终止条件，比如迭代次数达到 10000 次或者精度达到某个很小的数值 σσ 就终止运行。</p>
 <p>下面我们使用 python 程序来演示该算法的效果：</p>
-<pre tabindex="0"><code># _*_ coding: utf-8 _*_
-import numpy as np
-
-# 定义函数f(x)
-    e = 2.71828182845904590
-    return x**5 + e**x + 3*x - 3
-
-#定义损失函数
-def loss_fun(x):
-    return (problem(x) - 0)**2
-
-#计算损失函数的斜率
-def slope_fx(x):
-    delta  = 0.0000001;
-    return (loss_fun(x+delta) - loss_fun(x-delta))/(2.0*delta)
-
-#代入f(x)，计算数值
-def calcu_loss_fun(x,maxTimes,alpha):
-        for i in range(maxTimes):
-            x = x - slope_fx(x)*alpha;
-            print &#39;times %d, x: %.13f, f(x): %.13f&#39; % (i, x, problem(x))
-alpha = 0.01
-maxTimes = 100
-x = 0.0;
-
-calcu_loss_fun(x,maxTimes,alpha)
-</code></pre><p>其中的<code>slope_fx</code>计算方程的斜率，利用导数定义 f′(x)=f(x+Δx)−f(x)Δxf′(x)=f(x+Δx)−f(x)Δx。程序计算结果如下</p>
-<pre tabindex="0"><code>times 1, x: 0.2724712244717, f(x): -0.8678788871194
-times 2, x: 0.3478163723702, f(x): -0.5354882897920
-times 3, x: 0.3958941025006, f(x): -0.3168805921512
-times 4, x: 0.4251012218626, f(x): -0.1810687680246
-times 5, x: 0.4420964369242, f(x): -0.1008566369730
-times 6, x: 0.4516717013511, f(x): -0.0552506486831
-times 7, x: 0.4569525930429, f(x): -0.0299651603458
-times 8, x: 0.4598276021739, f(x): -0.0161585445219
-times 9, x: 0.4613811940466, f(x): -0.0086856358075
-times 10, x: 0.4622172450759, f(x): -0.0046606160693
-times 11, x: 0.4626661379649, f(x): -0.0024984737671
-times 12, x: 0.4629068614830, f(x): -0.0013387061269
-times 13, x: 0.4630358664583, f(x): -0.0007170954782
-times 14, x: 0.4631049762781, f(x): -0.0003840652503
-times 15, x: 0.4631419923255, f(x): -0.0002056832476
-times 16, x: 0.4631618165349, f(x): -0.0001101474736
-times 17, x: 0.4631724329502, f(x): -0.0000589848326
-times 18, x: 0.4631781181683, f(x): -0.0000315864570
-times 19, x: 0.4631811626230, f(x): -0.0000169144811
-times 20, x: 0.4631827929259, f(x): -0.0000090576372
-times 21, x: 0.4631836659475, f(x): -0.0000048503201
-times 22, x: 0.4631841334466, f(x): -0.0000025973198
-times 23, x: 0.4631843837899, f(x): -0.0000013908497
-times 24, x: 0.4631845178473, f(x): -0.0000007447918
-times 25, x: 0.4631845896343, f(x): -0.0000003988315
-times 26, x: 0.4631846280757, f(x): -0.0000002135719
-times 27, x: 0.4631846486609, f(x): -0.0000001143664
-times 28, x: 0.4631846596842, f(x): -0.0000000612425
-times 29, x: 0.4631846655870, f(x): -0.0000000327950
-times 30, x: 0.4631846687480, f(x): -0.0000000175615
-times 31, x: 0.4631846704407, f(x): -0.0000000094041
-times 32, x: 0.4631846713471, f(x): -0.0000000050358
-times 33, x: 0.4631846718325, f(x): -0.0000000026967
-times 34, x: 0.4631846720924, f(x): -0.0000000014440
-times 35, x: 0.4631846722316, f(x): -0.0000000007733
-times 36, x: 0.4631846723061, f(x): -0.0000000004141
-times 37, x: 0.4631846723460, f(x): -0.0000000002217
-times 38, x: 0.4631846723674, f(x): -0.0000000001187
-times 39, x: 0.4631846723788, f(x): -0.0000000000636
-times 40, x: 0.4631846723850, f(x): -0.0000000000340
-times 41, x: 0.4631846723882, f(x): -0.0000000000182
-times 42, x: 0.4631846723900, f(x): -0.0000000000098
-times 43, x: 0.4631846723909, f(x): -0.0000000000052
-times 44, x: 0.4631846723914, f(x): -0.0000000000028
-times 45, x: 0.4631846723917, f(x): -0.0000000000015
-times 46, x: 0.4631846723919, f(x): -0.0000000000008
-times 47, x: 0.4631846723919, f(x): -0.0000000000004
-times 48, x: 0.4631846723920, f(x): -0.0000000000002
-times 49, x: 0.4631846723920, f(x): -0.0000000000001
-times 50, x: 0.4631846723920, f(x): -0.0000000000001
-times 51, x: 0.4631846723920, f(x): -0.0000000000000
-times 52, x: 0.4631846723920, f(x): -0.0000000000000
-times 53, x: 0.4631846723920, f(x): -0.0000000000000
-times 54, x: 0.4631846723920, f(x): -0.0000000000000
-</code></pre><p>迭代 52 次，就已经达到了理想的效果。</p>
-<h2 id="参考资料">参考资料
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># _*_ coding: utf-8 _*_
+</span></span><span class="line"><span class="cl">import numpy as np
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 定义函数f(x)
+</span></span><span class="line"><span class="cl">    e = 2.71828182845904590
+</span></span><span class="line"><span class="cl">    return x**5 + e**x + 3*x - 3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#定义损失函数
+</span></span><span class="line"><span class="cl">def loss_fun(x):
+</span></span><span class="line"><span class="cl">    return (problem(x) - 0)**2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#计算损失函数的斜率
+</span></span><span class="line"><span class="cl">def slope_fx(x):
+</span></span><span class="line"><span class="cl">    delta  = 0.0000001;
+</span></span><span class="line"><span class="cl">    return (loss_fun(x+delta) - loss_fun(x-delta))/(2.0*delta)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#代入f(x)，计算数值
+</span></span><span class="line"><span class="cl">def calcu_loss_fun(x,maxTimes,alpha):
+</span></span><span class="line"><span class="cl">        for i in range(maxTimes):
+</span></span><span class="line"><span class="cl">            x = x - slope_fx(x)*alpha;
+</span></span><span class="line"><span class="cl">            print &#39;times %d, x: %.13f, f(x): %.13f&#39; % (i, x, problem(x))
+</span></span><span class="line"><span class="cl">alpha = 0.01
+</span></span><span class="line"><span class="cl">maxTimes = 100
+</span></span><span class="line"><span class="cl">x = 0.0;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">calcu_loss_fun(x,maxTimes,alpha)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中的<code>slope_fx</code>计算方程的斜率，利用导数定义 f′(x)=f(x+Δx)−f(x)Δxf′(x)=f(x+Δx)−f(x)Δx。程序计算结果如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">times 1, x: 0.2724712244717, f(x): -0.8678788871194
+</span></span><span class="line"><span class="cl">times 2, x: 0.3478163723702, f(x): -0.5354882897920
+</span></span><span class="line"><span class="cl">times 3, x: 0.3958941025006, f(x): -0.3168805921512
+</span></span><span class="line"><span class="cl">times 4, x: 0.4251012218626, f(x): -0.1810687680246
+</span></span><span class="line"><span class="cl">times 5, x: 0.4420964369242, f(x): -0.1008566369730
+</span></span><span class="line"><span class="cl">times 6, x: 0.4516717013511, f(x): -0.0552506486831
+</span></span><span class="line"><span class="cl">times 7, x: 0.4569525930429, f(x): -0.0299651603458
+</span></span><span class="line"><span class="cl">times 8, x: 0.4598276021739, f(x): -0.0161585445219
+</span></span><span class="line"><span class="cl">times 9, x: 0.4613811940466, f(x): -0.0086856358075
+</span></span><span class="line"><span class="cl">times 10, x: 0.4622172450759, f(x): -0.0046606160693
+</span></span><span class="line"><span class="cl">times 11, x: 0.4626661379649, f(x): -0.0024984737671
+</span></span><span class="line"><span class="cl">times 12, x: 0.4629068614830, f(x): -0.0013387061269
+</span></span><span class="line"><span class="cl">times 13, x: 0.4630358664583, f(x): -0.0007170954782
+</span></span><span class="line"><span class="cl">times 14, x: 0.4631049762781, f(x): -0.0003840652503
+</span></span><span class="line"><span class="cl">times 15, x: 0.4631419923255, f(x): -0.0002056832476
+</span></span><span class="line"><span class="cl">times 16, x: 0.4631618165349, f(x): -0.0001101474736
+</span></span><span class="line"><span class="cl">times 17, x: 0.4631724329502, f(x): -0.0000589848326
+</span></span><span class="line"><span class="cl">times 18, x: 0.4631781181683, f(x): -0.0000315864570
+</span></span><span class="line"><span class="cl">times 19, x: 0.4631811626230, f(x): -0.0000169144811
+</span></span><span class="line"><span class="cl">times 20, x: 0.4631827929259, f(x): -0.0000090576372
+</span></span><span class="line"><span class="cl">times 21, x: 0.4631836659475, f(x): -0.0000048503201
+</span></span><span class="line"><span class="cl">times 22, x: 0.4631841334466, f(x): -0.0000025973198
+</span></span><span class="line"><span class="cl">times 23, x: 0.4631843837899, f(x): -0.0000013908497
+</span></span><span class="line"><span class="cl">times 24, x: 0.4631845178473, f(x): -0.0000007447918
+</span></span><span class="line"><span class="cl">times 25, x: 0.4631845896343, f(x): -0.0000003988315
+</span></span><span class="line"><span class="cl">times 26, x: 0.4631846280757, f(x): -0.0000002135719
+</span></span><span class="line"><span class="cl">times 27, x: 0.4631846486609, f(x): -0.0000001143664
+</span></span><span class="line"><span class="cl">times 28, x: 0.4631846596842, f(x): -0.0000000612425
+</span></span><span class="line"><span class="cl">times 29, x: 0.4631846655870, f(x): -0.0000000327950
+</span></span><span class="line"><span class="cl">times 30, x: 0.4631846687480, f(x): -0.0000000175615
+</span></span><span class="line"><span class="cl">times 31, x: 0.4631846704407, f(x): -0.0000000094041
+</span></span><span class="line"><span class="cl">times 32, x: 0.4631846713471, f(x): -0.0000000050358
+</span></span><span class="line"><span class="cl">times 33, x: 0.4631846718325, f(x): -0.0000000026967
+</span></span><span class="line"><span class="cl">times 34, x: 0.4631846720924, f(x): -0.0000000014440
+</span></span><span class="line"><span class="cl">times 35, x: 0.4631846722316, f(x): -0.0000000007733
+</span></span><span class="line"><span class="cl">times 36, x: 0.4631846723061, f(x): -0.0000000004141
+</span></span><span class="line"><span class="cl">times 37, x: 0.4631846723460, f(x): -0.0000000002217
+</span></span><span class="line"><span class="cl">times 38, x: 0.4631846723674, f(x): -0.0000000001187
+</span></span><span class="line"><span class="cl">times 39, x: 0.4631846723788, f(x): -0.0000000000636
+</span></span><span class="line"><span class="cl">times 40, x: 0.4631846723850, f(x): -0.0000000000340
+</span></span><span class="line"><span class="cl">times 41, x: 0.4631846723882, f(x): -0.0000000000182
+</span></span><span class="line"><span class="cl">times 42, x: 0.4631846723900, f(x): -0.0000000000098
+</span></span><span class="line"><span class="cl">times 43, x: 0.4631846723909, f(x): -0.0000000000052
+</span></span><span class="line"><span class="cl">times 44, x: 0.4631846723914, f(x): -0.0000000000028
+</span></span><span class="line"><span class="cl">times 45, x: 0.4631846723917, f(x): -0.0000000000015
+</span></span><span class="line"><span class="cl">times 46, x: 0.4631846723919, f(x): -0.0000000000008
+</span></span><span class="line"><span class="cl">times 47, x: 0.4631846723919, f(x): -0.0000000000004
+</span></span><span class="line"><span class="cl">times 48, x: 0.4631846723920, f(x): -0.0000000000002
+</span></span><span class="line"><span class="cl">times 49, x: 0.4631846723920, f(x): -0.0000000000001
+</span></span><span class="line"><span class="cl">times 50, x: 0.4631846723920, f(x): -0.0000000000001
+</span></span><span class="line"><span class="cl">times 51, x: 0.4631846723920, f(x): -0.0000000000000
+</span></span><span class="line"><span class="cl">times 52, x: 0.4631846723920, f(x): -0.0000000000000
+</span></span><span class="line"><span class="cl">times 53, x: 0.4631846723920, f(x): -0.0000000000000
+</span></span><span class="line"><span class="cl">times 54, x: 0.4631846723920, f(x): -0.0000000000000
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>迭代 52 次，就已经达到了理想的效果。</p>
+<h2 id="参考资料"><a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-anchor"></a>参考资料
 </h2><ul>
 <li><a class="link" href="https://ctmakro.github.io/site/on_learning/gd.html"  target="_blank" rel="noopener"
     >Gradient Descent 梯度下降法</a></li>
