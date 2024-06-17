@@ -48,7 +48,7 @@
 &lt;/ul&gt;
 &lt;p&gt;基于上面的两点，程序的操作就比较好理解了，初始状态 &lt;code&gt;%rsp&lt;/code&gt; 中地址是0x108，&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;将 &lt;code&gt;%rax&lt;/code&gt; 寄存器中的数据push进去，所以堆栈元素要增加8字节，为了将新的元素放到堆栈里面，先执行 &lt;code&gt;%rsp = %rsp - 8&lt;/code&gt;，此时 &lt;code&gt;%rsp&lt;/code&gt; 指向要入栈的新元素的其实地址0x100，这时就可以根据 &lt;code&gt;%rsp&lt;/code&gt; 的其实地址连续存储8个字节的新元素了，这个操作类似于
+&lt;li&gt;将 &lt;code&gt;%rax&lt;/code&gt; 寄存器中的数据push进去，所以堆栈元素要增加8字节，为了将新的元素放到堆栈里面，先执行 &lt;code&gt;%rsp = %rsp - 8&lt;/code&gt;，此时 &lt;code&gt;%rsp&lt;/code&gt; 指向要入栈的新元素的起始地址0x100，这时就可以根据 &lt;code&gt;%rsp&lt;/code&gt; 的其实地址连续存储8个字节的新元素了，这个操作类似于
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -19070,6 +19070,20 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/omnivore/keydous-nj80-%E8%AF%B4%E6%98%8E%E4%B9%A6---keydous-nj80-%E6%8C%89%E9%94%AE%E5%8A%9F%E8%83%BD---%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%BD%91/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/omnivore/keydous-nj80-%E8%AF%B4%E6%98%8E%E4%B9%A6---keydous-nj80-%E6%8C%89%E9%94%AE%E5%8A%9F%E8%83%BD---%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%BD%91/</guid>
+        <description>&lt;h1 id=&#34;keydous-nj80-说明书---keydous-nj80-按键功能---快捷键网&#34;&gt;&lt;a href=&#34;#keydous-nj80-%e8%af%b4%e6%98%8e%e4%b9%a6---keydous-nj80-%e6%8c%89%e9%94%ae%e5%8a%9f%e8%83%bd---%e5%bf%ab%e6%8d%b7%e9%94%ae%e7%bd%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Keydous NJ80 说明书 - Keydous NJ80 按键功能 - 快捷键网
+&lt;/h1&gt;&lt;p&gt;#Omnivore&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://omnivore.app/me/keydous-nj-80-keydous-nj-80-19016b3ed93&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read on Omnivore&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://www.kjjw.cc/keydous-nj80/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read Original&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/omnivore/obsidian-%E5%91%A8%E6%8A%A5-2024-05-26%E6%96%B0%E7%89%88%E6%9C%AC%E5%B0%9D%E9%B2%9C%E5%89%8D%E7%9E%BB%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6-%E4%B8%87%E8%83%BD%E7%BB%88%E7%AB%AF/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -19079,6 +19093,20 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://omnivore.app/me/https-mp-weixin-qq-com-s-biz-mzkz-nt-uy-m-tgw-ma-3-d-3-d-idx-1-m-18fbc252665&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Read on Omnivore&lt;/a&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s?__biz=MzkzNTUyMTgwMA%3D%3D&amp;amp;idx=1&amp;amp;mid=2247486859&amp;amp;scene=58&amp;amp;sn=5f0f3a17b8bafddabf37c20ec4a682af&amp;amp;subscene=0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read Original&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/omnivore/simd-%E6%8C%87%E4%BB%A4%E9%9B%86%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%B9%B6%E8%A1%8C%E7%A8%8B%E5%BA%8F/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/omnivore/simd-%E6%8C%87%E4%BB%A4%E9%9B%86%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%B9%B6%E8%A1%8C%E7%A8%8B%E5%BA%8F/</guid>
+        <description>&lt;h1 id=&#34;simd-指令集与数据并行程序&#34;&gt;&lt;a href=&#34;#simd-%e6%8c%87%e4%bb%a4%e9%9b%86%e4%b8%8e%e6%95%b0%e6%8d%ae%e5%b9%b6%e8%a1%8c%e7%a8%8b%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;SIMD 指令集与数据并行程序
+&lt;/h1&gt;&lt;p&gt;#Omnivore&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://omnivore.app/me/https-mp-weixin-qq-com-s-biz-mj-m-5-n-dcz-ota-4-nq-3-d-3-d-idx-1-190210045a6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read on Omnivore&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ%3D%3D&amp;amp;idx=1&amp;amp;mid=2447887352&amp;amp;scene=58&amp;amp;sn=c579010b3cb554095be51ebc6d95748c&amp;amp;subscene=0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Read Original&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
@@ -19132,6 +19160,20 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/omnivore/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0-de10b975-44ab-4e98-9116-c982a344cab1/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/omnivore/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0-de10b975-44ab-4e98-9116-c982a344cab1/</guid>
+        <description>&lt;h1 id=&#34;微信公众平台&#34;&gt;&lt;a href=&#34;#%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%b9%b3%e5%8f%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;微信公众平台
+&lt;/h1&gt;&lt;p&gt;#Omnivore&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://omnivore.app/me/https-mp-weixin-qq-com-s-biz-mz-a-4-mj-y-4-n-tk-0-nq-3-d-3-d-idx-190170fecd2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read on Omnivore&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s?__biz=MzA4MjY4NTk0NQ%3D%3D&amp;amp;idx=1&amp;amp;mid=2247522891&amp;amp;scene=58&amp;amp;sn=20c8fa2831aca07d4fb7a0eeeead1287&amp;amp;subscene=0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read Original&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/omnivore/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -19173,6 +19215,20 @@ $$&lt;/p&gt;
     &gt;⤴️&lt;/a&gt;  ^157ad0ba&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;看起来不错&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/omnivore/%E6%9E%B6%E6%9E%84%E9%AA%8C%E8%AF%81%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%A7%E8%83%BD%E6%B1%87%E6%80%BB.xlsx/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/omnivore/%E6%9E%B6%E6%9E%84%E9%AA%8C%E8%AF%81%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%A7%E8%83%BD%E6%B1%87%E6%80%BB.xlsx/</guid>
+        <description>&lt;h1 id=&#34;架构验证一阶段性能汇总xlsx&#34;&gt;&lt;a href=&#34;#%e6%9e%b6%e6%9e%84%e9%aa%8c%e8%af%81%e4%b8%80%e9%98%b6%e6%ae%b5%e6%80%a7%e8%83%bd%e6%b1%87%e6%80%bbxlsx&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;架构验证(一阶段)性能汇总.xlsx
+&lt;/h1&gt;&lt;p&gt;#Omnivore&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://omnivore.app/me/xlsx-19023f2fc4e&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read on Omnivore&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://onebox.huawei.com/v/6952ee56ff1a9d5a0eb83432cb0c2a90?sheet=%25E7%2594%25A8%25E4%25BE%258B%25E6%25B1%2587%25E6%2580%25BB&amp;amp;time=1718589329717&amp;amp;type=0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read Original&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -19223,6 +19279,20 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://omnivore.app/me/https-mp-weixin-qq-com-s-biz-mz-a-4-mj-y-4-n-tk-0-nq-3-d-3-d-chk-18fc9be1fc4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Read on Omnivore&lt;/a&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s?__biz=MzA4MjY4NTk0NQ%3D%3D&amp;amp;chksm=9f80a5d6a8f72cc0bdc51ea4632d4215081f74790a2eed47d50aeeec3fe3d3bf6bf1d65e513f&amp;amp;idx=1&amp;amp;mid=2247491392&amp;amp;mpshare=1&amp;amp;scene=1&amp;amp;sharer_shareid=bbfc5c3189a7826aeace38184061f4fa&amp;amp;sharer_sharetime=1683795205824&amp;amp;sn=ddb072d2ad5eeaa6c1dba0eb440366bf&amp;amp;srcid=0511RSgVhIs8iuQ4BW9QBlLn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read Original&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/omnivore/%E9%9D%A2%E5%AF%B9%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%9A%84%E6%8C%91%E6%88%98%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B%E5%9C%B0%E5%9B%BE%E6%AD%A3%E5%9C%A8%E5%BD%A2%E6%88%90/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/omnivore/%E9%9D%A2%E5%AF%B9%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%9A%84%E6%8C%91%E6%88%98%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B%E5%9C%B0%E5%9B%BE%E6%AD%A3%E5%9C%A8%E5%BD%A2%E6%88%90/</guid>
+        <description>&lt;h1 id=&#34;面对英伟达的挑战中国的国产算力地图正在形成&#34;&gt;&lt;a href=&#34;#%e9%9d%a2%e5%af%b9%e8%8b%b1%e4%bc%9f%e8%be%be%e7%9a%84%e6%8c%91%e6%88%98%e4%b8%ad%e5%9b%bd%e7%9a%84%e5%9b%bd%e4%ba%a7%e7%ae%97%e5%8a%9b%e5%9c%b0%e5%9b%be%e6%ad%a3%e5%9c%a8%e5%bd%a2%e6%88%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;面对英伟达的挑战，中国的国产算力地图正在形成
+&lt;/h1&gt;&lt;p&gt;#Omnivore&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://omnivore.app/me/https-mp-weixin-qq-com-s-biz-mz-i-0-mjc-2-n-dc-2-oq-3-d-3-d-idx--190170f3302&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read on Omnivore&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s?__biz=MzI0Mjc2NDc2OQ%3D%3D&amp;amp;idx=1&amp;amp;mid=2247491670&amp;amp;scene=58&amp;amp;sn=daf5bca02a89291dfa789006cb2df393&amp;amp;subscene=0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Read Original&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
@@ -20979,6 +21049,209 @@ $$&lt;/p&gt;
 &lt;/h2&gt;&lt;h2 id=&#34;致谢&#34;&gt;&lt;a href=&#34;#%e8%87%b4%e8%b0%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;致谢
 &lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
 &lt;/h1&gt;&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E4%BD%9B%E6%95%99%E5%B8%B8%E8%AF%86%E7%AD%94%E9%97%AE/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E4%BD%9B%E6%95%99%E5%B8%B8%E8%AF%86%E7%AD%94%E9%97%AE/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 佛教常识答问&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/3/cpPlatform_4MRrp9rSJoa45pzwt1q6x3/t7_cpPlatform_4MRrp9rSJoa45pzwt1q6x3.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 佛教常识答问|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 佛教常识答问&lt;/li&gt;
+&lt;li&gt;作者： 赵朴初&lt;/li&gt;
+&lt;li&gt;简介： 赵朴初先生本着极其严谨的态度来写作这本小书。他在前言中称：“我喜欢‘小题大做’，而不愿‘大题小做’，更害怕‘有题空做’。”正是因为这样的情怀，作者将佛教两千多年的历史源流、高深的教理教义、浩如烟海的经典著作，深入浅出地概括成为“常识答问”。这本书虽冠以“常识”之名，却实为一部佛学入门大纲，对于希望了解佛学常识以及对佛学感兴趣的读者而言，是一部不可多得的启蒙读物。本书自初版以来，在中国大陆已印行达几十万册，还被译成英文、日文、韩文等多个外语版本，是当之无愧的佛学经典著作。&lt;/li&gt;
+&lt;li&gt;出版时间 2012-11-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787513524926&lt;/li&gt;
+&lt;li&gt;分类： 哲学宗教-宗教&lt;/li&gt;
+&lt;li&gt;出版社： 外语教学与研究出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/2bb324c0813ab7203g01600c&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;博雅双语名家名作出版说明&#34;&gt;&lt;a href=&#34;#%e5%8d%9a%e9%9b%85%e5%8f%8c%e8%af%ad%e5%90%8d%e5%ae%b6%e5%90%8d%e4%bd%9c%e5%87%ba%e7%89%88%e8%af%b4%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;“博雅双语名家名作”出版说明
+&lt;/h2&gt;&lt;h2 id=&#34;editorial-notes&#34;&gt;&lt;a href=&#34;#editorial-notes&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Editorial Notes
+&lt;/h2&gt;&lt;h2 id=&#34;编辑凡例&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e8%be%91%e5%87%a1%e4%be%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编辑凡例
+&lt;/h2&gt;&lt;h2 id=&#34;translators-words&#34;&gt;&lt;a href=&#34;#translators-words&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Translator&amp;rsquo;s WORDS
+&lt;/h2&gt;&lt;h2 id=&#34;译者前言&#34;&gt;&lt;a href=&#34;#%e8%af%91%e8%80%85%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;译者前言
+&lt;/h2&gt;&lt;h2 id=&#34;preface&#34;&gt;&lt;a href=&#34;#preface&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Preface
+&lt;/h2&gt;&lt;h2 id=&#34;序&#34;&gt;&lt;a href=&#34;#%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;序
+&lt;/h2&gt;&lt;h2 id=&#34;1-the-buddha-and-the-origin-of-buddhism&#34;&gt;&lt;a href=&#34;#1-the-buddha-and-the-origin-of-buddhism&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1 THE BUDDHA AND THE ORIGIN OF BUDDHISM
+&lt;/h2&gt;&lt;h2 id=&#34;壹-佛陀和佛教的创立&#34;&gt;&lt;a href=&#34;#%e5%a3%b9-%e4%bd%9b%e9%99%80%e5%92%8c%e4%bd%9b%e6%95%99%e7%9a%84%e5%88%9b%e7%ab%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;壹 佛陀和佛教的创立
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 佛初转法轮处的鹿野苑，和佛诞生处的蓝毗尼园、佛成道处的菩提伽耶、佛逝世处的拘尸那伽（S. Kuśinagara, P. Kusināra），是佛教四大圣迹。值得指出的是：近代学者们对这些圣迹以及其他一些古迹的发掘和修复，主要都是根据我国古代高僧法显、玄奘等的记载。
+⏱ 2024-06-12 22:12:34 ^3300029476-11-5285-5417&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-the-essence-of-the-buddha-dhamma-and-the-buddhist-canonical-literature&#34;&gt;&lt;a href=&#34;#2-the-essence-of-the-buddha-dhamma-and-the-buddhist-canonical-literature&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2 THE ESSENCE OF THE BUDDHA DHAMMA AND THE BUDDHIST CANONICAL LITERATURE
+&lt;/h2&gt;&lt;h2 id=&#34;贰-佛法的基本内容和佛教经籍&#34;&gt;&lt;a href=&#34;#%e8%b4%b0-%e4%bd%9b%e6%b3%95%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%86%85%e5%ae%b9%e5%92%8c%e4%bd%9b%e6%95%99%e7%bb%8f%e7%b1%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;贰 佛法的基本内容和佛教经籍
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 由此而得出结论：没有绝待的一个因。缘起论者，不仅应当否认“从口生出婆罗门”的人格化的造物主，而且也应当否认作为宇宙本源的理性化的存在。从另一方面说，缘起论者固然不承认有一个绝待的第一个因，但同时又反对认为一切出自偶然的观点。他主张任何现象的生起，都不是无因的，而是受必然的因果律支配的，这便是“有因生义”。
+⏱ 2024-06-13 08:58:59 ^3300029476-13-3779-3932&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-the-saṅgha-and-the-buddhas-disciples&#34;&gt;&lt;a href=&#34;#3-the-sa%e1%b9%85gha-and-the-buddhas-disciples&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3 THE SAṄGHA AND THE BUDDHA&amp;rsquo;S DISCIPLES
+&lt;/h2&gt;&lt;h2 id=&#34;叁-僧伽和佛的弟子&#34;&gt;&lt;a href=&#34;#%e5%8f%81-%e5%83%a7%e4%bc%bd%e5%92%8c%e4%bd%9b%e7%9a%84%e5%bc%9f%e5%ad%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;叁 僧伽和佛的弟子
+&lt;/h2&gt;&lt;h2 id=&#34;4-the-development-decline-and-resurgence-of-buddhism-in-india&#34;&gt;&lt;a href=&#34;#4-the-development-decline-and-resurgence-of-buddhism-in-india&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4 THE DEVELOPMENT, DECLINE AND RESURGENCE OF BUDDHISM IN INDIA
+&lt;/h2&gt;&lt;h2 id=&#34;肆-佛教在印度的发展衰灭和复兴&#34;&gt;&lt;a href=&#34;#%e8%82%86-%e4%bd%9b%e6%95%99%e5%9c%a8%e5%8d%b0%e5%ba%a6%e7%9a%84%e5%8f%91%e5%b1%95%e8%a1%b0%e7%81%ad%e5%92%8c%e5%a4%8d%e5%85%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;肆 佛教在印度的发展、衰灭和复兴
+&lt;/h2&gt;&lt;h2 id=&#34;5-the-spread-development-and-evolution-of-buddhism-in-china&#34;&gt;&lt;a href=&#34;#5-the-spread-development-and-evolution-of-buddhism-in-china&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5 THE SPREAD, DEVELOPMENT AND EVOLUTION OF BUDDHISM IN CHINA
+&lt;/h2&gt;&lt;h2 id=&#34;伍-佛教在中国的传播发展和演变&#34;&gt;&lt;a href=&#34;#%e4%bc%8d-%e4%bd%9b%e6%95%99%e5%9c%a8%e4%b8%ad%e5%9b%bd%e7%9a%84%e4%bc%a0%e6%92%ad%e5%8f%91%e5%b1%95%e5%92%8c%e6%bc%94%e5%8f%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;伍 佛教在中国的传播、发展和演变
+&lt;/h2&gt;&lt;h2 id=&#34;appendix-buddhist-terms-in-pāli-english-and-chinese&#34;&gt;&lt;a href=&#34;#appendix-buddhist-terms-in-p%c4%81li-english-and-chinese&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Appendix: Buddhist terms in Pāli, English and Chinese
+&lt;/h2&gt;&lt;h2 id=&#34;附录巴英汉佛教术语对照表&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95%e5%b7%b4%e8%8b%b1%e6%b1%89%e4%bd%9b%e6%95%99%e6%9c%af%e8%af%ad%e5%af%b9%e7%85%a7%e8%a1%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录：巴、英、汉佛教术语对照表
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E4%BD%9B%E6%95%99%E7%9A%84%E8%A7%81%E5%9C%B0%E4%B8%8E%E4%BF%AE%E9%81%93/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E4%BD%9B%E6%95%99%E7%9A%84%E8%A7%81%E5%9C%B0%E4%B8%8E%E4%BF%AE%E9%81%93/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 佛教的见地与修道&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/21/3300024221/t7_3300024221.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 佛教的见地与修道|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 佛教的见地与修道&lt;/li&gt;
+&lt;li&gt;作者： 宗萨蒋扬钦哲仁波切&lt;/li&gt;
+&lt;li&gt;简介： 如果你只想好好地看一本佛教入门的书，请考虑选择本书，你是不会失望的。如果你认为自己对佛教已经有一定的成见，说不定本书会让你对佛教完全改观。如果你是佛教徒，请以本书印证你的修行。不论是佛教徒或非佛教徒，本书都会帮助我们渐次笑看人间、认知因缘和合的运作走出困局，进而获得精神上某种层次的解脱。&lt;/li&gt;
+&lt;li&gt;出版时间 2016-04-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787513319379&lt;/li&gt;
+&lt;li&gt;分类： 哲学宗教-宗教&lt;/li&gt;
+&lt;li&gt;出版社：&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/822324d0813ab6ff6g0113a6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;译者序&#34;&gt;&lt;a href=&#34;#%e8%af%91%e8%80%85%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;译者序
+&lt;/h2&gt;&lt;h2 id=&#34;序自我的观点&#34;&gt;&lt;a href=&#34;#%e5%ba%8f%e8%87%aa%e6%88%91%e7%9a%84%e8%a7%82%e7%82%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;序：自我的观点
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 自我几乎能够将任何事物都转为己用，并用一切方法为自己辩护，甚至应该摧毁自我的老师和教法也被利用了——自我被自己充满了，没有任何其他的东西能够进得去。虽然自我伪装开放的态度，但真正的开放根本不可能，充其量它只能伪装、模仿、代表，使别人相信以及减少个人色彩。
+⏱ 2024-06-11 17:25:46 ^3300024221-4-2036-2163&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;上篇-正确的见地&#34;&gt;&lt;a href=&#34;#%e4%b8%8a%e7%af%87-%e6%ad%a3%e7%a1%ae%e7%9a%84%e8%a7%81%e5%9c%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;上篇 正确的见地
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 我们一直都是不假思索地接受自我和它的模式，它们从开始就很健全，如今也一样有力和根深柢固。但是依照佛教的哲学来看，任何事物都是由因、缘所产生的，因此，自我和它的模式，也只是经过不断训练、不断滋养的因、缘下所产生的结果。所以，当一个弟子向老师抱怨，为什么精进修行十二年还是烦恼炽盛、大乐仍旧遥不可及时，老师反而觉得好笑——如果学生灵性修行的努力程度能有进修自我的一半，那么他们在短时间内就成佛了。
+⏱ 2024-06-11 17:28:38 ^3300024221-5-1453-1649&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第二章-两种见地&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e4%b8%a4%e7%a7%8d%e8%a7%81%e5%9c%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二章 两种见地
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 “自我”是一种误解，却被当成了正确的见解，它只是一个幻相。根据佛教观点，“我”和“我自己”的这种持续感，既是无明，也是无明的结果。无明就是不明白，没看到全豹——你可能只见到片断、零星的东西，却不了解全盘的情况。
+⏱ 2024-06-11 17:33:07 ^3300024221-6-1730-1835&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 什么是“干扰”？自我又是如何被干扰的呢？首先，“我”“自我”“我自己”等名字无法指出实质的东西。通常，当你为某种事物命名时，总有个东西存在，因此能为“它”取名，但是提到自我的时候，自我在哪里，而它又是什么呢？
+⏱ 2024-06-11 17:34:24 ^3300024221-6-2228-2332&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 自我创造了一个非常精密的生存体系，并发展出坚固的模式，让我们觉得它既自然又似乎是天生的。不必提消灭自我了，仅仅去除一些习惯模式，都是一件困难的工作，因为我们生生世世、岁岁年年的主要心思，都用来建立、扩展、支持和保护这个称为“自我”的大厦
+⏱ 2024-06-11 17:41:23 ^3300024221-6-3730-3848&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 从另一个角度来看，“无我”并不一定代表自我不存在。“无我”表示自我并不是依照我们认定的方式存在着——了解这点并牢记在心是非常重要的，否则，我们就会陷入“自我一直存在，直到成佛，自我才不存在”的想法中。对佛教的一个常见错误观念，便是认为佛教的目标就是要除掉自我，然而佛教真正教导的是，我们没有什么需要除掉的——根本无所谓存在或不存在，有的只是我们认为自我存在的幻觉，我们相信并紧抓着这种幻觉，以为它是真的
+⏱ 2024-06-11 17:43:50 ^3300024221-6-4651-4852&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 他担心的是，心执着于一个没有基础与根本的东西。人们争论着甲车比乙车好、丙车又比丁车快，认为某人有一辆劳斯莱斯的车子，就一定是个值得认识的人物；甚至于夸张地认为，某一种车子能解决他们所有的问题，让他们得到快乐。
+⏱ 2024-06-11 17:45:56 ^3300024221-6-5566-5670&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第三章-自我及自我的见地是错误的概念&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e8%87%aa%e6%88%91%e5%8f%8a%e8%87%aa%e6%88%91%e7%9a%84%e8%a7%81%e5%9c%b0%e6%98%af%e9%94%99%e8%af%af%e7%9a%84%e6%a6%82%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三章 自我及自我的见地是错误的概念
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 这一切烦恼的火焰——爱、恨、嫉妒等，都和真爱相反，而且只是“自我”对安全和真实身份的追寻。这些烦恼是“我执”的一部分，我执就是执着于有个真实存在的自我。为什么要了解“自我只是一种幻觉，无可执取”是这么困难呢？因为我们太执着于“自我”是真实的这种观念，所以抗拒去发现它只是个幻觉；相反的，却努力捕捉一切幻觉所生的形相，甚至包括了让人非常痛苦的幻相，目的就是在维持自我实存的“信仰”。
+⏱ 2024-06-11 18:03:37 ^3300024221-7-1997-2187&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第四章-空性&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e7%a9%ba%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第四章 空性
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 空性的意思是：虽然事物并不是天生具有某些特质，但也不是天生就不具有那些特质，这使得事物具有成为任何东西的可能性——事物并不是那个样子，但也不是“不是那个样子”。因此，空性并不是一种断灭论，并没有否定任何东西的存在。空性是离于二元判断，因此没有任何限制。
+⏱ 2024-06-11 18:10:05 ^3300024221-8-394-520&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 我们僵化地生活在认为现象实存的自设牢狱中，这些成见是我们根本的问题所在。如果我们认为某人很坏，这种见解就蒙蔽了我们的双眼，即使他真的做了些好事，我们也会说他在做坏事；相反的，如果我们爱上了某人，那么他所做的一切都是美妙的，连他的粪便也可以忍受，他就算杀了人也是被杀的人不对。
+⏱ 2024-06-11 18:26:19 ^3300024221-8-3158-3295&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌  没有图像、标签等成见而能够见到真相的人，就不会被“小永远是小”和“大永远是大”的概念束缚。超越自我观点的人，不仅不会僵化地认为他就是他的自我（与充满实存的东西的世界分离的一个实存主体），而且因为没有二元对立，所以他也了解到主体、客体都没有真实存在的本性，因此，他不受颜色、大小、形状、年纪、性别、地点等任何固定性质的拘束。 ^3300024221-8-3519-3680&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 境界高超 - ⏱ 2024-06-11 18:27:32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;第五章-四圣谛&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e5%9b%9b%e5%9c%a3%e8%b0%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第五章 四圣谛
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 自我经常积极地寻找那些导致痛苦的原因——在一个本身就是无常而不是实存的系统中，不断寻求永恒与实存，必然会产生痛苦的结果。痛苦起自于误解，离开了事物和我们自己的真实本性
+⏱ 2024-06-12 06:29:08 ^3300024221-9-2859-2942&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第六章-佛性&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e4%bd%9b%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第六章 佛性
+&lt;/h3&gt;&lt;h3 id=&#34;第七章-业力&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%83%e7%ab%a0-%e4%b8%9a%e5%8a%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第七章 业力
+&lt;/h3&gt;&lt;h3 id=&#34;第八章-转世再生&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ab%e7%ab%a0-%e8%bd%ac%e4%b8%96%e5%86%8d%e7%94%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第八章 转世再生
+&lt;/h3&gt;&lt;h3 id=&#34;第九章-轮回与涅槃&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b9%9d%e7%ab%a0-%e8%bd%ae%e5%9b%9e%e4%b8%8e%e6%b6%85%e6%a7%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第九章 轮回与涅槃
+&lt;/h3&gt;&lt;h3 id=&#34;第十章-见与道&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e7%ab%a0-%e8%a7%81%e4%b8%8e%e9%81%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十章 见与道
+&lt;/h3&gt;&lt;h2 id=&#34;下篇-道&#34;&gt;&lt;a href=&#34;#%e4%b8%8b%e7%af%87-%e9%81%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;下篇 道
+&lt;/h2&gt;&lt;h3 id=&#34;第十二章-出离与虔诚&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%ba%8c%e7%ab%a0-%e5%87%ba%e7%a6%bb%e4%b8%8e%e8%99%94%e8%af%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十二章 出离与虔诚
+&lt;/h3&gt;&lt;h3 id=&#34;第十三章-善知识&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%89%e7%ab%a0-%e5%96%84%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十三章 善知识
+&lt;/h3&gt;&lt;h3 id=&#34;第十四章-心的训练&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0-%e5%bf%83%e7%9a%84%e8%ae%ad%e7%bb%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十四章 心的训练
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 训练心的另一个目的就是能使用心更大的部分。目前，你只用了心的一小部分，就连这一小部分也被各种愚钝和烦恼所削弱。如果你训练自己的心，就能让心的功用全部归你所有并自由控制，你就可以具有创造性、耐心，具有艺术天分，或任何你想要的。那么，即使你的身体老化，头秃肤皱，而你的心仍然继续成长、更有活力。
+⏱ 2024-06-11 14:05:37 ^3300024221-18-949-1094&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第十五章-禅修&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%ba%94%e7%ab%a0-%e7%a6%85%e4%bf%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十五章 禅修
+&lt;/h3&gt;&lt;h3 id=&#34;第十六章-止观&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%85%ad%e7%ab%a0-%e6%ad%a2%e8%a7%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十六章 止观
+&lt;/h3&gt;&lt;h3 id=&#34;第十七章-慈悲菩提心以及菩萨道的善巧方便&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%83%e7%ab%a0-%e6%85%88%e6%82%b2%e8%8f%a9%e6%8f%90%e5%bf%83%e4%bb%a5%e5%8f%8a%e8%8f%a9%e8%90%a8%e9%81%93%e7%9a%84%e5%96%84%e5%b7%a7%e6%96%b9%e4%be%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十七章 慈、悲、菩提心以及菩萨道的善巧方便
+&lt;/h3&gt;&lt;h3 id=&#34;第十八章-金刚乘&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%85%ab%e7%ab%a0-%e9%87%91%e5%88%9a%e4%b9%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十八章 金刚乘
+&lt;/h3&gt;&lt;h3 id=&#34;第十九章-上师灌顶及象征&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b9%9d%e7%ab%a0-%e4%b8%8a%e5%b8%88%e7%81%8c%e9%a1%b6%e5%8f%8a%e8%b1%a1%e5%be%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十九章 上师、灌顶及象征
+&lt;/h3&gt;&lt;h3 id=&#34;第二十章-次第与证悟&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e7%ab%a0-%e6%ac%a1%e7%ac%ac%e4%b8%8e%e8%af%81%e6%82%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十章 次第与证悟
+&lt;/h3&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h2 id=&#34;第二章-两种见地-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e4%b8%a4%e7%a7%8d%e8%a7%81%e5%9c%b0-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二章 两种见地
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 问题还不只是幻觉而已！由于我们太习惯它了，因此不知道除了它之外还有什么——所有的生命都以它为根本。我们在自我上投资庞大，所以与它片刻不离，而且不惜代价地保护它。我们把大部分的时间拿来擦亮这一副琥珀色的眼镜，设计美丽的新镜框，一直相信事物透过眼镜所显现的样子就是事物的本性。  ^6733360-7RS5sKzcr
+- 💭 有意思
+- ⏱ 2024-06-11 17:35:31&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-1&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 由于“无我”和我们的体验差异极大，所以我们大部分的人很难捕捉“无我”的概念。试着去相信我们最珍贵的自我可能不存在，会让我们感觉不踏实；除此以外，这整个概念听起来完全荒谬，因为对大部分的人而言，我们的存在是不争的事实。然而，无我是佛法的精华，除非了解无我，否则佛陀所教导的全套系统或修行之道，不可能建立起来。  ^6733360-7RS5TPU58
+- 💭 破除自我拥抱无我
+- ⏱ 2024-06-11 17:42:11&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第四章-空性-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e7%a9%ba%e6%80%a7-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第四章 空性
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-2&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 没有图像、标签等成见而能够见到真相的人，就不会被“小永远是小”和“大永远是大”的概念束缚。超越自我观点的人，不仅不会僵化地认为他就是他的自我（与充满实存的东西的世界分离的一个实存主体），而且因为没有二元对立，所以他也了解到主体、客体都没有真实存在的本性，因此，他不受颜色、大小、形状、年纪、性别、地点等任何固定性质的拘束。  ^6733360-7RS8SDADL
+- 💭 境界高超
+- ⏱ 2024-06-11 18:27:42&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-3&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 就连日常生活中，成人也无法看见小孩们奇想的天地；因为成人缺乏赤子之心，无法超越他们所谓的可能和不可能的坚固信仰。  ^6733360-7RSc6iDmH
+- 💭 确实
+- ⏱ 2024-06-11 19:16:52&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
 &lt;/h1&gt;</description>
         </item>
         <item>
@@ -25884,6 +26157,90 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/weread/%E6%95%B0%E5%AD%A6%E7%9A%84%E9%9B%A8%E4%BC%9E%E4%B8%8B%E7%90%86%E8%A7%A3%E4%B8%96%E7%95%8C%E7%9A%84%E4%B9%90%E8%B6%A3/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E6%95%B0%E5%AD%A6%E7%9A%84%E9%9B%A8%E4%BC%9E%E4%B8%8B%E7%90%86%E8%A7%A3%E4%B8%96%E7%95%8C%E7%9A%84%E4%B9%90%E8%B6%A3/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 数学的雨伞下：理解世界的乐趣&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/32/cpplatform_gzykjdt9bgp57wtxpymzyn/t7_cpplatform_gzykjdt9bgp57wtxpymzyn1692010436.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 数学的雨伞下：理解世界的乐趣|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 数学的雨伞下：理解世界的乐趣&lt;/li&gt;
+&lt;li&gt;作者： 米卡埃尔·洛奈 克洛伊·布沙伍尔&lt;/li&gt;
+&lt;li&gt;简介： 在了解这个世界的过程中，现实经常会挑战我们的感官和直觉，让我们震惊不已。这时，数学就像一把雨伞，当撑开这把雨伞时，我们仿佛进入了一个奇特的境界，有了迈向真相、行走在谜团中的勇气；当收起这把雨伞时，我们会发现自己的认知已大不一样，所谓的“理所应当”和“显而易见”将被摒弃，现实背后隐藏的真相将带来巨大的启发。这就是数学的力量。从代数、几何到相对论，从温度计到黑洞，作者用简洁而生动的笔触阐释了如何更好地思索、观察与理解世界。让我们带上好奇心，撑开数学这把大伞，在宇宙的奥秘中漫步，体会解开疑惑后，如雨过天晴般的愉悦。&lt;/li&gt;
+&lt;li&gt;出版时间 2023-06-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787115616401&lt;/li&gt;
+&lt;li&gt;分类： 科学技术-自然科学&lt;/li&gt;
+&lt;li&gt;出版社： 人民邮电出版社有限公司&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/054329b0813ab80dfg016fde&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;引言&#34;&gt;&lt;a href=&#34;#%e5%bc%95%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;引言
+&lt;/h2&gt;&lt;h2 id=&#34;第一章-超市定律&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e8%b6%85%e5%b8%82%e5%ae%9a%e5%be%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第一章 超市定律
+&lt;/h2&gt;&lt;h3 id=&#34;乘法思维&#34;&gt;&lt;a href=&#34;#%e4%b9%98%e6%b3%95%e6%80%9d%e7%bb%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;乘法思维
+&lt;/h3&gt;&lt;h3 id=&#34;我们与生俱来的数感&#34;&gt;&lt;a href=&#34;#%e6%88%91%e4%bb%ac%e4%b8%8e%e7%94%9f%e4%bf%b1%e6%9d%a5%e7%9a%84%e6%95%b0%e6%84%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;我们与生俱来的数感
+&lt;/h3&gt;&lt;h3 id=&#34;没有零也没有小数点的书稿&#34;&gt;&lt;a href=&#34;#%e6%b2%a1%e6%9c%89%e9%9b%b6%e4%b9%9f%e6%b2%a1%e6%9c%89%e5%b0%8f%e6%95%b0%e7%82%b9%e7%9a%84%e4%b9%a6%e7%a8%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;没有零也没有小数点的书稿
+&lt;/h3&gt;&lt;h3 id=&#34;对数之桥&#34;&gt;&lt;a href=&#34;#%e5%af%b9%e6%95%b0%e4%b9%8b%e6%a1%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;对数之桥
+&lt;/h3&gt;&lt;h3 id=&#34;为什么世界是乘法的&#34;&gt;&lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%96%e7%95%8c%e6%98%af%e4%b9%98%e6%b3%95%e7%9a%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;为什么世界是乘法的？
+&lt;/h3&gt;&lt;h2 id=&#34;第二章-苹果和月亮&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e8%8b%b9%e6%9e%9c%e5%92%8c%e6%9c%88%e4%ba%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二章 苹果和月亮
+&lt;/h2&gt;&lt;h3 id=&#34;数字是什么&#34;&gt;&lt;a href=&#34;#%e6%95%b0%e5%ad%97%e6%98%af%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;数字是什么？
+&lt;/h3&gt;&lt;h3 id=&#34;雨伞的功用&#34;&gt;&lt;a href=&#34;#%e9%9b%a8%e4%bc%9e%e7%9a%84%e5%8a%9f%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;雨伞的功用
+&lt;/h3&gt;&lt;h3 id=&#34;万物落在万物之上一刻不停&#34;&gt;&lt;a href=&#34;#%e4%b8%87%e7%89%a9%e8%90%bd%e5%9c%a8%e4%b8%87%e7%89%a9%e4%b9%8b%e4%b8%8a%e4%b8%80%e5%88%bb%e4%b8%8d%e5%81%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;万物落在万物之上，一刻不停
+&lt;/h3&gt;&lt;h3 id=&#34;引力的成功&#34;&gt;&lt;a href=&#34;#%e5%bc%95%e5%8a%9b%e7%9a%84%e6%88%90%e5%8a%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;引力的成功
+&lt;/h3&gt;&lt;h3 id=&#34;地球的形状&#34;&gt;&lt;a href=&#34;#%e5%9c%b0%e7%90%83%e7%9a%84%e5%bd%a2%e7%8a%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;地球的形状
+&lt;/h3&gt;&lt;h2 id=&#34;第三章-无限的曲折&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e6%97%a0%e9%99%90%e7%9a%84%e6%9b%b2%e6%8a%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三章 无限的曲折
+&lt;/h2&gt;&lt;h3 id=&#34;巨大和无穷大&#34;&gt;&lt;a href=&#34;#%e5%b7%a8%e5%a4%a7%e5%92%8c%e6%97%a0%e7%a9%b7%e5%a4%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;巨大和无穷大
+&lt;/h3&gt;&lt;h3 id=&#34;无穷大与巧克力&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e7%a9%b7%e5%a4%a7%e4%b8%8e%e5%b7%a7%e5%85%8b%e5%8a%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无穷大与巧克力
+&lt;/h3&gt;&lt;h3 id=&#34;佩亚诺曲线&#34;&gt;&lt;a href=&#34;#%e4%bd%a9%e4%ba%9a%e8%af%ba%e6%9b%b2%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;佩亚诺曲线
+&lt;/h3&gt;&lt;h3 id=&#34;欧几里得的三个维度&#34;&gt;&lt;a href=&#34;#%e6%ac%a7%e5%87%a0%e9%87%8c%e5%be%97%e7%9a%84%e4%b8%89%e4%b8%aa%e7%bb%b4%e5%ba%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;欧几里得的三个维度
+&lt;/h3&gt;&lt;h3 id=&#34;迈向第四个维度和下一个维度&#34;&gt;&lt;a href=&#34;#%e8%bf%88%e5%90%91%e7%ac%ac%e5%9b%9b%e4%b8%aa%e7%bb%b4%e5%ba%a6%e5%92%8c%e4%b8%8b%e4%b8%80%e4%b8%aa%e7%bb%b4%e5%ba%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;迈向第四个维度，和下一个维度
+&lt;/h3&gt;&lt;h3 id=&#34;分形维度&#34;&gt;&lt;a href=&#34;#%e5%88%86%e5%bd%a2%e7%bb%b4%e5%ba%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;分形维度
+&lt;/h3&gt;&lt;h2 id=&#34;第四章-模糊的艺术&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e6%a8%a1%e7%b3%8a%e7%9a%84%e8%89%ba%e6%9c%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第四章 模糊的艺术
+&lt;/h2&gt;&lt;h3 id=&#34;颜色的错觉&#34;&gt;&lt;a href=&#34;#%e9%a2%9c%e8%89%b2%e7%9a%84%e9%94%99%e8%a7%89&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;颜色的错觉
+&lt;/h3&gt;&lt;h3 id=&#34;误解的数学&#34;&gt;&lt;a href=&#34;#%e8%af%af%e8%a7%a3%e7%9a%84%e6%95%b0%e5%ad%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;误解的数学
+&lt;/h3&gt;&lt;h3 id=&#34;合理地论证却不知所言何物&#34;&gt;&lt;a href=&#34;#%e5%90%88%e7%90%86%e5%9c%b0%e8%ae%ba%e8%af%81%e5%8d%b4%e4%b8%8d%e7%9f%a5%e6%89%80%e8%a8%80%e4%bd%95%e7%89%a9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;合理地论证，却不知所言何物
+&lt;/h3&gt;&lt;h3 id=&#34;飞行员的变形几何&#34;&gt;&lt;a href=&#34;#%e9%a3%9e%e8%a1%8c%e5%91%98%e7%9a%84%e5%8f%98%e5%bd%a2%e5%87%a0%e4%bd%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;飞行员的变形几何
+&lt;/h3&gt;&lt;h3 id=&#34;问题的解答&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e7%9a%84%e8%a7%a3%e7%ad%94&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题的解答
+&lt;/h3&gt;&lt;h2 id=&#34;第五章-空间和时间的深渊&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e7%a9%ba%e9%97%b4%e5%92%8c%e6%97%b6%e9%97%b4%e7%9a%84%e6%b7%b1%e6%b8%8a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第五章 空间和时间的深渊
+&lt;/h2&gt;&lt;h3 id=&#34;狭义相对论&#34;&gt;&lt;a href=&#34;#%e7%8b%ad%e4%b9%89%e7%9b%b8%e5%af%b9%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;狭义相对论
+&lt;/h3&gt;&lt;h3 id=&#34;时空的概念&#34;&gt;&lt;a href=&#34;#%e6%97%b6%e7%a9%ba%e7%9a%84%e6%a6%82%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;时空的概念
+&lt;/h3&gt;&lt;h3 id=&#34;emc2&#34;&gt;&lt;a href=&#34;#emc2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;E=mc2
+&lt;/h3&gt;&lt;h3 id=&#34;广义相对论&#34;&gt;&lt;a href=&#34;#%e5%b9%bf%e4%b9%89%e7%9b%b8%e5%af%b9%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;广义相对论
+&lt;/h3&gt;&lt;h3 id=&#34;寻找黑洞&#34;&gt;&lt;a href=&#34;#%e5%af%bb%e6%89%be%e9%bb%91%e6%b4%9e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;寻找黑洞
+&lt;/h3&gt;&lt;h2 id=&#34;了解更多&#34;&gt;&lt;a href=&#34;#%e4%ba%86%e8%a7%a3%e6%9b%b4%e5%a4%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;了解更多……
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h2 id=&#34;乘法思维-1&#34;&gt;&lt;a href=&#34;#%e4%b9%98%e6%b3%95%e6%80%9d%e7%bb%b4-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;乘法思维
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 但是，天花板上的灯在白天发出的光并不比晚上少。无论是白天还是夜晚，这盏灯都发出同样多的光。也就是说，从加法的角度来说，两种情况下的亮度之差是一样的。但这不是我们双眼所感知到的“加法的差距”。我们看到的是相对之差，也就是“乘法的差距”。在白天，灯光的亮度与太阳光的亮度相比微乎其微。在夜晚，掌控一切的是占据优势的灯光。  ^6733360-7RQDFxarU
+- 💭 奇妙
+- ⏱ 2024-06-10 18:44:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;我们与生俱来的数感-1&#34;&gt;&lt;a href=&#34;#%e6%88%91%e4%bb%ac%e4%b8%8e%e7%94%9f%e4%bf%b1%e6%9d%a5%e7%9a%84%e6%95%b0%e6%84%9f-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;我们与生俱来的数感
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-1&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 但有时会出现一个问题。如果我们最初的直觉是乘法式的，而且这种乘法直觉更适合于思考周围的世界，那么为什么我们要竭尽所能把它从自己的思维中去除掉呢？为什么硬是要让一种和现实没那么相宜的加法思维进入我们头脑中呢？学校里的数学是否让我们脱离了一种适切的常识，并用一种人为的且不适合的思维取而代之了呢？  ^6733360-7RQEqK0ih
+- 💭 是啊，why
+- ⏱ 2024-06-10 18:56:06&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/weread/%E6%95%B0%E7%A0%81%E6%91%84%E5%BD%B1%E6%9E%84%E5%9B%BE%E5%85%89%E5%BD%B1%E8%89%B2%E5%BD%A9%E7%AC%AC2%E7%89%88/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -27893,6 +28250,309 @@ $$&lt;/p&gt;
 &lt;p&gt;📌 然而，有一部分人对低碳水高脂肪饮食有一种神秘的反应：他们的低密度脂蛋白胆固醇、低密度脂蛋白胆固醇颗粒、载脂蛋白B和总胆固醇等数值会急剧上升，目前原因不明。  ^6733360-7NS2pkMlB
 - 💭 希望自己不是
 - ⏱ 2023-12-31 15:54:34&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E8%A7%82%E5%91%BC%E5%90%B8/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E8%A7%82%E5%91%BC%E5%90%B8/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 观呼吸&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://wfqqreader-1252317822.image.myqcloud.com/cover/697/814697/t7_814697.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 观呼吸|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 观呼吸&lt;/li&gt;
+&lt;li&gt;作者： 德宝法师&lt;/li&gt;
+&lt;li&gt;简介： 观呼吸，不仅加深对生命本身的认识，还会让心变得稳定、敏锐和专注。在书中，德宝法师开篇就指明禅修的目的，以及常人对禅修的种种误解，然后系统地介绍了如何通过单纯的觉察与呼吸的掌握，达到正念。按照书中一步步的禅修指导，以呼吸为专注的焦点，观看一切身体经验、感受与思想的变化，进而观察你所认知的整个世界，最终以觉醒、智慧的心，安详面对起伏的人生。&lt;/li&gt;
+&lt;li&gt;出版时间 2018-04-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787544330718&lt;/li&gt;
+&lt;li&gt;分类： 哲学宗教-宗教&lt;/li&gt;
+&lt;li&gt;出版社： 海南出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/05c323205c6e6905c51b25b&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;推荐序-全新的生命体验&#34;&gt;&lt;a href=&#34;#%e6%8e%a8%e8%8d%90%e5%ba%8f-%e5%85%a8%e6%96%b0%e7%9a%84%e7%94%9f%e5%91%bd%e4%bd%93%e9%aa%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;推荐序 全新的生命体验
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 内观禅修是一种细致的心理活动，教导人以全新的观点去体会这个世界，甚至要人忘掉理论、偏见与陈规，不必一味接受他人的解释，一切用“亲自见证”来作为。
+⏱ 2024-06-14 13:44:00 ^814697-24-581-653&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 宝剑锋从磨砺出，梅花香自苦寒来。”禅修当然难，除了时间、精力的投入，更需要勇气、决心与魄力，还要对抗平常你不喜欢或想尽办法逃避的个人特质。
+⏱ 2024-06-14 13:47:00 ^814697-24-1196-1265&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于作者-德宝法师&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e4%ba%8e%e4%bd%9c%e8%80%85-%e5%be%b7%e5%ae%9d%e6%b3%95%e5%b8%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关于作者 德宝法师
+&lt;/h2&gt;&lt;h2 id=&#34;导读-内在生命的探索&#34;&gt;&lt;a href=&#34;#%e5%af%bc%e8%af%bb-%e5%86%85%e5%9c%a8%e7%94%9f%e5%91%bd%e7%9a%84%e6%8e%a2%e7%b4%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;导读 内在生命的探索
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 入定之后，一种深沉的平静会遍布身心，那种祥和的状态唯有亲身体验过的人才能了解。
+⏱ 2024-06-14 13:52:13 ^814697-26-485-524&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 禅修有许多种风格，每一个主要的宗教传统都有一些类似禅修的程序。本书专门讨论内观禅修，它是南亚与东南亚佛教教学与修行的主题。vipassanā是巴利文，意思就是“内观”，这个系统的目标是让修行者洞见事物的本质，清楚每一样事物真实的运作方式。
+⏱ 2024-06-14 13:52:58 ^814697-26-961-1080&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 vipassan
+⏱ 2024-06-14 20:55:56 ^814697-26-1912-1920&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第一章-为什么要禅修&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e7%a6%85%e4%bf%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第一章 为什么要禅修？
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 “苦”在佛教思想中是个重要的字眼。它是一个关键字，需要被彻底了解。这个字的巴利文是dukkha，它不只是指身体的痛苦，而且是一种深沉且微细的不圆满的感觉，存在于心的每一个瞬间，是内心故步自封的结果。
+⏱ 2024-06-15 06:56:57 ^814697-27-3646-3745&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 你想得到一切想要的东西，那是不可能的。幸好，你还有另外一种选择：你可以学习控制你的心，跳出贪爱与憎恶的无尽循环。你可以学习不去想你想要的东西，了解欲望而不被它们所控制
+⏱ 2024-06-15 07:03:17 ^814697-27-4896-4979&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这并不是叫你干脆躺在地上，让所有人来践踏你。它意味着你可以继续像平常一样过日子，不过，是透过一种全新的观点来生活。你做一个人应该做的事，却不让自己受到欲望的迷惑与压迫；你可以想要某些东西，却不需要追着它跑；你害怕某些东西，但不需要因此而僵在那里打哆嗦。这种心的修行很难，需要花上好几年的时间，但是，试图控制每一件事却是不可能的，困难总比不可能要好。
+⏱ 2024-06-15 07:03:46 ^814697-27-4980-5154&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 禅修的目的就是净化内心，清除困扰你的贪心、嗔恨与嫉妒等烦恼。禅修为内心带来平静与觉醒，达到一种安定与内观的境界。
+⏱ 2024-06-15 07:05:29 ^814697-27-6596-6652&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第二章-禅修不是什么&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e7%a6%85%e4%bf%ae%e4%b8%8d%e6%98%af%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二章 禅修不是什么？
+&lt;/h2&gt;&lt;h2 id=&#34;第三章-禅修是什么&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e7%a6%85%e4%bf%ae%e6%98%af%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三章 禅修是什么？
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 思维的洪流在此受到限制，心被有意识地控制。它们的效果和一般禅定练习的效果一样：感到深沉的平静，生理上的新陈代谢慢下来，并且生起一种祥和与幸福的感觉。
+⏱ 2024-06-15 07:36:09 ^814697-29-943-1017&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 密宗试图借由破坏这个自我形象而获得清净的觉性，它是透过观想的过程达成的。学生被给予一个特定的宗教形象，例如密续的本尊，以便进行禅修。他彻底投入，达到与本尊合一的程度。他放下自己的个人认同，换上一个新的。你可以想象得到，这需要花一点儿时间，不过确实有效。在这个过程中，他了解自我建构的模式。他认出包括他自身在内的一切自我反复无常的特质，因此能解脱自我的束缚。最后，他可以选择一个自我，不论是以原来的或者他所希望的其他认同，他也可以选择都不要。结果是获得清净的觉性。密宗也不是你可以手到擒来的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;内观是佛教最古老的禅修方法，这个方法源自佛陀亲自宣说的《念处经》。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⏱ 2024-06-15 07:45:14 ^814697-29-2163&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 你应该抱着这样的态度进行修行：“不要管先前别人是怎么教我的，忘掉理论、偏见与刻板的印象。我想要了解生命真正的本质，我想知道真正活着是什么感觉，我想领会生命真实而又深奥的意义，我不想只是接受其他人的解释，我想亲自见证。”
+⏱ 2024-06-15 09:27:58 ^814697-29-3175-3284&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 我们训练自己如实洞见事物的本质，并将这种特殊的察觉模式称为“正念”。这个过程确实与我们平常所经历的过程非常不同。我们通常并没有真正看清楚眼前的事物，而是透过思维与概念的有色眼镜去看待生命，并且误以为那些心灵的对象是真实的。我们深陷于这个无尽的思维之流中，而实相则不经意地从我们身旁溜过。
+⏱ 2024-06-15 09:29:38 ^814697-29-3860-4003&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第四章-态度&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e6%80%81%e5%ba%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第四章 态度
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 心本身是一组事件，每一次内观时，你都参与那些事件。禅修是一种参与性的观察：你正在看什么，取决于你观看的过程。在这种情况下，正在看的那个人才是你，而你看到什么则视你如何观看而定。因此，禅修的过程是很微细的，结果完全取决于禅修者的内心状态。要想修行成功，态度非常重要。
+⏱ 2024-06-15 12:46:36 ^814697-30-917-1049&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 质疑每一件事，没有什么事是理所当然的。不要因为它听起来头头是道，或是圣人所说，就相信它。要亲自去看，但并不表示你应该愤世嫉俗、放肆或不敬，那只是说你应该以经验为本。一切主张都应该透过你自己的经验加以检验，然后让验证的结果成为你追求真理的向导。内观禅修的动机来自于对觉悟实相的渴望，以达到真实解脱的智慧。
+⏱ 2024-06-15 12:48:06 ^814697-30-1882-2033&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第五章-练习&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e7%bb%83%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第五章 练习
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 一个看门人不会考虑其他人进出房子的细节，他注意的是人们通过房门进与出。同样，当你专注时，不应该考虑你所经验到的任何细节，只要注意呼吸进出鼻孔边缘的感觉。
+⏱ 2024-06-15 18:51:43 ^814697-31-7556-7632&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 心与当下的结合，被称为“刹那定”。刹那相续生灭不已，心的步伐也与它们保持一致，跟着它们改变，跟着它们一起生灭，而不执着于它们。如果我们试图把心停在某个时刻，只会招来挫折，因为心无法被握住，它应该跟上每一个新的时刻发生的事。当下可以在每一个瞬间出现，每一个觉知的瞬间都可以成为一个禅定的瞬间。
+⏱ 2024-06-15 19:02:06 ^814697-31-8759-8904&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第六章-如何调身&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e5%a6%82%e4%bd%95%e8%b0%83%e8%ba%ab&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第六章 如何调身？
+&lt;/h2&gt;&lt;h2 id=&#34;第七章-如何调心&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%83%e7%ab%a0-%e5%a6%82%e4%bd%95%e8%b0%83%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第七章 如何调心？
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 心是微妙的，思维在本质上是一种复杂的程序，我们很容易被思维的锁链困住、缠绕或钉死。一个思维带来另一个思维，然后便一个接着一个，相续发生。十五分钟之后，我们才突然惊觉，我们这一整段时间都在做白日梦、性幻想，或者陷入对金钱及其他事物的担忧中。
+⏱ 2024-06-15 20:42:02 ^814697-33-1045-1164&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 呼吸的正念是一种当下的察觉，当你的做法正确时，你只会察觉到现在正在发生的事。你不会向后看，也不会向前看。你忘记最后一次呼吸，对于下一次也没有期待。吸气开始时，你不会预期到那次吸气的结束，也不会转移到接下来的呼气上。你只停留在正在发生的地方。吸气正在开始，那才是你要注意的，除此之外别无其他。
+⏱ 2024-06-15 21:06:09 ^814697-33-7133-7278&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第八章-规划你的禅修&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ab%e7%ab%a0-%e8%a7%84%e5%88%92%e4%bd%a0%e7%9a%84%e7%a6%85%e4%bf%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第八章 规划你的禅修
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 纪律”对多数人来说都是艰难的字眼，会让我们联想起一个人拿着棍子站在你面前指责你的画面。不过自律则不同，它是看穿你自己的冲动假象与揭开其中秘密的技巧
+⏱ 2024-06-16 18:24:07 ^814697-34-5461-5534&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第九章-修习慈心&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b9%9d%e7%ab%a0-%e4%bf%ae%e4%b9%a0%e6%85%88%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第九章 修习慈心
+&lt;/h2&gt;&lt;h2 id=&#34;第十章-处理问题&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e7%ab%a0-%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十章 处理问题
+&lt;/h2&gt;&lt;h2 id=&#34;第十一章-处理分心上&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0-%e5%a4%84%e7%90%86%e5%88%86%e5%bf%83%e4%b8%8a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十一章 处理分心（上）
+&lt;/h2&gt;&lt;h2 id=&#34;第十二章-处理分心下&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%ba%8c%e7%ab%a0-%e5%a4%84%e7%90%86%e5%88%86%e5%bf%83%e4%b8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十二章 处理分心（下）
+&lt;/h2&gt;&lt;h2 id=&#34;第十三章-正念&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%89%e7%ab%a0-%e6%ad%a3%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十三章 正念
+&lt;/h2&gt;&lt;h2 id=&#34;第十四章-正念与禅定&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0-%e6%ad%a3%e5%bf%b5%e4%b8%8e%e7%a6%85%e5%ae%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十四章 正念与禅定
+&lt;/h2&gt;&lt;h2 id=&#34;第十五章-日常生活中的禅修&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%ba%94%e7%ab%a0-%e6%97%a5%e5%b8%b8%e7%94%9f%e6%b4%bb%e4%b8%ad%e7%9a%84%e7%a6%85%e4%bf%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十五章 日常生活中的禅修
+&lt;/h2&gt;&lt;h2 id=&#34;第十六章-它带给你什么&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%85%ad%e7%ab%a0-%e5%ae%83%e5%b8%a6%e7%bb%99%e4%bd%a0%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十六章 它带给你什么？
+&lt;/h2&gt;&lt;h2 id=&#34;后记-慈心的力量&#34;&gt;&lt;a href=&#34;#%e5%90%8e%e8%ae%b0-%e6%85%88%e5%bf%83%e7%9a%84%e5%8a%9b%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;后记 慈心的力量
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h2 id=&#34;导读-内在生命的探索-1&#34;&gt;&lt;a href=&#34;#%e5%af%bc%e8%af%bb-%e5%86%85%e5%9c%a8%e7%94%9f%e5%91%bd%e7%9a%84%e6%8e%a2%e7%b4%a2-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;导读 内在生命的探索
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 本书将介绍如何透过单纯察觉与掌握整个呼吸的过程，达到正念。以呼吸为专注的焦点后，禅修者可以观察他的整个认知世界  ^6733360-7RXu7hdQs
+- 💭 本书的主要内容
+- ⏱ 2024-06-15 06:45:18&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-1&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 本书提供你禅修入门的基础，至于是否继续向前去找出你是谁以及人生的意义，则完全取决于你自己。这是一段值得探索的旅程，祝你成功。  ^6733360-7RXuxDwbV
+- 💭 师傅引进门，修行在个人
+- ⏱ 2024-06-15 06:51:48&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第一章-为什么要禅修-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e7%a6%85%e4%bf%ae-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第一章 为什么要禅修？
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-2&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 我们创造出一套文化来躲避它，假装它不存在，用各种目标、计划或状况来使自己分心。但是它从来没有真正离开过，而且还经常潜伏在每一个想法与每一个知觉的底层。我们的心底一直有一个细小的声音在说：“还不够好，还要更多，还要做得更好，一定要更好。”它是一个怪物，一个以微妙形式出现在所有地方的怪物  ^6733360-7RXuFP2cN
+- 💭 现代工业社会的特征，异化每一个人
+- ⏱ 2024-06-15 06:53:49&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-3&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 我们都得了“只要”综合征：只要我有钱，我就会很快乐；只要我能找到一个真正爱我的人；只要我能减轻二十磅；只要我有一台彩色电视机、一个热水浴缸、一头鬈发，以及数不尽的事物。这些妄想从哪里来？  ^6733360-7RXuKxhBF
+- 💭 消费主义，疯狂购物也是内心不安稳的外在表现
+- ⏱ 2024-06-15 06:54:59&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-4&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 我们真正追求的是本能需求得到满足时的舒缓的感觉。我们只要安稳与快乐就好，不再有任何渴望。  ^6733360-7RXuXRcXn
+- 💭 这个算不算人的惰性？
+- ⏱ 2024-06-15 06:58:15&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-5&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 禅修的目的是达到个人转化。进入禅修一端的“你”与踏出禅修另一端的“你”不同。禅修透过一连串让你变得更敏锐的过程，借由深入察觉你的思维、话语与行为，而改变你的性格。你的傲慢蒸发了，敌意也就枯竭了。你的内心变得平静，生命也就安定下来。像这样，做好禅修，将能帮助你悠游于顺境与逆境之中。它能控制你的紧张、恐惧与忧虑。你不再心神不定，激情也能获得控制。你开始明白事物，生命从挣扎的姿态转变成自在滑翔，这一切都是透过觉悟而来的。  ^6733360-7RXvyNkcf
+- 💭 非常好的状态
+- ⏱ 2024-06-15 07:07:21&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第二章-禅修不是什么-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e7%a6%85%e4%bf%ae%e4%b8%8d%e6%98%af%e4%bb%80%e4%b9%88-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二章 禅修不是什么？
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-6&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 内观禅修则不然，它追求另一个目标——觉知。专注与放松是伴随觉知必需的前导和便利的工具，也是有益的副产品。但是它们不是目标，目标应该是洞见。内观禅修是一种深奥的宗教修行，目的在于净化与转化你的日常生活。  ^6733360-7RXvYURKB
+- 💭 内观禅修的终极目的是觉知
+- ⏱ 2024-06-15 07:13:47&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-7&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 禅修时的意识层次比思维概念的意识层次更深。因此，有些禅修的经验难以言传，不过，那并不表示禅修无法被理解。有比语言更深刻的方式可以理解事物。  ^6733360-7RXwjt0mD
+- 💭 在工业社会，大部分人在高强度使用思维概念的意识层次，但是禅修使用的并非如此。我发现大脑非常神奇，思维概念的意识层次其实仅仅是其功能的一部分，比如练习自行车练习打字练习乐器，大脑后面都会自动学会，但这些似乎不单单和意识层次相关，包括了肌肉记忆，大脑会调动所有能调动的资源来使用练习时候的模式，从而学会这些技能，相信禅修也是如此
+- ⏱ 2024-06-15 07:18:51&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-8&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 禅修需要像那样透过实践才能被理解，它不是你可以在抽象领域中学习或谈论的事物，它是需要被体验的。  ^6733360-7RXwnClCs
+- 💭 生活中多体验，调动感觉器官，肌肉去体验，思维概念的意识层次其实已经够多了
+- ⏱ 2024-06-15 07:19:52&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-9&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 当你的修行达到一种可以预期而且每次都相同的感觉时，你就应该警觉，你已经偏离轨道而且停滞不前了。学习将每一秒钟都看成宇宙中第一而且是唯一的一秒，这是内观禅修的基本观点。  ^6733360-7RXwqmu0M
+- 💭 禅修每次应该都有不同的体验
+- ⏱ 2024-06-15 07:20:33&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-10&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-10&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 如果有声音或影像出现，只要看着它们，让它们自己消失，不要被卷进去。  ^6733360-7RXwu6LFE
+- 💭 let it go
+- ⏱ 2024-06-15 07:21:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-11&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-11&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 如果方法正确，禅修是非常温和而且渐进的过程。放慢脚步并保持轻松，你的修行会很自然地进行。不要太勉强自己，直到你遇见一位合格的老师，在他的细心指导与睿智的保护下，你才可以借由密集的禅修加快进步的速度。然而在刚开始时请保持轻松，温和地进行，一切都会很好的。  ^6733360-7RXwxC0sA
+- 💭 学习曲线在刚开始是非常温和平稳的
+- ⏱ 2024-06-15 07:22:20&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-12&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-12&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 让我们将道德分成几个层次。最低一层是遵守一组由某人制定的规则，那个人可能是你喜爱的先知，也可能是政府与部族的首领，或者是你的双亲。无论是谁制定这些规则，在这个层次，你需要的只是循规蹈矩，一个机器人就可以这么做。如果规则够简单，而且在每一次犯错时就受到惩罚，那么即使一只受过训练的黑猩猩也可以做得不错。在这个层次上完全不需要任何禅修，你只需要规则，以及有人在一旁挥舞棍子。另一个层次的戒律，是在没有任何人督促的情况下遵守相同的规则。你遵守，是因为你已经将这些规则加以消化，然后放在心里，每一次犯错时，你就会拿出来惩罚自己。这个层次需要一点心的自制，如果你的思维形态是混乱的，那么你的行为也一样会是混乱的，修心将能减少心的混乱。  ^6733360-7RXwGe09A
+- 💭 第二层是不是就是君子慎独的意思
+- ⏱ 2024-06-15 07:24:27&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-13&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-13&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在这个层次上需要厘清的事情极为复杂，你可能无法照顾到每一个烦琐的细节。有限的智力会应接不暇，不过，还好有深层意识可以轻松地处理这些复杂的事。禅修可以帮助你完成厘清的过程，那是一种奇特的感觉。  ^6733360-7RXwPOu8J
+- 💭 禅修会调动深层次的意识？
+- ⏱ 2024-06-15 07:26:49&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-14&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-14&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 这种直觉只有在你将逻辑思考抛开，让深层意识有机会自己去理出头绪时才会发生。表层意识只会造成阻碍，禅修教导你如何解开思维过程的束缚。这是跳脱成见的心灵艺术，它在日常生活中是很有用的技巧。  ^6733360-7RXwRI9pa
+- 💭 听起来非常奇妙
+- ⏱ 2024-06-15 07:27:17&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-15&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-15&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 你现在开始观察无常，但是真正深远的效果可能要在几年之后才会显现出来。构成宇宙的法则就是如此，不要期待一夕速成。  ^6733360-7RXxfaPuN
+- 💭 日拱一卒，不期速成
+- ⏱ 2024-06-15 07:33:03&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第三章-禅修是什么-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e7%a6%85%e4%bf%ae%e6%98%af%e4%bb%80%e4%b9%88-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三章 禅修是什么？
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-16&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-16&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 佛教的一切禅修都将目标放在促进觉知上，禅定只是被拿来作为达到这个目标的工具而已。  ^6733360-7RXxDZYIl
+- 💭 禅修在冥想基础上加了觉知
+- ⏱ 2024-06-15 07:39:10&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-17&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-17&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 因此，你为逝去的岁月而感伤，为失去你所拥有的东西而哭泣。这种痛苦来自何处？它来自你自己的不注意。你未能在生活中看清楚，当它经过时，未能观察世界持续的变化之流。你创造了心灵构筑的集合体：“我”、“书”和“建筑”，并且认为这些都是坚固的实体，会一直持续存在——虽然它们永远不可能如此。  ^6733360-7RXNtFp0Y
+- 💭 自己的妄念
+- ⏱ 2024-06-15 11:40:56&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-18&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-18&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 你必须做的是观看那个程序的开头、那些过程萌生的最初阶段。忧虑的第一个环节是“执着或排斥”的反应。只要现象在心中出现，我们便在心理上尝试去捕捉它或推开它，那就开启了忧虑的一连串反应。所幸，有一个名为“内观禅修”的工具，可以使这整个机制瘫痪。  ^6733360-7RXQwCvbZ
+- 💭 原来是这么回事
+- ⏱ 2024-06-15 12:27:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第四章-态度-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e6%80%81%e5%ba%a6-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第四章 态度
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-19&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-19&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 呼吸是一个普遍的过程。一切脊椎动物的呼吸法基本上都是相同的，所有生物与外在环境交换气体的方式都大同小异。这是选择呼吸作为禅修焦点的原因之一。禅修者借由练习入出息念，进而体会我们与其他生命的一体性。这并不表示我们应该对差异视若无睹，差异确实存在，它只意味着我们不要去强调差异，而要将重点放在大家共有的普遍因素上。  ^6733360-7RXS0KKoc
+- 💭 选用呼吸的原因之一
+- ⏱ 2024-06-15 12:50:09&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第五章-练习-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e7%bb%83%e4%b9%a0-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第五章 练习
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-20&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-20&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 没有对象，心就不可能集中。因此，我们应该给心一个对象，并且必须是在每一个时刻都能适用的。有一个这样的对象，就是我们的呼吸。心不需要费很大的力气去寻找呼吸，每一个时刻，呼吸都在进行。我们内观禅修的练习都是在清醒的时刻进行，要将心集中在呼吸上并不难，因为呼吸比任何其他目标都更明显而且经常出现。  ^6733360-7RYfqqYNF
+- 💭 呼吸做禅修的原因之二
+- ⏱ 2024-06-15 18:47:40&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-21&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-21&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 当你注意它们时，它们就一直在改变，身上也可能会出现不同于呼吸的感觉的各种感受。全面观察你的全身，不要试图创造任何不是自然呈现在你身上的感觉，但是要注意身体各部位生起的感觉。当思想生起时，也要注意它。在这些发生的事中，无论是身体的或心理的，你所需注意的只是一切经验中无常、苦与无我的本质。  ^6733360-7RYgNXAwM
+- 💭 注意感觉
+- ⏱ 2024-06-15 19:08:43&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-22&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-22&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 我们渴望安定与纾解压力，不喜欢紧张与透不过气的感觉。我们希望安定停留久一点儿，压力则快一点儿消失。但是往往事与愿违，于是我们再度感到恼怒与不安，因为我们渴望获得安定，并且停留久一点儿，希望紧张赶快消失，并且永远不要回来。在这里我们看见了，在无常的情况下，即使只是渴望一点儿恒常，都会造成痛苦与不安。由于根本没有一个自我实体可以控制这个情况，我们将因此而更加失望。  ^6733360-7RYgW4b9F
+- 💭 这个比喻很妙
+- ⏱ 2024-06-15 19:10:43&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第七章-如何调心-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%83%e7%ab%a0-%e5%a6%82%e4%bd%95%e8%b0%83%e5%bf%83-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第七章 如何调心？
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-23&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-23&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 深沉的禅定，具有缓和思维过程与加速觉知看见思维过程的作用，导致检视思维过程的能力增强。禅定是我们看见微细的内在状态的显微镜，我们利用注意力的焦点，达到具备安定与正知的统一心境。缺乏一个固定的参考点，你会迷失，会被内心无尽的流动与变化所迷惑。  ^6733360-7RYn02g2D
+- 💭 原因在此
+- ⏱ 2024-06-15 20:43:19&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-24&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-24&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 古代的巴利经文把禅修比喻为驯服一头野象。先用一条结实的绳子把新捕获的动物绑在柱子上。当你这么做时，大象会反抗，连续数日尖叫与踩踏，想要扯断绳子。之后，对于逃脱，它是完全死了心，便安静下来。此时，你可以开始喂它，并在安全的范围内控制它。最后，你可以完全抛开绳子与柱子，训练你的大象完成各种艰巨的任务。现在，你拥有一头被驯服的大象，可以驱使它做各种工作。在这个比喻中，野象就是你狂野不羁的心，绳子是正念，柱子则是你禅修的对象，也就是你的呼吸。这个过程所呈现的驯象，是训练良好与专注的心，可以完成艰巨的任务，摧毁掩盖实相的假象。  ^6733360-7RYn5UzYi
+- 💭 这个比喻很妙
+- ⏱ 2024-06-15 20:44:45&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-25&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-25&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 练习期间不要想你的问题，轻轻推开它们。暂时抛开一切忧虑与计划，让你的禅修成为一次完全的休假。相信自己，相信自己的能力，只要善用禅修期间所积累的心的能量与朝气，以后就可以解决这些问题。要像这样相信你自己，最后它就真的会发生。  ^6733360-7RYopKgnM
+- 💭 很有意思
+- ⏱ 2024-06-15 21:04:55&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
 &lt;/h1&gt;</description>

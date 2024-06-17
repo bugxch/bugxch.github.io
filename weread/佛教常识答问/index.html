@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="继续深耕《深入理解计算机》">
-<title>CSAPP之四——处理器体系结构</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] 佛教常识答问 书名： 佛教常识答问 作者： 赵朴初 简介： 赵朴初先生本着极其严谨的态度来写作这本小书。他在前言中称：“我喜欢‘小题大做’，而不">
+<title></title>
 
-<link rel='canonical' href='https://blog.bugxch.top/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/'>
+<link rel='canonical' href='https://blog.bugxch.top/weread/%E4%BD%9B%E6%95%99%E5%B8%B8%E8%AF%86%E7%AD%94%E9%97%AE/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="CSAPP之四——处理器体系结构">
-<meta property='og:description' content="继续深耕《深入理解计算机》">
-<meta property='og:url' content='https://blog.bugxch.top/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] 佛教常识答问 书名： 佛教常识答问 作者： 赵朴初 简介： 赵朴初先生本着极其严谨的态度来写作这本小书。他在前言中称：“我喜欢‘小题大做’，而不">
+<meta property='og:url' content='https://blog.bugxch.top/weread/%E4%BD%9B%E6%95%99%E5%B8%B8%E8%AF%86%E7%AD%94%E9%97%AE/'>
 <meta property='og:site_name' content='巴巴变的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CSAPP' /><meta property='article:tag' content='微结构' /><meta property='article:published_time' content='2024-06-01T21:54:52&#43;08:00'/><meta property='article:modified_time' content='2024-06-01T21:54:52&#43;08:00'/><meta property='og:image' content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/staircase-7718335_1280.jpg?imageSlim' />
-<meta name="twitter:title" content="CSAPP之四——处理器体系结构">
-<meta name="twitter:description" content="继续深耕《深入理解计算机》"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/staircase-7718335_1280.jpg?imageSlim' />
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] 佛教常识答问 书名： 佛教常识答问 作者： 赵朴初 简介： 赵朴初先生本着极其严谨的态度来写作这本小书。他在前言中称：“我喜欢‘小题大做’，而不">
     <link rel="shortcut icon" href="/favicon.ico" />
 
   
@@ -249,8 +248,27 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#堆栈操作">堆栈操作</a></li>
-    <li><a href="#条件传送-vs-条件分支">条件传送 vs 条件分支</a></li>
+    <li><a href="#封面">封面</a></li>
+    <li><a href="#版权信息">版权信息</a></li>
+    <li><a href="#博雅双语名家名作出版说明">“博雅双语名家名作”出版说明</a></li>
+    <li><a href="#editorial-notes">Editorial Notes</a></li>
+    <li><a href="#编辑凡例">编辑凡例</a></li>
+    <li><a href="#translators-words">Translator&rsquo;s WORDS</a></li>
+    <li><a href="#译者前言">译者前言</a></li>
+    <li><a href="#preface">Preface</a></li>
+    <li><a href="#序">序</a></li>
+    <li><a href="#1-the-buddha-and-the-origin-of-buddhism">1 THE BUDDHA AND THE ORIGIN OF BUDDHISM</a></li>
+    <li><a href="#壹-佛陀和佛教的创立">壹 佛陀和佛教的创立</a></li>
+    <li><a href="#2-the-essence-of-the-buddha-dhamma-and-the-buddhist-canonical-literature">2 THE ESSENCE OF THE BUDDHA DHAMMA AND THE BUDDHIST CANONICAL LITERATURE</a></li>
+    <li><a href="#贰-佛法的基本内容和佛教经籍">贰 佛法的基本内容和佛教经籍</a></li>
+    <li><a href="#3-the-saṅgha-and-the-buddhas-disciples">3 THE SAṄGHA AND THE BUDDHA&rsquo;S DISCIPLES</a></li>
+    <li><a href="#叁-僧伽和佛的弟子">叁 僧伽和佛的弟子</a></li>
+    <li><a href="#4-the-development-decline-and-resurgence-of-buddhism-in-india">4 THE DEVELOPMENT, DECLINE AND RESURGENCE OF BUDDHISM IN INDIA</a></li>
+    <li><a href="#肆-佛教在印度的发展衰灭和复兴">肆 佛教在印度的发展、衰灭和复兴</a></li>
+    <li><a href="#5-the-spread-development-and-evolution-of-buddhism-in-china">5 THE SPREAD, DEVELOPMENT AND EVOLUTION OF BUDDHISM IN CHINA</a></li>
+    <li><a href="#伍-佛教在中国的传播发展和演变">伍 佛教在中国的传播、发展和演变</a></li>
+    <li><a href="#appendix-buddhist-terms-in-pāli-english-and-chinese">Appendix: Buddhist terms in Pāli, English and Chinese</a></li>
+    <li><a href="#附录巴英汉佛教术语对照表">附录：巴、英、汉佛教术语对照表</a></li>
   </ol>
 </nav>
         </div>
@@ -262,37 +280,17 @@
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
-                
-                    <img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/staircase-7718335_1280.jpg?imageSlim" loading="lazy" alt="Featured image of post CSAPP之四——处理器体系结构" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E6%8A%80%E8%89%BA/" >
-                技艺
-            </a>
-        
-    </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">CSAPP之四——处理器体系结构</a>
+            <a href="/weread/%E4%BD%9B%E6%95%99%E5%B8%B8%E8%AF%86%E7%AD%94%E9%97%AE/"></a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            继续深耕《深入理解计算机》
-        </h3>
         
     </div>
 
@@ -301,19 +299,6 @@
     
     
     <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2024/06/01</time>
-            </div>
         
 
         
@@ -342,90 +327,68 @@
     <section class="article-content">
     
     
-    <p>这是CSAPP第四章，作者想通过自己定义的Y86-64的ISA指令集定义、设计、编码以及制造一个简单的单周期流水线化的处理器。作者的思路也非常清晰，包括了上述的所有步骤，在每一步描述了嵌入了处理器设计的基本原则以及需要注意的技术细节。下面是设计的ISA的指令集</p>
-<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20240602062649.png?imageSlim"
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] 佛教常识答问</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/3/cpPlatform_4MRrp9rSJoa45pzwt1q6x3/t7_cpPlatform_4MRrp9rSJoa45pzwt1q6x3.jpg"
 	
 	
 	
 	loading="lazy"
 	
-		alt="image.png"
+		alt=" 佛教常识答问|200"
 	
 	
-></p>
-<h1 id="前置知识"><a href="#%e5%89%8d%e7%bd%ae%e7%9f%a5%e8%af%86" class="header-anchor"></a>前置知识
-</h1><h2 id="堆栈操作"><a href="#%e5%a0%86%e6%a0%88%e6%93%8d%e4%bd%9c" class="header-anchor"></a>堆栈操作
-</h2><p>作者在4.1.6和4.3.3两次提到堆栈操作的特殊性，此处做一个基本的回顾。堆栈指令包括 <code>popq</code> 和 <code>pushq</code> 两条，作者设计假定栈顶的地址始终保存在寄存器 <code>%rsp</code> 中，参考<a class="link" href="https://blog.bugxch.top/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"  target="_blank" rel="noopener"
-    >程序的机器级表示</a>中的内容，有如下示意图</p>
-<p><img src="https://pic.imgdb.cn/item/6278fd150947543129801e44.png"
-	
-	
-	
-	loading="lazy"
-	
-	
->
-在理解上面过程之前，我们假设：</p>
-<ul>
-<li>堆栈中保存的是 <strong>8字节</strong>的元素，而且按照小端法存储的，即低有效位对应低地址；</li>
-<li><strong>数据在内存中的地址</strong>，指的是整个数据的<strong>第一个字节在内存中的地址</strong>，例如保存一个2字节的数据 <code>0x1234</code> 在内存地址0x100处，那么0x100地址保存字节0x34，0x101处保存字节0x12。</li>
+></li>
+<li>书名： 佛教常识答问</li>
+<li>作者： 赵朴初</li>
+<li>简介： 赵朴初先生本着极其严谨的态度来写作这本小书。他在前言中称：“我喜欢‘小题大做’，而不愿‘大题小做’，更害怕‘有题空做’。”正是因为这样的情怀，作者将佛教两千多年的历史源流、高深的教理教义、浩如烟海的经典著作，深入浅出地概括成为“常识答问”。这本书虽冠以“常识”之名，却实为一部佛学入门大纲，对于希望了解佛学常识以及对佛学感兴趣的读者而言，是一部不可多得的启蒙读物。本书自初版以来，在中国大陆已印行达几十万册，还被译成英文、日文、韩文等多个外语版本，是当之无愧的佛学经典著作。</li>
+<li>出版时间 2012-11-01 00:00:00</li>
+<li>ISBN： 9787513524926</li>
+<li>分类： 哲学宗教-宗教</li>
+<li>出版社： 外语教学与研究出版社</li>
+<li>PC地址：https://weread.qq.com/web/reader/2bb324c0813ab7203g01600c</li>
 </ul>
-<p>结合上面的假设，很容易看出，</p>
-<ul>
-<li>堆栈是从高地址向低地址增长的，推入一个元素栈顶指针地址变小，弹出一个元素则变大；</li>
-<li><code>%rsp</code> 始终指向栈顶的最后一个元素的地址，也就是最后一个元素在内存中的<strong>起始地址</strong>。</li>
-</ul>
-<p>基于上面的两点，程序的操作就比较好理解了，初始状态 <code>%rsp</code> 中地址是0x108，</p>
-<ul>
-<li>将 <code>%rax</code> 寄存器中的数据push进去，所以堆栈元素要增加8字节，为了将新的元素放到堆栈里面，先执行 <code>%rsp = %rsp - 8</code>，此时 <code>%rsp</code> 指向要入栈的新元素的起始地址0x100，这时就可以根据 <code>%rsp</code> 的其实地址连续存储8个字节的新元素了，这个操作类似于
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">subq</span> <span class="err">$</span><span class="mi">8</span><span class="p">,</span> <span class="o">%</span><span class="n">rsp</span> <span class="c1">// rsp = rsp - 8
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">movq</span> <span class="o">%</span><span class="n">rbp</span><span class="p">,</span> <span class="p">(</span><span class="o">%</span><span class="n">rsp</span><span class="p">)</span> <span class="c1">// %rbp的元素拷贝到%rsp存储的地址处
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>出栈就是相反的，当前的 <code>%rsp</code> 保存的就是需要弹出元素的地址，那么可以直接将该地址开始的连续8个字节先拷贝到目的地址，然后 <code>%rsp = %rsp + 8</code>，此时 <code>%rsp</code> 指向堆栈的<strong>新的</strong>最后一个元素的地址。等价于如下的操作
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">movq</span> <span class="p">(</span><span class="o">%</span><span class="n">rsp</span><span class="p">),</span> <span class="o">%</span><span class="n">rax</span>
-</span></span><span class="line"><span class="cl"><span class="n">subq</span> <span class="err">$</span><span class="mi">8</span><span class="p">,</span> <span class="o">%</span><span class="n">rsp</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<p>上面的操作可以保证，<strong><code>%rsp</code> 始终指向栈顶元素的起始地址</strong></p>
-<h2 id="条件传送-vs-条件分支"><a href="#%e6%9d%a1%e4%bb%b6%e4%bc%a0%e9%80%81-vs-%e6%9d%a1%e4%bb%b6%e5%88%86%e6%94%af" class="header-anchor"></a>条件传送 vs 条件分支
-</h2><h1 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
-</h1><ul>
-<li><a class="link" href="https://book.douban.com/subject/35038473/"  target="_blank" rel="noopener"
-    >汇编语言（第4版） (豆瓣)</a></li>
-</ul>
-<hr>
-<p>本文原载于 <a class="link" href="http://blog.bugxch.top"  target="_blank" rel="noopener"
-    >巴巴变的博客</a>，遵循 CC BY-NC-SA 4.0协议，复制请保留原文出处。</p>
-
+</blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="博雅双语名家名作出版说明"><a href="#%e5%8d%9a%e9%9b%85%e5%8f%8c%e8%af%ad%e5%90%8d%e5%ae%b6%e5%90%8d%e4%bd%9c%e5%87%ba%e7%89%88%e8%af%b4%e6%98%8e" class="header-anchor"></a>“博雅双语名家名作”出版说明
+</h2><h2 id="editorial-notes"><a href="#editorial-notes" class="header-anchor"></a>Editorial Notes
+</h2><h2 id="编辑凡例"><a href="#%e7%bc%96%e8%be%91%e5%87%a1%e4%be%8b" class="header-anchor"></a>编辑凡例
+</h2><h2 id="translators-words"><a href="#translators-words" class="header-anchor"></a>Translator&rsquo;s WORDS
+</h2><h2 id="译者前言"><a href="#%e8%af%91%e8%80%85%e5%89%8d%e8%a8%80" class="header-anchor"></a>译者前言
+</h2><h2 id="preface"><a href="#preface" class="header-anchor"></a>Preface
+</h2><h2 id="序"><a href="#%e5%ba%8f" class="header-anchor"></a>序
+</h2><h2 id="1-the-buddha-and-the-origin-of-buddhism"><a href="#1-the-buddha-and-the-origin-of-buddhism" class="header-anchor"></a>1 THE BUDDHA AND THE ORIGIN OF BUDDHISM
+</h2><h2 id="壹-佛陀和佛教的创立"><a href="#%e5%a3%b9-%e4%bd%9b%e9%99%80%e5%92%8c%e4%bd%9b%e6%95%99%e7%9a%84%e5%88%9b%e7%ab%8b" class="header-anchor"></a>壹 佛陀和佛教的创立
+</h2><blockquote>
+<p>📌 佛初转法轮处的鹿野苑，和佛诞生处的蓝毗尼园、佛成道处的菩提伽耶、佛逝世处的拘尸那伽（S. Kuśinagara, P. Kusināra），是佛教四大圣迹。值得指出的是：近代学者们对这些圣迹以及其他一些古迹的发掘和修复，主要都是根据我国古代高僧法显、玄奘等的记载。
+⏱ 2024-06-12 22:12:34 ^3300029476-11-5285-5417</p>
+</blockquote>
+<h2 id="2-the-essence-of-the-buddha-dhamma-and-the-buddhist-canonical-literature"><a href="#2-the-essence-of-the-buddha-dhamma-and-the-buddhist-canonical-literature" class="header-anchor"></a>2 THE ESSENCE OF THE BUDDHA DHAMMA AND THE BUDDHIST CANONICAL LITERATURE
+</h2><h2 id="贰-佛法的基本内容和佛教经籍"><a href="#%e8%b4%b0-%e4%bd%9b%e6%b3%95%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%86%85%e5%ae%b9%e5%92%8c%e4%bd%9b%e6%95%99%e7%bb%8f%e7%b1%8d" class="header-anchor"></a>贰 佛法的基本内容和佛教经籍
+</h2><blockquote>
+<p>📌 由此而得出结论：没有绝待的一个因。缘起论者，不仅应当否认“从口生出婆罗门”的人格化的造物主，而且也应当否认作为宇宙本源的理性化的存在。从另一方面说，缘起论者固然不承认有一个绝待的第一个因，但同时又反对认为一切出自偶然的观点。他主张任何现象的生起，都不是无因的，而是受必然的因果律支配的，这便是“有因生义”。
+⏱ 2024-06-13 08:58:59 ^3300029476-13-3779-3932</p>
+</blockquote>
+<h2 id="3-the-saṅgha-and-the-buddhas-disciples"><a href="#3-the-sa%e1%b9%85gha-and-the-buddhas-disciples" class="header-anchor"></a>3 THE SAṄGHA AND THE BUDDHA&rsquo;S DISCIPLES
+</h2><h2 id="叁-僧伽和佛的弟子"><a href="#%e5%8f%81-%e5%83%a7%e4%bc%bd%e5%92%8c%e4%bd%9b%e7%9a%84%e5%bc%9f%e5%ad%90" class="header-anchor"></a>叁 僧伽和佛的弟子
+</h2><h2 id="4-the-development-decline-and-resurgence-of-buddhism-in-india"><a href="#4-the-development-decline-and-resurgence-of-buddhism-in-india" class="header-anchor"></a>4 THE DEVELOPMENT, DECLINE AND RESURGENCE OF BUDDHISM IN INDIA
+</h2><h2 id="肆-佛教在印度的发展衰灭和复兴"><a href="#%e8%82%86-%e4%bd%9b%e6%95%99%e5%9c%a8%e5%8d%b0%e5%ba%a6%e7%9a%84%e5%8f%91%e5%b1%95%e8%a1%b0%e7%81%ad%e5%92%8c%e5%a4%8d%e5%85%b4" class="header-anchor"></a>肆 佛教在印度的发展、衰灭和复兴
+</h2><h2 id="5-the-spread-development-and-evolution-of-buddhism-in-china"><a href="#5-the-spread-development-and-evolution-of-buddhism-in-china" class="header-anchor"></a>5 THE SPREAD, DEVELOPMENT AND EVOLUTION OF BUDDHISM IN CHINA
+</h2><h2 id="伍-佛教在中国的传播发展和演变"><a href="#%e4%bc%8d-%e4%bd%9b%e6%95%99%e5%9c%a8%e4%b8%ad%e5%9b%bd%e7%9a%84%e4%bc%a0%e6%92%ad%e5%8f%91%e5%b1%95%e5%92%8c%e6%bc%94%e5%8f%98" class="header-anchor"></a>伍 佛教在中国的传播、发展和演变
+</h2><h2 id="appendix-buddhist-terms-in-pāli-english-and-chinese"><a href="#appendix-buddhist-terms-in-p%c4%81li-english-and-chinese" class="header-anchor"></a>Appendix: Buddhist terms in Pāli, English and Chinese
+</h2><h2 id="附录巴英汉佛教术语对照表"><a href="#%e9%99%84%e5%bd%95%e5%b7%b4%e8%8b%b1%e6%b1%89%e4%bd%9b%e6%95%99%e6%9c%af%e8%af%ad%e5%af%b9%e7%85%a7%e8%a1%a8" class="header-anchor"></a>附录：巴、英、汉佛教术语对照表
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/csapp/">CSAPP</a>
-        
-            <a href="/tags/%E5%BE%AE%E7%BB%93%E6%9E%84/">微结构</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -472,85 +435,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/csapptotal.jpeg" loading="lazy" data-key="" data-hash="https://image-1258996033.cos.ap-shanghai.myqcloud.com/csapptotal.jpeg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">CSAPP读书笔记</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://pic.imgdb.cn/item/6277012f0947543129b619f5.jpg" loading="lazy" data-key="" data-hash="https://pic.imgdb.cn/item/6277012f0947543129b619f5.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">程序的机器级表示</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg" loading="lazy" data-key="" data-hash="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">信息的表示和处理</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">浮点数在计算机中的表示</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     

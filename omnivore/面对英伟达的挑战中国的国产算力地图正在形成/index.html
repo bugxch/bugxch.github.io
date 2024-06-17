@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="继续深耕《深入理解计算机》">
-<title>CSAPP之四——处理器体系结构</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="面对英伟达的挑战，中国的国产算力地图正在形成 #Omnivore Read on Omnivore Read Original">
+<title></title>
 
-<link rel='canonical' href='https://blog.bugxch.top/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/'>
+<link rel='canonical' href='https://blog.bugxch.top/omnivore/%E9%9D%A2%E5%AF%B9%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%9A%84%E6%8C%91%E6%88%98%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B%E5%9C%B0%E5%9B%BE%E6%AD%A3%E5%9C%A8%E5%BD%A2%E6%88%90/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="CSAPP之四——处理器体系结构">
-<meta property='og:description' content="继续深耕《深入理解计算机》">
-<meta property='og:url' content='https://blog.bugxch.top/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="面对英伟达的挑战，中国的国产算力地图正在形成 #Omnivore Read on Omnivore Read Original">
+<meta property='og:url' content='https://blog.bugxch.top/omnivore/%E9%9D%A2%E5%AF%B9%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%9A%84%E6%8C%91%E6%88%98%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B%E5%9C%B0%E5%9B%BE%E6%AD%A3%E5%9C%A8%E5%BD%A2%E6%88%90/'>
 <meta property='og:site_name' content='巴巴变的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CSAPP' /><meta property='article:tag' content='微结构' /><meta property='article:published_time' content='2024-06-01T21:54:52&#43;08:00'/><meta property='article:modified_time' content='2024-06-01T21:54:52&#43;08:00'/><meta property='og:image' content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/staircase-7718335_1280.jpg?imageSlim' />
-<meta name="twitter:title" content="CSAPP之四——处理器体系结构">
-<meta name="twitter:description" content="继续深耕《深入理解计算机》"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/staircase-7718335_1280.jpg?imageSlim' />
+<meta property='og:type' content='article'><meta property='article:section' content='Omnivore' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="面对英伟达的挑战，中国的国产算力地图正在形成 #Omnivore Read on Omnivore Read Original">
     <link rel="shortcut icon" href="/favicon.ico" />
 
   
@@ -227,72 +226,20 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#堆栈操作">堆栈操作</a></li>
-    <li><a href="#条件传送-vs-条件分支">条件传送 vs 条件分支</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
-                
-                    <img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/staircase-7718335_1280.jpg?imageSlim" loading="lazy" alt="Featured image of post CSAPP之四——处理器体系结构" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E6%8A%80%E8%89%BA/" >
-                技艺
-            </a>
-        
-    </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/csapp%E4%B9%8B%E5%9B%9B%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">CSAPP之四——处理器体系结构</a>
+            <a href="/omnivore/%E9%9D%A2%E5%AF%B9%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%9A%84%E6%8C%91%E6%88%98%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B%E5%9C%B0%E5%9B%BE%E6%AD%A3%E5%9C%A8%E5%BD%A2%E6%88%90/"></a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            继续深耕《深入理解计算机》
-        </h3>
         
     </div>
 
@@ -301,19 +248,6 @@
     
     
     <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2024/06/01</time>
-            </div>
         
 
         
@@ -327,7 +261,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -342,90 +276,18 @@
     <section class="article-content">
     
     
-    <p>这是CSAPP第四章，作者想通过自己定义的Y86-64的ISA指令集定义、设计、编码以及制造一个简单的单周期流水线化的处理器。作者的思路也非常清晰，包括了上述的所有步骤，在每一步描述了嵌入了处理器设计的基本原则以及需要注意的技术细节。下面是设计的ISA的指令集</p>
-<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20240602062649.png?imageSlim"
-	
-	
-	
-	loading="lazy"
-	
-		alt="image.png"
-	
-	
-></p>
-<h1 id="前置知识"><a href="#%e5%89%8d%e7%bd%ae%e7%9f%a5%e8%af%86" class="header-anchor"></a>前置知识
-</h1><h2 id="堆栈操作"><a href="#%e5%a0%86%e6%a0%88%e6%93%8d%e4%bd%9c" class="header-anchor"></a>堆栈操作
-</h2><p>作者在4.1.6和4.3.3两次提到堆栈操作的特殊性，此处做一个基本的回顾。堆栈指令包括 <code>popq</code> 和 <code>pushq</code> 两条，作者设计假定栈顶的地址始终保存在寄存器 <code>%rsp</code> 中，参考<a class="link" href="https://blog.bugxch.top/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"  target="_blank" rel="noopener"
-    >程序的机器级表示</a>中的内容，有如下示意图</p>
-<p><img src="https://pic.imgdb.cn/item/6278fd150947543129801e44.png"
-	
-	
-	
-	loading="lazy"
-	
-	
->
-在理解上面过程之前，我们假设：</p>
-<ul>
-<li>堆栈中保存的是 <strong>8字节</strong>的元素，而且按照小端法存储的，即低有效位对应低地址；</li>
-<li><strong>数据在内存中的地址</strong>，指的是整个数据的<strong>第一个字节在内存中的地址</strong>，例如保存一个2字节的数据 <code>0x1234</code> 在内存地址0x100处，那么0x100地址保存字节0x34，0x101处保存字节0x12。</li>
-</ul>
-<p>结合上面的假设，很容易看出，</p>
-<ul>
-<li>堆栈是从高地址向低地址增长的，推入一个元素栈顶指针地址变小，弹出一个元素则变大；</li>
-<li><code>%rsp</code> 始终指向栈顶的最后一个元素的地址，也就是最后一个元素在内存中的<strong>起始地址</strong>。</li>
-</ul>
-<p>基于上面的两点，程序的操作就比较好理解了，初始状态 <code>%rsp</code> 中地址是0x108，</p>
-<ul>
-<li>将 <code>%rax</code> 寄存器中的数据push进去，所以堆栈元素要增加8字节，为了将新的元素放到堆栈里面，先执行 <code>%rsp = %rsp - 8</code>，此时 <code>%rsp</code> 指向要入栈的新元素的起始地址0x100，这时就可以根据 <code>%rsp</code> 的其实地址连续存储8个字节的新元素了，这个操作类似于
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">subq</span> <span class="err">$</span><span class="mi">8</span><span class="p">,</span> <span class="o">%</span><span class="n">rsp</span> <span class="c1">// rsp = rsp - 8
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">movq</span> <span class="o">%</span><span class="n">rbp</span><span class="p">,</span> <span class="p">(</span><span class="o">%</span><span class="n">rsp</span><span class="p">)</span> <span class="c1">// %rbp的元素拷贝到%rsp存储的地址处
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>出栈就是相反的，当前的 <code>%rsp</code> 保存的就是需要弹出元素的地址，那么可以直接将该地址开始的连续8个字节先拷贝到目的地址，然后 <code>%rsp = %rsp + 8</code>，此时 <code>%rsp</code> 指向堆栈的<strong>新的</strong>最后一个元素的地址。等价于如下的操作
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">movq</span> <span class="p">(</span><span class="o">%</span><span class="n">rsp</span><span class="p">),</span> <span class="o">%</span><span class="n">rax</span>
-</span></span><span class="line"><span class="cl"><span class="n">subq</span> <span class="err">$</span><span class="mi">8</span><span class="p">,</span> <span class="o">%</span><span class="n">rsp</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<p>上面的操作可以保证，<strong><code>%rsp</code> 始终指向栈顶元素的起始地址</strong></p>
-<h2 id="条件传送-vs-条件分支"><a href="#%e6%9d%a1%e4%bb%b6%e4%bc%a0%e9%80%81-vs-%e6%9d%a1%e4%bb%b6%e5%88%86%e6%94%af" class="header-anchor"></a>条件传送 vs 条件分支
-</h2><h1 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
-</h1><ul>
-<li><a class="link" href="https://book.douban.com/subject/35038473/"  target="_blank" rel="noopener"
-    >汇编语言（第4版） (豆瓣)</a></li>
-</ul>
-<hr>
-<p>本文原载于 <a class="link" href="http://blog.bugxch.top"  target="_blank" rel="noopener"
-    >巴巴变的博客</a>，遵循 CC BY-NC-SA 4.0协议，复制请保留原文出处。</p>
+    <h1 id="面对英伟达的挑战中国的国产算力地图正在形成"><a href="#%e9%9d%a2%e5%af%b9%e8%8b%b1%e4%bc%9f%e8%be%be%e7%9a%84%e6%8c%91%e6%88%98%e4%b8%ad%e5%9b%bd%e7%9a%84%e5%9b%bd%e4%ba%a7%e7%ae%97%e5%8a%9b%e5%9c%b0%e5%9b%be%e6%ad%a3%e5%9c%a8%e5%bd%a2%e6%88%90" class="header-anchor"></a>面对英伟达的挑战，中国的国产算力地图正在形成
+</h1><p>#Omnivore</p>
+<p><a class="link" href="https://omnivore.app/me/https-mp-weixin-qq-com-s-biz-mz-i-0-mjc-2-n-dc-2-oq-3-d-3-d-idx--190170f3302"  target="_blank" rel="noopener"
+    >Read on Omnivore</a>
+<a class="link" href="https://mp.weixin.qq.com/s?__biz=MzI0Mjc2NDc2OQ%3D%3D&amp;idx=1&amp;mid=2247491670&amp;scene=58&amp;sn=daf5bca02a89291dfa789006cb2df393&amp;subscene=0"  target="_blank" rel="noopener"
+    >Read Original</a></p>
 
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/csapp/">CSAPP</a>
-        
-            <a href="/tags/%E5%BE%AE%E7%BB%93%E6%9E%84/">微结构</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -472,85 +334,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/csapp%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/csapptotal.jpeg" loading="lazy" data-key="" data-hash="https://image-1258996033.cos.ap-shanghai.myqcloud.com/csapptotal.jpeg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">CSAPP读书笔记</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://pic.imgdb.cn/item/6277012f0947543129b619f5.jpg" loading="lazy" data-key="" data-hash="https://pic.imgdb.cn/item/6277012f0947543129b619f5.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">程序的机器级表示</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg" loading="lazy" data-key="" data-hash="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">信息的表示和处理</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">浮点数在计算机中的表示</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
