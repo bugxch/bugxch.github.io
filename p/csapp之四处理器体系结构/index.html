@@ -327,7 +327,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -404,7 +404,46 @@
 </ul>
 <p>上面的操作可以保证，<strong><code>%rsp</code> 始终指向栈顶元素的起始地址</strong></p>
 <h2 id="条件传送-vs-条件分支"><a href="#%e6%9d%a1%e4%bb%b6%e4%bc%a0%e9%80%81-vs-%e6%9d%a1%e4%bb%b6%e5%88%86%e6%94%af" class="header-anchor"></a>条件传送 vs 条件分支
-</h2><h1 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
+</h2><p>条件分支是我们认识的C语言比较常规的分支程序的处理方式，下面是条件分支的一个例子</p>
+<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20240621073237.png?imageSlim"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image.png"
+	
+	
+>
+计算 $|x- y|$，查看汇编指令，可以看到第8行有一个跳转到L2的过程，这里的问题在于CPU执行程序时候需要根据bool(x&lt;y)判断是否需要跳转，如果判断的bool条件比较复杂，需要经过比较长的时钟周期才可以计算出结果的话，现代CPU不会等待这个结束才继续下面的计算，而是按照分支预测的方式先执行概率比较大的那个分支。如果预测分支执行中，计算得到的bool值跟预期的不一致，就需要丢弃已经执行的分支指令，重新跳转回去执行另一个没有被预测命中的分支，那这样的话计算时间就很长了。</p>
+<p>作者介绍了x86下面的传送指令，这些指令会先将源地址S中的数据读取出来，然后检查对应的条件码，根据条件码的值确认是否需要将读出来的值写入到目的寄存器R中，C语言中三目运算符编译器一般会翻译成条件传送指令。</p>
+<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20240621073748.png?imageSlim"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image.png"
+	
+	
+></p>
+<p>使用传送指令编译之前的计算绝对值的代码，如下所示，</p>
+<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20240621074758.png?imageSlim"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image.png"
+	
+	
+>
+上面代码有2个特点：</p>
+<ol>
+<li>计算x - y和y - x两个值；</li>
+<li>没有跳转指令，所以没有之前说的分支预测错误运行时间变长的问题，而且按照现代CPU的逻辑，推理这段代码的ALU单元基本上是满载的。</li>
+</ol>
+<h1 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
 </h1><ul>
 <li><a class="link" href="https://book.douban.com/subject/35038473/"  target="_blank" rel="noopener"
     >汇编语言（第4版） (豆瓣)</a></li>
