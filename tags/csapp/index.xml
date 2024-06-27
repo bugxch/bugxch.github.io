@@ -951,7 +951,7 @@ $$&lt;/p&gt;
 &lt;td&gt;15&lt;/td&gt;
 &lt;td&gt;$1+(2^{10}-1)\times 2^{-10}$&lt;/td&gt;
 &lt;td&gt;$(2-2^{-10})\times 2^{15}$&lt;/td&gt;
-&lt;td&gt;$65500$&lt;/td&gt;
+&lt;td&gt;$65504$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;无穷大&lt;/td&gt;
