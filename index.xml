@@ -18241,7 +18241,7 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;因为负数和正数的值除了符号之外是对称的，所以我们仅仅研究所有的整数表示即可，将16位比特从0到$2^{16}-1$的比特逐个写出来，可以看到如下的表格&lt;/p&gt;
+&lt;p&gt;因为负数和正数的值除了符号之外是对称的，所以我们仅仅研究所有的正整数表示即可，将16位比特从0到 $2^{16}-1$ 的比特逐个写出来，可以看到如下的表格&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -18327,7 +18327,7 @@ $$&lt;/p&gt;
 &lt;td&gt;$65504$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;无穷大&lt;/td&gt;
+&lt;td&gt;正无穷大&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;0111110000000000&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&amp;ndash;&lt;/td&gt;
 &lt;td&gt;&amp;ndash;&lt;/td&gt;
@@ -18342,7 +18342,7 @@ $$&lt;/p&gt;
 &lt;p&gt;相对于数学上无穷多的实数，计算机可以精确表示的实数只有有限多个，半精度浮点数可以最多表示$2^{16}$个数，float最多表示$2^{32}$个数等。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;数字在数轴上的表示，&lt;strong&gt;越靠近0，可以表示浮点数的越稠密&lt;/strong&gt;，相应的精度也越高，最高精度是在靠近0的非规格化数里面。假设指数的位宽是$k$bit，位数的位宽是$n$比特，那么最高精度为$\epsilon = 2^{-n}\times 2^{2-2^{k-1}}= 2^{2-n-2^{k-1}}$，可以看出，k和n越长，精度越高，相对于n，k是精度的关键因素。下图是一个按照IEEE的标准的8bit位宽的浮点数表示图（1个bit符号位，3bit是指数位，4bit尾数位），明显可以看到在0的附近表示的数字越稠密。使用ctrl和鼠标中键放大之后，可以看到在0附近的浮点数是均匀分布的。&lt;/p&gt;
+&lt;p&gt;数字在数轴上的表示，&lt;strong&gt;越靠近0，可以表示浮点数的越稠密&lt;/strong&gt;，相应的精度也越高，最高精度是在靠近0的非规格化数里面。假设指数的位宽是 $k$ bit，尾数的位宽是 $n$ 比特，那么最高精度为 $\epsilon = 2^{-n}\times 2^{2-2^{k-1}}= 2^{2-n-2^{k-1}}$，可以看出，k和n越长，精度越高，相对于n，k是精度的关键因素。下图是一个按照IEEE的标准的8bit位宽的浮点数表示图（1个bit符号位，3bit是指数位，4bit尾数位），明显可以看到在0的附近表示的数字越稠密。使用ctrl和鼠标中键放大之后，可以看到在0附近的浮点数是均匀分布的。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.volkerschatz.com/science/pics/fltscale.svg&#34;
 	
 	
@@ -18366,6 +18366,9 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;如果将二进制比特看成u16的数，那么这些数本身表示的u16的数据大小与它们表示的float的大小关系相同，都是递增的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过上面数据的分布，还可以看到一个有趣的现象，从0开始沿着数轴往右走，依次经过0 -&amp;gt; 最小非规格化数 -&amp;gt; 最大非规格化数 -&amp;gt; 最小规格化数 -&amp;gt; 1 -&amp;gt; 最大规格化数 -&amp;gt; 正无穷大&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;下面的代码可以将所有的半精度浮点数的所有非负数表示出来（严格得说，不包括-0.0），可以都打印出来体会下上面的结论&lt;/p&gt;
@@ -19353,6 +19356,20 @@ $$&lt;/p&gt;
     &gt;⤴️&lt;/a&gt;  ^fe59f87f&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;看起来非常不错&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/omnivore/%E5%9B%BD%E4%BA%A7%E8%87%AA%E7%A0%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9C%80%E5%85%B3%E9%94%AE%E6%88%98%E5%BD%B9%E7%BA%AF%E8%A1%80%E9%B8%BF%E8%92%99%E4%BB%8A%E5%B9%B4%E5%8D%B3%E5%B0%86%E5%95%86%E7%94%A8/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/omnivore/%E5%9B%BD%E4%BA%A7%E8%87%AA%E7%A0%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9C%80%E5%85%B3%E9%94%AE%E6%88%98%E5%BD%B9%E7%BA%AF%E8%A1%80%E9%B8%BF%E8%92%99%E4%BB%8A%E5%B9%B4%E5%8D%B3%E5%B0%86%E5%95%86%E7%94%A8/</guid>
+        <description>&lt;h1 id=&#34;国产自研操作系统的最关键战役纯血鸿蒙今年即将商用&#34;&gt;&lt;a href=&#34;#%e5%9b%bd%e4%ba%a7%e8%87%aa%e7%a0%94%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%9c%80%e5%85%b3%e9%94%ae%e6%88%98%e5%bd%b9%e7%ba%af%e8%a1%80%e9%b8%bf%e8%92%99%e4%bb%8a%e5%b9%b4%e5%8d%b3%e5%b0%86%e5%95%86%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;国产自研操作系统的最关键战役：纯血鸿蒙今年即将商用
+&lt;/h1&gt;&lt;p&gt;#Omnivore&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://omnivore.app/me/https-mp-weixin-qq-com-s-biz-mz-i-0-mjc-2-n-dc-2-oq-3-d-3-d-idx--1905d1d1d23&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read on Omnivore&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s?__biz=MzI0Mjc2NDc2OQ%3D%3D&amp;amp;idx=1&amp;amp;mid=2247491691&amp;amp;scene=58&amp;amp;sn=4759d0c55316a1da1300f6dacd9a86f9&amp;amp;subscene=0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read Original&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
