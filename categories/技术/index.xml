@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>技术 on 巴巴变的博客</title>
+        <link>https://blog.bugxch.top/categories/%E6%8A%80%E6%9C%AF/</link>
+        <description>Recent content in 技术 on 巴巴变的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>bugxch</copyright>
+        <lastBuildDate>Fri, 19 Jul 2024 20:44:30 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>理解Rust中的“所有权”和“借用”概念（转载）</title>
+        <link>https://blog.bugxch.top/p/%E7%90%86%E8%A7%A3rust%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8%E6%A6%82%E5%BF%B5%E8%BD%AC%E8%BD%BD/</link>
+        <pubDate>Fri, 19 Jul 2024 20:44:30 +0800</pubDate>
+        
+        <guid>https://blog.bugxch.top/p/%E7%90%86%E8%A7%A3rust%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8%E6%A6%82%E5%BF%B5%E8%BD%AC%E8%BD%BD/</guid>
+        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post 理解Rust中的“所有权”和“借用”概念（转载）" /&gt;&lt;p&gt;这是一篇转载的文章，学习rust时候很多地方说不清楚什么时变量绑定和借用，这篇翻译的文章给说清楚了。&lt;/p&gt;
+&lt;p&gt;如果不理解背后的设计理念和工作原理，那么就会对Rust的所有权和借用特性产生困惑。这种困惑尤其出现在将以前学习的编程风格应用于新范式时, 我们称之为范式转移。所有权是一个新颖的想法，初次接触时非常难以理解。但是，随着使用经验的逐渐积累，开发人员会越来越深刻的体会到其设计理念的精妙。在进一步学习Rust的所有权和借用特性之前。首先，需要了解下“内存安全”和“内存泄漏”的原理以及编程语言处理这两种问题的方式。&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;内存安全&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;内存安全是指软件程序的一种状态，在这种状态下内存指针或引用始终指向有效内存。因为内存存在损坏的可能性，因此如果无法做到内存安全，那么就几乎无法保证程序的运行效果。简而言之，如果程序无法做到真正的内存安全，那么就无法保证其功能可以正常实现和执行。在运行内存不安全的程序时，攻击方可以利用漏洞在他人设备上窃取机密信息或任意执行恶意代码。下面我们将使用伪代码来解释有效内存。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// pseudocode  #1 - shows valid reference
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// scope  starts here
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// scope ends  he
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在上面的伪代码中，我们创建了一个值为10的变量x。我们使用&amp;amp;作为运算符或关键字来创建引用。因此，语法&amp;amp;x允许我们创建对变量x的值的引用。简单地说，我们创建了一个值为5的变量x和一个引用x的变量&lt;br&gt;
+Y。&lt;/p&gt;
+&lt;p&gt;由于变量x和y在同一个代码块或作用域中，因此变量y对x的值的引用是有效引用。因此，变量y的值是5。&lt;/p&gt;
+&lt;p&gt;下面的伪代码示例中，正如我们所见，x的作用域仅限于创建它的代码块。当我们尝试在其作用域之外访问x时，就会遇到悬空引用问题。悬空引用……？它到底是什么？&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// pseudocode  #2 - shows invalid reference aka dangling reference
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// scope  starts here
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// scope ends  here
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// can&amp;#39;t access x from here; creates dangling reference
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;悬空引用&#34;&gt;&lt;a href=&#34;#%e6%82%ac%e7%a9%ba%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;悬空引用
+&lt;/h3&gt;&lt;p&gt;悬空引用的意思是指向已分配或已释放内存位置的指针。如果一个程序（也称为进程）引用了已释放或已清除数据的内存，就可能会崩溃或产生无法预知的结果。话虽如此，内存不安全也是一些编程语言的特性，程序员使用这些特性处理无效数据。因此，内存不安全引入了很多问题，这些问题可能会导致以下安全漏洞：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;越界读取&lt;/li&gt;
+&lt;li&gt;越界写入&lt;/li&gt;
+&lt;li&gt;UAF漏洞（Use-After-Free）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;内存不安全导致的漏洞是许多高风险安全威胁的根源。更棘手的是，发现并处理此类漏洞对于开发人员来说是非常困难的。&lt;/p&gt;
+&lt;h2 id=&#34;内存泄漏&#34;&gt;&lt;a href=&#34;#%e5%86%85%e5%ad%98%e6%b3%84%e6%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;内存泄漏 
+&lt;/h2&gt;&lt;p&gt;我们需要了解内存泄漏的原理及其引发的严重后果。内存泄漏是非正常的内存使用形式，在这种情况下，会导致开发人员无法释放已分配的堆内存块，即使该内存块已不再需要存放数据。这与内存安全的概念是相反的。稍后我们将详细探讨不同的内存类型，但现在，我们只需要知道栈会存储在编译时就长度固定的变量，而在运行时会改变长度的变量则必须存放在堆上。与堆内存分配相比，栈内存分配被认为是更安全的，因为内存会在与程序无关或不再需要时被自动释放，释放过程可以由程序员控制，也可以由运行时系统自动判断。&lt;/p&gt;
+&lt;p&gt;但是，当程序员在堆上占用内存并且未能将其释放，且没有垃圾回收器（例如C或C++）的情况下，就会发生内存泄漏。此外，如果我们丢失了一块内存的所有引用且没有释放该内存，也会发生内存泄漏。我们的程序将继续拥有该内存，却无法再次使用它。&lt;/p&gt;
+&lt;p&gt;轻微的内存泄漏并不是问题，但是如果一个程序占用了大量的内存却从不释放，那么程序的内存占用将持续上升，最终导致拒绝服务。&lt;/p&gt;
+&lt;p&gt;当程序退出时，操作系统会立即接管并释放其占用的所有内存。因此，只有当程序运行时内存泄露问题才会存在。一旦程序终止，内存泄露问题就会消失。让我们回顾一下内存泄漏的主要影响。&lt;/p&gt;
+&lt;p&gt;内存泄漏能够通过减少可用内存（堆内存）的数量来降低计算机的性能。它最终会导致系统整体或部分的工作异常或造成严重的性能损耗。崩溃通常与内存泄漏有关。不同编程语言应对内存泄漏的方法是不同的。内存泄漏可能会从一个微小的几乎“不明显的问题”开始，但这些问题会迅速扩散并对操作系统造成难以承受的影响。我们应该尽最大努力密切关注内存泄露问题，尽可能避免并修正相关错误，而非任其发展。&lt;/p&gt;
+&lt;h2 id=&#34;内存不安全和内存泄漏&#34;&gt;&lt;a href=&#34;#%e5%86%85%e5%ad%98%e4%b8%8d%e5%ae%89%e5%85%a8%e5%92%8c%e5%86%85%e5%ad%98%e6%b3%84%e6%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;内存不安全和内存泄漏 
+&lt;/h2&gt;&lt;p&gt;内存泄漏和内存不安全是预防和补救方面最受关注的两类问题。而且两者相对独立，并不会因为其中一种问题被修复而使另一种问题被自动修复。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s5.51cto.com/oss/202208/11/82d2008482bbb9f49fd6835492f5106d9888de.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图1：内存不安全与内存泄漏&lt;/p&gt;
+&lt;h2 id=&#34;内存的类型及其工作原理&#34;&gt;&lt;a href=&#34;#%e5%86%85%e5%ad%98%e7%9a%84%e7%b1%bb%e5%9e%8b%e5%8f%8a%e5%85%b6%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;内存的类型及其工作原理 
+&lt;/h2&gt;&lt;p&gt;在我们继续学习之前，我们需要了解不同类型的内存在代码中是如何被使用的。如下所示，这些内存的结构是不同的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;寄存器&lt;/li&gt;
+&lt;li&gt;静态内存&lt;/li&gt;
+&lt;li&gt;栈内存&lt;/li&gt;
+&lt;li&gt;堆内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;寄存器和静态内存类型不在本文的讨论范围。&lt;/p&gt;
+&lt;h3 id=&#34;1-栈内存及其工作原理&#34;&gt;&lt;a href=&#34;#1-%e6%a0%88%e5%86%85%e5%ad%98%e5%8f%8a%e5%85%b6%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. 栈内存及其工作原理
+&lt;/h3&gt;&lt;p&gt;栈按照接收顺序存储数据，并以相反的顺序将其删除。栈中的元素是按照后进先出 (LIFO) 的顺序进行访问的。将数据添加到栈中称为“pushing”，将数据从栈中移除称为“popping”。&lt;/p&gt;
+&lt;p&gt;所有存储在栈上的数据都必须是已知且长度固定的。在编译时长度未知或长度会发生变化数据必须存储在堆上。&lt;/p&gt;
+&lt;p&gt;作为开发人员，我们不必为栈内存的分配和释放操心；栈内存的分配和释放是由编译器“自动完成”。这意味着当栈上的数据与程序无关（即超出范围）时，它会被自动删除而无需人工的干预。&lt;/p&gt;
+&lt;p&gt;这种内存分配方式也被称为临时内存分配，因为当函数执行结束时，属于该函数的所有数据都会“自动”从栈中被清除。Rust中的所有原始类型都存在栈中。数字、字符、切片、布尔值、固定大小的数组、包含原始元素的元组和函数指针等类型都可以存放在栈上&lt;/p&gt;
+&lt;h3 id=&#34;2-堆内存及其工作原理&#34;&gt;&lt;a href=&#34;#2-%e5%a0%86%e5%86%85%e5%ad%98%e5%8f%8a%e5%85%b6%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. 堆内存及其工作原理
+&lt;/h3&gt;&lt;p&gt;与栈不同，当我们将数据存放到堆上时，需要请求一定的内存空间。内存分配器在堆中定位一个足够大的未占用空间，并将其标记为正在使用，同时返回该位置地址的引用。这就是内存分配。&lt;/p&gt;
+&lt;p&gt;在堆上存放数据比在栈上存放数据要慢，因为栈永远不需要内存分配器寻找空位置来放置新数据。此外，由于我们必须通过指针来获取堆上的数据，所以堆的数据访问速度要比栈慢。栈内存是在编译时就被分配和释放的，与之不同的是，堆内存是在程序指令执行期间被分配和释放的。在某些编程语言中，使用关键字new来分配堆内存。关键字new（又名运算符）表示在堆上请求分配内存。如果堆上有充足的可用内存，则运算符new会将内存初始化并返回分配内存的唯一地址。值得一提的是，堆内存是由程序员或运行时系统“显式”释放的。&lt;/p&gt;
+&lt;h2 id=&#34;编程语言如何实现内存安全&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80%e5%a6%82%e4%bd%95%e5%ae%9e%e7%8e%b0%e5%86%85%e5%ad%98%e5%ae%89%e5%85%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编程语言如何实现内存安全？ 
+&lt;/h2&gt;&lt;p&gt;谈到内存管理，尤其是堆内存，我们希望编程语言具有以下特征：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不需要内存时就尽快释放，且不增加资源消耗。&lt;/li&gt;
+&lt;li&gt;对已释放数据的引用（也就是悬空引用）进行自动维护。否则，极易发生程序崩溃和安全问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编程语言通过以下方式确保内存安全：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显式内存释放（例如C和C++）&lt;/li&gt;
+&lt;li&gt;自动或隐式内存释放（例如Java、Python和C#）&lt;/li&gt;
+&lt;li&gt;基于区域的内存管理&lt;/li&gt;
+&lt;li&gt;线性或特殊类型系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;基于区域的内存管理和线性系统都不在本文的讨论范围。&lt;/p&gt;
+&lt;h3 id=&#34;1-手动或显式内存释放&#34;&gt;&lt;a href=&#34;#1-%e6%89%8b%e5%8a%a8%e6%88%96%e6%98%be%e5%bc%8f%e5%86%85%e5%ad%98%e9%87%8a%e6%94%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. 手动或显式内存释放
+&lt;/h3&gt;&lt;p&gt;在使用显式内存管理时，程序员必须“手动”释放或擦除已分配的内存。运算符“释放”（例如，C中的delete）存在于需要显式内存释放的语言中。&lt;/p&gt;
+&lt;p&gt;在C和C++等系统语言中，垃圾回收的成本很高，因此显式内存分配一定会长久存在的。将释放内存的职责留给程序员，能够让程序员在变量的生命周期内拥有其完整的控制权。然而，如果释放运算符使用不当，软件在执行过程中就极易出现故障。事实上，这种手动分配和释放内存的过程很容易出错。常见的编码错误包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;悬空引用&lt;/li&gt;
+&lt;li&gt;内存泄漏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尽管如此，我们更倾向于手动内存管理而非依赖垃圾回收机制，因为这赋予我们更多的控制权并能够有更出色的性能表现。请注意，任何系统编程语言的设计目标都是拥有更好的鲁棒性。换句话说，编程语言的设计者在性能和便利性之间选择了性能。&lt;/p&gt;
+&lt;p&gt;确保不使用任何指向已释放内存的指针，是开发人员的责任。&lt;/p&gt;
+&lt;p&gt;不久之前，有一些方法已经被验证可以避免这些错误，但这一切最终都归结为严格遵循代码规范，这需要严格使用正确的内存管理方法。&lt;/p&gt;
+&lt;p&gt;关键要点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;严格的内存管理。&lt;/li&gt;
+&lt;li&gt;悬空引用和内存泄漏的安全性比较低。&lt;/li&gt;
+&lt;li&gt;较长的开发周期。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-自动或隐式内存释放&#34;&gt;&lt;a href=&#34;#2-%e8%87%aa%e5%8a%a8%e6%88%96%e9%9a%90%e5%bc%8f%e5%86%85%e5%ad%98%e9%87%8a%e6%94%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. 自动或隐式内存释放
+&lt;/h3&gt;&lt;p&gt;自动内存管理已成为包括Java在内的现代编程语言的基本特征。&lt;/p&gt;
+&lt;p&gt;在内存自动释放的场景中，垃圾回收器就是自动化的内存管理器。垃圾回收器会周期性的遍历堆内存并回收未使用的内存块。它代替我们管理内存的分配和释放。因此，我们不必编写代码来执行内存管理任务。这很好，因为垃圾回收器将我们从繁琐的内存管理职责中解放出来。同时也大大减少了开发时间。&lt;/p&gt;
+&lt;p&gt;但是，垃圾回收机制并非完美无缺的，它同样有许多的缺点。在垃圾回收期间，程序需要暂停其他任务，并消耗时间搜索需要清理和回收的内存。&lt;/p&gt;
+&lt;p&gt;此外，自动内存管理机制对内存有更高优先级的需求。垃圾回收器为我们执行内存释放的操作，而这些操作会消耗内存和CPU时钟周期。因此，自动内存管理会降低应用程序的性能，尤其是在资源有限的大型应用程序中。&lt;/p&gt;
+&lt;p&gt;关键要点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动内存管理。&lt;/li&gt;
+&lt;li&gt;解决悬空引用或内存泄露问题，并高效提升内存安全性。&lt;/li&gt;
+&lt;li&gt;更简洁的代码。&lt;/li&gt;
+&lt;li&gt;更快的开发周期。&lt;/li&gt;
+&lt;li&gt;轻量化的内存管理。&lt;/li&gt;
+&lt;li&gt;由于它消耗内存和CPU时钟周期，因此延迟较高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rust中的内存安全&#34;&gt;&lt;a href=&#34;#rust%e4%b8%ad%e7%9a%84%e5%86%85%e5%ad%98%e5%ae%89%e5%85%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt; Rust中的内存安全 
+&lt;/h2&gt;&lt;p&gt;一些语言提供垃圾回收机制，它在程序运行时寻找不再使用的内存；而其他语言则要求程序员显式分配和释放内存。这两种模型各有优劣。垃圾回收机制虽然已经广泛应用，但也有一些缺点；它是以牺牲资源和性能为代价，来提升开发人员的工作效率。&lt;/p&gt;
+&lt;p&gt;话虽如此，一边是提供高效的内存管理机制，而另一边通过消除悬空引用和内存泄漏提供更好的安全性。Rust将这两种优点集于一身。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s5.51cto.com/oss/202208/11/c45fd7915466b4b339f219b75179ec022d3eb3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图2：Rust有优秀的内存管理机制，并提供很好的安全性&lt;/p&gt;
+&lt;p&gt;**Rust采用了与上述两种方案不同的方法，即基于规则组的所有权模型，编译器验证这些规则组来确保内存安全。**只有在完全满足这些规则的情况下，程序才会被编译成功。事实上，所有权用编译时的内存安全检查替代运行时的垃圾回收机制。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s8.51cto.com/oss/202208/11/875274583f81dea3ee7788e5553bee071d32cf.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;显式内存管理、隐式内存管理和Rust的所有权模型由于所有权是一个新的概念，因此，即使是与我一样的程序员，学习和适应它也需要一定时间。&lt;/p&gt;
+&lt;h2 id=&#34;所有权&#34;&gt;&lt;a href=&#34;#%e6%89%80%e6%9c%89%e6%9d%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;所有权 
+&lt;/h2&gt;&lt;p&gt;至此，我们对数据在内存中的存储方式有了基本的了解。现在我们来认真研究下Rust中的所有权模型。&lt;strong&gt;Rust最大的特点就是所有权模型，它在编译时就保障了内存的安全性。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先，让我们从字面意义来理解“所有权”。所有权是合法“拥有”和“控制”“某物”的一种状态。话虽如此，我们必须明确谁是所有者以及所有者能够拥有和控制什么。在Rust中，每个值都有对应的变量，变量就是值的所有者。简而言之，变量就是所有者，变量的值就是所有者能够拥有和控制的东西。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.51cto.com/oss/202208/11/f6c39b33162c8247a74474fe2369e6e7d21638.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图3：变量绑定展示所有者及其值/资源&lt;/p&gt;
+&lt;p&gt;在所有权模型中，一旦变量超出作用域，内存就会被自动释放。当值超出作用域或结束其生命周期时，其析构函数就会被调用。析构函数（尤其是自动析构函数）是一个函数，它通过从程序中删除值的引用痕迹来释放内存。&lt;/p&gt;
+&lt;h3 id=&#34;1-借用检查器&#34;&gt;&lt;a href=&#34;#1-%e5%80%9f%e7%94%a8%e6%a3%80%e6%9f%a5%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. 借用检查器
+&lt;/h3&gt;&lt;p&gt;Rust通过借用检查器（一种静态分析器）实现所有权。借用检查器是Rust编译器中的一个组件，它跟踪整个程序中数据的使用位置，并且根据所有权规则，它能够识别需要执行释放的数据的位置。此外，借用检查器可以确保在运行时，已释放的内存永远不会被访问。它甚至消除了因为数据出现同时突变（或修改）而引起的竞争问题。&lt;/p&gt;
+&lt;h3 id=&#34;2-所有权规则&#34;&gt;&lt;a href=&#34;#2-%e6%89%80%e6%9c%89%e6%9d%83%e8%a7%84%e5%88%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. 所有权规则
+&lt;/h3&gt;&lt;p&gt;如前所述，所有权模型建立在一组所有权规则之上，这些规则相对简单。Rust编译器&lt;br&gt;
+(rustc) 强制执行以下规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在Rust中，每个值都有对应的变量，变量就是值的所有者。&lt;/li&gt;
+&lt;li&gt;同时只能存在一个所有者。&lt;/li&gt;
+&lt;li&gt;当所有者超出作用域时，该值将被删除。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编译时检查的所有权规则会对以下内存错误进行保护：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;**悬空引用：**这是一个指向已经不再包含数据的内存地址的指针；此指针指向空数据或随机数据。&lt;/li&gt;
+&lt;li&gt;**UAF漏洞：**当内存被释放后，仍试图访问该内存，就可能会导致程序崩溃。这个内存位置经常被黑客用来执行恶意代码。&lt;/li&gt;
+&lt;li&gt;**双重释放：**当已分配的内存被释放后，再次执行释放操作。这会导致程序崩溃，进而暴露敏感信息。这种情况同样允许黑客执行恶意代码。&lt;/li&gt;
+&lt;li&gt;**分段错误：**程序尝试访问被禁止访问的内存区域时，就会出现分段错误。&lt;/li&gt;
+&lt;li&gt;**缓冲区溢出：**数据量超过内存缓冲区的存储容量时，就会出现缓冲区溢出，这通常会导致程序崩溃。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在深入了解所有权规则之前，我们需要先了解copy、move和clone之间的区别。&lt;/p&gt;
+&lt;h3 id=&#34;3-copy&#34;&gt;&lt;a href=&#34;#3-copy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3. Copy
+&lt;/h3&gt;&lt;p&gt;长度固定的数据类型（尤其是原始类型）可以存储在栈中，并在其作用范围结束时清除数据释放内存。如果其他代码在其作用范围内需要相同数据的时候，还可以从栈中便捷的将该数据复制为一个新的独立变量。因为栈内存的复制非常高效便捷，因此具有固定长度的原始类型被称为拥有复制语义特性。它高效的创建了一个完美的复制品。&lt;/p&gt;
+&lt;p&gt;值得注意的是，具有固定长度的原始类型实现了通过复制特征来进行复制。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// hello
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// hello
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在Rust中，有两种字符串：String（堆分配的，可增长的）和&amp;amp;str（固定大小，不能改变）。&lt;/p&gt;
+&lt;p&gt;因为x存储在栈中，所以复制它的值来为y生成一个副本非常容易。这种用法并不适用于存储在堆上的数据。下面是栈的示意图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s5.51cto.com/oss/202208/11/18b0c3e724070fd68c325822ff1ef6d072b494.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图4：x和y都有自己的数据&lt;/p&gt;
+&lt;p&gt;复制数据会增加程序运行时间和内存消耗。因此，大块数据不适合使用复制。&lt;/p&gt;
+&lt;h3 id=&#34;4-move&#34;&gt;&lt;a href=&#34;#4-move&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4. Move
+&lt;/h3&gt;&lt;p&gt;在Rust术语中，“move”意味着将转移内存的所有权。想象一下堆上存储的数据类型有多复杂。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们可以假设第二行（即&lt;br&gt;
+Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&lt;/p&gt;
+&lt;p&gt;下面我们将研究下String究竟在后台执行了什么样的操作。String由存储在栈中的三部分组成。实际的内容（在本例中是hello）存储在堆上。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;指针&lt;/strong&gt;-指向保存字符串内容的内存。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长度&lt;/strong&gt;-字符串当前使用的内存大小（以字节为单位）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容量&lt;/strong&gt;-字符串从分配器获得的内存总量（以字节为单位）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;换句话说，元数据存储在栈上，而实际数据则存储在堆上。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s9.51cto.com/oss/202208/11/18ca86330a9141fc22f987bdcc4a6f2fe6cdeb.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图5：栈存储元数据，堆存储实际内容&lt;/p&gt;
+&lt;p&gt;当我们将s1分配给s2时，会复制字符串的元数据，这意味着我们会复制栈上的指针、长度和容量。不会复制堆上指针所指向的数据。内存中的数据如下所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s5.51cto.com/oss/202208/11/b3f7a9130865735f3c08147697899a5a1c49b5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图6：变量s2获取s1的指针、长度和容量的副本&lt;/p&gt;
+&lt;p&gt;值得注意的是，下图表示的是Rust复制了堆数据后内存的状态，真实情况并不是这样的。如果Rust执行此操作，当堆数据很大时，则s2 = s1操作在运行时性能表现会非常差。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s9.51cto.com/oss/202208/11/b525f5f16ce2b6ab75e100a5b2899a9e24fb8e.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图7：如果Rust复制堆数据，s2 = s1操作的结果就是数据复制。但是，Rust默认不执行数据复制&lt;/p&gt;
+&lt;p&gt;请注意，当复杂类型不在作用域内时，Rust将调用drop函数对堆内存执行显式释放。但是，图6中的两个数据指针指向同一个位置，Rust并不会这样做。我们将很快进入技术实现细节。&lt;/p&gt;
+&lt;p&gt;如前所述，当我们将s1分配给s2时，变量s2会复制s1的元数据（指针、长度和容量）。但是，将s1分配给s2之后，s1会发生什么呢？Rust认为此时s1是无效的。是的，你没看错。&lt;/p&gt;
+&lt;p&gt;让我们重新思考下let s2 = s1的赋值操作。假设Rust在此操作之后仍然认为s1是有效的，那么会发生什么。当s2和s1超出范围时，它们都会尝试释放相同的内存。这是个糟糕的情况。这被称为双重释放错误，它属于内存安全错误的一种情况。双重释放内存可能会导致内存损坏，进而带来安全风险。&lt;/p&gt;
+&lt;p&gt;为了确保内存安全，Rust在let s2 = s1操作执行之后会认为s1无效。因此，当s1不在作用域内时，Rust不需要执行内存释放。假如创建s2后仍然尝试使用s1会发生什么，下面我们做个试验。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;,  world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Won&amp;#39;t compile. 我们得到一个错误。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们会得到一个类似下面的错误，因为Rust不允许使用无效的引用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cargo run
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Compiling playground v0.0.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;/playground&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;E0382&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:  borrow of moved value: &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;s1&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --&amp;gt; src/main.rs:6:28
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     &lt;span class=&#34;nb&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;s1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  String::from&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          -- move occurs because &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;s1&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; has &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;String&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, which does not  implement the &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;Copy&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; trait
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     &lt;span class=&#34;nb&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; s1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;              -- value moved here
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     println!&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;{}, world!&amp;#34;&lt;/span&gt;, s1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                            ^^ value borrowed  here after move
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; note: this error originates in the macro  &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$crate&lt;/span&gt;::format_args_nl&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;in Nightly builds, run with -Z macro-backtrace &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;  more info&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;For more  information about this error, try &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;rustc --explain E0382&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;左右滑动查看完整代码&lt;/p&gt;
+&lt;p&gt;由于Rust在let s2 = s1操作执行之后将s1的内存所有权转移给了s2，因此它认为s1是无效的。这是s1失效后的内存表示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s4.51cto.com/oss/202208/11/b66bb0b19a708de47a7757ed639c2a7ab80e9c.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图8：s1无效后的内存表示&lt;/p&gt;
+&lt;p&gt;当只有s2保持有效时，就会在其超出范围时执行内存释放操作。因此，Rust消除了双重释放错误出现的可能性。这是非常优秀的解决方案！&lt;/p&gt;
+&lt;h3 id=&#34;5-clone&#34;&gt;&lt;a href=&#34;#5-clone&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5. Clone
+&lt;/h3&gt;&lt;p&gt;如果我们需要深度复制字符串的堆数据，而不仅仅是栈数据，可以使用一种叫做clone的方法。以下是克隆方法的使用示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clone&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;s1  = &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;, s2 = &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Clone方法确实将堆数据复制到s2中了。操作非常完美，下图是示例：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s6.51cto.com/oss/202208/11/c526fcd044b441f4005033eb10aaab2de4611a.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图9：clone方法确实将堆数据复制给s2&lt;/p&gt;
+&lt;p&gt;然而clone方法有一个严重的后果；它只复制数据，却不会同步两者之间的任何更改。通常情况下，进行clone应当审慎评估其效果和影响。&lt;/p&gt;
+&lt;p&gt;至此，我们详细了解了copy、move和clone的技术原理。下面我们将详细地了解所有权规则。&lt;/p&gt;
+&lt;h3 id=&#34;6-所有权规则1&#34;&gt;&lt;a href=&#34;#6-%e6%89%80%e6%9c%89%e6%9d%83%e8%a7%84%e5%88%991&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6. 所有权规则1
+&lt;/h3&gt;&lt;p&gt;每个值都有对应的变量，变量就是值的所有者。这意味着值都归变量所有。在下面的示例中，变量s拥有指向字符串的指针，而在第二行中，变量x拥有值1。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Rule 1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;7-所有权规则2&#34;&gt;&lt;a href=&#34;#7-%e6%89%80%e6%9c%89%e6%9d%83%e8%a7%84%e5%88%992&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7. 所有权规则2
+&lt;/h3&gt;&lt;p&gt;在给定时间，一个值只有一个所有者。一个人可以拥有许多宠物，但在所有权模型中，任何时候一个值都只有一个所有者:-)&lt;/p&gt;
+&lt;p&gt;原始类型是在编译时就已知其固定长度的数据类型，下面是原始类型的使用示例。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们将10分配给变量x；换句话说，变量x拥有10。然后我们将x分配给y，同时将其分配给z。我们知道同一时间只能存在一个所有者，但没有引发任何错误。所以在此示例中，每次当我们将x分配给一个新变量时，编译器都会对其进行复制。&lt;/p&gt;
+&lt;p&gt;栈帧如下：x = 10，y = 10 和 z = 10。然而，真实情况似乎与我们的设想（x = 10、y = x 和 z = x）不一样。我们知道，x是10的唯一所有者，y和z都不能拥有这个值。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s7.51cto.com/oss/202208/11/01ab126793efb854e13560f9b251d277a97ba0.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图10：编译器将x复制到y和z&lt;/p&gt;
+&lt;p&gt;就像前文所述，由于复制栈内存高效便捷，因此具有固定长度的原始类型被称为拥有复制语义特性，而复杂类型就只是移动所有权。因此，在这种情况下，编译器执行了复制操作。&lt;/p&gt;
+&lt;p&gt;这种情况下，变量绑定的行为与其他的编程语言类似。为了阐释所有权规则，我们需要复杂的数据类型。&lt;/p&gt;
+&lt;p&gt;我们通过观察数据在堆上的存储方式，来学习Rust如何判断需要清理哪些数据；字符串类型是就是一个很好的例子。我们将聚焦于字符串类型所有权相关的行为；这些原则也适用于其他复杂的数据类型。&lt;/p&gt;
+&lt;p&gt;众所周知，存储在堆上的复杂数据类型，其内容在编译时是不可预知的。我们来观察这个示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;,  world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Won&amp;#39;t compile. 我们得到一个错误。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;储字符串类型的场景下，其存储在堆上的数据长度可能会发生变化。这就表示：&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序在运行的时候就必须从内存分配器请求内存（我们称之为第一部分）。&lt;/li&gt;
+&lt;li&gt;当不再需要该字符串后，需要将此内存释放回内存分配器（我们称之为第二部分）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;开发人员需要重点关注第一部分：当我们从String:: 开始执行调用时，它会向内存分配器请求内存。这部分的技术实现在编程语言中很常见。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;但是，第二部分是不一样的。在拥有垃圾回收机制的编程语言中，垃圾回收器会跟踪并清理不再使用的内存，开发人员并不需要在此方面投入精力。在没有垃圾回收机制的语言中，识别不再需要的内存并显式释放内存就是开发人员的职责。确保正确释放内存是一项很有挑战性的编程任务：&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果我们忘记释放内存，就会造成内存空间浪费。&lt;/li&gt;
+&lt;li&gt;如果我们过早的释放内存，那么就会产生一个无效变量。&lt;/li&gt;
+&lt;li&gt;如果我们重复释放内存，程序就会出现BUG。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Rust以一种新颖的方式处理内存释放，有效减轻了开发人员的工作压力：当变量超出其作用域时，内存就会被自动释放。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;让我们回到正题。在Rust中，对于复杂类型，诸如为变量赋值、参数传递或函数返回值这类的操作是不会执行copy操作，而是会执行move操作。简而言之，对于复杂类型来说，通过转移其所有权来完成上述任务。&lt;/p&gt;
+&lt;p&gt;当复杂类型超出其作用域时，Rust将调用drop函数显式地执行内存释放。&lt;/p&gt;
+&lt;h3 id=&#34;8-所有权规则3&#34;&gt;&lt;a href=&#34;#8-%e6%89%80%e6%9c%89%e6%9d%83%e8%a7%84%e5%88%993&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8. 所有权规则3
+&lt;/h3&gt;&lt;p&gt;当所有者超出作用域时，该值将被删除。再次考虑之前的示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;, world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Won&amp;#39;t compile. The value of s1  has already been dropped.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在将s1分配给s2之后（在let s2 = s1赋值语句中），s1的值就被释放了。因此，赋值语句执行后，s1就失效了。S1被释放后的内存状态：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s4.51cto.com/oss/202208/11/e5c15ad96b1a59488e76960f75666ad251d0aa.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图11：s1被释放后的内存状态&lt;/p&gt;
+&lt;h3 id=&#34;9-所有权如何变动&#34;&gt;&lt;a href=&#34;#9-%e6%89%80%e6%9c%89%e6%9d%83%e5%a6%82%e4%bd%95%e5%8f%98%e5%8a%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9. 所有权如何变动
+&lt;/h3&gt;&lt;p&gt;在Rust程序中，有三种方式可以在变量之间转移所有权：&lt;/p&gt;
+&lt;p&gt;（1）将一个变量的值分配给另一个变量（前文已经讨论过）。&lt;/p&gt;
+&lt;p&gt;（2）将值传递给函数。&lt;/p&gt;
+&lt;p&gt;（3）从函数返回值。&lt;/p&gt;
+&lt;h2 id=&#34;将值传递给函数&#34;&gt;&lt;a href=&#34;#%e5%b0%86%e5%80%bc%e4%bc%a0%e9%80%92%e7%bb%99%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;将值传递给函数
+&lt;/h2&gt;&lt;p&gt;将值传递给函数与为变量赋值有相似的语义。就像赋值一样，将变量传递给函数会导致变量被移动或复制。下面的例子向我们展示了复制和移动：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// s  comes into scope
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;move_ownership&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// s&amp;#39;s value moves into the  function...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// so it&amp;#39;s  no longer valid from this
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                               &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// point  forward
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// x comes into scope
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;makes_copy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// x would move into the function
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// It  follows copy semantics since it&amp;#39;s
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                               &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// primitive,  so we use x afterward
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Here, x  goes out of scope, then s. But because s&amp;#39;s value was moved, nothing
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// special happens.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt;  &lt;span class=&#34;nf&#34;&gt;move_ownership&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;some_string&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// some_string comes into scope
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;some_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Here,  some_string goes out of scope and `drop` is called.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// The occupied memory is freed.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt;  &lt;span class=&#34;nf&#34;&gt;makes_copy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;some_integer&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;i32&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// some_integer comes into scope
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;some_integer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Here,  some_integer goes out of scope. Nothing special happens.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果我们在调用move_ownership之后尝试使用s，Rust会抛出编译错误。&lt;/p&gt;
+&lt;h2 id=&#34;从函数返回值&#34;&gt;&lt;a href=&#34;#%e4%bb%8e%e5%87%bd%e6%95%b0%e8%bf%94%e5%9b%9e%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;从函数返回值
+&lt;/h2&gt;&lt;p&gt;从函数返回值同样可以转移所有权。下面是一个包含返回值的函数示例，其注释与上一个示例中的注释相同。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gives_ownership&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// gives_ownership moves its return
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//  value into s1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//  s2 comes into scope
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;takes_and_gives_back&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// s2 is moved into
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//  takes_and_gives_back, which also
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//  moves its return value into s3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Here, s3  goes out of scope and is dropped. s2 was moved, so nothing
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// happens. s1 goes out of scope and is  dropped.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt;  &lt;span class=&#34;nf&#34;&gt;gives_ownership&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&amp;gt; &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// gives_ownership will move its
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                              &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// return value into the function
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                              &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// that calls it
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;some_string&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;yours&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// some_string comes into scope
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;some_string&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                              &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// some_string  is returned and
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                             &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// moves out to the calling
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                              &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// function
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// This  function takes a String and returns it
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt;  &lt;span class=&#34;nf&#34;&gt;takes_and_gives_back&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a_string&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&amp;gt; &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// a_string comes into
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                                                       &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// scope
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a_string&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// a_string is returned and moves out to the calling function
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;变量的所有权改变始终遵循相同的模式：当值被分配给另一个变量时，就会触发move操作。除非数据的所有权被转移至另一个变量，否则当包含堆上数据的变量超出作用域时，该值将被清除。&lt;/p&gt;
+&lt;p&gt;希望这能让大家对所有权模型及其对Rust处理数据的方式（例如赋值引用和参数传递）有一个基本的了解。&lt;/p&gt;
+&lt;p&gt;等等。还有一件事…&lt;/p&gt;
+&lt;p&gt;没有什么是完美无缺的，Rust所有权模型同样有其局限性。当我们开始使用Rust后，很快就会发现一些使用不顺手的地方。我们已经观察到，获取所有权然后函数传递所有权就有一些不顺手。&lt;/p&gt;
+&lt;p&gt;令人讨厌的是，假设我们想再次使用数据，那么传递给函数的所有内容都必须执行返回操作，即使其他函数已经返回了部分相关数据。如果我们需要一个函数只使用数据但是不获取数据所有权，又该如何操作呢？&lt;/p&gt;
+&lt;p&gt;参考以下示例。下面的代码示例将报错，因为一旦所有权转移到print_vector函数，变量v就不能再被最初拥有它的main函数（在 println 中！）使用。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;vec!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;print_vector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// this  line gives us an error
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt;  &lt;span class=&#34;nf&#34;&gt;print_vector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Vec&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;i32&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Inside print_vector  function &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{:?}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;跟踪所有权看似很容易，但是当我们面对复杂的大型程序时，它就会变得非常复杂。&lt;strong&gt;所以我们需要一种在不转移“所有权”的情况下传递数据的方法，这就是“借用”概念发挥作用的地方。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;借用&#34;&gt;&lt;a href=&#34;#%e5%80%9f%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;借用
+&lt;/h2&gt;&lt;p&gt;借用，从字面意义上来说，就是收到一个物品并承诺会归还。在Rust的上下文中，借用是一种在不获取所有权的情况下访问数据的方式，因为它必须在恰当的时机返还给所有者。&lt;/p&gt;
+&lt;p&gt;当我们借用一个数据时，我们用运算符&amp;amp;引用它的内存地址。&amp;amp;被称为引用。引用本身并没有什么特别之处——它只是对内存地址的指向。对于熟悉C语言指针的人来说，引用是指向内存的指针，其中包含属于另一个变量的数据。值得注意的是，Rust中的引用不能为空。实际上，引用就是一个指针；它是最基本的指针类型。大多数编程语言中只有一种指针类型，但Rust有多种指针类型。指针及其类型是另外一个话题，以后有机会将会单独讨论。&lt;/p&gt;
+&lt;p&gt;简而言之，Rust将对某个数据的引用称为借用，该数据最终必须返回给所有者。示例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Value  y=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Address  of y=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{:p}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Deref  of y=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;上述代码生成以下输出：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Value &lt;span class=&#34;nv&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Address of  &lt;span class=&#34;nv&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x7fff6c0f131c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Deref of &lt;span class=&#34;nv&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;示例中，变量y借用了变量x拥有的数据，而x仍然拥有该数据的所有权。我们称之为y对x的引用。当y超出范围时，借用关系结束，由于y没有该数据的所有权，因此该数据不会被销毁。要借用数据，请使用运算符&amp;amp;进行引用。{: p}代表输出以十六进制表示的内存位置。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;在上面的代码示例中，“*”（即星号）是对引用变量进行操作的解引用运算符。这个解引用运算符允许我们获取指针指向的内存地址中的数据。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;下面是函数通过借用，在不获取所有权的情况下使用数据的示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;vec!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;print_vector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// can  access v here as references can&amp;#39;t move the value
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt;  &lt;span class=&#34;nf&#34;&gt;print_vector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;: &lt;span class=&#34;kp&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Vec&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;i32&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Inside print_vector  function &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{:?}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们将引用 (&amp;amp;v)（又名pass-by-reference）而非所有权（即pass-by-value）传递给print_vector函数。因此在main函数中调用print_vector函数后，我们就可以访问v了。&lt;/p&gt;
+&lt;h3 id=&#34;1-通过解引用运算符跟踪指针的指向数据&#34;&gt;&lt;a href=&#34;#1-%e9%80%9a%e8%bf%87%e8%a7%a3%e5%bc%95%e7%94%a8%e8%bf%90%e7%ae%97%e7%ac%a6%e8%b7%9f%e8%b8%aa%e6%8c%87%e9%92%88%e7%9a%84%e6%8c%87%e5%90%91%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. 通过解引用运算符跟踪指针的指向数据
+&lt;/h3&gt;&lt;p&gt;如前所述，引用是指针的一种类型，可以将指针视为指向存储在其他位置的数据的箭头。下面是一个示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;assert_eq!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;assert_eq!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在上面的代码中，我们创建了一个对i32类型数据的引用，然后使用解引用运算符跟踪被引用的数据。变量x存储一个i32类型的值5。我们将y设置为对x的引用。&lt;/p&gt;
+&lt;p&gt;下面是栈内存的状态：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s4.51cto.com/oss/202208/11/d1aae7f42eaf53317737648ca45e2a44f552f7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;栈内存状态&lt;/p&gt;
+&lt;p&gt;我们可以断言x等于5。然而，假如我们需要对y中的数据进行断言，就必须使用*y来跟踪它所引用的数据（因此在这里解引用）。一旦我们解开了y的引用，就可以访问y指向的整型数据，然后将其与5进行比较。&lt;/p&gt;
+&lt;p&gt;如果我们尝试写assert_eq! (5, y); 就会得到以下编译错误提示：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;E0277&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:  can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t compare &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;integer&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; with &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;integer&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --&amp;gt; src/main.rs:11:5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     assert_eq!&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;5, y&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      ^^^^^^^^^^^^^^^^ no implementation &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;integer&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;integer&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;左右滑动查看完整代码由于它们是不同的数据类型，因此无法对数字和数字的引用进行比较。所以，我们必须通过解引用运算符来跟踪其指向的真实数据。&lt;/p&gt;
+&lt;h3 id=&#34;2-默认情况下引用是不可变的&#34;&gt;&lt;a href=&#34;#2-%e9%bb%98%e8%ae%a4%e6%83%85%e5%86%b5%e4%b8%8b%e5%bc%95%e7%94%a8%e6%98%af%e4%b8%8d%e5%8f%af%e5%8f%98%e7%9a%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. 默认情况下，引用是不可变的
+&lt;/h3&gt;&lt;p&gt;默认情况下，引用和变量一样是不可变的——可以通过mut使其可变，但前提是它的所有者也是可变的：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mut&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mut&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;不可变引用也被称为共享引用，而可变引用也被称为独占引用。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;我们观察下面的案例。我们赋予对引用的只读权限，因为我们使用的是运算符&amp;amp;而非&amp;amp;mut。即使源变量n是可变的，ref_to_n和another_ref_to_n也不是可变的，因为它们只是n借用，并没有n的所有权。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mut&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ref_to_n&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;another_ref_to_n&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;借用检查器将抛出以下错误：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;E0596&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:  cannot borrow &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;x&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; as mutable, as it is not declared as mutable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --&amp;gt; src/main.rs:4:9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 5&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      - help: consider changing this to be mutable: &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;mut x&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;mut x&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          ^^^^^^ cannot borrow as mutable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;3-借用规则&#34;&gt;&lt;a href=&#34;#3-%e5%80%9f%e7%94%a8%e8%a7%84%e5%88%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3. 借用规则
+&lt;/h3&gt;&lt;p&gt;有人可能会有疑问，为什么有些情况下开发人员更倾向于使用move而非借用。如果这是关键点，那么为什么Rust还会有move语义，以及为什么不将默认机制设置为借用？根本原因是在Rust中借用的使用是受到限制的。只有在特定情况下才允许借用。&lt;/p&gt;
+&lt;p&gt;借用有自己的一套规则，借用检查器在编译期间会严格执行这些规则。制定这些规则是为了防止数据竞争。规则如下：&lt;/p&gt;
+&lt;p&gt;（1）借用者的作用域不能超过所有者的作用域。&lt;/p&gt;
+&lt;p&gt;（2）不可变引用的数量不受限制，但可变引用只能存在一个。&lt;/p&gt;
+&lt;p&gt;（3）所有者可以拥有可变引用或不可变引用，但不能同时拥有两者。&lt;/p&gt;
+&lt;p&gt;（4）所有引用必须有效（不能为空）。&lt;/p&gt;
+&lt;h3 id=&#34;4-引用的作用域不能超过所有者的作用域&#34;&gt;&lt;a href=&#34;#4-%e5%bc%95%e7%94%a8%e7%9a%84%e4%bd%9c%e7%94%a8%e5%9f%9f%e4%b8%8d%e8%83%bd%e8%b6%85%e8%bf%87%e6%89%80%e6%9c%89%e8%80%85%e7%9a%84%e4%bd%9c%e7%94%a8%e5%9f%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4. 引用的作用域不能超过所有者的作用域
+&lt;/h3&gt;&lt;p&gt;引用的作用域必须包含在所有者的作用域内。否则，可能会引用一个已释放的数据，从而导致UAF错误。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;上面的示例程序尝试在所有者y超出作用域后取消x对y的引用。Rust阻止了这种UAF错误。&lt;/p&gt;
+&lt;h3 id=&#34;5-可以有很多不可变引用但只允许有一个可变引用&#34;&gt;&lt;a href=&#34;#5-%e5%8f%af%e4%bb%a5%e6%9c%89%e5%be%88%e5%a4%9a%e4%b8%8d%e5%8f%af%e5%8f%98%e5%bc%95%e7%94%a8%e4%bd%86%e5%8f%aa%e5%85%81%e8%ae%b8%e6%9c%89%e4%b8%80%e4%b8%aa%e5%8f%af%e5%8f%98%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5. 可以有很多不可变引用，但只允许有一个可变引用
+&lt;/h3&gt;&lt;p&gt;特定数据可以拥有数量不受限制的不可变引用（又名共享引用），但只允许有一个可变引用（又名独占引用）。这条规则的存在是为了消除数据竞争。当两个引用同时指向一个内存位置，至少有一个在执行写操作，且它们的动作没有进行同步时，这就被称为数据竞争。&lt;/p&gt;
+&lt;p&gt;我们可以有数量不受限制的不可变引用，因为它们不会更改数据。另一方面，借用机制限制我们同一时刻只能拥有一个可变引用（&amp;amp;mut），目的是降低在编译时出现数据竞争的可能性。&lt;/p&gt;
+&lt;p&gt;我们看看如下示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mut&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mut&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mut&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;上面的代码尝试为s创建两个可变引用（r1 和 r2），这最终会执行失败：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;E0499&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:  cannot borrow &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;s&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; as mutable more than once at a &lt;span class=&#34;nb&#34;&gt;time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --&amp;gt; src/main.rs:6:14
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     &lt;span class=&#34;nb&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;r1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;mut s&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;              ------ first mutable borrow  occurs here
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     &lt;span class=&#34;nb&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;r2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;mut s&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;              ^^^^^^ second mutable borrow  occurs here
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     println!&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;{}, {}&amp;#34;&lt;/span&gt;, r1, r2&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                        -- first borrow later  used here
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结 
+&lt;/h2&gt;&lt;p&gt;希望本文能够澄清所有权和借用的概念。我还简单介绍了借用检查器，它是实现所有权和借用的基础。正如我在开头提到的，所有权是一个很有创意的想法，即使对于经验丰富的开发人员来说，初次接触也会很难理解其设计理念和使用方法，但是随着使用经验的增加，它就会成为开发人员得心应手的工具。这只是Rust如何增强内存安全的简要说明。我试图使这篇文章尽可能的易于理解，同时提供足够的信息来掌握这些概念。有关Rust所有权特性的更多详细信息，请查看他们的在线文档。&lt;/p&gt;
+&lt;p&gt;当开发项目对性能要求高时，Rust是一个不错的选择，它解决了困扰其他语言的很多痛点，并以陡峭的学习曲线向前迈出了重要的一步。Rust连续第六年成为Stack Overflow最受欢迎的语言，这意味着很多人将会有机会使用它并爱上了它。Rust社区正在持续发展壮大。随着我们走向未来，Rust似乎正走在无限光明的道路上。祝大家学习愉快！&lt;/p&gt;
+&lt;p&gt;原文链接：https://hackernoon.com/rusts-ownership-and-borrowing-enforce-memory-safety&lt;/p&gt;
+&lt;h3 id=&#34;译者介绍&#34;&gt;&lt;a href=&#34;#%e8%af%91%e8%80%85%e4%bb%8b%e7%bb%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;译者介绍
+&lt;/h3&gt;&lt;p&gt;仇凯，51CTO社区编辑，目前就职于北京宅急送快运股份有限公司，职位为信息安全工程师。主要负责公司信息安全规划和建设（等保，ISO27001），日常主要工作内容为安全方案制定和落地、内部安全审计和风险评估以及管理。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;本文原载于 &lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;巴巴变的博客&lt;/a&gt;，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
