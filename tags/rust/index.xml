@@ -155,8 +155,8 @@ Y。&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;图2：Rust有优秀的内存管理机制，并提供很好的安全性&lt;/p&gt;
-&lt;p&gt;**Rust采用了与上述两种方案不同的方法，即基于规则组的所有权模型，编译器验证这些规则组来确保内存安全。**只有在完全满足这些规则的情况下，程序才会被编译成功。事实上，所有权用编译时的内存安全检查替代运行时的垃圾回收机制。
-&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-67e3ouk.avif?imageSlim&#34;
+&lt;p&gt;**Rust采用了与上述两种方案不同的方法，即基于规则组的所有权模型，编译器验证这些规则组来确保内存安全。**只有在完全满足这些规则的情况下，程序才会被编译成功。事实上，所有权用编译时的内存安全检查替代运行时的垃圾回收机制。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-67e3ouk.avif?imageSlim&#34;
 	
 	
 	
