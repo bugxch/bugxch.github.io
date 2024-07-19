@@ -325,18 +325,15 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;For more  information about this error, try &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;rustc --explain E0382&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;由于Rust在let s2 = s1操作执行之后将s1的内存所有权转移给了s2，因此它认为s1是无效的。这是s1失效后的内存表示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://s4.51cto.com/oss/202208/11/b66bb0b19a708de47a7757ed639c2a7ab80e9c.png&#34;
+&lt;/div&gt;&lt;p&gt;由于Rust在let s2 = s1操作执行之后将s1的内存所有权转移给了s2，因此它认为s1是无效的。这是s1失效后的内存表示：
+&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-ink3or8.jpeg?imageSlim&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;图片&#34;
 	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;图8：s1无效后的内存表示&lt;/p&gt;
+&gt;图8：s1无效后的内存表示&lt;/p&gt;
 &lt;p&gt;当只有s2保持有效时，就会在其超出范围时执行内存释放操作。因此，Rust消除了双重释放错误出现的可能性。这是非常优秀的解决方案！&lt;/p&gt;
 &lt;h2 id=&#34;clone&#34;&gt;&lt;a href=&#34;#clone&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Clone
 &lt;/h2&gt;&lt;p&gt;如果我们需要深度复制字符串的堆数据，而不仅仅是栈数据，可以使用一种叫做clone的方法。以下是克隆方法的使用示例：&lt;/p&gt;
@@ -352,18 +349,15 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;s1  = &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;, s2 = &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Clone方法确实将堆数据复制到s2中了。操作非常完美，下图是示例：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://s6.51cto.com/oss/202208/11/c526fcd044b441f4005033eb10aaab2de4611a.png&#34;
+&lt;/div&gt;&lt;p&gt;Clone方法确实将堆数据复制到s2中了。操作非常完美，下图是示例：
+&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-0jl3o5q.jpeg?imageSlim&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;图片&#34;
 	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;图9：clone方法确实将堆数据复制给s2&lt;/p&gt;
+&gt;图9：clone方法确实将堆数据复制给s2&lt;/p&gt;
 &lt;p&gt;然而clone方法有一个严重的后果；它只复制数据，却不会同步两者之间的任何更改。通常情况下，进行clone应当审慎评估其效果和影响。&lt;/p&gt;
 &lt;p&gt;至此，我们详细了解了copy、move和clone的技术原理。下面我们将详细地了解所有权规则。&lt;/p&gt;
 &lt;h2 id=&#34;所有权规则1&#34;&gt;&lt;a href=&#34;#%e6%89%80%e6%9c%89%e6%9d%83%e8%a7%84%e5%88%991&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;所有权规则1
@@ -395,17 +389,14 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;我们将10分配给变量x；换句话说，变量x拥有10。然后我们将x分配给y，同时将其分配给z。我们知道同一时间只能存在一个所有者，但没有引发任何错误。所以在此示例中，每次当我们将x分配给一个新变量时，编译器都会对其进行复制。&lt;/p&gt;
 &lt;p&gt;栈帧如下：x = 10，y = 10 和 z = 10。然而，真实情况似乎与我们的设想（x = 10、y = x 和 z = x）不一样。我们知道，x是10的唯一所有者，y和z都不能拥有这个值。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://s7.51cto.com/oss/202208/11/01ab126793efb854e13560f9b251d277a97ba0.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-30n3o8p.jpeg?imageSlim&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;图片&#34;
 	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;图10：编译器将x复制到y和z&lt;/p&gt;
+&gt;图10：编译器将x复制到y和z&lt;/p&gt;
 &lt;p&gt;就像前文所述，由于复制栈内存高效便捷，因此具有固定长度的原始类型被称为拥有复制语义特性，而复杂类型就只是移动所有权。因此，在这种情况下，编译器执行了复制操作。&lt;/p&gt;
 &lt;p&gt;这种情况下，变量绑定的行为与其他的编程语言类似。为了阐释所有权规则，我们需要复杂的数据类型。&lt;/p&gt;
 &lt;p&gt;我们通过观察数据在堆上的存储方式，来学习Rust如何判断需要清理哪些数据；字符串类型是就是一个很好的例子。我们将聚焦于字符串类型所有权相关的行为；这些原则也适用于其他复杂的数据类型。&lt;/p&gt;
@@ -455,18 +446,15 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;println!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;, world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Won&amp;#39;t compile. The value of s1  has already been dropped.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在将s1分配给s2之后（在let s2 = s1赋值语句中），s1的值就被释放了。因此，赋值语句执行后，s1就失效了。S1被释放后的内存状态：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://s4.51cto.com/oss/202208/11/e5c15ad96b1a59488e76960f75666ad251d0aa.png&#34;
+&lt;/div&gt;&lt;p&gt;在将s1分配给s2之后（在let s2 = s1赋值语句中），s1的值就被释放了。因此，赋值语句执行后，s1就失效了。S1被释放后的内存状态：
+&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-iko3ocr.jpeg?imageSlim&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;图片&#34;
 	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;图11：s1被释放后的内存状态&lt;/p&gt;
+&gt;图11：s1被释放后的内存状态&lt;/p&gt;
 &lt;h2 id=&#34;所有权如何变动&#34;&gt;&lt;a href=&#34;#%e6%89%80%e6%9c%89%e6%9d%83%e5%a6%82%e4%bd%95%e5%8f%98%e5%8a%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;所有权如何变动
 &lt;/h2&gt;&lt;p&gt;在Rust程序中，有三种方式可以在变量之间转移所有权：&lt;/p&gt;
 &lt;p&gt;（1）将一个变量的值分配给另一个变量（前文已经讨论过）。
@@ -694,18 +682,15 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在上面的代码中，我们创建了一个对i32类型数据的引用，然后使用解引用运算符跟踪被引用的数据。变量x存储一个i32类型的值5。我们将y设置为对x的引用。&lt;/p&gt;
-&lt;p&gt;下面是栈内存的状态：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://s4.51cto.com/oss/202208/11/d1aae7f42eaf53317737648ca45e2a44f552f7.png&#34;
+&lt;p&gt;下面是栈内存的状态：
+&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-4mq3ox6.jpeg?imageSlim&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;图片&#34;
 	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;栈内存状态&lt;/p&gt;
+&gt;栈内存状态&lt;/p&gt;
 &lt;p&gt;我们可以断言x等于5。然而，假如我们需要对y中的数据进行断言，就必须使用*y来跟踪它所引用的数据（因此在这里解引用）。一旦我们解开了y的引用，就可以访问y指向的整型数据，然后将其与5进行比较。&lt;/p&gt;
 &lt;p&gt;如果我们尝试写assert_eq! (5, y); 就会得到以下编译错误提示：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

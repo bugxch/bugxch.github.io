@@ -10,7 +10,7 @@
 <meta property='og:description' content="这是一篇转载的文章，学习rust时候很多地方说不清楚什么时变量绑定和借用，这篇翻译的文章给说清楚了。 如果不理解背后的设计理念和工作原理，那么">
 <meta property='og:url' content='https://blog.bugxch.top/p/%E7%90%86%E8%A7%A3rust%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8%E6%A6%82%E5%BF%B5%E8%BD%AC%E8%BD%BD/'>
 <meta property='og:site_name' content='巴巴变的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='rust' /><meta property='article:tag' content='所有权' /><meta property='article:tag' content='借用' /><meta property='article:published_time' content='2024-07-19T20:44:30&#43;08:00'/><meta property='article:modified_time' content='2024-07-19T22:11:05&#43;00:00'/><meta property='og:image' content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/lake-7838004_1280.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='rust' /><meta property='article:tag' content='所有权' /><meta property='article:tag' content='借用' /><meta property='article:published_time' content='2024-07-19T20:44:30&#43;08:00'/><meta property='article:modified_time' content='2024-07-19T22:14:03&#43;00:00'/><meta property='og:image' content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/lake-7838004_1280.jpg' />
 <meta name="twitter:title" content="理解Rust中的“所有权”和“借用”概念（转载）">
 <meta name="twitter:description" content="这是一篇转载的文章，学习rust时候很多地方说不清楚什么时变量绑定和借用，这篇翻译的文章给说清楚了。 如果不理解背后的设计理念和工作原理，那么"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/lake-7838004_1280.jpg' />
@@ -683,18 +683,15 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span><span class="line"><span class="cl">For more  information about this error, try <span class="sb">`</span>rustc --explain E0382<span class="sb">`</span>.
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>由于Rust在let s2 = s1操作执行之后将s1的内存所有权转移给了s2，因此它认为s1是无效的。这是s1失效后的内存表示：</p>
-<p><img src="https://s4.51cto.com/oss/202208/11/b66bb0b19a708de47a7757ed639c2a7ab80e9c.png"
+</div><p>由于Rust在let s2 = s1操作执行之后将s1的内存所有权转移给了s2，因此它认为s1是无效的。这是s1失效后的内存表示：
+<img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-ink3or8.jpeg?imageSlim"
 	
 	
 	
 	loading="lazy"
 	
-		alt="图片"
 	
-	
-></p>
-<p>图8：s1无效后的内存表示</p>
+>图8：s1无效后的内存表示</p>
 <p>当只有s2保持有效时，就会在其超出范围时执行内存释放操作。因此，Rust消除了双重释放错误出现的可能性。这是非常优秀的解决方案！</p>
 <h2 id="clone"><a href="#clone" class="header-anchor"></a>Clone
 </h2><p>如果我们需要深度复制字符串的堆数据，而不仅仅是栈数据，可以使用一种叫做clone的方法。以下是克隆方法的使用示例：</p>
@@ -710,18 +707,15 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;s1  = </span><span class="si">{}</span><span class="s">, s2 = </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>Clone方法确实将堆数据复制到s2中了。操作非常完美，下图是示例：</p>
-<p><img src="https://s6.51cto.com/oss/202208/11/c526fcd044b441f4005033eb10aaab2de4611a.png"
+</div><p>Clone方法确实将堆数据复制到s2中了。操作非常完美，下图是示例：
+<img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-0jl3o5q.jpeg?imageSlim"
 	
 	
 	
 	loading="lazy"
 	
-		alt="图片"
 	
-	
-></p>
-<p>图9：clone方法确实将堆数据复制给s2</p>
+>图9：clone方法确实将堆数据复制给s2</p>
 <p>然而clone方法有一个严重的后果；它只复制数据，却不会同步两者之间的任何更改。通常情况下，进行clone应当审慎评估其效果和影响。</p>
 <p>至此，我们详细了解了copy、move和clone的技术原理。下面我们将详细地了解所有权规则。</p>
 <h2 id="所有权规则1"><a href="#%e6%89%80%e6%9c%89%e6%9d%83%e8%a7%84%e5%88%991" class="header-anchor"></a>所有权规则1
@@ -753,17 +747,14 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </div>
 </div><p>我们将10分配给变量x；换句话说，变量x拥有10。然后我们将x分配给y，同时将其分配给z。我们知道同一时间只能存在一个所有者，但没有引发任何错误。所以在此示例中，每次当我们将x分配给一个新变量时，编译器都会对其进行复制。</p>
 <p>栈帧如下：x = 10，y = 10 和 z = 10。然而，真实情况似乎与我们的设想（x = 10、y = x 和 z = x）不一样。我们知道，x是10的唯一所有者，y和z都不能拥有这个值。</p>
-<p><img src="https://s7.51cto.com/oss/202208/11/01ab126793efb854e13560f9b251d277a97ba0.png"
+<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-30n3o8p.jpeg?imageSlim"
 	
 	
 	
 	loading="lazy"
 	
-		alt="图片"
 	
-	
-></p>
-<p>图10：编译器将x复制到y和z</p>
+>图10：编译器将x复制到y和z</p>
 <p>就像前文所述，由于复制栈内存高效便捷，因此具有固定长度的原始类型被称为拥有复制语义特性，而复杂类型就只是移动所有权。因此，在这种情况下，编译器执行了复制操作。</p>
 <p>这种情况下，变量绑定的行为与其他的编程语言类似。为了阐释所有权规则，我们需要复杂的数据类型。</p>
 <p>我们通过观察数据在堆上的存储方式，来学习Rust如何判断需要清理哪些数据；字符串类型是就是一个很好的例子。我们将聚焦于字符串类型所有权相关的行为；这些原则也适用于其他复杂的数据类型。</p>
@@ -813,18 +804,15 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">, world!&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">s1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Won&#39;t compile. The value of s1  has already been dropped.
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>在将s1分配给s2之后（在let s2 = s1赋值语句中），s1的值就被释放了。因此，赋值语句执行后，s1就失效了。S1被释放后的内存状态：</p>
-<p><img src="https://s4.51cto.com/oss/202208/11/e5c15ad96b1a59488e76960f75666ad251d0aa.png"
+</div><p>在将s1分配给s2之后（在let s2 = s1赋值语句中），s1的值就被释放了。因此，赋值语句执行后，s1就失效了。S1被释放后的内存状态：
+<img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-iko3ocr.jpeg?imageSlim"
 	
 	
 	
 	loading="lazy"
 	
-		alt="图片"
 	
-	
-></p>
-<p>图11：s1被释放后的内存状态</p>
+>图11：s1被释放后的内存状态</p>
 <h2 id="所有权如何变动"><a href="#%e6%89%80%e6%9c%89%e6%9d%83%e5%a6%82%e4%bd%95%e5%8f%98%e5%8a%a8" class="header-anchor"></a>所有权如何变动
 </h2><p>在Rust程序中，有三种方式可以在变量之间转移所有权：</p>
 <p>（1）将一个变量的值分配给另一个变量（前文已经讨论过）。
@@ -1052,18 +1040,15 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>在上面的代码中，我们创建了一个对i32类型数据的引用，然后使用解引用运算符跟踪被引用的数据。变量x存储一个i32类型的值5。我们将y设置为对x的引用。</p>
-<p>下面是栈内存的状态：</p>
-<p><img src="https://s4.51cto.com/oss/202208/11/d1aae7f42eaf53317737648ca45e2a44f552f7.png"
+<p>下面是栈内存的状态：
+<img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-4mq3ox6.jpeg?imageSlim"
 	
 	
 	
 	loading="lazy"
 	
-		alt="图片"
 	
-	
-></p>
-<p>栈内存状态</p>
+>栈内存状态</p>
 <p>我们可以断言x等于5。然而，假如我们需要对y中的数据进行断言，就必须使用*y来跟踪它所引用的数据（因此在这里解引用）。一旦我们解开了y的引用，就可以访问y指向的整型数据，然后将其与5进行比较。</p>
 <p>如果我们尝试写assert_eq! (5, y); 就会得到以下编译错误提示：</p>
 <div class="highlight"><div class="chroma">
