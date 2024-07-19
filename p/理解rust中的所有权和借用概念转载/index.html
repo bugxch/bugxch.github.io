@@ -10,7 +10,7 @@
 <meta property='og:description' content="这是一篇转载的文章，学习rust时候很多地方说不清楚什么时变量绑定和借用，这篇翻译的文章给说清楚了。 如果不理解背后的设计理念和工作原理，那么">
 <meta property='og:url' content='https://blog.bugxch.top/p/%E7%90%86%E8%A7%A3rust%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8%E6%A6%82%E5%BF%B5%E8%BD%AC%E8%BD%BD/'>
 <meta property='og:site_name' content='巴巴变的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='rust' /><meta property='article:tag' content='所有权' /><meta property='article:tag' content='借用' /><meta property='article:published_time' content='2024-07-19T20:44:30&#43;08:00'/><meta property='article:modified_time' content='2024-07-19T20:44:30&#43;08:00'/><meta property='og:image' content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/lake-7838004_1280.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='rust' /><meta property='article:tag' content='所有权' /><meta property='article:tag' content='借用' /><meta property='article:published_time' content='2024-07-19T20:44:30&#43;08:00'/><meta property='article:modified_time' content='2024-07-19T22:03:03&#43;00:00'/><meta property='og:image' content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/lake-7838004_1280.jpg' />
 <meta name="twitter:title" content="理解Rust中的“所有权”和“借用”概念（转载）">
 <meta name="twitter:description" content="这是一篇转载的文章，学习rust时候很多地方说不清楚什么时变量绑定和借用，这篇翻译的文章给说清楚了。 如果不理解背后的设计理念和工作原理，那么"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://image-1258996033.cos.ap-shanghai.myqcloud.com/lake-7838004_1280.jpg' />
@@ -356,7 +356,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 25 分钟
+                    阅读时长: 24 分钟
                 </time>
             </div>
         
@@ -513,14 +513,12 @@ Y。</p>
 	
 ></p>
 <p>图2：Rust有优秀的内存管理机制，并提供很好的安全性</p>
-<p>**Rust采用了与上述两种方案不同的方法，即基于规则组的所有权模型，编译器验证这些规则组来确保内存安全。**只有在完全满足这些规则的情况下，程序才会被编译成功。事实上，所有权用编译时的内存安全检查替代运行时的垃圾回收机制。</p>
-<p><img src="https://s8.51cto.com/oss/202208/11/875274583f81dea3ee7788e5553bee071d32cf.png"
+<p>**Rust采用了与上述两种方案不同的方法，即基于规则组的所有权模型，编译器验证这些规则组来确保内存安全。**只有在完全满足这些规则的情况下，程序才会被编译成功。事实上，所有权用编译时的内存安全检查替代运行时的垃圾回收机制。
+<img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-67e3ouk.avif?imageSlim"
 	
 	
 	
 	loading="lazy"
-	
-		alt="图片"
 	
 	
 ></p>
@@ -528,17 +526,15 @@ Y。</p>
 <h1 id="所有权"><a href="#%e6%89%80%e6%9c%89%e6%9d%83" class="header-anchor"></a>所有权 
 </h1><p>至此，我们对数据在内存中的存储方式有了基本的了解。现在我们来认真研究下Rust中的所有权模型。<strong>Rust最大的特点就是所有权模型，它在编译时就保障了内存的安全性。</strong></p>
 <p>首先，让我们从字面意义来理解“所有权”。所有权是合法“拥有”和“控制”“某物”的一种状态。话虽如此，我们必须明确谁是所有者以及所有者能够拥有和控制什么。在Rust中，每个值都有对应的变量，变量就是值的所有者。简而言之，变量就是所有者，变量的值就是所有者能够拥有和控制的东西。</p>
-<p><img src="https://s2.51cto.com/oss/202208/11/f6c39b33162c8247a74474fe2369e6e7d21638.png"
+<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/TeUeng3kzFYuzMXViMZNxwv7aKs2-zpf3oxn.avif?imageSlim"
 	
 	
 	
 	loading="lazy"
 	
-		alt="图片"
 	
-	
-></p>
-<p>图3：变量绑定展示所有者及其值/资源</p>
+>
+图3：变量绑定展示所有者及其值/资源</p>
 <p>在所有权模型中，一旦变量超出作用域，内存就会被自动释放。当值超出作用域或结束其生命周期时，其析构函数就会被调用。析构函数（尤其是自动析构函数）是一个函数，它通过从程序中删除值的引用痕迹来释放内存。</p>
 <h2 id="借用检查器"><a href="#%e5%80%9f%e7%94%a8%e6%a3%80%e6%9f%a5%e5%99%a8" class="header-anchor"></a>借用检查器
 </h2><p>Rust通过借用检查器（一种静态分析器）实现所有权。借用检查器是Rust编译器中的一个组件，它跟踪整个程序中数据的使用位置，并且根据所有权规则，它能够识别需要执行释放的数据的位置。此外，借用检查器可以确保在运行时，已释放的内存永远不会被访问。它甚至消除了因为数据出现同时突变（或修改）而引起的竞争问题。</p>
@@ -1231,7 +1227,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </div><h1 id="总结"><a href="#%e6%80%bb%e7%bb%93" class="header-anchor"></a>总结
 </h1><p>希望本文能够澄清所有权和借用的概念。我还简单介绍了借用检查器，它是实现所有权和借用的基础。正如我在开头提到的，所有权是一个很有创意的想法，即使对于经验丰富的开发人员来说，初次接触也会很难理解其设计理念和使用方法，但是随着使用经验的增加，它就会成为开发人员得心应手的工具。这只是Rust如何增强内存安全的简要说明。我试图使这篇文章尽可能的易于理解，同时提供足够的信息来掌握这些概念。有关Rust所有权特性的更多详细信息，请查看他们的在线文档。</p>
 <p>当开发项目对性能要求高时，Rust是一个不错的选择，它解决了困扰其他语言的很多痛点，并以陡峭的学习曲线向前迈出了重要的一步。Rust连续第六年成为Stack Overflow最受欢迎的语言，这意味着很多人将会有机会使用它并爱上了它。Rust社区正在持续发展壮大。随着我们走向未来，Rust似乎正走在无限光明的道路上。祝大家学习愉快！</p>
-<p>原文链接：https://hackernoon.com/rusts-ownership-and-borrowing-enforce-memory-safety</p>
+<p>原文链接 <a class="link" href="https://hackernoon.com/rusts-ownership-and-borrowing-enforce-memory-safety"  target="_blank" rel="noopener"
+    >Rust’s Ownership and Borrowing Enforce Memory Safety | HackerNoon</a></p>
 <h1 id="译者介绍"><a href="#%e8%af%91%e8%80%85%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>译者介绍
 </h1><p>仇凯，51CTO社区编辑，目前就职于北京宅急送快运股份有限公司，职位为信息安全工程师。主要负责公司信息安全规划和建设（等保，ISO27001），日常主要工作内容为安全方案制定和落地、内部安全审计和风险评估以及管理。</p>
 <hr>
@@ -1266,7 +1263,19 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2024/07/19
+        </span>
+    </section></footer>
 
 
     
