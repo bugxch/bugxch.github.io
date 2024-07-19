@@ -273,9 +273,8 @@
     <li><a href="#所有权规则2">所有权规则2</a></li>
     <li><a href="#所有权规则3">所有权规则3</a></li>
     <li><a href="#所有权如何变动">所有权如何变动</a></li>
-  </ol>
-
-  <ol>
+    <li><a href="#将值传递给函数">将值传递给函数</a></li>
+    <li><a href="#从函数返回值">从函数返回值</a></li>
     <li><a href="#借用">借用</a>
       <ol>
         <li><a href="#通过解引用运算符跟踪指针的指向数据">通过解引用运算符跟踪指针的指向数据</a></li>
@@ -285,7 +284,6 @@
         <li><a href="#可以有很多不可变引用但只允许有一个可变引用">可以有很多不可变引用，但只允许有一个可变引用</a></li>
       </ol>
     </li>
-    <li><a href="#总结">总结 </a></li>
   </ol>
 </nav>
         </div>
@@ -849,8 +847,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 <p>（1）将一个变量的值分配给另一个变量（前文已经讨论过）。
 （2）将值传递给函数。
 （3）从函数返回值。</p>
-<h1 id="将值传递给函数"><a href="#%e5%b0%86%e5%80%bc%e4%bc%a0%e9%80%92%e7%bb%99%e5%87%bd%e6%95%b0" class="header-anchor"></a>将值传递给函数
-</h1><p>将值传递给函数与为变量赋值有相似的语义。就像赋值一样，将变量传递给函数会导致变量被移动或复制。下面的例子向我们展示了复制和移动：</p>
+<h2 id="将值传递给函数"><a href="#%e5%b0%86%e5%80%bc%e4%bc%a0%e9%80%92%e7%bb%99%e5%87%bd%e6%95%b0" class="header-anchor"></a>将值传递给函数
+</h2><p>将值传递给函数与为变量赋值有相似的语义。就像赋值一样，将变量传递给函数会导致变量被移动或复制。下面的例子向我们展示了复制和移动：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -900,8 +898,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果我们在调用move_ownership之后尝试使用s，Rust会抛出编译错误。</p>
-<h1 id="从函数返回值"><a href="#%e4%bb%8e%e5%87%bd%e6%95%b0%e8%bf%94%e5%9b%9e%e5%80%bc" class="header-anchor"></a>从函数返回值
-</h1><p>从函数返回值同样可以转移所有权。下面是一个包含返回值的函数示例，其注释与上一个示例中的注释相同。</p>
+<h2 id="从函数返回值"><a href="#%e4%bb%8e%e5%87%bd%e6%95%b0%e8%bf%94%e5%9b%9e%e5%80%bc" class="header-anchor"></a>从函数返回值
+</h2><p>从函数返回值同样可以转移所有权。下面是一个包含返回值的函数示例，其注释与上一个示例中的注释相同。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1230,8 +1228,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span><span class="line"><span class="cl">  <span class="p">|</span>                        -- first borrow later  used here
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="总结"><a href="#%e6%80%bb%e7%bb%93" class="header-anchor"></a>总结 
-</h2><p>希望本文能够澄清所有权和借用的概念。我还简单介绍了借用检查器，它是实现所有权和借用的基础。正如我在开头提到的，所有权是一个很有创意的想法，即使对于经验丰富的开发人员来说，初次接触也会很难理解其设计理念和使用方法，但是随着使用经验的增加，它就会成为开发人员得心应手的工具。这只是Rust如何增强内存安全的简要说明。我试图使这篇文章尽可能的易于理解，同时提供足够的信息来掌握这些概念。有关Rust所有权特性的更多详细信息，请查看他们的在线文档。</p>
+</div><h1 id="总结"><a href="#%e6%80%bb%e7%bb%93" class="header-anchor"></a>总结
+</h1><p>希望本文能够澄清所有权和借用的概念。我还简单介绍了借用检查器，它是实现所有权和借用的基础。正如我在开头提到的，所有权是一个很有创意的想法，即使对于经验丰富的开发人员来说，初次接触也会很难理解其设计理念和使用方法，但是随着使用经验的增加，它就会成为开发人员得心应手的工具。这只是Rust如何增强内存安全的简要说明。我试图使这篇文章尽可能的易于理解，同时提供足够的信息来掌握这些概念。有关Rust所有权特性的更多详细信息，请查看他们的在线文档。</p>
 <p>当开发项目对性能要求高时，Rust是一个不错的选择，它解决了困扰其他语言的很多痛点，并以陡峭的学习曲线向前迈出了重要的一步。Rust连续第六年成为Stack Overflow最受欢迎的语言，这意味着很多人将会有机会使用它并爱上了它。Rust社区正在持续发展壮大。随着我们走向未来，Rust似乎正走在无限光明的道路上。祝大家学习愉快！</p>
 <p>原文链接：https://hackernoon.com/rusts-ownership-and-borrowing-enforce-memory-safety</p>
 <h1 id="译者介绍"><a href="#%e8%af%91%e8%80%85%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>译者介绍
