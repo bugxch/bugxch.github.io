@@ -192,8 +192,8 @@ Y。&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;缓冲区溢出&lt;/strong&gt;：数据量超过内存缓冲区的存储容量时，就会出现缓冲区溢出，这通常会导致程序崩溃。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;在深入了解所有权规则之前，我们需要先了解copy、move和clone之间的区别。&lt;/p&gt;
-&lt;h2 id=&#34;copy&#34;&gt;&lt;a href=&#34;#copy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Copy
-&lt;/h2&gt;&lt;p&gt;长度固定的数据类型（尤其是原始类型）可以存储在栈中，并在其作用范围结束时清除数据释放内存。如果其他代码在其作用范围内需要相同数据的时候，还可以从栈中便捷的将该数据复制为一个新的独立变量。因为栈内存的复制非常高效便捷，因此具有固定长度的原始类型被称为拥有复制语义特性。它高效的创建了一个完美的复制品。&lt;/p&gt;
+&lt;h3 id=&#34;copy&#34;&gt;&lt;a href=&#34;#copy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Copy
+&lt;/h3&gt;&lt;p&gt;长度固定的数据类型（尤其是原始类型）可以存储在栈中，并在其作用范围结束时清除数据释放内存。如果其他代码在其作用范围内需要相同数据的时候，还可以从栈中便捷的将该数据复制为一个新的独立变量。因为栈内存的复制非常高效便捷，因此具有固定长度的原始类型被称为拥有复制语义特性。它高效的创建了一个完美的复制品。&lt;/p&gt;
 &lt;p&gt;值得注意的是，具有固定长度的原始类型实现了通过复制特征来进行复制。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -221,8 +221,8 @@ Y。&lt;/p&gt;
 &gt;
 图4：x和y都有自己的数据&lt;/p&gt;
 &lt;p&gt;复制数据会增加程序运行时间和内存消耗。因此，大块数据不适合使用复制。&lt;/p&gt;
-&lt;h2 id=&#34;move&#34;&gt;&lt;a href=&#34;#move&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Move
-&lt;/h2&gt;&lt;p&gt;在Rust术语中，“move”意味着将转移内存的所有权。想象一下堆上存储的数据类型有多复杂。&lt;/p&gt;
+&lt;h3 id=&#34;move&#34;&gt;&lt;a href=&#34;#move&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Move
+&lt;/h3&gt;&lt;p&gt;在Rust术语中，“move”意味着将转移内存的所有权。想象一下堆上存储的数据类型有多复杂。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -332,8 +332,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&
 	
 &gt;图8：s1无效后的内存表示&lt;/p&gt;
 &lt;p&gt;当只有s2保持有效时，就会在其超出范围时执行内存释放操作。因此，Rust消除了双重释放错误出现的可能性。这是非常优秀的解决方案！&lt;/p&gt;
-&lt;h2 id=&#34;clone&#34;&gt;&lt;a href=&#34;#clone&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Clone
-&lt;/h2&gt;&lt;p&gt;如果我们需要深度复制字符串的堆数据，而不仅仅是栈数据，可以使用一种叫做clone的方法。以下是克隆方法的使用示例：&lt;/p&gt;
+&lt;h3 id=&#34;clone&#34;&gt;&lt;a href=&#34;#clone&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Clone
+&lt;/h3&gt;&lt;p&gt;如果我们需要深度复制字符串的堆数据，而不仅仅是栈数据，可以使用一种叫做clone的方法。以下是克隆方法的使用示例：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -753,14 +753,13 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;借用规则&#34;&gt;&lt;a href=&#34;#%e5%80%9f%e7%94%a8%e8%a7%84%e5%88%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;借用规则
-&lt;/h3&gt;&lt;p&gt;有人可能会有疑问，为什么有些情况下开发人员更倾向于使用move而非借用。如果这是关键点，那么为什么Rust还会有move语义，以及为什么不将默认机制设置为借用？根本原因是在Rust中借用的使用是受到限制的。只有在特定情况下才允许借用。&lt;/p&gt;
-&lt;p&gt;借用有自己的一套规则，借用检查器在编译期间会严格执行这些规则。制定这些规则是为了防止数据竞争。规则如下：&lt;/p&gt;
-&lt;p&gt;（1）借用者的作用域不能超过所有者的作用域。&lt;/p&gt;
-&lt;p&gt;（2）不可变引用的数量不受限制，但可变引用只能存在一个。&lt;/p&gt;
-&lt;p&gt;（3）所有者可以拥有可变引用或不可变引用，但不能同时拥有两者。&lt;/p&gt;
-&lt;p&gt;（4）所有引用必须有效（不能为空）。&lt;/p&gt;
-&lt;h3 id=&#34;引用的作用域不能超过所有者的作用域&#34;&gt;&lt;a href=&#34;#%e5%bc%95%e7%94%a8%e7%9a%84%e4%bd%9c%e7%94%a8%e5%9f%9f%e4%b8%8d%e8%83%bd%e8%b6%85%e8%bf%87%e6%89%80%e6%9c%89%e8%80%85%e7%9a%84%e4%bd%9c%e7%94%a8%e5%9f%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;引用的作用域不能超过所有者的作用域
-&lt;/h3&gt;&lt;p&gt;引用的作用域必须包含在所有者的作用域内。否则，可能会引用一个已释放的数据，从而导致UAF错误。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;有人可能会有疑问，为什么有些情况下开发人员更倾向于使用move而非借用。如果这是关键点，那么为什么Rust还会有move语义，以及为什么不将默认机制设置为借用？根本原因是在Rust中借用的使用是受到限制的。只有在特定情况下才允许借用。借用有自己的一套规则，借用检查器在编译期间会严格执行这些规则。制定这些规则是为了防止数据竞争。规则如下：&lt;/p&gt;
+&lt;p&gt;（1）借用者的作用域不能超过所有者的作用域。
+（2）不可变引用的数量不受限制，但可变引用只能存在一个。
+（3）所有者可以拥有可变引用或不可变引用，但不能同时拥有两者。
+（4）所有引用必须有效（不能为空）。&lt;/p&gt;
+&lt;h4 id=&#34;引用的作用域不能超过所有者的作用域&#34;&gt;&lt;a href=&#34;#%e5%bc%95%e7%94%a8%e7%9a%84%e4%bd%9c%e7%94%a8%e5%9f%9f%e4%b8%8d%e8%83%bd%e8%b6%85%e8%bf%87%e6%89%80%e6%9c%89%e8%80%85%e7%9a%84%e4%bd%9c%e7%94%a8%e5%9f%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;引用的作用域不能超过所有者的作用域
+&lt;/h4&gt;&lt;p&gt;引用的作用域必须包含在所有者的作用域内。否则，可能会引用一个已释放的数据，从而导致UAF错误。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -780,10 +779,9 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。&
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;上面的示例程序尝试在所有者y超出作用域后取消x对y的引用。Rust阻止了这种UAF错误。&lt;/p&gt;
-&lt;h3 id=&#34;可以有很多不可变引用但只允许有一个可变引用&#34;&gt;&lt;a href=&#34;#%e5%8f%af%e4%bb%a5%e6%9c%89%e5%be%88%e5%a4%9a%e4%b8%8d%e5%8f%af%e5%8f%98%e5%bc%95%e7%94%a8%e4%bd%86%e5%8f%aa%e5%85%81%e8%ae%b8%e6%9c%89%e4%b8%80%e4%b8%aa%e5%8f%af%e5%8f%98%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;可以有很多不可变引用，但只允许有一个可变引用
-&lt;/h3&gt;&lt;p&gt;特定数据可以拥有数量不受限制的不可变引用（又名共享引用），但只允许有一个可变引用（又名独占引用）。这条规则的存在是为了消除数据竞争。当两个引用同时指向一个内存位置，至少有一个在执行写操作，且它们的动作没有进行同步时，这就被称为数据竞争。&lt;/p&gt;
-&lt;p&gt;我们可以有数量不受限制的不可变引用，因为它们不会更改数据。另一方面，借用机制限制我们同一时刻只能拥有一个可变引用（&amp;amp;mut），目的是降低在编译时出现数据竞争的可能性。&lt;/p&gt;
-&lt;p&gt;我们看看如下示例：&lt;/p&gt;
+&lt;h4 id=&#34;可以有很多不可变引用但只允许有一个可变引用&#34;&gt;&lt;a href=&#34;#%e5%8f%af%e4%bb%a5%e6%9c%89%e5%be%88%e5%a4%9a%e4%b8%8d%e5%8f%af%e5%8f%98%e5%bc%95%e7%94%a8%e4%bd%86%e5%8f%aa%e5%85%81%e8%ae%b8%e6%9c%89%e4%b8%80%e4%b8%aa%e5%8f%af%e5%8f%98%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;可以有很多不可变引用，但只允许有一个可变引用
+&lt;/h4&gt;&lt;p&gt;特定数据可以拥有数量不受限制的不可变引用（又名共享引用），但只允许有一个可变引用（又名独占引用）。这条规则的存在是为了消除数据竞争。当两个引用同时指向一个内存位置，至少有一个在执行写操作，且它们的动作没有进行同步时，这就被称为数据竞争。&lt;/p&gt;
+&lt;p&gt;我们可以有数量不受限制的不可变引用，因为它们不会更改数据。另一方面，借用机制限制我们同一时刻只能拥有一个可变引用（&amp;amp;mut），目的是降低在编译时出现数据竞争的可能性。我们看看如下示例：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
