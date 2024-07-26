@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] Rust权威指南 书名： Rust权威指南 作者： 史蒂夫·克拉伯尼克 卡罗尔·尼科尔斯 简介： 本书由Rust核心开发团队编写而成，由浅入深地探">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/rust%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] Rust权威指南 书名： Rust权威指南 作者： 史蒂夫·克拉伯尼克 卡罗尔·尼科尔斯 简介： 本书由Rust核心开发团队编写而成，由浅入深地探">
+<meta property='og:url' content='https://blog.bugxch.top/weread/rust%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] Rust权威指南 书名： Rust权威指南 作者： 史蒂夫·克拉伯尼克 卡罗尔·尼科尔斯 简介： 本书由Rust核心开发团队编写而成，由浅入深地探">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue8037ab3c5772f21a937200919ce7a89_163234_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#封面">封面</a></li>
+    <li><a href="#版权信息">版权信息</a></li>
+    <li><a href="#内容简介">内容简介</a></li>
+    <li><a href="#译者序">译者序</a></li>
+    <li><a href="#序">序</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#致谢">致谢</a></li>
+    <li><a href="#关于技术审校者">关于技术审校者</a></li>
+    <li><a href="#第1章-入门指南">第1章 入门指南</a>
+      <ol>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#hello-world">Hello, World!</a></li>
+        <li><a href="#hello-cargo">Hello, Cargo!</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第2章-编写一个猜数游戏">第2章 编写一个猜数游戏</a>
+      <ol>
+        <li><a href="#创建一个新的项目">创建一个新的项目</a></li>
+        <li><a href="#处理一次猜测">处理一次猜测</a></li>
+        <li><a href="#生成一个保密数字">生成一个保密数字</a></li>
+        <li><a href="#比较猜测数字与保密数字">比较猜测数字与保密数字</a></li>
+        <li><a href="#使用循环来实现多次猜测">使用循环来实现多次猜测</a></li>
+        <li><a href="#总结-1">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第3章-通用编程概念">第3章 通用编程概念</a>
+      <ol>
+        <li><a href="#变量与可变性">变量与可变性</a></li>
+        <li><a href="#数据类型">数据类型</a></li>
+        <li><a href="#函数">函数</a></li>
+        <li><a href="#注释">注释</a></li>
+        <li><a href="#控制流">控制流</a></li>
+        <li><a href="#总结-2">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第4章-认识所有权">第4章 认识所有权</a>
+      <ol>
+        <li><a href="#什么是所有权">什么是所有权</a></li>
+        <li><a href="#引用与借用">引用与借用</a></li>
+        <li><a href="#切片">切片</a></li>
+        <li><a href="#总结-3">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第5章-使用结构体来组织相关联的数据">第5章 使用结构体来组织相关联的数据</a>
+      <ol>
+        <li><a href="#定义并实例化结构体">定义并实例化结构体</a></li>
+        <li><a href="#一个使用结构体的示例程序">一个使用结构体的示例程序</a></li>
+        <li><a href="#方法">方法</a></li>
+        <li><a href="#总结-4">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第6章-枚举与模式匹配">第6章 枚举与模式匹配</a>
+      <ol>
+        <li><a href="#定义枚举">定义枚举</a></li>
+        <li><a href="#控制流运算符match">控制流运算符match</a></li>
+        <li><a href="#简单控制流if-let">简单控制流if let</a></li>
+        <li><a href="#总结-5">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第7章-使用包单元包及模块来管理日渐复杂的项目">第7章 使用包、单元包及模块来管理日渐复杂的项目</a>
+      <ol>
+        <li><a href="#包与单元包">包与单元包</a></li>
+        <li><a href="#通过定义模块来控制作用域及私有性">通过定义模块来控制作用域及私有性</a></li>
+        <li><a href="#用于在模块树中指明条目的路径">用于在模块树中指明条目的路径</a></li>
+        <li><a href="#用use关键字将路径导入作用域">用use关键字将路径导入作用域</a></li>
+        <li><a href="#将模块拆分为不同的文件">将模块拆分为不同的文件</a></li>
+        <li><a href="#总结-6">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第8章-通用集合类型">第8章 通用集合类型</a>
+      <ol>
+        <li><a href="#使用动态数组存储多个值">使用动态数组存储多个值</a></li>
+        <li><a href="#使用字符串存储utf-8编码的文本">使用字符串存储UTF-8编码的文本</a></li>
+        <li><a href="#在哈希映射中存储键值对">在哈希映射中存储键值对</a></li>
+        <li><a href="#总结-7">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第9章-错误处理">第9章 错误处理</a>
+      <ol>
+        <li><a href="#不可恢复错误与panic">不可恢复错误与panic!</a></li>
+        <li><a href="#可恢复错误与result">可恢复错误与Result</a></li>
+        <li><a href="#要不要使用panic">要不要使用panic!</a></li>
+        <li><a href="#总结-8">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第10章-泛型trait与生命周期">第10章 泛型、trait与生命周期</a>
+      <ol>
+        <li><a href="#通过将代码提取为函数来减少重复工作">通过将代码提取为函数来减少重复工作</a></li>
+        <li><a href="#泛型数据类型">泛型数据类型</a></li>
+        <li><a href="#trait定义共享行为">trait：定义共享行为</a></li>
+        <li><a href="#使用生命周期保证引用的有效性">使用生命周期保证引用的有效性</a></li>
+        <li><a href="#同时使用泛型参数trait约束与生命周期">同时使用泛型参数、trait约束与生命周期</a></li>
+        <li><a href="#总结-9">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第11章-编写自动化测试">第11章 编写自动化测试</a>
+      <ol>
+        <li><a href="#如何编写测试">如何编写测试</a></li>
+        <li><a href="#控制测试的运行方式">控制测试的运行方式</a></li>
+        <li><a href="#测试的组织结构">测试的组织结构</a></li>
+        <li><a href="#总结-10">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第12章-io项目编写一个命令行程序">第12章 I/O项目：编写一个命令行程序</a>
+      <ol>
+        <li><a href="#接收命令行参数">接收命令行参数</a></li>
+        <li><a href="#读取文件">读取文件</a></li>
+        <li><a href="#重构代码以增强模块化程度和错误处理能力">重构代码以增强模块化程度和错误处理能力</a></li>
+        <li><a href="#使用测试驱动开发来编写库功能">使用测试驱动开发来编写库功能</a></li>
+        <li><a href="#处理环境变量">处理环境变量</a></li>
+        <li><a href="#将错误提示信息打印到标准错误而不是标准输出">将错误提示信息打印到标准错误而不是标准输出</a></li>
+        <li><a href="#总结-11">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第13章-函数式语言特性迭代器与闭包">第13章 函数式语言特性：迭代器与闭包</a>
+      <ol>
+        <li><a href="#闭包能够捕获环境的匿名函数">闭包：能够捕获环境的匿名函数</a></li>
+        <li><a href="#使用迭代器处理元素序列">使用迭代器处理元素序列</a></li>
+        <li><a href="#改进io项目">改进I/O项目</a></li>
+        <li><a href="#比较循环和迭代器的性能">比较循环和迭代器的性能</a></li>
+        <li><a href="#总结-12">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第14章-进一步认识cargo及cratesio">第14章 进一步认识Cargo及crates.io</a>
+      <ol>
+        <li><a href="#使用发布配置来定制构建">使用发布配置来定制构建</a></li>
+        <li><a href="#将包发布到cratesio上">将包发布到crates.io上</a></li>
+        <li><a href="#cargo工作空间">Cargo工作空间</a></li>
+        <li><a href="#使用cargo-install从cratesio上安装可执行程序">使用cargo install从crates.io上安装可执行程序</a></li>
+        <li><a href="#使用自定义命令扩展cargo的功能">使用自定义命令扩展Cargo的功能</a></li>
+        <li><a href="#总结-13">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第15章-智能指针">第15章 智能指针</a>
+      <ol>
+        <li><a href="#使用boxt在堆上分配数据">使用Box<T>在堆上分配数据</a></li>
+        <li><a href="#通过deref-trait将智能指针视作常规引用">通过Deref trait将智能指针视作常规引用</a></li>
+        <li><a href="#借助drop-trait在清理时运行代码">借助Drop trait在清理时运行代码</a></li>
+        <li><a href="#基于引用计数的智能指针rct">基于引用计数的智能指针Rc<T></a></li>
+        <li><a href="#refcellt和内部可变性模式">RefCell<T>和内部可变性模式</a></li>
+        <li><a href="#循环引用会造成内存泄漏">循环引用会造成内存泄漏</a></li>
+        <li><a href="#总结-14">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第16章-无畏并发">第16章 无畏并发</a>
+      <ol>
+        <li><a href="#使用线程同时运行代码">使用线程同时运行代码</a></li>
+        <li><a href="#使用消息传递在线程间转移数据">使用消息传递在线程间转移数据</a></li>
+        <li><a href="#共享状态的并发">共享状态的并发</a></li>
+        <li><a href="#使用sync-trait和send-trait对并发进行扩展">使用Sync trait和Send trait对并发进行扩展</a></li>
+        <li><a href="#总结-15">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第17章-rust的面向对象编程特性">第17章 Rust的面向对象编程特性</a>
+      <ol>
+        <li><a href="#面向对象语言的特性">面向对象语言的特性</a></li>
+        <li><a href="#使用trait对象来存储不同类型的值">使用trait对象来存储不同类型的值</a></li>
+        <li><a href="#实现一种面向对象的设计模式">实现一种面向对象的设计模式</a></li>
+        <li><a href="#总结-16">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第18章-模式匹配">第18章 模式匹配</a>
+      <ol>
+        <li><a href="#所有可以使用模式的场合">所有可以使用模式的场合</a></li>
+        <li><a href="#可失败性模式是否会匹配失败">可失败性：模式是否会匹配失败</a></li>
+        <li><a href="#模式语法">模式语法</a></li>
+        <li><a href="#总结-17">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第19章-高级特性">第19章 高级特性</a>
+      <ol>
+        <li><a href="#不安全rust">不安全Rust</a></li>
+        <li><a href="#高级trait">高级trait</a></li>
+        <li><a href="#高级类型">高级类型</a></li>
+        <li><a href="#高级函数与闭包">高级函数与闭包</a></li>
+        <li><a href="#宏">宏</a></li>
+        <li><a href="#总结-18">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第20章-最后的项目构建多线程web服务器">第20章 最后的项目：构建多线程Web服务器</a>
+      <ol>
+        <li><a href="#构建单线程web服务器">构建单线程Web服务器</a></li>
+        <li><a href="#把单线程服务器修改为多线程服务器">把单线程服务器修改为多线程服务器</a></li>
+        <li><a href="#优雅地停机与清理">优雅地停机与清理</a></li>
+        <li><a href="#总结-19">总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#附录a-关键字">附录A 关键字</a>
+      <ol>
+        <li><a href="#当前正在使用的关键字">当前正在使用的关键字</a></li>
+        <li><a href="#将来可能会使用的保留关键字">将来可能会使用的保留关键字</a></li>
+        <li><a href="#原始标识符">原始标识符</a></li>
+      </ol>
+    </li>
+    <li><a href="#附录b-运算符和符号">附录B 运算符和符号</a>
+      <ol>
+        <li><a href="#运算符">运算符</a></li>
+        <li><a href="#非运算符符号">非运算符符号</a></li>
+      </ol>
+    </li>
+    <li><a href="#附录c-可派生trait">附录C 可派生trait</a>
+      <ol>
+        <li><a href="#面向程序员格式化输出的debug">面向程序员格式化输出的Debug</a></li>
+        <li><a href="#用于相等性比较的partialeq和eq">用于相等性比较的PartialEq和Eq</a></li>
+        <li><a href="#使用partialord和ord进行次序比较">使用PartialOrd和Ord进行次序比较</a></li>
+        <li><a href="#使用clone和copy复制值">使用Clone和Copy复制值</a></li>
+        <li><a href="#用于将值映射到另外一个长度固定的值的hash">用于将值映射到另外一个长度固定的值的Hash</a></li>
+        <li><a href="#用于提供默认值的default">用于提供默认值的Default</a></li>
+      </ol>
+    </li>
+    <li><a href="#附录d-有用的开发工具">附录D 有用的开发工具</a>
+      <ol>
+        <li><a href="#使用rustfmt自动格式化代码">使用rustfmt自动格式化代码</a></li>
+        <li><a href="#使用rustfix修复代码">使用rustfix修复代码</a></li>
+        <li><a href="#使用clippy完成更多的代码分析">使用Clippy完成更多的代码分析</a></li>
+        <li><a href="#使用rust语言服务器来集成ide">使用Rust语言服务器来集成IDE</a></li>
+      </ol>
+    </li>
+    <li><a href="#附录e-版本">附录E 版本</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#什么是所有权-1">什么是所有权</a>
+      <ol>
+        <li><a href="#划线评论">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#引用与借用-1">引用与借用</a>
+      <ol>
+        <li><a href="#划线评论-1">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#切片-1">切片</a>
+      <ol>
+        <li><a href="#划线评论-2">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#方法-1">方法</a>
+      <ol>
+        <li><a href="#划线评论-3">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#定义枚举-1">定义枚举</a>
+      <ol>
+        <li><a href="#划线评论-4">划线评论</a></li>
+        <li><a href="#划线评论-5">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#在哈希映射中存储键值对-1">在哈希映射中存储键值对</a>
+      <ol>
+        <li><a href="#划线评论-6">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#trait定义共享行为-1">trait：定义共享行为</a>
+      <ol>
+        <li><a href="#划线评论-7">划线评论</a></li>
+        <li><a href="#划线评论-8">划线评论</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/rust%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 11 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] Rust权威指南</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/17/YueWen_32435929/t7_YueWen_32435929.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" Rust权威指南|200"
+	
+	
+></li>
+<li>书名： Rust权威指南</li>
+<li>作者： 史蒂夫·克拉伯尼克 卡罗尔·尼科尔斯</li>
+<li>简介： 本书由Rust核心开发团队编写而成，由浅入深地探讨了Rust语言的方方面面。从学习函数、选择数据结构及绑定变量入手，逐步介绍所有权、trait、生命周期、安全保证等高级概念，模式匹配、错误处理、包管理、函数式特性、并发机制等实用工具，以及两个完整的项目开发实战案例。 作为开源的系统级编程语言，Rust可以帮助你编写出更为快速且更为可靠的软件，在给予开发者底层控制能力的同时，通过深思熟虑的工程设计避免了传统语言带来的诸多麻烦。 本书被视为Rust开发工作的必读书目，适合所有希望评估、入门、提高和研究Rust语言的软件开发人员阅读。</li>
+<li>出版时间 2020-05-01 00:00:00</li>
+<li>ISBN： 9787121387067</li>
+<li>分类： 计算机-计算机综合</li>
+<li>出版社： 电子工业出版社</li>
+<li>PC地址：https://weread.qq.com/web/reader/d733256071eeeed9d7322fd</li>
+</ul>
+</blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="内容简介"><a href="#%e5%86%85%e5%ae%b9%e7%ae%80%e4%bb%8b" class="header-anchor"></a>内容简介
+</h2><h2 id="译者序"><a href="#%e8%af%91%e8%80%85%e5%ba%8f" class="header-anchor"></a>译者序
+</h2><h2 id="序"><a href="#%e5%ba%8f" class="header-anchor"></a>序
+</h2><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><h2 id="致谢"><a href="#%e8%87%b4%e8%b0%a2" class="header-anchor"></a>致谢
+</h2><h2 id="关于技术审校者"><a href="#%e5%85%b3%e4%ba%8e%e6%8a%80%e6%9c%af%e5%ae%a1%e6%a0%a1%e8%80%85" class="header-anchor"></a>关于技术审校者
+</h2><h2 id="第1章-入门指南"><a href="#%e7%ac%ac1%e7%ab%a0-%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97" class="header-anchor"></a>第1章 入门指南
+</h2><h3 id="安装"><a href="#%e5%ae%89%e8%a3%85" class="header-anchor"></a>安装
+</h3><h3 id="hello-world"><a href="#hello-world" class="header-anchor"></a>Hello, World!
+</h3><h3 id="hello-cargo"><a href="#hello-cargo" class="header-anchor"></a>Hello, Cargo!
+</h3><blockquote>
+<p>📌 这种模式会以更长的编译时间为代价来优化代码，从而使代码拥有更好的运行时性能
+⏱ 2024-07-20 13:37:56 ^32435929-12-7638-7675</p>
+</blockquote>
+<h3 id="总结"><a href="#%e6%80%bb%e7%bb%93" class="header-anchor"></a>总结
+</h3><h2 id="第2章-编写一个猜数游戏"><a href="#%e7%ac%ac2%e7%ab%a0-%e7%bc%96%e5%86%99%e4%b8%80%e4%b8%aa%e7%8c%9c%e6%95%b0%e6%b8%b8%e6%88%8f" class="header-anchor"></a>第2章 编写一个猜数游戏
+</h2><h3 id="创建一个新的项目"><a href="#%e5%88%9b%e5%bb%ba%e4%b8%80%e4%b8%aa%e6%96%b0%e7%9a%84%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>创建一个新的项目
+</h3><h3 id="处理一次猜测"><a href="#%e5%a4%84%e7%90%86%e4%b8%80%e6%ac%a1%e7%8c%9c%e6%b5%8b" class="header-anchor"></a>处理一次猜测
+</h3><h3 id="生成一个保密数字"><a href="#%e7%94%9f%e6%88%90%e4%b8%80%e4%b8%aa%e4%bf%9d%e5%af%86%e6%95%b0%e5%ad%97" class="header-anchor"></a>生成一个保密数字
+</h3><blockquote>
+<p>📌 值得一提的是
+⏱ 2024-07-20 13:37:54 ^32435929-17-6703-6709</p>
+</blockquote>
+<h3 id="比较猜测数字与保密数字"><a href="#%e6%af%94%e8%be%83%e7%8c%9c%e6%b5%8b%e6%95%b0%e5%ad%97%e4%b8%8e%e4%bf%9d%e5%af%86%e6%95%b0%e5%ad%97" class="header-anchor"></a>比较猜测数字与保密数字
+</h3><blockquote>
+<p>📌 没错，但Rust允许使用同名的新变量guess来隐藏（shadow）旧变量的值。这一特性通常被用在需要转换值类型的场景中，它在本例中允许我们重用guess这个变量名，而无须强行创造出guess_str之类的不同的名字
+⏱ 2024-07-20 13:37:52 ^32435929-18-4025-4160</p>
+</blockquote>
+<h3 id="使用循环来实现多次猜测"><a href="#%e4%bd%bf%e7%94%a8%e5%be%aa%e7%8e%af%e6%9d%a5%e5%ae%9e%e7%8e%b0%e5%a4%9a%e6%ac%a1%e7%8c%9c%e6%b5%8b" class="header-anchor"></a>使用循环来实现多次猜测
+</h3><h3 id="总结-1"><a href="#%e6%80%bb%e7%bb%93-1" class="header-anchor"></a>总结
+</h3><h2 id="第3章-通用编程概念"><a href="#%e7%ac%ac3%e7%ab%a0-%e9%80%9a%e7%94%a8%e7%bc%96%e7%a8%8b%e6%a6%82%e5%bf%b5" class="header-anchor"></a>第3章 通用编程概念
+</h2><h3 id="变量与可变性"><a href="#%e5%8f%98%e9%87%8f%e4%b8%8e%e5%8f%af%e5%8f%98%e6%80%a7" class="header-anchor"></a>变量与可变性
+</h3><h3 id="数据类型"><a href="#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>数据类型
+</h3><blockquote>
+<p>📌 除了指明位数的类型，还有isize和usize两种特殊的整数类型，它们的长度取决于程序运行的目标平台。在64位架构上，它们就是64位的，而在32位架构上，它们就是32位的。
+⏱ 2024-07-20 13:37:54 ^32435929-23-3157-3243</p>
+</blockquote>
+<h3 id="函数"><a href="#%e5%87%bd%e6%95%b0" class="header-anchor"></a>函数
+</h3><h3 id="注释"><a href="#%e6%b3%a8%e9%87%8a" class="header-anchor"></a>注释
+</h3><h3 id="控制流"><a href="#%e6%8e%a7%e5%88%b6%e6%b5%81" class="header-anchor"></a>控制流
+</h3><blockquote>
+<p>📌 当然，过多的else if表达式可能会使我们的代码变得杂乱无章。在第6章会介绍Rust中另外一个强大的分支结构语法match，它可以被用来应对这种情况。
+⏱ 2024-07-20 13:37:53 ^32435929-26-4632-4708</p>
+</blockquote>
+<blockquote>
+<p>📌 for循环的安全性和简捷性使它成为了Rust中最为常用的循环结构。即便是为了实现示例3-3中循环特定次数的任务，大部分的Rust开发者也会选择使用for循环。我们可以配合标准库中提供的Range来实现这一目的，它被用来生成从一个数字开始到另一个数字结束之前的所有数字序列。
+⏱ 2024-07-20 13:37:55 ^32435929-26-11961-12097</p>
+</blockquote>
+<h3 id="总结-2"><a href="#%e6%80%bb%e7%bb%93-2" class="header-anchor"></a>总结
+</h3><h2 id="第4章-认识所有权"><a href="#%e7%ac%ac4%e7%ab%a0-%e8%ae%a4%e8%af%86%e6%89%80%e6%9c%89%e6%9d%83" class="header-anchor"></a>第4章 认识所有权
+</h2><h3 id="什么是所有权"><a href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%89%80%e6%9c%89%e6%9d%83" class="header-anchor"></a>什么是所有权
+</h3><blockquote>
+<p>📌 假如我们忘记释放内存，那么就会造成内存泄漏；假如我们过早地释放内存，那么就会产生一个非法变量；假如我们重复释放同一块内存，那么就会产生无法预知的后果
+⏱ 2024-07-20 17:14:34 ^32435929-29-5946-6020</p>
+</blockquote>
+<blockquote>
+<p>📌 在C++中，这种在对象生命周期结束时释放资源的模式有时也被称作资源获取即初始化（Resource Acquisition Is Initialization， RAII）。假如你使用过类似的模式，那么你应该对Rust中的特殊函数drop并不陌生。
+⏱ 2024-07-20 17:19:52 ^32435929-29-6615-6765</p>
+</blockquote>
+<blockquote>
+<p>📌 那么究竟哪些类型是Copy的呢？你可以查看特定类型的文档来确定，不过一般来说，任何简单标量的组合类型都可以是Copy的，任何需要分配内存或某种资源的类型都不会是Copy的
+⏱ 2024-07-20 17:40:17 ^32435929-29-12222-12307</p>
+</blockquote>
+<blockquote>
+<p>📌 变量所有权的转移总是遵循相同的模式：将一个值赋值给另一个变量时就会转移所有权。当一个持有堆数据的变量离开作用域时，它的数据就会被drop清理回收，除非这些数据的所有权移动到了另一个变量上。
+⏱ 2024-07-20 17:43:57 ^32435929-29-13713-13807</p>
+</blockquote>
+<h3 id="引用与借用"><a href="#%e5%bc%95%e7%94%a8%e4%b8%8e%e5%80%9f%e7%94%a8" class="header-anchor"></a>引用与借用
+</h3><h3 id="切片"><a href="#%e5%88%87%e7%89%87" class="header-anchor"></a>切片
+</h3><h3 id="总结-3"><a href="#%e6%80%bb%e7%bb%93-3" class="header-anchor"></a>总结
+</h3><h2 id="第5章-使用结构体来组织相关联的数据"><a href="#%e7%ac%ac5%e7%ab%a0-%e4%bd%bf%e7%94%a8%e7%bb%93%e6%9e%84%e4%bd%93%e6%9d%a5%e7%bb%84%e7%bb%87%e7%9b%b8%e5%85%b3%e8%81%94%e7%9a%84%e6%95%b0%e6%8d%ae" class="header-anchor"></a>第5章 使用结构体来组织相关联的数据
+</h2><h3 id="定义并实例化结构体"><a href="#%e5%ae%9a%e4%b9%89%e5%b9%b6%e5%ae%9e%e4%be%8b%e5%8c%96%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"></a>定义并实例化结构体
+</h3><blockquote>
+<p>📌 需要注意的是，一旦实例可变，那么实例中的所有字段都将是可变的
+⏱ 2024-07-20 19:05:31 ^32435929-34-1863-1893</p>
+</blockquote>
+<blockquote>
+<p>📌 一般来说，当你想要给元组赋予名字，并使其区别于其他拥有同样定义的元组时，你就可以使用元组结构体
+⏱ 2024-07-20 19:07:53 ^32435929-34-4499-4546</p>
+</blockquote>
+<h3 id="一个使用结构体的示例程序"><a href="#%e4%b8%80%e4%b8%aa%e4%bd%bf%e7%94%a8%e7%bb%93%e6%9e%84%e4%bd%93%e7%9a%84%e7%a4%ba%e4%be%8b%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>一个使用结构体的示例程序
+</h3><h3 id="方法"><a href="#%e6%96%b9%e6%b3%95" class="header-anchor"></a>方法
+</h3><blockquote>
+<p>📌 在这里，选择&amp;self签名的原因和之前选择使用&amp;Rectangle的原因差不多：我们既不用获得数据的所有权也不需要写入数据，而只需要读取数据即可。假如我们想要在调用方法时改变实例的某些数据，那么就需要将第一个参数改写为&amp;mut self。通常来说，将第一个参数标记为self并在调用过程中取得实例的所有权的方法并不常见。这种技术有可能会被用于那些需要将self转换为其他类型，且在转换后想要阻止调用者访问原始实例的场景。
+⏱ 2024-07-21 06:22:57 ^32435929-36-1816-2038</p>
+</blockquote>
+<h3 id="总结-4"><a href="#%e6%80%bb%e7%bb%93-4" class="header-anchor"></a>总结
+</h3><h2 id="第6章-枚举与模式匹配"><a href="#%e7%ac%ac6%e7%ab%a0-%e6%9e%9a%e4%b8%be%e4%b8%8e%e6%a8%a1%e5%bc%8f%e5%8c%b9%e9%85%8d" class="header-anchor"></a>第6章 枚举与模式匹配
+</h2><blockquote>
+<p>📌 接着，我们会讨论一个特别有用的枚举：Option，它常常被用来描述某些可能不存在的值。随后，我们将学会如何在match表达式中使用模式匹配，并根据不同的枚举值来执行不同的代码。最后，我们还会介绍另外一种常用的结构if let，它可以在某些场景下简化我们处理枚举的代
+⏱ 2024-07-21 06:31:13 ^32435929-38-670-802</p>
+</blockquote>
+<h3 id="定义枚举"><a href="#%e5%ae%9a%e4%b9%89%e6%9e%9a%e4%b8%be" class="header-anchor"></a>定义枚举
+</h3><blockquote>
+<p>📌 在编写代码的过程中，不必再去考虑一个值是否为空可以极大地增强我们对自己代码的信心。为了持有一个可能为空的值，我们总是需要将它显式地放入对应类型的Option<T>值中。当我们随后使用这个值的时候，也必须显式地处理它可能为空的情况。无论在什么地方，只要一个值的类型不是Option<T>的，我们就可以安全地假设这个值不是非空的。这是Rust为了限制空值泛滥以增加Rust代码安全性而做出的一个有意为之的设计决策。
+⏱ 2024-07-21 06:43:26 ^32435929-39-8406-8623</p>
+</blockquote>
+<h3 id="控制流运算符match"><a href="#%e6%8e%a7%e5%88%b6%e6%b5%81%e8%bf%90%e7%ae%97%e7%ac%a6match" class="header-anchor"></a>控制流运算符match
+</h3><blockquote>
+<p>📌 将match与枚举相结合在许多情形下都是非常有用的。你会在Rust代码中看到许多类似的套路：使用match来匹配枚举值，并将其中的值绑定到某个变量上，接着根据这个值执行相应的代码。这初看起来可能会有些复杂，不过一旦你习惯了它的用法，就会希望在所有的语言中都有这个特性。这一特性一直以来都是社区用户的最爱。
+⏱ 2024-07-21 06:56:42 ^32435929-40-5081-5233</p>
+</blockquote>
+<h3 id="简单控制流if-let"><a href="#%e7%ae%80%e5%8d%95%e6%8e%a7%e5%88%b6%e6%b5%81if-let" class="header-anchor"></a>简单控制流if let
+</h3><blockquote>
+<p>📌 使用if let意味着你可以编写更少的代码，使用更少的缩进，使用更少的模板代码。但是，你也放弃了match所附带的穷尽性检查。究竟应该使用match还是if let取决于你当时所处的环境，这是一个在代码简捷性与穷尽性检查之间取舍的过程。
+⏱ 2024-07-21 06:58:41 ^32435929-41-1160-1278</p>
+</blockquote>
+<h3 id="总结-5"><a href="#%e6%80%bb%e7%bb%93-5" class="header-anchor"></a>总结
+</h3><h2 id="第7章-使用包单元包及模块来管理日渐复杂的项目"><a href="#%e7%ac%ac7%e7%ab%a0-%e4%bd%bf%e7%94%a8%e5%8c%85%e5%8d%95%e5%85%83%e5%8c%85%e5%8f%8a%e6%a8%a1%e5%9d%97%e6%9d%a5%e7%ae%a1%e7%90%86%e6%97%a5%e6%b8%90%e5%a4%8d%e6%9d%82%e7%9a%84%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>第7章 使用包、单元包及模块来管理日渐复杂的项目
+</h2><h3 id="包与单元包"><a href="#%e5%8c%85%e4%b8%8e%e5%8d%95%e5%85%83%e5%8c%85" class="header-anchor"></a>包与单元包
+</h3><h3 id="通过定义模块来控制作用域及私有性"><a href="#%e9%80%9a%e8%bf%87%e5%ae%9a%e4%b9%89%e6%a8%a1%e5%9d%97%e6%9d%a5%e6%8e%a7%e5%88%b6%e4%bd%9c%e7%94%a8%e5%9f%9f%e5%8f%8a%e7%a7%81%e6%9c%89%e6%80%a7" class="header-anchor"></a>通过定义模块来控制作用域及私有性
+</h3><h3 id="用于在模块树中指明条目的路径"><a href="#%e7%94%a8%e4%ba%8e%e5%9c%a8%e6%a8%a1%e5%9d%97%e6%a0%91%e4%b8%ad%e6%8c%87%e6%98%8e%e6%9d%a1%e7%9b%ae%e7%9a%84%e8%b7%af%e5%be%84" class="header-anchor"></a>用于在模块树中指明条目的路径
+</h3><h3 id="用use关键字将路径导入作用域"><a href="#%e7%94%a8use%e5%85%b3%e9%94%ae%e5%ad%97%e5%b0%86%e8%b7%af%e5%be%84%e5%af%bc%e5%85%a5%e4%bd%9c%e7%94%a8%e5%9f%9f" class="header-anchor"></a>用use关键字将路径导入作用域
+</h3><h3 id="将模块拆分为不同的文件"><a href="#%e5%b0%86%e6%a8%a1%e5%9d%97%e6%8b%86%e5%88%86%e4%b8%ba%e4%b8%8d%e5%90%8c%e7%9a%84%e6%96%87%e4%bb%b6" class="header-anchor"></a>将模块拆分为不同的文件
+</h3><h3 id="总结-6"><a href="#%e6%80%bb%e7%bb%93-6" class="header-anchor"></a>总结
+</h3><h2 id="第8章-通用集合类型"><a href="#%e7%ac%ac8%e7%ab%a0-%e9%80%9a%e7%94%a8%e9%9b%86%e5%90%88%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>第8章 通用集合类型
+</h2><h3 id="使用动态数组存储多个值"><a href="#%e4%bd%bf%e7%94%a8%e5%8a%a8%e6%80%81%e6%95%b0%e7%bb%84%e5%ad%98%e5%82%a8%e5%a4%9a%e4%b8%aa%e5%80%bc" class="header-anchor"></a>使用动态数组存储多个值
+</h3><h3 id="使用字符串存储utf-8编码的文本"><a href="#%e4%bd%bf%e7%94%a8%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%ad%98%e5%82%a8utf-8%e7%bc%96%e7%a0%81%e7%9a%84%e6%96%87%e6%9c%ac" class="header-anchor"></a>使用字符串存储UTF-8编码的文本
+</h3><blockquote>
+<p>📌 String类型被定义在了Rust标准库中而没有被内置在语言的核心部分。当Rust开发者们提到“字符串”时，他们通常指的是String与字符串切片&amp;str这两种类型，而不仅仅只是其中的一种。虽然本节会着重介绍String，但是这两种类型都广泛地被应用于Rust标准库中，并且都采用了UTF-8编码。
+⏱ 2024-07-21 07:27:43 ^32435929-52-1091-1244</p>
+</blockquote>
+<blockquote>
+<p>📌 在有这么多+及&quot;字符的情况下，你很难去分析其中的具体实现。对于这种复杂一些的字符串合并，我们可以使用format! 宏：
+⏱ 2024-07-21 07:32:03 ^32435929-52-6375-6435</p>
+</blockquote>
+<h3 id="在哈希映射中存储键值对"><a href="#%e5%9c%a8%e5%93%88%e5%b8%8c%e6%98%a0%e5%b0%84%e4%b8%ad%e5%ad%98%e5%82%a8%e9%94%ae%e5%80%bc%e5%af%b9" class="header-anchor"></a>在哈希映射中存储键值对
+</h3><h3 id="总结-7"><a href="#%e6%80%bb%e7%bb%93-7" class="header-anchor"></a>总结
+</h3><h2 id="第9章-错误处理"><a href="#%e7%ac%ac9%e7%ab%a0-%e9%94%99%e8%af%af%e5%a4%84%e7%90%86" class="header-anchor"></a>第9章 错误处理
+</h2><h3 id="不可恢复错误与panic"><a href="#%e4%b8%8d%e5%8f%af%e6%81%a2%e5%a4%8d%e9%94%99%e8%af%af%e4%b8%8epanic" class="header-anchor"></a>不可恢复错误与panic!
+</h3><h3 id="可恢复错误与result"><a href="#%e5%8f%af%e6%81%a2%e5%a4%8d%e9%94%99%e8%af%af%e4%b8%8eresult" class="header-anchor"></a>可恢复错误与Result
+</h3><h3 id="要不要使用panic"><a href="#%e8%a6%81%e4%b8%8d%e8%a6%81%e4%bd%bf%e7%94%a8panic" class="header-anchor"></a>要不要使用panic!
+</h3><h3 id="总结-8"><a href="#%e6%80%bb%e7%bb%93-8" class="header-anchor"></a>总结
+</h3><h2 id="第10章-泛型trait与生命周期"><a href="#%e7%ac%ac10%e7%ab%a0-%e6%b3%9b%e5%9e%8btrait%e4%b8%8e%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" class="header-anchor"></a>第10章 泛型、trait与生命周期
+</h2><h3 id="通过将代码提取为函数来减少重复工作"><a href="#%e9%80%9a%e8%bf%87%e5%b0%86%e4%bb%a3%e7%a0%81%e6%8f%90%e5%8f%96%e4%b8%ba%e5%87%bd%e6%95%b0%e6%9d%a5%e5%87%8f%e5%b0%91%e9%87%8d%e5%a4%8d%e5%b7%a5%e4%bd%9c" class="header-anchor"></a>通过将代码提取为函数来减少重复工作
+</h3><h3 id="泛型数据类型"><a href="#%e6%b3%9b%e5%9e%8b%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>泛型数据类型
+</h3><blockquote>
+<p>📌 在Rust中，我们倾向于使用简短的泛型参数名称，通常仅仅是一个字母。另外，Rust采用了驼峰命名法（CamelCase）作为类型的命名规范。T作为“type”的缩写，往往是大部分Rust程序员在命名类型参数时的默认选择。
+⏱ 2024-07-24 09:03:53 ^32435929-62-1909-2019</p>
+</blockquote>
+<blockquote>
+<p>📌 注意，我们必须紧跟着impl关键字声明T，以便能够在实现方法时指定类型Point<T>
+⏱ 2024-07-24 09:11:24 ^32435929-62-7701-7747</p>
+</blockquote>
+<blockquote>
+<p>📌 这个例子说明，在某些情况下可能会有一部分泛型参数声明于impl关键字后，而另一部分则声明于方法定义中
+⏱ 2024-07-24 09:13:28 ^32435929-62-9483-9533</p>
+</blockquote>
+<h3 id="trait定义共享行为"><a href="#trait%e5%ae%9a%e4%b9%89%e5%85%b1%e4%ba%ab%e8%a1%8c%e4%b8%ba" class="header-anchor"></a>trait：定义共享行为
+</h3><blockquote>
+<p>📌 注意，我们是无法在重载方法实现的过程中调用该方法的默认实现的。
+⏱ 2024-07-24 09:51:34 ^32435929-63-7117-7148</p>
+</blockquote>
+<h3 id="使用生命周期保证引用的有效性"><a href="#%e4%bd%bf%e7%94%a8%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e4%bf%9d%e8%af%81%e5%bc%95%e7%94%a8%e7%9a%84%e6%9c%89%e6%95%88%e6%80%a7" class="header-anchor"></a>使用生命周期保证引用的有效性
+</h3><h3 id="同时使用泛型参数trait约束与生命周期"><a href="#%e5%90%8c%e6%97%b6%e4%bd%bf%e7%94%a8%e6%b3%9b%e5%9e%8b%e5%8f%82%e6%95%b0trait%e7%ba%a6%e6%9d%9f%e4%b8%8e%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" class="header-anchor"></a>同时使用泛型参数、trait约束与生命周期
+</h3><h3 id="总结-9"><a href="#%e6%80%bb%e7%bb%93-9" class="header-anchor"></a>总结
+</h3><h2 id="第11章-编写自动化测试"><a href="#%e7%ac%ac11%e7%ab%a0-%e7%bc%96%e5%86%99%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95" class="header-anchor"></a>第11章 编写自动化测试
+</h2><h3 id="如何编写测试"><a href="#%e5%a6%82%e4%bd%95%e7%bc%96%e5%86%99%e6%b5%8b%e8%af%95" class="header-anchor"></a>如何编写测试
+</h3><h3 id="控制测试的运行方式"><a href="#%e6%8e%a7%e5%88%b6%e6%b5%8b%e8%af%95%e7%9a%84%e8%bf%90%e8%a1%8c%e6%96%b9%e5%bc%8f" class="header-anchor"></a>控制测试的运行方式
+</h3><h3 id="测试的组织结构"><a href="#%e6%b5%8b%e8%af%95%e7%9a%84%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84" class="header-anchor"></a>测试的组织结构
+</h3><h3 id="总结-10"><a href="#%e6%80%bb%e7%bb%93-10" class="header-anchor"></a>总结
+</h3><h2 id="第12章-io项目编写一个命令行程序"><a href="#%e7%ac%ac12%e7%ab%a0-io%e9%a1%b9%e7%9b%ae%e7%bc%96%e5%86%99%e4%b8%80%e4%b8%aa%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>第12章 I/O项目：编写一个命令行程序
+</h2><h3 id="接收命令行参数"><a href="#%e6%8e%a5%e6%94%b6%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0" class="header-anchor"></a>接收命令行参数
+</h3><h3 id="读取文件"><a href="#%e8%af%bb%e5%8f%96%e6%96%87%e4%bb%b6" class="header-anchor"></a>读取文件
+</h3><h3 id="重构代码以增强模块化程度和错误处理能力"><a href="#%e9%87%8d%e6%9e%84%e4%bb%a3%e7%a0%81%e4%bb%a5%e5%a2%9e%e5%bc%ba%e6%a8%a1%e5%9d%97%e5%8c%96%e7%a8%8b%e5%ba%a6%e5%92%8c%e9%94%99%e8%af%af%e5%a4%84%e7%90%86%e8%83%bd%e5%8a%9b" class="header-anchor"></a>重构代码以增强模块化程度和错误处理能力
+</h3><h3 id="使用测试驱动开发来编写库功能"><a href="#%e4%bd%bf%e7%94%a8%e6%b5%8b%e8%af%95%e9%a9%b1%e5%8a%a8%e5%bc%80%e5%8f%91%e6%9d%a5%e7%bc%96%e5%86%99%e5%ba%93%e5%8a%9f%e8%83%bd" class="header-anchor"></a>使用测试驱动开发来编写库功能
+</h3><h3 id="处理环境变量"><a href="#%e5%a4%84%e7%90%86%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f" class="header-anchor"></a>处理环境变量
+</h3><h3 id="将错误提示信息打印到标准错误而不是标准输出"><a href="#%e5%b0%86%e9%94%99%e8%af%af%e6%8f%90%e7%a4%ba%e4%bf%a1%e6%81%af%e6%89%93%e5%8d%b0%e5%88%b0%e6%a0%87%e5%87%86%e9%94%99%e8%af%af%e8%80%8c%e4%b8%8d%e6%98%af%e6%a0%87%e5%87%86%e8%be%93%e5%87%ba" class="header-anchor"></a>将错误提示信息打印到标准错误而不是标准输出
+</h3><h3 id="总结-11"><a href="#%e6%80%bb%e7%bb%93-11" class="header-anchor"></a>总结
+</h3><h2 id="第13章-函数式语言特性迭代器与闭包"><a href="#%e7%ac%ac13%e7%ab%a0-%e5%87%bd%e6%95%b0%e5%bc%8f%e8%af%ad%e8%a8%80%e7%89%b9%e6%80%a7%e8%bf%ad%e4%bb%a3%e5%99%a8%e4%b8%8e%e9%97%ad%e5%8c%85" class="header-anchor"></a>第13章 函数式语言特性：迭代器与闭包
+</h2><h3 id="闭包能够捕获环境的匿名函数"><a href="#%e9%97%ad%e5%8c%85%e8%83%bd%e5%a4%9f%e6%8d%95%e8%8e%b7%e7%8e%af%e5%a2%83%e7%9a%84%e5%8c%bf%e5%90%8d%e5%87%bd%e6%95%b0" class="header-anchor"></a>闭包：能够捕获环境的匿名函数
+</h3><h3 id="使用迭代器处理元素序列"><a href="#%e4%bd%bf%e7%94%a8%e8%bf%ad%e4%bb%a3%e5%99%a8%e5%a4%84%e7%90%86%e5%85%83%e7%b4%a0%e5%ba%8f%e5%88%97" class="header-anchor"></a>使用迭代器处理元素序列
+</h3><h3 id="改进io项目"><a href="#%e6%94%b9%e8%bf%9bio%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>改进I/O项目
+</h3><h3 id="比较循环和迭代器的性能"><a href="#%e6%af%94%e8%be%83%e5%be%aa%e7%8e%af%e5%92%8c%e8%bf%ad%e4%bb%a3%e5%99%a8%e7%9a%84%e6%80%a7%e8%83%bd" class="header-anchor"></a>比较循环和迭代器的性能
+</h3><h3 id="总结-12"><a href="#%e6%80%bb%e7%bb%93-12" class="header-anchor"></a>总结
+</h3><h2 id="第14章-进一步认识cargo及cratesio"><a href="#%e7%ac%ac14%e7%ab%a0-%e8%bf%9b%e4%b8%80%e6%ad%a5%e8%ae%a4%e8%af%86cargo%e5%8f%8acratesio" class="header-anchor"></a>第14章 进一步认识Cargo及crates.io
+</h2><h3 id="使用发布配置来定制构建"><a href="#%e4%bd%bf%e7%94%a8%e5%8f%91%e5%b8%83%e9%85%8d%e7%bd%ae%e6%9d%a5%e5%ae%9a%e5%88%b6%e6%9e%84%e5%bb%ba" class="header-anchor"></a>使用发布配置来定制构建
+</h3><h3 id="将包发布到cratesio上"><a href="#%e5%b0%86%e5%8c%85%e5%8f%91%e5%b8%83%e5%88%b0cratesio%e4%b8%8a" class="header-anchor"></a>将包发布到crates.io上
+</h3><h3 id="cargo工作空间"><a href="#cargo%e5%b7%a5%e4%bd%9c%e7%a9%ba%e9%97%b4" class="header-anchor"></a>Cargo工作空间
+</h3><h3 id="使用cargo-install从cratesio上安装可执行程序"><a href="#%e4%bd%bf%e7%94%a8cargo-install%e4%bb%8ecratesio%e4%b8%8a%e5%ae%89%e8%a3%85%e5%8f%af%e6%89%a7%e8%a1%8c%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>使用cargo install从crates.io上安装可执行程序
+</h3><h3 id="使用自定义命令扩展cargo的功能"><a href="#%e4%bd%bf%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e5%91%bd%e4%bb%a4%e6%89%a9%e5%b1%95cargo%e7%9a%84%e5%8a%9f%e8%83%bd" class="header-anchor"></a>使用自定义命令扩展Cargo的功能
+</h3><h3 id="总结-13"><a href="#%e6%80%bb%e7%bb%93-13" class="header-anchor"></a>总结
+</h3><h2 id="第15章-智能指针"><a href="#%e7%ac%ac15%e7%ab%a0-%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88" class="header-anchor"></a>第15章 智能指针
+</h2><h3 id="使用boxt在堆上分配数据"><a href="#%e4%bd%bf%e7%94%a8boxt%e5%9c%a8%e5%a0%86%e4%b8%8a%e5%88%86%e9%85%8d%e6%95%b0%e6%8d%ae" class="header-anchor"></a>使用Box<T>在堆上分配数据
+</h3><h3 id="通过deref-trait将智能指针视作常规引用"><a href="#%e9%80%9a%e8%bf%87deref-trait%e5%b0%86%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88%e8%a7%86%e4%bd%9c%e5%b8%b8%e8%a7%84%e5%bc%95%e7%94%a8" class="header-anchor"></a>通过Deref trait将智能指针视作常规引用
+</h3><h3 id="借助drop-trait在清理时运行代码"><a href="#%e5%80%9f%e5%8a%a9drop-trait%e5%9c%a8%e6%b8%85%e7%90%86%e6%97%b6%e8%bf%90%e8%a1%8c%e4%bb%a3%e7%a0%81" class="header-anchor"></a>借助Drop trait在清理时运行代码
+</h3><h3 id="基于引用计数的智能指针rct"><a href="#%e5%9f%ba%e4%ba%8e%e5%bc%95%e7%94%a8%e8%ae%a1%e6%95%b0%e7%9a%84%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88rct" class="header-anchor"></a>基于引用计数的智能指针Rc<T>
+</h3><h3 id="refcellt和内部可变性模式"><a href="#refcellt%e5%92%8c%e5%86%85%e9%83%a8%e5%8f%af%e5%8f%98%e6%80%a7%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>RefCell<T>和内部可变性模式
+</h3><h3 id="循环引用会造成内存泄漏"><a href="#%e5%be%aa%e7%8e%af%e5%bc%95%e7%94%a8%e4%bc%9a%e9%80%a0%e6%88%90%e5%86%85%e5%ad%98%e6%b3%84%e6%bc%8f" class="header-anchor"></a>循环引用会造成内存泄漏
+</h3><h3 id="总结-14"><a href="#%e6%80%bb%e7%bb%93-14" class="header-anchor"></a>总结
+</h3><h2 id="第16章-无畏并发"><a href="#%e7%ac%ac16%e7%ab%a0-%e6%97%a0%e7%95%8f%e5%b9%b6%e5%8f%91" class="header-anchor"></a>第16章 无畏并发
+</h2><h3 id="使用线程同时运行代码"><a href="#%e4%bd%bf%e7%94%a8%e7%ba%bf%e7%a8%8b%e5%90%8c%e6%97%b6%e8%bf%90%e8%a1%8c%e4%bb%a3%e7%a0%81" class="header-anchor"></a>使用线程同时运行代码
+</h3><h3 id="使用消息传递在线程间转移数据"><a href="#%e4%bd%bf%e7%94%a8%e6%b6%88%e6%81%af%e4%bc%a0%e9%80%92%e5%9c%a8%e7%ba%bf%e7%a8%8b%e9%97%b4%e8%bd%ac%e7%a7%bb%e6%95%b0%e6%8d%ae" class="header-anchor"></a>使用消息传递在线程间转移数据
+</h3><h3 id="共享状态的并发"><a href="#%e5%85%b1%e4%ba%ab%e7%8a%b6%e6%80%81%e7%9a%84%e5%b9%b6%e5%8f%91" class="header-anchor"></a>共享状态的并发
+</h3><h3 id="使用sync-trait和send-trait对并发进行扩展"><a href="#%e4%bd%bf%e7%94%a8sync-trait%e5%92%8csend-trait%e5%af%b9%e5%b9%b6%e5%8f%91%e8%bf%9b%e8%a1%8c%e6%89%a9%e5%b1%95" class="header-anchor"></a>使用Sync trait和Send trait对并发进行扩展
+</h3><h3 id="总结-15"><a href="#%e6%80%bb%e7%bb%93-15" class="header-anchor"></a>总结
+</h3><h2 id="第17章-rust的面向对象编程特性"><a href="#%e7%ac%ac17%e7%ab%a0-rust%e7%9a%84%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%bc%96%e7%a8%8b%e7%89%b9%e6%80%a7" class="header-anchor"></a>第17章 Rust的面向对象编程特性
+</h2><h3 id="面向对象语言的特性"><a href="#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e8%af%ad%e8%a8%80%e7%9a%84%e7%89%b9%e6%80%a7" class="header-anchor"></a>面向对象语言的特性
+</h3><h3 id="使用trait对象来存储不同类型的值"><a href="#%e4%bd%bf%e7%94%a8trait%e5%af%b9%e8%b1%a1%e6%9d%a5%e5%ad%98%e5%82%a8%e4%b8%8d%e5%90%8c%e7%b1%bb%e5%9e%8b%e7%9a%84%e5%80%bc" class="header-anchor"></a>使用trait对象来存储不同类型的值
+</h3><h3 id="实现一种面向对象的设计模式"><a href="#%e5%ae%9e%e7%8e%b0%e4%b8%80%e7%a7%8d%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%9a%84%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>实现一种面向对象的设计模式
+</h3><h3 id="总结-16"><a href="#%e6%80%bb%e7%bb%93-16" class="header-anchor"></a>总结
+</h3><h2 id="第18章-模式匹配"><a href="#%e7%ac%ac18%e7%ab%a0-%e6%a8%a1%e5%bc%8f%e5%8c%b9%e9%85%8d" class="header-anchor"></a>第18章 模式匹配
+</h2><h3 id="所有可以使用模式的场合"><a href="#%e6%89%80%e6%9c%89%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8%e6%a8%a1%e5%bc%8f%e7%9a%84%e5%9c%ba%e5%90%88" class="header-anchor"></a>所有可以使用模式的场合
+</h3><h3 id="可失败性模式是否会匹配失败"><a href="#%e5%8f%af%e5%a4%b1%e8%b4%a5%e6%80%a7%e6%a8%a1%e5%bc%8f%e6%98%af%e5%90%a6%e4%bc%9a%e5%8c%b9%e9%85%8d%e5%a4%b1%e8%b4%a5" class="header-anchor"></a>可失败性：模式是否会匹配失败
+</h3><h3 id="模式语法"><a href="#%e6%a8%a1%e5%bc%8f%e8%af%ad%e6%b3%95" class="header-anchor"></a>模式语法
+</h3><h3 id="总结-17"><a href="#%e6%80%bb%e7%bb%93-17" class="header-anchor"></a>总结
+</h3><h2 id="第19章-高级特性"><a href="#%e7%ac%ac19%e7%ab%a0-%e9%ab%98%e7%ba%a7%e7%89%b9%e6%80%a7" class="header-anchor"></a>第19章 高级特性
+</h2><h3 id="不安全rust"><a href="#%e4%b8%8d%e5%ae%89%e5%85%a8rust" class="header-anchor"></a>不安全Rust
+</h3><h3 id="高级trait"><a href="#%e9%ab%98%e7%ba%a7trait" class="header-anchor"></a>高级trait
+</h3><h3 id="高级类型"><a href="#%e9%ab%98%e7%ba%a7%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>高级类型
+</h3><h3 id="高级函数与闭包"><a href="#%e9%ab%98%e7%ba%a7%e5%87%bd%e6%95%b0%e4%b8%8e%e9%97%ad%e5%8c%85" class="header-anchor"></a>高级函数与闭包
+</h3><h3 id="宏"><a href="#%e5%ae%8f" class="header-anchor"></a>宏
+</h3><h3 id="总结-18"><a href="#%e6%80%bb%e7%bb%93-18" class="header-anchor"></a>总结
+</h3><h2 id="第20章-最后的项目构建多线程web服务器"><a href="#%e7%ac%ac20%e7%ab%a0-%e6%9c%80%e5%90%8e%e7%9a%84%e9%a1%b9%e7%9b%ae%e6%9e%84%e5%bb%ba%e5%a4%9a%e7%ba%bf%e7%a8%8bweb%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-anchor"></a>第20章 最后的项目：构建多线程Web服务器
+</h2><h3 id="构建单线程web服务器"><a href="#%e6%9e%84%e5%bb%ba%e5%8d%95%e7%ba%bf%e7%a8%8bweb%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-anchor"></a>构建单线程Web服务器
+</h3><h3 id="把单线程服务器修改为多线程服务器"><a href="#%e6%8a%8a%e5%8d%95%e7%ba%bf%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8%e4%bf%ae%e6%94%b9%e4%b8%ba%e5%a4%9a%e7%ba%bf%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-anchor"></a>把单线程服务器修改为多线程服务器
+</h3><h3 id="优雅地停机与清理"><a href="#%e4%bc%98%e9%9b%85%e5%9c%b0%e5%81%9c%e6%9c%ba%e4%b8%8e%e6%b8%85%e7%90%86" class="header-anchor"></a>优雅地停机与清理
+</h3><h3 id="总结-19"><a href="#%e6%80%bb%e7%bb%93-19" class="header-anchor"></a>总结
+</h3><h2 id="附录a-关键字"><a href="#%e9%99%84%e5%bd%95a-%e5%85%b3%e9%94%ae%e5%ad%97" class="header-anchor"></a>附录A 关键字
+</h2><h3 id="当前正在使用的关键字"><a href="#%e5%bd%93%e5%89%8d%e6%ad%a3%e5%9c%a8%e4%bd%bf%e7%94%a8%e7%9a%84%e5%85%b3%e9%94%ae%e5%ad%97" class="header-anchor"></a>当前正在使用的关键字
+</h3><h3 id="将来可能会使用的保留关键字"><a href="#%e5%b0%86%e6%9d%a5%e5%8f%af%e8%83%bd%e4%bc%9a%e4%bd%bf%e7%94%a8%e7%9a%84%e4%bf%9d%e7%95%99%e5%85%b3%e9%94%ae%e5%ad%97" class="header-anchor"></a>将来可能会使用的保留关键字
+</h3><h3 id="原始标识符"><a href="#%e5%8e%9f%e5%a7%8b%e6%a0%87%e8%af%86%e7%ac%a6" class="header-anchor"></a>原始标识符
+</h3><h2 id="附录b-运算符和符号"><a href="#%e9%99%84%e5%bd%95b-%e8%bf%90%e7%ae%97%e7%ac%a6%e5%92%8c%e7%ac%a6%e5%8f%b7" class="header-anchor"></a>附录B 运算符和符号
+</h2><h3 id="运算符"><a href="#%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-anchor"></a>运算符
+</h3><h3 id="非运算符符号"><a href="#%e9%9d%9e%e8%bf%90%e7%ae%97%e7%ac%a6%e7%ac%a6%e5%8f%b7" class="header-anchor"></a>非运算符符号
+</h3><h2 id="附录c-可派生trait"><a href="#%e9%99%84%e5%bd%95c-%e5%8f%af%e6%b4%be%e7%94%9ftrait" class="header-anchor"></a>附录C 可派生trait
+</h2><h3 id="面向程序员格式化输出的debug"><a href="#%e9%9d%a2%e5%90%91%e7%a8%8b%e5%ba%8f%e5%91%98%e6%a0%bc%e5%bc%8f%e5%8c%96%e8%be%93%e5%87%ba%e7%9a%84debug" class="header-anchor"></a>面向程序员格式化输出的Debug
+</h3><h3 id="用于相等性比较的partialeq和eq"><a href="#%e7%94%a8%e4%ba%8e%e7%9b%b8%e7%ad%89%e6%80%a7%e6%af%94%e8%be%83%e7%9a%84partialeq%e5%92%8ceq" class="header-anchor"></a>用于相等性比较的PartialEq和Eq
+</h3><h3 id="使用partialord和ord进行次序比较"><a href="#%e4%bd%bf%e7%94%a8partialord%e5%92%8cord%e8%bf%9b%e8%a1%8c%e6%ac%a1%e5%ba%8f%e6%af%94%e8%be%83" class="header-anchor"></a>使用PartialOrd和Ord进行次序比较
+</h3><h3 id="使用clone和copy复制值"><a href="#%e4%bd%bf%e7%94%a8clone%e5%92%8ccopy%e5%a4%8d%e5%88%b6%e5%80%bc" class="header-anchor"></a>使用Clone和Copy复制值
+</h3><h3 id="用于将值映射到另外一个长度固定的值的hash"><a href="#%e7%94%a8%e4%ba%8e%e5%b0%86%e5%80%bc%e6%98%a0%e5%b0%84%e5%88%b0%e5%8f%a6%e5%a4%96%e4%b8%80%e4%b8%aa%e9%95%bf%e5%ba%a6%e5%9b%ba%e5%ae%9a%e7%9a%84%e5%80%bc%e7%9a%84hash" class="header-anchor"></a>用于将值映射到另外一个长度固定的值的Hash
+</h3><h3 id="用于提供默认值的default"><a href="#%e7%94%a8%e4%ba%8e%e6%8f%90%e4%be%9b%e9%bb%98%e8%ae%a4%e5%80%bc%e7%9a%84default" class="header-anchor"></a>用于提供默认值的Default
+</h3><h2 id="附录d-有用的开发工具"><a href="#%e9%99%84%e5%bd%95d-%e6%9c%89%e7%94%a8%e7%9a%84%e5%bc%80%e5%8f%91%e5%b7%a5%e5%85%b7" class="header-anchor"></a>附录D 有用的开发工具
+</h2><h3 id="使用rustfmt自动格式化代码"><a href="#%e4%bd%bf%e7%94%a8rustfmt%e8%87%aa%e5%8a%a8%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%bb%a3%e7%a0%81" class="header-anchor"></a>使用rustfmt自动格式化代码
+</h3><h3 id="使用rustfix修复代码"><a href="#%e4%bd%bf%e7%94%a8rustfix%e4%bf%ae%e5%a4%8d%e4%bb%a3%e7%a0%81" class="header-anchor"></a>使用rustfix修复代码
+</h3><h3 id="使用clippy完成更多的代码分析"><a href="#%e4%bd%bf%e7%94%a8clippy%e5%ae%8c%e6%88%90%e6%9b%b4%e5%a4%9a%e7%9a%84%e4%bb%a3%e7%a0%81%e5%88%86%e6%9e%90" class="header-anchor"></a>使用Clippy完成更多的代码分析
+</h3><h3 id="使用rust语言服务器来集成ide"><a href="#%e4%bd%bf%e7%94%a8rust%e8%af%ad%e8%a8%80%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%9d%a5%e9%9b%86%e6%88%90ide" class="header-anchor"></a>使用Rust语言服务器来集成IDE
+</h3><h2 id="附录e-版本"><a href="#%e9%99%84%e5%bd%95e-%e7%89%88%e6%9c%ac" class="header-anchor"></a>附录E 版本
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="什么是所有权-1"><a href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%89%80%e6%9c%89%e6%9d%83-1" class="header-anchor"></a>什么是所有权
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 假如你在其他语言中接触过浅度拷贝（shallow copy）和深度拷贝（deep copy）这两个术语，那么你也许会将这里复制指针、长度及容量字段的行为视作浅度拷贝。但由于Rust同时使第一个变量无效了，所以我们使用了新的术语移动（move）来描述这一行为，而不再使用浅度拷贝  ^6733360-7SPpqxN4A
+- 💭 浅拷贝与移动的区别
+- ⏱ 2024-07-20 17:33:55</p>
+</blockquote>
+<h2 id="引用与借用-1"><a href="#%e5%bc%95%e7%94%a8%e4%b8%8e%e5%80%9f%e7%94%a8-1" class="header-anchor"></a>引用与借用
+</h2><h3 id="划线评论-1"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 此处，变量s的有效作用域与其他任何函数参数一样，唯一不同的是，它不会在离开自己的作用域时销毁其指向的数据，因为它并不拥有该数据的所有权  ^6733360-7SPqsHJMT
+- 💭 这个非常重要
+- ⏱ 2024-07-20 17:49:43</p>
+</blockquote>
+<h2 id="切片-1"><a href="#%e5%88%87%e7%89%87-1" class="header-anchor"></a>切片
+</h2><h3 id="划线评论-2"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 当你持有字符串切片时，你可以直接调用这个函数。而当你持有String时，你可以创建一个完整String的切片来作为参数  ^6733360-7SPsUqcKO
+- 💭 类似于cpp中的const&amp;入参
+- ⏱ 2024-07-20 18:27:05</p>
+</blockquote>
+<h2 id="方法-1"><a href="#%e6%96%b9%e6%b3%95-1" class="header-anchor"></a>方法
+</h2><h3 id="划线评论-3"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 关联函数常常被用作构造器来返回一个结构体的新实例  ^6733360-7SQe5zEy0
+- 💭 类似于Cpp的构造函数
+- ⏱ 2024-07-21 06:27:28</p>
+</blockquote>
+<h2 id="定义枚举-1"><a href="#%e5%ae%9a%e4%b9%89%e6%9e%9a%e4%b8%be-1" class="header-anchor"></a>定义枚举
+</h2><h3 id="划线评论-4"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 另外一个使用枚举代替结构体的优势在于：每个变体可以拥有不同类型和数量的关联数据。还是以IP地址为例，IPv4地址总是由4个0～255之间的整数部分组成。假如我们希望使用4个u8值来代表V4地址，并依然使用String值来代表V6地址，那么结构体就无法轻易实现这一目的了，而枚举则可以轻松地处理此类情形  ^6733360-7SQeurwxn
+- 💭 非常漂亮
+- ⏱ 2024-07-21 06:33:35</p>
+</blockquote>
+<h3 id="划线评论-5"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 两种实现方式之间的差别在于，假如我们使用了不同的结构体，那么每个结构体都会拥有自己的类型，我们无法轻易定义一个能够统一处理这些类型数据的函数，而我们定义在示例6-2中的Message枚举则不同，因为它是单独的一个类型。  ^6733360-7SQeFh4tx
+- 💭 这里的枚举类型比cpp里面的更强大，非常便于同一管理和处理
+- ⏱ 2024-07-21 06:36:16</p>
+</blockquote>
+<h2 id="在哈希映射中存储键值对-1"><a href="#%e5%9c%a8%e5%93%88%e5%b8%8c%e6%98%a0%e5%b0%84%e4%b8%ad%e5%ad%98%e5%82%a8%e9%94%ae%e5%80%bc%e5%af%b9-1" class="header-anchor"></a>在哈希映射中存储键值对
+</h2><h3 id="划线评论-6"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 运行这段代码会输出{&ldquo;world&rdquo;: 2, &ldquo;hello&rdquo;: 1, &ldquo;wonderful&rdquo;: 1}。代码中的方法or_insert实际上为我们传入的键返回了一个指向关联值的可变引用（&amp;mut V）。这个可变引用进而被存储到变量count上，为了对这个值进行赋值操作，我们必须首先使用星号（*）来对count进行解引用。由于这个可变引用会在for循环的结尾处离开作用域，所以我们在代码中的所有修改都是安全且满足借用规则的。  ^6733360-7SQpYtsVI
+- 💭 这段代码有点奇怪
+- ⏱ 2024-07-21 09:28:57</p>
+</blockquote>
+<h2 id="trait定义共享行为-1"><a href="#trait%e5%ae%9a%e4%b9%89%e5%85%b1%e4%ba%ab%e8%a1%8c%e4%b8%ba-1" class="header-anchor"></a>trait：定义共享行为
+</h2><h3 id="划线评论-7"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 trait提供了一种将特定方法签名组合起来的途径，它定义了为达成某种目的所必需的行为集合。  ^6733360-7SUZqOTdg
+- 💭 难懂
+- ⏱ 2024-07-24 09:37:01</p>
+</blockquote>
+<h3 id="划线评论-8"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 在方法签名后，我们省略了花括号及具体的实现，直接使用分号终结了当前的语句。任何想要实现这个trait的类型都需要为上述方法提供自定义行为。编译器会确保每一个实现了Summary trait的类型都定义了与这个签名完全一致的summarize方法。  ^6733360-7SUZBZdOR
+- 💭 像C++中虚函数
+- ⏱ 2024-07-24 09:39:46</p>
+</blockquote>
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

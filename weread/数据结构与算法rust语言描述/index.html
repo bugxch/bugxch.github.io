@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] 数据结构与算法（Rust语言描述） 书名： 数据结构与算法（Rust语言描述） 作者： 谢波 简介： 这是一本基于 Rust 语言讲解数据结构及其实现方法">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95rust%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] 数据结构与算法（Rust语言描述） 书名： 数据结构与算法（Rust语言描述） 作者： 谢波 简介： 这是一本基于 Rust 语言讲解数据结构及其实现方法">
+<meta property='og:url' content='https://blog.bugxch.top/weread/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95rust%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] 数据结构与算法（Rust语言描述） 书名： 数据结构与算法（Rust语言描述） 作者： 谢波 简介： 这是一本基于 Rust 语言讲解数据结构及其实现方法">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue8037ab3c5772f21a937200919ce7a89_163234_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#封面">封面</a></li>
+    <li><a href="#版权信息">版权信息</a></li>
+    <li><a href="#内容提要">内容提要</a></li>
+    <li><a href="#文前">文前</a></li>
+    <li><a href="#序">序</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#第1章-rust基础">第1章 Rust基础</a>
+      <ol>
+        <li><a href="#11-安装rust及其工具链">1.1 安装Rust及其工具链</a></li>
+        <li><a href="#12-rust基础知识">1.2 Rust基础知识</a></li>
+        <li><a href="#13-项目rust密码生成器">1.3 项目：Rust密码生成器</a></li>
+        <li><a href="#14-小结">1.4 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第2章-计算机科学">第2章 计算机科学</a>
+      <ol>
+        <li><a href="#21-什么是计算机科学">2.1 什么是计算机科学</a></li>
+        <li><a href="#22-什么是编程">2.2 什么是编程</a></li>
+        <li><a href="#23-为什么要学习数据结构">2.3 为什么要学习数据结构</a></li>
+        <li><a href="#24-为什么要学习算法">2.4 为什么要学习算法</a></li>
+        <li><a href="#25-小结">2.5 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第3章-算法分析">第3章 算法分析</a>
+      <ol>
+        <li><a href="#31-什么是算法分析">3.1 什么是算法分析</a></li>
+        <li><a href="#32-大o分析法">3.2 大O分析法</a></li>
+        <li><a href="#33-乱序字符串检查">3.3 乱序字符串检查</a></li>
+        <li><a href="#34-rust数据结构的性能">3.4 Rust数据结构的性能</a></li>
+        <li><a href="#35-小结">3.5 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第4章-基础数据结构">第4章 基础数据结构</a>
+      <ol>
+        <li><a href="#41-线性数据结构">4.1 线性数据结构</a></li>
+        <li><a href="#42-栈">4.2 栈</a></li>
+        <li><a href="#43-队列">4.3 队列</a></li>
+        <li><a href="#44-双端队列">4.4 双端队列</a></li>
+        <li><a href="#45-链表">4.5 链表</a></li>
+        <li><a href="#46-vec">4.6 Vec</a></li>
+        <li><a href="#47-小结">4.7 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第5章-递归">第5章 递归</a>
+      <ol>
+        <li><a href="#51-什么是递归">5.1 什么是递归</a></li>
+        <li><a href="#52-尾递归">5.2 尾递归</a></li>
+        <li><a href="#53-动态规划">5.3 动态规划</a></li>
+        <li><a href="#54-小结">5.4 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第6章-查找">第6章 查找</a>
+      <ol>
+        <li><a href="#61-什么是查找">6.1 什么是查找</a></li>
+        <li><a href="#62-顺序查找">6.2 顺序查找</a></li>
+        <li><a href="#63-二分查找">6.3 二分查找</a></li>
+        <li><a href="#64-哈希查找">6.4 哈希查找</a></li>
+        <li><a href="#65-小结">6.5 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第7章-排序">第7章 排序</a>
+      <ol>
+        <li><a href="#71-什么是排序">7.1 什么是排序</a></li>
+        <li><a href="#72-冒泡排序">7.2 冒泡排序</a></li>
+        <li><a href="#73-快速排序">7.3 快速排序</a></li>
+        <li><a href="#74-插入排序">7.4 插入排序</a></li>
+        <li><a href="#75-希尔排序">7.5 希尔排序</a></li>
+        <li><a href="#76-归并排序">7.6 归并排序</a></li>
+        <li><a href="#77-选择排序">7.7 选择排序</a></li>
+        <li><a href="#78-堆排序">7.8 堆排序</a></li>
+        <li><a href="#79-桶排序">7.9 桶排序</a></li>
+        <li><a href="#710-计数排序">7.10 计数排序</a></li>
+        <li><a href="#711-基数排序">7.11 基数排序</a></li>
+        <li><a href="#712-蒂姆排序">7.12 蒂姆排序</a></li>
+        <li><a href="#713-小结">7.13 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第8章-树">第8章 树</a>
+      <ol>
+        <li><a href="#81-什么是树">8.1 什么是树</a></li>
+        <li><a href="#82-二叉堆">8.2 二叉堆</a></li>
+        <li><a href="#83-二叉查找树">8.3 二叉查找树</a></li>
+        <li><a href="#84-平衡二叉树">8.4 平衡二叉树</a></li>
+        <li><a href="#85-小结">8.5 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第9章-图">第9章 图</a>
+      <ol>
+        <li><a href="#91-什么是图">9.1 什么是图</a></li>
+        <li><a href="#92-图的存储形式">9.2 图的存储形式</a></li>
+        <li><a href="#93-图的抽象数据类型">9.3 图的抽象数据类型</a></li>
+        <li><a href="#94-图的实现">9.4 图的实现</a></li>
+        <li><a href="#95-广度优先搜索">9.5 广度优先搜索</a></li>
+        <li><a href="#96-深度优先搜索">9.6 深度优先搜索</a></li>
+        <li><a href="#97-强连通分量">9.7 强连通分量</a></li>
+        <li><a href="#98-最短路径问题">9.8 最短路径问题</a></li>
+        <li><a href="#99-小结">9.9 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第10章-实战">第10章 实战</a>
+      <ol>
+        <li><a href="#101-编辑距离">10.1 编辑距离</a></li>
+        <li><a href="#102-字典树">10.2 字典树</a></li>
+        <li><a href="#103-过滤器">10.3 过滤器</a></li>
+        <li><a href="#104-lru缓存淘汰算法">10.4 LRU缓存淘汰算法</a></li>
+        <li><a href="#105-一致性哈希算法">10.5 一致性哈希算法</a></li>
+        <li><a href="#106-base58编码">10.6 Base58编码</a></li>
+        <li><a href="#107-区块链">10.7 区块链</a></li>
+        <li><a href="#108-小结">10.8 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#参考文献">参考文献</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#12-rust基础知识-1">1.2 Rust基础知识</a>
+      <ol>
+        <li><a href="#划线评论">划线评论</a></li>
+        <li><a href="#划线评论-1">划线评论</a></li>
+        <li><a href="#划线评论-2">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#34-rust数据结构的性能-1">3.4 Rust数据结构的性能</a>
+      <ol>
+        <li><a href="#划线评论-3">划线评论</a></li>
+        <li><a href="#划线评论-4">划线评论</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95rust%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 6 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] 数据结构与算法（Rust语言描述）</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/86/cpplatform_qpf4kjco5ycpaxigqz37nz/t7_cpplatform_qpf4kjco5ycpaxigqz37nz1690877243.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" 数据结构与算法（Rust语言描述）|200"
+	
+	
+></li>
+<li>书名： 数据结构与算法（Rust语言描述）</li>
+<li>作者： 谢波</li>
+<li>简介： 这是一本基于 Rust 语言讲解数据结构及其实现方法的书。全书先介绍 Rust 语言的基础知识以及计算机科学和算法分析的概念，然后介绍简单数据结构和算法的设计与实现，接着介绍较复杂的树和图数据结构，最后将这些知识应用于实战项目以解决实际问题。 本书适合程序设计爱好者、专业程序员以及对 Rust 语言感兴趣的读者阅读。</li>
+<li>出版时间 2023-07-01 00:00:00</li>
+<li>ISBN： 9787115611680</li>
+<li>分类： 计算机-计算机综合</li>
+<li>出版社： 人民邮电出版社有限公司</li>
+<li>PC地址：https://weread.qq.com/web/reader/5e132600813ab8038g019626</li>
+</ul>
+</blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="内容提要"><a href="#%e5%86%85%e5%ae%b9%e6%8f%90%e8%a6%81" class="header-anchor"></a>内容提要
+</h2><h2 id="文前"><a href="#%e6%96%87%e5%89%8d" class="header-anchor"></a>文前
+</h2><h2 id="序"><a href="#%e5%ba%8f" class="header-anchor"></a>序
+</h2><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><h2 id="第1章-rust基础"><a href="#%e7%ac%ac1%e7%ab%a0-rust%e5%9f%ba%e7%a1%80" class="header-anchor"></a>第1章 Rust基础
+</h2><h3 id="11-安装rust及其工具链"><a href="#11-%e5%ae%89%e8%a3%85rust%e5%8f%8a%e5%85%b6%e5%b7%a5%e5%85%b7%e9%93%be" class="header-anchor"></a>1.1 安装Rust及其工具链
+</h3><h3 id="12-rust基础知识"><a href="#12-rust%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86" class="header-anchor"></a>1.2 Rust基础知识
+</h3><blockquote>
+<p>📌 Rust中存在常量、变量、静态变量三种类型的量。常量不能改变，不能被覆盖（重定义）；变量可变可不变，还可被覆盖；静态变量可变可不变，不能被覆盖。
+⏱ 2024-07-22 21:55:22 ^3300065849-9-5861-5933</p>
+</blockquote>
+<blockquote>
+<p>📌 泛型是具体类型或属性的抽象替代，实际使用时只需要表达泛型的属性，比如其行为或如何与其他泛型相关联，而不需要在编写代码时知道实际上是什么类型。
+⏱ 2024-07-23 07:42:14 ^3300065849-9-25160-25230</p>
+</blockquote>
+<blockquote>
+<p>📌 一个trait只能由方法、类型、常量三部分组成，它描述了一种抽象接口，这种抽象接口既可以被类型实现，也可以直接继承其默认实现。比如，定义老师和学生两种类型，它们都有打招
+⏱ 2024-07-23 07:44:31 ^3300065849-9-26173-26257</p>
+</blockquote>
+<blockquote>
+<p>📌 使用match匹配时必须穷尽所有可能，当然用_占位是能够穷尽的，但有时候我们只关心某个匹配模式，这时用match就会很麻烦。好在Rust对match的这种匹配模式做了推广，引入了if let匹配模式。下面的if let匹配统计了所有面额大于1元的纸币的数量。
+⏱ 2024-07-23 08:26:33 ^3300065849-9-29655-29784</p>
+</blockquote>
+<blockquote>
+<p>📌 Rust不像面向对象编程语言那样喜欢通过类来解决问题，而是推崇函数式编程。函数式编程是指将函数作为参数值或其他函数的返回值，在将函数赋值给变量之后执行。函数式编程有两个极为重要的构件，分别是闭包和迭代器。
+⏱ 2024-07-23 08:27:11 ^3300065849-9-30036-30138</p>
+</blockquote>
+<blockquote>
+<p>📌 迭代器会把集合中的所有元素按照顺序一个一个传递给处理逻辑。迭代器允许对一个序列进行某些处理，并且会遍历这个序列中的每一项以决定何时结束。迭代器默认都要实现Iterator trait。Iterator trait有两个方法——iter()和next()，它们是迭代器的核心功能。
+⏱ 2024-07-23 08:31:18 ^3300065849-9-31630-31769</p>
+</blockquote>
+<blockquote>
+<p>📌 可重入是指迭代后，原始数据还能使用，不可重入则表明迭代器消费了原始数据。如果只读取值，那就实现iter()；如果还需要改变原始数据，那就实现iter_mut()；如果要将原始数据直接转换为迭代器，那就实现into_iter()，以获取原始数据所有权并返回一个迭代器。
+⏱ 2024-07-23 08:31:51 ^3300065849-9-32072-32205</p>
+</blockquote>
+<blockquote>
+<p>📌 命令式编程是面向计算机硬件的抽象，有变量、赋值语句、表达式、控制语句等，命令式编程可以理解为冯·诺依曼的指令序列。我们平时用的结构化编程和面向对象编程都是命令式编程，其主要思想是关注计算机执行的步骤，即一步一步告诉计算机先做什么，再做什么。声明式编程则以数据结构的形式表达程序执行的逻辑，其主要思想是告诉计算机应该做什么，但不指定具体要怎么做。SQL编程就是一种声明式编程。函数式编程和声明式编程是有关联的，因为它们的思想是一致的：只关注做什么而不关注具体怎么做。但函数式编程并不局限于声明式编程，函数式编程是面向数学的抽象，旨在将计算描述为一种表达式求值。说白了，函数式程序就是数学表达式。函数式编程中的函数并非计算机中的函数，而是数学中的函数，就像y = f (x)这样的自变量映射关系。函数的输出值取决于函数的输入参数值，而不依赖于其他状态。比如，x.sin()函数用于计算x的正弦值，只要x不变，无论何时调用，调用多少次，最终的结果都是一样的。
+⏱ 2024-07-23 08:48:40 ^3300065849-9-34011-34550</p>
+</blockquote>
+<blockquote>
+<p>📌 智能指针中的Deref和Drop是最为重要的两个trait。下面我们通过为自定义的数据类型（类似于Box<T>）实现Deref和Drop来体会引用和智能指针的区别。
+⏱ 2024-07-23 09:09:16 ^3300065849-9-36066-36154</p>
+</blockquote>
+<blockquote>
+<p>📌 如果应该使用String却输入&amp;str，则必须先克隆才能调用；如果输入String，则不需要克隆就可以调用，但调用后，字符串会被移动到函数内部，外部将无法使用。不管采用哪种方法，函数内部都做了一次字符串生成和拷贝。如果字符串中没有空白字符，则最好直接原样返回，不需要拷贝。这时Cow就可以派上用场了，Cow的存在就是为了减少复制，提高效率。
+⏱ 2024-07-23 09:12:06 ^3300065849-9-42669-42843</p>
+</blockquote>
+<h3 id="13-项目rust密码生成器"><a href="#13-%e9%a1%b9%e7%9b%aerust%e5%af%86%e7%a0%81%e7%94%9f%e6%88%90%e5%99%a8" class="header-anchor"></a>1.3 项目：Rust密码生成器
+</h3><h3 id="14-小结"><a href="#14-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>1.4 小结
+</h3><h2 id="第2章-计算机科学"><a href="#%e7%ac%ac2%e7%ab%a0-%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%a7%91%e5%ad%a6" class="header-anchor"></a>第2章 计算机科学
+</h2><h3 id="21-什么是计算机科学"><a href="#21-%e4%bb%80%e4%b9%88%e6%98%af%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%a7%91%e5%ad%a6" class="header-anchor"></a>2.1 什么是计算机科学
+</h3><h3 id="22-什么是编程"><a href="#22-%e4%bb%80%e4%b9%88%e6%98%af%e7%bc%96%e7%a8%8b" class="header-anchor"></a>2.2 什么是编程
+</h3><h3 id="23-为什么要学习数据结构"><a href="#23-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%ad%a6%e4%b9%a0%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>2.3 为什么要学习数据结构
+</h3><h3 id="24-为什么要学习算法"><a href="#24-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%ad%a6%e4%b9%a0%e7%ae%97%e6%b3%95" class="header-anchor"></a>2.4 为什么要学习算法
+</h3><h3 id="25-小结"><a href="#25-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>2.5 小结
+</h3><h2 id="第3章-算法分析"><a href="#%e7%ac%ac3%e7%ab%a0-%e7%ae%97%e6%b3%95%e5%88%86%e6%9e%90" class="header-anchor"></a>第3章 算法分析
+</h2><h3 id="31-什么是算法分析"><a href="#31-%e4%bb%80%e4%b9%88%e6%98%af%e7%ae%97%e6%b3%95%e5%88%86%e6%9e%90" class="header-anchor"></a>3.1 什么是算法分析
+</h3><h3 id="32-大o分析法"><a href="#32-%e5%a4%a7o%e5%88%86%e6%9e%90%e6%b3%95" class="header-anchor"></a>3.2 大O分析法
+</h3><h3 id="33-乱序字符串检查"><a href="#33-%e4%b9%b1%e5%ba%8f%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%a3%80%e6%9f%a5" class="header-anchor"></a>3.3 乱序字符串检查
+</h3><h3 id="34-rust数据结构的性能"><a href="#34-rust%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e7%9a%84%e6%80%a7%e8%83%bd" class="header-anchor"></a>3.4 Rust数据结构的性能
+</h3><blockquote>
+<p>📌 记住一点，在Rust中，可变字符串用String，不可变字符串用&amp;str
+⏱ 2024-07-23 18:52:30 ^3300065849-22-2304-2344</p>
+</blockquote>
+<h3 id="35-小结"><a href="#35-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>3.5 小结
+</h3><h2 id="第4章-基础数据结构"><a href="#%e7%ac%ac4%e7%ab%a0-%e5%9f%ba%e7%a1%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>第4章 基础数据结构
+</h2><h3 id="41-线性数据结构"><a href="#41-%e7%ba%bf%e6%80%a7%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>4.1 线性数据结构
+</h3><blockquote>
+<p>📌 线性数据结构说的并非数据的保存方式，而是数据的访问方式。线性数据结构不一定代表数据项在内存中相邻。以链表为例，虽然其中的数据项可能在内存的各个位置，但访问是线性的。
+⏱ 2024-07-23 18:54:33 ^3300065849-25-649-731</p>
+</blockquote>
+<h3 id="42-栈"><a href="#42-%e6%a0%88" class="header-anchor"></a>4.2 栈
+</h3><h3 id="43-队列"><a href="#43-%e9%98%9f%e5%88%97" class="header-anchor"></a>4.3 队列
+</h3><h3 id="44-双端队列"><a href="#44-%e5%8f%8c%e7%ab%af%e9%98%9f%e5%88%97" class="header-anchor"></a>4.4 双端队列
+</h3><h3 id="45-链表"><a href="#45-%e9%93%be%e8%a1%a8" class="header-anchor"></a>4.5 链表
+</h3><h3 id="46-vec"><a href="#46-vec" class="header-anchor"></a>4.6 Vec
+</h3><h3 id="47-小结"><a href="#47-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>4.7 小结
+</h3><h2 id="第5章-递归"><a href="#%e7%ac%ac5%e7%ab%a0-%e9%80%92%e5%bd%92" class="header-anchor"></a>第5章 递归
+</h2><h3 id="51-什么是递归"><a href="#51-%e4%bb%80%e4%b9%88%e6%98%af%e9%80%92%e5%bd%92" class="header-anchor"></a>5.1 什么是递归
+</h3><h3 id="52-尾递归"><a href="#52-%e5%b0%be%e9%80%92%e5%bd%92" class="header-anchor"></a>5.2 尾递归
+</h3><h3 id="53-动态规划"><a href="#53-%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" class="header-anchor"></a>5.3 动态规划
+</h3><h3 id="54-小结"><a href="#54-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>5.4 小结
+</h3><h2 id="第6章-查找"><a href="#%e7%ac%ac6%e7%ab%a0-%e6%9f%a5%e6%89%be" class="header-anchor"></a>第6章 查找
+</h2><h3 id="61-什么是查找"><a href="#61-%e4%bb%80%e4%b9%88%e6%98%af%e6%9f%a5%e6%89%be" class="header-anchor"></a>6.1 什么是查找
+</h3><h3 id="62-顺序查找"><a href="#62-%e9%a1%ba%e5%ba%8f%e6%9f%a5%e6%89%be" class="header-anchor"></a>6.2 顺序查找
+</h3><h3 id="63-二分查找"><a href="#63-%e4%ba%8c%e5%88%86%e6%9f%a5%e6%89%be" class="header-anchor"></a>6.3 二分查找
+</h3><h3 id="64-哈希查找"><a href="#64-%e5%93%88%e5%b8%8c%e6%9f%a5%e6%89%be" class="header-anchor"></a>6.4 哈希查找
+</h3><h3 id="65-小结"><a href="#65-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>6.5 小结
+</h3><h2 id="第7章-排序"><a href="#%e7%ac%ac7%e7%ab%a0-%e6%8e%92%e5%ba%8f" class="header-anchor"></a>第7章 排序
+</h2><h3 id="71-什么是排序"><a href="#71-%e4%bb%80%e4%b9%88%e6%98%af%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.1 什么是排序
+</h3><h3 id="72-冒泡排序"><a href="#72-%e5%86%92%e6%b3%a1%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.2 冒泡排序
+</h3><h3 id="73-快速排序"><a href="#73-%e5%bf%ab%e9%80%9f%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.3 快速排序
+</h3><h3 id="74-插入排序"><a href="#74-%e6%8f%92%e5%85%a5%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.4 插入排序
+</h3><h3 id="75-希尔排序"><a href="#75-%e5%b8%8c%e5%b0%94%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.5 希尔排序
+</h3><h3 id="76-归并排序"><a href="#76-%e5%bd%92%e5%b9%b6%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.6 归并排序
+</h3><h3 id="77-选择排序"><a href="#77-%e9%80%89%e6%8b%a9%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.7 选择排序
+</h3><h3 id="78-堆排序"><a href="#78-%e5%a0%86%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.8 堆排序
+</h3><h3 id="79-桶排序"><a href="#79-%e6%a1%b6%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.9 桶排序
+</h3><h3 id="710-计数排序"><a href="#710-%e8%ae%a1%e6%95%b0%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.10 计数排序
+</h3><h3 id="711-基数排序"><a href="#711-%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.11 基数排序
+</h3><h3 id="712-蒂姆排序"><a href="#712-%e8%92%82%e5%a7%86%e6%8e%92%e5%ba%8f" class="header-anchor"></a>7.12 蒂姆排序
+</h3><h3 id="713-小结"><a href="#713-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>7.13 小结
+</h3><h2 id="第8章-树"><a href="#%e7%ac%ac8%e7%ab%a0-%e6%a0%91" class="header-anchor"></a>第8章 树
+</h2><h3 id="81-什么是树"><a href="#81-%e4%bb%80%e4%b9%88%e6%98%af%e6%a0%91" class="header-anchor"></a>8.1 什么是树
+</h3><h3 id="82-二叉堆"><a href="#82-%e4%ba%8c%e5%8f%89%e5%a0%86" class="header-anchor"></a>8.2 二叉堆
+</h3><h3 id="83-二叉查找树"><a href="#83-%e4%ba%8c%e5%8f%89%e6%9f%a5%e6%89%be%e6%a0%91" class="header-anchor"></a>8.3 二叉查找树
+</h3><h3 id="84-平衡二叉树"><a href="#84-%e5%b9%b3%e8%a1%a1%e4%ba%8c%e5%8f%89%e6%a0%91" class="header-anchor"></a>8.4 平衡二叉树
+</h3><h3 id="85-小结"><a href="#85-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>8.5 小结
+</h3><h2 id="第9章-图"><a href="#%e7%ac%ac9%e7%ab%a0-%e5%9b%be" class="header-anchor"></a>第9章 图
+</h2><h3 id="91-什么是图"><a href="#91-%e4%bb%80%e4%b9%88%e6%98%af%e5%9b%be" class="header-anchor"></a>9.1 什么是图
+</h3><h3 id="92-图的存储形式"><a href="#92-%e5%9b%be%e7%9a%84%e5%ad%98%e5%82%a8%e5%bd%a2%e5%bc%8f" class="header-anchor"></a>9.2 图的存储形式
+</h3><h3 id="93-图的抽象数据类型"><a href="#93-%e5%9b%be%e7%9a%84%e6%8a%bd%e8%b1%a1%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>9.3 图的抽象数据类型
+</h3><h3 id="94-图的实现"><a href="#94-%e5%9b%be%e7%9a%84%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>9.4 图的实现
+</h3><h3 id="95-广度优先搜索"><a href="#95-%e5%b9%bf%e5%ba%a6%e4%bc%98%e5%85%88%e6%90%9c%e7%b4%a2" class="header-anchor"></a>9.5 广度优先搜索
+</h3><h3 id="96-深度优先搜索"><a href="#96-%e6%b7%b1%e5%ba%a6%e4%bc%98%e5%85%88%e6%90%9c%e7%b4%a2" class="header-anchor"></a>9.6 深度优先搜索
+</h3><h3 id="97-强连通分量"><a href="#97-%e5%bc%ba%e8%bf%9e%e9%80%9a%e5%88%86%e9%87%8f" class="header-anchor"></a>9.7 强连通分量
+</h3><h3 id="98-最短路径问题"><a href="#98-%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%84%e9%97%ae%e9%a2%98" class="header-anchor"></a>9.8 最短路径问题
+</h3><h3 id="99-小结"><a href="#99-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>9.9 小结
+</h3><h2 id="第10章-实战"><a href="#%e7%ac%ac10%e7%ab%a0-%e5%ae%9e%e6%88%98" class="header-anchor"></a>第10章 实战
+</h2><h3 id="101-编辑距离"><a href="#101-%e7%bc%96%e8%be%91%e8%b7%9d%e7%a6%bb" class="header-anchor"></a>10.1 编辑距离
+</h3><h3 id="102-字典树"><a href="#102-%e5%ad%97%e5%85%b8%e6%a0%91" class="header-anchor"></a>10.2 字典树
+</h3><h3 id="103-过滤器"><a href="#103-%e8%bf%87%e6%bb%a4%e5%99%a8" class="header-anchor"></a>10.3 过滤器
+</h3><h3 id="104-lru缓存淘汰算法"><a href="#104-lru%e7%bc%93%e5%ad%98%e6%b7%98%e6%b1%b0%e7%ae%97%e6%b3%95" class="header-anchor"></a>10.4 LRU缓存淘汰算法
+</h3><h3 id="105-一致性哈希算法"><a href="#105-%e4%b8%80%e8%87%b4%e6%80%a7%e5%93%88%e5%b8%8c%e7%ae%97%e6%b3%95" class="header-anchor"></a>10.5 一致性哈希算法
+</h3><h3 id="106-base58编码"><a href="#106-base58%e7%bc%96%e7%a0%81" class="header-anchor"></a>10.6 Base58编码
+</h3><h3 id="107-区块链"><a href="#107-%e5%8c%ba%e5%9d%97%e9%93%be" class="header-anchor"></a>10.7 区块链
+</h3><h3 id="108-小结"><a href="#108-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>10.8 小结
+</h3><h2 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="12-rust基础知识-1"><a href="#12-rust%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-1" class="header-anchor"></a>1.2 Rust基础知识
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 Rust十分重视文档和测试，并为此专门提供了文档注释。有了文档注释，就可以在注释中写文档和测试代码，通过cargo test可以直接测试代码，通过cargo doc可以直接生成文档。  ^6733360-7SSJ2Vo9b
+- 💭 🐂🍺
+- ⏱ 2024-07-22 21:53:29</p>
+</blockquote>
+<h3 id="划线评论-1"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 闭包也可能没有参数，同时返回值也可写可不写。实际上，Rust会自动推断闭包的参数类型和返回值类型，所以参数和返回值的类型都可以不写。为了使用闭包，你只需要将其赋值给变量，然后像调用函数一样调用它即可。比如定义如下判断奇偶的闭包。  ^6733360-7SToJ5u6C
+- 💭 这种用法很新颖
+- ⏱ 2024-07-23 08:29:54</p>
+</blockquote>
+<h3 id="划线评论-2"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 这个求和任务如果采用命令式编程，则可能需要编写如下代码。  ^6733360-7STpTMIGZ
+- 💭 命令式编程和函数式编程的区别
+- ⏱ 2024-07-23 08:47:48</p>
+</blockquote>
+<h2 id="34-rust数据结构的性能-1"><a href="#34-rust%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e7%9a%84%e6%80%a7%e8%83%bd-1" class="header-anchor"></a>3.4 Rust数据结构的性能
+</h2><h3 id="划线评论-3"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 VecDeque扩展了Vec，支持在序列的两端插入数据，是双端队列。LinkedList是链表，当需要未知大小的Vec时可以采用。  ^6733360-7SU3xk264
+- 💭 到目前为止还没有用到
+- ⏱ 2024-07-23 18:53:02</p>
+</blockquote>
+<h3 id="划线评论-4"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 BinaryHeap类似于优先队列，里面存储了一堆元素，可在任何时候提取出最值。  ^6733360-7SU3zQcKp
+- 💭 优先队列在这里哎
+- ⏱ 2024-07-23 18:53:39</p>
+</blockquote>
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

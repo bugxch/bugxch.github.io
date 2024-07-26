@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] Rust 程序设计（第2版） 书名： Rust 程序设计（第2版） 作者： 【美】 吉姆•布兰迪（Jim Blandy） 贾森•奥伦多夫（Jason Orendor">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/rust-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%AC2%E7%89%88/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] Rust 程序设计（第2版） 书名： Rust 程序设计（第2版） 作者： 【美】 吉姆•布兰迪（Jim Blandy） 贾森•奥伦多夫（Jason Orendor">
+<meta property='og:url' content='https://blog.bugxch.top/weread/rust-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%AC2%E7%89%88/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] Rust 程序设计（第2版） 书名： Rust 程序设计（第2版） 作者： 【美】 吉姆•布兰迪（Jim Blandy） 贾森•奥伦多夫（Jason Orendor">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue8037ab3c5772f21a937200919ce7a89_163234_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#版权声明">版权声明</a></li>
+    <li><a href="#oreilly-media-inc介绍">O&rsquo;Reilly Media, Inc.介绍</a></li>
+    <li><a href="#专家推荐">专家推荐</a></li>
+    <li><a href="#译者序">译者序</a>
+      <ol>
+        <li><a href="#致谢">致谢</a></li>
+      </ol>
+    </li>
+    <li><a href="#前言">前言</a>
+      <ol>
+        <li><a href="#读者对象">读者对象</a></li>
+        <li><a href="#写作初衷">写作初衷</a></li>
+        <li><a href="#浏览本书">浏览本书</a></li>
+        <li><a href="#排版约定">排版约定</a></li>
+        <li><a href="#使用代码示例">使用代码示例</a></li>
+        <li><a href="#oreilly-在线学习平台oreilly-online-learning">O&rsquo;Reilly 在线学习平台（O&rsquo;Reilly Online Learning）</a></li>
+        <li><a href="#联系我们">联系我们</a></li>
+        <li><a href="#致谢-1">致谢</a></li>
+        <li><a href="#电子书">电子书</a></li>
+      </ol>
+    </li>
+    <li><a href="#中文版审读致谢">中文版审读致谢</a></li>
+    <li><a href="#第-1-章-系统程序员也能享受美好">第 1 章 系统程序员也能享受美好</a>
+      <ol>
+        <li><a href="#11-rust-为你负重前行">1.1 Rust 为你负重前行</a></li>
+        <li><a href="#12-高效并行编程">1.2 高效并行编程</a></li>
+        <li><a href="#13-性能毫不妥协">1.3 性能毫不妥协</a></li>
+        <li><a href="#14-协作无边无界">1.4 协作无边无界</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-2-章-rust-导览">第 2 章 Rust 导览</a>
+      <ol>
+        <li><a href="#21-rustup-与-cargo">2.1 rustup 与 Cargo</a></li>
+        <li><a href="#22-rust-函数">2.2 Rust 函数</a></li>
+        <li><a href="#23-编写与运行单元测试">2.3 编写与运行单元测试</a></li>
+        <li><a href="#24-处理命令行参数">2.4 处理命令行参数</a></li>
+        <li><a href="#25-搭建-web-服务器">2.5 搭建 Web 服务器</a></li>
+        <li><a href="#26-并发">2.6 并发</a></li>
+        <li><a href="#27-文件系统与命令行工具">2.7 文件系统与命令行工具</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-3-章-基本数据类型">第 3 章 基本数据类型</a>
+      <ol>
+        <li><a href="#31-固定宽度的数值类型">3.1 固定宽度的数值类型</a></li>
+        <li><a href="#32-布尔类型">3.2 布尔类型</a></li>
+        <li><a href="#33-字符">3.3 字符</a></li>
+        <li><a href="#34-元组">3.4 元组</a></li>
+        <li><a href="#35-指针类型">3.5 指针类型</a></li>
+        <li><a href="#36-数组向量和切片">3.6 数组、向量和切片</a></li>
+        <li><a href="#37-字符串类型">3.7 字符串类型</a></li>
+        <li><a href="#38-类型别名">3.8 类型别名</a></li>
+        <li><a href="#39-前路展望">3.9 前路展望</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-4-章-所有权与移动-1">第 4 章 所有权与移动 1</a>
+      <ol>
+        <li><a href="#41-所有权">4.1 所有权</a></li>
+        <li><a href="#42-移动">4.2 移动</a></li>
+        <li><a href="#43-copy-类型关于移动的例外情况">4.3 Copy 类型：关于移动的例外情况</a></li>
+        <li><a href="#44-rc-与-arc共享所有权">4.4 Rc 与 Arc：共享所有权</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-5-章-引用">第 5 章 引用</a>
+      <ol>
+        <li><a href="#51-对值的引用">5.1 对值的引用</a></li>
+        <li><a href="#52-使用引用">5.2 使用引用</a></li>
+        <li><a href="#53-引用安全">5.3 引用安全</a></li>
+        <li><a href="#54-共享与可变">5.4 共享与可变</a></li>
+        <li><a href="#55-应对复杂对象关系">5.5 应对复杂对象关系</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-6-章-表达式">第 6 章 表达式</a>
+      <ol>
+        <li><a href="#61-表达式语言">6.1 表达式语言</a></li>
+        <li><a href="#62-优先级与结合性">6.2 优先级与结合性</a></li>
+        <li><a href="#63-块与分号">6.3 块与分号</a></li>
+        <li><a href="#64-声明">6.4 声明</a></li>
+        <li><a href="#65-if-与-match">6.5 if 与 match</a></li>
+        <li><a href="#66-循环中的控制流">6.6 循环中的控制流</a></li>
+        <li><a href="#67-return-表达式">6.7 return 表达式</a></li>
+        <li><a href="#68-为什么-rust-中会有-loop">6.8 为什么 Rust 中会有 loop</a></li>
+        <li><a href="#69-函数与方法调用">6.9 函数与方法调用</a></li>
+        <li><a href="#610-字段与元素">6.10 字段与元素</a></li>
+        <li><a href="#611-引用运算符">6.11 引用运算符</a></li>
+        <li><a href="#612-算术运算符按位运算符比较运算符和逻辑运算符">6.12 算术运算符、按位运算符、比较运算符和逻辑运算符</a></li>
+        <li><a href="#613-赋值">6.13 赋值</a></li>
+        <li><a href="#614-类型转换">6.14 类型转换</a></li>
+        <li><a href="#615-闭包">6.15 闭包</a></li>
+        <li><a href="#616-前路展望">6.16 前路展望</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-7-章-错误处理">第 7 章 错误处理</a>
+      <ol>
+        <li><a href="#71-panic">7.1 panic</a></li>
+        <li><a href="#72-result">7.2 Result</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-8-章-crate-与模块">第 8 章 crate 与模块</a>
+      <ol>
+        <li><a href="#81-crate">8.1 crate</a></li>
+        <li><a href="#82-模块">8.2 模块</a></li>
+        <li><a href="#83-将程序变成库">8.3 将程序变成库</a></li>
+        <li><a href="#84-srcbin-目录">8.4 src/bin 目录</a></li>
+        <li><a href="#85-属性">8.5 属性</a></li>
+        <li><a href="#86-测试与文档">8.6 测试与文档</a></li>
+        <li><a href="#87-指定依赖项">8.7 指定依赖项</a></li>
+        <li><a href="#88-将-crate-发布到-cratesio">8.8 将 crate 发布到 crates.io</a></li>
+        <li><a href="#89-工作空间">8.9 工作空间</a></li>
+        <li><a href="#810-更多好资源">8.10 更多好资源</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-9-章-结构体">第 9 章 结构体</a>
+      <ol>
+        <li><a href="#91-具名字段型结构体">9.1 具名字段型结构体</a></li>
+        <li><a href="#92-元组型结构体">9.2 元组型结构体</a></li>
+        <li><a href="#93-单元型结构体">9.3 单元型结构体</a></li>
+        <li><a href="#94-结构体布局">9.4 结构体布局</a></li>
+        <li><a href="#95-用-impl-定义方法">9.5 用 impl 定义方法</a></li>
+        <li><a href="#96-关联常量">9.6 关联常量</a></li>
+        <li><a href="#97-泛型结构体">9.7 泛型结构体</a></li>
+        <li><a href="#98-带生命周期参数的泛型结构体">9.8 带生命周期参数的泛型结构体</a></li>
+        <li><a href="#99-带常量参数的泛型结构体">9.9 带常量参数的泛型结构体</a></li>
+        <li><a href="#910-让结构体类型派生自某些公共特型">9.10 让结构体类型派生自某些公共特型</a></li>
+        <li><a href="#911-内部可变性">9.11 内部可变性</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-10-章-枚举与模式">第 10 章 枚举与模式</a>
+      <ol>
+        <li><a href="#101-枚举">10.1 枚举</a></li>
+        <li><a href="#102-模式">10.2 模式</a></li>
+        <li><a href="#103-大局观">10.3 大局观</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-11-章-特型与泛型">第 11 章 特型与泛型</a>
+      <ol>
+        <li><a href="#111-使用特型">11.1 使用特型</a></li>
+        <li><a href="#112-定义与实现特型">11.2 定义与实现特型</a></li>
+        <li><a href="#113-完全限定的方法调用">11.3 完全限定的方法调用</a></li>
+        <li><a href="#114-定义类型之间关系的特型">11.4 定义类型之间关系的特型</a></li>
+        <li><a href="#115-逆向工程求限界">11.5 逆向工程求限界</a></li>
+        <li><a href="#116-以特型为基础">11.6 以特型为基础</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-12-章-运算符重载">第 12 章 运算符重载</a>
+      <ol>
+        <li><a href="#121-算术运算符与按位运算符">12.1 算术运算符与按位运算符</a></li>
+        <li><a href="#122-相等性比较">12.2 相等性比较</a></li>
+        <li><a href="#123-有序比较">12.3 有序比较</a></li>
+        <li><a href="#124-index-与-indexmut">12.4 Index 与 IndexMut</a></li>
+        <li><a href="#125-其他运算符">12.5 其他运算符</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-13-章-实用工具特型">第 13 章 实用工具特型</a>
+      <ol>
+        <li><a href="#131-drop">13.1 Drop</a></li>
+        <li><a href="#132-sized">13.2 Sized</a></li>
+        <li><a href="#133-clone">13.3 Clone</a></li>
+        <li><a href="#134-copy">13.4 Copy</a></li>
+        <li><a href="#135-deref-与-derefmut">13.5 Deref 与 DerefMut</a></li>
+        <li><a href="#136-default">13.6 Default</a></li>
+        <li><a href="#137-asref-与-asmut">13.7 AsRef 与 AsMut</a></li>
+        <li><a href="#138-borrow-与-borrowmut">13.8 Borrow 与 BorrowMut</a></li>
+        <li><a href="#139-from-与-into">13.9 From 与 Into</a></li>
+        <li><a href="#1310-tryfrom-与-tryinto">13.10 TryFrom 与 TryInto</a></li>
+        <li><a href="#1311-toowned">13.11 ToOwned</a></li>
+        <li><a href="#1312-borrow-与-toowned-的实际运用谦卑-2-的-cow">13.12 Borrow 与 ToOwned 的实际运用：谦卑 2 的 Cow</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-14-章-闭包">第 14 章 闭包</a>
+      <ol>
+        <li><a href="#141-捕获变量">14.1 捕获变量</a></li>
+        <li><a href="#142-函数与闭包的类型">14.2 函数与闭包的类型</a></li>
+        <li><a href="#143-闭包性能">14.3 闭包性能</a></li>
+        <li><a href="#144-闭包与安全">14.4 闭包与安全</a></li>
+        <li><a href="#145-回调">14.5 回调</a></li>
+        <li><a href="#146-高效地使用闭包">14.6 高效地使用闭包</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-15-章-迭代器">第 15 章 迭代器</a>
+      <ol>
+        <li><a href="#151-iterator-特型与-intoiterator-特型">15.1 Iterator 特型与 IntoIterator 特型</a></li>
+        <li><a href="#152-创建迭代器">15.2 创建迭代器</a></li>
+        <li><a href="#153-迭代器适配器">15.3 迭代器适配器</a></li>
+        <li><a href="#154-消耗迭代器">15.4 消耗迭代器</a></li>
+        <li><a href="#155-实现自己的迭代器">15.5 实现自己的迭代器</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-16-章-集合">第 16 章 集合</a>
+      <ol>
+        <li><a href="#161-概述">16.1 概述</a></li>
+        <li><a href="#162-vect">16.2 Vec<T></a></li>
+        <li><a href="#163-vecdequet">16.3 VecDeque<T></a></li>
+        <li><a href="#164-binaryheapt">16.4 BinaryHeap<T></a></li>
+        <li><a href="#165-hashmapk-v-与-btreemapk-v">16.5 HashMap&lt;K, V&gt; 与 BTreeMap&lt;K, V&gt;</a></li>
+        <li><a href="#166-hashsett-与-btreesett">16.6 HashSet<T> 与 BTreeSet<T></a></li>
+        <li><a href="#167-哈希">16.7 哈希</a></li>
+        <li><a href="#168-使用自定义哈希算法">16.8 使用自定义哈希算法</a></li>
+        <li><a href="#169-在标准集合之外">16.9 在标准集合之外</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-17-章-字符串与文本">第 17 章 字符串与文本</a>
+      <ol>
+        <li><a href="#171-一些-unicode-背景知识">17.1 一些 Unicode 背景知识</a></li>
+        <li><a href="#172-字符char">17.2 字符（char）</a></li>
+        <li><a href="#173-string-与-str">17.3 String 与 str</a></li>
+        <li><a href="#174-格式化各种值">17.4 格式化各种值</a></li>
+        <li><a href="#175-正则表达式">17.5 正则表达式</a></li>
+        <li><a href="#176-规范化">17.6 规范化</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-18-章-输入与输出">第 18 章 输入与输出</a>
+      <ol>
+        <li><a href="#181-读取器与写入器">18.1 读取器与写入器</a></li>
+        <li><a href="#182-文件与目录">18.2 文件与目录</a></li>
+        <li><a href="#183-网络">18.3 网络</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-19-章-并发">第 19 章 并发</a>
+      <ol>
+        <li><a href="#191-分叉与合并并行">19.1 分叉与合并并行</a></li>
+        <li><a href="#192-通道">19.2 通道</a></li>
+        <li><a href="#193-共享可变状态">19.3 共享可变状态</a></li>
+        <li><a href="#194-在-rust-中编写并发代码的一点儿经验">19.4 在 Rust 中编写并发代码的一点儿经验</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-20-章-异步编程">第 20 章 异步编程</a>
+      <ol>
+        <li><a href="#201-从同步到异步">20.1 从同步到异步</a></li>
+        <li><a href="#202-异步客户端与服务器">20.2 异步客户端与服务器</a></li>
+        <li><a href="#203-原始-future-与执行器future-什么时候值得再次轮询">20.3 原始 Future 与执行器：Future 什么时候值得再次轮询</a></li>
+        <li><a href="#204-固定pin5">20.4 固定（Pin）5</a></li>
+        <li><a href="#205-什么时候要用异步代码">20.5 什么时候要用异步代码</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-21-章-宏">第 21 章 宏</a>
+      <ol>
+        <li><a href="#211-宏基础">21.1 宏基础</a></li>
+        <li><a href="#212-内置宏">21.2 内置宏</a></li>
+        <li><a href="#213-调试宏">21.3 调试宏</a></li>
+        <li><a href="#214-构建-json-宏">21.4 构建 json! 宏</a></li>
+        <li><a href="#215-在匹配过程中避免语法错误">21.5 在匹配过程中避免语法错误</a></li>
+        <li><a href="#216-超越-macro_rules">21.6 超越 macro_rules!</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-22-章-不安全代码">第 22 章 不安全代码</a>
+      <ol>
+        <li><a href="#221-不安全因素来自哪里">22.1 不安全因素来自哪里</a></li>
+        <li><a href="#222-不安全块">22.2 不安全块</a></li>
+        <li><a href="#223-示例高效的-ascii-字符串类型">22.3 示例：高效的 ASCII 字符串类型</a></li>
+        <li><a href="#224-不安全函数">22.4 不安全函数</a></li>
+        <li><a href="#225-不安全块还是不安全函数">22.5 不安全块还是不安全函数</a></li>
+        <li><a href="#226-未定义行为">22.6 未定义行为</a></li>
+        <li><a href="#227-不安全特型">22.7 不安全特型</a></li>
+        <li><a href="#228-裸指针">22.8 裸指针</a></li>
+        <li><a href="#229-用联合体重新解释内存">22.9 用联合体重新解释内存</a></li>
+        <li><a href="#2210-匹配联合体">22.10 匹配联合体</a></li>
+        <li><a href="#2211-借用联合体">22.11 借用联合体</a></li>
+      </ol>
+    </li>
+    <li><a href="#第-23-章-外部函数">第 23 章 外部函数</a>
+      <ol>
+        <li><a href="#231-寻找共同的数据表示">23.1 寻找共同的数据表示</a></li>
+        <li><a href="#232-声明外部函数与变量">23.2 声明外部函数与变量</a></li>
+        <li><a href="#233-使用库中的函数">23.3 使用库中的函数</a></li>
+        <li><a href="#234-libgit2-的裸接口">23.4 libgit2 的裸接口</a></li>
+        <li><a href="#235-libgit2-的安全接口">23.5 libgit2 的安全接口</a></li>
+        <li><a href="#236-结论">23.6 结论</a></li>
+      </ol>
+    </li>
+    <li><a href="#作者介绍">作者介绍</a></li>
+    <li><a href="#封面介绍">封面介绍</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#41-所有权-1">4.1 所有权</a>
+      <ol>
+        <li><a href="#划线评论">划线评论</a></li>
+        <li><a href="#划线评论-1">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#42-移动-1">4.2 移动</a>
+      <ol>
+        <li><a href="#划线评论-2">划线评论</a></li>
+        <li><a href="#划线评论-3">划线评论</a></li>
+        <li><a href="#划线评论-4">划线评论</a></li>
+        <li><a href="#划线评论-5">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#43-copy-类型关于移动的例外情况-1">4.3 Copy 类型：关于移动的例外情况</a>
+      <ol>
+        <li><a href="#划线评论-6">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#51-对值的引用-1">5.1 对值的引用</a>
+      <ol>
+        <li><a href="#划线评论-7">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#52-使用引用-1">5.2 使用引用</a>
+      <ol>
+        <li><a href="#划线评论-8">划线评论</a></li>
+        <li><a href="#划线评论-9">划线评论</a></li>
+      </ol>
+    </li>
+    <li><a href="#53-引用安全-1">5.3 引用安全</a>
+      <ol>
+        <li><a href="#划线评论-10">划线评论</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/rust-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%AC2%E7%89%88/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 8 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] Rust 程序设计（第2版）</p>
+<ul>
+<li><img src="https://res.weread.qq.com/wrepub/CB_Bh991z90LDIH6pl6oo6YO6bt_parsecover"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" Rust 程序设计（第2版）|200"
+	
+	
+></li>
+<li>书名： Rust 程序设计（第2版）</li>
+<li>作者： 【美】 吉姆•布兰迪（Jim Blandy） 贾森•奥伦多夫（Jason Orendorff） 莉奥诺拉• F. S. 廷德尔（Leonora F. S. Tindall）</li>
+<li>简介：</li>
+<li>出版时间</li>
+<li>ISBN：</li>
+<li>分类：</li>
+<li>出版社： 人民邮电出版社</li>
+<li>PC地址：https://weread.qq.com/web/reader/f9942bd3643425f44755345795745775144357536706d366f6f425a57463034ed8</li>
+</ul>
+</blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="版权声明"><a href="#%e7%89%88%e6%9d%83%e5%a3%b0%e6%98%8e" class="header-anchor"></a>版权声明
+</h2><h2 id="oreilly-media-inc介绍"><a href="#oreilly-media-inc%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>O&rsquo;Reilly Media, Inc.介绍
+</h2><h2 id="专家推荐"><a href="#%e4%b8%93%e5%ae%b6%e6%8e%a8%e8%8d%90" class="header-anchor"></a>专家推荐
+</h2><h2 id="译者序"><a href="#%e8%af%91%e8%80%85%e5%ba%8f" class="header-anchor"></a>译者序
+</h2><h3 id="致谢"><a href="#%e8%87%b4%e8%b0%a2" class="header-anchor"></a>致谢
+</h3><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><h3 id="读者对象"><a href="#%e8%af%bb%e8%80%85%e5%af%b9%e8%b1%a1" class="header-anchor"></a>读者对象
+</h3><h3 id="写作初衷"><a href="#%e5%86%99%e4%bd%9c%e5%88%9d%e8%a1%b7" class="header-anchor"></a>写作初衷
+</h3><h3 id="浏览本书"><a href="#%e6%b5%8f%e8%a7%88%e6%9c%ac%e4%b9%a6" class="header-anchor"></a>浏览本书
+</h3><h3 id="排版约定"><a href="#%e6%8e%92%e7%89%88%e7%ba%a6%e5%ae%9a" class="header-anchor"></a>排版约定
+</h3><h3 id="使用代码示例"><a href="#%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%a0%81%e7%a4%ba%e4%be%8b" class="header-anchor"></a>使用代码示例
+</h3><h3 id="oreilly-在线学习平台oreilly-online-learning"><a href="#oreilly-%e5%9c%a8%e7%ba%bf%e5%ad%a6%e4%b9%a0%e5%b9%b3%e5%8f%b0oreilly-online-learning" class="header-anchor"></a>O&rsquo;Reilly 在线学习平台（O&rsquo;Reilly Online Learning）
+</h3><h3 id="联系我们"><a href="#%e8%81%94%e7%b3%bb%e6%88%91%e4%bb%ac" class="header-anchor"></a>联系我们
+</h3><h3 id="致谢-1"><a href="#%e8%87%b4%e8%b0%a2-1" class="header-anchor"></a>致谢
+</h3><h3 id="电子书"><a href="#%e7%94%b5%e5%ad%90%e4%b9%a6" class="header-anchor"></a>电子书
+</h3><h2 id="中文版审读致谢"><a href="#%e4%b8%ad%e6%96%87%e7%89%88%e5%ae%a1%e8%af%bb%e8%87%b4%e8%b0%a2" class="header-anchor"></a>中文版审读致谢
+</h2><h2 id="第-1-章-系统程序员也能享受美好"><a href="#%e7%ac%ac-1-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e7%a8%8b%e5%ba%8f%e5%91%98%e4%b9%9f%e8%83%bd%e4%ba%ab%e5%8f%97%e7%be%8e%e5%a5%bd" class="header-anchor"></a>第 1 章 系统程序员也能享受美好
+</h2><h3 id="11-rust-为你负重前行"><a href="#11-rust-%e4%b8%ba%e4%bd%a0%e8%b4%9f%e9%87%8d%e5%89%8d%e8%a1%8c" class="header-anchor"></a>1.1 Rust 为你负重前行
+</h3><h3 id="12-高效并行编程"><a href="#12-%e9%ab%98%e6%95%88%e5%b9%b6%e8%a1%8c%e7%bc%96%e7%a8%8b" class="header-anchor"></a>1.2 高效并行编程
+</h3><h3 id="13-性能毫不妥协"><a href="#13-%e6%80%a7%e8%83%bd%e6%af%ab%e4%b8%8d%e5%a6%a5%e5%8d%8f" class="header-anchor"></a>1.3 性能毫不妥协
+</h3><h3 id="14-协作无边无界"><a href="#14-%e5%8d%8f%e4%bd%9c%e6%97%a0%e8%be%b9%e6%97%a0%e7%95%8c" class="header-anchor"></a>1.4 协作无边无界
+</h3><h2 id="第-2-章-rust-导览"><a href="#%e7%ac%ac-2-%e7%ab%a0-rust-%e5%af%bc%e8%a7%88" class="header-anchor"></a>第 2 章 Rust 导览
+</h2><h3 id="21-rustup-与-cargo"><a href="#21-rustup-%e4%b8%8e-cargo" class="header-anchor"></a>2.1 rustup 与 Cargo
+</h3><h3 id="22-rust-函数"><a href="#22-rust-%e5%87%bd%e6%95%b0" class="header-anchor"></a>2.2 Rust 函数
+</h3><h3 id="23-编写与运行单元测试"><a href="#23-%e7%bc%96%e5%86%99%e4%b8%8e%e8%bf%90%e8%a1%8c%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95" class="header-anchor"></a>2.3 编写与运行单元测试
+</h3><h3 id="24-处理命令行参数"><a href="#24-%e5%a4%84%e7%90%86%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0" class="header-anchor"></a>2.4 处理命令行参数
+</h3><h3 id="25-搭建-web-服务器"><a href="#25-%e6%90%ad%e5%bb%ba-web-%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-anchor"></a>2.5 搭建 Web 服务器
+</h3><h3 id="26-并发"><a href="#26-%e5%b9%b6%e5%8f%91" class="header-anchor"></a>2.6 并发
+</h3><h3 id="27-文件系统与命令行工具"><a href="#27-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e4%b8%8e%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%b7%a5%e5%85%b7" class="header-anchor"></a>2.7 文件系统与命令行工具
+</h3><h2 id="第-3-章-基本数据类型"><a href="#%e7%ac%ac-3-%e7%ab%a0-%e5%9f%ba%e6%9c%ac%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>第 3 章 基本数据类型
+</h2><h3 id="31-固定宽度的数值类型"><a href="#31-%e5%9b%ba%e5%ae%9a%e5%ae%bd%e5%ba%a6%e7%9a%84%e6%95%b0%e5%80%bc%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>3.1 固定宽度的数值类型
+</h3><h3 id="32-布尔类型"><a href="#32-%e5%b8%83%e5%b0%94%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>3.2 布尔类型
+</h3><h3 id="33-字符"><a href="#33-%e5%ad%97%e7%ac%a6" class="header-anchor"></a>3.3 字符
+</h3><h3 id="34-元组"><a href="#34-%e5%85%83%e7%bb%84" class="header-anchor"></a>3.4 元组
+</h3><h3 id="35-指针类型"><a href="#35-%e6%8c%87%e9%92%88%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>3.5 指针类型
+</h3><h3 id="36-数组向量和切片"><a href="#36-%e6%95%b0%e7%bb%84%e5%90%91%e9%87%8f%e5%92%8c%e5%88%87%e7%89%87" class="header-anchor"></a>3.6 数组、向量和切片
+</h3><h3 id="37-字符串类型"><a href="#37-%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>3.7 字符串类型
+</h3><h3 id="38-类型别名"><a href="#38-%e7%b1%bb%e5%9e%8b%e5%88%ab%e5%90%8d" class="header-anchor"></a>3.8 类型别名
+</h3><h3 id="39-前路展望"><a href="#39-%e5%89%8d%e8%b7%af%e5%b1%95%e6%9c%9b" class="header-anchor"></a>3.9 前路展望
+</h3><h2 id="第-4-章-所有权与移动-1"><a href="#%e7%ac%ac-4-%e7%ab%a0-%e6%89%80%e6%9c%89%e6%9d%83%e4%b8%8e%e7%a7%bb%e5%8a%a8-1" class="header-anchor"></a>第 4 章 所有权与移动 1
+</h2><blockquote>
+<p>📌 “控制优先”阵营会让你自己负责释放内存。程序的内存消耗完全掌握在你的手中，但避免悬空指针也完全成了你的责任。C 和 C++ 是这个阵营中仅有的两种主流语言
+⏱ 2024-07-26 08:36:10 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-40-1625-1702</p>
+</blockquote>
+<blockquote>
+<p>📌 Rust 的一些规则可能与你在其他编程语言中看到的截然不同。在我们看来，学习 Rust 的核心挑战，就是学习如何用好这些规则并转化为你的优势。
+⏱ 2024-07-26 08:38:22 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-40-2650-2721</p>
+</blockquote>
+<h3 id="41-所有权"><a href="#41-%e6%89%80%e6%9c%89%e6%9d%83" class="header-anchor"></a>4.1 所有权
+</h3><blockquote>
+<p>📌 Rust 程序中的每一个值都是某棵树的成员，树根是某个变量。
+⏱ 2024-07-26 08:45:51 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-41-6984-7014</p>
+</blockquote>
+<blockquote>
+<p>📌 可以将值从一个拥有者转移给另一个拥有者。这允许你构建、重新排列和拆除树形结构。像整数、浮点数和字符这样的非常简单的类型，不受所有权规则的约束。这些称为 Copy 类型。标准库提供了引用计数指针类型 Rc 和 Arc，它们允许值在某些限制下有多个拥有者。可以对值进行“借用”（borrow），以获得值的引用。这种引用是非拥有型指针，有着受限的生命周期。
+⏱ 2024-07-26 08:47:01 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-41-7647-8035</p>
+</blockquote>
+<h3 id="42-移动"><a href="#42-%e7%a7%bb%e5%8a%a8" class="header-anchor"></a>4.2 移动
+</h3><blockquote>
+<p>📌 但 Rust 还将“移动”的语义应用到了几乎所有对值的使用上。例如，将参数传给函数会将所有权转移给函数的参数、从函数返回一个值会将所有权转移给调用者、构建元组会将值转移给元组。
+⏱ 2024-07-26 08:53:35 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-42-7752-7840</p>
+</blockquote>
+<h3 id="43-copy-类型关于移动的例外情况"><a href="#43-copy-%e7%b1%bb%e5%9e%8b%e5%85%b3%e4%ba%8e%e7%a7%bb%e5%8a%a8%e7%9a%84%e4%be%8b%e5%a4%96%e6%83%85%e5%86%b5" class="header-anchor"></a>4.3 Copy 类型：关于移动的例外情况
+</h3><blockquote>
+<p>📌 标准的 Copy 类型包括所有机器整数类型和浮点数类型、char 类型和 bool 类型，以及某些其他类型。Copy 类型的元组或固定大小的数组本身也是 Copy 类型。
+⏱ 2024-07-26 09:16:54 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-43-2444-2684</p>
+</blockquote>
+<h3 id="44-rc-与-arc共享所有权"><a href="#44-rc-%e4%b8%8e-arc%e5%85%b1%e4%ba%ab%e6%89%80%e6%9c%89%e6%9d%83" class="header-anchor"></a>4.4 Rc 与 Arc：共享所有权
+</h3><blockquote>
+<p>📌 Rust 的内存和线程安全保证的基石是：确保不会有任何值是既共享又可变的
+⏱ 2024-07-26 11:38:43 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-44-3464-3500</p>
+</blockquote>
+<h2 id="第-5-章-引用"><a href="#%e7%ac%ac-5-%e7%ab%a0-%e5%bc%95%e7%94%a8" class="header-anchor"></a>第 5 章 引用
+</h2><blockquote>
+<p>📌 引用的生命周期绝不能超出其引用目标。你的代码必须遵循这样的规则，即任何引用的生命周期都不可能超出它指向的值。为了强调这一点，Rust 把创建对某个值的引用的操作称为借用（borrow）那个值：凡是借用，终须归还。
+⏱ 2024-07-26 11:41:56 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-45-1200-1340</p>
+</blockquote>
+<h3 id="51-对值的引用"><a href="#51-%e5%af%b9%e5%80%bc%e7%9a%84%e5%bc%95%e7%94%a8" class="header-anchor"></a>5.1 对值的引用
+</h3><blockquote>
+<p>📌 可变引用允许你读取和修改值。但是，一旦一个值拥有了可变引用，就无法再对该值创建其他任何种类的引用了。表达式 &amp;mut e 会产生一个对 e 值的可变引用，可以将其类型写成 &amp;mut T，读作“ref mute T”。可变引用不是 Copy 类型。
+⏱ 2024-07-26 14:46:32 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-46-4440-4735</p>
+</blockquote>
+<h3 id="52-使用引用"><a href="#52-%e4%bd%bf%e7%94%a8%e5%bc%95%e7%94%a8" class="header-anchor"></a>5.2 使用引用
+</h3><blockquote>
+<p>📌  由于引用在 Rust 中随处可见，因此 . 运算符就会按需对其左操作数隐式解引用 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-47-1876-1947</p>
+</blockquote>
+<ul>
+<li>💭 此处仅仅对.运算符可以省去解引用的符号，但是对于整数等单个变量不行？ - ⏱ 2024-07-26 15:08:38</li>
+</ul>
+<blockquote>
+<p>📌 乍一看，这种行为可能太显而易见，不值一提：现在 r 当然会指向 y，因为我们在其中存储了 &amp;y。但特意指出这一点是因为 C++ 引用的行为与此截然不同：如前所述，在 C++ 中对引用赋值会将新值存储在其引用目标中而非指向新值。C++ 的引用一旦完成初始化，就无法再指向别处了
+⏱ 2024-07-26 15:19:25 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-47-3981-4215</p>
+</blockquote>
+<h3 id="53-引用安全"><a href="#53-%e5%bc%95%e7%94%a8%e5%ae%89%e5%85%a8" class="header-anchor"></a>5.3 引用安全
+</h3><h3 id="54-共享与可变"><a href="#54-%e5%85%b1%e4%ba%ab%e4%b8%8e%e5%8f%af%e5%8f%98" class="header-anchor"></a>5.4 共享与可变
+</h3><h3 id="55-应对复杂对象关系"><a href="#55-%e5%ba%94%e5%af%b9%e5%a4%8d%e6%9d%82%e5%af%b9%e8%b1%a1%e5%85%b3%e7%b3%bb" class="header-anchor"></a>5.5 应对复杂对象关系
+</h3><h2 id="第-6-章-表达式"><a href="#%e7%ac%ac-6-%e7%ab%a0-%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>第 6 章 表达式
+</h2><h3 id="61-表达式语言"><a href="#61-%e8%a1%a8%e8%be%be%e5%bc%8f%e8%af%ad%e8%a8%80" class="header-anchor"></a>6.1 表达式语言
+</h3><h3 id="62-优先级与结合性"><a href="#62-%e4%bc%98%e5%85%88%e7%ba%a7%e4%b8%8e%e7%bb%93%e5%90%88%e6%80%a7" class="header-anchor"></a>6.2 优先级与结合性
+</h3><h3 id="63-块与分号"><a href="#63-%e5%9d%97%e4%b8%8e%e5%88%86%e5%8f%b7" class="header-anchor"></a>6.3 块与分号
+</h3><h3 id="64-声明"><a href="#64-%e5%a3%b0%e6%98%8e" class="header-anchor"></a>6.4 声明
+</h3><h3 id="65-if-与-match"><a href="#65-if-%e4%b8%8e-match" class="header-anchor"></a>6.5 if 与 match
+</h3><h3 id="66-循环中的控制流"><a href="#66-%e5%be%aa%e7%8e%af%e4%b8%ad%e7%9a%84%e6%8e%a7%e5%88%b6%e6%b5%81" class="header-anchor"></a>6.6 循环中的控制流
+</h3><h3 id="67-return-表达式"><a href="#67-return-%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>6.7 return 表达式
+</h3><h3 id="68-为什么-rust-中会有-loop"><a href="#68-%e4%b8%ba%e4%bb%80%e4%b9%88-rust-%e4%b8%ad%e4%bc%9a%e6%9c%89-loop" class="header-anchor"></a>6.8 为什么 Rust 中会有 loop
+</h3><h3 id="69-函数与方法调用"><a href="#69-%e5%87%bd%e6%95%b0%e4%b8%8e%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8" class="header-anchor"></a>6.9 函数与方法调用
+</h3><h3 id="610-字段与元素"><a href="#610-%e5%ad%97%e6%ae%b5%e4%b8%8e%e5%85%83%e7%b4%a0" class="header-anchor"></a>6.10 字段与元素
+</h3><h3 id="611-引用运算符"><a href="#611-%e5%bc%95%e7%94%a8%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-anchor"></a>6.11 引用运算符
+</h3><h3 id="612-算术运算符按位运算符比较运算符和逻辑运算符"><a href="#612-%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97%e7%ac%a6%e6%8c%89%e4%bd%8d%e8%bf%90%e7%ae%97%e7%ac%a6%e6%af%94%e8%be%83%e8%bf%90%e7%ae%97%e7%ac%a6%e5%92%8c%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-anchor"></a>6.12 算术运算符、按位运算符、比较运算符和逻辑运算符
+</h3><h3 id="613-赋值"><a href="#613-%e8%b5%8b%e5%80%bc" class="header-anchor"></a>6.13 赋值
+</h3><h3 id="614-类型转换"><a href="#614-%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2" class="header-anchor"></a>6.14 类型转换
+</h3><h3 id="615-闭包"><a href="#615-%e9%97%ad%e5%8c%85" class="header-anchor"></a>6.15 闭包
+</h3><h3 id="616-前路展望"><a href="#616-%e5%89%8d%e8%b7%af%e5%b1%95%e6%9c%9b" class="header-anchor"></a>6.16 前路展望
+</h3><h2 id="第-7-章-错误处理"><a href="#%e7%ac%ac-7-%e7%ab%a0-%e9%94%99%e8%af%af%e5%a4%84%e7%90%86" class="header-anchor"></a>第 7 章 错误处理
+</h2><h3 id="71-panic"><a href="#71-panic" class="header-anchor"></a>7.1 panic
+</h3><h3 id="72-result"><a href="#72-result" class="header-anchor"></a>7.2 Result
+</h3><h2 id="第-8-章-crate-与模块"><a href="#%e7%ac%ac-8-%e7%ab%a0-crate-%e4%b8%8e%e6%a8%a1%e5%9d%97" class="header-anchor"></a>第 8 章 crate 与模块
+</h2><h3 id="81-crate"><a href="#81-crate" class="header-anchor"></a>8.1 crate
+</h3><h3 id="82-模块"><a href="#82-%e6%a8%a1%e5%9d%97" class="header-anchor"></a>8.2 模块
+</h3><h3 id="83-将程序变成库"><a href="#83-%e5%b0%86%e7%a8%8b%e5%ba%8f%e5%8f%98%e6%88%90%e5%ba%93" class="header-anchor"></a>8.3 将程序变成库
+</h3><h3 id="84-srcbin-目录"><a href="#84-srcbin-%e7%9b%ae%e5%bd%95" class="header-anchor"></a>8.4 src/bin 目录
+</h3><h3 id="85-属性"><a href="#85-%e5%b1%9e%e6%80%a7" class="header-anchor"></a>8.5 属性
+</h3><h3 id="86-测试与文档"><a href="#86-%e6%b5%8b%e8%af%95%e4%b8%8e%e6%96%87%e6%a1%a3" class="header-anchor"></a>8.6 测试与文档
+</h3><h3 id="87-指定依赖项"><a href="#87-%e6%8c%87%e5%ae%9a%e4%be%9d%e8%b5%96%e9%a1%b9" class="header-anchor"></a>8.7 指定依赖项
+</h3><h3 id="88-将-crate-发布到-cratesio"><a href="#88-%e5%b0%86-crate-%e5%8f%91%e5%b8%83%e5%88%b0-cratesio" class="header-anchor"></a>8.8 将 crate 发布到 crates.io
+</h3><h3 id="89-工作空间"><a href="#89-%e5%b7%a5%e4%bd%9c%e7%a9%ba%e9%97%b4" class="header-anchor"></a>8.9 工作空间
+</h3><h3 id="810-更多好资源"><a href="#810-%e6%9b%b4%e5%a4%9a%e5%a5%bd%e8%b5%84%e6%ba%90" class="header-anchor"></a>8.10 更多好资源
+</h3><h2 id="第-9-章-结构体"><a href="#%e7%ac%ac-9-%e7%ab%a0-%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"></a>第 9 章 结构体
+</h2><h3 id="91-具名字段型结构体"><a href="#91-%e5%85%b7%e5%90%8d%e5%ad%97%e6%ae%b5%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"></a>9.1 具名字段型结构体
+</h3><h3 id="92-元组型结构体"><a href="#92-%e5%85%83%e7%bb%84%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"></a>9.2 元组型结构体
+</h3><h3 id="93-单元型结构体"><a href="#93-%e5%8d%95%e5%85%83%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"></a>9.3 单元型结构体
+</h3><h3 id="94-结构体布局"><a href="#94-%e7%bb%93%e6%9e%84%e4%bd%93%e5%b8%83%e5%b1%80" class="header-anchor"></a>9.4 结构体布局
+</h3><h3 id="95-用-impl-定义方法"><a href="#95-%e7%94%a8-impl-%e5%ae%9a%e4%b9%89%e6%96%b9%e6%b3%95" class="header-anchor"></a>9.5 用 impl 定义方法
+</h3><h3 id="96-关联常量"><a href="#96-%e5%85%b3%e8%81%94%e5%b8%b8%e9%87%8f" class="header-anchor"></a>9.6 关联常量
+</h3><h3 id="97-泛型结构体"><a href="#97-%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"></a>9.7 泛型结构体
+</h3><h3 id="98-带生命周期参数的泛型结构体"><a href="#98-%e5%b8%a6%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e5%8f%82%e6%95%b0%e7%9a%84%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"></a>9.8 带生命周期参数的泛型结构体
+</h3><h3 id="99-带常量参数的泛型结构体"><a href="#99-%e5%b8%a6%e5%b8%b8%e9%87%8f%e5%8f%82%e6%95%b0%e7%9a%84%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"></a>9.9 带常量参数的泛型结构体
+</h3><h3 id="910-让结构体类型派生自某些公共特型"><a href="#910-%e8%ae%a9%e7%bb%93%e6%9e%84%e4%bd%93%e7%b1%bb%e5%9e%8b%e6%b4%be%e7%94%9f%e8%87%aa%e6%9f%90%e4%ba%9b%e5%85%ac%e5%85%b1%e7%89%b9%e5%9e%8b" class="header-anchor"></a>9.10 让结构体类型派生自某些公共特型
+</h3><h3 id="911-内部可变性"><a href="#911-%e5%86%85%e9%83%a8%e5%8f%af%e5%8f%98%e6%80%a7" class="header-anchor"></a>9.11 内部可变性
+</h3><h2 id="第-10-章-枚举与模式"><a href="#%e7%ac%ac-10-%e7%ab%a0-%e6%9e%9a%e4%b8%be%e4%b8%8e%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>第 10 章 枚举与模式
+</h2><h3 id="101-枚举"><a href="#101-%e6%9e%9a%e4%b8%be" class="header-anchor"></a>10.1 枚举
+</h3><h3 id="102-模式"><a href="#102-%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>10.2 模式
+</h3><h3 id="103-大局观"><a href="#103-%e5%a4%a7%e5%b1%80%e8%a7%82" class="header-anchor"></a>10.3 大局观
+</h3><h2 id="第-11-章-特型与泛型"><a href="#%e7%ac%ac-11-%e7%ab%a0-%e7%89%b9%e5%9e%8b%e4%b8%8e%e6%b3%9b%e5%9e%8b" class="header-anchor"></a>第 11 章 特型与泛型
+</h2><h3 id="111-使用特型"><a href="#111-%e4%bd%bf%e7%94%a8%e7%89%b9%e5%9e%8b" class="header-anchor"></a>11.1 使用特型
+</h3><h3 id="112-定义与实现特型"><a href="#112-%e5%ae%9a%e4%b9%89%e4%b8%8e%e5%ae%9e%e7%8e%b0%e7%89%b9%e5%9e%8b" class="header-anchor"></a>11.2 定义与实现特型
+</h3><h3 id="113-完全限定的方法调用"><a href="#113-%e5%ae%8c%e5%85%a8%e9%99%90%e5%ae%9a%e7%9a%84%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8" class="header-anchor"></a>11.3 完全限定的方法调用
+</h3><h3 id="114-定义类型之间关系的特型"><a href="#114-%e5%ae%9a%e4%b9%89%e7%b1%bb%e5%9e%8b%e4%b9%8b%e9%97%b4%e5%85%b3%e7%b3%bb%e7%9a%84%e7%89%b9%e5%9e%8b" class="header-anchor"></a>11.4 定义类型之间关系的特型
+</h3><h3 id="115-逆向工程求限界"><a href="#115-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e6%b1%82%e9%99%90%e7%95%8c" class="header-anchor"></a>11.5 逆向工程求限界
+</h3><h3 id="116-以特型为基础"><a href="#116-%e4%bb%a5%e7%89%b9%e5%9e%8b%e4%b8%ba%e5%9f%ba%e7%a1%80" class="header-anchor"></a>11.6 以特型为基础
+</h3><h2 id="第-12-章-运算符重载"><a href="#%e7%ac%ac-12-%e7%ab%a0-%e8%bf%90%e7%ae%97%e7%ac%a6%e9%87%8d%e8%bd%bd" class="header-anchor"></a>第 12 章 运算符重载
+</h2><h3 id="121-算术运算符与按位运算符"><a href="#121-%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97%e7%ac%a6%e4%b8%8e%e6%8c%89%e4%bd%8d%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-anchor"></a>12.1 算术运算符与按位运算符
+</h3><h3 id="122-相等性比较"><a href="#122-%e7%9b%b8%e7%ad%89%e6%80%a7%e6%af%94%e8%be%83" class="header-anchor"></a>12.2 相等性比较
+</h3><h3 id="123-有序比较"><a href="#123-%e6%9c%89%e5%ba%8f%e6%af%94%e8%be%83" class="header-anchor"></a>12.3 有序比较
+</h3><h3 id="124-index-与-indexmut"><a href="#124-index-%e4%b8%8e-indexmut" class="header-anchor"></a>12.4 Index 与 IndexMut
+</h3><h3 id="125-其他运算符"><a href="#125-%e5%85%b6%e4%bb%96%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-anchor"></a>12.5 其他运算符
+</h3><h2 id="第-13-章-实用工具特型"><a href="#%e7%ac%ac-13-%e7%ab%a0-%e5%ae%9e%e7%94%a8%e5%b7%a5%e5%85%b7%e7%89%b9%e5%9e%8b" class="header-anchor"></a>第 13 章 实用工具特型
+</h2><h3 id="131-drop"><a href="#131-drop" class="header-anchor"></a>13.1 Drop
+</h3><h3 id="132-sized"><a href="#132-sized" class="header-anchor"></a>13.2 Sized
+</h3><h3 id="133-clone"><a href="#133-clone" class="header-anchor"></a>13.3 Clone
+</h3><h3 id="134-copy"><a href="#134-copy" class="header-anchor"></a>13.4 Copy
+</h3><h3 id="135-deref-与-derefmut"><a href="#135-deref-%e4%b8%8e-derefmut" class="header-anchor"></a>13.5 Deref 与 DerefMut
+</h3><h3 id="136-default"><a href="#136-default" class="header-anchor"></a>13.6 Default
+</h3><h3 id="137-asref-与-asmut"><a href="#137-asref-%e4%b8%8e-asmut" class="header-anchor"></a>13.7 AsRef 与 AsMut
+</h3><h3 id="138-borrow-与-borrowmut"><a href="#138-borrow-%e4%b8%8e-borrowmut" class="header-anchor"></a>13.8 Borrow 与 BorrowMut
+</h3><h3 id="139-from-与-into"><a href="#139-from-%e4%b8%8e-into" class="header-anchor"></a>13.9 From 与 Into
+</h3><h3 id="1310-tryfrom-与-tryinto"><a href="#1310-tryfrom-%e4%b8%8e-tryinto" class="header-anchor"></a>13.10 TryFrom 与 TryInto
+</h3><h3 id="1311-toowned"><a href="#1311-toowned" class="header-anchor"></a>13.11 ToOwned
+</h3><h3 id="1312-borrow-与-toowned-的实际运用谦卑-2-的-cow"><a href="#1312-borrow-%e4%b8%8e-toowned-%e7%9a%84%e5%ae%9e%e9%99%85%e8%bf%90%e7%94%a8%e8%b0%a6%e5%8d%91-2-%e7%9a%84-cow" class="header-anchor"></a>13.12 Borrow 与 ToOwned 的实际运用：谦卑 2 的 Cow
+</h3><h2 id="第-14-章-闭包"><a href="#%e7%ac%ac-14-%e7%ab%a0-%e9%97%ad%e5%8c%85" class="header-anchor"></a>第 14 章 闭包
+</h2><h3 id="141-捕获变量"><a href="#141-%e6%8d%95%e8%8e%b7%e5%8f%98%e9%87%8f" class="header-anchor"></a>14.1 捕获变量
+</h3><h3 id="142-函数与闭包的类型"><a href="#142-%e5%87%bd%e6%95%b0%e4%b8%8e%e9%97%ad%e5%8c%85%e7%9a%84%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>14.2 函数与闭包的类型
+</h3><h3 id="143-闭包性能"><a href="#143-%e9%97%ad%e5%8c%85%e6%80%a7%e8%83%bd" class="header-anchor"></a>14.3 闭包性能
+</h3><h3 id="144-闭包与安全"><a href="#144-%e9%97%ad%e5%8c%85%e4%b8%8e%e5%ae%89%e5%85%a8" class="header-anchor"></a>14.4 闭包与安全
+</h3><h3 id="145-回调"><a href="#145-%e5%9b%9e%e8%b0%83" class="header-anchor"></a>14.5 回调
+</h3><h3 id="146-高效地使用闭包"><a href="#146-%e9%ab%98%e6%95%88%e5%9c%b0%e4%bd%bf%e7%94%a8%e9%97%ad%e5%8c%85" class="header-anchor"></a>14.6 高效地使用闭包
+</h3><h2 id="第-15-章-迭代器"><a href="#%e7%ac%ac-15-%e7%ab%a0-%e8%bf%ad%e4%bb%a3%e5%99%a8" class="header-anchor"></a>第 15 章 迭代器
+</h2><h3 id="151-iterator-特型与-intoiterator-特型"><a href="#151-iterator-%e7%89%b9%e5%9e%8b%e4%b8%8e-intoiterator-%e7%89%b9%e5%9e%8b" class="header-anchor"></a>15.1 Iterator 特型与 IntoIterator 特型
+</h3><h3 id="152-创建迭代器"><a href="#152-%e5%88%9b%e5%bb%ba%e8%bf%ad%e4%bb%a3%e5%99%a8" class="header-anchor"></a>15.2 创建迭代器
+</h3><h3 id="153-迭代器适配器"><a href="#153-%e8%bf%ad%e4%bb%a3%e5%99%a8%e9%80%82%e9%85%8d%e5%99%a8" class="header-anchor"></a>15.3 迭代器适配器
+</h3><h3 id="154-消耗迭代器"><a href="#154-%e6%b6%88%e8%80%97%e8%bf%ad%e4%bb%a3%e5%99%a8" class="header-anchor"></a>15.4 消耗迭代器
+</h3><h3 id="155-实现自己的迭代器"><a href="#155-%e5%ae%9e%e7%8e%b0%e8%87%aa%e5%b7%b1%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%99%a8" class="header-anchor"></a>15.5 实现自己的迭代器
+</h3><h2 id="第-16-章-集合"><a href="#%e7%ac%ac-16-%e7%ab%a0-%e9%9b%86%e5%90%88" class="header-anchor"></a>第 16 章 集合
+</h2><h3 id="161-概述"><a href="#161-%e6%a6%82%e8%bf%b0" class="header-anchor"></a>16.1 概述
+</h3><h3 id="162-vect"><a href="#162-vect" class="header-anchor"></a>16.2 Vec<T>
+</h3><h3 id="163-vecdequet"><a href="#163-vecdequet" class="header-anchor"></a>16.3 VecDeque<T>
+</h3><h3 id="164-binaryheapt"><a href="#164-binaryheapt" class="header-anchor"></a>16.4 BinaryHeap<T>
+</h3><h3 id="165-hashmapk-v-与-btreemapk-v"><a href="#165-hashmapk-v-%e4%b8%8e-btreemapk-v" class="header-anchor"></a>16.5 HashMap&lt;K, V&gt; 与 BTreeMap&lt;K, V&gt;
+</h3><h3 id="166-hashsett-与-btreesett"><a href="#166-hashsett-%e4%b8%8e-btreesett" class="header-anchor"></a>16.6 HashSet<T> 与 BTreeSet<T>
+</h3><h3 id="167-哈希"><a href="#167-%e5%93%88%e5%b8%8c" class="header-anchor"></a>16.7 哈希
+</h3><h3 id="168-使用自定义哈希算法"><a href="#168-%e4%bd%bf%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e5%93%88%e5%b8%8c%e7%ae%97%e6%b3%95" class="header-anchor"></a>16.8 使用自定义哈希算法
+</h3><h3 id="169-在标准集合之外"><a href="#169-%e5%9c%a8%e6%a0%87%e5%87%86%e9%9b%86%e5%90%88%e4%b9%8b%e5%a4%96" class="header-anchor"></a>16.9 在标准集合之外
+</h3><h2 id="第-17-章-字符串与文本"><a href="#%e7%ac%ac-17-%e7%ab%a0-%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%8e%e6%96%87%e6%9c%ac" class="header-anchor"></a>第 17 章 字符串与文本
+</h2><h3 id="171-一些-unicode-背景知识"><a href="#171-%e4%b8%80%e4%ba%9b-unicode-%e8%83%8c%e6%99%af%e7%9f%a5%e8%af%86" class="header-anchor"></a>17.1 一些 Unicode 背景知识
+</h3><h3 id="172-字符char"><a href="#172-%e5%ad%97%e7%ac%a6char" class="header-anchor"></a>17.2 字符（char）
+</h3><h3 id="173-string-与-str"><a href="#173-string-%e4%b8%8e-str" class="header-anchor"></a>17.3 String 与 str
+</h3><h3 id="174-格式化各种值"><a href="#174-%e6%a0%bc%e5%bc%8f%e5%8c%96%e5%90%84%e7%a7%8d%e5%80%bc" class="header-anchor"></a>17.4 格式化各种值
+</h3><h3 id="175-正则表达式"><a href="#175-%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>17.5 正则表达式
+</h3><h3 id="176-规范化"><a href="#176-%e8%a7%84%e8%8c%83%e5%8c%96" class="header-anchor"></a>17.6 规范化
+</h3><h2 id="第-18-章-输入与输出"><a href="#%e7%ac%ac-18-%e7%ab%a0-%e8%be%93%e5%85%a5%e4%b8%8e%e8%be%93%e5%87%ba" class="header-anchor"></a>第 18 章 输入与输出
+</h2><h3 id="181-读取器与写入器"><a href="#181-%e8%af%bb%e5%8f%96%e5%99%a8%e4%b8%8e%e5%86%99%e5%85%a5%e5%99%a8" class="header-anchor"></a>18.1 读取器与写入器
+</h3><h3 id="182-文件与目录"><a href="#182-%e6%96%87%e4%bb%b6%e4%b8%8e%e7%9b%ae%e5%bd%95" class="header-anchor"></a>18.2 文件与目录
+</h3><h3 id="183-网络"><a href="#183-%e7%bd%91%e7%bb%9c" class="header-anchor"></a>18.3 网络
+</h3><h2 id="第-19-章-并发"><a href="#%e7%ac%ac-19-%e7%ab%a0-%e5%b9%b6%e5%8f%91" class="header-anchor"></a>第 19 章 并发
+</h2><h3 id="191-分叉与合并并行"><a href="#191-%e5%88%86%e5%8f%89%e4%b8%8e%e5%90%88%e5%b9%b6%e5%b9%b6%e8%a1%8c" class="header-anchor"></a>19.1 分叉与合并并行
+</h3><h3 id="192-通道"><a href="#192-%e9%80%9a%e9%81%93" class="header-anchor"></a>19.2 通道
+</h3><h3 id="193-共享可变状态"><a href="#193-%e5%85%b1%e4%ba%ab%e5%8f%af%e5%8f%98%e7%8a%b6%e6%80%81" class="header-anchor"></a>19.3 共享可变状态
+</h3><h3 id="194-在-rust-中编写并发代码的一点儿经验"><a href="#194-%e5%9c%a8-rust-%e4%b8%ad%e7%bc%96%e5%86%99%e5%b9%b6%e5%8f%91%e4%bb%a3%e7%a0%81%e7%9a%84%e4%b8%80%e7%82%b9%e5%84%bf%e7%bb%8f%e9%aa%8c" class="header-anchor"></a>19.4 在 Rust 中编写并发代码的一点儿经验
+</h3><h2 id="第-20-章-异步编程"><a href="#%e7%ac%ac-20-%e7%ab%a0-%e5%bc%82%e6%ad%a5%e7%bc%96%e7%a8%8b" class="header-anchor"></a>第 20 章 异步编程
+</h2><h3 id="201-从同步到异步"><a href="#201-%e4%bb%8e%e5%90%8c%e6%ad%a5%e5%88%b0%e5%bc%82%e6%ad%a5" class="header-anchor"></a>20.1 从同步到异步
+</h3><h3 id="202-异步客户端与服务器"><a href="#202-%e5%bc%82%e6%ad%a5%e5%ae%a2%e6%88%b7%e7%ab%af%e4%b8%8e%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-anchor"></a>20.2 异步客户端与服务器
+</h3><h3 id="203-原始-future-与执行器future-什么时候值得再次轮询"><a href="#203-%e5%8e%9f%e5%a7%8b-future-%e4%b8%8e%e6%89%a7%e8%a1%8c%e5%99%a8future-%e4%bb%80%e4%b9%88%e6%97%b6%e5%80%99%e5%80%bc%e5%be%97%e5%86%8d%e6%ac%a1%e8%bd%ae%e8%af%a2" class="header-anchor"></a>20.3 原始 Future 与执行器：Future 什么时候值得再次轮询
+</h3><h3 id="204-固定pin5"><a href="#204-%e5%9b%ba%e5%ae%9apin5" class="header-anchor"></a>20.4 固定（Pin）5
+</h3><h3 id="205-什么时候要用异步代码"><a href="#205-%e4%bb%80%e4%b9%88%e6%97%b6%e5%80%99%e8%a6%81%e7%94%a8%e5%bc%82%e6%ad%a5%e4%bb%a3%e7%a0%81" class="header-anchor"></a>20.5 什么时候要用异步代码
+</h3><h2 id="第-21-章-宏"><a href="#%e7%ac%ac-21-%e7%ab%a0-%e5%ae%8f" class="header-anchor"></a>第 21 章 宏
+</h2><h3 id="211-宏基础"><a href="#211-%e5%ae%8f%e5%9f%ba%e7%a1%80" class="header-anchor"></a>21.1 宏基础
+</h3><h3 id="212-内置宏"><a href="#212-%e5%86%85%e7%bd%ae%e5%ae%8f" class="header-anchor"></a>21.2 内置宏
+</h3><h3 id="213-调试宏"><a href="#213-%e8%b0%83%e8%af%95%e5%ae%8f" class="header-anchor"></a>21.3 调试宏
+</h3><h3 id="214-构建-json-宏"><a href="#214-%e6%9e%84%e5%bb%ba-json-%e5%ae%8f" class="header-anchor"></a>21.4 构建 json! 宏
+</h3><h3 id="215-在匹配过程中避免语法错误"><a href="#215-%e5%9c%a8%e5%8c%b9%e9%85%8d%e8%bf%87%e7%a8%8b%e4%b8%ad%e9%81%bf%e5%85%8d%e8%af%ad%e6%b3%95%e9%94%99%e8%af%af" class="header-anchor"></a>21.5 在匹配过程中避免语法错误
+</h3><h3 id="216-超越-macro_rules"><a href="#216-%e8%b6%85%e8%b6%8a-macro_rules" class="header-anchor"></a>21.6 超越 macro_rules!
+</h3><h2 id="第-22-章-不安全代码"><a href="#%e7%ac%ac-22-%e7%ab%a0-%e4%b8%8d%e5%ae%89%e5%85%a8%e4%bb%a3%e7%a0%81" class="header-anchor"></a>第 22 章 不安全代码
+</h2><h3 id="221-不安全因素来自哪里"><a href="#221-%e4%b8%8d%e5%ae%89%e5%85%a8%e5%9b%a0%e7%b4%a0%e6%9d%a5%e8%87%aa%e5%93%aa%e9%87%8c" class="header-anchor"></a>22.1 不安全因素来自哪里
+</h3><h3 id="222-不安全块"><a href="#222-%e4%b8%8d%e5%ae%89%e5%85%a8%e5%9d%97" class="header-anchor"></a>22.2 不安全块
+</h3><h3 id="223-示例高效的-ascii-字符串类型"><a href="#223-%e7%a4%ba%e4%be%8b%e9%ab%98%e6%95%88%e7%9a%84-ascii-%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>22.3 示例：高效的 ASCII 字符串类型
+</h3><h3 id="224-不安全函数"><a href="#224-%e4%b8%8d%e5%ae%89%e5%85%a8%e5%87%bd%e6%95%b0" class="header-anchor"></a>22.4 不安全函数
+</h3><h3 id="225-不安全块还是不安全函数"><a href="#225-%e4%b8%8d%e5%ae%89%e5%85%a8%e5%9d%97%e8%bf%98%e6%98%af%e4%b8%8d%e5%ae%89%e5%85%a8%e5%87%bd%e6%95%b0" class="header-anchor"></a>22.5 不安全块还是不安全函数
+</h3><h3 id="226-未定义行为"><a href="#226-%e6%9c%aa%e5%ae%9a%e4%b9%89%e8%a1%8c%e4%b8%ba" class="header-anchor"></a>22.6 未定义行为
+</h3><h3 id="227-不安全特型"><a href="#227-%e4%b8%8d%e5%ae%89%e5%85%a8%e7%89%b9%e5%9e%8b" class="header-anchor"></a>22.7 不安全特型
+</h3><h3 id="228-裸指针"><a href="#228-%e8%a3%b8%e6%8c%87%e9%92%88" class="header-anchor"></a>22.8 裸指针
+</h3><h3 id="229-用联合体重新解释内存"><a href="#229-%e7%94%a8%e8%81%94%e5%90%88%e4%bd%93%e9%87%8d%e6%96%b0%e8%a7%a3%e9%87%8a%e5%86%85%e5%ad%98" class="header-anchor"></a>22.9 用联合体重新解释内存
+</h3><h3 id="2210-匹配联合体"><a href="#2210-%e5%8c%b9%e9%85%8d%e8%81%94%e5%90%88%e4%bd%93" class="header-anchor"></a>22.10 匹配联合体
+</h3><h3 id="2211-借用联合体"><a href="#2211-%e5%80%9f%e7%94%a8%e8%81%94%e5%90%88%e4%bd%93" class="header-anchor"></a>22.11 借用联合体
+</h3><h2 id="第-23-章-外部函数"><a href="#%e7%ac%ac-23-%e7%ab%a0-%e5%a4%96%e9%83%a8%e5%87%bd%e6%95%b0" class="header-anchor"></a>第 23 章 外部函数
+</h2><h3 id="231-寻找共同的数据表示"><a href="#231-%e5%af%bb%e6%89%be%e5%85%b1%e5%90%8c%e7%9a%84%e6%95%b0%e6%8d%ae%e8%a1%a8%e7%a4%ba" class="header-anchor"></a>23.1 寻找共同的数据表示
+</h3><h3 id="232-声明外部函数与变量"><a href="#232-%e5%a3%b0%e6%98%8e%e5%a4%96%e9%83%a8%e5%87%bd%e6%95%b0%e4%b8%8e%e5%8f%98%e9%87%8f" class="header-anchor"></a>23.2 声明外部函数与变量
+</h3><h3 id="233-使用库中的函数"><a href="#233-%e4%bd%bf%e7%94%a8%e5%ba%93%e4%b8%ad%e7%9a%84%e5%87%bd%e6%95%b0" class="header-anchor"></a>23.3 使用库中的函数
+</h3><h3 id="234-libgit2-的裸接口"><a href="#234-libgit2-%e7%9a%84%e8%a3%b8%e6%8e%a5%e5%8f%a3" class="header-anchor"></a>23.4 libgit2 的裸接口
+</h3><h3 id="235-libgit2-的安全接口"><a href="#235-libgit2-%e7%9a%84%e5%ae%89%e5%85%a8%e6%8e%a5%e5%8f%a3" class="header-anchor"></a>23.5 libgit2 的安全接口
+</h3><h3 id="236-结论"><a href="#236-%e7%bb%93%e8%ae%ba" class="header-anchor"></a>23.6 结论
+</h3><h2 id="作者介绍"><a href="#%e4%bd%9c%e8%80%85%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>作者介绍
+</h2><h2 id="封面介绍"><a href="#%e5%b0%81%e9%9d%a2%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>封面介绍
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="41-所有权-1"><a href="#41-%e6%89%80%e6%9c%89%e6%9d%83-1" class="header-anchor"></a>4.1 所有权
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 然而，在 Rust 中，所有权这个概念内置于语言本身，并通过编译期检查强制执行。每个值都有决定其生命周期的唯一拥有者。当拥有者被释放时，它拥有的值也会同时被释放，在 Rust 术语中，释放的行为被称为丢弃（drop）。这些规则便于通过检查代码确定任意值的生命周期，也提供了系统级语言本应支持的对生命周期的控制。  ^6733360-7SXYmOiLp
+- 💭 a拥有b的确切含义，如果a不在了，b也就没有继续存在的意义了
+- ⏱ 2024-07-26 08:40:47</p>
+</blockquote>
+<h3 id="划线评论-1"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 [插图]  ^6733360-7SXYD2M8A
+- 💭 这张图画得非常棒
+- ⏱ 2024-07-26 08:44:46</p>
+</blockquote>
+<h2 id="42-移动-1"><a href="#42-%e7%a7%bb%e5%8a%a8-1" class="header-anchor"></a>4.2 移动
+</h2><h3 id="划线评论-2"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 从某种意义上说，C++ 和 Python 选择了相反的权衡：Python 以需要引用计数（以及更广泛意义上的垃圾回收）为代价，让赋值的开销变得非常低。C++ 则选择让全部内存的所有权保持清晰，而代价是在赋值时要执行对象的深拷贝。一般来说，C++ 程序员不太热衷这种选择：深拷贝的开销可能很昂贵，而且通常有更实用的替代方案。  ^6733360-7SXYZHxuo
+- 💭 c++中是使用move吗？
+- ⏱ 2024-07-26 08:50:21</p>
+</blockquote>
+<h3 id="划线评论-3"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 就必须调用向量的 clone 方法，该方法会执行向量及其元素的深拷贝  ^6733360-7SXZ717nU
+- 💭 clone完成深拷贝
+- ⏱ 2024-07-26 08:52:09</p>
+</blockquote>
+<h3 id="划线评论-4"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 当我们将向量直接传给循环（如 for &hellip; in v）时，会将向量从 v 中移动出去，让 v 变成未初始化状态。for 循环的内部机制会获取向量的所有权并将其分解为元素。在每次迭代中，循环都会将另一个元素转移给变量 s。由于 s 现在拥有字符串，因此可以在打印之前在循环体中修改它。在循环的过程中，向量本身对代码不再可见，因此也就无法观察到它正处在某种部分清空的状态  ^6733360-7SY09PJGy
+- 💭 这个例子非常不错，简单for循环就会将v中元素的所有权转移给s，然后s给当前拥有的字符后面追加！，这样的for循环实际上是在消耗或者消费v，for循环之后v也就不存在了
+- ⏱ 2024-07-26 09:08:07</p>
+</blockquote>
+<h3 id="划线评论-5"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 replace 调用会移出 composers[0].name 的值，将 None 留在原处，并将原始值的所有权转移给其调用者。事实上，这种使用 Option 的方式非常普遍，所以该类型专门为此提供了一个 take方法，以便更清晰地写出上述操作，如下所示：  ^6733360-7SY0n6sYg
+- 💭 这些操作都发生了所有权的转移，从上面的例子可以看出，结构体和vec拥有自己所有元素的所有权，不能将单独的一个或者几个元素的所有权从里面摘出来，只能通过别的方法置换或者获取所有权
+- ⏱ 2024-07-26 09:11:24</p>
+</blockquote>
+<h2 id="43-copy-类型关于移动的例外情况-1"><a href="#43-copy-%e7%b1%bb%e5%9e%8b%e5%85%b3%e4%ba%8e%e7%a7%bb%e5%8a%a8%e7%9a%84%e4%be%8b%e5%a4%96%e6%83%85%e5%86%b5-1" class="header-anchor"></a>4.3 Copy 类型：关于移动的例外情况
+</h2><h3 id="划线评论-6"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 那么自定义类型呢？默认情况下，struct 类型和 enum 类型不是 Copy 类型  ^6733360-7SY0ROqjB
+- 💭 自定义的一般也不是copy类型
+- ⏱ 2024-07-26 09:18:57</p>
+</blockquote>
+<h2 id="51-对值的引用-1"><a href="#51-%e5%af%b9%e5%80%bc%e7%9a%84%e5%bc%95%e7%94%a8-1" class="header-anchor"></a>5.1 对值的引用
+</h2><h3 id="划线评论-7"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 只要存在对一个值的共享引用，即使是它的拥有者也不能修改它，该值会被锁定。当 show 正在使用 table 时，没有人可以修改它。类似地，如果有某个值的可变引用，那么它就会独占对该值的访问权，在可变引用消失之前，即使拥有者也根本无法使用该值。事实证明，让共享和修改保持完全分离对于内存安全至关重要，本章会在稍后内容中讨论原因。  ^6733360-7SYmnPShN
+- 💭 非常重要
+- ⏱ 2024-07-26 14:47:29</p>
+</blockquote>
+<h2 id="52-使用引用-1"><a href="#52-%e4%bd%bf%e7%94%a8%e5%bc%95%e7%94%a8-1" class="header-anchor"></a>5.2 使用引用
+</h2><h3 id="划线评论-8"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 由于引用在 Rust 中随处可见，因此 . 运算符就会按需对其左操作数隐式解引用  ^6733360-7SYnQmDrl
+- 💭 此处仅仅对.运算符可以省去解引用的符号，但是对于整数等单个变量不行？
+- ⏱ 2024-07-26 15:09:47</p>
+</blockquote>
+<h3 id="划线评论-9"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-9" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 在这种情况下，Rust 会创建一个匿名变量来保存此表达式的值，并让该引用指向它。这个匿名变量的生命周期取决于你对引用做了什么。  ^6733360-7SYEhqSrK
+- 💭 这里很特殊
+- ⏱ 2024-07-26 19:20:45</p>
+</blockquote>
+<h2 id="53-引用安全-1"><a href="#53-%e5%bc%95%e7%94%a8%e5%ae%89%e5%85%a8-1" class="header-anchor"></a>5.3 引用安全
+</h2><h3 id="划线评论-10"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-10" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 第一个约束限制了引用的生命周期可以有多大，而第二个约束则限制了它可以有多小。Rust 会尝试找出能让每个引用都满足这两个约束的生命周期。  ^6733360-7SYEVPvU8
+- 💭 厉害
+- ⏱ 2024-07-26 19:30:42</p>
+</blockquote>
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

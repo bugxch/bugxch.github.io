@@ -478,6 +478,691 @@
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/weread/rust-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%AC2%E7%89%88/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/rust-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%AC2%E7%89%88/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] Rust 程序设计（第2版）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://res.weread.qq.com/wrepub/CB_Bh991z90LDIH6pl6oo6YO6bt_parsecover&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; Rust 程序设计（第2版）|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： Rust 程序设计（第2版）&lt;/li&gt;
+&lt;li&gt;作者： 【美】 吉姆•布兰迪（Jim Blandy） 贾森•奥伦多夫（Jason Orendorff） 莉奥诺拉• F. S. 廷德尔（Leonora F. S. Tindall）&lt;/li&gt;
+&lt;li&gt;简介：&lt;/li&gt;
+&lt;li&gt;出版时间&lt;/li&gt;
+&lt;li&gt;ISBN：&lt;/li&gt;
+&lt;li&gt;分类：&lt;/li&gt;
+&lt;li&gt;出版社： 人民邮电出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/f9942bd3643425f44755345795745775144357536706d366f6f425a57463034ed8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;版权声明&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e5%a3%b0%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权声明
+&lt;/h2&gt;&lt;h2 id=&#34;oreilly-media-inc介绍&#34;&gt;&lt;a href=&#34;#oreilly-media-inc%e4%bb%8b%e7%bb%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;O&amp;rsquo;Reilly Media, Inc.介绍
+&lt;/h2&gt;&lt;h2 id=&#34;专家推荐&#34;&gt;&lt;a href=&#34;#%e4%b8%93%e5%ae%b6%e6%8e%a8%e8%8d%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;专家推荐
+&lt;/h2&gt;&lt;h2 id=&#34;译者序&#34;&gt;&lt;a href=&#34;#%e8%af%91%e8%80%85%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;译者序
+&lt;/h2&gt;&lt;h3 id=&#34;致谢&#34;&gt;&lt;a href=&#34;#%e8%87%b4%e8%b0%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;致谢
+&lt;/h3&gt;&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言
+&lt;/h2&gt;&lt;h3 id=&#34;读者对象&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e8%80%85%e5%af%b9%e8%b1%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读者对象
+&lt;/h3&gt;&lt;h3 id=&#34;写作初衷&#34;&gt;&lt;a href=&#34;#%e5%86%99%e4%bd%9c%e5%88%9d%e8%a1%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;写作初衷
+&lt;/h3&gt;&lt;h3 id=&#34;浏览本书&#34;&gt;&lt;a href=&#34;#%e6%b5%8f%e8%a7%88%e6%9c%ac%e4%b9%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;浏览本书
+&lt;/h3&gt;&lt;h3 id=&#34;排版约定&#34;&gt;&lt;a href=&#34;#%e6%8e%92%e7%89%88%e7%ba%a6%e5%ae%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;排版约定
+&lt;/h3&gt;&lt;h3 id=&#34;使用代码示例&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%a0%81%e7%a4%ba%e4%be%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用代码示例
+&lt;/h3&gt;&lt;h3 id=&#34;oreilly-在线学习平台oreilly-online-learning&#34;&gt;&lt;a href=&#34;#oreilly-%e5%9c%a8%e7%ba%bf%e5%ad%a6%e4%b9%a0%e5%b9%b3%e5%8f%b0oreilly-online-learning&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;O&amp;rsquo;Reilly 在线学习平台（O&amp;rsquo;Reilly Online Learning）
+&lt;/h3&gt;&lt;h3 id=&#34;联系我们&#34;&gt;&lt;a href=&#34;#%e8%81%94%e7%b3%bb%e6%88%91%e4%bb%ac&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;联系我们
+&lt;/h3&gt;&lt;h3 id=&#34;致谢-1&#34;&gt;&lt;a href=&#34;#%e8%87%b4%e8%b0%a2-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;致谢
+&lt;/h3&gt;&lt;h3 id=&#34;电子书&#34;&gt;&lt;a href=&#34;#%e7%94%b5%e5%ad%90%e4%b9%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;电子书
+&lt;/h3&gt;&lt;h2 id=&#34;中文版审读致谢&#34;&gt;&lt;a href=&#34;#%e4%b8%ad%e6%96%87%e7%89%88%e5%ae%a1%e8%af%bb%e8%87%b4%e8%b0%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;中文版审读致谢
+&lt;/h2&gt;&lt;h2 id=&#34;第-1-章-系统程序员也能享受美好&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-1-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e7%a8%8b%e5%ba%8f%e5%91%98%e4%b9%9f%e8%83%bd%e4%ba%ab%e5%8f%97%e7%be%8e%e5%a5%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 1 章 系统程序员也能享受美好
+&lt;/h2&gt;&lt;h3 id=&#34;11-rust-为你负重前行&#34;&gt;&lt;a href=&#34;#11-rust-%e4%b8%ba%e4%bd%a0%e8%b4%9f%e9%87%8d%e5%89%8d%e8%a1%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.1 Rust 为你负重前行
+&lt;/h3&gt;&lt;h3 id=&#34;12-高效并行编程&#34;&gt;&lt;a href=&#34;#12-%e9%ab%98%e6%95%88%e5%b9%b6%e8%a1%8c%e7%bc%96%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.2 高效并行编程
+&lt;/h3&gt;&lt;h3 id=&#34;13-性能毫不妥协&#34;&gt;&lt;a href=&#34;#13-%e6%80%a7%e8%83%bd%e6%af%ab%e4%b8%8d%e5%a6%a5%e5%8d%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.3 性能毫不妥协
+&lt;/h3&gt;&lt;h3 id=&#34;14-协作无边无界&#34;&gt;&lt;a href=&#34;#14-%e5%8d%8f%e4%bd%9c%e6%97%a0%e8%be%b9%e6%97%a0%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.4 协作无边无界
+&lt;/h3&gt;&lt;h2 id=&#34;第-2-章-rust-导览&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-2-%e7%ab%a0-rust-%e5%af%bc%e8%a7%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 2 章 Rust 导览
+&lt;/h2&gt;&lt;h3 id=&#34;21-rustup-与-cargo&#34;&gt;&lt;a href=&#34;#21-rustup-%e4%b8%8e-cargo&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.1 rustup 与 Cargo
+&lt;/h3&gt;&lt;h3 id=&#34;22-rust-函数&#34;&gt;&lt;a href=&#34;#22-rust-%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.2 Rust 函数
+&lt;/h3&gt;&lt;h3 id=&#34;23-编写与运行单元测试&#34;&gt;&lt;a href=&#34;#23-%e7%bc%96%e5%86%99%e4%b8%8e%e8%bf%90%e8%a1%8c%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.3 编写与运行单元测试
+&lt;/h3&gt;&lt;h3 id=&#34;24-处理命令行参数&#34;&gt;&lt;a href=&#34;#24-%e5%a4%84%e7%90%86%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.4 处理命令行参数
+&lt;/h3&gt;&lt;h3 id=&#34;25-搭建-web-服务器&#34;&gt;&lt;a href=&#34;#25-%e6%90%ad%e5%bb%ba-web-%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.5 搭建 Web 服务器
+&lt;/h3&gt;&lt;h3 id=&#34;26-并发&#34;&gt;&lt;a href=&#34;#26-%e5%b9%b6%e5%8f%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.6 并发
+&lt;/h3&gt;&lt;h3 id=&#34;27-文件系统与命令行工具&#34;&gt;&lt;a href=&#34;#27-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e4%b8%8e%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.7 文件系统与命令行工具
+&lt;/h3&gt;&lt;h2 id=&#34;第-3-章-基本数据类型&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-3-%e7%ab%a0-%e5%9f%ba%e6%9c%ac%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 3 章 基本数据类型
+&lt;/h2&gt;&lt;h3 id=&#34;31-固定宽度的数值类型&#34;&gt;&lt;a href=&#34;#31-%e5%9b%ba%e5%ae%9a%e5%ae%bd%e5%ba%a6%e7%9a%84%e6%95%b0%e5%80%bc%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.1 固定宽度的数值类型
+&lt;/h3&gt;&lt;h3 id=&#34;32-布尔类型&#34;&gt;&lt;a href=&#34;#32-%e5%b8%83%e5%b0%94%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.2 布尔类型
+&lt;/h3&gt;&lt;h3 id=&#34;33-字符&#34;&gt;&lt;a href=&#34;#33-%e5%ad%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.3 字符
+&lt;/h3&gt;&lt;h3 id=&#34;34-元组&#34;&gt;&lt;a href=&#34;#34-%e5%85%83%e7%bb%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.4 元组
+&lt;/h3&gt;&lt;h3 id=&#34;35-指针类型&#34;&gt;&lt;a href=&#34;#35-%e6%8c%87%e9%92%88%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.5 指针类型
+&lt;/h3&gt;&lt;h3 id=&#34;36-数组向量和切片&#34;&gt;&lt;a href=&#34;#36-%e6%95%b0%e7%bb%84%e5%90%91%e9%87%8f%e5%92%8c%e5%88%87%e7%89%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.6 数组、向量和切片
+&lt;/h3&gt;&lt;h3 id=&#34;37-字符串类型&#34;&gt;&lt;a href=&#34;#37-%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.7 字符串类型
+&lt;/h3&gt;&lt;h3 id=&#34;38-类型别名&#34;&gt;&lt;a href=&#34;#38-%e7%b1%bb%e5%9e%8b%e5%88%ab%e5%90%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.8 类型别名
+&lt;/h3&gt;&lt;h3 id=&#34;39-前路展望&#34;&gt;&lt;a href=&#34;#39-%e5%89%8d%e8%b7%af%e5%b1%95%e6%9c%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.9 前路展望
+&lt;/h3&gt;&lt;h2 id=&#34;第-4-章-所有权与移动-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-4-%e7%ab%a0-%e6%89%80%e6%9c%89%e6%9d%83%e4%b8%8e%e7%a7%bb%e5%8a%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 4 章 所有权与移动 1
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 “控制优先”阵营会让你自己负责释放内存。程序的内存消耗完全掌握在你的手中，但避免悬空指针也完全成了你的责任。C 和 C++ 是这个阵营中仅有的两种主流语言
+⏱ 2024-07-26 08:36:10 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-40-1625-1702&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 Rust 的一些规则可能与你在其他编程语言中看到的截然不同。在我们看来，学习 Rust 的核心挑战，就是学习如何用好这些规则并转化为你的优势。
+⏱ 2024-07-26 08:38:22 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-40-2650-2721&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;41-所有权&#34;&gt;&lt;a href=&#34;#41-%e6%89%80%e6%9c%89%e6%9d%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.1 所有权
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Rust 程序中的每一个值都是某棵树的成员，树根是某个变量。
+⏱ 2024-07-26 08:45:51 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-41-6984-7014&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 可以将值从一个拥有者转移给另一个拥有者。这允许你构建、重新排列和拆除树形结构。像整数、浮点数和字符这样的非常简单的类型，不受所有权规则的约束。这些称为 Copy 类型。标准库提供了引用计数指针类型 Rc 和 Arc，它们允许值在某些限制下有多个拥有者。可以对值进行“借用”（borrow），以获得值的引用。这种引用是非拥有型指针，有着受限的生命周期。
+⏱ 2024-07-26 08:47:01 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-41-7647-8035&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;42-移动&#34;&gt;&lt;a href=&#34;#42-%e7%a7%bb%e5%8a%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.2 移动
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 但 Rust 还将“移动”的语义应用到了几乎所有对值的使用上。例如，将参数传给函数会将所有权转移给函数的参数、从函数返回一个值会将所有权转移给调用者、构建元组会将值转移给元组。
+⏱ 2024-07-26 08:53:35 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-42-7752-7840&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;43-copy-类型关于移动的例外情况&#34;&gt;&lt;a href=&#34;#43-copy-%e7%b1%bb%e5%9e%8b%e5%85%b3%e4%ba%8e%e7%a7%bb%e5%8a%a8%e7%9a%84%e4%be%8b%e5%a4%96%e6%83%85%e5%86%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.3 Copy 类型：关于移动的例外情况
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 标准的 Copy 类型包括所有机器整数类型和浮点数类型、char 类型和 bool 类型，以及某些其他类型。Copy 类型的元组或固定大小的数组本身也是 Copy 类型。
+⏱ 2024-07-26 09:16:54 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-43-2444-2684&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;44-rc-与-arc共享所有权&#34;&gt;&lt;a href=&#34;#44-rc-%e4%b8%8e-arc%e5%85%b1%e4%ba%ab%e6%89%80%e6%9c%89%e6%9d%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.4 Rc 与 Arc：共享所有权
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Rust 的内存和线程安全保证的基石是：确保不会有任何值是既共享又可变的
+⏱ 2024-07-26 11:38:43 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-44-3464-3500&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第-5-章-引用&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-5-%e7%ab%a0-%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 5 章 引用
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 引用的生命周期绝不能超出其引用目标。你的代码必须遵循这样的规则，即任何引用的生命周期都不可能超出它指向的值。为了强调这一点，Rust 把创建对某个值的引用的操作称为借用（borrow）那个值：凡是借用，终须归还。
+⏱ 2024-07-26 11:41:56 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-45-1200-1340&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;51-对值的引用&#34;&gt;&lt;a href=&#34;#51-%e5%af%b9%e5%80%bc%e7%9a%84%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.1 对值的引用
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 可变引用允许你读取和修改值。但是，一旦一个值拥有了可变引用，就无法再对该值创建其他任何种类的引用了。表达式 &amp;amp;mut e 会产生一个对 e 值的可变引用，可以将其类型写成 &amp;amp;mut T，读作“ref mute T”。可变引用不是 Copy 类型。
+⏱ 2024-07-26 14:46:32 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-46-4440-4735&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;52-使用引用&#34;&gt;&lt;a href=&#34;#52-%e4%bd%bf%e7%94%a8%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.2 使用引用
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌  由于引用在 Rust 中随处可见，因此 . 运算符就会按需对其左操作数隐式解引用 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-47-1876-1947&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 此处仅仅对.运算符可以省去解引用的符号，但是对于整数等单个变量不行？ - ⏱ 2024-07-26 15:08:38&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 乍一看，这种行为可能太显而易见，不值一提：现在 r 当然会指向 y，因为我们在其中存储了 &amp;amp;y。但特意指出这一点是因为 C++ 引用的行为与此截然不同：如前所述，在 C++ 中对引用赋值会将新值存储在其引用目标中而非指向新值。C++ 的引用一旦完成初始化，就无法再指向别处了
+⏱ 2024-07-26 15:19:25 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-47-3981-4215&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;53-引用安全&#34;&gt;&lt;a href=&#34;#53-%e5%bc%95%e7%94%a8%e5%ae%89%e5%85%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.3 引用安全
+&lt;/h3&gt;&lt;h3 id=&#34;54-共享与可变&#34;&gt;&lt;a href=&#34;#54-%e5%85%b1%e4%ba%ab%e4%b8%8e%e5%8f%af%e5%8f%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.4 共享与可变
+&lt;/h3&gt;&lt;h3 id=&#34;55-应对复杂对象关系&#34;&gt;&lt;a href=&#34;#55-%e5%ba%94%e5%af%b9%e5%a4%8d%e6%9d%82%e5%af%b9%e8%b1%a1%e5%85%b3%e7%b3%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.5 应对复杂对象关系
+&lt;/h3&gt;&lt;h2 id=&#34;第-6-章-表达式&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-6-%e7%ab%a0-%e8%a1%a8%e8%be%be%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 6 章 表达式
+&lt;/h2&gt;&lt;h3 id=&#34;61-表达式语言&#34;&gt;&lt;a href=&#34;#61-%e8%a1%a8%e8%be%be%e5%bc%8f%e8%af%ad%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.1 表达式语言
+&lt;/h3&gt;&lt;h3 id=&#34;62-优先级与结合性&#34;&gt;&lt;a href=&#34;#62-%e4%bc%98%e5%85%88%e7%ba%a7%e4%b8%8e%e7%bb%93%e5%90%88%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.2 优先级与结合性
+&lt;/h3&gt;&lt;h3 id=&#34;63-块与分号&#34;&gt;&lt;a href=&#34;#63-%e5%9d%97%e4%b8%8e%e5%88%86%e5%8f%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.3 块与分号
+&lt;/h3&gt;&lt;h3 id=&#34;64-声明&#34;&gt;&lt;a href=&#34;#64-%e5%a3%b0%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.4 声明
+&lt;/h3&gt;&lt;h3 id=&#34;65-if-与-match&#34;&gt;&lt;a href=&#34;#65-if-%e4%b8%8e-match&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.5 if 与 match
+&lt;/h3&gt;&lt;h3 id=&#34;66-循环中的控制流&#34;&gt;&lt;a href=&#34;#66-%e5%be%aa%e7%8e%af%e4%b8%ad%e7%9a%84%e6%8e%a7%e5%88%b6%e6%b5%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.6 循环中的控制流
+&lt;/h3&gt;&lt;h3 id=&#34;67-return-表达式&#34;&gt;&lt;a href=&#34;#67-return-%e8%a1%a8%e8%be%be%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.7 return 表达式
+&lt;/h3&gt;&lt;h3 id=&#34;68-为什么-rust-中会有-loop&#34;&gt;&lt;a href=&#34;#68-%e4%b8%ba%e4%bb%80%e4%b9%88-rust-%e4%b8%ad%e4%bc%9a%e6%9c%89-loop&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.8 为什么 Rust 中会有 loop
+&lt;/h3&gt;&lt;h3 id=&#34;69-函数与方法调用&#34;&gt;&lt;a href=&#34;#69-%e5%87%bd%e6%95%b0%e4%b8%8e%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.9 函数与方法调用
+&lt;/h3&gt;&lt;h3 id=&#34;610-字段与元素&#34;&gt;&lt;a href=&#34;#610-%e5%ad%97%e6%ae%b5%e4%b8%8e%e5%85%83%e7%b4%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.10 字段与元素
+&lt;/h3&gt;&lt;h3 id=&#34;611-引用运算符&#34;&gt;&lt;a href=&#34;#611-%e5%bc%95%e7%94%a8%e8%bf%90%e7%ae%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.11 引用运算符
+&lt;/h3&gt;&lt;h3 id=&#34;612-算术运算符按位运算符比较运算符和逻辑运算符&#34;&gt;&lt;a href=&#34;#612-%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97%e7%ac%a6%e6%8c%89%e4%bd%8d%e8%bf%90%e7%ae%97%e7%ac%a6%e6%af%94%e8%be%83%e8%bf%90%e7%ae%97%e7%ac%a6%e5%92%8c%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.12 算术运算符、按位运算符、比较运算符和逻辑运算符
+&lt;/h3&gt;&lt;h3 id=&#34;613-赋值&#34;&gt;&lt;a href=&#34;#613-%e8%b5%8b%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.13 赋值
+&lt;/h3&gt;&lt;h3 id=&#34;614-类型转换&#34;&gt;&lt;a href=&#34;#614-%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.14 类型转换
+&lt;/h3&gt;&lt;h3 id=&#34;615-闭包&#34;&gt;&lt;a href=&#34;#615-%e9%97%ad%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.15 闭包
+&lt;/h3&gt;&lt;h3 id=&#34;616-前路展望&#34;&gt;&lt;a href=&#34;#616-%e5%89%8d%e8%b7%af%e5%b1%95%e6%9c%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.16 前路展望
+&lt;/h3&gt;&lt;h2 id=&#34;第-7-章-错误处理&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-7-%e7%ab%a0-%e9%94%99%e8%af%af%e5%a4%84%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 7 章 错误处理
+&lt;/h2&gt;&lt;h3 id=&#34;71-panic&#34;&gt;&lt;a href=&#34;#71-panic&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.1 panic
+&lt;/h3&gt;&lt;h3 id=&#34;72-result&#34;&gt;&lt;a href=&#34;#72-result&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.2 Result
+&lt;/h3&gt;&lt;h2 id=&#34;第-8-章-crate-与模块&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-8-%e7%ab%a0-crate-%e4%b8%8e%e6%a8%a1%e5%9d%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 8 章 crate 与模块
+&lt;/h2&gt;&lt;h3 id=&#34;81-crate&#34;&gt;&lt;a href=&#34;#81-crate&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.1 crate
+&lt;/h3&gt;&lt;h3 id=&#34;82-模块&#34;&gt;&lt;a href=&#34;#82-%e6%a8%a1%e5%9d%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.2 模块
+&lt;/h3&gt;&lt;h3 id=&#34;83-将程序变成库&#34;&gt;&lt;a href=&#34;#83-%e5%b0%86%e7%a8%8b%e5%ba%8f%e5%8f%98%e6%88%90%e5%ba%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.3 将程序变成库
+&lt;/h3&gt;&lt;h3 id=&#34;84-srcbin-目录&#34;&gt;&lt;a href=&#34;#84-srcbin-%e7%9b%ae%e5%bd%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.4 src/bin 目录
+&lt;/h3&gt;&lt;h3 id=&#34;85-属性&#34;&gt;&lt;a href=&#34;#85-%e5%b1%9e%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.5 属性
+&lt;/h3&gt;&lt;h3 id=&#34;86-测试与文档&#34;&gt;&lt;a href=&#34;#86-%e6%b5%8b%e8%af%95%e4%b8%8e%e6%96%87%e6%a1%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.6 测试与文档
+&lt;/h3&gt;&lt;h3 id=&#34;87-指定依赖项&#34;&gt;&lt;a href=&#34;#87-%e6%8c%87%e5%ae%9a%e4%be%9d%e8%b5%96%e9%a1%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.7 指定依赖项
+&lt;/h3&gt;&lt;h3 id=&#34;88-将-crate-发布到-cratesio&#34;&gt;&lt;a href=&#34;#88-%e5%b0%86-crate-%e5%8f%91%e5%b8%83%e5%88%b0-cratesio&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.8 将 crate 发布到 crates.io
+&lt;/h3&gt;&lt;h3 id=&#34;89-工作空间&#34;&gt;&lt;a href=&#34;#89-%e5%b7%a5%e4%bd%9c%e7%a9%ba%e9%97%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.9 工作空间
+&lt;/h3&gt;&lt;h3 id=&#34;810-更多好资源&#34;&gt;&lt;a href=&#34;#810-%e6%9b%b4%e5%a4%9a%e5%a5%bd%e8%b5%84%e6%ba%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.10 更多好资源
+&lt;/h3&gt;&lt;h2 id=&#34;第-9-章-结构体&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-9-%e7%ab%a0-%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 9 章 结构体
+&lt;/h2&gt;&lt;h3 id=&#34;91-具名字段型结构体&#34;&gt;&lt;a href=&#34;#91-%e5%85%b7%e5%90%8d%e5%ad%97%e6%ae%b5%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.1 具名字段型结构体
+&lt;/h3&gt;&lt;h3 id=&#34;92-元组型结构体&#34;&gt;&lt;a href=&#34;#92-%e5%85%83%e7%bb%84%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.2 元组型结构体
+&lt;/h3&gt;&lt;h3 id=&#34;93-单元型结构体&#34;&gt;&lt;a href=&#34;#93-%e5%8d%95%e5%85%83%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.3 单元型结构体
+&lt;/h3&gt;&lt;h3 id=&#34;94-结构体布局&#34;&gt;&lt;a href=&#34;#94-%e7%bb%93%e6%9e%84%e4%bd%93%e5%b8%83%e5%b1%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.4 结构体布局
+&lt;/h3&gt;&lt;h3 id=&#34;95-用-impl-定义方法&#34;&gt;&lt;a href=&#34;#95-%e7%94%a8-impl-%e5%ae%9a%e4%b9%89%e6%96%b9%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.5 用 impl 定义方法
+&lt;/h3&gt;&lt;h3 id=&#34;96-关联常量&#34;&gt;&lt;a href=&#34;#96-%e5%85%b3%e8%81%94%e5%b8%b8%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.6 关联常量
+&lt;/h3&gt;&lt;h3 id=&#34;97-泛型结构体&#34;&gt;&lt;a href=&#34;#97-%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.7 泛型结构体
+&lt;/h3&gt;&lt;h3 id=&#34;98-带生命周期参数的泛型结构体&#34;&gt;&lt;a href=&#34;#98-%e5%b8%a6%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e5%8f%82%e6%95%b0%e7%9a%84%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.8 带生命周期参数的泛型结构体
+&lt;/h3&gt;&lt;h3 id=&#34;99-带常量参数的泛型结构体&#34;&gt;&lt;a href=&#34;#99-%e5%b8%a6%e5%b8%b8%e9%87%8f%e5%8f%82%e6%95%b0%e7%9a%84%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.9 带常量参数的泛型结构体
+&lt;/h3&gt;&lt;h3 id=&#34;910-让结构体类型派生自某些公共特型&#34;&gt;&lt;a href=&#34;#910-%e8%ae%a9%e7%bb%93%e6%9e%84%e4%bd%93%e7%b1%bb%e5%9e%8b%e6%b4%be%e7%94%9f%e8%87%aa%e6%9f%90%e4%ba%9b%e5%85%ac%e5%85%b1%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.10 让结构体类型派生自某些公共特型
+&lt;/h3&gt;&lt;h3 id=&#34;911-内部可变性&#34;&gt;&lt;a href=&#34;#911-%e5%86%85%e9%83%a8%e5%8f%af%e5%8f%98%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.11 内部可变性
+&lt;/h3&gt;&lt;h2 id=&#34;第-10-章-枚举与模式&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-10-%e7%ab%a0-%e6%9e%9a%e4%b8%be%e4%b8%8e%e6%a8%a1%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 10 章 枚举与模式
+&lt;/h2&gt;&lt;h3 id=&#34;101-枚举&#34;&gt;&lt;a href=&#34;#101-%e6%9e%9a%e4%b8%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.1 枚举
+&lt;/h3&gt;&lt;h3 id=&#34;102-模式&#34;&gt;&lt;a href=&#34;#102-%e6%a8%a1%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.2 模式
+&lt;/h3&gt;&lt;h3 id=&#34;103-大局观&#34;&gt;&lt;a href=&#34;#103-%e5%a4%a7%e5%b1%80%e8%a7%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.3 大局观
+&lt;/h3&gt;&lt;h2 id=&#34;第-11-章-特型与泛型&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-11-%e7%ab%a0-%e7%89%b9%e5%9e%8b%e4%b8%8e%e6%b3%9b%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 11 章 特型与泛型
+&lt;/h2&gt;&lt;h3 id=&#34;111-使用特型&#34;&gt;&lt;a href=&#34;#111-%e4%bd%bf%e7%94%a8%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.1 使用特型
+&lt;/h3&gt;&lt;h3 id=&#34;112-定义与实现特型&#34;&gt;&lt;a href=&#34;#112-%e5%ae%9a%e4%b9%89%e4%b8%8e%e5%ae%9e%e7%8e%b0%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.2 定义与实现特型
+&lt;/h3&gt;&lt;h3 id=&#34;113-完全限定的方法调用&#34;&gt;&lt;a href=&#34;#113-%e5%ae%8c%e5%85%a8%e9%99%90%e5%ae%9a%e7%9a%84%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.3 完全限定的方法调用
+&lt;/h3&gt;&lt;h3 id=&#34;114-定义类型之间关系的特型&#34;&gt;&lt;a href=&#34;#114-%e5%ae%9a%e4%b9%89%e7%b1%bb%e5%9e%8b%e4%b9%8b%e9%97%b4%e5%85%b3%e7%b3%bb%e7%9a%84%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.4 定义类型之间关系的特型
+&lt;/h3&gt;&lt;h3 id=&#34;115-逆向工程求限界&#34;&gt;&lt;a href=&#34;#115-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e6%b1%82%e9%99%90%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.5 逆向工程求限界
+&lt;/h3&gt;&lt;h3 id=&#34;116-以特型为基础&#34;&gt;&lt;a href=&#34;#116-%e4%bb%a5%e7%89%b9%e5%9e%8b%e4%b8%ba%e5%9f%ba%e7%a1%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.6 以特型为基础
+&lt;/h3&gt;&lt;h2 id=&#34;第-12-章-运算符重载&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-12-%e7%ab%a0-%e8%bf%90%e7%ae%97%e7%ac%a6%e9%87%8d%e8%bd%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 12 章 运算符重载
+&lt;/h2&gt;&lt;h3 id=&#34;121-算术运算符与按位运算符&#34;&gt;&lt;a href=&#34;#121-%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97%e7%ac%a6%e4%b8%8e%e6%8c%89%e4%bd%8d%e8%bf%90%e7%ae%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;12.1 算术运算符与按位运算符
+&lt;/h3&gt;&lt;h3 id=&#34;122-相等性比较&#34;&gt;&lt;a href=&#34;#122-%e7%9b%b8%e7%ad%89%e6%80%a7%e6%af%94%e8%be%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;12.2 相等性比较
+&lt;/h3&gt;&lt;h3 id=&#34;123-有序比较&#34;&gt;&lt;a href=&#34;#123-%e6%9c%89%e5%ba%8f%e6%af%94%e8%be%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;12.3 有序比较
+&lt;/h3&gt;&lt;h3 id=&#34;124-index-与-indexmut&#34;&gt;&lt;a href=&#34;#124-index-%e4%b8%8e-indexmut&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;12.4 Index 与 IndexMut
+&lt;/h3&gt;&lt;h3 id=&#34;125-其他运算符&#34;&gt;&lt;a href=&#34;#125-%e5%85%b6%e4%bb%96%e8%bf%90%e7%ae%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;12.5 其他运算符
+&lt;/h3&gt;&lt;h2 id=&#34;第-13-章-实用工具特型&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-13-%e7%ab%a0-%e5%ae%9e%e7%94%a8%e5%b7%a5%e5%85%b7%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 13 章 实用工具特型
+&lt;/h2&gt;&lt;h3 id=&#34;131-drop&#34;&gt;&lt;a href=&#34;#131-drop&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.1 Drop
+&lt;/h3&gt;&lt;h3 id=&#34;132-sized&#34;&gt;&lt;a href=&#34;#132-sized&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.2 Sized
+&lt;/h3&gt;&lt;h3 id=&#34;133-clone&#34;&gt;&lt;a href=&#34;#133-clone&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.3 Clone
+&lt;/h3&gt;&lt;h3 id=&#34;134-copy&#34;&gt;&lt;a href=&#34;#134-copy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.4 Copy
+&lt;/h3&gt;&lt;h3 id=&#34;135-deref-与-derefmut&#34;&gt;&lt;a href=&#34;#135-deref-%e4%b8%8e-derefmut&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.5 Deref 与 DerefMut
+&lt;/h3&gt;&lt;h3 id=&#34;136-default&#34;&gt;&lt;a href=&#34;#136-default&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.6 Default
+&lt;/h3&gt;&lt;h3 id=&#34;137-asref-与-asmut&#34;&gt;&lt;a href=&#34;#137-asref-%e4%b8%8e-asmut&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.7 AsRef 与 AsMut
+&lt;/h3&gt;&lt;h3 id=&#34;138-borrow-与-borrowmut&#34;&gt;&lt;a href=&#34;#138-borrow-%e4%b8%8e-borrowmut&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.8 Borrow 与 BorrowMut
+&lt;/h3&gt;&lt;h3 id=&#34;139-from-与-into&#34;&gt;&lt;a href=&#34;#139-from-%e4%b8%8e-into&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.9 From 与 Into
+&lt;/h3&gt;&lt;h3 id=&#34;1310-tryfrom-与-tryinto&#34;&gt;&lt;a href=&#34;#1310-tryfrom-%e4%b8%8e-tryinto&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.10 TryFrom 与 TryInto
+&lt;/h3&gt;&lt;h3 id=&#34;1311-toowned&#34;&gt;&lt;a href=&#34;#1311-toowned&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.11 ToOwned
+&lt;/h3&gt;&lt;h3 id=&#34;1312-borrow-与-toowned-的实际运用谦卑-2-的-cow&#34;&gt;&lt;a href=&#34;#1312-borrow-%e4%b8%8e-toowned-%e7%9a%84%e5%ae%9e%e9%99%85%e8%bf%90%e7%94%a8%e8%b0%a6%e5%8d%91-2-%e7%9a%84-cow&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;13.12 Borrow 与 ToOwned 的实际运用：谦卑 2 的 Cow
+&lt;/h3&gt;&lt;h2 id=&#34;第-14-章-闭包&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-14-%e7%ab%a0-%e9%97%ad%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 14 章 闭包
+&lt;/h2&gt;&lt;h3 id=&#34;141-捕获变量&#34;&gt;&lt;a href=&#34;#141-%e6%8d%95%e8%8e%b7%e5%8f%98%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;14.1 捕获变量
+&lt;/h3&gt;&lt;h3 id=&#34;142-函数与闭包的类型&#34;&gt;&lt;a href=&#34;#142-%e5%87%bd%e6%95%b0%e4%b8%8e%e9%97%ad%e5%8c%85%e7%9a%84%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;14.2 函数与闭包的类型
+&lt;/h3&gt;&lt;h3 id=&#34;143-闭包性能&#34;&gt;&lt;a href=&#34;#143-%e9%97%ad%e5%8c%85%e6%80%a7%e8%83%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;14.3 闭包性能
+&lt;/h3&gt;&lt;h3 id=&#34;144-闭包与安全&#34;&gt;&lt;a href=&#34;#144-%e9%97%ad%e5%8c%85%e4%b8%8e%e5%ae%89%e5%85%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;14.4 闭包与安全
+&lt;/h3&gt;&lt;h3 id=&#34;145-回调&#34;&gt;&lt;a href=&#34;#145-%e5%9b%9e%e8%b0%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;14.5 回调
+&lt;/h3&gt;&lt;h3 id=&#34;146-高效地使用闭包&#34;&gt;&lt;a href=&#34;#146-%e9%ab%98%e6%95%88%e5%9c%b0%e4%bd%bf%e7%94%a8%e9%97%ad%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;14.6 高效地使用闭包
+&lt;/h3&gt;&lt;h2 id=&#34;第-15-章-迭代器&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-15-%e7%ab%a0-%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 15 章 迭代器
+&lt;/h2&gt;&lt;h3 id=&#34;151-iterator-特型与-intoiterator-特型&#34;&gt;&lt;a href=&#34;#151-iterator-%e7%89%b9%e5%9e%8b%e4%b8%8e-intoiterator-%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.1 Iterator 特型与 IntoIterator 特型
+&lt;/h3&gt;&lt;h3 id=&#34;152-创建迭代器&#34;&gt;&lt;a href=&#34;#152-%e5%88%9b%e5%bb%ba%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.2 创建迭代器
+&lt;/h3&gt;&lt;h3 id=&#34;153-迭代器适配器&#34;&gt;&lt;a href=&#34;#153-%e8%bf%ad%e4%bb%a3%e5%99%a8%e9%80%82%e9%85%8d%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.3 迭代器适配器
+&lt;/h3&gt;&lt;h3 id=&#34;154-消耗迭代器&#34;&gt;&lt;a href=&#34;#154-%e6%b6%88%e8%80%97%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.4 消耗迭代器
+&lt;/h3&gt;&lt;h3 id=&#34;155-实现自己的迭代器&#34;&gt;&lt;a href=&#34;#155-%e5%ae%9e%e7%8e%b0%e8%87%aa%e5%b7%b1%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.5 实现自己的迭代器
+&lt;/h3&gt;&lt;h2 id=&#34;第-16-章-集合&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-16-%e7%ab%a0-%e9%9b%86%e5%90%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 16 章 集合
+&lt;/h2&gt;&lt;h3 id=&#34;161-概述&#34;&gt;&lt;a href=&#34;#161-%e6%a6%82%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.1 概述
+&lt;/h3&gt;&lt;h3 id=&#34;162-vect&#34;&gt;&lt;a href=&#34;#162-vect&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.2 Vec&lt;T&gt;
+&lt;/h3&gt;&lt;h3 id=&#34;163-vecdequet&#34;&gt;&lt;a href=&#34;#163-vecdequet&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.3 VecDeque&lt;T&gt;
+&lt;/h3&gt;&lt;h3 id=&#34;164-binaryheapt&#34;&gt;&lt;a href=&#34;#164-binaryheapt&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.4 BinaryHeap&lt;T&gt;
+&lt;/h3&gt;&lt;h3 id=&#34;165-hashmapk-v-与-btreemapk-v&#34;&gt;&lt;a href=&#34;#165-hashmapk-v-%e4%b8%8e-btreemapk-v&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.5 HashMap&amp;lt;K, V&amp;gt; 与 BTreeMap&amp;lt;K, V&amp;gt;
+&lt;/h3&gt;&lt;h3 id=&#34;166-hashsett-与-btreesett&#34;&gt;&lt;a href=&#34;#166-hashsett-%e4%b8%8e-btreesett&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.6 HashSet&lt;T&gt; 与 BTreeSet&lt;T&gt;
+&lt;/h3&gt;&lt;h3 id=&#34;167-哈希&#34;&gt;&lt;a href=&#34;#167-%e5%93%88%e5%b8%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.7 哈希
+&lt;/h3&gt;&lt;h3 id=&#34;168-使用自定义哈希算法&#34;&gt;&lt;a href=&#34;#168-%e4%bd%bf%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e5%93%88%e5%b8%8c%e7%ae%97%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.8 使用自定义哈希算法
+&lt;/h3&gt;&lt;h3 id=&#34;169-在标准集合之外&#34;&gt;&lt;a href=&#34;#169-%e5%9c%a8%e6%a0%87%e5%87%86%e9%9b%86%e5%90%88%e4%b9%8b%e5%a4%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.9 在标准集合之外
+&lt;/h3&gt;&lt;h2 id=&#34;第-17-章-字符串与文本&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-17-%e7%ab%a0-%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%8e%e6%96%87%e6%9c%ac&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 17 章 字符串与文本
+&lt;/h2&gt;&lt;h3 id=&#34;171-一些-unicode-背景知识&#34;&gt;&lt;a href=&#34;#171-%e4%b8%80%e4%ba%9b-unicode-%e8%83%8c%e6%99%af%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.1 一些 Unicode 背景知识
+&lt;/h3&gt;&lt;h3 id=&#34;172-字符char&#34;&gt;&lt;a href=&#34;#172-%e5%ad%97%e7%ac%a6char&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.2 字符（char）
+&lt;/h3&gt;&lt;h3 id=&#34;173-string-与-str&#34;&gt;&lt;a href=&#34;#173-string-%e4%b8%8e-str&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.3 String 与 str
+&lt;/h3&gt;&lt;h3 id=&#34;174-格式化各种值&#34;&gt;&lt;a href=&#34;#174-%e6%a0%bc%e5%bc%8f%e5%8c%96%e5%90%84%e7%a7%8d%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.4 格式化各种值
+&lt;/h3&gt;&lt;h3 id=&#34;175-正则表达式&#34;&gt;&lt;a href=&#34;#175-%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.5 正则表达式
+&lt;/h3&gt;&lt;h3 id=&#34;176-规范化&#34;&gt;&lt;a href=&#34;#176-%e8%a7%84%e8%8c%83%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.6 规范化
+&lt;/h3&gt;&lt;h2 id=&#34;第-18-章-输入与输出&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-18-%e7%ab%a0-%e8%be%93%e5%85%a5%e4%b8%8e%e8%be%93%e5%87%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 18 章 输入与输出
+&lt;/h2&gt;&lt;h3 id=&#34;181-读取器与写入器&#34;&gt;&lt;a href=&#34;#181-%e8%af%bb%e5%8f%96%e5%99%a8%e4%b8%8e%e5%86%99%e5%85%a5%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;18.1 读取器与写入器
+&lt;/h3&gt;&lt;h3 id=&#34;182-文件与目录&#34;&gt;&lt;a href=&#34;#182-%e6%96%87%e4%bb%b6%e4%b8%8e%e7%9b%ae%e5%bd%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;18.2 文件与目录
+&lt;/h3&gt;&lt;h3 id=&#34;183-网络&#34;&gt;&lt;a href=&#34;#183-%e7%bd%91%e7%bb%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;18.3 网络
+&lt;/h3&gt;&lt;h2 id=&#34;第-19-章-并发&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-19-%e7%ab%a0-%e5%b9%b6%e5%8f%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 19 章 并发
+&lt;/h2&gt;&lt;h3 id=&#34;191-分叉与合并并行&#34;&gt;&lt;a href=&#34;#191-%e5%88%86%e5%8f%89%e4%b8%8e%e5%90%88%e5%b9%b6%e5%b9%b6%e8%a1%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;19.1 分叉与合并并行
+&lt;/h3&gt;&lt;h3 id=&#34;192-通道&#34;&gt;&lt;a href=&#34;#192-%e9%80%9a%e9%81%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;19.2 通道
+&lt;/h3&gt;&lt;h3 id=&#34;193-共享可变状态&#34;&gt;&lt;a href=&#34;#193-%e5%85%b1%e4%ba%ab%e5%8f%af%e5%8f%98%e7%8a%b6%e6%80%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;19.3 共享可变状态
+&lt;/h3&gt;&lt;h3 id=&#34;194-在-rust-中编写并发代码的一点儿经验&#34;&gt;&lt;a href=&#34;#194-%e5%9c%a8-rust-%e4%b8%ad%e7%bc%96%e5%86%99%e5%b9%b6%e5%8f%91%e4%bb%a3%e7%a0%81%e7%9a%84%e4%b8%80%e7%82%b9%e5%84%bf%e7%bb%8f%e9%aa%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;19.4 在 Rust 中编写并发代码的一点儿经验
+&lt;/h3&gt;&lt;h2 id=&#34;第-20-章-异步编程&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-20-%e7%ab%a0-%e5%bc%82%e6%ad%a5%e7%bc%96%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 20 章 异步编程
+&lt;/h2&gt;&lt;h3 id=&#34;201-从同步到异步&#34;&gt;&lt;a href=&#34;#201-%e4%bb%8e%e5%90%8c%e6%ad%a5%e5%88%b0%e5%bc%82%e6%ad%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;20.1 从同步到异步
+&lt;/h3&gt;&lt;h3 id=&#34;202-异步客户端与服务器&#34;&gt;&lt;a href=&#34;#202-%e5%bc%82%e6%ad%a5%e5%ae%a2%e6%88%b7%e7%ab%af%e4%b8%8e%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;20.2 异步客户端与服务器
+&lt;/h3&gt;&lt;h3 id=&#34;203-原始-future-与执行器future-什么时候值得再次轮询&#34;&gt;&lt;a href=&#34;#203-%e5%8e%9f%e5%a7%8b-future-%e4%b8%8e%e6%89%a7%e8%a1%8c%e5%99%a8future-%e4%bb%80%e4%b9%88%e6%97%b6%e5%80%99%e5%80%bc%e5%be%97%e5%86%8d%e6%ac%a1%e8%bd%ae%e8%af%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;20.3 原始 Future 与执行器：Future 什么时候值得再次轮询
+&lt;/h3&gt;&lt;h3 id=&#34;204-固定pin5&#34;&gt;&lt;a href=&#34;#204-%e5%9b%ba%e5%ae%9apin5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;20.4 固定（Pin）5
+&lt;/h3&gt;&lt;h3 id=&#34;205-什么时候要用异步代码&#34;&gt;&lt;a href=&#34;#205-%e4%bb%80%e4%b9%88%e6%97%b6%e5%80%99%e8%a6%81%e7%94%a8%e5%bc%82%e6%ad%a5%e4%bb%a3%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;20.5 什么时候要用异步代码
+&lt;/h3&gt;&lt;h2 id=&#34;第-21-章-宏&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-21-%e7%ab%a0-%e5%ae%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 21 章 宏
+&lt;/h2&gt;&lt;h3 id=&#34;211-宏基础&#34;&gt;&lt;a href=&#34;#211-%e5%ae%8f%e5%9f%ba%e7%a1%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;21.1 宏基础
+&lt;/h3&gt;&lt;h3 id=&#34;212-内置宏&#34;&gt;&lt;a href=&#34;#212-%e5%86%85%e7%bd%ae%e5%ae%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;21.2 内置宏
+&lt;/h3&gt;&lt;h3 id=&#34;213-调试宏&#34;&gt;&lt;a href=&#34;#213-%e8%b0%83%e8%af%95%e5%ae%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;21.3 调试宏
+&lt;/h3&gt;&lt;h3 id=&#34;214-构建-json-宏&#34;&gt;&lt;a href=&#34;#214-%e6%9e%84%e5%bb%ba-json-%e5%ae%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;21.4 构建 json! 宏
+&lt;/h3&gt;&lt;h3 id=&#34;215-在匹配过程中避免语法错误&#34;&gt;&lt;a href=&#34;#215-%e5%9c%a8%e5%8c%b9%e9%85%8d%e8%bf%87%e7%a8%8b%e4%b8%ad%e9%81%bf%e5%85%8d%e8%af%ad%e6%b3%95%e9%94%99%e8%af%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;21.5 在匹配过程中避免语法错误
+&lt;/h3&gt;&lt;h3 id=&#34;216-超越-macro_rules&#34;&gt;&lt;a href=&#34;#216-%e8%b6%85%e8%b6%8a-macro_rules&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;21.6 超越 macro_rules!
+&lt;/h3&gt;&lt;h2 id=&#34;第-22-章-不安全代码&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-22-%e7%ab%a0-%e4%b8%8d%e5%ae%89%e5%85%a8%e4%bb%a3%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 22 章 不安全代码
+&lt;/h2&gt;&lt;h3 id=&#34;221-不安全因素来自哪里&#34;&gt;&lt;a href=&#34;#221-%e4%b8%8d%e5%ae%89%e5%85%a8%e5%9b%a0%e7%b4%a0%e6%9d%a5%e8%87%aa%e5%93%aa%e9%87%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.1 不安全因素来自哪里
+&lt;/h3&gt;&lt;h3 id=&#34;222-不安全块&#34;&gt;&lt;a href=&#34;#222-%e4%b8%8d%e5%ae%89%e5%85%a8%e5%9d%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.2 不安全块
+&lt;/h3&gt;&lt;h3 id=&#34;223-示例高效的-ascii-字符串类型&#34;&gt;&lt;a href=&#34;#223-%e7%a4%ba%e4%be%8b%e9%ab%98%e6%95%88%e7%9a%84-ascii-%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.3 示例：高效的 ASCII 字符串类型
+&lt;/h3&gt;&lt;h3 id=&#34;224-不安全函数&#34;&gt;&lt;a href=&#34;#224-%e4%b8%8d%e5%ae%89%e5%85%a8%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.4 不安全函数
+&lt;/h3&gt;&lt;h3 id=&#34;225-不安全块还是不安全函数&#34;&gt;&lt;a href=&#34;#225-%e4%b8%8d%e5%ae%89%e5%85%a8%e5%9d%97%e8%bf%98%e6%98%af%e4%b8%8d%e5%ae%89%e5%85%a8%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.5 不安全块还是不安全函数
+&lt;/h3&gt;&lt;h3 id=&#34;226-未定义行为&#34;&gt;&lt;a href=&#34;#226-%e6%9c%aa%e5%ae%9a%e4%b9%89%e8%a1%8c%e4%b8%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.6 未定义行为
+&lt;/h3&gt;&lt;h3 id=&#34;227-不安全特型&#34;&gt;&lt;a href=&#34;#227-%e4%b8%8d%e5%ae%89%e5%85%a8%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.7 不安全特型
+&lt;/h3&gt;&lt;h3 id=&#34;228-裸指针&#34;&gt;&lt;a href=&#34;#228-%e8%a3%b8%e6%8c%87%e9%92%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.8 裸指针
+&lt;/h3&gt;&lt;h3 id=&#34;229-用联合体重新解释内存&#34;&gt;&lt;a href=&#34;#229-%e7%94%a8%e8%81%94%e5%90%88%e4%bd%93%e9%87%8d%e6%96%b0%e8%a7%a3%e9%87%8a%e5%86%85%e5%ad%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.9 用联合体重新解释内存
+&lt;/h3&gt;&lt;h3 id=&#34;2210-匹配联合体&#34;&gt;&lt;a href=&#34;#2210-%e5%8c%b9%e9%85%8d%e8%81%94%e5%90%88%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.10 匹配联合体
+&lt;/h3&gt;&lt;h3 id=&#34;2211-借用联合体&#34;&gt;&lt;a href=&#34;#2211-%e5%80%9f%e7%94%a8%e8%81%94%e5%90%88%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;22.11 借用联合体
+&lt;/h3&gt;&lt;h2 id=&#34;第-23-章-外部函数&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-23-%e7%ab%a0-%e5%a4%96%e9%83%a8%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 23 章 外部函数
+&lt;/h2&gt;&lt;h3 id=&#34;231-寻找共同的数据表示&#34;&gt;&lt;a href=&#34;#231-%e5%af%bb%e6%89%be%e5%85%b1%e5%90%8c%e7%9a%84%e6%95%b0%e6%8d%ae%e8%a1%a8%e7%a4%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;23.1 寻找共同的数据表示
+&lt;/h3&gt;&lt;h3 id=&#34;232-声明外部函数与变量&#34;&gt;&lt;a href=&#34;#232-%e5%a3%b0%e6%98%8e%e5%a4%96%e9%83%a8%e5%87%bd%e6%95%b0%e4%b8%8e%e5%8f%98%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;23.2 声明外部函数与变量
+&lt;/h3&gt;&lt;h3 id=&#34;233-使用库中的函数&#34;&gt;&lt;a href=&#34;#233-%e4%bd%bf%e7%94%a8%e5%ba%93%e4%b8%ad%e7%9a%84%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;23.3 使用库中的函数
+&lt;/h3&gt;&lt;h3 id=&#34;234-libgit2-的裸接口&#34;&gt;&lt;a href=&#34;#234-libgit2-%e7%9a%84%e8%a3%b8%e6%8e%a5%e5%8f%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;23.4 libgit2 的裸接口
+&lt;/h3&gt;&lt;h3 id=&#34;235-libgit2-的安全接口&#34;&gt;&lt;a href=&#34;#235-libgit2-%e7%9a%84%e5%ae%89%e5%85%a8%e6%8e%a5%e5%8f%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;23.5 libgit2 的安全接口
+&lt;/h3&gt;&lt;h3 id=&#34;236-结论&#34;&gt;&lt;a href=&#34;#236-%e7%bb%93%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;23.6 结论
+&lt;/h3&gt;&lt;h2 id=&#34;作者介绍&#34;&gt;&lt;a href=&#34;#%e4%bd%9c%e8%80%85%e4%bb%8b%e7%bb%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;作者介绍
+&lt;/h2&gt;&lt;h2 id=&#34;封面介绍&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2%e4%bb%8b%e7%bb%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面介绍
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h2 id=&#34;41-所有权-1&#34;&gt;&lt;a href=&#34;#41-%e6%89%80%e6%9c%89%e6%9d%83-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.1 所有权
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 然而，在 Rust 中，所有权这个概念内置于语言本身，并通过编译期检查强制执行。每个值都有决定其生命周期的唯一拥有者。当拥有者被释放时，它拥有的值也会同时被释放，在 Rust 术语中，释放的行为被称为丢弃（drop）。这些规则便于通过检查代码确定任意值的生命周期，也提供了系统级语言本应支持的对生命周期的控制。  ^6733360-7SXYmOiLp
+- 💭 a拥有b的确切含义，如果a不在了，b也就没有继续存在的意义了
+- ⏱ 2024-07-26 08:40:47&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-1&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 [插图]  ^6733360-7SXYD2M8A
+- 💭 这张图画得非常棒
+- ⏱ 2024-07-26 08:44:46&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;42-移动-1&#34;&gt;&lt;a href=&#34;#42-%e7%a7%bb%e5%8a%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.2 移动
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-2&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 从某种意义上说，C++ 和 Python 选择了相反的权衡：Python 以需要引用计数（以及更广泛意义上的垃圾回收）为代价，让赋值的开销变得非常低。C++ 则选择让全部内存的所有权保持清晰，而代价是在赋值时要执行对象的深拷贝。一般来说，C++ 程序员不太热衷这种选择：深拷贝的开销可能很昂贵，而且通常有更实用的替代方案。  ^6733360-7SXYZHxuo
+- 💭 c++中是使用move吗？
+- ⏱ 2024-07-26 08:50:21&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-3&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 就必须调用向量的 clone 方法，该方法会执行向量及其元素的深拷贝  ^6733360-7SXZ717nU
+- 💭 clone完成深拷贝
+- ⏱ 2024-07-26 08:52:09&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-4&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 当我们将向量直接传给循环（如 for &amp;hellip; in v）时，会将向量从 v 中移动出去，让 v 变成未初始化状态。for 循环的内部机制会获取向量的所有权并将其分解为元素。在每次迭代中，循环都会将另一个元素转移给变量 s。由于 s 现在拥有字符串，因此可以在打印之前在循环体中修改它。在循环的过程中，向量本身对代码不再可见，因此也就无法观察到它正处在某种部分清空的状态  ^6733360-7SY09PJGy
+- 💭 这个例子非常不错，简单for循环就会将v中元素的所有权转移给s，然后s给当前拥有的字符后面追加！，这样的for循环实际上是在消耗或者消费v，for循环之后v也就不存在了
+- ⏱ 2024-07-26 09:08:07&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-5&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 replace 调用会移出 composers[0].name 的值，将 None 留在原处，并将原始值的所有权转移给其调用者。事实上，这种使用 Option 的方式非常普遍，所以该类型专门为此提供了一个 take方法，以便更清晰地写出上述操作，如下所示：  ^6733360-7SY0n6sYg
+- 💭 这些操作都发生了所有权的转移，从上面的例子可以看出，结构体和vec拥有自己所有元素的所有权，不能将单独的一个或者几个元素的所有权从里面摘出来，只能通过别的方法置换或者获取所有权
+- ⏱ 2024-07-26 09:11:24&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;43-copy-类型关于移动的例外情况-1&#34;&gt;&lt;a href=&#34;#43-copy-%e7%b1%bb%e5%9e%8b%e5%85%b3%e4%ba%8e%e7%a7%bb%e5%8a%a8%e7%9a%84%e4%be%8b%e5%a4%96%e6%83%85%e5%86%b5-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.3 Copy 类型：关于移动的例外情况
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-6&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 那么自定义类型呢？默认情况下，struct 类型和 enum 类型不是 Copy 类型  ^6733360-7SY0ROqjB
+- 💭 自定义的一般也不是copy类型
+- ⏱ 2024-07-26 09:18:57&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;51-对值的引用-1&#34;&gt;&lt;a href=&#34;#51-%e5%af%b9%e5%80%bc%e7%9a%84%e5%bc%95%e7%94%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.1 对值的引用
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-7&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 只要存在对一个值的共享引用，即使是它的拥有者也不能修改它，该值会被锁定。当 show 正在使用 table 时，没有人可以修改它。类似地，如果有某个值的可变引用，那么它就会独占对该值的访问权，在可变引用消失之前，即使拥有者也根本无法使用该值。事实证明，让共享和修改保持完全分离对于内存安全至关重要，本章会在稍后内容中讨论原因。  ^6733360-7SYmnPShN
+- 💭 非常重要
+- ⏱ 2024-07-26 14:47:29&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;52-使用引用-1&#34;&gt;&lt;a href=&#34;#52-%e4%bd%bf%e7%94%a8%e5%bc%95%e7%94%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.2 使用引用
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-8&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 由于引用在 Rust 中随处可见，因此 . 运算符就会按需对其左操作数隐式解引用  ^6733360-7SYnQmDrl
+- 💭 此处仅仅对.运算符可以省去解引用的符号，但是对于整数等单个变量不行？
+- ⏱ 2024-07-26 15:09:47&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-9&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在这种情况下，Rust 会创建一个匿名变量来保存此表达式的值，并让该引用指向它。这个匿名变量的生命周期取决于你对引用做了什么。  ^6733360-7SYEhqSrK
+- 💭 这里很特殊
+- ⏱ 2024-07-26 19:20:45&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;53-引用安全-1&#34;&gt;&lt;a href=&#34;#53-%e5%bc%95%e7%94%a8%e5%ae%89%e5%85%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.3 引用安全
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-10&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-10&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 第一个约束限制了引用的生命周期可以有多大，而第二个约束则限制了它可以有多小。Rust 会尝试找出能让每个引用都满足这两个约束的生命周期。  ^6733360-7SYEVPvU8
+- 💭 厉害
+- ⏱ 2024-07-26 19:30:42&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/rust%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/rust%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] Rust权威指南&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/17/YueWen_32435929/t7_YueWen_32435929.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; Rust权威指南|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： Rust权威指南&lt;/li&gt;
+&lt;li&gt;作者： 史蒂夫·克拉伯尼克 卡罗尔·尼科尔斯&lt;/li&gt;
+&lt;li&gt;简介： 本书由Rust核心开发团队编写而成，由浅入深地探讨了Rust语言的方方面面。从学习函数、选择数据结构及绑定变量入手，逐步介绍所有权、trait、生命周期、安全保证等高级概念，模式匹配、错误处理、包管理、函数式特性、并发机制等实用工具，以及两个完整的项目开发实战案例。 作为开源的系统级编程语言，Rust可以帮助你编写出更为快速且更为可靠的软件，在给予开发者底层控制能力的同时，通过深思熟虑的工程设计避免了传统语言带来的诸多麻烦。 本书被视为Rust开发工作的必读书目，适合所有希望评估、入门、提高和研究Rust语言的软件开发人员阅读。&lt;/li&gt;
+&lt;li&gt;出版时间 2020-05-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787121387067&lt;/li&gt;
+&lt;li&gt;分类： 计算机-计算机综合&lt;/li&gt;
+&lt;li&gt;出版社： 电子工业出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/d733256071eeeed9d7322fd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;内容简介&#34;&gt;&lt;a href=&#34;#%e5%86%85%e5%ae%b9%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;内容简介
+&lt;/h2&gt;&lt;h2 id=&#34;译者序&#34;&gt;&lt;a href=&#34;#%e8%af%91%e8%80%85%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;译者序
+&lt;/h2&gt;&lt;h2 id=&#34;序&#34;&gt;&lt;a href=&#34;#%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;序
+&lt;/h2&gt;&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言
+&lt;/h2&gt;&lt;h2 id=&#34;致谢&#34;&gt;&lt;a href=&#34;#%e8%87%b4%e8%b0%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;致谢
+&lt;/h2&gt;&lt;h2 id=&#34;关于技术审校者&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e4%ba%8e%e6%8a%80%e6%9c%af%e5%ae%a1%e6%a0%a1%e8%80%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关于技术审校者
+&lt;/h2&gt;&lt;h2 id=&#34;第1章-入门指南&#34;&gt;&lt;a href=&#34;#%e7%ac%ac1%e7%ab%a0-%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第1章 入门指南
+&lt;/h2&gt;&lt;h3 id=&#34;安装&#34;&gt;&lt;a href=&#34;#%e5%ae%89%e8%a3%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;安装
+&lt;/h3&gt;&lt;h3 id=&#34;hello-world&#34;&gt;&lt;a href=&#34;#hello-world&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Hello, World!
+&lt;/h3&gt;&lt;h3 id=&#34;hello-cargo&#34;&gt;&lt;a href=&#34;#hello-cargo&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Hello, Cargo!
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 这种模式会以更长的编译时间为代价来优化代码，从而使代码拥有更好的运行时性能
+⏱ 2024-07-20 13:37:56 ^32435929-12-7638-7675&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;总结&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第2章-编写一个猜数游戏&#34;&gt;&lt;a href=&#34;#%e7%ac%ac2%e7%ab%a0-%e7%bc%96%e5%86%99%e4%b8%80%e4%b8%aa%e7%8c%9c%e6%95%b0%e6%b8%b8%e6%88%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第2章 编写一个猜数游戏
+&lt;/h2&gt;&lt;h3 id=&#34;创建一个新的项目&#34;&gt;&lt;a href=&#34;#%e5%88%9b%e5%bb%ba%e4%b8%80%e4%b8%aa%e6%96%b0%e7%9a%84%e9%a1%b9%e7%9b%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;创建一个新的项目
+&lt;/h3&gt;&lt;h3 id=&#34;处理一次猜测&#34;&gt;&lt;a href=&#34;#%e5%a4%84%e7%90%86%e4%b8%80%e6%ac%a1%e7%8c%9c%e6%b5%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;处理一次猜测
+&lt;/h3&gt;&lt;h3 id=&#34;生成一个保密数字&#34;&gt;&lt;a href=&#34;#%e7%94%9f%e6%88%90%e4%b8%80%e4%b8%aa%e4%bf%9d%e5%af%86%e6%95%b0%e5%ad%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;生成一个保密数字
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 值得一提的是
+⏱ 2024-07-20 13:37:54 ^32435929-17-6703-6709&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;比较猜测数字与保密数字&#34;&gt;&lt;a href=&#34;#%e6%af%94%e8%be%83%e7%8c%9c%e6%b5%8b%e6%95%b0%e5%ad%97%e4%b8%8e%e4%bf%9d%e5%af%86%e6%95%b0%e5%ad%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;比较猜测数字与保密数字
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 没错，但Rust允许使用同名的新变量guess来隐藏（shadow）旧变量的值。这一特性通常被用在需要转换值类型的场景中，它在本例中允许我们重用guess这个变量名，而无须强行创造出guess_str之类的不同的名字
+⏱ 2024-07-20 13:37:52 ^32435929-18-4025-4160&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;使用循环来实现多次猜测&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e5%be%aa%e7%8e%af%e6%9d%a5%e5%ae%9e%e7%8e%b0%e5%a4%9a%e6%ac%a1%e7%8c%9c%e6%b5%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用循环来实现多次猜测
+&lt;/h3&gt;&lt;h3 id=&#34;总结-1&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第3章-通用编程概念&#34;&gt;&lt;a href=&#34;#%e7%ac%ac3%e7%ab%a0-%e9%80%9a%e7%94%a8%e7%bc%96%e7%a8%8b%e6%a6%82%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第3章 通用编程概念
+&lt;/h2&gt;&lt;h3 id=&#34;变量与可变性&#34;&gt;&lt;a href=&#34;#%e5%8f%98%e9%87%8f%e4%b8%8e%e5%8f%af%e5%8f%98%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;变量与可变性
+&lt;/h3&gt;&lt;h3 id=&#34;数据类型&#34;&gt;&lt;a href=&#34;#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;数据类型
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 除了指明位数的类型，还有isize和usize两种特殊的整数类型，它们的长度取决于程序运行的目标平台。在64位架构上，它们就是64位的，而在32位架构上，它们就是32位的。
+⏱ 2024-07-20 13:37:54 ^32435929-23-3157-3243&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;函数&#34;&gt;&lt;a href=&#34;#%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;函数
+&lt;/h3&gt;&lt;h3 id=&#34;注释&#34;&gt;&lt;a href=&#34;#%e6%b3%a8%e9%87%8a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;注释
+&lt;/h3&gt;&lt;h3 id=&#34;控制流&#34;&gt;&lt;a href=&#34;#%e6%8e%a7%e5%88%b6%e6%b5%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;控制流
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 当然，过多的else if表达式可能会使我们的代码变得杂乱无章。在第6章会介绍Rust中另外一个强大的分支结构语法match，它可以被用来应对这种情况。
+⏱ 2024-07-20 13:37:53 ^32435929-26-4632-4708&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 for循环的安全性和简捷性使它成为了Rust中最为常用的循环结构。即便是为了实现示例3-3中循环特定次数的任务，大部分的Rust开发者也会选择使用for循环。我们可以配合标准库中提供的Range来实现这一目的，它被用来生成从一个数字开始到另一个数字结束之前的所有数字序列。
+⏱ 2024-07-20 13:37:55 ^32435929-26-11961-12097&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;总结-2&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第4章-认识所有权&#34;&gt;&lt;a href=&#34;#%e7%ac%ac4%e7%ab%a0-%e8%ae%a4%e8%af%86%e6%89%80%e6%9c%89%e6%9d%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第4章 认识所有权
+&lt;/h2&gt;&lt;h3 id=&#34;什么是所有权&#34;&gt;&lt;a href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e6%89%80%e6%9c%89%e6%9d%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;什么是所有权
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 假如我们忘记释放内存，那么就会造成内存泄漏；假如我们过早地释放内存，那么就会产生一个非法变量；假如我们重复释放同一块内存，那么就会产生无法预知的后果
+⏱ 2024-07-20 17:14:34 ^32435929-29-5946-6020&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在C++中，这种在对象生命周期结束时释放资源的模式有时也被称作资源获取即初始化（Resource Acquisition Is Initialization， RAII）。假如你使用过类似的模式，那么你应该对Rust中的特殊函数drop并不陌生。
+⏱ 2024-07-20 17:19:52 ^32435929-29-6615-6765&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 那么究竟哪些类型是Copy的呢？你可以查看特定类型的文档来确定，不过一般来说，任何简单标量的组合类型都可以是Copy的，任何需要分配内存或某种资源的类型都不会是Copy的
+⏱ 2024-07-20 17:40:17 ^32435929-29-12222-12307&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 变量所有权的转移总是遵循相同的模式：将一个值赋值给另一个变量时就会转移所有权。当一个持有堆数据的变量离开作用域时，它的数据就会被drop清理回收，除非这些数据的所有权移动到了另一个变量上。
+⏱ 2024-07-20 17:43:57 ^32435929-29-13713-13807&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;引用与借用&#34;&gt;&lt;a href=&#34;#%e5%bc%95%e7%94%a8%e4%b8%8e%e5%80%9f%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;引用与借用
+&lt;/h3&gt;&lt;h3 id=&#34;切片&#34;&gt;&lt;a href=&#34;#%e5%88%87%e7%89%87&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;切片
+&lt;/h3&gt;&lt;h3 id=&#34;总结-3&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第5章-使用结构体来组织相关联的数据&#34;&gt;&lt;a href=&#34;#%e7%ac%ac5%e7%ab%a0-%e4%bd%bf%e7%94%a8%e7%bb%93%e6%9e%84%e4%bd%93%e6%9d%a5%e7%bb%84%e7%bb%87%e7%9b%b8%e5%85%b3%e8%81%94%e7%9a%84%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第5章 使用结构体来组织相关联的数据
+&lt;/h2&gt;&lt;h3 id=&#34;定义并实例化结构体&#34;&gt;&lt;a href=&#34;#%e5%ae%9a%e4%b9%89%e5%b9%b6%e5%ae%9e%e4%be%8b%e5%8c%96%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;定义并实例化结构体
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 需要注意的是，一旦实例可变，那么实例中的所有字段都将是可变的
+⏱ 2024-07-20 19:05:31 ^32435929-34-1863-1893&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 一般来说，当你想要给元组赋予名字，并使其区别于其他拥有同样定义的元组时，你就可以使用元组结构体
+⏱ 2024-07-20 19:07:53 ^32435929-34-4499-4546&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;一个使用结构体的示例程序&#34;&gt;&lt;a href=&#34;#%e4%b8%80%e4%b8%aa%e4%bd%bf%e7%94%a8%e7%bb%93%e6%9e%84%e4%bd%93%e7%9a%84%e7%a4%ba%e4%be%8b%e7%a8%8b%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;一个使用结构体的示例程序
+&lt;/h3&gt;&lt;h3 id=&#34;方法&#34;&gt;&lt;a href=&#34;#%e6%96%b9%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;方法
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在这里，选择&amp;amp;self签名的原因和之前选择使用&amp;amp;Rectangle的原因差不多：我们既不用获得数据的所有权也不需要写入数据，而只需要读取数据即可。假如我们想要在调用方法时改变实例的某些数据，那么就需要将第一个参数改写为&amp;amp;mut self。通常来说，将第一个参数标记为self并在调用过程中取得实例的所有权的方法并不常见。这种技术有可能会被用于那些需要将self转换为其他类型，且在转换后想要阻止调用者访问原始实例的场景。
+⏱ 2024-07-21 06:22:57 ^32435929-36-1816-2038&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;总结-4&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第6章-枚举与模式匹配&#34;&gt;&lt;a href=&#34;#%e7%ac%ac6%e7%ab%a0-%e6%9e%9a%e4%b8%be%e4%b8%8e%e6%a8%a1%e5%bc%8f%e5%8c%b9%e9%85%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第6章 枚举与模式匹配
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 接着，我们会讨论一个特别有用的枚举：Option，它常常被用来描述某些可能不存在的值。随后，我们将学会如何在match表达式中使用模式匹配，并根据不同的枚举值来执行不同的代码。最后，我们还会介绍另外一种常用的结构if let，它可以在某些场景下简化我们处理枚举的代
+⏱ 2024-07-21 06:31:13 ^32435929-38-670-802&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;定义枚举&#34;&gt;&lt;a href=&#34;#%e5%ae%9a%e4%b9%89%e6%9e%9a%e4%b8%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;定义枚举
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在编写代码的过程中，不必再去考虑一个值是否为空可以极大地增强我们对自己代码的信心。为了持有一个可能为空的值，我们总是需要将它显式地放入对应类型的Option&lt;T&gt;值中。当我们随后使用这个值的时候，也必须显式地处理它可能为空的情况。无论在什么地方，只要一个值的类型不是Option&lt;T&gt;的，我们就可以安全地假设这个值不是非空的。这是Rust为了限制空值泛滥以增加Rust代码安全性而做出的一个有意为之的设计决策。
+⏱ 2024-07-21 06:43:26 ^32435929-39-8406-8623&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;控制流运算符match&#34;&gt;&lt;a href=&#34;#%e6%8e%a7%e5%88%b6%e6%b5%81%e8%bf%90%e7%ae%97%e7%ac%a6match&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;控制流运算符match
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 将match与枚举相结合在许多情形下都是非常有用的。你会在Rust代码中看到许多类似的套路：使用match来匹配枚举值，并将其中的值绑定到某个变量上，接着根据这个值执行相应的代码。这初看起来可能会有些复杂，不过一旦你习惯了它的用法，就会希望在所有的语言中都有这个特性。这一特性一直以来都是社区用户的最爱。
+⏱ 2024-07-21 06:56:42 ^32435929-40-5081-5233&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;简单控制流if-let&#34;&gt;&lt;a href=&#34;#%e7%ae%80%e5%8d%95%e6%8e%a7%e5%88%b6%e6%b5%81if-let&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;简单控制流if let
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 使用if let意味着你可以编写更少的代码，使用更少的缩进，使用更少的模板代码。但是，你也放弃了match所附带的穷尽性检查。究竟应该使用match还是if let取决于你当时所处的环境，这是一个在代码简捷性与穷尽性检查之间取舍的过程。
+⏱ 2024-07-21 06:58:41 ^32435929-41-1160-1278&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;总结-5&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第7章-使用包单元包及模块来管理日渐复杂的项目&#34;&gt;&lt;a href=&#34;#%e7%ac%ac7%e7%ab%a0-%e4%bd%bf%e7%94%a8%e5%8c%85%e5%8d%95%e5%85%83%e5%8c%85%e5%8f%8a%e6%a8%a1%e5%9d%97%e6%9d%a5%e7%ae%a1%e7%90%86%e6%97%a5%e6%b8%90%e5%a4%8d%e6%9d%82%e7%9a%84%e9%a1%b9%e7%9b%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第7章 使用包、单元包及模块来管理日渐复杂的项目
+&lt;/h2&gt;&lt;h3 id=&#34;包与单元包&#34;&gt;&lt;a href=&#34;#%e5%8c%85%e4%b8%8e%e5%8d%95%e5%85%83%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;包与单元包
+&lt;/h3&gt;&lt;h3 id=&#34;通过定义模块来控制作用域及私有性&#34;&gt;&lt;a href=&#34;#%e9%80%9a%e8%bf%87%e5%ae%9a%e4%b9%89%e6%a8%a1%e5%9d%97%e6%9d%a5%e6%8e%a7%e5%88%b6%e4%bd%9c%e7%94%a8%e5%9f%9f%e5%8f%8a%e7%a7%81%e6%9c%89%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;通过定义模块来控制作用域及私有性
+&lt;/h3&gt;&lt;h3 id=&#34;用于在模块树中指明条目的路径&#34;&gt;&lt;a href=&#34;#%e7%94%a8%e4%ba%8e%e5%9c%a8%e6%a8%a1%e5%9d%97%e6%a0%91%e4%b8%ad%e6%8c%87%e6%98%8e%e6%9d%a1%e7%9b%ae%e7%9a%84%e8%b7%af%e5%be%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;用于在模块树中指明条目的路径
+&lt;/h3&gt;&lt;h3 id=&#34;用use关键字将路径导入作用域&#34;&gt;&lt;a href=&#34;#%e7%94%a8use%e5%85%b3%e9%94%ae%e5%ad%97%e5%b0%86%e8%b7%af%e5%be%84%e5%af%bc%e5%85%a5%e4%bd%9c%e7%94%a8%e5%9f%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;用use关键字将路径导入作用域
+&lt;/h3&gt;&lt;h3 id=&#34;将模块拆分为不同的文件&#34;&gt;&lt;a href=&#34;#%e5%b0%86%e6%a8%a1%e5%9d%97%e6%8b%86%e5%88%86%e4%b8%ba%e4%b8%8d%e5%90%8c%e7%9a%84%e6%96%87%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;将模块拆分为不同的文件
+&lt;/h3&gt;&lt;h3 id=&#34;总结-6&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第8章-通用集合类型&#34;&gt;&lt;a href=&#34;#%e7%ac%ac8%e7%ab%a0-%e9%80%9a%e7%94%a8%e9%9b%86%e5%90%88%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第8章 通用集合类型
+&lt;/h2&gt;&lt;h3 id=&#34;使用动态数组存储多个值&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e5%8a%a8%e6%80%81%e6%95%b0%e7%bb%84%e5%ad%98%e5%82%a8%e5%a4%9a%e4%b8%aa%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用动态数组存储多个值
+&lt;/h3&gt;&lt;h3 id=&#34;使用字符串存储utf-8编码的文本&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%ad%98%e5%82%a8utf-8%e7%bc%96%e7%a0%81%e7%9a%84%e6%96%87%e6%9c%ac&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用字符串存储UTF-8编码的文本
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 String类型被定义在了Rust标准库中而没有被内置在语言的核心部分。当Rust开发者们提到“字符串”时，他们通常指的是String与字符串切片&amp;amp;str这两种类型，而不仅仅只是其中的一种。虽然本节会着重介绍String，但是这两种类型都广泛地被应用于Rust标准库中，并且都采用了UTF-8编码。
+⏱ 2024-07-21 07:27:43 ^32435929-52-1091-1244&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在有这么多+及&amp;quot;字符的情况下，你很难去分析其中的具体实现。对于这种复杂一些的字符串合并，我们可以使用format! 宏：
+⏱ 2024-07-21 07:32:03 ^32435929-52-6375-6435&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;在哈希映射中存储键值对&#34;&gt;&lt;a href=&#34;#%e5%9c%a8%e5%93%88%e5%b8%8c%e6%98%a0%e5%b0%84%e4%b8%ad%e5%ad%98%e5%82%a8%e9%94%ae%e5%80%bc%e5%af%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;在哈希映射中存储键值对
+&lt;/h3&gt;&lt;h3 id=&#34;总结-7&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第9章-错误处理&#34;&gt;&lt;a href=&#34;#%e7%ac%ac9%e7%ab%a0-%e9%94%99%e8%af%af%e5%a4%84%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第9章 错误处理
+&lt;/h2&gt;&lt;h3 id=&#34;不可恢复错误与panic&#34;&gt;&lt;a href=&#34;#%e4%b8%8d%e5%8f%af%e6%81%a2%e5%a4%8d%e9%94%99%e8%af%af%e4%b8%8epanic&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;不可恢复错误与panic!
+&lt;/h3&gt;&lt;h3 id=&#34;可恢复错误与result&#34;&gt;&lt;a href=&#34;#%e5%8f%af%e6%81%a2%e5%a4%8d%e9%94%99%e8%af%af%e4%b8%8eresult&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;可恢复错误与Result
+&lt;/h3&gt;&lt;h3 id=&#34;要不要使用panic&#34;&gt;&lt;a href=&#34;#%e8%a6%81%e4%b8%8d%e8%a6%81%e4%bd%bf%e7%94%a8panic&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;要不要使用panic!
+&lt;/h3&gt;&lt;h3 id=&#34;总结-8&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第10章-泛型trait与生命周期&#34;&gt;&lt;a href=&#34;#%e7%ac%ac10%e7%ab%a0-%e6%b3%9b%e5%9e%8btrait%e4%b8%8e%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第10章 泛型、trait与生命周期
+&lt;/h2&gt;&lt;h3 id=&#34;通过将代码提取为函数来减少重复工作&#34;&gt;&lt;a href=&#34;#%e9%80%9a%e8%bf%87%e5%b0%86%e4%bb%a3%e7%a0%81%e6%8f%90%e5%8f%96%e4%b8%ba%e5%87%bd%e6%95%b0%e6%9d%a5%e5%87%8f%e5%b0%91%e9%87%8d%e5%a4%8d%e5%b7%a5%e4%bd%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;通过将代码提取为函数来减少重复工作
+&lt;/h3&gt;&lt;h3 id=&#34;泛型数据类型&#34;&gt;&lt;a href=&#34;#%e6%b3%9b%e5%9e%8b%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;泛型数据类型
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在Rust中，我们倾向于使用简短的泛型参数名称，通常仅仅是一个字母。另外，Rust采用了驼峰命名法（CamelCase）作为类型的命名规范。T作为“type”的缩写，往往是大部分Rust程序员在命名类型参数时的默认选择。
+⏱ 2024-07-24 09:03:53 ^32435929-62-1909-2019&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 注意，我们必须紧跟着impl关键字声明T，以便能够在实现方法时指定类型Point&lt;T&gt;
+⏱ 2024-07-24 09:11:24 ^32435929-62-7701-7747&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这个例子说明，在某些情况下可能会有一部分泛型参数声明于impl关键字后，而另一部分则声明于方法定义中
+⏱ 2024-07-24 09:13:28 ^32435929-62-9483-9533&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;trait定义共享行为&#34;&gt;&lt;a href=&#34;#trait%e5%ae%9a%e4%b9%89%e5%85%b1%e4%ba%ab%e8%a1%8c%e4%b8%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;trait：定义共享行为
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 注意，我们是无法在重载方法实现的过程中调用该方法的默认实现的。
+⏱ 2024-07-24 09:51:34 ^32435929-63-7117-7148&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;使用生命周期保证引用的有效性&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e4%bf%9d%e8%af%81%e5%bc%95%e7%94%a8%e7%9a%84%e6%9c%89%e6%95%88%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用生命周期保证引用的有效性
+&lt;/h3&gt;&lt;h3 id=&#34;同时使用泛型参数trait约束与生命周期&#34;&gt;&lt;a href=&#34;#%e5%90%8c%e6%97%b6%e4%bd%bf%e7%94%a8%e6%b3%9b%e5%9e%8b%e5%8f%82%e6%95%b0trait%e7%ba%a6%e6%9d%9f%e4%b8%8e%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;同时使用泛型参数、trait约束与生命周期
+&lt;/h3&gt;&lt;h3 id=&#34;总结-9&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第11章-编写自动化测试&#34;&gt;&lt;a href=&#34;#%e7%ac%ac11%e7%ab%a0-%e7%bc%96%e5%86%99%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第11章 编写自动化测试
+&lt;/h2&gt;&lt;h3 id=&#34;如何编写测试&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e4%bd%95%e7%bc%96%e5%86%99%e6%b5%8b%e8%af%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如何编写测试
+&lt;/h3&gt;&lt;h3 id=&#34;控制测试的运行方式&#34;&gt;&lt;a href=&#34;#%e6%8e%a7%e5%88%b6%e6%b5%8b%e8%af%95%e7%9a%84%e8%bf%90%e8%a1%8c%e6%96%b9%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;控制测试的运行方式
+&lt;/h3&gt;&lt;h3 id=&#34;测试的组织结构&#34;&gt;&lt;a href=&#34;#%e6%b5%8b%e8%af%95%e7%9a%84%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;测试的组织结构
+&lt;/h3&gt;&lt;h3 id=&#34;总结-10&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-10&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第12章-io项目编写一个命令行程序&#34;&gt;&lt;a href=&#34;#%e7%ac%ac12%e7%ab%a0-io%e9%a1%b9%e7%9b%ae%e7%bc%96%e5%86%99%e4%b8%80%e4%b8%aa%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%a8%8b%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第12章 I/O项目：编写一个命令行程序
+&lt;/h2&gt;&lt;h3 id=&#34;接收命令行参数&#34;&gt;&lt;a href=&#34;#%e6%8e%a5%e6%94%b6%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;接收命令行参数
+&lt;/h3&gt;&lt;h3 id=&#34;读取文件&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e5%8f%96%e6%96%87%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读取文件
+&lt;/h3&gt;&lt;h3 id=&#34;重构代码以增强模块化程度和错误处理能力&#34;&gt;&lt;a href=&#34;#%e9%87%8d%e6%9e%84%e4%bb%a3%e7%a0%81%e4%bb%a5%e5%a2%9e%e5%bc%ba%e6%a8%a1%e5%9d%97%e5%8c%96%e7%a8%8b%e5%ba%a6%e5%92%8c%e9%94%99%e8%af%af%e5%a4%84%e7%90%86%e8%83%bd%e5%8a%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;重构代码以增强模块化程度和错误处理能力
+&lt;/h3&gt;&lt;h3 id=&#34;使用测试驱动开发来编写库功能&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%b5%8b%e8%af%95%e9%a9%b1%e5%8a%a8%e5%bc%80%e5%8f%91%e6%9d%a5%e7%bc%96%e5%86%99%e5%ba%93%e5%8a%9f%e8%83%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用测试驱动开发来编写库功能
+&lt;/h3&gt;&lt;h3 id=&#34;处理环境变量&#34;&gt;&lt;a href=&#34;#%e5%a4%84%e7%90%86%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;处理环境变量
+&lt;/h3&gt;&lt;h3 id=&#34;将错误提示信息打印到标准错误而不是标准输出&#34;&gt;&lt;a href=&#34;#%e5%b0%86%e9%94%99%e8%af%af%e6%8f%90%e7%a4%ba%e4%bf%a1%e6%81%af%e6%89%93%e5%8d%b0%e5%88%b0%e6%a0%87%e5%87%86%e9%94%99%e8%af%af%e8%80%8c%e4%b8%8d%e6%98%af%e6%a0%87%e5%87%86%e8%be%93%e5%87%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;将错误提示信息打印到标准错误而不是标准输出
+&lt;/h3&gt;&lt;h3 id=&#34;总结-11&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-11&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第13章-函数式语言特性迭代器与闭包&#34;&gt;&lt;a href=&#34;#%e7%ac%ac13%e7%ab%a0-%e5%87%bd%e6%95%b0%e5%bc%8f%e8%af%ad%e8%a8%80%e7%89%b9%e6%80%a7%e8%bf%ad%e4%bb%a3%e5%99%a8%e4%b8%8e%e9%97%ad%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第13章 函数式语言特性：迭代器与闭包
+&lt;/h2&gt;&lt;h3 id=&#34;闭包能够捕获环境的匿名函数&#34;&gt;&lt;a href=&#34;#%e9%97%ad%e5%8c%85%e8%83%bd%e5%a4%9f%e6%8d%95%e8%8e%b7%e7%8e%af%e5%a2%83%e7%9a%84%e5%8c%bf%e5%90%8d%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;闭包：能够捕获环境的匿名函数
+&lt;/h3&gt;&lt;h3 id=&#34;使用迭代器处理元素序列&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e8%bf%ad%e4%bb%a3%e5%99%a8%e5%a4%84%e7%90%86%e5%85%83%e7%b4%a0%e5%ba%8f%e5%88%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用迭代器处理元素序列
+&lt;/h3&gt;&lt;h3 id=&#34;改进io项目&#34;&gt;&lt;a href=&#34;#%e6%94%b9%e8%bf%9bio%e9%a1%b9%e7%9b%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;改进I/O项目
+&lt;/h3&gt;&lt;h3 id=&#34;比较循环和迭代器的性能&#34;&gt;&lt;a href=&#34;#%e6%af%94%e8%be%83%e5%be%aa%e7%8e%af%e5%92%8c%e8%bf%ad%e4%bb%a3%e5%99%a8%e7%9a%84%e6%80%a7%e8%83%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;比较循环和迭代器的性能
+&lt;/h3&gt;&lt;h3 id=&#34;总结-12&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-12&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第14章-进一步认识cargo及cratesio&#34;&gt;&lt;a href=&#34;#%e7%ac%ac14%e7%ab%a0-%e8%bf%9b%e4%b8%80%e6%ad%a5%e8%ae%a4%e8%af%86cargo%e5%8f%8acratesio&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第14章 进一步认识Cargo及crates.io
+&lt;/h2&gt;&lt;h3 id=&#34;使用发布配置来定制构建&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e5%8f%91%e5%b8%83%e9%85%8d%e7%bd%ae%e6%9d%a5%e5%ae%9a%e5%88%b6%e6%9e%84%e5%bb%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用发布配置来定制构建
+&lt;/h3&gt;&lt;h3 id=&#34;将包发布到cratesio上&#34;&gt;&lt;a href=&#34;#%e5%b0%86%e5%8c%85%e5%8f%91%e5%b8%83%e5%88%b0cratesio%e4%b8%8a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;将包发布到crates.io上
+&lt;/h3&gt;&lt;h3 id=&#34;cargo工作空间&#34;&gt;&lt;a href=&#34;#cargo%e5%b7%a5%e4%bd%9c%e7%a9%ba%e9%97%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Cargo工作空间
+&lt;/h3&gt;&lt;h3 id=&#34;使用cargo-install从cratesio上安装可执行程序&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8cargo-install%e4%bb%8ecratesio%e4%b8%8a%e5%ae%89%e8%a3%85%e5%8f%af%e6%89%a7%e8%a1%8c%e7%a8%8b%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用cargo install从crates.io上安装可执行程序
+&lt;/h3&gt;&lt;h3 id=&#34;使用自定义命令扩展cargo的功能&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e5%91%bd%e4%bb%a4%e6%89%a9%e5%b1%95cargo%e7%9a%84%e5%8a%9f%e8%83%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用自定义命令扩展Cargo的功能
+&lt;/h3&gt;&lt;h3 id=&#34;总结-13&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-13&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第15章-智能指针&#34;&gt;&lt;a href=&#34;#%e7%ac%ac15%e7%ab%a0-%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第15章 智能指针
+&lt;/h2&gt;&lt;h3 id=&#34;使用boxt在堆上分配数据&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8boxt%e5%9c%a8%e5%a0%86%e4%b8%8a%e5%88%86%e9%85%8d%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用Box&lt;T&gt;在堆上分配数据
+&lt;/h3&gt;&lt;h3 id=&#34;通过deref-trait将智能指针视作常规引用&#34;&gt;&lt;a href=&#34;#%e9%80%9a%e8%bf%87deref-trait%e5%b0%86%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88%e8%a7%86%e4%bd%9c%e5%b8%b8%e8%a7%84%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;通过Deref trait将智能指针视作常规引用
+&lt;/h3&gt;&lt;h3 id=&#34;借助drop-trait在清理时运行代码&#34;&gt;&lt;a href=&#34;#%e5%80%9f%e5%8a%a9drop-trait%e5%9c%a8%e6%b8%85%e7%90%86%e6%97%b6%e8%bf%90%e8%a1%8c%e4%bb%a3%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;借助Drop trait在清理时运行代码
+&lt;/h3&gt;&lt;h3 id=&#34;基于引用计数的智能指针rct&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e4%ba%8e%e5%bc%95%e7%94%a8%e8%ae%a1%e6%95%b0%e7%9a%84%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88rct&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基于引用计数的智能指针Rc&lt;T&gt;
+&lt;/h3&gt;&lt;h3 id=&#34;refcellt和内部可变性模式&#34;&gt;&lt;a href=&#34;#refcellt%e5%92%8c%e5%86%85%e9%83%a8%e5%8f%af%e5%8f%98%e6%80%a7%e6%a8%a1%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;RefCell&lt;T&gt;和内部可变性模式
+&lt;/h3&gt;&lt;h3 id=&#34;循环引用会造成内存泄漏&#34;&gt;&lt;a href=&#34;#%e5%be%aa%e7%8e%af%e5%bc%95%e7%94%a8%e4%bc%9a%e9%80%a0%e6%88%90%e5%86%85%e5%ad%98%e6%b3%84%e6%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;循环引用会造成内存泄漏
+&lt;/h3&gt;&lt;h3 id=&#34;总结-14&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-14&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第16章-无畏并发&#34;&gt;&lt;a href=&#34;#%e7%ac%ac16%e7%ab%a0-%e6%97%a0%e7%95%8f%e5%b9%b6%e5%8f%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第16章 无畏并发
+&lt;/h2&gt;&lt;h3 id=&#34;使用线程同时运行代码&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e7%ba%bf%e7%a8%8b%e5%90%8c%e6%97%b6%e8%bf%90%e8%a1%8c%e4%bb%a3%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用线程同时运行代码
+&lt;/h3&gt;&lt;h3 id=&#34;使用消息传递在线程间转移数据&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%b6%88%e6%81%af%e4%bc%a0%e9%80%92%e5%9c%a8%e7%ba%bf%e7%a8%8b%e9%97%b4%e8%bd%ac%e7%a7%bb%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用消息传递在线程间转移数据
+&lt;/h3&gt;&lt;h3 id=&#34;共享状态的并发&#34;&gt;&lt;a href=&#34;#%e5%85%b1%e4%ba%ab%e7%8a%b6%e6%80%81%e7%9a%84%e5%b9%b6%e5%8f%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;共享状态的并发
+&lt;/h3&gt;&lt;h3 id=&#34;使用sync-trait和send-trait对并发进行扩展&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8sync-trait%e5%92%8csend-trait%e5%af%b9%e5%b9%b6%e5%8f%91%e8%bf%9b%e8%a1%8c%e6%89%a9%e5%b1%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用Sync trait和Send trait对并发进行扩展
+&lt;/h3&gt;&lt;h3 id=&#34;总结-15&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-15&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第17章-rust的面向对象编程特性&#34;&gt;&lt;a href=&#34;#%e7%ac%ac17%e7%ab%a0-rust%e7%9a%84%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%bc%96%e7%a8%8b%e7%89%b9%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第17章 Rust的面向对象编程特性
+&lt;/h2&gt;&lt;h3 id=&#34;面向对象语言的特性&#34;&gt;&lt;a href=&#34;#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e8%af%ad%e8%a8%80%e7%9a%84%e7%89%b9%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;面向对象语言的特性
+&lt;/h3&gt;&lt;h3 id=&#34;使用trait对象来存储不同类型的值&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8trait%e5%af%b9%e8%b1%a1%e6%9d%a5%e5%ad%98%e5%82%a8%e4%b8%8d%e5%90%8c%e7%b1%bb%e5%9e%8b%e7%9a%84%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用trait对象来存储不同类型的值
+&lt;/h3&gt;&lt;h3 id=&#34;实现一种面向对象的设计模式&#34;&gt;&lt;a href=&#34;#%e5%ae%9e%e7%8e%b0%e4%b8%80%e7%a7%8d%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%9a%84%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;实现一种面向对象的设计模式
+&lt;/h3&gt;&lt;h3 id=&#34;总结-16&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-16&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第18章-模式匹配&#34;&gt;&lt;a href=&#34;#%e7%ac%ac18%e7%ab%a0-%e6%a8%a1%e5%bc%8f%e5%8c%b9%e9%85%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第18章 模式匹配
+&lt;/h2&gt;&lt;h3 id=&#34;所有可以使用模式的场合&#34;&gt;&lt;a href=&#34;#%e6%89%80%e6%9c%89%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8%e6%a8%a1%e5%bc%8f%e7%9a%84%e5%9c%ba%e5%90%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;所有可以使用模式的场合
+&lt;/h3&gt;&lt;h3 id=&#34;可失败性模式是否会匹配失败&#34;&gt;&lt;a href=&#34;#%e5%8f%af%e5%a4%b1%e8%b4%a5%e6%80%a7%e6%a8%a1%e5%bc%8f%e6%98%af%e5%90%a6%e4%bc%9a%e5%8c%b9%e9%85%8d%e5%a4%b1%e8%b4%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;可失败性：模式是否会匹配失败
+&lt;/h3&gt;&lt;h3 id=&#34;模式语法&#34;&gt;&lt;a href=&#34;#%e6%a8%a1%e5%bc%8f%e8%af%ad%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;模式语法
+&lt;/h3&gt;&lt;h3 id=&#34;总结-17&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-17&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第19章-高级特性&#34;&gt;&lt;a href=&#34;#%e7%ac%ac19%e7%ab%a0-%e9%ab%98%e7%ba%a7%e7%89%b9%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第19章 高级特性
+&lt;/h2&gt;&lt;h3 id=&#34;不安全rust&#34;&gt;&lt;a href=&#34;#%e4%b8%8d%e5%ae%89%e5%85%a8rust&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;不安全Rust
+&lt;/h3&gt;&lt;h3 id=&#34;高级trait&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e7%ba%a7trait&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高级trait
+&lt;/h3&gt;&lt;h3 id=&#34;高级类型&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e7%ba%a7%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高级类型
+&lt;/h3&gt;&lt;h3 id=&#34;高级函数与闭包&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e7%ba%a7%e5%87%bd%e6%95%b0%e4%b8%8e%e9%97%ad%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高级函数与闭包
+&lt;/h3&gt;&lt;h3 id=&#34;宏&#34;&gt;&lt;a href=&#34;#%e5%ae%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;宏
+&lt;/h3&gt;&lt;h3 id=&#34;总结-18&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-18&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;第20章-最后的项目构建多线程web服务器&#34;&gt;&lt;a href=&#34;#%e7%ac%ac20%e7%ab%a0-%e6%9c%80%e5%90%8e%e7%9a%84%e9%a1%b9%e7%9b%ae%e6%9e%84%e5%bb%ba%e5%a4%9a%e7%ba%bf%e7%a8%8bweb%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第20章 最后的项目：构建多线程Web服务器
+&lt;/h2&gt;&lt;h3 id=&#34;构建单线程web服务器&#34;&gt;&lt;a href=&#34;#%e6%9e%84%e5%bb%ba%e5%8d%95%e7%ba%bf%e7%a8%8bweb%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;构建单线程Web服务器
+&lt;/h3&gt;&lt;h3 id=&#34;把单线程服务器修改为多线程服务器&#34;&gt;&lt;a href=&#34;#%e6%8a%8a%e5%8d%95%e7%ba%bf%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8%e4%bf%ae%e6%94%b9%e4%b8%ba%e5%a4%9a%e7%ba%bf%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;把单线程服务器修改为多线程服务器
+&lt;/h3&gt;&lt;h3 id=&#34;优雅地停机与清理&#34;&gt;&lt;a href=&#34;#%e4%bc%98%e9%9b%85%e5%9c%b0%e5%81%9c%e6%9c%ba%e4%b8%8e%e6%b8%85%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;优雅地停机与清理
+&lt;/h3&gt;&lt;h3 id=&#34;总结-19&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93-19&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结
+&lt;/h3&gt;&lt;h2 id=&#34;附录a-关键字&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95a-%e5%85%b3%e9%94%ae%e5%ad%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录A 关键字
+&lt;/h2&gt;&lt;h3 id=&#34;当前正在使用的关键字&#34;&gt;&lt;a href=&#34;#%e5%bd%93%e5%89%8d%e6%ad%a3%e5%9c%a8%e4%bd%bf%e7%94%a8%e7%9a%84%e5%85%b3%e9%94%ae%e5%ad%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;当前正在使用的关键字
+&lt;/h3&gt;&lt;h3 id=&#34;将来可能会使用的保留关键字&#34;&gt;&lt;a href=&#34;#%e5%b0%86%e6%9d%a5%e5%8f%af%e8%83%bd%e4%bc%9a%e4%bd%bf%e7%94%a8%e7%9a%84%e4%bf%9d%e7%95%99%e5%85%b3%e9%94%ae%e5%ad%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;将来可能会使用的保留关键字
+&lt;/h3&gt;&lt;h3 id=&#34;原始标识符&#34;&gt;&lt;a href=&#34;#%e5%8e%9f%e5%a7%8b%e6%a0%87%e8%af%86%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;原始标识符
+&lt;/h3&gt;&lt;h2 id=&#34;附录b-运算符和符号&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95b-%e8%bf%90%e7%ae%97%e7%ac%a6%e5%92%8c%e7%ac%a6%e5%8f%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录B 运算符和符号
+&lt;/h2&gt;&lt;h3 id=&#34;运算符&#34;&gt;&lt;a href=&#34;#%e8%bf%90%e7%ae%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;运算符
+&lt;/h3&gt;&lt;h3 id=&#34;非运算符符号&#34;&gt;&lt;a href=&#34;#%e9%9d%9e%e8%bf%90%e7%ae%97%e7%ac%a6%e7%ac%a6%e5%8f%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;非运算符符号
+&lt;/h3&gt;&lt;h2 id=&#34;附录c-可派生trait&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95c-%e5%8f%af%e6%b4%be%e7%94%9ftrait&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录C 可派生trait
+&lt;/h2&gt;&lt;h3 id=&#34;面向程序员格式化输出的debug&#34;&gt;&lt;a href=&#34;#%e9%9d%a2%e5%90%91%e7%a8%8b%e5%ba%8f%e5%91%98%e6%a0%bc%e5%bc%8f%e5%8c%96%e8%be%93%e5%87%ba%e7%9a%84debug&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;面向程序员格式化输出的Debug
+&lt;/h3&gt;&lt;h3 id=&#34;用于相等性比较的partialeq和eq&#34;&gt;&lt;a href=&#34;#%e7%94%a8%e4%ba%8e%e7%9b%b8%e7%ad%89%e6%80%a7%e6%af%94%e8%be%83%e7%9a%84partialeq%e5%92%8ceq&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;用于相等性比较的PartialEq和Eq
+&lt;/h3&gt;&lt;h3 id=&#34;使用partialord和ord进行次序比较&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8partialord%e5%92%8cord%e8%bf%9b%e8%a1%8c%e6%ac%a1%e5%ba%8f%e6%af%94%e8%be%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用PartialOrd和Ord进行次序比较
+&lt;/h3&gt;&lt;h3 id=&#34;使用clone和copy复制值&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8clone%e5%92%8ccopy%e5%a4%8d%e5%88%b6%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用Clone和Copy复制值
+&lt;/h3&gt;&lt;h3 id=&#34;用于将值映射到另外一个长度固定的值的hash&#34;&gt;&lt;a href=&#34;#%e7%94%a8%e4%ba%8e%e5%b0%86%e5%80%bc%e6%98%a0%e5%b0%84%e5%88%b0%e5%8f%a6%e5%a4%96%e4%b8%80%e4%b8%aa%e9%95%bf%e5%ba%a6%e5%9b%ba%e5%ae%9a%e7%9a%84%e5%80%bc%e7%9a%84hash&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;用于将值映射到另外一个长度固定的值的Hash
+&lt;/h3&gt;&lt;h3 id=&#34;用于提供默认值的default&#34;&gt;&lt;a href=&#34;#%e7%94%a8%e4%ba%8e%e6%8f%90%e4%be%9b%e9%bb%98%e8%ae%a4%e5%80%bc%e7%9a%84default&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;用于提供默认值的Default
+&lt;/h3&gt;&lt;h2 id=&#34;附录d-有用的开发工具&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95d-%e6%9c%89%e7%94%a8%e7%9a%84%e5%bc%80%e5%8f%91%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录D 有用的开发工具
+&lt;/h2&gt;&lt;h3 id=&#34;使用rustfmt自动格式化代码&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8rustfmt%e8%87%aa%e5%8a%a8%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%bb%a3%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用rustfmt自动格式化代码
+&lt;/h3&gt;&lt;h3 id=&#34;使用rustfix修复代码&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8rustfix%e4%bf%ae%e5%a4%8d%e4%bb%a3%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用rustfix修复代码
+&lt;/h3&gt;&lt;h3 id=&#34;使用clippy完成更多的代码分析&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8clippy%e5%ae%8c%e6%88%90%e6%9b%b4%e5%a4%9a%e7%9a%84%e4%bb%a3%e7%a0%81%e5%88%86%e6%9e%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用Clippy完成更多的代码分析
+&lt;/h3&gt;&lt;h3 id=&#34;使用rust语言服务器来集成ide&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8rust%e8%af%ad%e8%a8%80%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%9d%a5%e9%9b%86%e6%88%90ide&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用Rust语言服务器来集成IDE
+&lt;/h3&gt;&lt;h2 id=&#34;附录e-版本&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95e-%e7%89%88%e6%9c%ac&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录E 版本
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h2 id=&#34;什么是所有权-1&#34;&gt;&lt;a href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e6%89%80%e6%9c%89%e6%9d%83-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;什么是所有权
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 假如你在其他语言中接触过浅度拷贝（shallow copy）和深度拷贝（deep copy）这两个术语，那么你也许会将这里复制指针、长度及容量字段的行为视作浅度拷贝。但由于Rust同时使第一个变量无效了，所以我们使用了新的术语移动（move）来描述这一行为，而不再使用浅度拷贝  ^6733360-7SPpqxN4A
+- 💭 浅拷贝与移动的区别
+- ⏱ 2024-07-20 17:33:55&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;引用与借用-1&#34;&gt;&lt;a href=&#34;#%e5%bc%95%e7%94%a8%e4%b8%8e%e5%80%9f%e7%94%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;引用与借用
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-1&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 此处，变量s的有效作用域与其他任何函数参数一样，唯一不同的是，它不会在离开自己的作用域时销毁其指向的数据，因为它并不拥有该数据的所有权  ^6733360-7SPqsHJMT
+- 💭 这个非常重要
+- ⏱ 2024-07-20 17:49:43&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;切片-1&#34;&gt;&lt;a href=&#34;#%e5%88%87%e7%89%87-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;切片
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-2&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 当你持有字符串切片时，你可以直接调用这个函数。而当你持有String时，你可以创建一个完整String的切片来作为参数  ^6733360-7SPsUqcKO
+- 💭 类似于cpp中的const&amp;amp;入参
+- ⏱ 2024-07-20 18:27:05&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;方法-1&#34;&gt;&lt;a href=&#34;#%e6%96%b9%e6%b3%95-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;方法
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-3&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 关联函数常常被用作构造器来返回一个结构体的新实例  ^6733360-7SQe5zEy0
+- 💭 类似于Cpp的构造函数
+- ⏱ 2024-07-21 06:27:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;定义枚举-1&#34;&gt;&lt;a href=&#34;#%e5%ae%9a%e4%b9%89%e6%9e%9a%e4%b8%be-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;定义枚举
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-4&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 另外一个使用枚举代替结构体的优势在于：每个变体可以拥有不同类型和数量的关联数据。还是以IP地址为例，IPv4地址总是由4个0～255之间的整数部分组成。假如我们希望使用4个u8值来代表V4地址，并依然使用String值来代表V6地址，那么结构体就无法轻易实现这一目的了，而枚举则可以轻松地处理此类情形  ^6733360-7SQeurwxn
+- 💭 非常漂亮
+- ⏱ 2024-07-21 06:33:35&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-5&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 两种实现方式之间的差别在于，假如我们使用了不同的结构体，那么每个结构体都会拥有自己的类型，我们无法轻易定义一个能够统一处理这些类型数据的函数，而我们定义在示例6-2中的Message枚举则不同，因为它是单独的一个类型。  ^6733360-7SQeFh4tx
+- 💭 这里的枚举类型比cpp里面的更强大，非常便于同一管理和处理
+- ⏱ 2024-07-21 06:36:16&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;在哈希映射中存储键值对-1&#34;&gt;&lt;a href=&#34;#%e5%9c%a8%e5%93%88%e5%b8%8c%e6%98%a0%e5%b0%84%e4%b8%ad%e5%ad%98%e5%82%a8%e9%94%ae%e5%80%bc%e5%af%b9-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;在哈希映射中存储键值对
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-6&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 运行这段代码会输出{&amp;ldquo;world&amp;rdquo;: 2, &amp;ldquo;hello&amp;rdquo;: 1, &amp;ldquo;wonderful&amp;rdquo;: 1}。代码中的方法or_insert实际上为我们传入的键返回了一个指向关联值的可变引用（&amp;amp;mut V）。这个可变引用进而被存储到变量count上，为了对这个值进行赋值操作，我们必须首先使用星号（*）来对count进行解引用。由于这个可变引用会在for循环的结尾处离开作用域，所以我们在代码中的所有修改都是安全且满足借用规则的。  ^6733360-7SQpYtsVI
+- 💭 这段代码有点奇怪
+- ⏱ 2024-07-21 09:28:57&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;trait定义共享行为-1&#34;&gt;&lt;a href=&#34;#trait%e5%ae%9a%e4%b9%89%e5%85%b1%e4%ba%ab%e8%a1%8c%e4%b8%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;trait：定义共享行为
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-7&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 trait提供了一种将特定方法签名组合起来的途径，它定义了为达成某种目的所必需的行为集合。  ^6733360-7SUZqOTdg
+- 💭 难懂
+- ⏱ 2024-07-24 09:37:01&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-8&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在方法签名后，我们省略了花括号及具体的实现，直接使用分号终结了当前的语句。任何想要实现这个trait的类型都需要为上述方法提供自定义行为。编译器会确保每一个实现了Summary trait的类型都定义了与这个签名完全一致的summarize方法。  ^6733360-7SUZBZdOR
+- 💭 像C++中虚函数
+- ⏱ 2024-07-24 09:39:46&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/weread/understanding-photography/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -7104,6 +7789,203 @@
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/weread/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95rust%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95rust%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 数据结构与算法（Rust语言描述）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/86/cpplatform_qpf4kjco5ycpaxigqz37nz/t7_cpplatform_qpf4kjco5ycpaxigqz37nz1690877243.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 数据结构与算法（Rust语言描述）|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 数据结构与算法（Rust语言描述）&lt;/li&gt;
+&lt;li&gt;作者： 谢波&lt;/li&gt;
+&lt;li&gt;简介： 这是一本基于 Rust 语言讲解数据结构及其实现方法的书。全书先介绍 Rust 语言的基础知识以及计算机科学和算法分析的概念，然后介绍简单数据结构和算法的设计与实现，接着介绍较复杂的树和图数据结构，最后将这些知识应用于实战项目以解决实际问题。 本书适合程序设计爱好者、专业程序员以及对 Rust 语言感兴趣的读者阅读。&lt;/li&gt;
+&lt;li&gt;出版时间 2023-07-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787115611680&lt;/li&gt;
+&lt;li&gt;分类： 计算机-计算机综合&lt;/li&gt;
+&lt;li&gt;出版社： 人民邮电出版社有限公司&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/5e132600813ab8038g019626&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;内容提要&#34;&gt;&lt;a href=&#34;#%e5%86%85%e5%ae%b9%e6%8f%90%e8%a6%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;内容提要
+&lt;/h2&gt;&lt;h2 id=&#34;文前&#34;&gt;&lt;a href=&#34;#%e6%96%87%e5%89%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;文前
+&lt;/h2&gt;&lt;h2 id=&#34;序&#34;&gt;&lt;a href=&#34;#%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;序
+&lt;/h2&gt;&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言
+&lt;/h2&gt;&lt;h2 id=&#34;第1章-rust基础&#34;&gt;&lt;a href=&#34;#%e7%ac%ac1%e7%ab%a0-rust%e5%9f%ba%e7%a1%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第1章 Rust基础
+&lt;/h2&gt;&lt;h3 id=&#34;11-安装rust及其工具链&#34;&gt;&lt;a href=&#34;#11-%e5%ae%89%e8%a3%85rust%e5%8f%8a%e5%85%b6%e5%b7%a5%e5%85%b7%e9%93%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.1 安装Rust及其工具链
+&lt;/h3&gt;&lt;h3 id=&#34;12-rust基础知识&#34;&gt;&lt;a href=&#34;#12-rust%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.2 Rust基础知识
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Rust中存在常量、变量、静态变量三种类型的量。常量不能改变，不能被覆盖（重定义）；变量可变可不变，还可被覆盖；静态变量可变可不变，不能被覆盖。
+⏱ 2024-07-22 21:55:22 ^3300065849-9-5861-5933&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 泛型是具体类型或属性的抽象替代，实际使用时只需要表达泛型的属性，比如其行为或如何与其他泛型相关联，而不需要在编写代码时知道实际上是什么类型。
+⏱ 2024-07-23 07:42:14 ^3300065849-9-25160-25230&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 一个trait只能由方法、类型、常量三部分组成，它描述了一种抽象接口，这种抽象接口既可以被类型实现，也可以直接继承其默认实现。比如，定义老师和学生两种类型，它们都有打招
+⏱ 2024-07-23 07:44:31 ^3300065849-9-26173-26257&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 使用match匹配时必须穷尽所有可能，当然用_占位是能够穷尽的，但有时候我们只关心某个匹配模式，这时用match就会很麻烦。好在Rust对match的这种匹配模式做了推广，引入了if let匹配模式。下面的if let匹配统计了所有面额大于1元的纸币的数量。
+⏱ 2024-07-23 08:26:33 ^3300065849-9-29655-29784&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 Rust不像面向对象编程语言那样喜欢通过类来解决问题，而是推崇函数式编程。函数式编程是指将函数作为参数值或其他函数的返回值，在将函数赋值给变量之后执行。函数式编程有两个极为重要的构件，分别是闭包和迭代器。
+⏱ 2024-07-23 08:27:11 ^3300065849-9-30036-30138&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 迭代器会把集合中的所有元素按照顺序一个一个传递给处理逻辑。迭代器允许对一个序列进行某些处理，并且会遍历这个序列中的每一项以决定何时结束。迭代器默认都要实现Iterator trait。Iterator trait有两个方法——iter()和next()，它们是迭代器的核心功能。
+⏱ 2024-07-23 08:31:18 ^3300065849-9-31630-31769&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 可重入是指迭代后，原始数据还能使用，不可重入则表明迭代器消费了原始数据。如果只读取值，那就实现iter()；如果还需要改变原始数据，那就实现iter_mut()；如果要将原始数据直接转换为迭代器，那就实现into_iter()，以获取原始数据所有权并返回一个迭代器。
+⏱ 2024-07-23 08:31:51 ^3300065849-9-32072-32205&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 命令式编程是面向计算机硬件的抽象，有变量、赋值语句、表达式、控制语句等，命令式编程可以理解为冯·诺依曼的指令序列。我们平时用的结构化编程和面向对象编程都是命令式编程，其主要思想是关注计算机执行的步骤，即一步一步告诉计算机先做什么，再做什么。声明式编程则以数据结构的形式表达程序执行的逻辑，其主要思想是告诉计算机应该做什么，但不指定具体要怎么做。SQL编程就是一种声明式编程。函数式编程和声明式编程是有关联的，因为它们的思想是一致的：只关注做什么而不关注具体怎么做。但函数式编程并不局限于声明式编程，函数式编程是面向数学的抽象，旨在将计算描述为一种表达式求值。说白了，函数式程序就是数学表达式。函数式编程中的函数并非计算机中的函数，而是数学中的函数，就像y = f (x)这样的自变量映射关系。函数的输出值取决于函数的输入参数值，而不依赖于其他状态。比如，x.sin()函数用于计算x的正弦值，只要x不变，无论何时调用，调用多少次，最终的结果都是一样的。
+⏱ 2024-07-23 08:48:40 ^3300065849-9-34011-34550&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 智能指针中的Deref和Drop是最为重要的两个trait。下面我们通过为自定义的数据类型（类似于Box&lt;T&gt;）实现Deref和Drop来体会引用和智能指针的区别。
+⏱ 2024-07-23 09:09:16 ^3300065849-9-36066-36154&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 如果应该使用String却输入&amp;amp;str，则必须先克隆才能调用；如果输入String，则不需要克隆就可以调用，但调用后，字符串会被移动到函数内部，外部将无法使用。不管采用哪种方法，函数内部都做了一次字符串生成和拷贝。如果字符串中没有空白字符，则最好直接原样返回，不需要拷贝。这时Cow就可以派上用场了，Cow的存在就是为了减少复制，提高效率。
+⏱ 2024-07-23 09:12:06 ^3300065849-9-42669-42843&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;13-项目rust密码生成器&#34;&gt;&lt;a href=&#34;#13-%e9%a1%b9%e7%9b%aerust%e5%af%86%e7%a0%81%e7%94%9f%e6%88%90%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.3 项目：Rust密码生成器
+&lt;/h3&gt;&lt;h3 id=&#34;14-小结&#34;&gt;&lt;a href=&#34;#14-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.4 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第2章-计算机科学&#34;&gt;&lt;a href=&#34;#%e7%ac%ac2%e7%ab%a0-%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%a7%91%e5%ad%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第2章 计算机科学
+&lt;/h2&gt;&lt;h3 id=&#34;21-什么是计算机科学&#34;&gt;&lt;a href=&#34;#21-%e4%bb%80%e4%b9%88%e6%98%af%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%a7%91%e5%ad%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.1 什么是计算机科学
+&lt;/h3&gt;&lt;h3 id=&#34;22-什么是编程&#34;&gt;&lt;a href=&#34;#22-%e4%bb%80%e4%b9%88%e6%98%af%e7%bc%96%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.2 什么是编程
+&lt;/h3&gt;&lt;h3 id=&#34;23-为什么要学习数据结构&#34;&gt;&lt;a href=&#34;#23-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%ad%a6%e4%b9%a0%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.3 为什么要学习数据结构
+&lt;/h3&gt;&lt;h3 id=&#34;24-为什么要学习算法&#34;&gt;&lt;a href=&#34;#24-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%ad%a6%e4%b9%a0%e7%ae%97%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.4 为什么要学习算法
+&lt;/h3&gt;&lt;h3 id=&#34;25-小结&#34;&gt;&lt;a href=&#34;#25-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.5 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第3章-算法分析&#34;&gt;&lt;a href=&#34;#%e7%ac%ac3%e7%ab%a0-%e7%ae%97%e6%b3%95%e5%88%86%e6%9e%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第3章 算法分析
+&lt;/h2&gt;&lt;h3 id=&#34;31-什么是算法分析&#34;&gt;&lt;a href=&#34;#31-%e4%bb%80%e4%b9%88%e6%98%af%e7%ae%97%e6%b3%95%e5%88%86%e6%9e%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.1 什么是算法分析
+&lt;/h3&gt;&lt;h3 id=&#34;32-大o分析法&#34;&gt;&lt;a href=&#34;#32-%e5%a4%a7o%e5%88%86%e6%9e%90%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.2 大O分析法
+&lt;/h3&gt;&lt;h3 id=&#34;33-乱序字符串检查&#34;&gt;&lt;a href=&#34;#33-%e4%b9%b1%e5%ba%8f%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%a3%80%e6%9f%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.3 乱序字符串检查
+&lt;/h3&gt;&lt;h3 id=&#34;34-rust数据结构的性能&#34;&gt;&lt;a href=&#34;#34-rust%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e7%9a%84%e6%80%a7%e8%83%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.4 Rust数据结构的性能
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 记住一点，在Rust中，可变字符串用String，不可变字符串用&amp;amp;str
+⏱ 2024-07-23 18:52:30 ^3300065849-22-2304-2344&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;35-小结&#34;&gt;&lt;a href=&#34;#35-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.5 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第4章-基础数据结构&#34;&gt;&lt;a href=&#34;#%e7%ac%ac4%e7%ab%a0-%e5%9f%ba%e7%a1%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第4章 基础数据结构
+&lt;/h2&gt;&lt;h3 id=&#34;41-线性数据结构&#34;&gt;&lt;a href=&#34;#41-%e7%ba%bf%e6%80%a7%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.1 线性数据结构
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 线性数据结构说的并非数据的保存方式，而是数据的访问方式。线性数据结构不一定代表数据项在内存中相邻。以链表为例，虽然其中的数据项可能在内存的各个位置，但访问是线性的。
+⏱ 2024-07-23 18:54:33 ^3300065849-25-649-731&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;42-栈&#34;&gt;&lt;a href=&#34;#42-%e6%a0%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.2 栈
+&lt;/h3&gt;&lt;h3 id=&#34;43-队列&#34;&gt;&lt;a href=&#34;#43-%e9%98%9f%e5%88%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.3 队列
+&lt;/h3&gt;&lt;h3 id=&#34;44-双端队列&#34;&gt;&lt;a href=&#34;#44-%e5%8f%8c%e7%ab%af%e9%98%9f%e5%88%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.4 双端队列
+&lt;/h3&gt;&lt;h3 id=&#34;45-链表&#34;&gt;&lt;a href=&#34;#45-%e9%93%be%e8%a1%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.5 链表
+&lt;/h3&gt;&lt;h3 id=&#34;46-vec&#34;&gt;&lt;a href=&#34;#46-vec&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.6 Vec
+&lt;/h3&gt;&lt;h3 id=&#34;47-小结&#34;&gt;&lt;a href=&#34;#47-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.7 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第5章-递归&#34;&gt;&lt;a href=&#34;#%e7%ac%ac5%e7%ab%a0-%e9%80%92%e5%bd%92&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第5章 递归
+&lt;/h2&gt;&lt;h3 id=&#34;51-什么是递归&#34;&gt;&lt;a href=&#34;#51-%e4%bb%80%e4%b9%88%e6%98%af%e9%80%92%e5%bd%92&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.1 什么是递归
+&lt;/h3&gt;&lt;h3 id=&#34;52-尾递归&#34;&gt;&lt;a href=&#34;#52-%e5%b0%be%e9%80%92%e5%bd%92&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.2 尾递归
+&lt;/h3&gt;&lt;h3 id=&#34;53-动态规划&#34;&gt;&lt;a href=&#34;#53-%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.3 动态规划
+&lt;/h3&gt;&lt;h3 id=&#34;54-小结&#34;&gt;&lt;a href=&#34;#54-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.4 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第6章-查找&#34;&gt;&lt;a href=&#34;#%e7%ac%ac6%e7%ab%a0-%e6%9f%a5%e6%89%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第6章 查找
+&lt;/h2&gt;&lt;h3 id=&#34;61-什么是查找&#34;&gt;&lt;a href=&#34;#61-%e4%bb%80%e4%b9%88%e6%98%af%e6%9f%a5%e6%89%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.1 什么是查找
+&lt;/h3&gt;&lt;h3 id=&#34;62-顺序查找&#34;&gt;&lt;a href=&#34;#62-%e9%a1%ba%e5%ba%8f%e6%9f%a5%e6%89%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.2 顺序查找
+&lt;/h3&gt;&lt;h3 id=&#34;63-二分查找&#34;&gt;&lt;a href=&#34;#63-%e4%ba%8c%e5%88%86%e6%9f%a5%e6%89%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.3 二分查找
+&lt;/h3&gt;&lt;h3 id=&#34;64-哈希查找&#34;&gt;&lt;a href=&#34;#64-%e5%93%88%e5%b8%8c%e6%9f%a5%e6%89%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.4 哈希查找
+&lt;/h3&gt;&lt;h3 id=&#34;65-小结&#34;&gt;&lt;a href=&#34;#65-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.5 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第7章-排序&#34;&gt;&lt;a href=&#34;#%e7%ac%ac7%e7%ab%a0-%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第7章 排序
+&lt;/h2&gt;&lt;h3 id=&#34;71-什么是排序&#34;&gt;&lt;a href=&#34;#71-%e4%bb%80%e4%b9%88%e6%98%af%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.1 什么是排序
+&lt;/h3&gt;&lt;h3 id=&#34;72-冒泡排序&#34;&gt;&lt;a href=&#34;#72-%e5%86%92%e6%b3%a1%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.2 冒泡排序
+&lt;/h3&gt;&lt;h3 id=&#34;73-快速排序&#34;&gt;&lt;a href=&#34;#73-%e5%bf%ab%e9%80%9f%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.3 快速排序
+&lt;/h3&gt;&lt;h3 id=&#34;74-插入排序&#34;&gt;&lt;a href=&#34;#74-%e6%8f%92%e5%85%a5%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.4 插入排序
+&lt;/h3&gt;&lt;h3 id=&#34;75-希尔排序&#34;&gt;&lt;a href=&#34;#75-%e5%b8%8c%e5%b0%94%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.5 希尔排序
+&lt;/h3&gt;&lt;h3 id=&#34;76-归并排序&#34;&gt;&lt;a href=&#34;#76-%e5%bd%92%e5%b9%b6%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.6 归并排序
+&lt;/h3&gt;&lt;h3 id=&#34;77-选择排序&#34;&gt;&lt;a href=&#34;#77-%e9%80%89%e6%8b%a9%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.7 选择排序
+&lt;/h3&gt;&lt;h3 id=&#34;78-堆排序&#34;&gt;&lt;a href=&#34;#78-%e5%a0%86%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.8 堆排序
+&lt;/h3&gt;&lt;h3 id=&#34;79-桶排序&#34;&gt;&lt;a href=&#34;#79-%e6%a1%b6%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.9 桶排序
+&lt;/h3&gt;&lt;h3 id=&#34;710-计数排序&#34;&gt;&lt;a href=&#34;#710-%e8%ae%a1%e6%95%b0%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.10 计数排序
+&lt;/h3&gt;&lt;h3 id=&#34;711-基数排序&#34;&gt;&lt;a href=&#34;#711-%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.11 基数排序
+&lt;/h3&gt;&lt;h3 id=&#34;712-蒂姆排序&#34;&gt;&lt;a href=&#34;#712-%e8%92%82%e5%a7%86%e6%8e%92%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.12 蒂姆排序
+&lt;/h3&gt;&lt;h3 id=&#34;713-小结&#34;&gt;&lt;a href=&#34;#713-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.13 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第8章-树&#34;&gt;&lt;a href=&#34;#%e7%ac%ac8%e7%ab%a0-%e6%a0%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第8章 树
+&lt;/h2&gt;&lt;h3 id=&#34;81-什么是树&#34;&gt;&lt;a href=&#34;#81-%e4%bb%80%e4%b9%88%e6%98%af%e6%a0%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.1 什么是树
+&lt;/h3&gt;&lt;h3 id=&#34;82-二叉堆&#34;&gt;&lt;a href=&#34;#82-%e4%ba%8c%e5%8f%89%e5%a0%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.2 二叉堆
+&lt;/h3&gt;&lt;h3 id=&#34;83-二叉查找树&#34;&gt;&lt;a href=&#34;#83-%e4%ba%8c%e5%8f%89%e6%9f%a5%e6%89%be%e6%a0%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.3 二叉查找树
+&lt;/h3&gt;&lt;h3 id=&#34;84-平衡二叉树&#34;&gt;&lt;a href=&#34;#84-%e5%b9%b3%e8%a1%a1%e4%ba%8c%e5%8f%89%e6%a0%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.4 平衡二叉树
+&lt;/h3&gt;&lt;h3 id=&#34;85-小结&#34;&gt;&lt;a href=&#34;#85-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.5 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第9章-图&#34;&gt;&lt;a href=&#34;#%e7%ac%ac9%e7%ab%a0-%e5%9b%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第9章 图
+&lt;/h2&gt;&lt;h3 id=&#34;91-什么是图&#34;&gt;&lt;a href=&#34;#91-%e4%bb%80%e4%b9%88%e6%98%af%e5%9b%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.1 什么是图
+&lt;/h3&gt;&lt;h3 id=&#34;92-图的存储形式&#34;&gt;&lt;a href=&#34;#92-%e5%9b%be%e7%9a%84%e5%ad%98%e5%82%a8%e5%bd%a2%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.2 图的存储形式
+&lt;/h3&gt;&lt;h3 id=&#34;93-图的抽象数据类型&#34;&gt;&lt;a href=&#34;#93-%e5%9b%be%e7%9a%84%e6%8a%bd%e8%b1%a1%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.3 图的抽象数据类型
+&lt;/h3&gt;&lt;h3 id=&#34;94-图的实现&#34;&gt;&lt;a href=&#34;#94-%e5%9b%be%e7%9a%84%e5%ae%9e%e7%8e%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.4 图的实现
+&lt;/h3&gt;&lt;h3 id=&#34;95-广度优先搜索&#34;&gt;&lt;a href=&#34;#95-%e5%b9%bf%e5%ba%a6%e4%bc%98%e5%85%88%e6%90%9c%e7%b4%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.5 广度优先搜索
+&lt;/h3&gt;&lt;h3 id=&#34;96-深度优先搜索&#34;&gt;&lt;a href=&#34;#96-%e6%b7%b1%e5%ba%a6%e4%bc%98%e5%85%88%e6%90%9c%e7%b4%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.6 深度优先搜索
+&lt;/h3&gt;&lt;h3 id=&#34;97-强连通分量&#34;&gt;&lt;a href=&#34;#97-%e5%bc%ba%e8%bf%9e%e9%80%9a%e5%88%86%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.7 强连通分量
+&lt;/h3&gt;&lt;h3 id=&#34;98-最短路径问题&#34;&gt;&lt;a href=&#34;#98-%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%84%e9%97%ae%e9%a2%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.8 最短路径问题
+&lt;/h3&gt;&lt;h3 id=&#34;99-小结&#34;&gt;&lt;a href=&#34;#99-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.9 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第10章-实战&#34;&gt;&lt;a href=&#34;#%e7%ac%ac10%e7%ab%a0-%e5%ae%9e%e6%88%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第10章 实战
+&lt;/h2&gt;&lt;h3 id=&#34;101-编辑距离&#34;&gt;&lt;a href=&#34;#101-%e7%bc%96%e8%be%91%e8%b7%9d%e7%a6%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.1 编辑距离
+&lt;/h3&gt;&lt;h3 id=&#34;102-字典树&#34;&gt;&lt;a href=&#34;#102-%e5%ad%97%e5%85%b8%e6%a0%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.2 字典树
+&lt;/h3&gt;&lt;h3 id=&#34;103-过滤器&#34;&gt;&lt;a href=&#34;#103-%e8%bf%87%e6%bb%a4%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.3 过滤器
+&lt;/h3&gt;&lt;h3 id=&#34;104-lru缓存淘汰算法&#34;&gt;&lt;a href=&#34;#104-lru%e7%bc%93%e5%ad%98%e6%b7%98%e6%b1%b0%e7%ae%97%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.4 LRU缓存淘汰算法
+&lt;/h3&gt;&lt;h3 id=&#34;105-一致性哈希算法&#34;&gt;&lt;a href=&#34;#105-%e4%b8%80%e8%87%b4%e6%80%a7%e5%93%88%e5%b8%8c%e7%ae%97%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.5 一致性哈希算法
+&lt;/h3&gt;&lt;h3 id=&#34;106-base58编码&#34;&gt;&lt;a href=&#34;#106-base58%e7%bc%96%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.6 Base58编码
+&lt;/h3&gt;&lt;h3 id=&#34;107-区块链&#34;&gt;&lt;a href=&#34;#107-%e5%8c%ba%e5%9d%97%e9%93%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.7 区块链
+&lt;/h3&gt;&lt;h3 id=&#34;108-小结&#34;&gt;&lt;a href=&#34;#108-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.8 小结
+&lt;/h3&gt;&lt;h2 id=&#34;参考文献&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考文献
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h2 id=&#34;12-rust基础知识-1&#34;&gt;&lt;a href=&#34;#12-rust%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.2 Rust基础知识
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Rust十分重视文档和测试，并为此专门提供了文档注释。有了文档注释，就可以在注释中写文档和测试代码，通过cargo test可以直接测试代码，通过cargo doc可以直接生成文档。  ^6733360-7SSJ2Vo9b
+- 💭 🐂🍺
+- ⏱ 2024-07-22 21:53:29&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-1&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 闭包也可能没有参数，同时返回值也可写可不写。实际上，Rust会自动推断闭包的参数类型和返回值类型，所以参数和返回值的类型都可以不写。为了使用闭包，你只需要将其赋值给变量，然后像调用函数一样调用它即可。比如定义如下判断奇偶的闭包。  ^6733360-7SToJ5u6C
+- 💭 这种用法很新颖
+- ⏱ 2024-07-23 08:29:54&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-2&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 这个求和任务如果采用命令式编程，则可能需要编写如下代码。  ^6733360-7STpTMIGZ
+- 💭 命令式编程和函数式编程的区别
+- ⏱ 2024-07-23 08:47:48&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;34-rust数据结构的性能-1&#34;&gt;&lt;a href=&#34;#34-rust%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e7%9a%84%e6%80%a7%e8%83%bd-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.4 Rust数据结构的性能
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-3&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 VecDeque扩展了Vec，支持在序列的两端插入数据，是双端队列。LinkedList是链表，当需要未知大小的Vec时可以采用。  ^6733360-7SU3xk264
+- 💭 到目前为止还没有用到
+- ⏱ 2024-07-23 18:53:02&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-4&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 BinaryHeap类似于优先队列，里面存储了一堆元素，可在任何时候提取出最值。  ^6733360-7SU3zQcKp
+- 💭 优先队列在这里哎
+- ⏱ 2024-07-23 18:53:39&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/weread/%E6%95%B0%E7%A0%81%E6%91%84%E5%BD%B1%E6%9E%84%E5%9B%BE%E5%85%89%E5%BD%B1%E8%89%B2%E5%BD%A9%E7%AC%AC2%E7%89%88/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -10458,6 +11340,68 @@
 &lt;/h2&gt;&lt;h2 id=&#34;附录二-被访者基本信息&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95%e4%ba%8c-%e8%a2%ab%e8%ae%bf%e8%80%85%e5%9f%ba%e6%9c%ac%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录二 被访者基本信息
 &lt;/h2&gt;&lt;h2 id=&#34;附录三-访谈提纲&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95%e4%b8%89-%e8%ae%bf%e8%b0%88%e6%8f%90%e7%ba%b2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录三 访谈提纲
 &lt;/h2&gt;&lt;h2 id=&#34;后记&#34;&gt;&lt;a href=&#34;#%e5%90%8e%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;后记
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E9%9F%B3%E4%B9%90%E5%85%A5%E9%97%A8%E4%B8%B0%E5%AD%90%E6%81%BA%E9%9F%B3%E4%B9%90%E4%BA%94%E8%AE%B2/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E9%9F%B3%E4%B9%90%E5%85%A5%E9%97%A8%E4%B8%B0%E5%AD%90%E6%81%BA%E9%9F%B3%E4%B9%90%E4%BA%94%E8%AE%B2/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 音乐入门：丰子恺音乐五讲&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/56/3300022556/t7_3300022556.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 音乐入门：丰子恺音乐五讲|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 音乐入门：丰子恺音乐五讲&lt;/li&gt;
+&lt;li&gt;作者： 丰子恺&lt;/li&gt;
+&lt;li&gt;简介： 写给喜爱音乐但又不知从何处入门的普通大众。根据开明书店版《音乐入门》和文化供应社版《艺术修养基础》重新选编，听民国艺术大家聊聊音乐到底是什么&lt;/li&gt;
+&lt;li&gt;出版时间 2018-09-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787547730041&lt;/li&gt;
+&lt;li&gt;分类： 艺术-音乐&lt;/li&gt;
+&lt;li&gt;出版社： 北京日报出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/64e327a0813ab6f4fg016a0b&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;编者的话&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e8%80%85%e7%9a%84%e8%af%9d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编者的话
+&lt;/h2&gt;&lt;h2 id=&#34;第一编-音乐的种类&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e7%bc%96-%e9%9f%b3%e4%b9%90%e7%9a%84%e7%a7%8d%e7%b1%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第一编 音乐的种类
+&lt;/h2&gt;&lt;h2 id=&#34;第二编-音乐之门&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e7%bc%96-%e9%9f%b3%e4%b9%90%e4%b9%8b%e9%97%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二编 音乐之门
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 艺术分空间艺术与时间艺术两大类，绘画是空间艺术的代表，音乐是时间艺术的代表。故欲学习音乐，必先端正时间的观念。
+⏱ 2024-07-26 19:14:14 ^3300022556-5-546-601&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 读者倘喜欢吟诗，便可由此悟到古人作诗法所谓“一三五勿论，二四六分明”的原因。一三五因为是强音，读起来重韵头而不重韵脚，故平仄可以不论。二四六因为是弱音，读起来韵脚清楚，故平仄必须分明。
+⏱ 2024-07-26 19:21:54 ^3300022556-5-2845-2937&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;第二章-音的质量&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e9%9f%b3%e7%9a%84%e8%b4%a8%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二章 音的质量
+&lt;/h3&gt;&lt;h3 id=&#34;第三章-音的表情&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e9%9f%b3%e7%9a%84%e8%a1%a8%e6%83%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三章 音的表情
+&lt;/h3&gt;&lt;h3 id=&#34;外一篇-音的习法&#34;&gt;&lt;a href=&#34;#%e5%a4%96%e4%b8%80%e7%af%87-%e9%9f%b3%e7%9a%84%e4%b9%a0%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;外一篇 音的习法
+&lt;/h3&gt;&lt;h2 id=&#34;第三编-乐谱的读法&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e7%bc%96-%e4%b9%90%e8%b0%b1%e7%9a%84%e8%af%bb%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三编 乐谱的读法
+&lt;/h2&gt;&lt;h3 id=&#34;第五章-音符&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e9%9f%b3%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第五章 音符
+&lt;/h3&gt;&lt;h3 id=&#34;第六章-拍子&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e6%8b%8d%e5%ad%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第六章 拍子
+&lt;/h3&gt;&lt;h3 id=&#34;第七章-音阶&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%83%e7%ab%a0-%e9%9f%b3%e9%98%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第七章 音阶
+&lt;/h3&gt;&lt;h3 id=&#34;第八章-音程&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ab%e7%ab%a0-%e9%9f%b3%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第八章 音程
+&lt;/h3&gt;&lt;h3 id=&#34;第九章-记号及术语&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b9%9d%e7%ab%a0-%e8%ae%b0%e5%8f%b7%e5%8f%8a%e6%9c%af%e8%af%ad&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第九章 记号及术语
+&lt;/h3&gt;&lt;h2 id=&#34;第四编-唱歌演奏法入门&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%9b%9b%e7%bc%96-%e5%94%b1%e6%ad%8c%e6%bc%94%e5%a5%8f%e6%b3%95%e5%85%a5%e9%97%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第四编 唱歌演奏法入门
+&lt;/h2&gt;&lt;h3 id=&#34;第十一章-钢琴入门&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0-%e9%92%a2%e7%90%b4%e5%85%a5%e9%97%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十一章 钢琴入门
+&lt;/h3&gt;&lt;h3 id=&#34;第十二章-小提琴入门&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%ba%8c%e7%ab%a0-%e5%b0%8f%e6%8f%90%e7%90%b4%e5%85%a5%e9%97%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十二章 小提琴入门
+&lt;/h3&gt;&lt;h3 id=&#34;第十三章-口琴门入&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%89%e7%ab%a0-%e5%8f%a3%e7%90%b4%e9%97%a8%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十三章 口琴门入
+&lt;/h3&gt;&lt;h2 id=&#34;第五编-近世音乐简史&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%94%e7%bc%96-%e8%bf%91%e4%b8%96%e9%9f%b3%e4%b9%90%e7%ae%80%e5%8f%b2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第五编 近世音乐简史
 &lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
 &lt;/h1&gt;&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
 &lt;/h1&gt;</description>
