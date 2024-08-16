@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] C++模板元编程实战：一个深度学习框架的初步实现（异步图书） 书名： C++模板元编程实战：一个深度学习框架的初步实现（异步图书） 作者：">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E4%B8%80%E4%B8%AA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%AD%A5%E5%9B%BE%E4%B9%A6/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] C++模板元编程实战：一个深度学习框架的初步实现（异步图书） 书名： C++模板元编程实战：一个深度学习框架的初步实现（异步图书） 作者：">
+<meta property='og:url' content='https://blog.bugxch.top/weread/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E4%B8%80%E4%B8%AA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%AD%A5%E5%9B%BE%E4%B9%A6/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] C++模板元编程实战：一个深度学习框架的初步实现（异步图书） 书名： C++模板元编程实战：一个深度学习框架的初步实现（异步图书） 作者：">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu14538652356626499973.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#版权信息">版权信息</a></li>
+    <li><a href="#版权">版权</a></li>
+    <li><a href="#内容提要">内容提要</a></li>
+    <li><a href="#推荐序1">推荐序1</a></li>
+    <li><a href="#推荐序2">推荐序2</a></li>
+    <li><a href="#推荐序3">推荐序3</a></li>
+    <li><a href="#作者简介">作者简介</a></li>
+    <li><a href="#致谢">致谢</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#资源与支持">资源与支持</a></li>
+    <li><a href="#第一部分-元编程基础技术">第一部分 元编程基础技术</a></li>
+    <li><a href="#第1章-基本技巧">第1章 基本技巧</a>
+      <ol>
+        <li><a href="#11-元函数与type_traits">1.1 元函数与type_traits</a></li>
+        <li><a href="#12-模板型模板参数与容器模板">1.2 模板型模板参数与容器模板</a></li>
+        <li><a href="#13-顺序分支与循环代码的编写">1.3 顺序、分支与循环代码的编写</a></li>
+        <li><a href="#14-奇特的递归模板式">1.4 奇特的递归模板式</a></li>
+        <li><a href="#15-小结">1.5 小结</a></li>
+        <li><a href="#16-练习">1.6 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第2章-异类词典与policy模板">第2章 异类词典与policy模板</a>
+      <ol>
+        <li><a href="#21-具名参数简介">2.1 具名参数简介</a></li>
+        <li><a href="#22-异类词典">2.2 异类词典</a></li>
+        <li><a href="#23-policy模板">2.3 policy模板</a></li>
+        <li><a href="#24-小结">2.4 小结</a></li>
+        <li><a href="#25-练习">2.5 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第3章-深度学习概述">第3章 深度学习概述</a>
+      <ol>
+        <li><a href="#31-深度学习简介">3.1 深度学习简介</a></li>
+        <li><a href="#32-本书所实现的框架metann">3.2 本书所实现的框架：MetaNN</a></li>
+        <li><a href="#33-小结">3.3 小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#第4章-类型体系与基本数据类型">第4章 类型体系与基本数据类型</a>
+      <ol>
+        <li><a href="#41-类型体系">4.1 类型体系</a></li>
+        <li><a href="#42-设计理念">4.2 设计理念</a></li>
+        <li><a href="#43-标量">4.3 标量</a></li>
+        <li><a href="#44-矩阵">4.4 矩阵</a></li>
+        <li><a href="#45-列表">4.5 列表</a></li>
+        <li><a href="#46-小结">4.6 小结</a></li>
+        <li><a href="#47-练习">4.7 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第5章-运算与表达式模板">第5章 运算与表达式模板</a>
+      <ol>
+        <li><a href="#51-表达式模板简介">5.1 表达式模板简介</a></li>
+        <li><a href="#52-metann运算模板的设计思想">5.2 MetaNN运算模板的设计思想</a></li>
+        <li><a href="#53-运算分类">5.3 运算分类</a></li>
+        <li><a href="#54-辅助模板">5.4 辅助模板</a></li>
+        <li><a href="#55-运算模板的框架">5.5 运算模板的框架</a></li>
+        <li><a href="#56-运算实现示例">5.6 运算实现示例</a></li>
+        <li><a href="#57-metann已支持的运算列表">5.7 MetaNN已支持的运算列表</a></li>
+        <li><a href="#58-运算的折衷与局限性">5.8 运算的折衷与局限性</a></li>
+        <li><a href="#59-小结">5.9 小结</a></li>
+        <li><a href="#510-练习">5.10 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第6章-基本层">第6章 基本层</a>
+      <ol>
+        <li><a href="#61-层的设计理念">6.1 层的设计理念</a></li>
+        <li><a href="#62-层的辅助逻辑">6.2 层的辅助逻辑</a></li>
+        <li><a href="#63-层的具体实现">6.3 层的具体实现</a></li>
+        <li><a href="#64-metann已实现的基本层">6.4 MetaNN已实现的基本层</a></li>
+        <li><a href="#65-小结">6.5 小结</a></li>
+        <li><a href="#66-练习">6.6 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第7章-复合层与循环层">第7章 复合层与循环层</a>
+      <ol>
+        <li><a href="#71-复合层的接口与设计理念">7.1 复合层的接口与设计理念</a></li>
+        <li><a href="#72-policy继承与修正逻辑的实现">7.2 policy继承与修正逻辑的实现</a></li>
+        <li><a href="#73-composetopology的实现">7.3 ComposeTopology的实现</a></li>
+        <li><a href="#74-composekernel的实现">7.4 ComposeKernel的实现</a></li>
+        <li><a href="#75-复合层实现示例">7.5 复合层实现示例</a></li>
+        <li><a href="#76-循环层">7.6 循环层</a></li>
+        <li><a href="#77-小结">7.7 小结</a></li>
+        <li><a href="#78-练习">7.8 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#第8章-求值与优化">第8章 求值与优化</a>
+      <ol>
+        <li><a href="#81-metann的求值模型">8.1 MetaNN的求值模型</a></li>
+        <li><a href="#82-基本求值逻辑">8.2 基本求值逻辑</a></li>
+        <li><a href="#83-求值过程的优化">8.3 求值过程的优化</a></li>
+        <li><a href="#84-小结">8.4 小结</a></li>
+        <li><a href="#85-练习">8.5 练习</a></li>
+      </ol>
+    </li>
+    <li><a href="#后记方家休见笑吾道本艰难">后记——方家休见笑，吾道本艰难</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E4%B8%80%E4%B8%AA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%AD%A5%E5%9B%BE%E4%B9%A6/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 3 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] C++模板元编程实战：一个深度学习框架的初步实现（异步图书）</p>
+<ul>
+<li><img src="https://res.weread.qq.com/wrepub/CB_7sM09O0BIE206q46oo3Ld4yR_parsecover"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" C&#43;&#43;模板元编程实战：一个深度学习框架的初步实现（异步图书）|200"
+	
+	
+></li>
+<li>书名： C++模板元编程实战：一个深度学习框架的初步实现（异步图书）</li>
+<li>作者： 李伟</li>
+<li>简介：</li>
+<li>出版时间</li>
+<li>ISBN：</li>
+<li>分类：</li>
+<li>出版社： 人民邮电出版社</li>
+<li>PC地址：https://weread.qq.com/web/reader/38e42503643425f37734d30394f304249453230367134366f6f334c643479524f4</li>
+</ul>
+</blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="版权"><a href="#%e7%89%88%e6%9d%83" class="header-anchor"></a>版权
+</h2><h2 id="内容提要"><a href="#%e5%86%85%e5%ae%b9%e6%8f%90%e8%a6%81" class="header-anchor"></a>内容提要
+</h2><h2 id="推荐序1"><a href="#%e6%8e%a8%e8%8d%90%e5%ba%8f1" class="header-anchor"></a>推荐序1
+</h2><h2 id="推荐序2"><a href="#%e6%8e%a8%e8%8d%90%e5%ba%8f2" class="header-anchor"></a>推荐序2
+</h2><h2 id="推荐序3"><a href="#%e6%8e%a8%e8%8d%90%e5%ba%8f3" class="header-anchor"></a>推荐序3
+</h2><h2 id="作者简介"><a href="#%e4%bd%9c%e8%80%85%e7%ae%80%e4%bb%8b" class="header-anchor"></a>作者简介
+</h2><h2 id="致谢"><a href="#%e8%87%b4%e8%b0%a2" class="header-anchor"></a>致谢
+</h2><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><blockquote>
+<p>📌 C++所支持的不仅是面向对象这一种编程风格。它还支持另一种编程风格：泛型，并由此衍生出一套编程方法，即编译期计算与元编程。
+⏱ 2024-08-08 17:07:39 ^CB-7sM09O0BIE206q46oo3Ld4yR-9-1141-1202</p>
+</blockquote>
+<h2 id="资源与支持"><a href="#%e8%b5%84%e6%ba%90%e4%b8%8e%e6%94%af%e6%8c%81" class="header-anchor"></a>资源与支持
+</h2><h2 id="第一部分-元编程基础技术"><a href="#%e7%ac%ac%e4%b8%80%e9%83%a8%e5%88%86-%e5%85%83%e7%bc%96%e7%a8%8b%e5%9f%ba%e7%a1%80%e6%8a%80%e6%9c%af" class="header-anchor"></a>第一部分 元编程基础技术
+</h2><h2 id="第1章-基本技巧"><a href="#%e7%ac%ac1%e7%ab%a0-%e5%9f%ba%e6%9c%ac%e6%8a%80%e5%b7%a7" class="header-anchor"></a>第1章 基本技巧
+</h2><h3 id="11-元函数与type_traits"><a href="#11-%e5%85%83%e5%87%bd%e6%95%b0%e4%b8%8etype_traits" class="header-anchor"></a>1.1 元函数与type_traits
+</h3><blockquote>
+<p>📌 元函数会在编译期被调用与执行。在编译阶段，编译器只能构造常量作为其中间结果，无法构造并维护可以记录系统状态并随之改变的量，因此编译期可以使用的函数（即元函数）只能是无副作用的函数。
+⏱ 2024-08-08 17:27:29 ^CB-7sM09O0BIE206q46oo3Ld4yR-13-952-1042</p>
+</blockquote>
+<blockquote>
+<p>📌 其中的constexpr为C++ 11中的关键字，表明这个函数可以在编译期被调用，是一个元函数
+⏱ 2024-08-08 17:31:01 ^CB-7sM09O0BIE206q46oo3Ld4yR-13-1258-1305</p>
+</blockquote>
+<blockquote>
+<p>📌 这是因为宏是由预处理器而非编译器所解析的，这就导致了很多编译期间可以利用到的特性，宏无法利用。
+⏱ 2024-08-08 19:30:02 ^CB-7sM09O0BIE206q46oo3Ld4yR-13-8379-8426</p>
+</blockquote>
+<h3 id="12-模板型模板参数与容器模板"><a href="#12-%e6%a8%a1%e6%9d%bf%e5%9e%8b%e6%a8%a1%e6%9d%bf%e5%8f%82%e6%95%b0%e4%b8%8e%e5%ae%b9%e5%99%a8%e6%a8%a1%e6%9d%bf" class="header-anchor"></a>1.2 模板型模板参数与容器模板
+</h3><blockquote>
+<p>📌 元函数可以操作类型与数值；对于元函数来说，类型与数值并没有本质上的区别，它们都可视为一种“数据”​，可以作为元函数的输入与输出。
+⏱ 2024-08-08 19:34:48 ^CB-7sM09O0BIE206q46oo3Ld4yR-14-674-737</p>
+</blockquote>
+<h3 id="13-顺序分支与循环代码的编写"><a href="#13-%e9%a1%ba%e5%ba%8f%e5%88%86%e6%94%af%e4%b8%8e%e5%be%aa%e7%8e%af%e4%bb%a3%e7%a0%81%e7%9a%84%e7%bc%96%e5%86%99" class="header-anchor"></a>1.3 顺序、分支与循环代码的编写
+</h3><h3 id="14-奇特的递归模板式"><a href="#14-%e5%a5%87%e7%89%b9%e7%9a%84%e9%80%92%e5%bd%92%e6%a8%a1%e6%9d%bf%e5%bc%8f" class="header-anchor"></a>1.4 奇特的递归模板式
+</h3><h3 id="15-小结"><a href="#15-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>1.5 小结
+</h3><h3 id="16-练习"><a href="#16-%e7%bb%83%e4%b9%a0" class="header-anchor"></a>1.6 练习
+</h3><h2 id="第2章-异类词典与policy模板"><a href="#%e7%ac%ac2%e7%ab%a0-%e5%bc%82%e7%b1%bb%e8%af%8d%e5%85%b8%e4%b8%8epolicy%e6%a8%a1%e6%9d%bf" class="header-anchor"></a>第2章 异类词典与policy模板
+</h2><h3 id="21-具名参数简介"><a href="#21-%e5%85%b7%e5%90%8d%e5%8f%82%e6%95%b0%e7%ae%80%e4%bb%8b" class="header-anchor"></a>2.1 具名参数简介
+</h3><h3 id="22-异类词典"><a href="#22-%e5%bc%82%e7%b1%bb%e8%af%8d%e5%85%b8" class="header-anchor"></a>2.2 异类词典
+</h3><h3 id="23-policy模板"><a href="#23-policy%e6%a8%a1%e6%9d%bf" class="header-anchor"></a>2.3 policy模板
+</h3><h3 id="24-小结"><a href="#24-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>2.4 小结
+</h3><h3 id="25-练习"><a href="#25-%e7%bb%83%e4%b9%a0" class="header-anchor"></a>2.5 练习
+</h3><h2 id="第3章-深度学习概述"><a href="#%e7%ac%ac3%e7%ab%a0-%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e6%a6%82%e8%bf%b0" class="header-anchor"></a>第3章 深度学习概述
+</h2><h3 id="31-深度学习简介"><a href="#31-%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e7%ae%80%e4%bb%8b" class="header-anchor"></a>3.1 深度学习简介
+</h3><h3 id="32-本书所实现的框架metann"><a href="#32-%e6%9c%ac%e4%b9%a6%e6%89%80%e5%ae%9e%e7%8e%b0%e7%9a%84%e6%a1%86%e6%9e%b6metann" class="header-anchor"></a>3.2 本书所实现的框架：MetaNN
+</h3><h3 id="33-小结"><a href="#33-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>3.3 小结
+</h3><h2 id="第4章-类型体系与基本数据类型"><a href="#%e7%ac%ac4%e7%ab%a0-%e7%b1%bb%e5%9e%8b%e4%bd%93%e7%b3%bb%e4%b8%8e%e5%9f%ba%e6%9c%ac%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>第4章 类型体系与基本数据类型
+</h2><h3 id="41-类型体系"><a href="#41-%e7%b1%bb%e5%9e%8b%e4%bd%93%e7%b3%bb" class="header-anchor"></a>4.1 类型体系
+</h3><h3 id="42-设计理念"><a href="#42-%e8%ae%be%e8%ae%a1%e7%90%86%e5%bf%b5" class="header-anchor"></a>4.2 设计理念
+</h3><h3 id="43-标量"><a href="#43-%e6%a0%87%e9%87%8f" class="header-anchor"></a>4.3 标量
+</h3><h3 id="44-矩阵"><a href="#44-%e7%9f%a9%e9%98%b5" class="header-anchor"></a>4.4 矩阵
+</h3><h3 id="45-列表"><a href="#45-%e5%88%97%e8%a1%a8" class="header-anchor"></a>4.5 列表
+</h3><h3 id="46-小结"><a href="#46-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>4.6 小结
+</h3><h3 id="47-练习"><a href="#47-%e7%bb%83%e4%b9%a0" class="header-anchor"></a>4.7 练习
+</h3><h2 id="第5章-运算与表达式模板"><a href="#%e7%ac%ac5%e7%ab%a0-%e8%bf%90%e7%ae%97%e4%b8%8e%e8%a1%a8%e8%be%be%e5%bc%8f%e6%a8%a1%e6%9d%bf" class="header-anchor"></a>第5章 运算与表达式模板
+</h2><h3 id="51-表达式模板简介"><a href="#51-%e8%a1%a8%e8%be%be%e5%bc%8f%e6%a8%a1%e6%9d%bf%e7%ae%80%e4%bb%8b" class="header-anchor"></a>5.1 表达式模板简介
+</h3><h3 id="52-metann运算模板的设计思想"><a href="#52-metann%e8%bf%90%e7%ae%97%e6%a8%a1%e6%9d%bf%e7%9a%84%e8%ae%be%e8%ae%a1%e6%80%9d%e6%83%b3" class="header-anchor"></a>5.2 MetaNN运算模板的设计思想
+</h3><h3 id="53-运算分类"><a href="#53-%e8%bf%90%e7%ae%97%e5%88%86%e7%b1%bb" class="header-anchor"></a>5.3 运算分类
+</h3><h3 id="54-辅助模板"><a href="#54-%e8%be%85%e5%8a%a9%e6%a8%a1%e6%9d%bf" class="header-anchor"></a>5.4 辅助模板
+</h3><h3 id="55-运算模板的框架"><a href="#55-%e8%bf%90%e7%ae%97%e6%a8%a1%e6%9d%bf%e7%9a%84%e6%a1%86%e6%9e%b6" class="header-anchor"></a>5.5 运算模板的框架
+</h3><h3 id="56-运算实现示例"><a href="#56-%e8%bf%90%e7%ae%97%e5%ae%9e%e7%8e%b0%e7%a4%ba%e4%be%8b" class="header-anchor"></a>5.6 运算实现示例
+</h3><h3 id="57-metann已支持的运算列表"><a href="#57-metann%e5%b7%b2%e6%94%af%e6%8c%81%e7%9a%84%e8%bf%90%e7%ae%97%e5%88%97%e8%a1%a8" class="header-anchor"></a>5.7 MetaNN已支持的运算列表
+</h3><h3 id="58-运算的折衷与局限性"><a href="#58-%e8%bf%90%e7%ae%97%e7%9a%84%e6%8a%98%e8%a1%b7%e4%b8%8e%e5%b1%80%e9%99%90%e6%80%a7" class="header-anchor"></a>5.8 运算的折衷与局限性
+</h3><h3 id="59-小结"><a href="#59-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>5.9 小结
+</h3><h3 id="510-练习"><a href="#510-%e7%bb%83%e4%b9%a0" class="header-anchor"></a>5.10 练习
+</h3><h2 id="第6章-基本层"><a href="#%e7%ac%ac6%e7%ab%a0-%e5%9f%ba%e6%9c%ac%e5%b1%82" class="header-anchor"></a>第6章 基本层
+</h2><h3 id="61-层的设计理念"><a href="#61-%e5%b1%82%e7%9a%84%e8%ae%be%e8%ae%a1%e7%90%86%e5%bf%b5" class="header-anchor"></a>6.1 层的设计理念
+</h3><h3 id="62-层的辅助逻辑"><a href="#62-%e5%b1%82%e7%9a%84%e8%be%85%e5%8a%a9%e9%80%bb%e8%be%91" class="header-anchor"></a>6.2 层的辅助逻辑
+</h3><h3 id="63-层的具体实现"><a href="#63-%e5%b1%82%e7%9a%84%e5%85%b7%e4%bd%93%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>6.3 层的具体实现
+</h3><h3 id="64-metann已实现的基本层"><a href="#64-metann%e5%b7%b2%e5%ae%9e%e7%8e%b0%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%b1%82" class="header-anchor"></a>6.4 MetaNN已实现的基本层
+</h3><h3 id="65-小结"><a href="#65-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>6.5 小结
+</h3><h3 id="66-练习"><a href="#66-%e7%bb%83%e4%b9%a0" class="header-anchor"></a>6.6 练习
+</h3><h2 id="第7章-复合层与循环层"><a href="#%e7%ac%ac7%e7%ab%a0-%e5%a4%8d%e5%90%88%e5%b1%82%e4%b8%8e%e5%be%aa%e7%8e%af%e5%b1%82" class="header-anchor"></a>第7章 复合层与循环层
+</h2><h3 id="71-复合层的接口与设计理念"><a href="#71-%e5%a4%8d%e5%90%88%e5%b1%82%e7%9a%84%e6%8e%a5%e5%8f%a3%e4%b8%8e%e8%ae%be%e8%ae%a1%e7%90%86%e5%bf%b5" class="header-anchor"></a>7.1 复合层的接口与设计理念
+</h3><h3 id="72-policy继承与修正逻辑的实现"><a href="#72-policy%e7%bb%a7%e6%89%bf%e4%b8%8e%e4%bf%ae%e6%ad%a3%e9%80%bb%e8%be%91%e7%9a%84%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>7.2 policy继承与修正逻辑的实现
+</h3><h3 id="73-composetopology的实现"><a href="#73-composetopology%e7%9a%84%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>7.3 ComposeTopology的实现
+</h3><h3 id="74-composekernel的实现"><a href="#74-composekernel%e7%9a%84%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>7.4 ComposeKernel的实现
+</h3><h3 id="75-复合层实现示例"><a href="#75-%e5%a4%8d%e5%90%88%e5%b1%82%e5%ae%9e%e7%8e%b0%e7%a4%ba%e4%be%8b" class="header-anchor"></a>7.5 复合层实现示例
+</h3><h3 id="76-循环层"><a href="#76-%e5%be%aa%e7%8e%af%e5%b1%82" class="header-anchor"></a>7.6 循环层
+</h3><h3 id="77-小结"><a href="#77-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>7.7 小结
+</h3><h3 id="78-练习"><a href="#78-%e7%bb%83%e4%b9%a0" class="header-anchor"></a>7.8 练习
+</h3><h2 id="第8章-求值与优化"><a href="#%e7%ac%ac8%e7%ab%a0-%e6%b1%82%e5%80%bc%e4%b8%8e%e4%bc%98%e5%8c%96" class="header-anchor"></a>第8章 求值与优化
+</h2><h3 id="81-metann的求值模型"><a href="#81-metann%e7%9a%84%e6%b1%82%e5%80%bc%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>8.1 MetaNN的求值模型
+</h3><h3 id="82-基本求值逻辑"><a href="#82-%e5%9f%ba%e6%9c%ac%e6%b1%82%e5%80%bc%e9%80%bb%e8%be%91" class="header-anchor"></a>8.2 基本求值逻辑
+</h3><h3 id="83-求值过程的优化"><a href="#83-%e6%b1%82%e5%80%bc%e8%bf%87%e7%a8%8b%e7%9a%84%e4%bc%98%e5%8c%96" class="header-anchor"></a>8.3 求值过程的优化
+</h3><h3 id="84-小结"><a href="#84-%e5%b0%8f%e7%bb%93" class="header-anchor"></a>8.4 小结
+</h3><h3 id="85-练习"><a href="#85-%e7%bb%83%e4%b9%a0" class="header-anchor"></a>8.5 练习
+</h3><h2 id="后记方家休见笑吾道本艰难"><a href="#%e5%90%8e%e8%ae%b0%e6%96%b9%e5%ae%b6%e4%bc%91%e8%a7%81%e7%ac%91%e5%90%be%e9%81%93%e6%9c%ac%e8%89%b0%e9%9a%be" class="header-anchor"></a>后记——方家休见笑，吾道本艰难
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2024 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

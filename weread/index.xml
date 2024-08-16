@@ -174,6 +174,131 @@
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/weread/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E4%B8%80%E4%B8%AA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%AD%A5%E5%9B%BE%E4%B9%A6/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%E4%B8%80%E4%B8%AA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%AD%A5%E5%9B%BE%E4%B9%A6/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] C++模板元编程实战：一个深度学习框架的初步实现（异步图书）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://res.weread.qq.com/wrepub/CB_7sM09O0BIE206q46oo3Ld4yR_parsecover&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; C&amp;#43;&amp;#43;模板元编程实战：一个深度学习框架的初步实现（异步图书）|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： C++模板元编程实战：一个深度学习框架的初步实现（异步图书）&lt;/li&gt;
+&lt;li&gt;作者： 李伟&lt;/li&gt;
+&lt;li&gt;简介：&lt;/li&gt;
+&lt;li&gt;出版时间&lt;/li&gt;
+&lt;li&gt;ISBN：&lt;/li&gt;
+&lt;li&gt;分类：&lt;/li&gt;
+&lt;li&gt;出版社： 人民邮电出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/38e42503643425f37734d30394f304249453230367134366f6f334c643479524f4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;版权&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权
+&lt;/h2&gt;&lt;h2 id=&#34;内容提要&#34;&gt;&lt;a href=&#34;#%e5%86%85%e5%ae%b9%e6%8f%90%e8%a6%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;内容提要
+&lt;/h2&gt;&lt;h2 id=&#34;推荐序1&#34;&gt;&lt;a href=&#34;#%e6%8e%a8%e8%8d%90%e5%ba%8f1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;推荐序1
+&lt;/h2&gt;&lt;h2 id=&#34;推荐序2&#34;&gt;&lt;a href=&#34;#%e6%8e%a8%e8%8d%90%e5%ba%8f2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;推荐序2
+&lt;/h2&gt;&lt;h2 id=&#34;推荐序3&#34;&gt;&lt;a href=&#34;#%e6%8e%a8%e8%8d%90%e5%ba%8f3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;推荐序3
+&lt;/h2&gt;&lt;h2 id=&#34;作者简介&#34;&gt;&lt;a href=&#34;#%e4%bd%9c%e8%80%85%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;作者简介
+&lt;/h2&gt;&lt;h2 id=&#34;致谢&#34;&gt;&lt;a href=&#34;#%e8%87%b4%e8%b0%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;致谢
+&lt;/h2&gt;&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 C++所支持的不仅是面向对象这一种编程风格。它还支持另一种编程风格：泛型，并由此衍生出一套编程方法，即编译期计算与元编程。
+⏱ 2024-08-08 17:07:39 ^CB-7sM09O0BIE206q46oo3Ld4yR-9-1141-1202&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;资源与支持&#34;&gt;&lt;a href=&#34;#%e8%b5%84%e6%ba%90%e4%b8%8e%e6%94%af%e6%8c%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;资源与支持
+&lt;/h2&gt;&lt;h2 id=&#34;第一部分-元编程基础技术&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e9%83%a8%e5%88%86-%e5%85%83%e7%bc%96%e7%a8%8b%e5%9f%ba%e7%a1%80%e6%8a%80%e6%9c%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第一部分 元编程基础技术
+&lt;/h2&gt;&lt;h2 id=&#34;第1章-基本技巧&#34;&gt;&lt;a href=&#34;#%e7%ac%ac1%e7%ab%a0-%e5%9f%ba%e6%9c%ac%e6%8a%80%e5%b7%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第1章 基本技巧
+&lt;/h2&gt;&lt;h3 id=&#34;11-元函数与type_traits&#34;&gt;&lt;a href=&#34;#11-%e5%85%83%e5%87%bd%e6%95%b0%e4%b8%8etype_traits&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.1 元函数与type_traits
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 元函数会在编译期被调用与执行。在编译阶段，编译器只能构造常量作为其中间结果，无法构造并维护可以记录系统状态并随之改变的量，因此编译期可以使用的函数（即元函数）只能是无副作用的函数。
+⏱ 2024-08-08 17:27:29 ^CB-7sM09O0BIE206q46oo3Ld4yR-13-952-1042&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 其中的constexpr为C++ 11中的关键字，表明这个函数可以在编译期被调用，是一个元函数
+⏱ 2024-08-08 17:31:01 ^CB-7sM09O0BIE206q46oo3Ld4yR-13-1258-1305&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这是因为宏是由预处理器而非编译器所解析的，这就导致了很多编译期间可以利用到的特性，宏无法利用。
+⏱ 2024-08-08 19:30:02 ^CB-7sM09O0BIE206q46oo3Ld4yR-13-8379-8426&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;12-模板型模板参数与容器模板&#34;&gt;&lt;a href=&#34;#12-%e6%a8%a1%e6%9d%bf%e5%9e%8b%e6%a8%a1%e6%9d%bf%e5%8f%82%e6%95%b0%e4%b8%8e%e5%ae%b9%e5%99%a8%e6%a8%a1%e6%9d%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.2 模板型模板参数与容器模板
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 元函数可以操作类型与数值；对于元函数来说，类型与数值并没有本质上的区别，它们都可视为一种“数据”​，可以作为元函数的输入与输出。
+⏱ 2024-08-08 19:34:48 ^CB-7sM09O0BIE206q46oo3Ld4yR-14-674-737&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;13-顺序分支与循环代码的编写&#34;&gt;&lt;a href=&#34;#13-%e9%a1%ba%e5%ba%8f%e5%88%86%e6%94%af%e4%b8%8e%e5%be%aa%e7%8e%af%e4%bb%a3%e7%a0%81%e7%9a%84%e7%bc%96%e5%86%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.3 顺序、分支与循环代码的编写
+&lt;/h3&gt;&lt;h3 id=&#34;14-奇特的递归模板式&#34;&gt;&lt;a href=&#34;#14-%e5%a5%87%e7%89%b9%e7%9a%84%e9%80%92%e5%bd%92%e6%a8%a1%e6%9d%bf%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.4 奇特的递归模板式
+&lt;/h3&gt;&lt;h3 id=&#34;15-小结&#34;&gt;&lt;a href=&#34;#15-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.5 小结
+&lt;/h3&gt;&lt;h3 id=&#34;16-练习&#34;&gt;&lt;a href=&#34;#16-%e7%bb%83%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.6 练习
+&lt;/h3&gt;&lt;h2 id=&#34;第2章-异类词典与policy模板&#34;&gt;&lt;a href=&#34;#%e7%ac%ac2%e7%ab%a0-%e5%bc%82%e7%b1%bb%e8%af%8d%e5%85%b8%e4%b8%8epolicy%e6%a8%a1%e6%9d%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第2章 异类词典与policy模板
+&lt;/h2&gt;&lt;h3 id=&#34;21-具名参数简介&#34;&gt;&lt;a href=&#34;#21-%e5%85%b7%e5%90%8d%e5%8f%82%e6%95%b0%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.1 具名参数简介
+&lt;/h3&gt;&lt;h3 id=&#34;22-异类词典&#34;&gt;&lt;a href=&#34;#22-%e5%bc%82%e7%b1%bb%e8%af%8d%e5%85%b8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.2 异类词典
+&lt;/h3&gt;&lt;h3 id=&#34;23-policy模板&#34;&gt;&lt;a href=&#34;#23-policy%e6%a8%a1%e6%9d%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.3 policy模板
+&lt;/h3&gt;&lt;h3 id=&#34;24-小结&#34;&gt;&lt;a href=&#34;#24-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.4 小结
+&lt;/h3&gt;&lt;h3 id=&#34;25-练习&#34;&gt;&lt;a href=&#34;#25-%e7%bb%83%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.5 练习
+&lt;/h3&gt;&lt;h2 id=&#34;第3章-深度学习概述&#34;&gt;&lt;a href=&#34;#%e7%ac%ac3%e7%ab%a0-%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e6%a6%82%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第3章 深度学习概述
+&lt;/h2&gt;&lt;h3 id=&#34;31-深度学习简介&#34;&gt;&lt;a href=&#34;#31-%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.1 深度学习简介
+&lt;/h3&gt;&lt;h3 id=&#34;32-本书所实现的框架metann&#34;&gt;&lt;a href=&#34;#32-%e6%9c%ac%e4%b9%a6%e6%89%80%e5%ae%9e%e7%8e%b0%e7%9a%84%e6%a1%86%e6%9e%b6metann&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.2 本书所实现的框架：MetaNN
+&lt;/h3&gt;&lt;h3 id=&#34;33-小结&#34;&gt;&lt;a href=&#34;#33-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3.3 小结
+&lt;/h3&gt;&lt;h2 id=&#34;第4章-类型体系与基本数据类型&#34;&gt;&lt;a href=&#34;#%e7%ac%ac4%e7%ab%a0-%e7%b1%bb%e5%9e%8b%e4%bd%93%e7%b3%bb%e4%b8%8e%e5%9f%ba%e6%9c%ac%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第4章 类型体系与基本数据类型
+&lt;/h2&gt;&lt;h3 id=&#34;41-类型体系&#34;&gt;&lt;a href=&#34;#41-%e7%b1%bb%e5%9e%8b%e4%bd%93%e7%b3%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.1 类型体系
+&lt;/h3&gt;&lt;h3 id=&#34;42-设计理念&#34;&gt;&lt;a href=&#34;#42-%e8%ae%be%e8%ae%a1%e7%90%86%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.2 设计理念
+&lt;/h3&gt;&lt;h3 id=&#34;43-标量&#34;&gt;&lt;a href=&#34;#43-%e6%a0%87%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.3 标量
+&lt;/h3&gt;&lt;h3 id=&#34;44-矩阵&#34;&gt;&lt;a href=&#34;#44-%e7%9f%a9%e9%98%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.4 矩阵
+&lt;/h3&gt;&lt;h3 id=&#34;45-列表&#34;&gt;&lt;a href=&#34;#45-%e5%88%97%e8%a1%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.5 列表
+&lt;/h3&gt;&lt;h3 id=&#34;46-小结&#34;&gt;&lt;a href=&#34;#46-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.6 小结
+&lt;/h3&gt;&lt;h3 id=&#34;47-练习&#34;&gt;&lt;a href=&#34;#47-%e7%bb%83%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.7 练习
+&lt;/h3&gt;&lt;h2 id=&#34;第5章-运算与表达式模板&#34;&gt;&lt;a href=&#34;#%e7%ac%ac5%e7%ab%a0-%e8%bf%90%e7%ae%97%e4%b8%8e%e8%a1%a8%e8%be%be%e5%bc%8f%e6%a8%a1%e6%9d%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第5章 运算与表达式模板
+&lt;/h2&gt;&lt;h3 id=&#34;51-表达式模板简介&#34;&gt;&lt;a href=&#34;#51-%e8%a1%a8%e8%be%be%e5%bc%8f%e6%a8%a1%e6%9d%bf%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.1 表达式模板简介
+&lt;/h3&gt;&lt;h3 id=&#34;52-metann运算模板的设计思想&#34;&gt;&lt;a href=&#34;#52-metann%e8%bf%90%e7%ae%97%e6%a8%a1%e6%9d%bf%e7%9a%84%e8%ae%be%e8%ae%a1%e6%80%9d%e6%83%b3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.2 MetaNN运算模板的设计思想
+&lt;/h3&gt;&lt;h3 id=&#34;53-运算分类&#34;&gt;&lt;a href=&#34;#53-%e8%bf%90%e7%ae%97%e5%88%86%e7%b1%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.3 运算分类
+&lt;/h3&gt;&lt;h3 id=&#34;54-辅助模板&#34;&gt;&lt;a href=&#34;#54-%e8%be%85%e5%8a%a9%e6%a8%a1%e6%9d%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.4 辅助模板
+&lt;/h3&gt;&lt;h3 id=&#34;55-运算模板的框架&#34;&gt;&lt;a href=&#34;#55-%e8%bf%90%e7%ae%97%e6%a8%a1%e6%9d%bf%e7%9a%84%e6%a1%86%e6%9e%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.5 运算模板的框架
+&lt;/h3&gt;&lt;h3 id=&#34;56-运算实现示例&#34;&gt;&lt;a href=&#34;#56-%e8%bf%90%e7%ae%97%e5%ae%9e%e7%8e%b0%e7%a4%ba%e4%be%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.6 运算实现示例
+&lt;/h3&gt;&lt;h3 id=&#34;57-metann已支持的运算列表&#34;&gt;&lt;a href=&#34;#57-metann%e5%b7%b2%e6%94%af%e6%8c%81%e7%9a%84%e8%bf%90%e7%ae%97%e5%88%97%e8%a1%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.7 MetaNN已支持的运算列表
+&lt;/h3&gt;&lt;h3 id=&#34;58-运算的折衷与局限性&#34;&gt;&lt;a href=&#34;#58-%e8%bf%90%e7%ae%97%e7%9a%84%e6%8a%98%e8%a1%b7%e4%b8%8e%e5%b1%80%e9%99%90%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.8 运算的折衷与局限性
+&lt;/h3&gt;&lt;h3 id=&#34;59-小结&#34;&gt;&lt;a href=&#34;#59-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.9 小结
+&lt;/h3&gt;&lt;h3 id=&#34;510-练习&#34;&gt;&lt;a href=&#34;#510-%e7%bb%83%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.10 练习
+&lt;/h3&gt;&lt;h2 id=&#34;第6章-基本层&#34;&gt;&lt;a href=&#34;#%e7%ac%ac6%e7%ab%a0-%e5%9f%ba%e6%9c%ac%e5%b1%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第6章 基本层
+&lt;/h2&gt;&lt;h3 id=&#34;61-层的设计理念&#34;&gt;&lt;a href=&#34;#61-%e5%b1%82%e7%9a%84%e8%ae%be%e8%ae%a1%e7%90%86%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.1 层的设计理念
+&lt;/h3&gt;&lt;h3 id=&#34;62-层的辅助逻辑&#34;&gt;&lt;a href=&#34;#62-%e5%b1%82%e7%9a%84%e8%be%85%e5%8a%a9%e9%80%bb%e8%be%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.2 层的辅助逻辑
+&lt;/h3&gt;&lt;h3 id=&#34;63-层的具体实现&#34;&gt;&lt;a href=&#34;#63-%e5%b1%82%e7%9a%84%e5%85%b7%e4%bd%93%e5%ae%9e%e7%8e%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.3 层的具体实现
+&lt;/h3&gt;&lt;h3 id=&#34;64-metann已实现的基本层&#34;&gt;&lt;a href=&#34;#64-metann%e5%b7%b2%e5%ae%9e%e7%8e%b0%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%b1%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.4 MetaNN已实现的基本层
+&lt;/h3&gt;&lt;h3 id=&#34;65-小结&#34;&gt;&lt;a href=&#34;#65-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.5 小结
+&lt;/h3&gt;&lt;h3 id=&#34;66-练习&#34;&gt;&lt;a href=&#34;#66-%e7%bb%83%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.6 练习
+&lt;/h3&gt;&lt;h2 id=&#34;第7章-复合层与循环层&#34;&gt;&lt;a href=&#34;#%e7%ac%ac7%e7%ab%a0-%e5%a4%8d%e5%90%88%e5%b1%82%e4%b8%8e%e5%be%aa%e7%8e%af%e5%b1%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第7章 复合层与循环层
+&lt;/h2&gt;&lt;h3 id=&#34;71-复合层的接口与设计理念&#34;&gt;&lt;a href=&#34;#71-%e5%a4%8d%e5%90%88%e5%b1%82%e7%9a%84%e6%8e%a5%e5%8f%a3%e4%b8%8e%e8%ae%be%e8%ae%a1%e7%90%86%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.1 复合层的接口与设计理念
+&lt;/h3&gt;&lt;h3 id=&#34;72-policy继承与修正逻辑的实现&#34;&gt;&lt;a href=&#34;#72-policy%e7%bb%a7%e6%89%bf%e4%b8%8e%e4%bf%ae%e6%ad%a3%e9%80%bb%e8%be%91%e7%9a%84%e5%ae%9e%e7%8e%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.2 policy继承与修正逻辑的实现
+&lt;/h3&gt;&lt;h3 id=&#34;73-composetopology的实现&#34;&gt;&lt;a href=&#34;#73-composetopology%e7%9a%84%e5%ae%9e%e7%8e%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.3 ComposeTopology的实现
+&lt;/h3&gt;&lt;h3 id=&#34;74-composekernel的实现&#34;&gt;&lt;a href=&#34;#74-composekernel%e7%9a%84%e5%ae%9e%e7%8e%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.4 ComposeKernel的实现
+&lt;/h3&gt;&lt;h3 id=&#34;75-复合层实现示例&#34;&gt;&lt;a href=&#34;#75-%e5%a4%8d%e5%90%88%e5%b1%82%e5%ae%9e%e7%8e%b0%e7%a4%ba%e4%be%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.5 复合层实现示例
+&lt;/h3&gt;&lt;h3 id=&#34;76-循环层&#34;&gt;&lt;a href=&#34;#76-%e5%be%aa%e7%8e%af%e5%b1%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.6 循环层
+&lt;/h3&gt;&lt;h3 id=&#34;77-小结&#34;&gt;&lt;a href=&#34;#77-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.7 小结
+&lt;/h3&gt;&lt;h3 id=&#34;78-练习&#34;&gt;&lt;a href=&#34;#78-%e7%bb%83%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.8 练习
+&lt;/h3&gt;&lt;h2 id=&#34;第8章-求值与优化&#34;&gt;&lt;a href=&#34;#%e7%ac%ac8%e7%ab%a0-%e6%b1%82%e5%80%bc%e4%b8%8e%e4%bc%98%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第8章 求值与优化
+&lt;/h2&gt;&lt;h3 id=&#34;81-metann的求值模型&#34;&gt;&lt;a href=&#34;#81-metann%e7%9a%84%e6%b1%82%e5%80%bc%e6%a8%a1%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.1 MetaNN的求值模型
+&lt;/h3&gt;&lt;h3 id=&#34;82-基本求值逻辑&#34;&gt;&lt;a href=&#34;#82-%e5%9f%ba%e6%9c%ac%e6%b1%82%e5%80%bc%e9%80%bb%e8%be%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.2 基本求值逻辑
+&lt;/h3&gt;&lt;h3 id=&#34;83-求值过程的优化&#34;&gt;&lt;a href=&#34;#83-%e6%b1%82%e5%80%bc%e8%bf%87%e7%a8%8b%e7%9a%84%e4%bc%98%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.3 求值过程的优化
+&lt;/h3&gt;&lt;h3 id=&#34;84-小结&#34;&gt;&lt;a href=&#34;#84-%e5%b0%8f%e7%bb%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.4 小结
+&lt;/h3&gt;&lt;h3 id=&#34;85-练习&#34;&gt;&lt;a href=&#34;#85-%e7%bb%83%e4%b9%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.5 练习
+&lt;/h3&gt;&lt;h2 id=&#34;后记方家休见笑吾道本艰难&#34;&gt;&lt;a href=&#34;#%e5%90%8e%e8%ae%b0%e6%96%b9%e5%ae%b6%e4%bc%91%e8%a7%81%e7%ac%91%e5%90%be%e9%81%93%e6%9c%ac%e8%89%b0%e9%9a%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;后记——方家休见笑，吾道本艰难
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/weread/cmake%E6%9E%84%E5%BB%BA%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%8D%B7/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -525,15 +650,35 @@
 &lt;/h3&gt;&lt;h2 id=&#34;中文版审读致谢&#34;&gt;&lt;a href=&#34;#%e4%b8%ad%e6%96%87%e7%89%88%e5%ae%a1%e8%af%bb%e8%87%b4%e8%b0%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;中文版审读致谢
 &lt;/h2&gt;&lt;h2 id=&#34;第-1-章-系统程序员也能享受美好&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-1-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e7%a8%8b%e5%ba%8f%e5%91%98%e4%b9%9f%e8%83%bd%e4%ba%ab%e5%8f%97%e7%be%8e%e5%a5%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 1 章 系统程序员也能享受美好
 &lt;/h2&gt;&lt;h3 id=&#34;11-rust-为你负重前行&#34;&gt;&lt;a href=&#34;#11-rust-%e4%b8%ba%e4%bd%a0%e8%b4%9f%e9%87%8d%e5%89%8d%e8%a1%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.1 Rust 为你负重前行
-&lt;/h3&gt;&lt;h3 id=&#34;12-高效并行编程&#34;&gt;&lt;a href=&#34;#12-%e9%ab%98%e6%95%88%e5%b9%b6%e8%a1%8c%e7%bc%96%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.2 高效并行编程
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Rust 语言给了我们一个简单的承诺：只要程序通过了编译器的检查，就不会存在未定义行为。悬空指针、双重释放和空指针解引用都能在编译期捕获。数组引用则会受到编译期检查和运行期检查的双重保护，因此不会存在缓冲区溢出：想想那个不幸的 C 语言程序，它的 Rust 版代码会安全地退出并给出一条错误消息。
+⏱ 2024-07-29 09:16:55 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-18-837-985&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;12-高效并行编程&#34;&gt;&lt;a href=&#34;#12-%e9%ab%98%e6%95%88%e5%b9%b6%e8%a1%8c%e7%bc%96%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.2 高效并行编程
 &lt;/h3&gt;&lt;h3 id=&#34;13-性能毫不妥协&#34;&gt;&lt;a href=&#34;#13-%e6%80%a7%e8%83%bd%e6%af%ab%e4%b8%8d%e5%a6%a5%e5%8d%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.3 性能毫不妥协
-&lt;/h3&gt;&lt;h3 id=&#34;14-协作无边无界&#34;&gt;&lt;a href=&#34;#14-%e5%8d%8f%e4%bd%9c%e6%97%a0%e8%be%b9%e6%97%a0%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.4 协作无边无界
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 通常，C++ 的各种实现会遵循零开销原则：没用到的，就没有开销；要用到的，你也无法手写出更好的代码。
+⏱ 2024-07-29 09:17:50 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-20-757-807&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;14-协作无边无界&#34;&gt;&lt;a href=&#34;#14-%e5%8d%8f%e4%bd%9c%e6%97%a0%e8%be%b9%e6%97%a0%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1.4 协作无边无界
 &lt;/h3&gt;&lt;h2 id=&#34;第-2-章-rust-导览&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-2-%e7%ab%a0-rust-%e5%af%bc%e8%a7%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 2 章 Rust 导览
 &lt;/h2&gt;&lt;h3 id=&#34;21-rustup-与-cargo&#34;&gt;&lt;a href=&#34;#21-rustup-%e4%b8%8e-cargo&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.1 rustup 与 Cargo
 &lt;/h3&gt;&lt;h3 id=&#34;22-rust-函数&#34;&gt;&lt;a href=&#34;#22-rust-%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.2 Rust 函数
-&lt;/h3&gt;&lt;h3 id=&#34;23-编写与运行单元测试&#34;&gt;&lt;a href=&#34;#23-%e7%bc%96%e5%86%99%e4%b8%8e%e8%bf%90%e8%a1%8c%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.3 编写与运行单元测试
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 与可以跳过断言的 C 和 C++ 不同，Rust 总是会检查这些断言，而不管程序是如何编译的。还有一个 debug_assert! 宏，在编译发布版程序时会跳过其断言以提高速度。
+⏱ 2024-07-29 12:43:27 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-24-2542-2662&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;23-编写与运行单元测试&#34;&gt;&lt;a href=&#34;#23-%e7%bc%96%e5%86%99%e4%b8%8e%e8%bf%90%e8%a1%8c%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.3 编写与运行单元测试
 &lt;/h3&gt;&lt;h3 id=&#34;24-处理命令行参数&#34;&gt;&lt;a href=&#34;#24-%e5%a4%84%e7%90%86%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.4 处理命令行参数
-&lt;/h3&gt;&lt;h3 id=&#34;25-搭建-web-服务器&#34;&gt;&lt;a href=&#34;#25-%e6%90%ad%e5%bb%ba-web-%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.5 搭建 Web 服务器
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 任何实现了 FromStr 特型的类型都有一个 from_str 方法，该方法会尝试从字符串中解析这个类型的值。
+⏱ 2024-07-29 12:46:19 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-26-1585-1703&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 u64::from_str 并不是 u64 值上的某个方法，而是与 u64 类型相关联的函数，类似于 C++ 或 Java 中的静态方法
+⏱ 2024-07-29 12:48:41 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-26-4494-4631&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;25-搭建-web-服务器&#34;&gt;&lt;a href=&#34;#25-%e6%90%ad%e5%bb%ba-web-%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.5 搭建 Web 服务器
 &lt;/h3&gt;&lt;h3 id=&#34;26-并发&#34;&gt;&lt;a href=&#34;#26-%e5%b9%b6%e5%8f%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.6 并发
 &lt;/h3&gt;&lt;h3 id=&#34;27-文件系统与命令行工具&#34;&gt;&lt;a href=&#34;#27-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e4%b8%8e%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.7 文件系统与命令行工具
 &lt;/h3&gt;&lt;h2 id=&#34;第-3-章-基本数据类型&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-3-%e7%ab%a0-%e5%9f%ba%e6%9c%ac%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 3 章 基本数据类型
@@ -569,11 +714,19 @@
 &lt;p&gt;📌 但 Rust 还将“移动”的语义应用到了几乎所有对值的使用上。例如，将参数传给函数会将所有权转移给函数的参数、从函数返回一个值会将所有权转移给调用者、构建元组会将值转移给元组。
 ⏱ 2024-07-26 08:53:35 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-42-7752-7840&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌  replace 调用会移出 composers[0].name 的值，将 None 留在原处，并将原始值的所有权转移给其调用者。事实上，这种使用 Option 的方式非常普遍，所以该类型专门为此提供了一个 take方法，以便更清晰地写出上述操作，如下所示： ^CB-DuSEyWEwQD5u6pm6ooBZWF04-42-14463-14723&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 这些操作都发生了所有权的转移，从上面的例子可以看出，结构体和vec拥有自己所有元素的所有权，不能将单独的一个或者几个元素的所有权从里面摘出来，只能通过别的方法置换或者获取所有权 - ⏱ 2024-07-30 08:44:15&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;43-copy-类型关于移动的例外情况&#34;&gt;&lt;a href=&#34;#43-copy-%e7%b1%bb%e5%9e%8b%e5%85%b3%e4%ba%8e%e7%a7%bb%e5%8a%a8%e7%9a%84%e4%be%8b%e5%a4%96%e6%83%85%e5%86%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.3 Copy 类型：关于移动的例外情况
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;📌 标准的 Copy 类型包括所有机器整数类型和浮点数类型、char 类型和 bool 类型，以及某些其他类型。Copy 类型的元组或固定大小的数组本身也是 Copy 类型。
-⏱ 2024-07-26 09:16:54 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-43-2444-2684&lt;/p&gt;
+&lt;p&gt;📌  标准的 Copy 类型包括所有机器整数类型和浮点数类型、char 类型和 bool 类型，以及某些其他类型。Copy 类型的元组或固定大小的数组本身也是 Copy 类型。 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-43-2444-2684&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 【注意】如果元组和数组的元素本身就是copy类型的，那么数组和元组也就支持copy trait - ⏱ 2024-07-26 09:16:54&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;44-rc-与-arc共享所有权&#34;&gt;&lt;a href=&#34;#44-rc-%e4%b8%8e-arc%e5%85%b1%e4%ba%ab%e6%89%80%e6%9c%89%e6%9d%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.4 Rc 与 Arc：共享所有权
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 Rust 的内存和线程安全保证的基石是：确保不会有任何值是既共享又可变的
@@ -596,66 +749,236 @@
 &lt;ul&gt;
 &lt;li&gt;💭 此处仅仅对.运算符可以省去解引用的符号，但是对于整数等单个变量不行？ - ⏱ 2024-07-26 15:08:38&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;📌 乍一看，这种行为可能太显而易见，不值一提：现在 r 当然会指向 y，因为我们在其中存储了 &amp;amp;y。但特意指出这一点是因为 C++ 引用的行为与此截然不同：如前所述，在 C++ 中对引用赋值会将新值存储在其引用目标中而非指向新值。C++ 的引用一旦完成初始化，就无法再指向别处了
-⏱ 2024-07-26 15:19:25 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-47-3981-4215&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;h3 id=&#34;53-引用安全&#34;&gt;&lt;a href=&#34;#53-%e5%bc%95%e7%94%a8%e5%ae%89%e5%85%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.3 引用安全
-&lt;/h3&gt;&lt;h3 id=&#34;54-共享与可变&#34;&gt;&lt;a href=&#34;#54-%e5%85%b1%e4%ba%ab%e4%b8%8e%e5%8f%af%e5%8f%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.4 共享与可变
-&lt;/h3&gt;&lt;h3 id=&#34;55-应对复杂对象关系&#34;&gt;&lt;a href=&#34;#55-%e5%ba%94%e5%af%b9%e5%a4%8d%e6%9d%82%e5%af%b9%e8%b1%a1%e5%85%b3%e7%b3%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.5 应对复杂对象关系
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在这个例子中，我们要分析 3 个生命周期之间的关系。变量 r 和 x 都有各自的生命周期，从它们被初始化的时间点一直延续到足以让编译器断定不再使用它们的时间点。第三个生命周期是引用类型，即借用了 x 并存储在 r 中的引用类型。
+⏱ 2024-07-30 12:41:00 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-48-2075-2313&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 但是，如果函数是某个类型的方法，并且具有引用类型的 self 参数，那么 Rust 就会假定返回值的生命周期与 self 参数的生命周期相同
+⏱ 2024-07-30 19:09:03 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-48-22597-22729&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;54-共享与可变&#34;&gt;&lt;a href=&#34;#54-%e5%85%b1%e4%ba%ab%e4%b8%8e%e5%8f%af%e5%8f%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.4 共享与可变
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 换句话说，我们既可以借用向量的可变引用，也可以借用其元素的共享引用，但这两种引用的生命周期不能重叠。
+⏱ 2024-07-30 19:19:42 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-49-5194-5244&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;55-应对复杂对象关系&#34;&gt;&lt;a href=&#34;#55-%e5%ba%94%e5%af%b9%e5%a4%8d%e6%9d%82%e5%af%b9%e8%b1%a1%e5%85%b3%e7%b3%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.5 应对复杂对象关系
 &lt;/h3&gt;&lt;h2 id=&#34;第-6-章-表达式&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-6-%e7%ab%a0-%e8%a1%a8%e8%be%be%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 6 章 表达式
 &lt;/h2&gt;&lt;h3 id=&#34;61-表达式语言&#34;&gt;&lt;a href=&#34;#61-%e8%a1%a8%e8%be%be%e5%bc%8f%e8%af%ad%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.1 表达式语言
 &lt;/h3&gt;&lt;h3 id=&#34;62-优先级与结合性&#34;&gt;&lt;a href=&#34;#62-%e4%bc%98%e5%85%88%e7%ba%a7%e4%b8%8e%e7%bb%93%e5%90%88%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.2 优先级与结合性
 &lt;/h3&gt;&lt;h3 id=&#34;63-块与分号&#34;&gt;&lt;a href=&#34;#63-%e5%9d%97%e4%b8%8e%e5%88%86%e5%8f%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.3 块与分号
 &lt;/h3&gt;&lt;h3 id=&#34;64-声明&#34;&gt;&lt;a href=&#34;#64-%e5%a3%b0%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.4 声明
 &lt;/h3&gt;&lt;h3 id=&#34;65-if-与-match&#34;&gt;&lt;a href=&#34;#65-if-%e4%b8%8e-match&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.5 if 与 match
-&lt;/h3&gt;&lt;h3 id=&#34;66-循环中的控制流&#34;&gt;&lt;a href=&#34;#66-%e5%be%aa%e7%8e%af%e4%b8%ad%e7%9a%84%e6%8e%a7%e5%88%b6%e6%b5%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.6 循环中的控制流
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 如果 expr 是一个块，则可以省略此分支之后的逗号。
+⏱ 2024-07-27 11:39:54 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-56-3661-3746&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 为了与 Rust 的移动语义保持一致，把值用于 for 循环会消耗该值：
+⏱ 2024-07-27 11:43:21 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-56-10158-10225&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;66-循环中的控制流&#34;&gt;&lt;a href=&#34;#66-%e5%be%aa%e7%8e%af%e4%b8%ad%e7%9a%84%e6%8e%a7%e5%88%b6%e6%b5%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.6 循环中的控制流
 &lt;/h3&gt;&lt;h3 id=&#34;67-return-表达式&#34;&gt;&lt;a href=&#34;#67-return-%e8%a1%a8%e8%be%be%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.7 return 表达式
 &lt;/h3&gt;&lt;h3 id=&#34;68-为什么-rust-中会有-loop&#34;&gt;&lt;a href=&#34;#68-%e4%b8%ba%e4%bb%80%e4%b9%88-rust-%e4%b8%ad%e4%bc%9a%e6%9c%89-loop&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.8 为什么 Rust 中会有 loop
 &lt;/h3&gt;&lt;h3 id=&#34;69-函数与方法调用&#34;&gt;&lt;a href=&#34;#69-%e5%87%bd%e6%95%b0%e4%b8%8e%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.9 函数与方法调用
-&lt;/h3&gt;&lt;h3 id=&#34;610-字段与元素&#34;&gt;&lt;a href=&#34;#610-%e5%ad%97%e6%ae%b5%e4%b8%8e%e5%85%83%e7%b4%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.10 字段与元素
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 你会注意到 . 运算符稍微放宽了这些规则。在调用 player. location()的方法中，player 可能是一个 Player、一个 &amp;amp;Player 类型的引用，也可能是一个Box&lt;Player&gt; 或 Rc&lt;Player&gt; 类型的智能指针。.location() 方法可以通过值或引用获取player。同一个 .location() 语法适用于所有情况，因为 Rust 的 . 运算符会根据需要自动对player 解引用或借入一个对它的引用。
+⏱ 2024-07-27 12:41:03 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-60-1115-1732&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这里的问题在于，在表达式中 &amp;lt; 是小于运算符。Rust 编译器建议用 ::&lt;T&gt; 代替 &lt;T&gt;。这样就解决了问题：[插图]符号 ::&amp;lt;&amp;hellip;&amp;gt; 在 Rust 社区中被亲切地称为比目鱼（turbofish）。
+⏱ 2024-07-27 12:42:13 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-60-2679-3184&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;610-字段与元素&#34;&gt;&lt;a href=&#34;#610-%e5%ad%97%e6%ae%b5%e4%b8%8e%e5%85%83%e7%b4%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.10 字段与元素
 &lt;/h3&gt;&lt;h3 id=&#34;611-引用运算符&#34;&gt;&lt;a href=&#34;#611-%e5%bc%95%e7%94%a8%e8%bf%90%e7%ae%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.11 引用运算符
 &lt;/h3&gt;&lt;h3 id=&#34;612-算术运算符按位运算符比较运算符和逻辑运算符&#34;&gt;&lt;a href=&#34;#612-%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97%e7%ac%a6%e6%8c%89%e4%bd%8d%e8%bf%90%e7%ae%97%e7%ac%a6%e6%af%94%e8%be%83%e8%bf%90%e7%ae%97%e7%ac%a6%e5%92%8c%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.12 算术运算符、按位运算符、比较运算符和逻辑运算符
-&lt;/h3&gt;&lt;h3 id=&#34;613-赋值&#34;&gt;&lt;a href=&#34;#613-%e8%b5%8b%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.13 赋值
-&lt;/h3&gt;&lt;h3 id=&#34;614-类型转换&#34;&gt;&lt;a href=&#34;#614-%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.14 类型转换
-&lt;/h3&gt;&lt;h3 id=&#34;615-闭包&#34;&gt;&lt;a href=&#34;#615-%e9%97%ad%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.15 闭包
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 与 C 不同，Rust 中按位运算的优先级高于比较运算，因此如果编写 x &amp;amp; BIT != 0，那么就意味着 (x &amp;amp; BIT) != 0，正如预期的那样。这比在 C 中解释成的 x &amp;amp; (BIT != 0) 有用得多，后者会测试错误的位
+⏱ 2024-07-27 14:08:34 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-63-2693-2917&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;613-赋值&#34;&gt;&lt;a href=&#34;#613-%e8%b5%8b%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.13 赋值
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 与 C 不同，Rust 不支持链式赋值：不能编写 a = b = 3 来将值 3 同时赋给 a 和 b。赋值在 Rust 中非常罕见，你是不会想念这种简写形式的。
+⏱ 2024-07-27 14:09:00 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-64-1205-1410&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 Rust 没有 C 的自增运算符 ++ 和自减运算符 &amp;ndash;。
+⏱ 2024-07-27 14:09:04 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-64-1435-1527&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;614-类型转换&#34;&gt;&lt;a href=&#34;#614-%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.14 类型转换
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 bool 类型或 char 类型的值或者类似 C 的 enum 类型的值可以转换为任何整数类型。（第 10 章会介绍枚举。）
+⏱ 2024-07-27 14:12:39 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-65-1433-1564&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 作为例外，u8 可以转换为 char 类型，因为从 0 到 255 的所有整数都是 char 能持有的有效Unicode 码点。
+⏱ 2024-07-27 14:13:00 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-65-2196-2354&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;615-闭包&#34;&gt;&lt;a href=&#34;#615-%e9%97%ad%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.15 闭包
 &lt;/h3&gt;&lt;h3 id=&#34;616-前路展望&#34;&gt;&lt;a href=&#34;#616-%e5%89%8d%e8%b7%af%e5%b1%95%e6%9c%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.16 前路展望
 &lt;/h3&gt;&lt;h2 id=&#34;第-7-章-错误处理&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-7-%e7%ab%a0-%e9%94%99%e8%af%af%e5%a4%84%e7%90%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 7 章 错误处理
 &lt;/h2&gt;&lt;h3 id=&#34;71-panic&#34;&gt;&lt;a href=&#34;#71-panic&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.1 panic
-&lt;/h3&gt;&lt;h3 id=&#34;72-result&#34;&gt;&lt;a href=&#34;#72-result&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.2 Result
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 以上情况的共同点是它们都由（不客气地说）程序员的错误所导致。而行之有效的一条经验法则是：“不要 panic”
+⏱ 2024-07-27 14:55:37 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-69-1213-1267&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 此外，Rust 处理 panic 的行为是可定制的。如果使用 -C panic=abort 参数进行编译，那么程序中的第一个 panic 会立即中止进程。（如果使用这个选项，那么 Rust 就不需要知道如何展开调用栈，故此可以减小编译后的代码的大小。）
+⏱ 2024-07-27 15:00:00 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-69-4200-4391&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;72-result&#34;&gt;&lt;a href=&#34;#72-result&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7.2 Result
 &lt;/h3&gt;&lt;h2 id=&#34;第-8-章-crate-与模块&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-8-%e7%ab%a0-crate-%e4%b8%8e%e6%a8%a1%e5%9d%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 8 章 crate 与模块
 &lt;/h2&gt;&lt;h3 id=&#34;81-crate&#34;&gt;&lt;a href=&#34;#81-crate&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.1 crate
 &lt;/h3&gt;&lt;h3 id=&#34;82-模块&#34;&gt;&lt;a href=&#34;#82-%e6%a8%a1%e5%9d%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.2 模块
-&lt;/h3&gt;&lt;h3 id=&#34;83-将程序变成库&#34;&gt;&lt;a href=&#34;#83-%e5%b0%86%e7%a8%8b%e5%ba%8f%e5%8f%98%e6%88%90%e5%ba%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.3 将程序变成库
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 如果把一个函数标记为 pub(crate)，那么就意味着它可以在这个 crate 中的任何地方使用，但不会作为外部接口的一部分公开。它不能被其他 crate 使用，也不会出现在这个 crate 的文档中
+⏱ 2024-07-28 07:08:21 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-73-1529-1661&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这 3 种选项（模块位于自己的文件中、模块位于自己的带有 mod.rs 的目录中，以及模块在自己的文件中，并带有包含子模块的补充目录）为模块系统提供了足够的灵活性，以支持你可能用到的几乎任何项目结构。
+⏱ 2024-07-28 07:20:18 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-73-7162-7262&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 结构体的字段，甚至是私有字段，都可以在声明该结构体的整个模块及其子模块中访问。在模块之外，只能访问公共字段。
+⏱ 2024-07-28 07:27:59 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-73-15229-15283&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;83-将程序变成库&#34;&gt;&lt;a href=&#34;#83-%e5%b0%86%e7%a8%8b%e5%ba%8f%e5%8f%98%e6%88%90%e5%ba%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.3 将程序变成库
 &lt;/h3&gt;&lt;h3 id=&#34;84-srcbin-目录&#34;&gt;&lt;a href=&#34;#84-srcbin-%e7%9b%ae%e5%bd%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.4 src/bin 目录
 &lt;/h3&gt;&lt;h3 id=&#34;85-属性&#34;&gt;&lt;a href=&#34;#85-%e5%b1%9e%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.5 属性
 &lt;/h3&gt;&lt;h3 id=&#34;86-测试与文档&#34;&gt;&lt;a href=&#34;#86-%e6%b5%8b%e8%af%95%e4%b8%8e%e6%96%87%e6%a1%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.6 测试与文档
-&lt;/h3&gt;&lt;h3 id=&#34;87-指定依赖项&#34;&gt;&lt;a href=&#34;#87-%e6%8c%87%e5%ae%9a%e4%be%9d%e8%b5%96%e9%a1%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.7 指定依赖项
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 你可以在普通代码中使用这些宏来检查不变条件，但请注意 assert! 和 assert_eq! 会包含在发布构建中。因此，可以改用 debug_assert! 和 debug_assert_eq! 来编写仅在调试构建中检查的断言。
+⏱ 2024-07-28 07:34:18 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-77-1847-2086&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;87-指定依赖项&#34;&gt;&lt;a href=&#34;#87-%e6%8c%87%e5%ae%9a%e4%be%9d%e8%b5%96%e9%a1%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.7 指定依赖项
 &lt;/h3&gt;&lt;h3 id=&#34;88-将-crate-发布到-cratesio&#34;&gt;&lt;a href=&#34;#88-%e5%b0%86-crate-%e5%8f%91%e5%b8%83%e5%88%b0-cratesio&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.8 将 crate 发布到 crates.io
 &lt;/h3&gt;&lt;h3 id=&#34;89-工作空间&#34;&gt;&lt;a href=&#34;#89-%e5%b7%a5%e4%bd%9c%e7%a9%ba%e9%97%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.9 工作空间
 &lt;/h3&gt;&lt;h3 id=&#34;810-更多好资源&#34;&gt;&lt;a href=&#34;#810-%e6%9b%b4%e5%a4%9a%e5%a5%bd%e8%b5%84%e6%ba%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.10 更多好资源
 &lt;/h3&gt;&lt;h2 id=&#34;第-9-章-结构体&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-9-%e7%ab%a0-%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 9 章 结构体
 &lt;/h2&gt;&lt;h3 id=&#34;91-具名字段型结构体&#34;&gt;&lt;a href=&#34;#91-%e5%85%b7%e5%90%8d%e5%ad%97%e6%ae%b5%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.1 具名字段型结构体
-&lt;/h3&gt;&lt;h3 id=&#34;92-元组型结构体&#34;&gt;&lt;a href=&#34;#92-%e5%85%83%e7%bb%84%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.2 元组型结构体
-&lt;/h3&gt;&lt;h3 id=&#34;93-单元型结构体&#34;&gt;&lt;a href=&#34;#93-%e5%8d%95%e5%85%83%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.3 单元型结构体
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 如果想创建一个值，就必须使用公共的类型关联函数，比如Vec::new()。
+⏱ 2024-07-28 08:35:07 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-83-3145-3214&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;92-元组型结构体&#34;&gt;&lt;a href=&#34;#92-%e5%85%83%e7%bb%84%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.2 元组型结构体
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在最基本的层面上，具名字段型结构体和元组型结构体非常相似。选择使用哪一个需要考虑易读性、无歧义性和简洁性。如果你喜欢用 . 运算符来获取值的各个组件，那么用名称来标识字段就能为读者提供更多信息，并且更容易防范拼写错误。如果你通常使用模式匹配来查找这些元素，那么元组型结构体会更好用。
+⏱ 2024-07-28 08:37:29 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-84-1547-1719&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;93-单元型结构体&#34;&gt;&lt;a href=&#34;#93-%e5%8d%95%e5%85%83%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.3 单元型结构体
 &lt;/h3&gt;&lt;h3 id=&#34;94-结构体布局&#34;&gt;&lt;a href=&#34;#94-%e7%bb%93%e6%9e%84%e4%bd%93%e5%b8%83%e5%b1%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.4 结构体布局
 &lt;/h3&gt;&lt;h3 id=&#34;95-用-impl-定义方法&#34;&gt;&lt;a href=&#34;#95-%e7%94%a8-impl-%e5%ae%9a%e4%b9%89%e6%96%b9%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.5 用 impl 定义方法
-&lt;/h3&gt;&lt;h3 id=&#34;96-关联常量&#34;&gt;&lt;a href=&#34;#96-%e5%85%b3%e8%81%94%e5%b8%b8%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.6 关联常量
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在 impl 块中定义的函数称为关联函数，因为它们是与特定类型相关联的。与关联函数相对的是自由函数，它是未定义在 impl 块中的语法项。
+⏱ 2024-07-28 09:20:41 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-87-2106-2305&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;96-关联常量&#34;&gt;&lt;a href=&#34;#96-%e5%85%b3%e8%81%94%e5%b8%b8%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.6 关联常量
 &lt;/h3&gt;&lt;h3 id=&#34;97-泛型结构体&#34;&gt;&lt;a href=&#34;#97-%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.7 泛型结构体
-&lt;/h3&gt;&lt;h3 id=&#34;98-带生命周期参数的泛型结构体&#34;&gt;&lt;a href=&#34;#98-%e5%b8%a6%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e5%8f%82%e6%95%b0%e7%9a%84%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.8 带生命周期参数的泛型结构体
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 你可以将 impl&lt;T&gt; Queue&lt;T&gt; 这一行解读为“对于任意元素类型 T，这里有一些在 Queue&lt;T&gt; 上可用的关联函数。”然后，你可以使用类型参数 T 作为关联函数定义中的类型。
+⏱ 2024-07-28 09:34:20 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-89-2603-2839&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;98-带生命周期参数的泛型结构体&#34;&gt;&lt;a href=&#34;#98-%e5%b8%a6%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e5%8f%82%e6%95%b0%e7%9a%84%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.8 带生命周期参数的泛型结构体
 &lt;/h3&gt;&lt;h3 id=&#34;99-带常量参数的泛型结构体&#34;&gt;&lt;a href=&#34;#99-%e5%b8%a6%e5%b8%b8%e9%87%8f%e5%8f%82%e6%95%b0%e7%9a%84%e6%b3%9b%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.9 带常量参数的泛型结构体
-&lt;/h3&gt;&lt;h3 id=&#34;910-让结构体类型派生自某些公共特型&#34;&gt;&lt;a href=&#34;#910-%e8%ae%a9%e7%bb%93%e6%9e%84%e4%bd%93%e7%b1%bb%e5%9e%8b%e6%b4%be%e7%94%9f%e8%87%aa%e6%9f%90%e4%ba%9b%e5%85%ac%e5%85%b1%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.10 让结构体类型派生自某些公共特型
-&lt;/h3&gt;&lt;h3 id=&#34;911-内部可变性&#34;&gt;&lt;a href=&#34;#911-%e5%86%85%e9%83%a8%e5%8f%af%e5%8f%98%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.11 内部可变性
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 常量泛型参数可以是任意整数类型、char 或 bool。不允许使用浮点数、枚举和其他类型。
+⏱ 2024-07-28 09:56:59 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-91-3252-3359&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;910-让结构体类型派生自某些公共特型&#34;&gt;&lt;a href=&#34;#910-%e8%ae%a9%e7%bb%93%e6%9e%84%e4%bd%93%e7%b1%bb%e5%9e%8b%e6%b4%be%e7%94%9f%e8%87%aa%e6%9f%90%e4%ba%9b%e5%85%ac%e5%85%b1%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.10 让结构体类型派生自某些公共特型
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 但是，如果你要开始使用这种 Point 类型，很快就会发现它有点儿难用。像这样写的话，Point不可复制或克隆，不能用 println!(&amp;quot;{:?}&amp;quot;, point); 打印，而且不支持 == 运算符和 != 运算符。这些特性中的每一个在 Rust 中都有名称——Copy、Clone、Debug 和 PartialEq，它们被称为特型。
+⏱ 2024-07-28 09:57:51 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-92-737-1245&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;911-内部可变性&#34;&gt;&lt;a href=&#34;#911-%e5%86%85%e9%83%a8%e5%8f%af%e5%8f%98%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.11 内部可变性
 &lt;/h3&gt;&lt;h2 id=&#34;第-10-章-枚举与模式&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-10-%e7%ab%a0-%e6%9e%9a%e4%b8%be%e4%b8%8e%e6%a8%a1%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 10 章 枚举与模式
-&lt;/h2&gt;&lt;h3 id=&#34;101-枚举&#34;&gt;&lt;a href=&#34;#101-%e6%9e%9a%e4%b8%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.1 枚举
-&lt;/h3&gt;&lt;h3 id=&#34;102-模式&#34;&gt;&lt;a href=&#34;#102-%e6%a8%a1%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.2 模式
-&lt;/h3&gt;&lt;h3 id=&#34;103-大局观&#34;&gt;&lt;a href=&#34;#103-%e5%a4%a7%e5%b1%80%e8%a7%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.3 大局观
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Rust 模式有点儿像针对所有数据的正则表达式。它们用于测试一个值是否具有特定的目标形态，可以一次从结构体或元组中把多个字段提取到局部变量中。
+⏱ 2024-07-28 10:01:53 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-94-1948-2019&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;101-枚举&#34;&gt;&lt;a href=&#34;#101-%e6%9e%9a%e4%b8%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.1 枚举
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 从整数到枚举的反向转换则行不通。
+⏱ 2024-07-28 10:42:02 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-95-2906-2922&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 论你的语言背景如何，在 Rust 中创建像 BinaryTree 这样的数据结构都可能需要做一些练习。起初并不容易看出应该把这些 Box 放在哪里。找到可行设计方案的方法之一是画出图 10-3 那样的图，展示你希望这些数据在内存中如何布局。
+⏱ 2024-07-28 10:53:41 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-95-13828-14010&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;102-模式&#34;&gt;&lt;a href=&#34;#102-%e6%a8%a1%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.2 模式
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌  切片型模式也与此相似，但与数组不同，切片具有可变长度，因此切片型模式不仅匹配值，还匹配长度。.. 在切片型模式中能匹配任意数量的元素 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-96-16120-16217&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 这里有点厉害 - ⏱ 2024-07-28 15:36:00&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌  从借来的汽车上搜刮零件可不是君子所为，Rust 同样不会容忍这么做。你可以使用 ref 模式来借用对部件的引用，但并不拥有它 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-96-20885-20978&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 略复杂 - ⏱ 2024-07-28 15:39:59&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 如果模式匹配成功，但此条件为假，就会继续尝试匹配下一个分支。
+⏱ 2024-07-28 15:43:58 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-96-23643-23673&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 尽管模式在 match 表达式中作用最为突出，但它们也可以出现在其他一些地方，通常用于代替标识符。但无论出现在哪里，其含义都是一样的：Rust 不是要将值存储到单个变量中，而是使用模式匹配来拆分值。
+⏱ 2024-07-28 15:53:50 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-96-26433-26563&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;103-大局观&#34;&gt;&lt;a href=&#34;#103-%e5%a4%a7%e5%b1%80%e8%a7%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.3 大局观
 &lt;/h3&gt;&lt;h2 id=&#34;第-11-章-特型与泛型&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-11-%e7%ab%a0-%e7%89%b9%e5%9e%8b%e4%b8%8e%e6%b3%9b%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 11 章 特型与泛型
 &lt;/h2&gt;&lt;h3 id=&#34;111-使用特型&#34;&gt;&lt;a href=&#34;#111-%e4%bd%bf%e7%94%a8%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.1 使用特型
-&lt;/h3&gt;&lt;h3 id=&#34;112-定义与实现特型&#34;&gt;&lt;a href=&#34;#112-%e5%ae%9a%e4%b9%89%e4%b8%8e%e5%ae%9e%e7%8e%b0%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.2 定义与实现特型
-&lt;/h3&gt;&lt;h3 id=&#34;113-完全限定的方法调用&#34;&gt;&lt;a href=&#34;#113-%e5%ae%8c%e5%85%a8%e9%99%90%e5%ae%9a%e7%9a%84%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.3 完全限定的方法调用
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌  特型是一种语言特性，我们可以说某类型支持或不支持某个特型。大多数情况下，特型代表着一种能力，即一个类型能做什么。 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-99-584-674&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;💭 一句话讲清特型 - ⏱ 2024-07-28 16:17:25&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 Clone 和 Iterator 的各个方法在没有任何特殊导入的情况下就能工作，因为默认情况下它们始终在作用域中：它们是标准库预导入的一部分，Rust 会把这些名称自动导入每个模块中。事实上，预导入主要就是一些精心挑选的特型。第 13 章会介绍其中的许多内容。
+⏱ 2024-07-28 16:32:07 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-99-3071-3239&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 在 Rust 中使用特型编写多态代码有两种方法：特型对象和泛型
+⏱ 2024-07-28 17:01:07 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-99-3844-3875&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 本节中介绍的特性（限界、where 子句、生命周期参数等）可用于所有泛型语法项，而不仅仅是函数。
+⏱ 2024-07-28 16:55:56 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-99-15104-15183&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 使用特型对象的另一个原因可能是想减少编译后代码的总大小。Rust 可能会不得不多次编译泛型函数，针对用到了它的每种类型各编译一次。而这可能会使二进制文件变大，这种现象在 C++ 圈子里叫作代码膨胀。如今，内存资源充裕，大多数人可以不在乎代码大小，但确实仍然存在着某种受限环境。
+⏱ 2024-07-28 16:58:07 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-99-16493-16665&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 除了像制作沙拉这种问题或是低资源环境之类的情况，与特型对象相比，泛型具有 3 个重要优势，因此在 Rust 中，泛型是更常见的选择。
+⏱ 2024-07-28 16:58:15 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-99-16690-16756&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;112-定义与实现特型&#34;&gt;&lt;a href=&#34;#112-%e5%ae%9a%e4%b9%89%e4%b8%8e%e5%ae%9e%e7%8e%b0%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.2 定义与实现特型
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Rust 允许在任意类型上实现任意特型，但特型或类型二者必须至少有一个是在当前 crate 中新建的。
+⏱ 2024-07-28 17:26:56 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-100-4637-4688&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 serde 库提供了一个很好的例子，表明在标准类型上实现用户定义的特型非常有用。serde 是一个序列化库。也就是说，你可以使用 serde 将 Rust 数据结构写入磁盘，稍后再重新加载它们。这个库定义了一个特型 Serialize，它为该库支持的每种数据类型都提供了实现。因此在 serde 源代码中，有一些代码为 bool、i8、i16、i32、数组类型和元组类型等内置类型，以及像 Vec 和HashMap 这样的标准数据结构实现了 Serialize。
+⏱ 2024-07-28 17:28:13 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-100-6334-6914&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 特型对象实际上是为最简单的特型类型而设计的，这些类型都可以使用 Java 中的接口或 C++ 中的抽象基类来实现。特型的高级特性很有用，但它们不能与特型对象共存，因为一旦有了特型对象，就会失去 Rust 对你的程序进行类型检查时所必需的类型信息。
+⏱ 2024-07-28 17:34:37 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-100-10290-10413&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;113-完全限定的方法调用&#34;&gt;&lt;a href=&#34;#113-%e5%ae%8c%e5%85%a8%e9%99%90%e5%ae%9a%e7%9a%84%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.3 完全限定的方法调用
 &lt;/h3&gt;&lt;h3 id=&#34;114-定义类型之间关系的特型&#34;&gt;&lt;a href=&#34;#114-%e5%ae%9a%e4%b9%89%e7%b1%bb%e5%9e%8b%e4%b9%8b%e9%97%b4%e5%85%b3%e7%b3%bb%e7%9a%84%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.4 定义类型之间关系的特型
-&lt;/h3&gt;&lt;h3 id=&#34;115-逆向工程求限界&#34;&gt;&lt;a href=&#34;#115-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e6%b1%82%e9%99%90%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.5 逆向工程求限界
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 迄今为止，每种面向对象的语言都内置了某种对迭代器的支持，迭代器是用以遍历某种值序列的对象。
+⏱ 2024-07-28 17:45:48 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-102-1519-1564&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 我们已经展示了很多涉及迭代器的示例。之所以花了这么多篇幅，是因为迭代器是迄今为止使用关联类型的最主要场景。但当特型需要包含的不仅仅是方法的时候，关联类型会很有用。
+⏱ 2024-07-28 17:51:51 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-102-6606-6687&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;115-逆向工程求限界&#34;&gt;&lt;a href=&#34;#115-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e6%b1%82%e9%99%90%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.5 逆向工程求限界
 &lt;/h3&gt;&lt;h3 id=&#34;116-以特型为基础&#34;&gt;&lt;a href=&#34;#116-%e4%bb%a5%e7%89%b9%e5%9e%8b%e4%b8%ba%e5%9f%ba%e7%a1%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.6 以特型为基础
 &lt;/h3&gt;&lt;h2 id=&#34;第-12-章-运算符重载&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-12-%e7%ab%a0-%e8%bf%90%e7%ae%97%e7%ac%a6%e9%87%8d%e8%bd%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 12 章 运算符重载
 &lt;/h2&gt;&lt;h3 id=&#34;121-算术运算符与按位运算符&#34;&gt;&lt;a href=&#34;#121-%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97%e7%ac%a6%e4%b8%8e%e6%8c%89%e4%bd%8d%e8%bf%90%e7%ae%97%e7%ac%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;12.1 算术运算符与按位运算符
@@ -684,10 +1007,34 @@
 &lt;/h3&gt;&lt;h3 id=&#34;145-回调&#34;&gt;&lt;a href=&#34;#145-%e5%9b%9e%e8%b0%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;14.5 回调
 &lt;/h3&gt;&lt;h3 id=&#34;146-高效地使用闭包&#34;&gt;&lt;a href=&#34;#146-%e9%ab%98%e6%95%88%e5%9c%b0%e4%bd%bf%e7%94%a8%e9%97%ad%e5%8c%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;14.6 高效地使用闭包
 &lt;/h3&gt;&lt;h2 id=&#34;第-15-章-迭代器&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-15-%e7%ab%a0-%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 15 章 迭代器
-&lt;/h2&gt;&lt;h3 id=&#34;151-iterator-特型与-intoiterator-特型&#34;&gt;&lt;a href=&#34;#151-iterator-%e7%89%b9%e5%9e%8b%e4%b8%8e-intoiterator-%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.1 Iterator 特型与 IntoIterator 特型
-&lt;/h3&gt;&lt;h3 id=&#34;152-创建迭代器&#34;&gt;&lt;a href=&#34;#152-%e5%88%9b%e5%bb%ba%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.2 创建迭代器
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 迭代器是一个值，它可以生成一系列值，通常用来执行循环操作
+⏱ 2024-07-28 18:20:18 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-131-747-784&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这就是函数式编程语言的标准风格，非常注重表达能力。Rust 的迭代器都经过了精心设计，以确保编译器可以把它们翻译成优秀的机器码。
+⏱ 2024-07-28 18:21:42 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-131-2690-2754&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;151-iterator-特型与-intoiterator-特型&#34;&gt;&lt;a href=&#34;#151-iterator-%e7%89%b9%e5%9e%8b%e4%b8%8e-intoiterator-%e7%89%b9%e5%9e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.1 Iterator 特型与 IntoIterator 特型
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 正如我们所说，迭代器是实现了 Iterator 的任意类型。可迭代者是任何实现了 IntoIterator 的类型：你可以通过调用它的 into_iter 方法来获得一个迭代器。在这里，向量引用 &amp;amp;v 就是可迭代者。迭代器能生成值。迭代器生成的值是条目。在这里，条目是 &amp;ldquo;antimony&amp;rdquo;、&amp;ldquo;arsenic&amp;rdquo; 等。接收迭代器所生成条目的代码是消费者。在这里，for 循环体就是消费者。
+⏱ 2024-07-28 21:23:26 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-132-3015-3759&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;152-创建迭代器&#34;&gt;&lt;a href=&#34;#152-%e5%88%9b%e5%bb%ba%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.2 创建迭代器
 &lt;/h3&gt;&lt;h3 id=&#34;153-迭代器适配器&#34;&gt;&lt;a href=&#34;#153-%e8%bf%ad%e4%bb%a3%e5%99%a8%e9%80%82%e9%85%8d%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.3 迭代器适配器
-&lt;/h3&gt;&lt;h3 id=&#34;154-消耗迭代器&#34;&gt;&lt;a href=&#34;#154-%e6%b6%88%e8%80%97%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.4 消耗迭代器
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 map 迭代器会按值将每个条目传给闭包，然后将闭包结果的所有权转移给自己的消费者。filter迭代器会通过共享引用将每个条目传给闭包，并保留所有权以便再把选定的条目传给自己的消费者。这就是为什么该示例必须解引用 s 以便将其与 &amp;ldquo;iguanas&amp;rdquo; 进行比较：filter 迭代器的条目类型是 &amp;amp;str，因此闭包参数 s 的类型是 &amp;amp;&amp;amp;str。
+⏱ 2024-08-01 08:36:31 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-134-3955-4363&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 iter 调用会返回数组元素的迭代器，map 调用会返回第二个迭代器，第二个迭代器会对第一个迭代器生成的每个值调用闭包。但是这里没有任何代码会实际用到整个链条的值，所以 next 方法永远不会执行。
+⏱ 2024-07-28 22:13:14 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-134-5287-5455&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 第二个要点是，迭代器的适配器是一种零成本抽象。由于 map、filter 和其他类似的适配器都是泛型的，因此将它们应用于迭代器就会专门针对所涉及的特定迭代器类型生成特化代码
+⏱ 2024-08-01 08:39:37 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-134-6007-6155&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;154-消耗迭代器&#34;&gt;&lt;a href=&#34;#154-%e6%b6%88%e8%80%97%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.4 消耗迭代器
 &lt;/h3&gt;&lt;h3 id=&#34;155-实现自己的迭代器&#34;&gt;&lt;a href=&#34;#155-%e5%ae%9e%e7%8e%b0%e8%87%aa%e5%b7%b1%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%99%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.5 实现自己的迭代器
 &lt;/h3&gt;&lt;h2 id=&#34;第-16-章-集合&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-16-%e7%ab%a0-%e9%9b%86%e5%90%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 16 章 集合
 &lt;/h2&gt;&lt;h3 id=&#34;161-概述&#34;&gt;&lt;a href=&#34;#161-%e6%a6%82%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;16.1 概述
@@ -703,7 +1050,11 @@
 &lt;/h2&gt;&lt;h3 id=&#34;171-一些-unicode-背景知识&#34;&gt;&lt;a href=&#34;#171-%e4%b8%80%e4%ba%9b-unicode-%e8%83%8c%e6%99%af%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.1 一些 Unicode 背景知识
 &lt;/h3&gt;&lt;h3 id=&#34;172-字符char&#34;&gt;&lt;a href=&#34;#172-%e5%ad%97%e7%ac%a6char&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.2 字符（char）
 &lt;/h3&gt;&lt;h3 id=&#34;173-string-与-str&#34;&gt;&lt;a href=&#34;#173-string-%e4%b8%8e-str&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.3 String 与 str
-&lt;/h3&gt;&lt;h3 id=&#34;174-格式化各种值&#34;&gt;&lt;a href=&#34;#174-%e6%a0%bc%e5%bc%8f%e5%8c%96%e5%90%84%e7%a7%8d%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.4 格式化各种值
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 String 通过封装 Vec&lt;u8&gt; 实现，并可以确保向量中的内容永远是格式良好的 UTF-8。Rust 永远不会把 String 改成更复杂的表示形式，因此你可以假设 String 的性能表现始终会和 Vec 保持一致。
+⏱ 2024-07-31 08:17:03 ^CB-DuSEyWEwQD5u6pm6ooBZWF04-150-1491-1740&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;174-格式化各种值&#34;&gt;&lt;a href=&#34;#174-%e6%a0%bc%e5%bc%8f%e5%8c%96%e5%90%84%e7%a7%8d%e5%80%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.4 格式化各种值
 &lt;/h3&gt;&lt;h3 id=&#34;175-正则表达式&#34;&gt;&lt;a href=&#34;#175-%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.5 正则表达式
 &lt;/h3&gt;&lt;h3 id=&#34;176-规范化&#34;&gt;&lt;a href=&#34;#176-%e8%a7%84%e8%8c%83%e5%8c%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.6 规范化
 &lt;/h3&gt;&lt;h2 id=&#34;第-18-章-输入与输出&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-18-%e7%ab%a0-%e8%be%93%e5%85%a5%e4%b8%8e%e8%be%93%e5%87%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 18 章 输入与输出
@@ -750,77 +1101,421 @@
 &lt;/h3&gt;&lt;h2 id=&#34;作者介绍&#34;&gt;&lt;a href=&#34;#%e4%bd%9c%e8%80%85%e4%bb%8b%e7%bb%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;作者介绍
 &lt;/h2&gt;&lt;h2 id=&#34;封面介绍&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2%e4%bb%8b%e7%bb%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面介绍
 &lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
-&lt;/h1&gt;&lt;h2 id=&#34;41-所有权-1&#34;&gt;&lt;a href=&#34;#41-%e6%89%80%e6%9c%89%e6%9d%83-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.1 所有权
+&lt;/h1&gt;&lt;h2 id=&#34;24-处理命令行参数-1&#34;&gt;&lt;a href=&#34;#24-%e5%a4%84%e7%90%86%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2.4 处理命令行参数
 &lt;/h2&gt;&lt;h3 id=&#34;划线评论&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 所以在进行迭代时，需要告诉 Rust，该向量的所有权应该留在 numbers 上，我们只是为了本次循环而借用它的元素。&amp;amp;numbers[1..] 中的 &amp;amp; 运算符会从向量中借用从第二个元素开始的引用。for 循环会遍历这些被引用的元素，让 m 依次借出每个元素。*m 中的 * 运算符会将 m解引用，产生它所引用的值，这就是要传给 gcd 的下一个 u64。最后，由于 numbers 拥有着此向量，因此当 main 末尾的 numbers 超出作用域时，Rust 会自动释放它  ^6733360-7T2NEr9RH
+- 💭 很关键
+- ⏱ 2024-07-29 12:50:31&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;41-所有权-1&#34;&gt;&lt;a href=&#34;#41-%e6%89%80%e6%9c%89%e6%9d%83-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.1 所有权
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-1&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 通常，拥有对象意味着可以决定何时释放此对象：当销毁拥有者时，它拥有的对象也会随之销毁。  ^6733360-7T42AgppO
+- 💭 这句话是所有权的真正意义
+- ⏱ 2024-07-30 08:25:11&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-2&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 然而，在 Rust 中，所有权这个概念内置于语言本身，并通过编译期检查强制执行。每个值都有决定其生命周期的唯一拥有者。当拥有者被释放时，它拥有的值也会同时被释放，在 Rust 术语中，释放的行为被称为丢弃（drop）。这些规则便于通过检查代码确定任意值的生命周期，也提供了系统级语言本应支持的对生命周期的控制。  ^6733360-7SXYmOiLp
 - 💭 a拥有b的确切含义，如果a不在了，b也就没有继续存在的意义了
 - ⏱ 2024-07-26 08:40:47&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;划线评论-1&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;h3 id=&#34;划线评论-3&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 当程序调用 Box::new 时，它会在堆上为由两个 f64 值构成的元组分配空间，然后将其参数(0.625, 0.5) 移进去，并返回指向该空间的指针。当控制流抵达对 assert_eq! 的调用时，栈帧如图 4-3 所示。  ^6733360-7T42No8wx
+- 💭 【调查】此处的栈帧和CSAPP中的函数栈帧呼应
+- ⏱ 2024-07-30 08:28:25&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-4&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 [插图]  ^6733360-7SXYD2M8A
 - 💭 这张图画得非常棒
 - ⏱ 2024-07-26 08:44:46&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-5&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 所以编辑器对你的程序所进行的分析才能更强大  ^6733360-7T42XB99M
+- 💭 此处应该是编译器
+- ⏱ 2024-07-30 08:30:56&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;42-移动-1&#34;&gt;&lt;a href=&#34;#42-%e7%a7%bb%e5%8a%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.2 移动
-&lt;/h2&gt;&lt;h3 id=&#34;划线评论-2&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-6&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 从某种意义上说，C++ 和 Python 选择了相反的权衡：Python 以需要引用计数（以及更广泛意义上的垃圾回收）为代价，让赋值的开销变得非常低。C++ 则选择让全部内存的所有权保持清晰，而代价是在赋值时要执行对象的深拷贝。一般来说，C++ 程序员不太热衷这种选择：深拷贝的开销可能很昂贵，而且通常有更实用的替代方案。  ^6733360-7SXYZHxuo
 - 💭 c++中是使用move吗？
 - ⏱ 2024-07-26 08:50:21&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;划线评论-3&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;h3 id=&#34;划线评论-7&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 就必须调用向量的 clone 方法，该方法会执行向量及其元素的深拷贝  ^6733360-7SXZ717nU
 - 💭 clone完成深拷贝
 - ⏱ 2024-07-26 08:52:09&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;划线评论-4&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;h3 id=&#34;划线评论-8&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 调用 Vec::new() 构造一个新向量并返回，返回的不是指向此向量的指针，而是向量本身：它的所有权从 Vec::new 转移给了变量 composers。同样，to_string 调用返回的是一个新的String 实例。  ^6733360-7T43lssmG
+- 💭 【注意】此处返回实例而不是指针
+- ⏱ 2024-07-30 08:36:49&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-9&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 前面的例子中都有非常简单的控制流，那么该如何在更复杂的代码中移动呢？一般性原则是，如果一个变量的值有可能已经移走，并且从那以后尚未明确赋予其新值，那么它就可以被看作是未初始化状态  ^6733360-7T43rUbFi
+- 💭 【注意】这里可能出题
+- ⏱ 2024-07-30 08:38:24&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-10&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-10&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 当我们将向量直接传给循环（如 for &amp;hellip; in v）时，会将向量从 v 中移动出去，让 v 变成未初始化状态。for 循环的内部机制会获取向量的所有权并将其分解为元素。在每次迭代中，循环都会将另一个元素转移给变量 s。由于 s 现在拥有字符串，因此可以在打印之前在循环体中修改它。在循环的过程中，向量本身对代码不再可见，因此也就无法观察到它正处在某种部分清空的状态  ^6733360-7SY09PJGy
 - 💭 这个例子非常不错，简单for循环就会将v中元素的所有权转移给s，然后s给当前拥有的字符后面追加！，这样的for循环实际上是在消耗或者消费v，for循环之后v也就不存在了
 - ⏱ 2024-07-26 09:08:07&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;划线评论-5&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;h3 id=&#34;划线评论-11&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-11&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 replace 调用会移出 composers[0].name 的值，将 None 留在原处，并将原始值的所有权转移给其调用者。事实上，这种使用 Option 的方式非常普遍，所以该类型专门为此提供了一个 take方法，以便更清晰地写出上述操作，如下所示：  ^6733360-7SY0n6sYg
 - 💭 这些操作都发生了所有权的转移，从上面的例子可以看出，结构体和vec拥有自己所有元素的所有权，不能将单独的一个或者几个元素的所有权从里面摘出来，只能通过别的方法置换或者获取所有权
 - ⏱ 2024-07-26 09:11:24&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;43-copy-类型关于移动的例外情况-1&#34;&gt;&lt;a href=&#34;#43-copy-%e7%b1%bb%e5%9e%8b%e5%85%b3%e4%ba%8e%e7%a7%bb%e5%8a%a8%e7%9a%84%e4%be%8b%e5%a4%96%e6%83%85%e5%86%b5-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.3 Copy 类型：关于移动的例外情况
-&lt;/h2&gt;&lt;h3 id=&#34;划线评论-6&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-12&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-12&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 标准的 Copy 类型包括所有机器整数类型和浮点数类型、char 类型和 bool 类型，以及某些其他类型。Copy 类型的元组或固定大小的数组本身也是 Copy 类型。  ^6733360-7T441sp61
+- 💭 【注意】如果元组和数组的元素本身就是copy类型的，那么数组和元组也就支持copy trait
+- ⏱ 2024-07-30 08:47:09&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-13&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-13&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 那么自定义类型呢？默认情况下，struct 类型和 enum 类型不是 Copy 类型  ^6733360-7SY0ROqjB
 - 💭 自定义的一般也不是copy类型
 - ⏱ 2024-07-26 09:18:57&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-14&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-14&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 。如果此结构体的所有字段本身都是Copy 类型，那么也可以通过将属性 #[derive(Copy, Clone)] 放置在此定义之上来创建 Copy类型  ^6733360-7T447KKQz
+- 💭 后面的章节也有使用过
+- ⏱ 2024-07-30 08:48:42&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;44-rc-与-arc共享所有权-1&#34;&gt;&lt;a href=&#34;#44-rc-%e4%b8%8e-arc%e5%85%b1%e4%ba%ab%e6%89%80%e6%9c%89%e6%9d%83-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4.4 Rc 与 Arc：共享所有权
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-15&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-15&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 。Rust 假定 Rc 指针的引用目标通常都可以共享，因此就不能是可变的  ^6733360-7T44s3W0p
+- 💭 【注意】此处也很重要，Rc共享指针的内容不可变
+- ⏱ 2024-07-30 08:53:42&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-16&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-16&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 借用对值的引用  ^6733360-7T44wmH4a
+- 💭 【重要】“借用”和“引用“概念的联系就在这里
+- ⏱ 2024-07-30 08:54:46&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;51-对值的引用-1&#34;&gt;&lt;a href=&#34;#51-%e5%af%b9%e5%80%bc%e7%9a%84%e5%bc%95%e7%94%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.1 对值的引用
-&lt;/h2&gt;&lt;h3 id=&#34;划线评论-7&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-17&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-17&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 共享引用允许你读取但不能修改其引用目标。但是，你可以根据需要同时拥有任意数量的对特定值的共享引用。表达式 &amp;amp;e 会产生对 e 值的共享引用，如果 e 的类型为 T，那么 &amp;amp;e 的类型就是 &amp;amp;T，读作“ref T”。共享引用是 Copy 类型  ^6733360-7T44MFel7
+- 💭 【注意】共享引用时copy类型的，就是说可以将一个共享引用赋给另一个，二者的内容完全一致，另一个复制引用部分的内容
+- ⏱ 2024-07-30 08:58:47&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-18&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-18&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 只要存在对一个值的共享引用，即使是它的拥有者也不能修改它，该值会被锁定。当 show 正在使用 table 时，没有人可以修改它。类似地，如果有某个值的可变引用，那么它就会独占对该值的访问权，在可变引用消失之前，即使拥有者也根本无法使用该值。事实证明，让共享和修改保持完全分离对于内存安全至关重要，本章会在稍后内容中讨论原因。  ^6733360-7SYmnPShN
 - 💭 非常重要
 - ⏱ 2024-07-26 14:47:29&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-19&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-19&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 当通过将值的所有权转移给函数的方式将这个值传给函数时，就可以说按值传递了它。如果改为将值的引用传给函数，就可以说按引用传递了它。  ^6733360-7T44V3Ngc
+- 💭 【重要】按值传递参数和按引用传递参数
+- ⏱ 2024-07-30 09:00:51&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;52-使用引用-1&#34;&gt;&lt;a href=&#34;#52-%e4%bd%bf%e7%94%a8%e5%bc%95%e7%94%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.2 使用引用
-&lt;/h2&gt;&lt;h3 id=&#34;划线评论-8&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-20&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-20&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 由于引用在 Rust 中随处可见，因此 . 运算符就会按需对其左操作数隐式解引用  ^6733360-7SYnQmDrl
 - 💭 此处仅仅对.运算符可以省去解引用的符号，但是对于整数等单个变量不行？
 - ⏱ 2024-07-26 15:09:47&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;划线评论-9&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;h3 id=&#34;划线评论-21&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-21&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 简而言之，C++ 会在引用和左值（引用内存中位置的表达式）之间隐式转换，并且这种转换会出现在任何需要转换的地方，而在 Rust 中要使用 &amp;amp; 运算符和 * 运算符来创建引用（借用）和追踪引用（解引用），不过 . 运算符不需要做这种转换，它会隐式借用和解引用。  ^6733360-7T455G7sQ
+- 💭 【重要】不错的总结
+- ⏱ 2024-07-30 09:03:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-22&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-22&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 乍一看，这种行为可能太显而易见，不值一提：现在 r 当然会指向 y，因为我们在其中存储了 &amp;amp;y。但特意指出这一点是因为 C++ 引用的行为与此截然不同：如前所述，在 C++ 中对引用赋值会将新值存储在其引用目标中而非指向新值。C++ 的引用一旦完成初始化，就无法再指向别处了  ^6733360-7T45ccmAQ
+- 💭 【重要】引用变量赋值，就是将引用指向新的地址
+- ⏱ 2024-07-30 09:05:04&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-23&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-23&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 虽然 rrx 和 rry 指向的是不同的值（rx 和 ry），这里的断言最终仍然会成功，因为 == 运算符会追踪所有引用并对它们的最终目标 x 和 y 进行比较  ^6733360-7T45j4fxJ
+- 💭 【重要】运算符会自动追踪最后的引用值，自动解引用
+- ⏱ 2024-07-30 09:06:46&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-24&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-24&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 ust 的引用永远都不会为空。与 C 的 NULL 或 C++ 的 nullptr 类似的东西是不存在的。引用没有默认初始值（在初始化之前不能使用任何变量，无论其类型如何），并且 Rust 不会将整数转换为引用（在 unsafe 代码外）。因此，不能将 0 转换成引用。C 代码和 C++ 代码通常会使用空指针来指示值的缺失：当可用内存充足时，malloc 函数会返回指向新内存块的指针，否则会返回 nullptr。在 Rust 中，如果需要用一个值来表示对某个“可能不存在”事物的引用，请使用类型 Option&amp;lt;&amp;amp;T&amp;gt;。在机器码级别，Rust 会将 None 表示为空指针，将 Some(r) 表示为非零地址（其中 r 是 &amp;amp;T 型的值），因此 Option&amp;lt;&amp;amp;T&amp;gt; 与 C 或 C++ 中的可空指针一样高效，但更安全：它的类型要求你在使用之前必须检查它是否为 None。  ^6733360-7T45pcTH6
+- 💭 【重要】通过枚举值的做法，省去了c++中令人诟病的空指针引用的问题
+- ⏱ 2024-07-30 09:08:16&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-25&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-25&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;📌 在这种情况下，Rust 会创建一个匿名变量来保存此表达式的值，并让该引用指向它。这个匿名变量的生命周期取决于你对引用做了什么。  ^6733360-7SYEhqSrK
 - 💭 这里很特殊
 - ⏱ 2024-07-26 19:20:45&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;53-引用安全-1&#34;&gt;&lt;a href=&#34;#53-%e5%bc%95%e7%94%a8%e5%ae%89%e5%85%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.3 引用安全
-&lt;/h2&gt;&lt;h3 id=&#34;划线评论-10&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-10&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-26&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-26&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;📌 第一个约束限制了引用的生命周期可以有多大，而第二个约束则限制了它可以有多小。Rust 会尝试找出能让每个引用都满足这两个约束的生命周期。  ^6733360-7SYEVPvU8
-- 💭 厉害
-- ⏱ 2024-07-26 19:30:42&lt;/p&gt;
+&lt;p&gt;📌 第一个约束限制了引用的生命周期可以有多大，而第二个约束则限制了它可以有多小。  ^6733360-7T4jJOTQ9
+- 💭 【解释】这一部分实际上描述了x, &amp;amp;x, r之间生命周期的关系。这里有两层意思，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;生命周期，表示变量从定义到编译器假定不会再被使用为止，表示变量的生命周期；&lt;/li&gt;
+&lt;li&gt;生命周期的关系。假如t(m)表示m的生命周期，那么很明显，t(&amp;amp;x) &amp;lt;= t(x)， t(r) &amp;lt;= t(&amp;amp;x)，综合一下，就是t(r)&amp;lt;=t(&amp;amp;x) &amp;lt;= t(x)，所以r和x分别决定了引用&amp;amp;x生命周期的下界和上界
+&lt;ul&gt;
+&lt;li&gt;⏱ 2024-07-30 12:47:07&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;划线评论-27&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-27&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 这是 Rust 用来处理所有代码的过程的本质。引入更多的语言特性（比如数据结构和函数调用），必然会引入一些全新种类的约束，但基本原则保持不变：首先，要了解程序中使用各种引用的方式带来的约束；其次，找出能同时满足这些约束的生命周期。这与 C 和 C++ 程序员不得不人工担负的过程没有多大区别，唯一的区别是 Rust 知道这些规则并会强制执行。  ^6733360-7T4k0sK51
+- 💭 rust的编译器做了非常多的东西
+- ⏱ 2024-07-30 12:51:13&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-28&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-28&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 相反，如果确实看到一个带有 g(p: &amp;amp;i32) 签名的函数（或者带着生命周期写成 g&amp;lt;&amp;lsquo;a&amp;gt;(p: &amp;amp;&amp;lsquo;a i32)），那么就可以肯定它没有将其参数 p 藏在任何超出此调用点的地方。无须查看 g 的具体定义，签名本身就可以告诉我们 g 用它的参数能做什么，不能做什么。当你尝试为函数调用建立安全保障时，这一认知会非常有价值  ^6733360-7T4kMVSLa
+- 💭 不好懂
+- ⏱ 2024-07-30 13:03:09&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;54-共享与可变-1&#34;&gt;&lt;a href=&#34;#54-%e5%85%b1%e4%ba%ab%e4%b8%8e%e5%8f%af%e5%8f%98-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5.4 共享与可变
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-29&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-29&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 共享访问是只读访问。　　共享引用借用的值是只读的。在共享引用的整个生命周期中，无论是它的引用目标，还是可从该引用目标间接访问的任何值，都不能被任何代码改变。这种结构中不能存在对任何内容的有效可变引用，其拥有者应保持只读状态，等等。值完全冻结了。可变访问是独占访问。　　可变引用借用的值只能通过该引用访问。在可变引用的整个生命周期中，无论是它的引用目标，还是该引用目标间接访问的任何目标，都没有任何其他路径可访问。对可变引用来说，唯一能和自己的生命周期重叠的引用就是从可变引用本身借出的引用  ^6733360-7T4JySLbP
+- 💭 共享引用无论如何都不能修改值，可变引用只有一种修改路径，而且这个引用必须和自己引用本身借出的引用
+- ⏱ 2024-07-30 19:21:25&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-30&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-30&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 请注意，在这两种情况下，指向引用目标的所有权路径在此引用的生命周期内都无法更改。对于共享借用，这条路径是只读的；对于可变借用，这条路径是完全不可访问的。所以程序无法做出任何会使该引用无效的操作。  ^6733360-7T4L07M0T
+- 💭 从下面的例子可以看出：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;引用是可以传递的，但是共享和可变引用不能互相转换和传递，只能各自传递；&lt;/li&gt;
+&lt;li&gt;要么全部是共享引用，要么只有一个可变引用
+&lt;ul&gt;
+&lt;li&gt;⏱ 2024-07-30 19:43:23&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;65-if-与-match-1&#34;&gt;&lt;a href=&#34;#65-if-%e4%b8%8e-match-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.5 if 与 match
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-31&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-31&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 对模式的强大能力来说，这还只是“冰山一角”。模式可以匹配一系列值，它可以解构元组、可以匹配结构体的各个字段、可以追踪引用、可以借用部分值，等等  ^6733360-7SZGjSt56
+- 💭 很厉害的样子
+- ⏱ 2024-07-27 11:38:33&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;67-return-表达式-1&#34;&gt;&lt;a href=&#34;#67-return-%e8%a1%a8%e8%be%be%e5%bc%8f-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.7 return 表达式
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-32&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-32&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 讲解 ? 运算符  ^6733360-7SZH9podi
+- 💭 比较神奇
+- ⏱ 2024-07-27 11:51:15&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;69-函数与方法调用-1&#34;&gt;&lt;a href=&#34;#69-%e5%87%bd%e6%95%b0%e4%b8%8e%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6.9 函数与方法调用
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-33&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-33&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 自然，也支持链式方法调用  ^6733360-7SZKrkQ8H
+- 💭 函数式编程的体现
+- ⏱ 2024-07-27 12:41:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;82-模块-1&#34;&gt;&lt;a href=&#34;#82-%e6%a8%a1%e5%9d%97-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8.2 模块
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-34&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-34&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 模块是一组语法项的集合，这些语法项具有命名的特性，比如此示例中的 Spore 结构体和 3 个函数。pub 关键字会使某个语法项声明为公共项，这样它就可以从模块外部访问了。  ^6733360-7T0UXK1o4
+- 💭 这里的组织方式模仿的python
+- ⏱ 2024-07-28 07:08:48&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-35&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-35&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 面我们一直把 spores 模块的主体代码包裹在花括号中。在这里，我们告诉 Rust 编译器，spores 模块保存在一个单独的名为 spores.rs 的文件中  ^6733360-7T0VxeOcu
+- 💭 非常类似于py
+- ⏱ 2024-07-28 07:17:33&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-36&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-36&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 其实，每个模块都会以“白板”开头，并且必须导入它使用的名称：  ^6733360-7T0VTLbnq
+- 💭 此处的super是父模块的意思
+- ⏱ 2024-07-28 07:23:06&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-37&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-37&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 常量有点儿像 C++ 的 #define：该值在每个使用了它的地方都会编译到你的代码中。静态变量是在程序开始运行之前设置并持续到程序退出的变量。在代码中对魔数和字符串要使用常量，而在处理大量的数据或需要借用常量值的引用时则要使用静态变量。  ^6733360-7T0WhDFe8
+- 💭 常量和变量的使用场合不同
+- ⏱ 2024-07-28 07:28:59&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;91-具名字段型结构体-1&#34;&gt;&lt;a href=&#34;#91-%e5%85%b7%e5%90%8d%e5%ad%97%e6%ae%b5%e5%9e%8b%e7%bb%93%e6%9e%84%e4%bd%93-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9.1 具名字段型结构体
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-38&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-38&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 即使一个结构体声明为 pub，它的字段也可以是私有的  ^6733360-7T10AouV3
+- 💭 这里非常像C++
+- ⏱ 2024-07-28 08:34:40&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;102-模式-1&#34;&gt;&lt;a href=&#34;#102-%e6%a8%a1%e5%bc%8f-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10.2 模式
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-39&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-39&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 切片型模式也与此相似，但与数组不同，切片具有可变长度，因此切片型模式不仅匹配值，还匹配长度。.. 在切片型模式中能匹配任意数量的元素  ^6733360-7T1sc6eNi
+- 💭 这里有点厉害
+- ⏱ 2024-07-28 15:36:13&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-40&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-40&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在这里，字段 account.name 和 account.language 会移动到局部变量 name 和 language中。account 的其余部分均已丢弃。这就是为什么我们之后不能再借用它的引用  ^6733360-7TkYEdIJH
+- 💭 【注意】这里要特别留意
+- ⏱ 2024-08-10 11:38:29&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-41&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-41&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 从借来的汽车上搜刮零件可不是君子所为，Rust 同样不会容忍这么做。你可以使用 ref 模式来借用对部件的引用，但并不拥有它  ^6733360-7T1srZ4fY
+- 💭 略复杂
+- ⏱ 2024-07-28 15:40:08&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-42&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-42&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Rust 发出了几个关于此代码的警告——特别是，match 的最后一个分支是不可达的。解决此问题的一种简单方式是在匹配分支中使用 if 表达式：  ^6733360-7TkZ5KAqN
+- 💭 可以参考这里的代码从匹配的Some结果中提取变量
+- ⏱ 2024-08-10 11:45:16&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-43&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-43&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 使用@模式绑定  ^6733360-7T1tkOshH
+- 💭 暂时看不重要
+- ⏱ 2024-07-28 15:53:38&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第-11-章-特型与泛型-1&#34;&gt;&lt;a href=&#34;#%e7%ac%ac-11-%e7%ab%a0-%e7%89%b9%e5%9e%8b%e4%b8%8e%e6%b3%9b%e5%9e%8b-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第 11 章 特型与泛型
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-44&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-44&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 out 的类型是 &amp;amp;mut dyn Write，意思是“对实现了 Write 特型的任意值的可变引用”。  ^6733360-7T1uGAT46
+- 💭 这里的读法很重要，对于理解含义需要正确认知
+- ⏱ 2024-07-28 16:14:16&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;111-使用特型-1&#34;&gt;&lt;a href=&#34;#111-%e4%bd%bf%e7%94%a8%e7%89%b9%e5%9e%8b-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.1 使用特型
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-45&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-45&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 特型是一种语言特性，我们可以说某类型支持或不支持某个特型。大多数情况下，特型代表着一种能力，即一个类型能做什么。  ^6733360-7T1uU3rY3
+- 💭 一句话讲清特型
+- ⏱ 2024-07-28 16:17:35&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-46&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-46&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 变量的大小必须是编译期已知的，而那些实现了 Write 的类型可以是任意大小。  ^6733360-7T1xQuV2K
+- 💭 这里的意思是buff是一个长度未知的vec，运行7️⃣会发生变化，而引用的大小是已知的，所以此处适合使用引用
+- ⏱ 2024-07-28 17:02:31&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-47&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-47&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 这种转换是创建特型对象的唯一方法。编译器在这里真正做的事非常简单。在发生转换的地方，Rust 知道引用目标的真实类型（在本例中为 File），因此它只要加上适当的虚表的地址，把常规指针变成胖指针就可以了。  ^6733360-7T1wAOupG
+- 💭 常规指针和胖指针的区别是什么
+- ⏱ 2024-07-28 16:43:23&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-48&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-48&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在这两种情况下，Rust 都会从参数的类型推断出类型 W，这个过程叫作单态化，编译器会自动处理这一切。  ^6733360-7T1wFxmS3
+- 💭 这不就是偏特化的意思吗
+- ⏱ 2024-07-28 16:44:33&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;114-定义类型之间关系的特型-1&#34;&gt;&lt;a href=&#34;#114-%e5%ae%9a%e4%b9%89%e7%b1%bb%e5%9e%8b%e4%b9%8b%e9%97%b4%e5%85%b3%e7%b3%bb%e7%9a%84%e7%89%b9%e5%9e%8b-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.4 定义类型之间关系的特型
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-49&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-49&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 Mul 是一个泛型特型  ^6733360-7T1Bv2MHk
+- 💭 先是有trait -&amp;gt; 特型，然后有&amp;lt;RHS&amp;gt; -&amp;gt; 泛型，所以是泛化之后的特型
+- ⏱ 2024-07-28 17:58:18&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;115-逆向工程求限界-1&#34;&gt;&lt;a href=&#34;#115-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e6%b1%82%e9%99%90%e7%95%8c-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;11.5 逆向工程求限界
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-50&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-50&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 当没有特型可以满足你的所有需求时，编写泛型代码可能会是一件真正的苦差事。假设我们编写了下面这个非泛型函数来进行一些计算：  ^6733360-7T1BJ2d7e
+- 💭 【解释】这个例子中，更准确的代码应该用T代替N
+- ⏱ 2024-07-28 18:01:45&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;151-iterator-特型与-intoiterator-特型-1&#34;&gt;&lt;a href=&#34;#151-iterator-%e7%89%b9%e5%9e%8b%e4%b8%8e-intoiterator-%e7%89%b9%e5%9e%8b-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.1 Iterator 特型与 IntoIterator 特型
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-51&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-51&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 只要可以用某种自然的方式来迭代某种类型，该类型就可以实现 std::iter::IntoIterator，其 into_iter 方法会接受一个值并返回一个迭代器：  ^6733360-7T2z3bslr
+- 💭 1. 实现了Iterator特型的就是迭代器，拥有iter和mut_iter两个方法；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;实现IntoIterator特型的into_iter方法必须先实现Iterator特型，拥有into_iter的方法，获取数据的所有权
+&lt;ul&gt;
+&lt;li&gt;⏱ 2024-07-29 09:07:34&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;152-创建迭代器-1&#34;&gt;&lt;a href=&#34;#152-%e5%88%9b%e5%bb%ba%e8%bf%ad%e4%bb%a3%e5%99%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.2 创建迭代器
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-52&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-52&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 其中每种用法最终都会调用此处列出的三种 IntoIterator 实现之一。  ^6733360-7T75dAi2G
+- 💭 从这里可以看出into_iter的用法更全面，传入什么迭代返回什么迭代
+- ⏱ 2024-08-01 08:25:25&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-53&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-53&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 其中每种用法最终都会调用此处列出的三种 IntoIterator 实现之一。  ^6733360-7T1R3MR7B
+- 💭 3种引用的实现方式为：v.into_iter(), (&amp;amp;v).into_iter()和(&amp;amp;mut v).into_iter()
+- ⏱ 2024-07-28 21:55:54&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-54&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-54&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 并非每种类型都提供了这 3 种实现，比如，HashSet、BTreeSet 和 BinaryHeap 不会在可变引用上实现 IntoIterator，因为修改它们的元素可能会违反类型自身的不变性规则——修改后的值很可能有不同的哈希值，或者相对于其邻居的顺序改变了，所以修改它会让该类型处于错误状态。另一部分类型确实支持修改，但只支持修改一部分，比如，HashMap 和 BTreeMap 会生成对其条目值的可变引用，但只能提供对其键的共享引用，原因与前面给出的相似。  ^6733360-7T75gxxmO
+- 💭 【注意】看看后面这些类型是如何完成增删改查功能的
+- ⏱ 2024-08-01 08:26:09&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-55&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-55&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 IntoIterator 是确保 for 循环工作的关键，显而易见它是必要的。但当我们不用 for 循环时，写 favorites.iter() 会比 (&amp;amp;favorites).into_iter() 更清晰。我们会频繁通过共享引用进行迭代，因此 iter 和 iter_mut 仍然具有很高的工效学价值。  ^6733360-7T75pXdOp
+- 💭 into_iter是全面型选手，但是(&amp;amp;v).into_iter没有v.iter()清晰简单
+- ⏱ 2024-08-01 08:28:28&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-56&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-56&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 但你不能使用 iter 和 iter_mut 来编写这个泛型函数，因为它们不是任何特型的方法：只是大多数可迭代类型恰好具有叫这两个名字的方法而已。  ^6733360-7T1QsCyKV
+- 💭 iter()和iter_mut()仅仅是方法，但是into_iter是特型，是前面的方法的基础
+- ⏱ 2024-07-28 21:46:44&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;153-迭代器适配器-1&#34;&gt;&lt;a href=&#34;#153-%e8%bf%ad%e4%bb%a3%e5%99%a8%e9%80%82%e9%85%8d%e5%99%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.3 迭代器适配器
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-57&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-57&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 在标准库中，map 和 filter 实际上返回的是名为 std::iter::Map 和 std::iter::Filter的专用不透明（隐藏了实现细节的）struct 类型。然而，仅仅看到这些名字并不能告诉我们更多信息，所以在本书中，我们会写成 -&amp;gt; impl Iterator&amp;lt;Item=&amp;hellip;&amp;gt;，因为这揭示了我们真正关心的事情：此方法返回了能生成给定类型条目的 Iterator。  ^6733360-7T75U8m1z
+- 💭 如果返回iterator那么就是返回迭代器本身
+- ⏱ 2024-08-01 08:35:54&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-58&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-58&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 从这个意义上说，你可以将 zip 视为 enumerate 的泛化版本：enumerate 会将索引附加到序列，而 zip 能附加来自任意迭代器的条目。之前我们建议用 enumerate 在处理条目时协助提供上下文，而 zip 提供了一种更灵活的方式来实现同样的效果。  ^6733360-7ToegUVkE
+- 💭 zip使用起来更灵活
+- ⏱ 2024-08-12 14:57:04&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;154-消耗迭代器-1&#34;&gt;&lt;a href=&#34;#154-%e6%b6%88%e8%80%97%e8%bf%ad%e4%bb%a3%e5%99%a8-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;15.4 消耗迭代器
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-59&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-59&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 就像 12.2 节中所讲的，Rust 的浮点类型 f32 和 f64 仅实现了 std::cmp::Part​ialOrd 而没有实现 std::cmp::Ord，因此不能使用 min 方法和 max 方法来计算浮点数序列中的最小值和最大值。  ^6733360-7T8GeGsTV
+- 💭 【注意】浮点数不能使用max/min的方法
+- ⏱ 2024-08-02 09:37:19&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;173-string-与-str-1&#34;&gt;&lt;a href=&#34;#173-string-%e4%b8%8e-str-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;17.3 String 与 str
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论-60&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-60&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 请注意，不能索引具有单个位置的字符串切片，比如 slice[i]。要想在给定的字节偏移处获取单个字符有点儿笨拙：必须在切片上生成一个 chars 迭代器，并要求它解析成单个字符的 UTF-8：  ^6733360-7T5yx3aBH
+- 💭 【注意】取单个字符要先转换成chars迭代器
+- ⏱ 2024-07-31 08:19:40&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划线评论-61&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-61&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 由于 write! 和 writeln! 是专为写入输出流而设计的，因此它们会返回一个 Result，如果你忽略 Result，则 Rust 会报错。上述代码使用了 ? 运算符来处理错误，但实际上写入 String 是肯定不会出错的，因此这种情况下也可以调用 .unwrap()。  ^6733360-7Toc40s96
+- 💭 ?的用法
+- ⏱ 2024-08-12 14:23:21&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
 &lt;/h1&gt;</description>
@@ -8568,6 +9263,53 @@
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/weread/%E6%AD%A3%E7%A1%AE%E8%AE%A4%E8%AF%86%E4%BD%9B%E6%95%99/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E6%AD%A3%E7%A1%AE%E8%AE%A4%E8%AF%86%E4%BD%9B%E6%95%99/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 正确认识佛教&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://wfqqreader-1252317822.image.myqcloud.com/cover/206/24912206/t7_24912206.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 正确认识佛教|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 正确认识佛教&lt;/li&gt;
+&lt;li&gt;作者： 楼宇烈&lt;/li&gt;
+&lt;li&gt;简介： “我想给大家讲讲怎样正确认识佛教的问题。社会上对佛教有各种各样的看法，其中存在着各种各样的对佛教的误解。如果我们不能消除这些误解的话，就妨碍我们去正确地认识佛教……”北京大学哲学系、宗教系教授，北京大学宗教文化研究院名誉院长的佛教小讲。&lt;/li&gt;
+&lt;li&gt;出版时间 2019-02-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN：&lt;/li&gt;
+&lt;li&gt;分类： 哲学宗教-宗教&lt;/li&gt;
+&lt;li&gt;出版社： 北京大学出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/92f32570717c214e92f94a5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 佛教究竟是一种什么样的宗教呢？总体上说，我可以用以下几方面来概括：佛教是世界上最古老的宗教之一，又是对现代社会、人生大有补益的宗教；佛教是一种以人为本的宗教，是关注现实生活的宗教；佛教是主张依靠自力解脱的宗教，也就是说依靠自己的智慧、毅力来自我超越的一种宗教；佛教是一种慈悲的宗教，它是讲究自度度人的，也是一种提倡治心的宗教。
+⏱ 2024-08-15 19:00:03 ^24912206-1-667-830&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 大乘佛教讲“六度”​，即从此岸世界渡到彼岸世界的六种修炼方法：分别是布施、持戒、忍辱、精进、禅定、智慧。这个第三度讲的忍辱，我们常常将它理解成忍受屈辱，比如别人打你、骂你你都能忍住，或者甚至像基督教里讲的那样，别人打你左脸，你要把右脸也送上去。其实佛教里讲的“忍辱”不仅仅只是忍受屈辱，还要看你能不能忍住人家的吹捧。​“八风”里不仅有毁、讥，还有称、誉，对于别人的毁、讥，你可能忍得住，但对于别人的称、誉，你能不能也不为所动呢？当然，要做到这一点是相当困难的。
+⏱ 2024-08-15 19:23:41 ^24912206-1-3060-3288&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 各人情况不同，修身并没有什么秘诀、窍门，但是其中有些共同的道理是相通的。我们说要做本分事，而这个本分事是什么对每个人来说都不同，而且也不要求每个人都做到同样的程度。人是有差异的，每个人的智能、体能都不同，不能要求一样，要求一样是对弱势群体的最大的损害。尽你自己最大的诚心和力量所能达到的就是你的最佳状态，不要总是去跟别人攀比，别人也不应因为你的智能体能的低下而看不起你。这用中国古代哲学的一句话来讲就是“适性逍遥”，这是魏晋时的玄学家郭象注《庄子》时说的一句话。郭象举了一个例子，有两只鸟，一只大鸟，一只小鸟，大鸟吃的多，所以要到处找东西吃，而小鸟只要啄几粒米就饱了。可是要是小鸟羡慕大鸟能够尝到那么多美味，吃那么多东西，它也去吃那么多东西的话，那它就撑死了；要是大鸟羡慕小鸟轻松，不要找那么多东西吃，也学它的话，那过不了两天就饿死了。所以，找到最适合自己的，就是最好的。
+⏱ 2024-08-15 22:42:34 ^24912206-1-7062-7448&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/weread/%E6%B5%B7%E7%BB%B5%E9%98%85%E8%AF%BB%E6%B3%95%E5%A6%82%E4%BD%95%E5%90%B8%E6%94%B6%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E7%B2%BE%E5%8D%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -10111,6 +10853,84 @@
         </item>
         <item>
         <title></title>
+        <link>https://blog.bugxch.top/weread/%E8%8A%B1%E5%BC%80%E8%8E%B2%E7%8E%B0%E5%BF%83%E7%BB%8F%E5%A4%A7%E6%99%BA%E6%85%A7/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E8%8A%B1%E5%BC%80%E8%8E%B2%E7%8E%B0%E5%BF%83%E7%BB%8F%E5%A4%A7%E6%99%BA%E6%85%A7/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 花开莲现：《心经》大智慧&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.weread.qq.com/weread/cover/52/YueWen_25790634/t7_YueWen_25790634.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 花开莲现：《心经》大智慧|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 花开莲现：《心经》大智慧&lt;/li&gt;
+&lt;li&gt;作者： 楼宇烈&lt;/li&gt;
+&lt;li&gt;简介： 《心经》是三藏圣典中流传最广、被人持诵讲解最多的一部大乘经典，使用最多的译本为玄奘大师所译。虽仅二百六十个字，但涵义丰富，译笔精练、流畅而优美。圣严法师称其为“遇浅即浅，逢深则深”的“好经”。喧嚣的世界，如水中月、空中云，如何放下颠倒虚妄，透过无常的现象，发现缘起性空的人生真谛，达到花开莲现，花落莲成的自在境界。滚滚红尘中，如何摆脱烦恼万分的生存状态，去我执，实现人格的自我完善。苦由心生，这些问题的答案，不妨在《心经》中寻找。让我们跟随北大国学研修班最受欢迎主讲楼宇烈教授，体悟《心经》，祛除内心的一切苦，寻找全新的生命空间。&lt;/li&gt;
+&lt;li&gt;出版时间 2016-05-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787101113891&lt;/li&gt;
+&lt;li&gt;分类： 哲学宗教-东方哲学&lt;/li&gt;
+&lt;li&gt;出版社： 中华书局&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/d3e325f0718988aad3e7554&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;插图&#34;&gt;&lt;a href=&#34;#%e6%8f%92%e5%9b%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;插图
+&lt;/h2&gt;&lt;h2 id=&#34;开篇-了然于心题心经&#34;&gt;&lt;a href=&#34;#%e5%bc%80%e7%af%87-%e4%ba%86%e7%84%b6%e4%ba%8e%e5%bf%83%e9%a2%98%e5%bf%83%e7%bb%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;开篇 了然于心——题《心经》
+&lt;/h2&gt;&lt;h2 id=&#34;-般若&#34;&gt;&lt;a href=&#34;#-%e8%88%ac%e8%8b%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ⅰ 般若
+&lt;/h2&gt;&lt;h3 id=&#34;缘起性空&#34;&gt;&lt;a href=&#34;#%e7%bc%98%e8%b5%b7%e6%80%a7%e7%a9%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;缘起性空
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 那么什么叫五蕴皆空呢？五蕴是佛教对一个生命体的一种界定，也就是佛教认为任何一个生命体它都是因缘的聚合才有的。那么作为一个生命体，是哪些因缘聚会呢？就是五蕴聚会。五蕴就是指：色、受、想、行、识。这五个因缘聚会了，就有了一个生命体。
+⏱ 2024-08-11 11:25:26 ^25790634-6-1094-1208&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 所以佛教经常喜欢用这样的词，叫做刹那[9]、一刹那，刹那在我们的汉语里也经常用。但是其实这个词是从佛教来的，而且也不是汉语里本来就具有的，而是从印度传过来的一个名词，而且还只是一个读音，“刹那”是个音读的词。一个最短的时间概念叫做刹那。现在到了中国的语言中间，大家都感觉不到它是外来的，也经常用到一刹那。
+⏱ 2024-08-11 11:28:06 ^25790634-6-3082-3330&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;自净其意&#34;&gt;&lt;a href=&#34;#%e8%87%aa%e5%87%80%e5%85%b6%e6%84%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;自净其意
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 净土佛性都在我的自性之中。这也不是要求我们离开当下的自我去到个什么地方去求成佛，求成菩萨。只要你按照佛菩萨的这种理念、精神去实践你的人生，那么你就是佛，就是菩萨
+⏱ 2024-08-11 16:17:24 ^25790634-7-3170-3250&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;-执著&#34;&gt;&lt;a href=&#34;#-%e6%89%a7%e8%91%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ⅱ 执著
+&lt;/h2&gt;&lt;h3 id=&#34;诸法空相&#34;&gt;&lt;a href=&#34;#%e8%af%b8%e6%b3%95%e7%a9%ba%e7%9b%b8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;诸法空相
+&lt;/h3&gt;&lt;h3 id=&#34;无常无我&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e5%b8%b8%e6%97%a0%e6%88%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无常无我
+&lt;/h3&gt;&lt;h3 id=&#34;无明缘行&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e6%98%8e%e7%bc%98%e8%a1%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无明缘行
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 佛教的生命观讲的是自作自受，生命也是由自己的业所结出来的果。只要业不消，生命也就不能完结。即使今世的生命结束了，但是业没有消掉，也会接着下一次的生命而延续。因此佛教不是讲由一个外在的神来决定人的生命以及命运，而强调每一个生命体的生命都是由自己的业所造成的，所产生的一个结果。因此，命运也是由自己的业来决定的。
+⏱ 2024-08-11 16:34:44 ^25790634-11-3011-3165&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;跳出苦海&#34;&gt;&lt;a href=&#34;#%e8%b7%b3%e5%87%ba%e8%8b%a6%e6%b5%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;跳出苦海
+&lt;/h3&gt;&lt;h2 id=&#34;-寂静&#34;&gt;&lt;a href=&#34;#-%e5%af%82%e9%9d%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ⅲ 寂静
+&lt;/h2&gt;&lt;h3 id=&#34;心无挂碍&#34;&gt;&lt;a href=&#34;#%e5%bf%83%e6%97%a0%e6%8c%82%e7%a2%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;心无挂碍
+&lt;/h3&gt;&lt;h3 id=&#34;法无定法&#34;&gt;&lt;a href=&#34;#%e6%b3%95%e6%97%a0%e5%ae%9a%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;法无定法
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 佛也好，菩萨也好，并不在我们的身外，其实就是我们自己。我们每个人如果能按照佛、菩萨的精神去做事情，去过你的人生，那么你就是活佛、活菩萨。佛教的智慧解脱方法是非常灵活辩证的，佛法是一个契理契机的教义和理论，也就是既要符合佛法的根本精神，同时必须适应这个时代环境。佛教是非常注重面对现实、认识现实，然后我们才可以用适合今天的佛法来教化众生。般若波罗蜜多绝不是停止的、不发展的，而是随着时代不断地在发展。
+⏱ 2024-08-11 17:10:14 ^25790634-15-2086-2285&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;除一切苦&#34;&gt;&lt;a href=&#34;#%e9%99%a4%e4%b8%80%e5%88%87%e8%8b%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;除一切苦
+&lt;/h3&gt;&lt;h3 id=&#34;心的力量&#34;&gt;&lt;a href=&#34;#%e5%bf%83%e7%9a%84%e5%8a%9b%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;心的力量
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 生死譬海，自渡生死又渡人，谓之度。又梵语波罗蜜译为度。渡生死海之行法也。一、布施。慈心施物也。二、持戒。持佛戒而慎身、口、之恶也。三、忍辱。忍耐一切之苦痛凌辱而心不动也。四、精进。勇猛励一切之善，伏一切恶也。五、禅定。心止一处而拂去妄念也。六、智慧。分别真理也。此六度为万行之总体。前五为福行，后一种为智行。以福行助成智行，依智行而断惑证理，渡生死海也。
+⏱ 2024-08-12 15:06:12 ^25790634-17-4276-4453&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;结语-智慧的力量&#34;&gt;&lt;a href=&#34;#%e7%bb%93%e8%af%ad-%e6%99%ba%e6%85%a7%e7%9a%84%e5%8a%9b%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;结语 智慧的力量
+&lt;/h2&gt;&lt;h2 id=&#34;附录-般若波罗蜜多心经&#34;&gt;&lt;a href=&#34;#%e9%99%84%e5%bd%95-%e8%88%ac%e8%8b%a5%e6%b3%a2%e7%bd%97%e8%9c%9c%e5%a4%9a%e5%bf%83%e7%bb%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;附录 《般若波罗蜜多心经》
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
         <link>https://blog.bugxch.top/weread/%E8%A7%82%E5%91%BC%E5%90%B8/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -11285,6 +12105,296 @@
 &lt;p&gt;📌 值得注意的是，当ChatGPT做一些事情，比如写一篇文章时，它实质上只是在一遍又一遍地询问“根据目前的文本，下一个词应该是什么”，并且每次都添加一个词。［正如我将要解释的那样，更准确地说，它是每次都添加一个“标记”(token)，而标记可能只是词的一部分。这就是它有时可以“造词”的原因。］  ^6733360-7PLh3mbgt
 - 💭 token原义在此
 - ⏱ 2024-03-17 17:38:39&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.bugxch.top/weread/%E9%87%91%E5%88%9A%E7%BB%8F%E8%AF%B4%E4%BB%80%E4%B9%88/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.bugxch.top/weread/%E9%87%91%E5%88%9A%E7%BB%8F%E8%AF%B4%E4%BB%80%E4%B9%88/</guid>
+        <description>&lt;h1 id=&#34;元数据&#34;&gt;&lt;a href=&#34;#%e5%85%83%e6%95%b0%e6%8d%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;元数据
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;[!abstract] 金刚经说什么&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://wfqqreader-1252317822.image.myqcloud.com/cover/123/27563123/t7_27563123.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34; 金刚经说什么|200&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;书名： 金刚经说什么&lt;/li&gt;
+&lt;li&gt;作者： 南怀瑾著述&lt;/li&gt;
+&lt;li&gt;简介： 《金刚经》是初期大乘佛教的代表性经典之一，也是般若类佛经的纲要书。它全称“金刚般若波罗蜜经”（经名中的“蜜”，一作“密”），一卷，由姚秦鸠摩罗什于弘始六年（四〇四）译出。问世之后，即在社会上广泛流传，纂要、注解、夹颂、宣演、义记、采微、集解、科释、宗通、决疑、大意、直说等各种注疏达一百多种。经中主要论述了“所言一切法者，即非一切法”，一切现象（物理的和心理的）“性空幻有”的理论。本书为著名学者南怀瑾先生有关《金刚经》的讲记。作者依据梁代昭明太子的分法，将《金刚经》分为三十二品（相当于章），然后逐品做了讲解。每一品均以一首偈颂做总结，以阐发自己的研究心得。《金刚经》中的疑难之处，于中剖析得淋尽致。兹经版权方台湾老古文化事业公司授权，复旦大学出版社将老古公司二〇一二年七月第二版校订出版，以供研究。&lt;/li&gt;
+&lt;li&gt;出版时间 2016-03-01 00:00:00&lt;/li&gt;
+&lt;li&gt;ISBN： 9787309116137&lt;/li&gt;
+&lt;li&gt;分类： 哲学宗教-宗教&lt;/li&gt;
+&lt;li&gt;出版社： 复旦大学出版社&lt;/li&gt;
+&lt;li&gt;PC地址：https://weread.qq.com/web/reader/d68328d071a49473d6825b1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;高亮划线&#34;&gt;&lt;a href=&#34;#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;高亮划线
+&lt;/h1&gt;&lt;h2 id=&#34;封面&#34;&gt;&lt;a href=&#34;#%e5%b0%81%e9%9d%a2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;封面
+&lt;/h2&gt;&lt;h2 id=&#34;版权信息&#34;&gt;&lt;a href=&#34;#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;版权信息
+&lt;/h2&gt;&lt;h2 id=&#34;出版说明&#34;&gt;&lt;a href=&#34;#%e5%87%ba%e7%89%88%e8%af%b4%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;出版说明
+&lt;/h2&gt;&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言
+&lt;/h2&gt;&lt;h2 id=&#34;再版说明&#34;&gt;&lt;a href=&#34;#%e5%86%8d%e7%89%88%e8%af%b4%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;再版说明
+&lt;/h2&gt;&lt;h2 id=&#34;超越宗教的大智慧&#34;&gt;&lt;a href=&#34;#%e8%b6%85%e8%b6%8a%e5%ae%97%e6%95%99%e7%9a%84%e5%a4%a7%e6%99%ba%e6%85%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;超越宗教的大智慧
+&lt;/h2&gt;&lt;h3 id=&#34;实相般若&#34;&gt;&lt;a href=&#34;#%e5%ae%9e%e7%9b%b8%e8%88%ac%e8%8b%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;实相般若
+&lt;/h3&gt;&lt;h3 id=&#34;境界般若&#34;&gt;&lt;a href=&#34;#%e5%a2%83%e7%95%8c%e8%88%ac%e8%8b%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;境界般若
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 又譬如唐人诗说：“千江有水千江月，万里无云万里天。
+⏱ 2024-08-14 12:51:27 ^27563123-227-558-583&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 所以古人说：“学佛乃大丈夫事，非帝王将相所能为。”因为他的境界、气派、胸襟与众不同。这种不同的境界从哪里来呢？从实相般若而来，是道体上所产生的，自然而来的。因此，真悟道的人，智慧开发是无穷尽的，佛学的名词叫做无师智，也叫做自然智。自己本有的智慧仓库打开了，不是老师传授给你的，是你自己固有的智慧爆发了，天上天下，无所不知。这就是境界般若。
+⏱ 2024-08-14 12:55:28 ^27563123-227-1492-1661&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;文字般若&#34;&gt;&lt;a href=&#34;#%e6%96%87%e5%ad%97%e8%88%ac%e8%8b%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;文字般若
+&lt;/h3&gt;&lt;h3 id=&#34;方便般若&#34;&gt;&lt;a href=&#34;#%e6%96%b9%e4%be%bf%e8%88%ac%e8%8b%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;方便般若
+&lt;/h3&gt;&lt;h3 id=&#34;眷属般若&#34;&gt;&lt;a href=&#34;#%e7%9c%b7%e5%b1%9e%e8%88%ac%e8%8b%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;眷属般若
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 般若的眷属又是什么呢？我们都晓得佛学讲的六度，就是布施、持戒、忍辱、精进、禅定、般若。一个修持的人，如何布施，如何守戒，如何忍辱，如何做到禅定的修证功夫，然后才能大彻大悟而成佛。所以在般若的前面，就有这五个相关的眷属，也就是五个行愿，称为眷属般若
+⏱ 2024-08-14 12:59:45 ^27563123-230-524-647&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;无坚不摧&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e5%9d%9a%e4%b8%8d%e6%91%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无坚不摧
+&lt;/h3&gt;&lt;h3 id=&#34;鸠摩罗什和武则天&#34;&gt;&lt;a href=&#34;#%e9%b8%a0%e6%91%a9%e7%bd%97%e4%bb%80%e5%92%8c%e6%ad%a6%e5%88%99%e5%a4%a9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;鸠摩罗什和武则天
+&lt;/h3&gt;&lt;h2 id=&#34;第一品-法会因由分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e5%93%81-%e6%b3%95%e4%bc%9a%e5%9b%a0%e7%94%b1%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第一品 法会因由分
+&lt;/h2&gt;&lt;h3 id=&#34;佛这样说&#34;&gt;&lt;a href=&#34;#%e4%bd%9b%e8%bf%99%e6%a0%b7%e8%af%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;佛这样说
+&lt;/h3&gt;&lt;h3 id=&#34;那个时候&#34;&gt;&lt;a href=&#34;#%e9%82%a3%e4%b8%aa%e6%97%b6%e5%80%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;那个时候
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 我们研究印度的文化及历史，知道印度人不太注重时间，所以印度人没有历史观念。
+⏱ 2024-08-15 08:46:28 ^27563123-235-534-571&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;舍卫国的讲堂&#34;&gt;&lt;a href=&#34;#%e8%88%8d%e5%8d%ab%e5%9b%bd%e7%9a%84%e8%ae%b2%e5%a0%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;舍卫国的讲堂
+&lt;/h3&gt;&lt;h3 id=&#34;千二百五十人&#34;&gt;&lt;a href=&#34;#%e5%8d%83%e4%ba%8c%e7%99%be%e4%ba%94%e5%8d%81%e4%ba%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;千二百五十人
+&lt;/h3&gt;&lt;h3 id=&#34;世间与大千世界&#34;&gt;&lt;a href=&#34;#%e4%b8%96%e9%97%b4%e4%b8%8e%e5%a4%a7%e5%8d%83%e4%b8%96%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;世间与大千世界
+&lt;/h3&gt;&lt;h3 id=&#34;吃饭穿衣&#34;&gt;&lt;a href=&#34;#%e5%90%83%e9%a5%ad%e7%a9%bf%e8%a1%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;吃饭穿衣
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 印度人吃饭用手抓，中国人用筷子，外国人用叉子，反正都是用手，所以也叫做抟食。早晨是天人吃饭的时间，中午人道吃饭，晚上鬼道吃饭。佛采用的制度，以人道为中心，日中一食；后世弟子们，过了中午一点钟就不吃饭了，这个是佛的制度。
+⏱ 2024-08-15 08:50:24 ^27563123-239-827-936&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;乞士生活威仪&#34;&gt;&lt;a href=&#34;#%e4%b9%9e%e5%a3%ab%e7%94%9f%e6%b4%bb%e5%a8%81%e4%bb%aa&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;乞士生活威仪
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 所以在现实的生活里，在最平凡中，建立了一个非凡神圣的境界，也就是佛的境界。
+⏱ 2024-08-15 11:10:25 ^27563123-240-1549-1586&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第二品-善现启请分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%93%81-%e5%96%84%e7%8e%b0%e5%90%af%e8%af%b7%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二品 善现启请分
+&lt;/h2&gt;&lt;h3 id=&#34;善现须菩提&#34;&gt;&lt;a href=&#34;#%e5%96%84%e7%8e%b0%e9%a1%bb%e8%8f%a9%e6%8f%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;善现须菩提
+&lt;/h3&gt;&lt;h3 id=&#34;如来-菩萨&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e6%9d%a5-%e8%8f%a9%e8%90%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如来 菩萨
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 所谓的觉悟，觉悟什么呢？就是佛的境界，也就是所谓自利利他，自觉觉他的这个觉悟。借用孟子的话：“以先知觉后知”，就是先知先觉的人，教导后知后觉的人。一个人如果觉悟了，悟道了，对一切功名富贵看不上，而万事不管，脚底下抹油溜了，这种人叫做罗汉。但是菩萨境界则不然，觉悟了，解脱了世间一切的痛苦，自己升华了，但是，看到世上林林总总的众生，还在苦难中，就要再回到世间广度一切众生。这种牺牲自我，利益一切众生的行为，就是所谓有情，是大乘菩萨道。
+⏱ 2024-08-15 11:37:44 ^27563123-243-1516-1732&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;六祖和金刚经&#34;&gt;&lt;a href=&#34;#%e5%85%ad%e7%a5%96%e5%92%8c%e9%87%91%e5%88%9a%e7%bb%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;六祖和《金刚经》
+&lt;/h3&gt;&lt;h3 id=&#34;善护念&#34;&gt;&lt;a href=&#34;#%e5%96%84%e6%8a%a4%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;善护念
+&lt;/h3&gt;&lt;h3 id=&#34;寻愁觅恨&#34;&gt;&lt;a href=&#34;#%e5%af%bb%e6%84%81%e8%a7%85%e6%81%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;寻愁觅恨
+&lt;/h3&gt;&lt;h3 id=&#34;金刚眼和发心&#34;&gt;&lt;a href=&#34;#%e9%87%91%e5%88%9a%e7%9c%bc%e5%92%8c%e5%8f%91%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;金刚眼和发心
+&lt;/h3&gt;&lt;h3 id=&#34;无权威-无主宰&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e6%9d%83%e5%a8%81-%e6%97%a0%e4%b8%bb%e5%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无权威 无主宰
+&lt;/h3&gt;&lt;h3 id=&#34;此心如何住&#34;&gt;&lt;a href=&#34;#%e6%ad%a4%e5%bf%83%e5%a6%82%e4%bd%95%e4%bd%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;此心如何住
+&lt;/h3&gt;&lt;h3 id=&#34;止住的持名念佛&#34;&gt;&lt;a href=&#34;#%e6%ad%a2%e4%bd%8f%e7%9a%84%e6%8c%81%e5%90%8d%e5%bf%b5%e4%bd%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;止住的持名念佛
+&lt;/h3&gt;&lt;h3 id=&#34;百千三昧的定境&#34;&gt;&lt;a href=&#34;#%e7%99%be%e5%8d%83%e4%b8%89%e6%98%a7%e7%9a%84%e5%ae%9a%e5%a2%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;百千三昧的定境
+&lt;/h3&gt;&lt;h3 id=&#34;三步曲&#34;&gt;&lt;a href=&#34;#%e4%b8%89%e6%ad%a5%e6%9b%b2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;三步曲
+&lt;/h3&gt;&lt;h3 id=&#34;如何住和无所住&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e4%bd%95%e4%bd%8f%e5%92%8c%e6%97%a0%e6%89%80%e4%bd%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如何住和无所住
+&lt;/h3&gt;&lt;h2 id=&#34;第三品-大乘正宗分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e5%93%81-%e5%a4%a7%e4%b9%98%e6%ad%a3%e5%ae%97%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三品 大乘正宗分
+&lt;/h2&gt;&lt;h3 id=&#34;一切众生&#34;&gt;&lt;a href=&#34;#%e4%b8%80%e5%88%87%e4%bc%97%e7%94%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;一切众生
+&lt;/h3&gt;&lt;h3 id=&#34;谭子化书&#34;&gt;&lt;a href=&#34;#%e8%b0%ad%e5%ad%90%e5%8c%96%e4%b9%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;谭子《化书》
+&lt;/h3&gt;&lt;h3 id=&#34;有色无色的众生&#34;&gt;&lt;a href=&#34;#%e6%9c%89%e8%89%b2%e6%97%a0%e8%89%b2%e7%9a%84%e4%bc%97%e7%94%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;有色无色的众生
+&lt;/h3&gt;&lt;h3 id=&#34;有想无想的众生&#34;&gt;&lt;a href=&#34;#%e6%9c%89%e6%83%b3%e6%97%a0%e6%83%b3%e7%9a%84%e4%bc%97%e7%94%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;有想无想的众生
+&lt;/h3&gt;&lt;h3 id=&#34;鸿福-清福&#34;&gt;&lt;a href=&#34;#%e9%b8%bf%e7%a6%8f-%e6%b8%85%e7%a6%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;鸿福 清福
+&lt;/h3&gt;&lt;h3 id=&#34;罗汉的涅槃&#34;&gt;&lt;a href=&#34;#%e7%bd%97%e6%b1%89%e7%9a%84%e6%b6%85%e6%a7%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;罗汉的涅槃
+&lt;/h3&gt;&lt;h3 id=&#34;佛的涅槃&#34;&gt;&lt;a href=&#34;#%e4%bd%9b%e7%9a%84%e6%b6%85%e6%a7%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;佛的涅槃
+&lt;/h3&gt;&lt;h3 id=&#34;四相和我的观念&#34;&gt;&lt;a href=&#34;#%e5%9b%9b%e7%9b%b8%e5%92%8c%e6%88%91%e7%9a%84%e8%a7%82%e5%bf%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;四相和我的观念
+&lt;/h3&gt;&lt;h3 id=&#34;三轮体空布施&#34;&gt;&lt;a href=&#34;#%e4%b8%89%e8%bd%ae%e4%bd%93%e7%a9%ba%e5%b8%83%e6%96%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;三轮体空布施
+&lt;/h3&gt;&lt;h3 id=&#34;快乐痛苦皆无住&#34;&gt;&lt;a href=&#34;#%e5%bf%ab%e4%b9%90%e7%97%9b%e8%8b%a6%e7%9a%86%e6%97%a0%e4%bd%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;快乐痛苦皆无住
+&lt;/h3&gt;&lt;h3 id=&#34;转化十二类生&#34;&gt;&lt;a href=&#34;#%e8%bd%ac%e5%8c%96%e5%8d%81%e4%ba%8c%e7%b1%bb%e7%94%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;转化十二类生
+&lt;/h3&gt;&lt;h3 id=&#34;说三十二品偈颂&#34;&gt;&lt;a href=&#34;#%e8%af%b4%e4%b8%89%e5%8d%81%e4%ba%8c%e5%93%81%e5%81%88%e9%a2%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;说三十二品偈颂
+&lt;/h3&gt;&lt;h2 id=&#34;第四品-妙行无住分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%9b%9b%e5%93%81-%e5%a6%99%e8%a1%8c%e6%97%a0%e4%bd%8f%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第四品 妙行无住分
+&lt;/h2&gt;&lt;h3 id=&#34;第一等和次等&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e7%ad%89%e5%92%8c%e6%ac%a1%e7%ad%89&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第一等和次等
+&lt;/h3&gt;&lt;h3 id=&#34;无所住&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e6%89%80%e4%bd%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无所住
+&lt;/h3&gt;&lt;h3 id=&#34;不住色&#34;&gt;&lt;a href=&#34;#%e4%b8%8d%e4%bd%8f%e8%89%b2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;不住色
+&lt;/h3&gt;&lt;h3 id=&#34;不住声香味&#34;&gt;&lt;a href=&#34;#%e4%b8%8d%e4%bd%8f%e5%a3%b0%e9%a6%99%e5%91%b3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;不住声香味
+&lt;/h3&gt;&lt;h3 id=&#34;内触妙乐的菩萨&#34;&gt;&lt;a href=&#34;#%e5%86%85%e8%a7%a6%e5%a6%99%e4%b9%90%e7%9a%84%e8%8f%a9%e8%90%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;内触妙乐的菩萨
+&lt;/h3&gt;&lt;h3 id=&#34;雁过长空&#34;&gt;&lt;a href=&#34;#%e9%9b%81%e8%bf%87%e9%95%bf%e7%a9%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;雁过长空
+&lt;/h3&gt;&lt;h3 id=&#34;功德和福德&#34;&gt;&lt;a href=&#34;#%e5%8a%9f%e5%be%b7%e5%92%8c%e7%a6%8f%e5%be%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;功德和福德
+&lt;/h3&gt;&lt;h3 id=&#34;东方佛西方佛&#34;&gt;&lt;a href=&#34;#%e4%b8%9c%e6%96%b9%e4%bd%9b%e8%a5%bf%e6%96%b9%e4%bd%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;东方佛西方佛
+&lt;/h3&gt;&lt;h3 id=&#34;阿育王的沙子&#34;&gt;&lt;a href=&#34;#%e9%98%bf%e8%82%b2%e7%8e%8b%e7%9a%84%e6%b2%99%e5%ad%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;阿育王的沙子
+&lt;/h3&gt;&lt;h3 id=&#34;周利盘陀伽的扫帚&#34;&gt;&lt;a href=&#34;#%e5%91%a8%e5%88%a9%e7%9b%98%e9%99%80%e4%bc%bd%e7%9a%84%e6%89%ab%e5%b8%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;周利盘陀伽的扫帚
+&lt;/h3&gt;&lt;h2 id=&#34;第五品-如理实见分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%94%e5%93%81-%e5%a6%82%e7%90%86%e5%ae%9e%e8%a7%81%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第五品 如理实见分
+&lt;/h2&gt;&lt;h3 id=&#34;非相和空&#34;&gt;&lt;a href=&#34;#%e9%9d%9e%e7%9b%b8%e5%92%8c%e7%a9%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;非相和空
+&lt;/h3&gt;&lt;h3 id=&#34;法报化-体相用&#34;&gt;&lt;a href=&#34;#%e6%b3%95%e6%8a%a5%e5%8c%96-%e4%bd%93%e7%9b%b8%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;法报化 体相用
+&lt;/h3&gt;&lt;h3 id=&#34;莲花生&#34;&gt;&lt;a href=&#34;#%e8%8e%b2%e8%8a%b1%e7%94%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;莲花生
+&lt;/h3&gt;&lt;h3 id=&#34;身相的执著&#34;&gt;&lt;a href=&#34;#%e8%ba%ab%e7%9b%b8%e7%9a%84%e6%89%a7%e8%91%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;身相的执著
+&lt;/h3&gt;&lt;h2 id=&#34;第六品-正信希有分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ad%e5%93%81-%e6%ad%a3%e4%bf%a1%e5%b8%8c%e6%9c%89%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第六品 正信希有分
+&lt;/h2&gt;&lt;h3 id=&#34;文喜和文殊&#34;&gt;&lt;a href=&#34;#%e6%96%87%e5%96%9c%e5%92%8c%e6%96%87%e6%ae%8a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;文喜和文殊
+&lt;/h3&gt;&lt;h3 id=&#34;烧佛像的和尚&#34;&gt;&lt;a href=&#34;#%e7%83%a7%e4%bd%9b%e5%83%8f%e7%9a%84%e5%92%8c%e5%b0%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;烧佛像的和尚
+&lt;/h3&gt;&lt;h3 id=&#34;五百年后&#34;&gt;&lt;a href=&#34;#%e4%ba%94%e7%99%be%e5%b9%b4%e5%90%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;五百年后
+&lt;/h3&gt;&lt;h3 id=&#34;善行-功德-智慧&#34;&gt;&lt;a href=&#34;#%e5%96%84%e8%a1%8c-%e5%8a%9f%e5%be%b7-%e6%99%ba%e6%85%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;善行 功德 智慧
+&lt;/h3&gt;&lt;h3 id=&#34;净信和无所住&#34;&gt;&lt;a href=&#34;#%e5%87%80%e4%bf%a1%e5%92%8c%e6%97%a0%e6%89%80%e4%bd%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;净信和无所住
+&lt;/h3&gt;&lt;h3 id=&#34;真-非真&#34;&gt;&lt;a href=&#34;#%e7%9c%9f-%e9%9d%9e%e7%9c%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;真 非真
+&lt;/h3&gt;&lt;h3 id=&#34;何处是岸&#34;&gt;&lt;a href=&#34;#%e4%bd%95%e5%a4%84%e6%98%af%e5%b2%b8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;何处是岸
+&lt;/h3&gt;&lt;h2 id=&#34;第七品-无得无说分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%83%e5%93%81-%e6%97%a0%e5%be%97%e6%97%a0%e8%af%b4%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第七品 无得无说分
+&lt;/h2&gt;&lt;h3 id=&#34;得什么-说什么&#34;&gt;&lt;a href=&#34;#%e5%be%97%e4%bb%80%e4%b9%88-%e8%af%b4%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;得什么 说什么
+&lt;/h3&gt;&lt;h3 id=&#34;程度的差别&#34;&gt;&lt;a href=&#34;#%e7%a8%8b%e5%ba%a6%e7%9a%84%e5%b7%ae%e5%88%ab&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;程度的差别
+&lt;/h3&gt;&lt;h3 id=&#34;入世出世平等&#34;&gt;&lt;a href=&#34;#%e5%85%a5%e4%b8%96%e5%87%ba%e4%b8%96%e5%b9%b3%e7%ad%89&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;入世出世平等
+&lt;/h3&gt;&lt;h3 id=&#34;圣贤之别&#34;&gt;&lt;a href=&#34;#%e5%9c%a3%e8%b4%a4%e4%b9%8b%e5%88%ab&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;圣贤之别
+&lt;/h3&gt;&lt;h2 id=&#34;第八品-依法出生分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ab%e5%93%81-%e4%be%9d%e6%b3%95%e5%87%ba%e7%94%9f%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第八品 依法出生分
+&lt;/h2&gt;&lt;h3 id=&#34;一切佛与金刚经&#34;&gt;&lt;a href=&#34;#%e4%b8%80%e5%88%87%e4%bd%9b%e4%b8%8e%e9%87%91%e5%88%9a%e7%bb%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;一切佛与《金刚经》
+&lt;/h3&gt;&lt;h3 id=&#34;佛法非佛法&#34;&gt;&lt;a href=&#34;#%e4%bd%9b%e6%b3%95%e9%9d%9e%e4%bd%9b%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;佛法非佛法
+&lt;/h3&gt;&lt;h2 id=&#34;第九品-一相无相分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b9%9d%e5%93%81-%e4%b8%80%e7%9b%b8%e6%97%a0%e7%9b%b8%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第九品 一相无相分
+&lt;/h2&gt;&lt;h3 id=&#34;见思惑&#34;&gt;&lt;a href=&#34;#%e8%a7%81%e6%80%9d%e6%83%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;见思惑
+&lt;/h3&gt;&lt;h3 id=&#34;谁不瞋-谁不痴慢疑&#34;&gt;&lt;a href=&#34;#%e8%b0%81%e4%b8%8d%e7%9e%8b-%e8%b0%81%e4%b8%8d%e7%97%b4%e6%85%a2%e7%96%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;谁不瞋 谁不痴慢疑
+&lt;/h3&gt;&lt;h3 id=&#34;话说再来人&#34;&gt;&lt;a href=&#34;#%e8%af%9d%e8%af%b4%e5%86%8d%e6%9d%a5%e4%ba%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;话说再来人
+&lt;/h3&gt;&lt;h3 id=&#34;不来行吗&#34;&gt;&lt;a href=&#34;#%e4%b8%8d%e6%9d%a5%e8%a1%8c%e5%90%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;不来行吗
+&lt;/h3&gt;&lt;h3 id=&#34;三界的天人&#34;&gt;&lt;a href=&#34;#%e4%b8%89%e7%95%8c%e7%9a%84%e5%a4%a9%e4%ba%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;三界的天人
+&lt;/h3&gt;&lt;h3 id=&#34;解结去惑&#34;&gt;&lt;a href=&#34;#%e8%a7%a3%e7%bb%93%e5%8e%bb%e6%83%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;解结去惑
+&lt;/h3&gt;&lt;h3 id=&#34;初果的罗汉&#34;&gt;&lt;a href=&#34;#%e5%88%9d%e6%9e%9c%e7%9a%84%e7%bd%97%e6%b1%89&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;初果的罗汉
+&lt;/h3&gt;&lt;h3 id=&#34;迦叶起舞-毕陵慢心&#34;&gt;&lt;a href=&#34;#%e8%bf%a6%e5%8f%b6%e8%b5%b7%e8%88%9e-%e6%af%95%e9%99%b5%e6%85%a2%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;迦叶起舞 毕陵慢心
+&lt;/h3&gt;&lt;h3 id=&#34;二果三果作什么&#34;&gt;&lt;a href=&#34;#%e4%ba%8c%e6%9e%9c%e4%b8%89%e6%9e%9c%e4%bd%9c%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;二果三果作什么
+&lt;/h3&gt;&lt;h3 id=&#34;罗汉的前途&#34;&gt;&lt;a href=&#34;#%e7%bd%97%e6%b1%89%e7%9a%84%e5%89%8d%e9%80%94&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;罗汉的前途
+&lt;/h3&gt;&lt;h3 id=&#34;世上的第一名&#34;&gt;&lt;a href=&#34;#%e4%b8%96%e4%b8%8a%e7%9a%84%e7%ac%ac%e4%b8%80%e5%90%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;世上的第一名
+&lt;/h3&gt;&lt;h3 id=&#34;小偷与越狱的人&#34;&gt;&lt;a href=&#34;#%e5%b0%8f%e5%81%b7%e4%b8%8e%e8%b6%8a%e7%8b%b1%e7%9a%84%e4%ba%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;小偷与越狱的人
+&lt;/h3&gt;&lt;h2 id=&#34;第十品-庄严净土分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%93%81-%e5%ba%84%e4%b8%a5%e5%87%80%e5%9c%9f%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十品 庄严净土分
+&lt;/h2&gt;&lt;h3 id=&#34;心空及第归&#34;&gt;&lt;a href=&#34;#%e5%bf%83%e7%a9%ba%e5%8f%8a%e7%ac%ac%e5%bd%92&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;心空及第归
+&lt;/h3&gt;&lt;h3 id=&#34;庄严佛土在哪里&#34;&gt;&lt;a href=&#34;#%e5%ba%84%e4%b8%a5%e4%bd%9b%e5%9c%9f%e5%9c%a8%e5%93%aa%e9%87%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;庄严佛土在哪里
+&lt;/h3&gt;&lt;h3 id=&#34;打火机&#34;&gt;&lt;a href=&#34;#%e6%89%93%e7%81%ab%e6%9c%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;打火机
+&lt;/h3&gt;&lt;h3 id=&#34;因师而瞎的眼&#34;&gt;&lt;a href=&#34;#%e5%9b%a0%e5%b8%88%e8%80%8c%e7%9e%8e%e7%9a%84%e7%9c%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;因师而瞎的眼
+&lt;/h3&gt;&lt;h2 id=&#34;第十一品-无为福胜分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%80%e5%93%81-%e6%97%a0%e4%b8%ba%e7%a6%8f%e8%83%9c%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十一品 无为福胜分
+&lt;/h2&gt;&lt;h3 id=&#34;不可数的福&#34;&gt;&lt;a href=&#34;#%e4%b8%8d%e5%8f%af%e6%95%b0%e7%9a%84%e7%a6%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;不可数的福
+&lt;/h3&gt;&lt;h3 id=&#34;受持四句偈&#34;&gt;&lt;a href=&#34;#%e5%8f%97%e6%8c%81%e5%9b%9b%e5%8f%a5%e5%81%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;受持四句偈
+&lt;/h3&gt;&lt;h3 id=&#34;资-粮&#34;&gt;&lt;a href=&#34;#%e8%b5%84-%e7%b2%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;资 粮
+&lt;/h3&gt;&lt;h2 id=&#34;第十二品-尊重正教分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%ba%8c%e5%93%81-%e5%b0%8a%e9%87%8d%e6%ad%a3%e6%95%99%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十二品 尊重正教分
+&lt;/h2&gt;&lt;h3 id=&#34;放金刚经的地方&#34;&gt;&lt;a href=&#34;#%e6%94%be%e9%87%91%e5%88%9a%e7%bb%8f%e7%9a%84%e5%9c%b0%e6%96%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;放《金刚经》的地方
+&lt;/h3&gt;&lt;h3 id=&#34;金刚经放在何处&#34;&gt;&lt;a href=&#34;#%e9%87%91%e5%88%9a%e7%bb%8f%e6%94%be%e5%9c%a8%e4%bd%95%e5%a4%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;《金刚经》放在何处
+&lt;/h3&gt;&lt;h2 id=&#34;第十三品-如法受持分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%89%e5%93%81-%e5%a6%82%e6%b3%95%e5%8f%97%e6%8c%81%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十三品 如法受持分
+&lt;/h2&gt;&lt;h3 id=&#34;再说大智慧&#34;&gt;&lt;a href=&#34;#%e5%86%8d%e8%af%b4%e5%a4%a7%e6%99%ba%e6%85%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;再说大智慧
+&lt;/h3&gt;&lt;h3 id=&#34;黄山谷与晦堂&#34;&gt;&lt;a href=&#34;#%e9%bb%84%e5%b1%b1%e8%b0%b7%e4%b8%8e%e6%99%a6%e5%a0%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;黄山谷与晦堂
+&lt;/h3&gt;&lt;h3 id=&#34;黄山谷与黄龙死心悟新&#34;&gt;&lt;a href=&#34;#%e9%bb%84%e5%b1%b1%e8%b0%b7%e4%b8%8e%e9%bb%84%e9%be%99%e6%ad%bb%e5%bf%83%e6%82%9f%e6%96%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;黄山谷与黄龙死心悟新
+&lt;/h3&gt;&lt;h3 id=&#34;微尘-外色尘-内色尘&#34;&gt;&lt;a href=&#34;#%e5%be%ae%e5%b0%98-%e5%a4%96%e8%89%b2%e5%b0%98-%e5%86%85%e8%89%b2%e5%b0%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;微尘 外色尘 内色尘
+&lt;/h3&gt;&lt;h3 id=&#34;你我的三十二相&#34;&gt;&lt;a href=&#34;#%e4%bd%a0%e6%88%91%e7%9a%84%e4%b8%89%e5%8d%81%e4%ba%8c%e7%9b%b8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;你我的三十二相
+&lt;/h3&gt;&lt;h3 id=&#34;夹山大师&#34;&gt;&lt;a href=&#34;#%e5%a4%b9%e5%b1%b1%e5%a4%a7%e5%b8%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;夹山大师
+&lt;/h3&gt;&lt;h3 id=&#34;夹山见船子&#34;&gt;&lt;a href=&#34;#%e5%a4%b9%e5%b1%b1%e8%a7%81%e8%88%b9%e5%ad%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;夹山见船子
+&lt;/h3&gt;&lt;h3 id=&#34;大的功德&#34;&gt;&lt;a href=&#34;#%e5%a4%a7%e7%9a%84%e5%8a%9f%e5%be%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;大的功德
+&lt;/h3&gt;&lt;h2 id=&#34;第十四品-离相寂灭分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%9b%9b%e5%93%81-%e7%a6%bb%e7%9b%b8%e5%af%82%e7%81%ad%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十四品 离相寂灭分
+&lt;/h2&gt;&lt;h3 id=&#34;解悟-喜极而泣&#34;&gt;&lt;a href=&#34;#%e8%a7%a3%e6%82%9f-%e5%96%9c%e6%9e%81%e8%80%8c%e6%b3%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;解悟 喜极而泣
+&lt;/h3&gt;&lt;h3 id=&#34;信心清净&#34;&gt;&lt;a href=&#34;#%e4%bf%a1%e5%bf%83%e6%b8%85%e5%87%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;信心清净
+&lt;/h3&gt;&lt;h3 id=&#34;希有的功德&#34;&gt;&lt;a href=&#34;#%e5%b8%8c%e6%9c%89%e7%9a%84%e5%8a%9f%e5%be%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;希有的功德
+&lt;/h3&gt;&lt;h3 id=&#34;谁是五百年后希有人&#34;&gt;&lt;a href=&#34;#%e8%b0%81%e6%98%af%e4%ba%94%e7%99%be%e5%b9%b4%e5%90%8e%e5%b8%8c%e6%9c%89%e4%ba%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;谁是五百年后希有人
+&lt;/h3&gt;&lt;h3 id=&#34;为什么我不是我&#34;&gt;&lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e6%88%91%e4%b8%8d%e6%98%af%e6%88%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;为什么我不是我
+&lt;/h3&gt;&lt;h3 id=&#34;如何见佛&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e4%bd%95%e8%a7%81%e4%bd%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如何见佛
+&lt;/h3&gt;&lt;h3 id=&#34;难得的人&#34;&gt;&lt;a href=&#34;#%e9%9a%be%e5%be%97%e7%9a%84%e4%ba%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;难得的人
+&lt;/h3&gt;&lt;h3 id=&#34;什么是忍辱&#34;&gt;&lt;a href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e5%bf%8d%e8%be%b1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;什么是忍辱
+&lt;/h3&gt;&lt;h3 id=&#34;忍辱的榜样&#34;&gt;&lt;a href=&#34;#%e5%bf%8d%e8%be%b1%e7%9a%84%e6%a6%9c%e6%a0%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;忍辱的榜样
+&lt;/h3&gt;&lt;h3 id=&#34;达摩与苏格拉底&#34;&gt;&lt;a href=&#34;#%e8%be%be%e6%91%a9%e4%b8%8e%e8%8b%8f%e6%a0%bc%e6%8b%89%e5%ba%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;达摩与苏格拉底
+&lt;/h3&gt;&lt;h3 id=&#34;忍辱的功夫&#34;&gt;&lt;a href=&#34;#%e5%bf%8d%e8%be%b1%e7%9a%84%e5%8a%9f%e5%a4%ab&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;忍辱的功夫
+&lt;/h3&gt;&lt;h3 id=&#34;无所住的心&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e6%89%80%e4%bd%8f%e7%9a%84%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无所住的心
+&lt;/h3&gt;&lt;h3 id=&#34;如何布施&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e4%bd%95%e5%b8%83%e6%96%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如何布施
+&lt;/h3&gt;&lt;h3 id=&#34;佛怎么说话&#34;&gt;&lt;a href=&#34;#%e4%bd%9b%e6%80%8e%e4%b9%88%e8%af%b4%e8%af%9d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;佛怎么说话
+&lt;/h3&gt;&lt;h3 id=&#34;无实亦无虚&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e5%ae%9e%e4%ba%a6%e6%97%a0%e8%99%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无实亦无虚
+&lt;/h3&gt;&lt;h3 id=&#34;无量无边的功德&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e9%87%8f%e6%97%a0%e8%be%b9%e7%9a%84%e5%8a%9f%e5%be%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无量无边的功德
+&lt;/h3&gt;&lt;h2 id=&#34;第十五品-持经功德分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%ba%94%e5%93%81-%e6%8c%81%e7%bb%8f%e5%8a%9f%e5%be%b7%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十五品 持经功德分
+&lt;/h2&gt;&lt;h3 id=&#34;最难的布施&#34;&gt;&lt;a href=&#34;#%e6%9c%80%e9%9a%be%e7%9a%84%e5%b8%83%e6%96%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;最难的布施
+&lt;/h3&gt;&lt;h3 id=&#34;老人的救生圈&#34;&gt;&lt;a href=&#34;#%e8%80%81%e4%ba%ba%e7%9a%84%e6%95%91%e7%94%9f%e5%9c%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;老人的救生圈
+&lt;/h3&gt;&lt;h3 id=&#34;信心不逆的福报&#34;&gt;&lt;a href=&#34;#%e4%bf%a1%e5%bf%83%e4%b8%8d%e9%80%86%e7%9a%84%e7%a6%8f%e6%8a%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;信心不逆的福报
+&lt;/h3&gt;&lt;h3 id=&#34;如来说给谁&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e6%9d%a5%e8%af%b4%e7%bb%99%e8%b0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如来说给谁
+&lt;/h3&gt;&lt;h3 id=&#34;你喜欢小法吗&#34;&gt;&lt;a href=&#34;#%e4%bd%a0%e5%96%9c%e6%ac%a2%e5%b0%8f%e6%b3%95%e5%90%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;你喜欢小法吗
+&lt;/h3&gt;&lt;h2 id=&#34;第十六品-能净业障分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%85%ad%e5%93%81-%e8%83%bd%e5%87%80%e4%b8%9a%e9%9a%9c%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十六品 能净业障分
+&lt;/h2&gt;&lt;h3 id=&#34;被轻贱的前因后果&#34;&gt;&lt;a href=&#34;#%e8%a2%ab%e8%bd%bb%e8%b4%b1%e7%9a%84%e5%89%8d%e5%9b%a0%e5%90%8e%e6%9e%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;被轻贱的前因后果
+&lt;/h3&gt;&lt;h3 id=&#34;诚敬努力的人&#34;&gt;&lt;a href=&#34;#%e8%af%9a%e6%95%ac%e5%8a%aa%e5%8a%9b%e7%9a%84%e4%ba%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;诚敬努力的人
+&lt;/h3&gt;&lt;h3 id=&#34;不可思议的果报&#34;&gt;&lt;a href=&#34;#%e4%b8%8d%e5%8f%af%e6%80%9d%e8%ae%ae%e7%9a%84%e6%9e%9c%e6%8a%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;不可思议的果报
+&lt;/h3&gt;&lt;h2 id=&#34;第十七品-究竟无我分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b8%83%e5%93%81-%e7%a9%b6%e7%ab%9f%e6%97%a0%e6%88%91%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十七品 究竟无我分
+&lt;/h2&gt;&lt;h3 id=&#34;发什么愿&#34;&gt;&lt;a href=&#34;#%e5%8f%91%e4%bb%80%e4%b9%88%e6%84%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;发什么愿
+&lt;/h3&gt;&lt;h3 id=&#34;然灯佛所得什么&#34;&gt;&lt;a href=&#34;#%e7%84%b6%e7%81%af%e4%bd%9b%e6%89%80%e5%be%97%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;然灯佛所得什么
+&lt;/h3&gt;&lt;h3 id=&#34;然灯佛为什么授记&#34;&gt;&lt;a href=&#34;#%e7%84%b6%e7%81%af%e4%bd%9b%e4%b8%ba%e4%bb%80%e4%b9%88%e6%8e%88%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;然灯佛为什么授记
+&lt;/h3&gt;&lt;h3 id=&#34;一切都是佛法&#34;&gt;&lt;a href=&#34;#%e4%b8%80%e5%88%87%e9%83%bd%e6%98%af%e4%bd%9b%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;一切都是佛法
+&lt;/h3&gt;&lt;h3 id=&#34;什么都没有的菩萨&#34;&gt;&lt;a href=&#34;#%e4%bb%80%e4%b9%88%e9%83%bd%e6%b2%a1%e6%9c%89%e7%9a%84%e8%8f%a9%e8%90%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;什么都没有的菩萨
+&lt;/h3&gt;&lt;h3 id=&#34;无我的菩萨&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e6%88%91%e7%9a%84%e8%8f%a9%e8%90%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无我的菩萨
+&lt;/h3&gt;&lt;h2 id=&#34;第十八品-一体同观分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e5%85%ab%e5%93%81-%e4%b8%80%e4%bd%93%e5%90%8c%e8%a7%82%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十八品 一体同观分
+&lt;/h2&gt;&lt;h3 id=&#34;眼者心之机&#34;&gt;&lt;a href=&#34;#%e7%9c%bc%e8%80%85%e5%bf%83%e4%b9%8b%e6%9c%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;眼者心之机
+&lt;/h3&gt;&lt;h3 id=&#34;天眼是什么&#34;&gt;&lt;a href=&#34;#%e5%a4%a9%e7%9c%bc%e6%98%af%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;天眼是什么
+&lt;/h3&gt;&lt;h3 id=&#34;慧眼-法眼-佛眼&#34;&gt;&lt;a href=&#34;#%e6%85%a7%e7%9c%bc-%e6%b3%95%e7%9c%bc-%e4%bd%9b%e7%9c%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;慧眼 法眼 佛眼
+&lt;/h3&gt;&lt;h3 id=&#34;无量数的宇宙世界&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e9%87%8f%e6%95%b0%e7%9a%84%e5%ae%87%e5%ae%99%e4%b8%96%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无量数的宇宙世界
+&lt;/h3&gt;&lt;h3 id=&#34;无数量的心&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e6%95%b0%e9%87%8f%e7%9a%84%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无数量的心
+&lt;/h3&gt;&lt;h3 id=&#34;你的心&#34;&gt;&lt;a href=&#34;#%e4%bd%a0%e7%9a%84%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;你的心
+&lt;/h3&gt;&lt;h3 id=&#34;永远得不到的心&#34;&gt;&lt;a href=&#34;#%e6%b0%b8%e8%bf%9c%e5%be%97%e4%b8%8d%e5%88%b0%e7%9a%84%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;永远得不到的心
+&lt;/h3&gt;&lt;h2 id=&#34;第十九品-法界通化分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%8d%81%e4%b9%9d%e5%93%81-%e6%b3%95%e7%95%8c%e9%80%9a%e5%8c%96%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第十九品 法界通化分
+&lt;/h2&gt;&lt;h3 id=&#34;福德不可得&#34;&gt;&lt;a href=&#34;#%e7%a6%8f%e5%be%b7%e4%b8%8d%e5%8f%af%e5%be%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;福德不可得
+&lt;/h3&gt;&lt;h3 id=&#34;无人希罕的福&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e4%ba%ba%e5%b8%8c%e7%bd%95%e7%9a%84%e7%a6%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无人希罕的福
+&lt;/h3&gt;&lt;h2 id=&#34;第二十品-离色离相分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e5%93%81-%e7%a6%bb%e8%89%b2%e7%a6%bb%e7%9b%b8%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十品 离色离相分
+&lt;/h2&gt;&lt;h3 id=&#34;大丈夫相&#34;&gt;&lt;a href=&#34;#%e5%a4%a7%e4%b8%88%e5%a4%ab%e7%9b%b8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;大丈夫相
+&lt;/h3&gt;&lt;h3 id=&#34;世上的肉身菩萨&#34;&gt;&lt;a href=&#34;#%e4%b8%96%e4%b8%8a%e7%9a%84%e8%82%89%e8%ba%ab%e8%8f%a9%e8%90%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;世上的肉身菩萨
+&lt;/h3&gt;&lt;h2 id=&#34;第二十一品-非说所说分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e4%b8%80%e5%93%81-%e9%9d%9e%e8%af%b4%e6%89%80%e8%af%b4%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十一品 非说所说分
+&lt;/h2&gt;&lt;h3 id=&#34;什么都没说&#34;&gt;&lt;a href=&#34;#%e4%bb%80%e4%b9%88%e9%83%bd%e6%b2%a1%e8%af%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;什么都没说
+&lt;/h3&gt;&lt;h3 id=&#34;迦叶笑了&#34;&gt;&lt;a href=&#34;#%e8%bf%a6%e5%8f%b6%e7%ac%91%e4%ba%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;迦叶笑了
+&lt;/h3&gt;&lt;h3 id=&#34;须菩提与佛对答&#34;&gt;&lt;a href=&#34;#%e9%a1%bb%e8%8f%a9%e6%8f%90%e4%b8%8e%e4%bd%9b%e5%af%b9%e7%ad%94&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;须菩提与佛对答
+&lt;/h3&gt;&lt;h3 id=&#34;顽石点头为什么&#34;&gt;&lt;a href=&#34;#%e9%a1%bd%e7%9f%b3%e7%82%b9%e5%a4%b4%e4%b8%ba%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;顽石点头为什么
+&lt;/h3&gt;&lt;h3 id=&#34;众生与佛&#34;&gt;&lt;a href=&#34;#%e4%bc%97%e7%94%9f%e4%b8%8e%e4%bd%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;众生与佛
+&lt;/h3&gt;&lt;h2 id=&#34;第二十二品-无法可得分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e4%ba%8c%e5%93%81-%e6%97%a0%e6%b3%95%e5%8f%af%e5%be%97%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十二品 无法可得分
+&lt;/h2&gt;&lt;h3 id=&#34;一指禅&#34;&gt;&lt;a href=&#34;#%e4%b8%80%e6%8c%87%e7%a6%85&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;一指禅
+&lt;/h3&gt;&lt;h2 id=&#34;第二十三品-净心行善分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e4%b8%89%e5%93%81-%e5%87%80%e5%bf%83%e8%a1%8c%e5%96%84%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十三品 净心行善分
+&lt;/h2&gt;&lt;h3 id=&#34;修一切善法&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e4%b8%80%e5%88%87%e5%96%84%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修一切善法
+&lt;/h3&gt;&lt;h3 id=&#34;南山高北山低&#34;&gt;&lt;a href=&#34;#%e5%8d%97%e5%b1%b1%e9%ab%98%e5%8c%97%e5%b1%b1%e4%bd%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;南山高北山低
+&lt;/h3&gt;&lt;h2 id=&#34;第二十四品-福智无比分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e5%9b%9b%e5%93%81-%e7%a6%8f%e6%99%ba%e6%97%a0%e6%af%94%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十四品 福智无比分
+&lt;/h2&gt;&lt;h3 id=&#34;修资粮&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e8%b5%84%e7%b2%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修资粮
+&lt;/h3&gt;&lt;h3 id=&#34;受持读诵&#34;&gt;&lt;a href=&#34;#%e5%8f%97%e6%8c%81%e8%af%bb%e8%af%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;受持读诵
+&lt;/h3&gt;&lt;h3 id=&#34;真教化的功德&#34;&gt;&lt;a href=&#34;#%e7%9c%9f%e6%95%99%e5%8c%96%e7%9a%84%e5%8a%9f%e5%be%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;真教化的功德
+&lt;/h3&gt;&lt;h2 id=&#34;第二十五品-化无所化分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e4%ba%94%e5%93%81-%e5%8c%96%e6%97%a0%e6%89%80%e5%8c%96%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十五品 化无所化分
+&lt;/h2&gt;&lt;h3 id=&#34;有教无类&#34;&gt;&lt;a href=&#34;#%e6%9c%89%e6%95%99%e6%97%a0%e7%b1%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;有教无类
+&lt;/h3&gt;&lt;h3 id=&#34;自己的解脱&#34;&gt;&lt;a href=&#34;#%e8%87%aa%e5%b7%b1%e7%9a%84%e8%a7%a3%e8%84%b1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;自己的解脱
+&lt;/h3&gt;&lt;h3 id=&#34;无我以后&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e6%88%91%e4%bb%a5%e5%90%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无我以后
+&lt;/h3&gt;&lt;h2 id=&#34;第二十六品-法身非相分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e5%85%ad%e5%93%81-%e6%b3%95%e8%ba%ab%e9%9d%9e%e7%9b%b8%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十六品 法身非相分
+&lt;/h2&gt;&lt;h3 id=&#34;见佛与观佛&#34;&gt;&lt;a href=&#34;#%e8%a7%81%e4%bd%9b%e4%b8%8e%e8%a7%82%e4%bd%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;见佛与观佛
+&lt;/h3&gt;&lt;h3 id=&#34;声色与邪道&#34;&gt;&lt;a href=&#34;#%e5%a3%b0%e8%89%b2%e4%b8%8e%e9%82%aa%e9%81%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;声色与邪道
+&lt;/h3&gt;&lt;h3 id=&#34;转轮圣王&#34;&gt;&lt;a href=&#34;#%e8%bd%ac%e8%bd%ae%e5%9c%a3%e7%8e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;转轮圣王
+&lt;/h3&gt;&lt;h3 id=&#34;十地菩萨与转轮圣王&#34;&gt;&lt;a href=&#34;#%e5%8d%81%e5%9c%b0%e8%8f%a9%e8%90%a8%e4%b8%8e%e8%bd%ac%e8%bd%ae%e5%9c%a3%e7%8e%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;十地菩萨与转轮圣王
+&lt;/h3&gt;&lt;h3 id=&#34;悬崖撒手&#34;&gt;&lt;a href=&#34;#%e6%82%ac%e5%b4%96%e6%92%92%e6%89%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;悬崖撒手
+&lt;/h3&gt;&lt;h2 id=&#34;第二十七品-无断无灭分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e4%b8%83%e5%93%81-%e6%97%a0%e6%96%ad%e6%97%a0%e7%81%ad%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十七品 无断无灭分
+&lt;/h2&gt;&lt;h3 id=&#34;三界六道之外&#34;&gt;&lt;a href=&#34;#%e4%b8%89%e7%95%8c%e5%85%ad%e9%81%93%e4%b9%8b%e5%a4%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;三界六道之外
+&lt;/h3&gt;&lt;h3 id=&#34;断灭见&#34;&gt;&lt;a href=&#34;#%e6%96%ad%e7%81%ad%e8%a7%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;断灭见
+&lt;/h3&gt;&lt;h3 id=&#34;不说断灭相&#34;&gt;&lt;a href=&#34;#%e4%b8%8d%e8%af%b4%e6%96%ad%e7%81%ad%e7%9b%b8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;不说断灭相
+&lt;/h3&gt;&lt;h2 id=&#34;第二十八品-不受不贪分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e5%85%ab%e5%93%81-%e4%b8%8d%e5%8f%97%e4%b8%8d%e8%b4%aa%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十八品 不受不贪分
+&lt;/h2&gt;&lt;h3 id=&#34;爱布施的菩萨&#34;&gt;&lt;a href=&#34;#%e7%88%b1%e5%b8%83%e6%96%bd%e7%9a%84%e8%8f%a9%e8%90%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;爱布施的菩萨
+&lt;/h3&gt;&lt;h3 id=&#34;一切法无我&#34;&gt;&lt;a href=&#34;#%e4%b8%80%e5%88%87%e6%b3%95%e6%97%a0%e6%88%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;一切法无我
+&lt;/h3&gt;&lt;h3 id=&#34;定与忍&#34;&gt;&lt;a href=&#34;#%e5%ae%9a%e4%b8%8e%e5%bf%8d&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;定与忍
+&lt;/h3&gt;&lt;h3 id=&#34;张拙的故事&#34;&gt;&lt;a href=&#34;#%e5%bc%a0%e6%8b%99%e7%9a%84%e6%95%85%e4%ba%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;张拙的故事
+&lt;/h3&gt;&lt;h3 id=&#34;有求就有住吗&#34;&gt;&lt;a href=&#34;#%e6%9c%89%e6%b1%82%e5%b0%b1%e6%9c%89%e4%bd%8f%e5%90%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;有求就有住吗
+&lt;/h3&gt;&lt;h2 id=&#34;第二十九品-威仪寂静分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e5%8d%81%e4%b9%9d%e5%93%81-%e5%a8%81%e4%bb%aa%e5%af%82%e9%9d%99%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第二十九品 威仪寂静分
+&lt;/h2&gt;&lt;h3 id=&#34;无来亦无去&#34;&gt;&lt;a href=&#34;#%e6%97%a0%e6%9d%a5%e4%ba%a6%e6%97%a0%e5%8e%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;无来亦无去
+&lt;/h3&gt;&lt;h3 id=&#34;如来的境界&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e6%9d%a5%e7%9a%84%e5%a2%83%e7%95%8c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如来的境界
+&lt;/h3&gt;&lt;h2 id=&#34;第三十品-一合理相分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e5%8d%81%e5%93%81-%e4%b8%80%e5%90%88%e7%90%86%e7%9b%b8%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三十品 一合理相分
+&lt;/h2&gt;&lt;h3 id=&#34;碎为微尘之后&#34;&gt;&lt;a href=&#34;#%e7%a2%8e%e4%b8%ba%e5%be%ae%e5%b0%98%e4%b9%8b%e5%90%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;碎为微尘之后
+&lt;/h3&gt;&lt;h3 id=&#34;什么是合相&#34;&gt;&lt;a href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e5%90%88%e7%9b%b8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;什么是合相
+&lt;/h3&gt;&lt;h3 id=&#34;第八识和种性&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e5%85%ab%e8%af%86%e5%92%8c%e7%a7%8d%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第八识和种性
+&lt;/h3&gt;&lt;h3 id=&#34;心念如暴流&#34;&gt;&lt;a href=&#34;#%e5%bf%83%e5%bf%b5%e5%a6%82%e6%9a%b4%e6%b5%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;心念如暴流
+&lt;/h3&gt;&lt;h3 id=&#34;真空如何生妙有&#34;&gt;&lt;a href=&#34;#%e7%9c%9f%e7%a9%ba%e5%a6%82%e4%bd%95%e7%94%9f%e5%a6%99%e6%9c%89&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;真空如何生妙有
+&lt;/h3&gt;&lt;h2 id=&#34;第三十一品-知见不生分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e5%8d%81%e4%b8%80%e5%93%81-%e7%9f%a5%e8%a7%81%e4%b8%8d%e7%94%9f%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三十一品 知见不生分
+&lt;/h2&gt;&lt;h3 id=&#34;见不是见&#34;&gt;&lt;a href=&#34;#%e8%a7%81%e4%b8%8d%e6%98%af%e8%a7%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;见不是见
+&lt;/h3&gt;&lt;h3 id=&#34;知即无明本&#34;&gt;&lt;a href=&#34;#%e7%9f%a5%e5%8d%b3%e6%97%a0%e6%98%8e%e6%9c%ac&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;知即无明本
+&lt;/h3&gt;&lt;h3 id=&#34;如是知见&#34;&gt;&lt;a href=&#34;#%e5%a6%82%e6%98%af%e7%9f%a5%e8%a7%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;如是知见
+&lt;/h3&gt;&lt;h3 id=&#34;我们自己的法相&#34;&gt;&lt;a href=&#34;#%e6%88%91%e4%bb%ac%e8%87%aa%e5%b7%b1%e7%9a%84%e6%b3%95%e7%9b%b8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;我们自己的法相
+&lt;/h3&gt;&lt;h3 id=&#34;我要过去-你过来&#34;&gt;&lt;a href=&#34;#%e6%88%91%e8%a6%81%e8%bf%87%e5%8e%bb-%e4%bd%a0%e8%bf%87%e6%9d%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;我要过去 你过来
+&lt;/h3&gt;&lt;h2 id=&#34;第三十二品-应化非真分&#34;&gt;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e5%8d%81%e4%ba%8c%e5%93%81-%e5%ba%94%e5%8c%96%e9%9d%9e%e7%9c%9f%e5%88%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;第三十二品 应化非真分
+&lt;/h2&gt;&lt;h3 id=&#34;应化非真&#34;&gt;&lt;a href=&#34;#%e5%ba%94%e5%8c%96%e9%9d%9e%e7%9c%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;应化非真
+&lt;/h3&gt;&lt;h3 id=&#34;内圣外王菩提心&#34;&gt;&lt;a href=&#34;#%e5%86%85%e5%9c%a3%e5%a4%96%e7%8e%8b%e8%8f%a9%e6%8f%90%e5%bf%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;内圣外王菩提心
+&lt;/h3&gt;&lt;h3 id=&#34;学佛的懒人&#34;&gt;&lt;a href=&#34;#%e5%ad%a6%e4%bd%9b%e7%9a%84%e6%87%92%e4%ba%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;学佛的懒人
+&lt;/h3&gt;&lt;h3 id=&#34;离经的四句偈&#34;&gt;&lt;a href=&#34;#%e7%a6%bb%e7%bb%8f%e7%9a%84%e5%9b%9b%e5%8f%a5%e5%81%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;离经的四句偈
+&lt;/h3&gt;&lt;h3 id=&#34;梦幻中如如不动&#34;&gt;&lt;a href=&#34;#%e6%a2%a6%e5%b9%bb%e4%b8%ad%e5%a6%82%e5%a6%82%e4%b8%8d%e5%8a%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;梦幻中如如不动
+&lt;/h3&gt;&lt;h3 id=&#34;总结论&#34;&gt;&lt;a href=&#34;#%e6%80%bb%e7%bb%93%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;总结论
+&lt;/h3&gt;&lt;h2 id=&#34;后记&#34;&gt;&lt;a href=&#34;#%e5%90%8e%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;后记
+&lt;/h2&gt;&lt;h2 id=&#34;南怀瑾先生著述目录&#34;&gt;&lt;a href=&#34;#%e5%8d%97%e6%80%80%e7%91%be%e5%85%88%e7%94%9f%e8%91%97%e8%bf%b0%e7%9b%ae%e5%bd%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;南怀瑾先生著述目录
+&lt;/h2&gt;&lt;h1 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书笔记
+&lt;/h1&gt;&lt;h2 id=&#34;那个时候-1&#34;&gt;&lt;a href=&#34;#%e9%82%a3%e4%b8%aa%e6%97%b6%e5%80%99-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;那个时候
+&lt;/h2&gt;&lt;h3 id=&#34;划线评论&#34;&gt;&lt;a href=&#34;#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;划线评论
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;📌 再说，印度人除了没有时间观念而没有历史外，数字观念也非常差，所以佛经上这里八万四千，那里八万四千，等于杭州人说“木老老”，多得不可数的意思。印度人说多得很就是八万四千。  ^6733360-7TsoY8H5v
+- 💭 原来这么回事
+- ⏱ 2024-08-15 08:47:05&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;本书评论&#34;&gt;&lt;a href=&#34;#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;本书评论
 &lt;/h1&gt;</description>
