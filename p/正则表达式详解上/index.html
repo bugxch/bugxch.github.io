@@ -14,9 +14,6 @@
 <meta name="twitter:title" content="正则表达式详解（上）">
 <meta name="twitter:description" content="简单来说，正则表达式是根据一定的语法规则组合而成的用来匹配具有某种模式的文本的字符串。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
 <style>
     :root {
       --sys-font-family: "Noto Serif SC";
@@ -385,50 +382,50 @@
 </h5><p>有了以上的基础知识，就可以完成大部分简单的正则表达式了，比如<a class="link" href="https://docs.python.org/3/howto/regex.html"  target="_blank" rel="noopener"
     >官方文档</a>中的例子，尝试用正则表达式<code>a[bcd]*b</code>去匹配<code>abcbd</code>。具体的匹配步骤如下表所示</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Matched</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><code>a</code></td>
-<td>正则表达式中的 <code>a</code></td>
-</tr>
-<tr>
-<td>2</td>
-<td><code>abcbd</code></td>
-<td>引擎匹配 <code>[bcd]*</code>，匹配尽可能多的字符直到目标字符串结尾</td>
-</tr>
-<tr>
-<td>3</td>
-<td>失败</td>
-<td>引擎尝试匹配 <code>b</code>，但是目前已经到了字符串结尾，所以无字符匹配，失败 /</td>
-</tr>
-<tr>
-<td>4</td>
-<td><code>abcb</code></td>
-<td>回溯一个字符（即<code>d</code>），因此 <code>[bcd]*</code> 少匹配一个字符</td>
-</tr>
-<tr>
-<td>5</td>
-<td>失败</td>
-<td>再次尝试匹配 <code>b</code> ，但是当前未匹配字符只有 <code>'d'</code>，再次失败</td>
-</tr>
-<tr>
-<td>6</td>
-<td><code>abc</code></td>
-<td>再次回溯一个字符（即<code>b</code>）， 因而 <code>[bcd]*</code>仅仅匹配<code>bc</code></td>
-</tr>
-<tr>
-<td>6</td>
-<td><code>abcb</code></td>
-<td>再次尝试匹配 <code>b</code> 。 这次未匹配字符当前位置就是 <code>'b'</code>，因此成功</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Step</th>
+          <th style="text-align: left">Matched</th>
+          <th style="text-align: left">Explanation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left"><code>a</code></td>
+          <td style="text-align: left">正则表达式中的 <code>a</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left"><code>abcbd</code></td>
+          <td style="text-align: left">引擎匹配 <code>[bcd]*</code>，匹配尽可能多的字符直到目标字符串结尾</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">失败</td>
+          <td style="text-align: left">引擎尝试匹配 <code>b</code>，但是目前已经到了字符串结尾，所以无字符匹配，失败 /</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left"><code>abcb</code></td>
+          <td style="text-align: left">回溯一个字符（即<code>d</code>），因此 <code>[bcd]*</code> 少匹配一个字符</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">失败</td>
+          <td style="text-align: left">再次尝试匹配 <code>b</code> ，但是当前未匹配字符只有 <code>'d'</code>，再次失败</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left"><code>abc</code></td>
+          <td style="text-align: left">再次回溯一个字符（即<code>b</code>）， 因而 <code>[bcd]*</code>仅仅匹配<code>bc</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left"><code>abcb</code></td>
+          <td style="text-align: left">再次尝试匹配 <code>b</code> 。 这次未匹配字符当前位置就是 <code>'b'</code>，因此成功</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>从以上的匹配过程可以看到，正则表达式匹配过程就是引擎从左到右逐个搜索目标字符串，<strong>匹配正则表达式中所有字符代表的模式</strong>，如果搜索完整个字符串仍然没有找到就失败。推荐使用网站 <a class="link" href="https://regex101.com/"  target="_blank" rel="noopener"
     >regex101.com</a> 选择 python 语言，练习正则表达式。网站截图如下所示，它用蓝色底块标识了表达式匹配的内容，直观好用。</p>
@@ -436,22 +433,22 @@
 </h5><p>上面的例子里的第二步，<code>*</code>会<strong>尽可能地匹配符合表达式的所有字符</strong>，引擎就像一个<strong>贪婪</strong>的胖子，<strong>一口气吞下所有可以吞下去的东西</strong>，这就是正则表达式的<strong>贪婪模式</strong>。构造正则表达式时需要特别小心地处理具有相同属性的量词字符<code>?{m,n}+</code>，不然往往会产生意想不到的结果。</p>
 <p>比如使用正则表达式<code>&lt;.*&gt;</code>尝试匹配<code>&lt;a&gt;b&lt;c&gt;</code>的中的<code>&lt;a&gt;</code>，却匹配了整个表达式。为了仅仅匹配<code>&lt;a&gt;</code>，需要在<code>*</code>后加上<code>?</code>，即使用<code>&lt;.*?&gt;</code>就能成功。二者的具体的区别如下表所示</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>表达式</th>
-<th>步骤</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&lt;.*&gt;</code></td>
-<td>先匹配<code>&lt;</code>，再匹配<code>.*</code>，此时吞下所有的符号，最后从最后一个字符开始，吐一个字符匹配一次<code>&gt;</code>，直到成功为止</td>
-</tr>
-<tr>
-<td><code>&lt;.*?&gt;</code></td>
-<td>先匹配<code>&lt;</code>，再匹配<code>.*?</code>，此时一个字符一个字符吞，每吞一个字符就立马匹配<code>&gt;</code>，直到成功为止</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">表达式</th>
+          <th style="text-align: left">步骤</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>&lt;.*&gt;</code></td>
+          <td style="text-align: left">先匹配<code>&lt;</code>，再匹配<code>.*</code>，此时吞下所有的符号，最后从最后一个字符开始，吐一个字符匹配一次<code>&gt;</code>，直到成功为止</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;.*?&gt;</code></td>
+          <td style="text-align: left">先匹配<code>&lt;</code>，再匹配<code>.*?</code>，此时一个字符一个字符吞，每吞一个字符就立马匹配<code>&gt;</code>，直到成功为止</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>在量词之后加上<code>?</code>表示<strong>非贪婪模式</strong>或者<strong>最小模式</strong>，吐到第三个字符为止，因此它找到了最小的<code>&lt;.*&gt;</code>的模式。</p>
 <h5 id="零宽字符"><a href="#%e9%9b%b6%e5%ae%bd%e5%ad%97%e7%ac%a6" class="header-anchor"></a>零宽字符
@@ -538,30 +535,30 @@
 <h5 id="符号优先级"><a href="#%e7%ac%a6%e5%8f%b7%e4%bc%98%e5%85%88%e7%ba%a7" class="header-anchor"></a>符号优先级
 </h5><p>另一个需要留心的问题是正则表达式的优先级，它表示解读正则表达式时对一般字符及字符组（用<code>()</code>括起来的一般字符的组合）的<strong>粘度</strong>，最低的是<code>|</code>（表中未列出），具体可参考如下的优先级列表。</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\</td>
-<td>转义符</td>
-</tr>
-<tr>
-<td>(), (?:), (?=), []</td>
-<td>圆括号和方括号</td>
-</tr>
-<tr>
-<td>*, +, ?, {n}, {n,}, {n,m}</td>
-<td>限定符</td>
-</tr>
-<tr>
-<td>^, $, \ 任何元字符、任何字符</td>
-<td>定位点和序列（即：位置和顺序）</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">运算符</th>
+          <th style="text-align: left">描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">\</td>
+          <td style="text-align: left">转义符</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">(), (?:), (?=), []</td>
+          <td style="text-align: left">圆括号和方括号</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">*, +, ?, {n}, {n,}, {n,m}</td>
+          <td style="text-align: left">限定符</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">^, $, \ 任何元字符、任何字符</td>
+          <td style="text-align: left">定位点和序列（即：位置和顺序）</td>
+      </tr>
+  </tbody>
 </table></div>
 <h5 id="正则表达式举例"><a href="#%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e4%b8%be%e4%be%8b" class="header-anchor"></a>正则表达式举例
 </h5><p>结合以上的例子，解读如下正则表达式。</p>
@@ -582,98 +579,98 @@
 <p>此外附上网站 <a class="link" href="http://deerchao.net/tutorials/regex/common.htm%E3%80%81"  target="_blank" rel="noopener"
     >deerchao</a> 总结的常见正则表达式列表</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>说明</th>
-<th>正则表达式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>网址（URL）</td>
-<td><code>[a-zA-z]+://[^\s]*</code></td>
-</tr>
-<tr>
-<td>IP 地址 (IP Address)</td>
-<td><code>((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)</code></td>
-</tr>
-<tr>
-<td>电子邮件 (Email)</td>
-<td><code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></td>
-</tr>
-<tr>
-<td>QQ 号码</td>
-<td><code>[1-9]\d{4,}</code></td>
-</tr>
-<tr>
-<td>HTML 标记 (包含内容或自闭合)</td>
-<td><code>&lt;(.*)(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;</code></td>
-</tr>
-<tr>
-<td>密码 (由数字 / 大写字母 / 小写字母 / 标点符号组成，四种都必有，8 位以上)</td>
-<td><code>(?=^.{8,}\$)(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z])(?!.*\n).*$</code></td>
-</tr>
-<tr>
-<td>日期 (年 - 月 - 日)</td>
-<td><code>(\d{4}\d{2})-((1[0-2])(0?[1-9]))-(([12][0-9])(3[01])(0?[1-9]))</code></td>
-</tr>
-<tr>
-<td>日期 (月 / 日 / 年)</td>
-<td><code>((1[0-2])(0?[1-9]))/(([12][0-9])(3[01])(0?[1-9]))/(\d{4}\d{2})</code></td>
-</tr>
-<tr>
-<td>时间 (小时: 分钟, 24 小时制)</td>
-<td><code>((10?)[0-9]2[0-3]):([0-5][0-9])</code></td>
-</tr>
-<tr>
-<td>汉字 (字符)</td>
-<td><code>[\u4e00-\u9fa5]</code></td>
-</tr>
-<tr>
-<td>中文及全角标点符号 (字符)</td>
-<td><code>[\u3000-\u301e\ufe10-\ufe19\ufe30-\ufe44\ufe50-\ufe6b\uff01-\uffee]</code></td>
-</tr>
-<tr>
-<td>中国大陆固定电话号码</td>
-<td><code>(\d{4}-\d{3}-)?(\d{8}\d{7})</code></td>
-</tr>
-<tr>
-<td>中国大陆手机号码</td>
-<td><code>1\d{10}</code></td>
-</tr>
-<tr>
-<td>中国大陆邮政编码</td>
-<td><code>[1-9]\d{5}</code></td>
-</tr>
-<tr>
-<td>中国大陆身份证号 (15 位或 18 位)</td>
-<td><code>\d{15}(\d\d[0-9xX])?</code></td>
-</tr>
-<tr>
-<td>非负整数 (正整数或零)</td>
-<td><code>\d+</code></td>
-</tr>
-<tr>
-<td>正整数</td>
-<td><code>[0-9]*[1-9][0-9]*</code></td>
-</tr>
-<tr>
-<td>负整数</td>
-<td><code>-[0-9]*[1-9][0-9]*</code></td>
-</tr>
-<tr>
-<td>整数</td>
-<td><code>-?\d+</code></td>
-</tr>
-<tr>
-<td>小数</td>
-<td><code>(-?\d+)(\.\d+)?</code></td>
-</tr>
-<tr>
-<td>不包含 abc 的单词</td>
-<td><code>\b((?!abc)\w)+\b</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">说明</th>
+          <th style="text-align: left">正则表达式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">网址（URL）</td>
+          <td style="text-align: left"><code>[a-zA-z]+://[^\s]*</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IP 地址 (IP Address)</td>
+          <td style="text-align: left"><code>((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">电子邮件 (Email)</td>
+          <td style="text-align: left"><code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">QQ 号码</td>
+          <td style="text-align: left"><code>[1-9]\d{4,}</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">HTML 标记 (包含内容或自闭合)</td>
+          <td style="text-align: left"><code>&lt;(.*)(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">密码 (由数字 / 大写字母 / 小写字母 / 标点符号组成，四种都必有，8 位以上)</td>
+          <td style="text-align: left"><code>(?=^.{8,}\$)(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z])(?!.*\n).*$</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">日期 (年 - 月 - 日)</td>
+          <td style="text-align: left"><code>(\d{4}\d{2})-((1[0-2])(0?[1-9]))-(([12][0-9])(3[01])(0?[1-9]))</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">日期 (月 / 日 / 年)</td>
+          <td style="text-align: left"><code>((1[0-2])(0?[1-9]))/(([12][0-9])(3[01])(0?[1-9]))/(\d{4}\d{2})</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">时间 (小时: 分钟, 24 小时制)</td>
+          <td style="text-align: left"><code>((10?)[0-9]2[0-3]):([0-5][0-9])</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">汉字 (字符)</td>
+          <td style="text-align: left"><code>[\u4e00-\u9fa5]</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">中文及全角标点符号 (字符)</td>
+          <td style="text-align: left"><code>[\u3000-\u301e\ufe10-\ufe19\ufe30-\ufe44\ufe50-\ufe6b\uff01-\uffee]</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">中国大陆固定电话号码</td>
+          <td style="text-align: left"><code>(\d{4}-\d{3}-)?(\d{8}\d{7})</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">中国大陆手机号码</td>
+          <td style="text-align: left"><code>1\d{10}</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">中国大陆邮政编码</td>
+          <td style="text-align: left"><code>[1-9]\d{5}</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">中国大陆身份证号 (15 位或 18 位)</td>
+          <td style="text-align: left"><code>\d{15}(\d\d[0-9xX])?</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">非负整数 (正整数或零)</td>
+          <td style="text-align: left"><code>\d+</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">正整数</td>
+          <td style="text-align: left"><code>[0-9]*[1-9][0-9]*</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">负整数</td>
+          <td style="text-align: left"><code>-[0-9]*[1-9][0-9]*</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">整数</td>
+          <td style="text-align: left"><code>-?\d+</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">小数</td>
+          <td style="text-align: left"><code>(-?\d+)(\.\d+)?</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">不包含 abc 的单词</td>
+          <td style="text-align: left"><code>\b((?!abc)\w)+\b</code></td>
+      </tr>
+  </tbody>
 </table></div>
 </section>
 

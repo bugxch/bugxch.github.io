@@ -14,9 +14,6 @@
 <meta name="twitter:title" content="正则表达式详解（下）">
 <meta name="twitter:description" content="书接上文，在下篇中主要介绍如何在 python 中使用正则表达式实现文本的匹配和替换工作。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
 <style>
     :root {
       --sys-font-family: "Noto Serif SC";
@@ -374,88 +371,88 @@
 <p>此处的<code>r</code>表示 raw，即原始输入。因为<code>\</code>在 python 的字符串中也是转义字符，此处的功能与正则表达式中的功能有冲突。<code>compile</code>中的表达式从输入到真正的表达式的意思执行需要经过两次解读，<strong>python 本身解读之后将字符串表达的意思传递给正则表达式，正则引擎再解读之后执行</strong>，问题就出在两次解读上。</p>
 <p>以最终匹配<code>\section</code>为例，如果不加<code>r</code>使用 python 第 5 行的参数就该是<code>\\\\section</code>，即<code>pattern = re.compile(&quot;\\\\section&quot;, re.M)</code>。第一次解读，python 将其理解为<code>\\section</code>传递给正则引擎，正则理解为要匹配<code>\section</code>，如下表所示</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Characters</th>
-<th>Stage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>\section</code></td>
-<td>希望匹配的字符串</td>
-</tr>
-<tr>
-<td><code>\\section</code></td>
-<td>正则引擎添加反斜线 <a class="link" href="https://bugxch.github.io/library/re.html#re.compile"  target="_blank" rel="noopener"
+  <thead>
+      <tr>
+          <th style="text-align: left">Characters</th>
+          <th style="text-align: left">Stage</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>\section</code></td>
+          <td style="text-align: left">希望匹配的字符串</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>\\section</code></td>
+          <td style="text-align: left">正则引擎添加反斜线 <a class="link" href="https://bugxch.github.io/library/re.html#re.compile"  target="_blank" rel="noopener"
     ><code>re.compile()</code></a></td>
-</tr>
-<tr>
-<td><code>&quot;\\\\section&quot;</code></td>
-<td>python 字符串为表示<code>\</code>字符再添加反斜线</td>
-</tr>
-</tbody>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&quot;\\\\section&quot;</code></td>
+          <td style="text-align: left">python 字符串为表示<code>\</code>字符再添加反斜线</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>所以为了匹配 1 个<code>\</code>最后需要写 4 个<code>\</code>，实在麻烦，**为了便利，因此使用r在字符串之前，表示去掉 Python 的解读，仅保留正则引擎的解读。**比如下表中的参数写法就能省掉很多不必要的<code>\</code>，十分方便。</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Regular String</th>
-<th>Raw string</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&quot;ab*&quot;</code></td>
-<td><code>r&quot;ab*&quot;</code></td>
-</tr>
-<tr>
-<td><code>&quot;\\section&quot;</code></td>
-<td><code>r&quot;\section&quot;</code></td>
-</tr>
-<tr>
-<td><code>&quot;\\w+\\s+\\1&quot;</code></td>
-<td><code>r&quot;\w+\s+\1&quot;</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Regular String</th>
+          <th style="text-align: left">Raw string</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>&quot;ab*&quot;</code></td>
+          <td style="text-align: left"><code>r&quot;ab*&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&quot;\\section&quot;</code></td>
+          <td style="text-align: left"><code>r&quot;\section&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&quot;\\w+\\s+\\1&quot;</code></td>
+          <td style="text-align: left"><code>r&quot;\w+\s+\1&quot;</code></td>
+      </tr>
+  </tbody>
 </table></div>
 <blockquote>
 <p><code>re.M</code>是个什么东东？</p>
 </blockquote>
 <p>上面的代码中，compile 还包含了<code>re.M</code>作为一个 flag，它是<code>MULTILINE</code>的缩写，表示匹配多行模式，除了多行模式之外（具体含义见下表），python 还有其他的 flag 影响表达式匹配的规则。</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Flag</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ASCII</code>, <code>A</code></td>
-<td>使得 <code>\w</code>, <code>\b</code>, <code>\s</code> 和 <code>\d</code> 仅仅匹配 ASCII 文本</td>
-</tr>
-<tr>
-<td><code>DOTALL</code>, <code>S</code></td>
-<td>使得 <code>.</code> 匹配换行符在内的所有字符</td>
-</tr>
-<tr>
-<td><code>IGNORECASE</code>, <code>I</code></td>
-<td>忽略大小写</td>
-</tr>
-<tr>
-<td><code>LOCALE</code>, <code>L</code></td>
-<td>使用 locale 匹配</td>
-</tr>
-<tr>
-<td><code>MULTILINE</code>, <code>M</code></td>
-<td>多行匹配，影响 <code>^</code> 和 <code>$</code></td>
-</tr>
-<tr>
-<td><code>VERBOSE</code>, <code>X</code> (for ‘extended’)</td>
-<td>忽略表达式中的空格，允许插入注释</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Flag</th>
+          <th style="text-align: left">Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>ASCII</code>, <code>A</code></td>
+          <td style="text-align: left">使得 <code>\w</code>, <code>\b</code>, <code>\s</code> 和 <code>\d</code> 仅仅匹配 ASCII 文本</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>DOTALL</code>, <code>S</code></td>
+          <td style="text-align: left">使得 <code>.</code> 匹配换行符在内的所有字符</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>IGNORECASE</code>, <code>I</code></td>
+          <td style="text-align: left">忽略大小写</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>LOCALE</code>, <code>L</code></td>
+          <td style="text-align: left">使用 locale 匹配</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>MULTILINE</code>, <code>M</code></td>
+          <td style="text-align: left">多行匹配，影响 <code>^</code> 和 <code>$</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>VERBOSE</code>, <code>X</code> (for ‘extended’)</td>
+          <td style="text-align: left">忽略表达式中的空格，允许插入注释</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>需要说明的是<code>X</code>模式，使用方法如下</p>
 <div class="highlight"><div class="chroma">
@@ -488,31 +485,31 @@
 </blockquote>
 <p>pattern 的对象建立之后，就是可以使用 re 的方法匹配字符串了。最重要的方法有下表中的四个。</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>方法或者属性</th>
-<th>目的</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>match()</code></td>
-<td>表达式是否匹配字符串的开头</td>
-</tr>
-<tr>
-<td><code>search()</code></td>
-<td>浏览整个字符串，匹配其中任意位置</td>
-</tr>
-<tr>
-<td><code>findall()</code></td>
-<td>匹配所有的字符子串，返回列表</td>
-</tr>
-<tr>
-<td><code>finditer()</code></td>
-<td>匹配所有的字符子串，返回 <a class="link" href="https://bugxch.github.io/glossary.html#term-iterator"  target="_blank" rel="noopener"
+  <thead>
+      <tr>
+          <th style="text-align: left">方法或者属性</th>
+          <th style="text-align: left">目的</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>match()</code></td>
+          <td style="text-align: left">表达式是否匹配字符串的开头</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>search()</code></td>
+          <td style="text-align: left">浏览整个字符串，匹配其中任意位置</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>findall()</code></td>
+          <td style="text-align: left">匹配所有的字符子串，返回列表</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>finditer()</code></td>
+          <td style="text-align: left">匹配所有的字符子串，返回 <a class="link" href="https://bugxch.github.io/glossary.html#term-iterator"  target="_blank" rel="noopener"
     >iterator</a>.</td>
-</tr>
-</tbody>
+      </tr>
+  </tbody>
 </table></div>
 <p>运行上面的代码如下所示</p>
 <div class="highlight"><div class="chroma">
@@ -532,30 +529,30 @@
 </div><p>sear 匹配成功，返回匹配的对象。mat 匹配失败，fin 匹配成功并且返回了字符列表。</p>
 <p>匹配成功之后对象有如下方法</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>目的</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>group()</code></td>
-<td>返回匹配的字符串</td>
-</tr>
-<tr>
-<td><code>start()</code></td>
-<td>返回匹配字符串的开始位置</td>
-</tr>
-<tr>
-<td><code>end()</code></td>
-<td>返回匹配字符串的结束位置</td>
-</tr>
-<tr>
-<td><code>span()</code></td>
-<td>返回匹配字符串开始位置和结束位置的元组 (start, end)</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">方法</th>
+          <th style="text-align: left">目的</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>group()</code></td>
+          <td style="text-align: left">返回匹配的字符串</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>start()</code></td>
+          <td style="text-align: left">返回匹配字符串的开始位置</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>end()</code></td>
+          <td style="text-align: left">返回匹配字符串的结束位置</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>span()</code></td>
+          <td style="text-align: left">返回匹配字符串开始位置和结束位置的元组 (start, end)</td>
+      </tr>
+  </tbody>
 </table></div>
 <p><code>group()</code>在上篇中讲过，它在字符捕获时候非常有用，字符的分组从 0 开始，其中第 0 个代表所有匹配的内容，1 代表匹配的第一组，以此类推。比如下面的代码</p>
 <div class="highlight"><div class="chroma">
@@ -584,26 +581,26 @@
 <h2 id="修改字符串"><a href="#%e4%bf%ae%e6%94%b9%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>修改字符串
 </h2><p>模块级别的字符串修改方法如下表所示。</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>方法和属性</th>
-<th>目的</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>split()</code></td>
-<td>使用 pattern 将目标字符串分割，并返回列表</td>
-</tr>
-<tr>
-<td><code>sub()</code></td>
-<td>查找所有匹配的子串，并替换之，返回替换之后的字符串</td>
-</tr>
-<tr>
-<td><code>subn()</code></td>
-<td>查找所有匹配的子串，并替换之，返回替换之后的字符串和次数</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">方法和属性</th>
+          <th style="text-align: left">目的</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>split()</code></td>
+          <td style="text-align: left">使用 pattern 将目标字符串分割，并返回列表</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>sub()</code></td>
+          <td style="text-align: left">查找所有匹配的子串，并替换之，返回替换之后的字符串</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>subn()</code></td>
+          <td style="text-align: left">查找所有匹配的子串，并替换之，返回替换之后的字符串和次数</td>
+      </tr>
+  </tbody>
 </table></div>
 <ul>
 <li><code>.split</code>(<em>string</em>[, <em>maxsplit=0</em>]) 将字符串分割，其中有参数最大分块，默认将分割成最多的块。</li>

@@ -14,9 +14,6 @@
 <meta name="twitter:title" content="Git学习笔记（一）">
 <meta name="twitter:description" content="git笔记记录。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
 <style>
     :root {
       --sys-font-family: "Noto Serif SC";
@@ -846,30 +843,30 @@
 <li><code>--hard</code>，表示回退版本的同时，将工作区和暂存区的文件内容也同步回退，这里还有两个选项，具体见下表</li>
 </ul>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>hard</code></td>
-<td>仅仅回退版本，修改工作区和暂存区文件</td>
-</tr>
-<tr>
-<td><code>mixed</code></td>
-<td>回退版本，修改暂存区文件，不修改工作区</td>
-</tr>
-<tr>
-<td><code>merge</code></td>
-<td>回退版本，修改暂存区文件，修改工作区中那些被跟踪的文件</td>
-</tr>
-<tr>
-<td><code>soft</code></td>
-<td>仅仅回退版本，不修改工作区和暂存区文件</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">参数</th>
+          <th style="text-align: left">意义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>hard</code></td>
+          <td style="text-align: left">仅仅回退版本，修改工作区和暂存区文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>mixed</code></td>
+          <td style="text-align: left">回退版本，修改暂存区文件，不修改工作区</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>merge</code></td>
+          <td style="text-align: left">回退版本，修改暂存区文件，修改工作区中那些被跟踪的文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>soft</code></td>
+          <td style="text-align: left">仅仅回退版本，不修改工作区和暂存区文件</td>
+      </tr>
+  </tbody>
 </table></div>
 <ul>
 <li><code>HEAD</code>表示当前版本的指针所在，<code>HAED^</code>表示前一个版本，<code>HEAD^^</code>表示之前两个版本，如果是前 100 个版本则可以使用<code>HEAD~100</code>。</li>

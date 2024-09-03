@@ -15,9 +15,6 @@
 <meta name="twitter:description" content="疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
 <style>
     :root {
       --sys-font-family: "Noto Serif SC";
@@ -377,55 +374,55 @@
 </ol>
 <p>典型的C语言的数据类型的大小参考下表</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>C声明</th>
-<th style="text-align:center">32bit</th>
-<th style="text-align:center">64bit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>char</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1</td>
-</tr>
-<tr>
-<td>short int</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">2</td>
-</tr>
-<tr>
-<td>int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">4</td>
-</tr>
-<tr>
-<td>long int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td>long long int</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td>char *</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td>float</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">4</td>
-</tr>
-<tr>
-<td>double</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">8</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">C声明</th>
+          <th style="text-align: center">32bit</th>
+          <th style="text-align: center">64bit</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">char</td>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">short int</td>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">int</td>
+          <td style="text-align: center">4</td>
+          <td style="text-align: center">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">long int</td>
+          <td style="text-align: center">4</td>
+          <td style="text-align: center">8</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">long long int</td>
+          <td style="text-align: center">8</td>
+          <td style="text-align: center">8</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">char *</td>
+          <td style="text-align: center">4</td>
+          <td style="text-align: center">8</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">float</td>
+          <td style="text-align: center">4</td>
+          <td style="text-align: center">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">double</td>
+          <td style="text-align: center">8</td>
+          <td style="text-align: center">8</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>查看上面的表格，32bit和64bit的大部分数据类型的字节长度是一样的，仅有两个不同，long int和char *。可以使用下面的代码查看每个不同类型的字节的大小</p>
 <div class="highlight"><div class="chroma">
@@ -478,95 +475,95 @@
 ></p>
 <p>参考下表，可以在自己的PC上可以通过下面的代码，得到上面的值</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Macro</th>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CHAR_BIT</td>
-<td>8</td>
-<td>Defines the number of bits in a byte.</td>
-</tr>
-<tr>
-<td>SCHAR_MIN</td>
-<td>-128</td>
-<td>Defines the minimum value for a signed char.</td>
-</tr>
-<tr>
-<td>SCHAR_MAX</td>
-<td>+127</td>
-<td>Defines the maximum value for a signed char.</td>
-</tr>
-<tr>
-<td>UCHAR_MAX</td>
-<td>255</td>
-<td>Defines the maximum value for an unsigned char.</td>
-</tr>
-<tr>
-<td>CHAR_MIN</td>
-<td>-128</td>
-<td>Defines the minimum value for type char and its value will be equal to SCHAR_MIN if char represents negative values, otherwise zero.</td>
-</tr>
-<tr>
-<td>CHAR_MAX</td>
-<td>+127</td>
-<td>Defines the value for type char and its value will be equal to SCHAR_MAX if char represents negative values, otherwise UCHAR_MAX.</td>
-</tr>
-<tr>
-<td>MB_LEN_MAX</td>
-<td>16</td>
-<td>Defines the maximum number of bytes in a multi-byte character.</td>
-</tr>
-<tr>
-<td>SHRT_MIN</td>
-<td>-32768</td>
-<td>Defines the minimum value for a short int.</td>
-</tr>
-<tr>
-<td>SHRT_MAX</td>
-<td>+32767</td>
-<td>Defines the maximum value for a short int.</td>
-</tr>
-<tr>
-<td>USHRT_MAX</td>
-<td>65535</td>
-<td>Defines the maximum value for an unsigned short int.</td>
-</tr>
-<tr>
-<td>INT_MIN</td>
-<td>-2147483648</td>
-<td>Defines the minimum value for an int.</td>
-</tr>
-<tr>
-<td>INT_MAX</td>
-<td>+2147483647</td>
-<td>Defines the maximum value for an int.</td>
-</tr>
-<tr>
-<td>UINT_MAX</td>
-<td>4294967295</td>
-<td>Defines the maximum value for an unsigned int.</td>
-</tr>
-<tr>
-<td>LONG_MIN</td>
-<td>-9223372036854775808</td>
-<td>Defines the minimum value for a long int.</td>
-</tr>
-<tr>
-<td>LONG_MAX</td>
-<td>+9223372036854775807</td>
-<td>Defines the maximum value for a long int.</td>
-</tr>
-<tr>
-<td>ULONG_MAX</td>
-<td>18446744073709551615</td>
-<td>Defines the maximum value for an unsigned long int.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Macro</th>
+          <th style="text-align: left">Value</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">CHAR_BIT</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">Defines the number of bits in a byte.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SCHAR_MIN</td>
+          <td style="text-align: left">-128</td>
+          <td style="text-align: left">Defines the minimum value for a signed char.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SCHAR_MAX</td>
+          <td style="text-align: left">+127</td>
+          <td style="text-align: left">Defines the maximum value for a signed char.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">UCHAR_MAX</td>
+          <td style="text-align: left">255</td>
+          <td style="text-align: left">Defines the maximum value for an unsigned char.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CHAR_MIN</td>
+          <td style="text-align: left">-128</td>
+          <td style="text-align: left">Defines the minimum value for type char and its value will be equal to SCHAR_MIN if char represents negative values, otherwise zero.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CHAR_MAX</td>
+          <td style="text-align: left">+127</td>
+          <td style="text-align: left">Defines the value for type char and its value will be equal to SCHAR_MAX if char represents negative values, otherwise UCHAR_MAX.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MB_LEN_MAX</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">Defines the maximum number of bytes in a multi-byte character.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SHRT_MIN</td>
+          <td style="text-align: left">-32768</td>
+          <td style="text-align: left">Defines the minimum value for a short int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SHRT_MAX</td>
+          <td style="text-align: left">+32767</td>
+          <td style="text-align: left">Defines the maximum value for a short int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">USHRT_MAX</td>
+          <td style="text-align: left">65535</td>
+          <td style="text-align: left">Defines the maximum value for an unsigned short int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">INT_MIN</td>
+          <td style="text-align: left">-2147483648</td>
+          <td style="text-align: left">Defines the minimum value for an int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">INT_MAX</td>
+          <td style="text-align: left">+2147483647</td>
+          <td style="text-align: left">Defines the maximum value for an int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">UINT_MAX</td>
+          <td style="text-align: left">4294967295</td>
+          <td style="text-align: left">Defines the maximum value for an unsigned int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">LONG_MIN</td>
+          <td style="text-align: left">-9223372036854775808</td>
+          <td style="text-align: left">Defines the minimum value for a long int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">LONG_MAX</td>
+          <td style="text-align: left">+9223372036854775807</td>
+          <td style="text-align: left">Defines the maximum value for a long int.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ULONG_MAX</td>
+          <td style="text-align: left">18446744073709551615</td>
+          <td style="text-align: left">Defines the maximum value for an unsigned long int.</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>代码如下</p>
 <div class="highlight"><div class="chroma">

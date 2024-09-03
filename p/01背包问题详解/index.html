@@ -14,9 +14,6 @@
 <meta name="twitter:title" content="01背包问题详解">
 <meta name="twitter:description" content="01背包问题的详细推导过程">
     <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
 <style>
     :root {
       --sys-font-family: "Noto Serif SC";
@@ -353,28 +350,28 @@
 </ol>
 <p>问题的表述比较抽象，如果上面的问题有统一的算法，那么即便问题的规模缩小，问题解决的逻辑也不会有变化，所以从规模比较小的情形入手，更容易分析出来。假设背包容量是4kg，我们有3件物品，每件物品的价格以及重量见下表</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>物品</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>重量/kg</td>
-<td>1</td>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>价格/$</td>
-<td>8</td>
-<td>9</td>
-<td>10</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">物品</th>
+          <th style="text-align: left">1</th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">重量/kg</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">价格/$</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">10</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>我相信大多数人看到这个问题，会使用如下的<strong>贪婪算法</strong>。</p>
 <h2 id="贪婪算法"><a href="#%e8%b4%aa%e5%a9%aa%e7%ae%97%e6%b3%95" class="header-anchor"></a>贪婪算法
@@ -387,28 +384,28 @@
 </li>
 </ol>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>序号</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>重量/kg</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>价格/$</td>
-<td>8</td>
-<td>9</td>
-<td>18</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">序号</th>
+          <th style="text-align: left">1</th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">重量/kg</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">价格/$</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">18</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>放入背包的重量是物品1和2，总重是3，价值是17，正确答案是放入1和3，总价值是26，所以这种方法<strong>明显是错误的</strong>。</p>
 <ol start="3">
@@ -419,34 +416,34 @@
 $$
 按照价值密度由高到低排序，依次核验后放入背包，但是按照该算法处理下面的情形依然是失败的</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>序号</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>重量/kg</td>
-<td>1</td>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>价格/$</td>
-<td>8</td>
-<td>9</td>
-<td>18</td>
-</tr>
-<tr>
-<td>$\rho_i$</td>
-<td>8</td>
-<td>4.5</td>
-<td>9</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">序号</th>
+          <th style="text-align: left">1</th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">重量/kg</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">价格/$</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">18</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">$\rho_i$</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">4.5</td>
+          <td style="text-align: left">9</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>该方法的结果是放入1和3，但是明显2和3号的价值更大。</p>
 <p>所以，无论是按照重量，大小，还是密度排序，这样的方法都是错误的。其实考虑最周全的方法，求$n$件物品的是否放入背包的全部组合，记录所有总重量可以放入背包的组合的价值，然后选一个最大值即可，但是对于$n$件物品，需要考虑的组合有$2^n$组，算法的复杂度很高，当$n$比较大的时候就很不实际。</p>
@@ -563,28 +560,28 @@ $$
 <h3 id="二维数组"><a href="#%e4%ba%8c%e7%bb%b4%e6%95%b0%e7%bb%84" class="header-anchor"></a>二维数组
 </h3><p>我们使用二维数组记录$V[i,C]$，二维数组的行数为物件的总数$i$，二维数组的列数是背包的容量$C+1$（<strong>注意此处多加了一列，因为从上面的推导看出我们需要知道$V[i-1,0]$的值，所以多加一列作为第0列</strong>），我们使用之前的问题，使用4Kg容量的背包挑选下面的物件</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>物品</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>重量/kg</td>
-<td>1</td>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>价格/$</td>
-<td>8</td>
-<td>9</td>
-<td>10</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">物品</th>
+          <th style="text-align: left">1</th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">重量/kg</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">价格/$</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">10</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>我们一步步看看这个表格怎么填充，</p>
 <ol>

@@ -14,9 +14,6 @@
 <meta name="twitter:title" content="为什么会有补码">
 <meta name="twitter:description" content="补码是如何产生的？\n">
     <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
 <style>
     :root {
       --sys-font-family: "Noto Serif SC";
@@ -462,38 +459,38 @@
 ></p>
 <p>因为是小端存储，因此整理之后的结果如下所示</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>数值</th>
-<th>内存表示（十六进制）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>120055</td>
-<td>0001D4F7</td>
-</tr>
-<tr>
-<td>-411</td>
-<td>FFFFFE65</td>
-</tr>
-<tr>
-<td>102.3235</td>
-<td>42CCA5A2</td>
-</tr>
-<tr>
-<td>-3.256</td>
-<td>C050624E</td>
-</tr>
-<tr>
-<td>120.254</td>
-<td>405E104189374BC7</td>
-</tr>
-<tr>
-<td>-56.2441</td>
-<td>C04C1F3EAB367A10</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">数值</th>
+          <th style="text-align: left">内存表示（十六进制）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">120055</td>
+          <td style="text-align: left">0001D4F7</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-411</td>
+          <td style="text-align: left">FFFFFE65</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">102.3235</td>
+          <td style="text-align: left">42CCA5A2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-3.256</td>
+          <td style="text-align: left">C050624E</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">120.254</td>
+          <td style="text-align: left">405E104189374BC7</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-56.2441</td>
+          <td style="text-align: left">C04C1F3EAB367A10</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>从上面的结果可以看出不同数值的长度不同，因为计算机给每个不同的类型分配的内存大小不同，这个可以通过 C 中的<code>sizeof</code>函数看出来。下面我们需要搞清楚的是，**为什么这些数都是以这样的形式和内容存储在计算机中的？**这一篇文章，我们先谈比较简单的整数的表示，下一篇文章会解释浮点数的表示方法。</p>
 <h2 id="编码机制"><a href="#%e7%bc%96%e7%a0%81%e6%9c%ba%e5%88%b6" class="header-anchor"></a>编码机制
@@ -505,40 +502,40 @@
 <h4 id="引入负数"><a href="#%e5%bc%95%e5%85%a5%e8%b4%9f%e6%95%b0" class="header-anchor"></a>引入负数
 </h4><p>那么负整数是如何保存的呢？来看第二个数字<code>-411</code>，因为<code>411 = 0x19b</code>，所以我们直观的表示就是<code>-0x19b</code>，但是计算机不能表示负号，那么该如何处理这个问题呢？一个直接简单的想法是使用 1 个比特表示符号正负，自然的想法是取最高位，<strong>0 表示正数，1 表示负数</strong>，所以可以表示成<code>0x8000019b</code>。这样表示比较直观，但是有一个小问题。为了便于说明，我将问题的规模缩小，比如考虑 3 个比特的二进制和十进制数之间的转换。如果使用我们之前的换算方法，那么二进制编码的情况如下</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>二进制</th>
-<th>十进制</th>
-<th>二进制</th>
-<th>十进制</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>000</strong></td>
-<td>0</td>
-<td><strong>100</strong></td>
-<td>0</td>
-</tr>
-<tr>
-<td>001</td>
-<td>1</td>
-<td>101</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>010</td>
-<td>2</td>
-<td>110</td>
-<td>-2</td>
-</tr>
-<tr>
-<td>011</td>
-<td>3</td>
-<td>111</td>
-<td>-3</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">二进制</th>
+          <th style="text-align: left">十进制</th>
+          <th style="text-align: left">二进制</th>
+          <th style="text-align: left">十进制</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>000</strong></td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left"><strong>100</strong></td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">001</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">101</td>
+          <td style="text-align: left">-1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">010</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">110</td>
+          <td style="text-align: left">-2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">011</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">111</td>
+          <td style="text-align: left">-3</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>很明显，十进制<code>0</code>有两种不同的编码方式，3 个比特本来可以表示不同的 8 个数，却只能表示 7 个不同的数，这是对信息比特的浪费。最佳的表示方式应该满足，<strong>在一个一致的运算关系之下，不同的二进制编码表示不同的十进制数</strong>，于是引入了<strong>补码</strong>的概念。</p>
 <h4 id="补码"><a href="#%e8%a1%a5%e7%a0%81" class="header-anchor"></a>补码
@@ -559,40 +556,40 @@
 <p>问题解决，总结下这个变换过程：最高有效位表示正负号，正数 XX 的补码是其自身的二进制表示 XX，负数 XX 的补码是 2w−|X|2w−|X|。</p>
 <p>举个例子，比如使用 4 个 bit 表示 6 和 - 7 的补码，分别是 $(1100)<em>2$和和$(2^4 - |7|)</em>{10} = (9)_{10} = (1001)_2$。这里需要特别说明下，经常听到求一个负数。这里需要特别说明下，经常听到求一个负数X的二进制补码，就是先求的二进制补码，就是先求$|X|$ 的二进制表示，<strong>除了符号位之外的所有位取反加 1</strong>，这和上面的方法<strong>等效</strong>，因为$2^w - |X| = (1000…0)_2 - |X| = (111…1 + 000…1)_2 - |X| = (111…1)_2 - |X| + 1$，一目了然。使用该方法编码 3 个比特的编码，如下所示</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>二进制</th>
-<th>十进制</th>
-<th>二进制</th>
-<th>十进制</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>000</td>
-<td>0</td>
-<td>100</td>
-<td>-4</td>
-</tr>
-<tr>
-<td>001</td>
-<td>1</td>
-<td>101</td>
-<td>-3</td>
-</tr>
-<tr>
-<td>010</td>
-<td>2</td>
-<td>110</td>
-<td>-2</td>
-</tr>
-<tr>
-<td>011</td>
-<td>3</td>
-<td>111</td>
-<td>-1</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">二进制</th>
+          <th style="text-align: left">十进制</th>
+          <th style="text-align: left">二进制</th>
+          <th style="text-align: left">十进制</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">000</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">100</td>
+          <td style="text-align: left">-4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">001</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">101</td>
+          <td style="text-align: left">-3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">010</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">110</td>
+          <td style="text-align: left">-2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">011</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">111</td>
+          <td style="text-align: left">-1</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>很明显，<strong>使用补码，所有的十进制数都有与之对应唯一的二进制编码表示</strong>。使用这个方法可以计算出来 $(-411)<em>{10} = (FFFFE65)</em>{16}$<strong>，与之前程序的结果完全一致！！<strong>于是猜想</strong>计算机使用补码存储对应的整数！</strong></p>
 <blockquote>

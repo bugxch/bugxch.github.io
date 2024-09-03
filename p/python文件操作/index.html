@@ -14,9 +14,6 @@
 <meta name="twitter:title" content="python文件操作">
 <meta name="twitter:description" content="在日常工作中，需要非常频繁地与数据打交道，将数据保存下来做数据比对，因此需要总结下python下的文本和数据的读写操作。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
 <style>
     :root {
       --sys-font-family: "Noto Serif SC";
@@ -353,40 +350,40 @@
 <li><strong>读写方式</strong>。<code>w</code>表示文本<code>workfile</code>的创建方式为写入，当然还有其他的读写方式，可以参考如下的表格</li>
 </ul>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>&ldquo;r&rdquo;</th>
-<th><strong>read:</strong> Open file for input operations. The file must exist.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&ldquo;w&rdquo;</td>
-<td><strong>write:</strong> Create an empty file for output operations. If a file with the same name already exists, its contents are discarded and the file is treated as a new empty file.</td>
-</tr>
-<tr>
-<td>&ldquo;a&rdquo;</td>
-<td><strong>append:</strong> Open file for output at the end of a file. Output operations always write data at the end of the file, expanding it. Repositioning operations (<a class="link" href="http://www.cplusplus.com/fseek"  target="_blank" rel="noopener"
+  <thead>
+      <tr>
+          <th style="text-align: left">&ldquo;r&rdquo;</th>
+          <th style="text-align: left"><strong>read:</strong> Open file for input operations. The file must exist.</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">&ldquo;w&rdquo;</td>
+          <td style="text-align: left"><strong>write:</strong> Create an empty file for output operations. If a file with the same name already exists, its contents are discarded and the file is treated as a new empty file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&ldquo;a&rdquo;</td>
+          <td style="text-align: left"><strong>append:</strong> Open file for output at the end of a file. Output operations always write data at the end of the file, expanding it. Repositioning operations (<a class="link" href="http://www.cplusplus.com/fseek"  target="_blank" rel="noopener"
     >fseek</a>, <a class="link" href="http://www.cplusplus.com/fsetpos"  target="_blank" rel="noopener"
     >fsetpos</a>, <a class="link" href="http://www.cplusplus.com/rewind"  target="_blank" rel="noopener"
     >rewind</a>) are ignored. The file is created if it does not exist.</td>
-</tr>
-<tr>
-<td>&ldquo;r+&rdquo;</td>
-<td><strong>read/update:</strong> Open a file for update (both for input and output). The file must exist.</td>
-</tr>
-<tr>
-<td>&ldquo;w+&rdquo;</td>
-<td><strong>write/update:</strong> Create an empty file and open it for update (both for input and output). If a file with the same name already exists its contents are discarded and the file is treated as a new empty file.</td>
-</tr>
-<tr>
-<td>&ldquo;a+&rdquo;</td>
-<td><strong>append/update:</strong> Open a file for update (both for input and output) with all output operations writing data at the end of the file. Repositioning operations (<a class="link" href="http://www.cplusplus.com/fseek"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td style="text-align: left">&ldquo;r+&rdquo;</td>
+          <td style="text-align: left"><strong>read/update:</strong> Open a file for update (both for input and output). The file must exist.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&ldquo;w+&rdquo;</td>
+          <td style="text-align: left"><strong>write/update:</strong> Create an empty file and open it for update (both for input and output). If a file with the same name already exists its contents are discarded and the file is treated as a new empty file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&ldquo;a+&rdquo;</td>
+          <td style="text-align: left"><strong>append/update:</strong> Open a file for update (both for input and output) with all output operations writing data at the end of the file. Repositioning operations (<a class="link" href="http://www.cplusplus.com/fseek"  target="_blank" rel="noopener"
     >fseek</a>, <a class="link" href="http://www.cplusplus.com/fsetpos"  target="_blank" rel="noopener"
     >fsetpos</a>, <a class="link" href="http://www.cplusplus.com/rewind"  target="_blank" rel="noopener"
     >rewind</a>) affects the next input operations, but output operations move the position back to the end of file. The file is created if it does not exist.</td>
-</tr>
-</tbody>
+      </tr>
+  </tbody>
 </table></div>
 <ul>
 <li><strong>编码方式</strong>。一般而言，默认读写文件使用的是字符串，字符串的编码方式视平台而定，也可以通过参数<code>b</code>来指定读写的数据为二进制文件，该模式仅仅用于没有字符的数据。</li>

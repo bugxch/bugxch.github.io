@@ -14,9 +14,6 @@
 <meta name="twitter:title" content="极简版《计算机原理》">
 <meta name="twitter:description" content="读书笔记。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
 <style>
     :root {
       --sys-font-family: "Noto Serif SC";
@@ -326,55 +323,55 @@
 </ul>
 <p>从程序员的角度来说，CPU 可以看作寄存器的集合。CPU 中包含不同种类的寄存器，各自有不同的功能，如下表所示：</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>种类</th>
-<th>功能</th>
-<th>数目</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>累加寄存器</td>
-<td>存储运算中和运算后的数据</td>
-<td>1</td>
-</tr>
-<tr>
-<td>标志寄存器</td>
-<td>存储运算后的 CPU 状态</td>
-<td>1</td>
-</tr>
-<tr>
-<td>程序计数器</td>
-<td>存取下一条指令的内存地址</td>
-<td>1</td>
-</tr>
-<tr>
-<td>基址寄存器</td>
-<td>存储数据内存的起始地址</td>
-<td>多个</td>
-</tr>
-<tr>
-<td>变址寄存器</td>
-<td>存储基址寄存器的相对地址</td>
-<td>多个</td>
-</tr>
-<tr>
-<td>通用寄存器</td>
-<td>存储任意数据</td>
-<td>多个</td>
-</tr>
-<tr>
-<td>指令寄存器</td>
-<td>存储指令。CPU 内部使用，程序员无法通过程序对寄存器进行读写操作</td>
-<td>多个</td>
-</tr>
-<tr>
-<td>栈寄存器</td>
-<td>存储栈区域的起始地址</td>
-<td>多个</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">种类</th>
+          <th style="text-align: left">功能</th>
+          <th style="text-align: left">数目</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">累加寄存器</td>
+          <td style="text-align: left">存储运算中和运算后的数据</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">标志寄存器</td>
+          <td style="text-align: left">存储运算后的 CPU 状态</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">程序计数器</td>
+          <td style="text-align: left">存取下一条指令的内存地址</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">基址寄存器</td>
+          <td style="text-align: left">存储数据内存的起始地址</td>
+          <td style="text-align: left">多个</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">变址寄存器</td>
+          <td style="text-align: left">存储基址寄存器的相对地址</td>
+          <td style="text-align: left">多个</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">通用寄存器</td>
+          <td style="text-align: left">存储任意数据</td>
+          <td style="text-align: left">多个</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">指令寄存器</td>
+          <td style="text-align: left">存储指令。CPU 内部使用，程序员无法通过程序对寄存器进行读写操作</td>
+          <td style="text-align: left">多个</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">栈寄存器</td>
+          <td style="text-align: left">存储栈区域的起始地址</td>
+          <td style="text-align: left">多个</td>
+      </tr>
+  </tbody>
 </table></div>
 <p><strong>Q：一个典型的 C 语言源代码在电脑中运行的基本流程是怎样的？</strong>
 <strong>A</strong>：C 语言写成的源代码是高级语言程序，但是 CPU 运行的代码是本地机器语言，因此 C 的源代码并不能立即运行。实际上，一个 C 的源代码需要经过编译、和链接生成. exe 的可执行文件之后，电脑会将. exe 文件的副本复制到内存中再运行，基本的流程如下图所示：</p>
@@ -443,31 +440,31 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
 </blockquote>
 <p>简单来说，已经编译成汇编语言的程序文件，在进一步链接时如果直接将库文件链接进 exe 可执行文件，则该链接文件就是静态库，如果仅仅在程序运行时才进行链接称为动态链接，链接的目标文件就是动态链接库（windows 中为 dll 文件）。需要说明的是，在链接之后，exe 文件中包含了静态链接库的所有内容，所以会比较大，而动态链接库相对轻巧，并且<strong>动态链接库可以在被多个同时运行的程序所共有，并且保证内存中只有一个 dll 文件中调用函数的副本</strong>，这样就节省了程序运行的空间。实际上 window 操作系统的大部分 API 目标文件是动态链接库，动态链接库一般由导入库导入，导入库中并不存在目标函数的实体，仅仅保存目标函数所在的动态链接库的名称及路径。下面的表格是对两者的总结。</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>链接类型</th>
-<th>何时链接</th>
-<th>是否可共享</th>
-<th>文件类型</th>
-<th>资源占用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>静态</td>
-<td>编译后链接时</td>
-<td>否</td>
-<td>.a/.lib</td>
-<td>多</td>
-</tr>
-<tr>
-<td>动态</td>
-<td>程序运行时</td>
-<td>可被多个程序共享</td>
-<td>.dll/.so</td>
-<td>少</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">链接类型</th>
+          <th style="text-align: left">何时链接</th>
+          <th style="text-align: left">是否可共享</th>
+          <th style="text-align: left">文件类型</th>
+          <th style="text-align: left">资源占用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">静态</td>
+          <td style="text-align: left">编译后链接时</td>
+          <td style="text-align: left">否</td>
+          <td style="text-align: left">.a/.lib</td>
+          <td style="text-align: left">多</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">动态</td>
+          <td style="text-align: left">程序运行时</td>
+          <td style="text-align: left">可被多个程序共享</td>
+          <td style="text-align: left">.dll/.so</td>
+          <td style="text-align: left">少</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>关于动态链接和静态链接的详细介绍请参考博文 <a class="link" href="http://www.cnblogs.com/skynet/p/3372855.html"  target="_blank" rel="noopener"
     >C++ 静态库与动态库</a>。</p>
