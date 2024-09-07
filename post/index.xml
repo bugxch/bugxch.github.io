@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Thu, 05 Sep 2024 07:09:11 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 19 Jul 2024 22:16:59 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>理解Rust中的“所有权”和“借用”概念（转载）</title>
         <link>https://blog.bugxch.top/p/%E7%90%86%E8%A7%A3rust%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8%E6%A6%82%E5%BF%B5%E8%BD%AC%E8%BD%BD/</link>
         <pubDate>Fri, 19 Jul 2024 20:44:30 +0800</pubDate>
