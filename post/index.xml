@@ -7,7 +7,27 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Fri, 19 Jul 2024 22:16:59 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 11 Sep 2024 19:11:35 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>树莓派小车重装笔记</title>
+        <link>https://blog.bugxch.top/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B0%8F%E8%BD%A6%E9%87%8D%E8%A3%85%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Wed, 11 Sep 2024 19:11:35 +0800</pubDate>
+        
+        <guid>https://blog.bugxch.top/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B0%8F%E8%BD%A6%E9%87%8D%E8%A3%85%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/video-game-console-2202618.jpg" alt="Featured image of post 树莓派小车重装笔记" /&gt;&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/68747470733a2f2f7777772e72617370626572727970692d7370792e636f2e756b2f77702d636f6e74656e742f75706c6f6164732f323031322f30362f7261737062657272795f70695f335f6d6f64656c5f625f706c75735f6770696f2d3130323478313032342e6a7067?imageSlim&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;参考文献&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考文献
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;本文原载于 &lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;巴巴变的博客&lt;/a&gt;，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>理解Rust中的“所有权”和“借用”概念（转载）</title>
         <link>https://blog.bugxch.top/p/%E7%90%86%E8%A7%A3rust%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8%E6%A6%82%E5%BF%B5%E8%BD%AC%E8%BD%BD/</link>
         <pubDate>Fri, 19 Jul 2024 20:44:30 +0800</pubDate>
