@@ -8,12 +8,12 @@
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
         <lastBuildDate>Thu, 12 Sep 2024 06:15:23 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>树莓派小车重装笔记</title>
-        <link>https://blog.bugxch.top/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B0%8F%E8%BD%A6%E9%87%8D%E8%A3%85%E7%AC%94%E8%AE%B0/</link>
+        <title>树莓派小车重生记</title>
+        <link>https://blog.bugxch.top/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B0%8F%E8%BD%A6%E9%87%8D%E7%94%9F%E8%AE%B0/</link>
         <pubDate>Wed, 11 Sep 2024 19:11:35 +0800</pubDate>
         
-        <guid>https://blog.bugxch.top/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B0%8F%E8%BD%A6%E9%87%8D%E8%A3%85%E7%AC%94%E8%AE%B0/</guid>
-        <description>&lt;img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/video-game-console-2202618.jpg" alt="Featured image of post 树莓派小车重装笔记" /&gt;&lt;h1 id=&#34;基础知识&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基础知识
+        <guid>https://blog.bugxch.top/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B0%8F%E8%BD%A6%E9%87%8D%E7%94%9F%E8%AE%B0/</guid>
+        <description>&lt;img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/video-game-console-2202618.jpg" alt="Featured image of post 树莓派小车重生记" /&gt;&lt;h1 id=&#34;基础知识&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基础知识
 &lt;/h1&gt;&lt;h2 id=&#34;硬件知识&#34;&gt;&lt;a href=&#34;#%e7%a1%ac%e4%bb%b6%e7%9f%a5%e8%af%86&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;硬件知识
 &lt;/h2&gt;&lt;h3 id=&#34;gpio引脚&#34;&gt;&lt;a href=&#34;#gpio%e5%bc%95%e8%84%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;GPIO引脚
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/68747470733a2f2f7777772e72617370626572727970692d7370792e636f2e756b2f77702d636f6e74656e742f75706c6f6164732f323031322f30362f7261737062657272795f70695f335f6d6f64656c5f625f706c75735f6770696f2d3130323478313032342e6a7067?imageSlim&#34;
