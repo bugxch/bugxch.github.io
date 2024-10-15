@@ -384,46 +384,46 @@
 <div class="table-wrapper"><table>
   <thead>
       <tr>
-          <th style="text-align: left">Step</th>
-          <th style="text-align: left">Matched</th>
-          <th style="text-align: left">Explanation</th>
+          <th>Step</th>
+          <th>Matched</th>
+          <th>Explanation</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">1</td>
-          <td style="text-align: left"><code>a</code></td>
-          <td style="text-align: left">正则表达式中的 <code>a</code></td>
+          <td>1</td>
+          <td><code>a</code></td>
+          <td>正则表达式中的 <code>a</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">2</td>
-          <td style="text-align: left"><code>abcbd</code></td>
-          <td style="text-align: left">引擎匹配 <code>[bcd]*</code>，匹配尽可能多的字符直到目标字符串结尾</td>
+          <td>2</td>
+          <td><code>abcbd</code></td>
+          <td>引擎匹配 <code>[bcd]*</code>，匹配尽可能多的字符直到目标字符串结尾</td>
       </tr>
       <tr>
-          <td style="text-align: left">3</td>
-          <td style="text-align: left">失败</td>
-          <td style="text-align: left">引擎尝试匹配 <code>b</code>，但是目前已经到了字符串结尾，所以无字符匹配，失败 /</td>
+          <td>3</td>
+          <td>失败</td>
+          <td>引擎尝试匹配 <code>b</code>，但是目前已经到了字符串结尾，所以无字符匹配，失败 /</td>
       </tr>
       <tr>
-          <td style="text-align: left">4</td>
-          <td style="text-align: left"><code>abcb</code></td>
-          <td style="text-align: left">回溯一个字符（即<code>d</code>），因此 <code>[bcd]*</code> 少匹配一个字符</td>
+          <td>4</td>
+          <td><code>abcb</code></td>
+          <td>回溯一个字符（即<code>d</code>），因此 <code>[bcd]*</code> 少匹配一个字符</td>
       </tr>
       <tr>
-          <td style="text-align: left">5</td>
-          <td style="text-align: left">失败</td>
-          <td style="text-align: left">再次尝试匹配 <code>b</code> ，但是当前未匹配字符只有 <code>'d'</code>，再次失败</td>
+          <td>5</td>
+          <td>失败</td>
+          <td>再次尝试匹配 <code>b</code> ，但是当前未匹配字符只有 <code>'d'</code>，再次失败</td>
       </tr>
       <tr>
-          <td style="text-align: left">6</td>
-          <td style="text-align: left"><code>abc</code></td>
-          <td style="text-align: left">再次回溯一个字符（即<code>b</code>）， 因而 <code>[bcd]*</code>仅仅匹配<code>bc</code></td>
+          <td>6</td>
+          <td><code>abc</code></td>
+          <td>再次回溯一个字符（即<code>b</code>）， 因而 <code>[bcd]*</code>仅仅匹配<code>bc</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">6</td>
-          <td style="text-align: left"><code>abcb</code></td>
-          <td style="text-align: left">再次尝试匹配 <code>b</code> 。 这次未匹配字符当前位置就是 <code>'b'</code>，因此成功</td>
+          <td>6</td>
+          <td><code>abcb</code></td>
+          <td>再次尝试匹配 <code>b</code> 。 这次未匹配字符当前位置就是 <code>'b'</code>，因此成功</td>
       </tr>
   </tbody>
 </table></div>
@@ -435,18 +435,18 @@
 <div class="table-wrapper"><table>
   <thead>
       <tr>
-          <th style="text-align: left">表达式</th>
-          <th style="text-align: left">步骤</th>
+          <th>表达式</th>
+          <th>步骤</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left"><code>&lt;.*&gt;</code></td>
-          <td style="text-align: left">先匹配<code>&lt;</code>，再匹配<code>.*</code>，此时吞下所有的符号，最后从最后一个字符开始，吐一个字符匹配一次<code>&gt;</code>，直到成功为止</td>
+          <td><code>&lt;.*&gt;</code></td>
+          <td>先匹配<code>&lt;</code>，再匹配<code>.*</code>，此时吞下所有的符号，最后从最后一个字符开始，吐一个字符匹配一次<code>&gt;</code>，直到成功为止</td>
       </tr>
       <tr>
-          <td style="text-align: left"><code>&lt;.*?&gt;</code></td>
-          <td style="text-align: left">先匹配<code>&lt;</code>，再匹配<code>.*?</code>，此时一个字符一个字符吞，每吞一个字符就立马匹配<code>&gt;</code>，直到成功为止</td>
+          <td><code>&lt;.*?&gt;</code></td>
+          <td>先匹配<code>&lt;</code>，再匹配<code>.*?</code>，此时一个字符一个字符吞，每吞一个字符就立马匹配<code>&gt;</code>，直到成功为止</td>
       </tr>
   </tbody>
 </table></div>
@@ -537,26 +537,26 @@
 <div class="table-wrapper"><table>
   <thead>
       <tr>
-          <th style="text-align: left">运算符</th>
-          <th style="text-align: left">描述</th>
+          <th>运算符</th>
+          <th>描述</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">\</td>
-          <td style="text-align: left">转义符</td>
+          <td>\</td>
+          <td>转义符</td>
       </tr>
       <tr>
-          <td style="text-align: left">(), (?:), (?=), []</td>
-          <td style="text-align: left">圆括号和方括号</td>
+          <td>(), (?:), (?=), []</td>
+          <td>圆括号和方括号</td>
       </tr>
       <tr>
-          <td style="text-align: left">*, +, ?, {n}, {n,}, {n,m}</td>
-          <td style="text-align: left">限定符</td>
+          <td>*, +, ?, {n}, {n,}, {n,m}</td>
+          <td>限定符</td>
       </tr>
       <tr>
-          <td style="text-align: left">^, $, \ 任何元字符、任何字符</td>
-          <td style="text-align: left">定位点和序列（即：位置和顺序）</td>
+          <td>^, $, \ 任何元字符、任何字符</td>
+          <td>定位点和序列（即：位置和顺序）</td>
       </tr>
   </tbody>
 </table></div>
@@ -581,94 +581,94 @@
 <div class="table-wrapper"><table>
   <thead>
       <tr>
-          <th style="text-align: left">说明</th>
-          <th style="text-align: left">正则表达式</th>
+          <th>说明</th>
+          <th>正则表达式</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">网址（URL）</td>
-          <td style="text-align: left"><code>[a-zA-z]+://[^\s]*</code></td>
+          <td>网址（URL）</td>
+          <td><code>[a-zA-z]+://[^\s]*</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">IP 地址 (IP Address)</td>
-          <td style="text-align: left"><code>((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)</code></td>
+          <td>IP 地址 (IP Address)</td>
+          <td><code>((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">电子邮件 (Email)</td>
-          <td style="text-align: left"><code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></td>
+          <td>电子邮件 (Email)</td>
+          <td><code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">QQ 号码</td>
-          <td style="text-align: left"><code>[1-9]\d{4,}</code></td>
+          <td>QQ 号码</td>
+          <td><code>[1-9]\d{4,}</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">HTML 标记 (包含内容或自闭合)</td>
-          <td style="text-align: left"><code>&lt;(.*)(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;</code></td>
+          <td>HTML 标记 (包含内容或自闭合)</td>
+          <td><code>&lt;(.*)(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">密码 (由数字 / 大写字母 / 小写字母 / 标点符号组成，四种都必有，8 位以上)</td>
-          <td style="text-align: left"><code>(?=^.{8,}\$)(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z])(?!.*\n).*$</code></td>
+          <td>密码 (由数字 / 大写字母 / 小写字母 / 标点符号组成，四种都必有，8 位以上)</td>
+          <td><code>(?=^.{8,}\$)(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z])(?!.*\n).*$</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">日期 (年 - 月 - 日)</td>
-          <td style="text-align: left"><code>(\d{4}\d{2})-((1[0-2])(0?[1-9]))-(([12][0-9])(3[01])(0?[1-9]))</code></td>
+          <td>日期 (年 - 月 - 日)</td>
+          <td><code>(\d{4}\d{2})-((1[0-2])(0?[1-9]))-(([12][0-9])(3[01])(0?[1-9]))</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">日期 (月 / 日 / 年)</td>
-          <td style="text-align: left"><code>((1[0-2])(0?[1-9]))/(([12][0-9])(3[01])(0?[1-9]))/(\d{4}\d{2})</code></td>
+          <td>日期 (月 / 日 / 年)</td>
+          <td><code>((1[0-2])(0?[1-9]))/(([12][0-9])(3[01])(0?[1-9]))/(\d{4}\d{2})</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">时间 (小时: 分钟, 24 小时制)</td>
-          <td style="text-align: left"><code>((10?)[0-9]2[0-3]):([0-5][0-9])</code></td>
+          <td>时间 (小时: 分钟, 24 小时制)</td>
+          <td><code>((10?)[0-9]2[0-3]):([0-5][0-9])</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">汉字 (字符)</td>
-          <td style="text-align: left"><code>[\u4e00-\u9fa5]</code></td>
+          <td>汉字 (字符)</td>
+          <td><code>[\u4e00-\u9fa5]</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">中文及全角标点符号 (字符)</td>
-          <td style="text-align: left"><code>[\u3000-\u301e\ufe10-\ufe19\ufe30-\ufe44\ufe50-\ufe6b\uff01-\uffee]</code></td>
+          <td>中文及全角标点符号 (字符)</td>
+          <td><code>[\u3000-\u301e\ufe10-\ufe19\ufe30-\ufe44\ufe50-\ufe6b\uff01-\uffee]</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">中国大陆固定电话号码</td>
-          <td style="text-align: left"><code>(\d{4}-\d{3}-)?(\d{8}\d{7})</code></td>
+          <td>中国大陆固定电话号码</td>
+          <td><code>(\d{4}-\d{3}-)?(\d{8}\d{7})</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">中国大陆手机号码</td>
-          <td style="text-align: left"><code>1\d{10}</code></td>
+          <td>中国大陆手机号码</td>
+          <td><code>1\d{10}</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">中国大陆邮政编码</td>
-          <td style="text-align: left"><code>[1-9]\d{5}</code></td>
+          <td>中国大陆邮政编码</td>
+          <td><code>[1-9]\d{5}</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">中国大陆身份证号 (15 位或 18 位)</td>
-          <td style="text-align: left"><code>\d{15}(\d\d[0-9xX])?</code></td>
+          <td>中国大陆身份证号 (15 位或 18 位)</td>
+          <td><code>\d{15}(\d\d[0-9xX])?</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">非负整数 (正整数或零)</td>
-          <td style="text-align: left"><code>\d+</code></td>
+          <td>非负整数 (正整数或零)</td>
+          <td><code>\d+</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">正整数</td>
-          <td style="text-align: left"><code>[0-9]*[1-9][0-9]*</code></td>
+          <td>正整数</td>
+          <td><code>[0-9]*[1-9][0-9]*</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">负整数</td>
-          <td style="text-align: left"><code>-[0-9]*[1-9][0-9]*</code></td>
+          <td>负整数</td>
+          <td><code>-[0-9]*[1-9][0-9]*</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">整数</td>
-          <td style="text-align: left"><code>-?\d+</code></td>
+          <td>整数</td>
+          <td><code>-?\d+</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">小数</td>
-          <td style="text-align: left"><code>(-?\d+)(\.\d+)?</code></td>
+          <td>小数</td>
+          <td><code>(-?\d+)(\.\d+)?</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">不包含 abc 的单词</td>
-          <td style="text-align: left"><code>\b((?!abc)\w)+\b</code></td>
+          <td>不包含 abc 的单词</td>
+          <td><code>\b((?!abc)\w)+\b</code></td>
       </tr>
   </tbody>
 </table></div>
