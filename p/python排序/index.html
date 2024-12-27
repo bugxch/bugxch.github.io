@@ -551,7 +551,8 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -561,6 +562,7 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 

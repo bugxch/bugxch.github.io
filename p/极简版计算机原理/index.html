@@ -841,7 +841,8 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -851,6 +852,7 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 

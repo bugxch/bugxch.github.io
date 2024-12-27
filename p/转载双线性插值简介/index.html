@@ -422,7 +422,8 @@ $$</p>
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -432,6 +433,7 @@ $$</p>
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
