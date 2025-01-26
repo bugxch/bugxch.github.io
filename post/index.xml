@@ -7,13 +7,97 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Sun, 29 Dec 2024 21:00:24 +0800</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Jan 2025 07:43:26 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>2024年度总结</title>
         <link>https://blog.bugxch.top/p/2024%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sun, 29 Dec 2024 21:00:24 +0800</pubDate>
         
         <guid>https://blog.bugxch.top/p/2024%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
-        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post 2024年度总结" /&gt;&lt;h1 id=&#34;参考文献&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考文献
+        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post 2024年度总结" /&gt;&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/hot-air-balloon-7217175_1920.jpg?imageSlim&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hot-air-balloon-7217175_1920.jpg&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;2024年度回顾&#34;&gt;&lt;a href=&#34;#2024%e5%b9%b4%e5%ba%a6%e5%9b%9e%e9%a1%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2024年度回顾
+&lt;/h1&gt;&lt;p&gt;从工作、身体、爱好、家庭、购物等多个方面全面回顾2024年度。&lt;/p&gt;
+&lt;h2 id=&#34;sense&#34;&gt;&lt;a href=&#34;#sense&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Sense
+&lt;/h2&gt;&lt;h2 id=&#34;专业技能&#34;&gt;&lt;a href=&#34;#%e4%b8%93%e4%b8%9a%e6%8a%80%e8%83%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;专业技能
+&lt;/h2&gt;&lt;p&gt;查看了下之前的读书笔记，学习了下面的这些技能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rust，考取了专业级科目一，科目二考试两次没有pass，但是现在也基本忘得差不多了&lt;/li&gt;
+&lt;li&gt;cmake，搞了几个实验性的项目，看了几本书，但是也忘得差不多了&lt;/li&gt;
+&lt;li&gt;C++大型工程，学习了一本书的开头，后来也没有坚持下来&lt;/li&gt;
+&lt;li&gt;csapp计算机系统知识，第4章和第5章学习完了，但是没有记笔记，忘得差不多了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;身体&#34;&gt;&lt;a href=&#34;#%e8%ba%ab%e4%bd%93&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;身体
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;花了半年时间体重从年初的145斤减肥到130斤左右，然后一直保持到现在，体重保持不容易，需要长期坚持健康饮食。减脂降脂效果明显，后面身体的主要目标从减脂转向增肌塑形&lt;/li&gt;
+&lt;li&gt;11月份开始划船机，后来发现对于提升精力水平影响很大，后来发现划船机属于有氧运动的一种，最重要的功能可以提升最大摄氧量，发现跑步的效率更高。后来就开始跑步替换划船机，保证一周至少三次，每次3公里+节奏，需要继续坚持&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;力量训练也非常重要&lt;/strong&gt;，买了head的杠铃/哑铃/壶铃器械，但是还没有开始锻炼，今年要练习起来了。杠铃深蹲是是对后链肌肉锻炼的最佳锻炼项目，后面继续&lt;/li&gt;
+&lt;li&gt;学习佛法和冥想，3月份去北京参加软件大会，在北京看了《世界上最快乐的人》，发现佛法有意思，后面进一步了解了禅修，学习了“善护念”，但是后面也没有在实际生活中继续坚持。需要再放松和警觉之间找到一个平衡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;爱好&#34;&gt;&lt;a href=&#34;#%e7%88%b1%e5%a5%bd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;爱好
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;电子制作，买了包括树莓派4、esp32、arduino、树莓派pico 2等电子平台，研究过一段时间，然后搁置&lt;/li&gt;
+&lt;li&gt;考取业余无线电A证，拿到呼号BI4AAB，回顾了下2023年年初立的flag，终于在年底还愿了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具&#34;&gt;&lt;a href=&#34;#%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;工具
+&lt;/h2&gt;&lt;p&gt;今年没有使用特别的新工具&lt;/p&gt;
+&lt;h2 id=&#34;家庭&#34;&gt;&lt;a href=&#34;#%e5%ae%b6%e5%ba%ad&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;家庭
+&lt;/h2&gt;&lt;h2 id=&#34;购物&#34;&gt;&lt;a href=&#34;#%e8%b4%ad%e7%89%a9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;购物
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;小牛400ft，年度最佳购物体验，使用率非常高（上下班通勤代步），节省不少时间&lt;/li&gt;
+&lt;li&gt;蔡司泽锐变色眼镜，在国庆节开车时候发现需要墨镜，然后发现了变色眼镜，便配了一副，效果不错&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;反思和展望&#34;&gt;&lt;a href=&#34;#%e5%8f%8d%e6%80%9d%e5%92%8c%e5%b1%95%e6%9c%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;反思和展望
+&lt;/h2&gt;&lt;h1 id=&#34;2025年度展望&#34;&gt;&lt;a href=&#34;#2025%e5%b9%b4%e5%ba%a6%e5%b1%95%e6%9c%9b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2025年度展望
+&lt;/h1&gt;&lt;p&gt;根据去年的总结，展望2025，制定一份全面的指导计划。&lt;/p&gt;
+&lt;h2 id=&#34;sense-1&#34;&gt;&lt;a href=&#34;#sense-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Sense
+&lt;/h2&gt;&lt;h2 id=&#34;专业技能-1&#34;&gt;&lt;a href=&#34;#%e4%b8%93%e4%b8%9a%e6%8a%80%e8%83%bd-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;专业技能
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;掌握主动，以系列博客的方式引导技能的输入&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;掌握Cmake的语言和构建大型项目的基础知识&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C++/python混合编程，进一步完善chip_verify的工程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用服务器搭建个人的笔记，包括&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vector性能优化&lt;/li&gt;
+&lt;li&gt;cube的性能优化&lt;/li&gt;
+&lt;li&gt;rust学习笔记&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过rust专业级认证&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;学习CUDA的编程技术，将家里的jetson用起来&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;身体-1&#34;&gt;&lt;a href=&#34;#%e8%ba%ab%e4%bd%93-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;身体
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;继续有氧和力量训练，这是保持精力的非常好的方式&lt;/li&gt;
+&lt;li&gt;通过冥想和修习佛法，控制情绪和头脑&lt;/li&gt;
+&lt;li&gt;继续练习毛笔和硬笔书法，吴玉生的红楼梦&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;爱好-1&#34;&gt;&lt;a href=&#34;#%e7%88%b1%e5%a5%bd-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;爱好
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;坚持写技术博客，以高质量输出引导高质量输入&lt;/li&gt;
+&lt;li&gt;将原来的树莓派小车的项目继续搞完，将相关的东西整理成完整的github的项目&lt;/li&gt;
+&lt;li&gt;考取业余无线电B照&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;购物-1&#34;&gt;&lt;a href=&#34;#%e8%b4%ad%e7%89%a9-1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;购物
+&lt;/h2&gt;&lt;h1 id=&#34;参考文献&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考文献
 &lt;/h1&gt;&lt;hr&gt;
 &lt;p&gt;本文原载于 &lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;巴巴变的博客&lt;/a&gt;，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
