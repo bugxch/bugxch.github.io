@@ -245,153 +245,160 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#封面">封面</a></li>
-    <li><a href="#版权信息">版权信息</a></li>
-    <li><a href="#内容提要">内容提要</a></li>
-    <li><a href="#前言">前言</a>
+    <li><a href="#元数据">元数据</a></li>
+    <li><a href="#高亮划线">高亮划线</a>
       <ol>
-        <li><a href="#本书读者">本书读者</a></li>
+        <li><a href="#封面">封面</a></li>
+        <li><a href="#版权信息">版权信息</a></li>
+        <li><a href="#内容提要">内容提要</a></li>
+        <li><a href="#前言">前言</a>
+          <ol>
+            <li><a href="#本书读者">本书读者</a></li>
+          </ol>
+        </li>
+        <li><a href="#第1章-构建之旅">第1章 构建之旅</a>
+          <ol>
+            <li><a href="#11-单源文件程序您好世界">1.1 单源文件程序：您好，世界</a></li>
+            <li><a href="#12-构建多源程序">1.2 构建多源程序</a></li>
+            <li><a href="#13-构建静态库">1.3 构建静态库</a></li>
+            <li><a href="#14-构建动态库">1.4 构建动态库</a></li>
+            <li><a href="#15-引用第三方库">1.5 引用第三方库</a></li>
+            <li><a href="#16-旅行笔记">1.6 旅行笔记</a></li>
+          </ol>
+        </li>
+        <li><a href="#第2章-cmake简介">第2章 CMake简介</a>
+          <ol>
+            <li><a href="#21-为什么使用cmake">2.1 为什么使用CMake</a></li>
+            <li><a href="#22-安装cmake">2.2 安装CMake</a></li>
+            <li><a href="#23-您好cmake">2.3 您好，CMake!</a></li>
+          </ol>
+        </li>
+        <li><a href="#第3章-基础语法">第3章 基础语法</a>
+          <ol>
+            <li><a href="#31-cmake程序">3.1 CMake程序</a></li>
+            <li><a href="#32-注释">3.2 注释</a></li>
+            <li><a href="#33-命令调用">3.3 命令调用</a></li>
+            <li><a href="#34-命令参数">3.4 命令参数</a></li>
+            <li><a href="#35-变量">3.5 变量</a></li>
+            <li><a href="#36-列表">3.6 列表</a></li>
+            <li><a href="#37-控制结构">3.7 控制结构</a></li>
+            <li><a href="#38-条件语法">3.8 条件语法</a></li>
+            <li><a href="#39-命令定义">3.9 命令定义</a></li>
+            <li><a href="#310-小结">3.10 小结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第4章-常用命令">第4章 常用命令</a>
+          <ol>
+            <li><a href="#41-数值操作命令math">4.1 数值操作命令：math</a></li>
+            <li><a href="#42-字符串操作命令string">4.2 字符串操作命令：string</a></li>
+            <li><a href="#43-列表操作命令list">4.3 列表操作命令：list</a></li>
+            <li><a href="#44-文件操作命令file">4.4 文件操作命令：file</a></li>
+            <li><a href="#45-路径操作命令cmake_path">4.5 路径操作命令：cmake_path</a></li>
+            <li><a href="#46-路径操作命令get_filename_component">4.6 路径操作命令：get_filename_component</a></li>
+            <li><a href="#47-配置模板文件configure_file">4.7 配置模板文件：configure_file</a></li>
+            <li><a href="#48-日志输出命令message">4.8 日志输出命令：message</a></li>
+            <li><a href="#49-执行程序execute_process">4.9 执行程序：execute_process</a></li>
+            <li><a href="#410-引用cmake程序include">4.10 引用CMake程序：include</a></li>
+            <li><a href="#411-执行代码片段cmake_language">4.11 执行代码片段：cmake_language</a></li>
+            <li><a href="#412-监控变量variable_watch">4.12 监控变量：variable_watch</a></li>
+          </ol>
+        </li>
+        <li><a href="#第5章-实践cmake快速排序">第5章 实践：CMake快速排序</a></li>
+        <li><a href="#第6章-cmake构建初探">第6章 CMake构建初探</a>
+          <ol>
+            <li><a href="#61-cmake项目的生命周期">6.1 CMake项目的生命周期</a></li>
+            <li><a href="#62-项目配置与缓存变量">6.2 项目配置与缓存变量</a></li>
+            <li><a href="#63-cmake命令行的使用">6.3 CMake命令行的使用</a></li>
+            <li><a href="#64-使用visual-studio打开cmake项目">6.4 使用Visual Studio打开CMake项目</a></li>
+            <li><a href="#65-小结">6.5 小结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第7章-构建目标和属性">第7章 构建目标和属性</a>
+          <ol>
+            <li><a href="#71-二进制构建目标">7.1 二进制构建目标</a></li>
+            <li><a href="#72-伪构建目标">7.2 伪构建目标</a></li>
+            <li><a href="#73-子目录">7.3 子目录</a></li>
+            <li><a href="#74-项目project">7.4 项目：project</a></li>
+            <li><a href="#75-属性get_propertyset_property">7.5 属性：get_property、set_property</a></li>
+            <li><a href="#76-属性相关命令">7.6 属性相关命令</a></li>
+            <li><a href="#77-自定义构建规则add_custom_command">7.7 自定义构建规则：add_custom_command</a></li>
+            <li><a href="#78-自定义构建目标add_custom_target">7.8 自定义构建目标：add_custom_target</a></li>
+            <li><a href="#79-设置依赖关系add_dependencies">7.9 设置依赖关系：add_dependencies</a></li>
+            <li><a href="#710-小结">7.10 小结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第8章-生成器表达式">第8章 生成器表达式</a>
+          <ol>
+            <li><a href="#81-支持生成器表达式的命令">8.1 支持生成器表达式的命令</a></li>
+            <li><a href="#82-布尔型生成器表达式">8.2 布尔型生成器表达式</a></li>
+            <li><a href="#83-字符串生成器表达式">8.3 字符串生成器表达式</a></li>
+            <li><a href="#84-小结">8.4 小结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第9章-模块">第9章 模块</a>
+          <ol>
+            <li><a href="#91-引用功能模块">9.1 引用功能模块</a></li>
+            <li><a href="#92-常用的预置功能模块">9.2 常用的预置功能模块</a></li>
+            <li><a href="#93-查找模块">9.3 查找模块</a></li>
+            <li><a href="#94-编写自定义查找模块">9.4 编写自定义查找模块</a></li>
+            <li><a href="#95-小结">9.5 小结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第10章-策略与向后兼容">第10章 策略与向后兼容</a>
+          <ol>
+            <li><a href="#101-cmake策略以cmp0115为例">10.1 CMake策略（以CMP0115为例）</a></li>
+            <li><a href="#102-指定cmake最低版本要求cmake_minimum_required">10.2 指定CMake最低版本要求：cmake_minimum_required</a></li>
+            <li><a href="#103-管理策略行为cmake_policy">10.3 管理策略行为：cmake_policy</a></li>
+            <li><a href="#104-渐进式重构cmake程序">10.4 渐进式重构CMake程序</a></li>
+            <li><a href="#105-小结">10.5 小结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第11章-实践基于onnxruntime的手写数字识别库">第11章 实践：基于onnxruntime的手写数字识别库</a>
+          <ol>
+            <li><a href="#111-前期设计">11.1 前期设计</a></li>
+            <li><a href="#112-第三方库">11.2 第三方库</a></li>
+            <li><a href="#113-cmake目录程序">11.3 CMake目录程序</a></li>
+            <li><a href="#114-代码实现">11.4 代码实现</a></li>
+            <li><a href="#115-构建和运行">11.5 构建和运行</a></li>
+            <li><a href="#116-小结">11.6 小结</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
-    <li><a href="#第1章-构建之旅">第1章 构建之旅</a>
+    <li><a href="#读书笔记">读书笔记</a>
       <ol>
-        <li><a href="#11-单源文件程序您好世界">1.1 单源文件程序：您好，世界</a></li>
-        <li><a href="#12-构建多源程序">1.2 构建多源程序</a></li>
-        <li><a href="#13-构建静态库">1.3 构建静态库</a></li>
-        <li><a href="#14-构建动态库">1.4 构建动态库</a></li>
-        <li><a href="#15-引用第三方库">1.5 引用第三方库</a></li>
-        <li><a href="#16-旅行笔记">1.6 旅行笔记</a></li>
+        <li><a href="#前言-1">前言</a>
+          <ol>
+            <li><a href="#划线评论">划线评论</a></li>
+            <li><a href="#划线评论-1">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#14-构建动态库-1">1.4 构建动态库</a>
+          <ol>
+            <li><a href="#划线评论-2">划线评论</a></li>
+            <li><a href="#划线评论-3">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#15-引用第三方库-1">1.5 引用第三方库</a>
+          <ol>
+            <li><a href="#划线评论-4">划线评论</a></li>
+            <li><a href="#划线评论-5">划线评论</a></li>
+            <li><a href="#划线评论-6">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#16-旅行笔记-1">1.6 旅行笔记</a>
+          <ol>
+            <li><a href="#划线评论-7">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#第7章-构建目标和属性-1">第7章 构建目标和属性</a>
+          <ol>
+            <li><a href="#划线评论-8">划线评论</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
-    <li><a href="#第2章-cmake简介">第2章 CMake简介</a>
-      <ol>
-        <li><a href="#21-为什么使用cmake">2.1 为什么使用CMake</a></li>
-        <li><a href="#22-安装cmake">2.2 安装CMake</a></li>
-        <li><a href="#23-您好cmake">2.3 您好，CMake!</a></li>
-      </ol>
-    </li>
-    <li><a href="#第3章-基础语法">第3章 基础语法</a>
-      <ol>
-        <li><a href="#31-cmake程序">3.1 CMake程序</a></li>
-        <li><a href="#32-注释">3.2 注释</a></li>
-        <li><a href="#33-命令调用">3.3 命令调用</a></li>
-        <li><a href="#34-命令参数">3.4 命令参数</a></li>
-        <li><a href="#35-变量">3.5 变量</a></li>
-        <li><a href="#36-列表">3.6 列表</a></li>
-        <li><a href="#37-控制结构">3.7 控制结构</a></li>
-        <li><a href="#38-条件语法">3.8 条件语法</a></li>
-        <li><a href="#39-命令定义">3.9 命令定义</a></li>
-        <li><a href="#310-小结">3.10 小结</a></li>
-      </ol>
-    </li>
-    <li><a href="#第4章-常用命令">第4章 常用命令</a>
-      <ol>
-        <li><a href="#41-数值操作命令math">4.1 数值操作命令：math</a></li>
-        <li><a href="#42-字符串操作命令string">4.2 字符串操作命令：string</a></li>
-        <li><a href="#43-列表操作命令list">4.3 列表操作命令：list</a></li>
-        <li><a href="#44-文件操作命令file">4.4 文件操作命令：file</a></li>
-        <li><a href="#45-路径操作命令cmake_path">4.5 路径操作命令：cmake_path</a></li>
-        <li><a href="#46-路径操作命令get_filename_component">4.6 路径操作命令：get_filename_component</a></li>
-        <li><a href="#47-配置模板文件configure_file">4.7 配置模板文件：configure_file</a></li>
-        <li><a href="#48-日志输出命令message">4.8 日志输出命令：message</a></li>
-        <li><a href="#49-执行程序execute_process">4.9 执行程序：execute_process</a></li>
-        <li><a href="#410-引用cmake程序include">4.10 引用CMake程序：include</a></li>
-        <li><a href="#411-执行代码片段cmake_language">4.11 执行代码片段：cmake_language</a></li>
-        <li><a href="#412-监控变量variable_watch">4.12 监控变量：variable_watch</a></li>
-      </ol>
-    </li>
-    <li><a href="#第5章-实践cmake快速排序">第5章 实践：CMake快速排序</a></li>
-    <li><a href="#第6章-cmake构建初探">第6章 CMake构建初探</a>
-      <ol>
-        <li><a href="#61-cmake项目的生命周期">6.1 CMake项目的生命周期</a></li>
-        <li><a href="#62-项目配置与缓存变量">6.2 项目配置与缓存变量</a></li>
-        <li><a href="#63-cmake命令行的使用">6.3 CMake命令行的使用</a></li>
-        <li><a href="#64-使用visual-studio打开cmake项目">6.4 使用Visual Studio打开CMake项目</a></li>
-        <li><a href="#65-小结">6.5 小结</a></li>
-      </ol>
-    </li>
-    <li><a href="#第7章-构建目标和属性">第7章 构建目标和属性</a>
-      <ol>
-        <li><a href="#71-二进制构建目标">7.1 二进制构建目标</a></li>
-        <li><a href="#72-伪构建目标">7.2 伪构建目标</a></li>
-        <li><a href="#73-子目录">7.3 子目录</a></li>
-        <li><a href="#74-项目project">7.4 项目：project</a></li>
-        <li><a href="#75-属性get_propertyset_property">7.5 属性：get_property、set_property</a></li>
-        <li><a href="#76-属性相关命令">7.6 属性相关命令</a></li>
-        <li><a href="#77-自定义构建规则add_custom_command">7.7 自定义构建规则：add_custom_command</a></li>
-        <li><a href="#78-自定义构建目标add_custom_target">7.8 自定义构建目标：add_custom_target</a></li>
-        <li><a href="#79-设置依赖关系add_dependencies">7.9 设置依赖关系：add_dependencies</a></li>
-        <li><a href="#710-小结">7.10 小结</a></li>
-      </ol>
-    </li>
-    <li><a href="#第8章-生成器表达式">第8章 生成器表达式</a>
-      <ol>
-        <li><a href="#81-支持生成器表达式的命令">8.1 支持生成器表达式的命令</a></li>
-        <li><a href="#82-布尔型生成器表达式">8.2 布尔型生成器表达式</a></li>
-        <li><a href="#83-字符串生成器表达式">8.3 字符串生成器表达式</a></li>
-        <li><a href="#84-小结">8.4 小结</a></li>
-      </ol>
-    </li>
-    <li><a href="#第9章-模块">第9章 模块</a>
-      <ol>
-        <li><a href="#91-引用功能模块">9.1 引用功能模块</a></li>
-        <li><a href="#92-常用的预置功能模块">9.2 常用的预置功能模块</a></li>
-        <li><a href="#93-查找模块">9.3 查找模块</a></li>
-        <li><a href="#94-编写自定义查找模块">9.4 编写自定义查找模块</a></li>
-        <li><a href="#95-小结">9.5 小结</a></li>
-      </ol>
-    </li>
-    <li><a href="#第10章-策略与向后兼容">第10章 策略与向后兼容</a>
-      <ol>
-        <li><a href="#101-cmake策略以cmp0115为例">10.1 CMake策略（以CMP0115为例）</a></li>
-        <li><a href="#102-指定cmake最低版本要求cmake_minimum_required">10.2 指定CMake最低版本要求：cmake_minimum_required</a></li>
-        <li><a href="#103-管理策略行为cmake_policy">10.3 管理策略行为：cmake_policy</a></li>
-        <li><a href="#104-渐进式重构cmake程序">10.4 渐进式重构CMake程序</a></li>
-        <li><a href="#105-小结">10.5 小结</a></li>
-      </ol>
-    </li>
-    <li><a href="#第11章-实践基于onnxruntime的手写数字识别库">第11章 实践：基于onnxruntime的手写数字识别库</a>
-      <ol>
-        <li><a href="#111-前期设计">11.1 前期设计</a></li>
-        <li><a href="#112-第三方库">11.2 第三方库</a></li>
-        <li><a href="#113-cmake目录程序">11.3 CMake目录程序</a></li>
-        <li><a href="#114-代码实现">11.4 代码实现</a></li>
-        <li><a href="#115-构建和运行">11.5 构建和运行</a></li>
-        <li><a href="#116-小结">11.6 小结</a></li>
-      </ol>
-    </li>
-  </ol>
-
-  <ol>
-    <li><a href="#前言-1">前言</a>
-      <ol>
-        <li><a href="#划线评论">划线评论</a></li>
-        <li><a href="#划线评论-1">划线评论</a></li>
-      </ol>
-    </li>
-    <li><a href="#14-构建动态库-1">1.4 构建动态库</a>
-      <ol>
-        <li><a href="#划线评论-2">划线评论</a></li>
-        <li><a href="#划线评论-3">划线评论</a></li>
-      </ol>
-    </li>
-    <li><a href="#15-引用第三方库-1">1.5 引用第三方库</a>
-      <ol>
-        <li><a href="#划线评论-4">划线评论</a></li>
-        <li><a href="#划线评论-5">划线评论</a></li>
-        <li><a href="#划线评论-6">划线评论</a></li>
-      </ol>
-    </li>
-    <li><a href="#16-旅行笔记-1">1.6 旅行笔记</a>
-      <ol>
-        <li><a href="#划线评论-7">划线评论</a></li>
-      </ol>
-    </li>
-    <li><a href="#第7章-构建目标和属性-1">第7章 构建目标和属性</a>
-      <ol>
-        <li><a href="#划线评论-8">划线评论</a></li>
-      </ol>
-    </li>
+    <li><a href="#本书评论">本书评论</a></li>
   </ol>
 </nav>
         </div>
