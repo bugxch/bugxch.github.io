@@ -18,8 +18,7 @@
     &gt;Monty Hall问题&lt;/a&gt;，思索清楚之后感觉挺有趣，分享下。&lt;/p&gt;
 &lt;h2 id=&#34;问题描述&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;參賽者會看見三扇門，其中一扇門的裏面有一輛汽車，選中裏面是汽車的那扇門，就可以贏得該輛汽車，另外兩扇門裏面則都是一隻山羊。當參賽者選定了一扇門，&lt;strong&gt;主持人會開啟另一扇是山羊的門&lt;/strong&gt;；並問：「要不要換一扇門？」&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;參賽者會看見三扇門，其中一扇門的裏面有一輛汽車，選中裏面是汽車的那扇門，就可以贏得該輛汽車，另外兩扇門裏面則都是一隻山羊。當參賽者選定了一扇門，&lt;strong&gt;主持人會開啟另一扇是山羊的門&lt;/strong&gt;；並問：「要不要換一扇門？」&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Monty_open_door.svg/440px-Monty_open_door.svg.png&#34;
 	
 	
@@ -126,8 +125,7 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;可以看出此时无论你选择哪一扇门赢得比赛的概率都一样。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;然后，蒙蒂打开了C门，告诉你C门后面没有奖品，所以你知道$Pr(C) = 0$，那此时你对$Pr(A)$和$Pr(B)$的估计还保持原样吗？&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;然后，蒙蒂打开了C门，告诉你C门后面没有奖品，所以你知道$Pr(C) = 0$，那此时你对$Pr(A)$和$Pr(B)$的估计还保持原样吗？&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;我们令E表示蒙蒂选择C门作为展示门（以表明该门后面没有奖品）这个事件，那么实际上要比较的就是$Pr(A|E)$和$Pr(B|E)$的大小关系。根据贝叶斯定理&lt;/p&gt;
 &lt;p&gt;现在已知，$Pr(A) = Pr(B) = Pr(C) = \frac{1}{3}$，下一步就是推导&lt;/p&gt;
 &lt;ul&gt;

@@ -43,8 +43,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;迭代器模式是一种行为设计模式， 提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象内部表示。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;迭代器模式是一种行为设计模式， 提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象内部表示。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;C++中比较典型类似与std的vector的前向迭代器&lt;code&gt;begin()&lt;/code&gt;和&lt;code&gt;end()&lt;/code&gt;，以及后向迭代器&lt;code&gt;rbegin()&lt;/code&gt;和&lt;code&gt;rend()&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;问题引入&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题引入
 &lt;/h2&gt;&lt;p&gt;可以设想元素聚合成集合的方式，最简单的方式是顺序存储的数组或者列表，但是也有例如树、图和其他复杂的数据结构。所以，如果要遍历集合中的元素，有下面的两个问题需要解决：&lt;/p&gt;

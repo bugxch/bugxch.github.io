@@ -198,8 +198,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;关于json文件中变量的具体含义可以进一步参考&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/docs/editor/variables-reference&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Visual Studio Code Variables Reference&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;Visual Studio Code Variables Reference&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;文件中的指令指定了程序如何运行，当前文件中的&lt;code&gt;args&lt;/code&gt;参数指定了传输给gcc的参数，这些参数必须按照编译器期望的顺序排列。&lt;/p&gt;
 &lt;p&gt;这个任务告诉g++将源文件&lt;code&gt;${file}&lt;/code&gt;编译，在当前文件夹下面创建可执行文件&lt;code&gt;helloword&lt;/code&gt;，注意可执行文件的名称和源文件相同，但是去掉了扩展后缀名。&lt;code&gt;label&lt;/code&gt;字段表示你能看到的任务列表，你可以写成任何你想写的东西。&lt;code&gt;group&lt;/code&gt;中的&lt;code&gt;&amp;quot;isDefault&amp;quot;: true&lt;/code&gt;表示你可以使用&lt;code&gt;Ctrl+Shift+B&lt;/code&gt;运行该任务，这个仅仅是为了使用上的方便，你依然可以通过菜单中的选项运行该任务。&lt;/p&gt;
 &lt;h3 id=&#34;运行编译程序&#34;&gt;&lt;a href=&#34;#%e8%bf%90%e8%a1%8c%e7%bc%96%e8%af%91%e7%a8%8b%e5%ba%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;运行编译程序
@@ -319,8 +318,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;调试中可以看到每个变量的值，以及监视窗口。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;需要注意的是，当前的版本（2019年3月份之后）不会在单步调试模式下将cout的结果打印出来，只有程序运行完成之后才会统一打印出来。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;p&gt;需要注意的是，当前的版本（2019年3月份之后）不会在单步调试模式下将cout的结果打印出来，只有程序运行完成之后才会统一打印出来。&lt;/p&gt;&lt;/blockquote&gt;</description>
         </item>
         
     </channel>

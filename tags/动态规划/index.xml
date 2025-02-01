@@ -121,8 +121,7 @@ $$
 &lt;p&gt;所以，无论是按照重量，大小，还是密度排序，这样的方法都是错误的。其实考虑最周全的方法，求$n$件物品的是否放入背包的全部组合，记录所有总重量可以放入背包的组合的价值，然后选一个最大值即可，但是对于$n$件物品，需要考虑的组合有$2^n$组，算法的复杂度很高，当$n$比较大的时候就很不实际。&lt;/p&gt;
 &lt;p&gt;上面的三种方法使用贪婪算法，下面是《算法的乐趣》中对贪婪算法的描述，&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;贪婪算法是寻找最优解的常用方法，该方法将求解的过程分成若干步骤，在每个步骤都应用贪心原则，选取当前状态下最好的或者最优的选择（局部最有利的选择），并以此希望最后堆叠出的结果是最好的或者最优的解。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;贪婪算法是寻找最优解的常用方法，该方法将求解的过程分成若干步骤，在每个步骤都应用贪心原则，选取当前状态下最好的或者最优的选择（局部最有利的选择），并以此希望最后堆叠出的结果是最好的或者最优的解。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;之前的算法将物品的选择分解为依次挑选物品，这里的次序可以是价值从高到低，重量从低到高或者密度从大到小，并且希冀于每一步结束之后，整体上的价值是最高的，重量是最轻的或者密度是最大的。这个就是明显的贪婪算法思想，但是&lt;strong&gt;局部最优不等于全部最优&lt;/strong&gt;，因此这样的算法是失败的。&lt;/p&gt;
 &lt;h2 id=&#34;动态规划&#34;&gt;&lt;a href=&#34;#%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;动态规划
 &lt;/h2&gt;&lt;h3 id=&#34;重新定义问题&#34;&gt;&lt;a href=&#34;#%e9%87%8d%e6%96%b0%e5%ae%9a%e4%b9%89%e9%97%ae%e9%a2%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;重新定义问题
@@ -131,8 +130,7 @@ $$
 &lt;ol&gt;
 &lt;li&gt;使得$m$个物件的的总重量不超过$C$，即$ \sum_{k=1}^{m}{w_k} \le C$&lt;/li&gt;
 &lt;li&gt;在满足条件1的情况下，$m$个物件的总价值在所有可能的挑选组合中&lt;strong&gt;最大&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;我们用$V[i, C]$表示这$m$个物件的总价值，即
 $$
 V[i,C] = \max_{s.t.}{\sum_{k=1}^{m}{p_k}}，m \le n
@@ -153,8 +151,7 @@ $$
 &lt;ol&gt;
 &lt;li&gt;使用$i + 1$个物件充分填充空间C得到的最大价值$V[i + 1,C]$&lt;/li&gt;
 &lt;li&gt;以及$V[i + 1,C]$对应的物件的组合$M_{i+1}$&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;当你手里拿着这个重量为$w_{i+1}$的物品，准备填充容量为$C$的&lt;strong&gt;空包&lt;/strong&gt;时候（&lt;strong&gt;注意此处的空包，不要想当然得以为包里面已经有前面的$i - 1$中挑选的物件&lt;/strong&gt;了），有下面两种情形，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;该物件的重量大于背包的容量，即$w_{i+1} \gt C$，那么这个物品无论如何也放不进背包，因此这个物品不会被选中，所以只能&lt;strong&gt;使用前面$i$个物件填充$C$&lt;/strong&gt;，得出$V[i + 1,C] = V[i, C]，M_{i + 1} = M_{i}$。&lt;/li&gt;
@@ -331,8 +328,7 @@ $$
 &lt;h3 id=&#34;放入哪些物件&#34;&gt;&lt;a href=&#34;#%e6%94%be%e5%85%a5%e5%93%aa%e4%ba%9b%e7%89%a9%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;放入哪些物件
 &lt;/h3&gt;&lt;p&gt;但是且慢，文章的开头还有一个问题，我们放进去哪些物件，得到这个最大值的呢？请注意之前的递推思路那一小节中的物件集合$M_i$的变化，&lt;strong&gt;当且仅当$V[i, C] = V[i-1, C-w{i}] + p_{i}$时，第$i$件物品才会被放进来&lt;/strong&gt;。再仔细观察一下递推公式，我们可以看到$V[i,C]$的值要么等于$V[i-1, C-w{i}] + p_{i}$，要么等于$V[i-1,C]$，所以可以确认&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;如果$V[i, C] = V[i-1, C]$，那么第$i$件物品没有被放入背包中&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;如果$V[i, C] = V[i-1, C]$，那么第$i$件物品没有被放入背包中&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;但是仅仅有这个条件判断是不是已经足够了，如果第$i$个物品是被放入背包中的，下一步回溯还是考察$V[i-1,C]$是否与$V[i-2,C]$的值相等吗？回到之前的那幅图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bugxch/blogpics/master/202002/_u80CC_u53051582427182205.png&#34;
 	

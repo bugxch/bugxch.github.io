@@ -364,8 +364,7 @@
 </h2><p>首先来看leetcode中No. 3的<strong>无重复字符的最长子串</strong>这个题目，参考<a class="link" href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/"  target="_blank" rel="noopener"
     >题目链接</a>，题目很简单</p>
 <blockquote>
-<p>给定一个字符串，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
-</blockquote>
+<p>给定一个字符串，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p></blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -439,8 +438,7 @@
 </ul>
 <ol start="4">
 <li>直到<code>right</code>超过需要遍历的字符串的边界为止。</li>
-</ol>
-</blockquote>
+</ol></blockquote>
 <p>需要注意，上面的扩展和收缩的时机，对于当前的这个程序，如何判断当前的窗口中是否有重复字符呢？一般的想法是遍历每个键的值，如果有大于1的值就认为有重复字符，而且是在窗口位置发生变化的时候触发遍历动作。其实，这里有一个小技巧，<strong>键值只有在向右扩展的时候才会增长</strong>，刚开始窗口是没有键的，或者即便有也只能是1，所以在窗口扩展的时候，只要去查看新加入的<code>right</code>位置的字符的键值是否超过1即可。通过以上分析，我们有了下面的新的伪代码</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -551,8 +549,7 @@
 <p>示例：</p>
 <blockquote>
 <p><strong>输入:</strong> S = &ldquo;ADOBECODEBANC&rdquo;, T = &ldquo;ABC&rdquo;
-<strong>输出:</strong> &ldquo;BANC&rdquo;</p>
-</blockquote>
+<strong>输出:</strong> &ldquo;BANC&rdquo;</p></blockquote>
 <p>也是同样的做法，但是需要搞清楚几个问题</p>
 <h4 id="何时扩展窗口"><a href="#%e4%bd%95%e6%97%b6%e6%89%a9%e5%b1%95%e7%aa%97%e5%8f%a3" class="header-anchor"></a>何时扩展窗口？
 </h4><p>如果窗口中没有将所有的T中的字符包含，那么向右扩展窗口。</p>

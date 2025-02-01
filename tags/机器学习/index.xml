@@ -50,8 +50,7 @@ $$
 &lt;li&gt;$f&amp;rsquo;(x)\neq 0$;&lt;/li&gt;
 &lt;li&gt;对于所有$x\in I$，其中$I$为区间$[α − r, α + r]$，且$x_{0}$在区间其中$I$内，即$ r\geqslant \left|a-x_{0}\right|$的，对于所有$x\in I$，$f&amp;rsquo;&amp;rsquo;(x)$是连续的;&lt;/li&gt;
 &lt;li&gt;$x_{0}$足够接近根 α。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;所以使用牛顿迭代法，首先需要选择离方程的根足够近的起点，而且这个起点的切线斜率不能为0。&lt;/p&gt;
 &lt;h3 id=&#34;公式推导&#34;&gt;&lt;a href=&#34;#%e5%85%ac%e5%bc%8f%e6%8e%a8%e5%af%bc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;公式推导
 &lt;/h3&gt;&lt;p&gt;牛顿迭代法的另一种推导方式是使用泰勒展开式
@@ -79,8 +78,7 @@ $$
 这就是牛顿迭代法求极值的理论依据。&lt;/p&gt;
 &lt;h3 id=&#34;指令迭代&#34;&gt;&lt;a href=&#34;#%e6%8c%87%e4%bb%a4%e8%bf%ad%e4%bb%a3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;指令迭代
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;假设计算机中有求倒数的指令$y = rec(x) = 1/x$，但是精度不高，如何通过牛顿迭代法提高精度？&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;假设计算机中有求倒数的指令$y = rec(x) = 1/x$，但是精度不高，如何通过牛顿迭代法提高精度？&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;可以这么想，假设我们的输入是$a$，那么我们对输入求倒数就等价于求方程$a = 1/x$的根，也就是求方程$f(x) = 1/x -a$的根，那么根据牛顿迭代法，如果我们找到一个初值$x_0$，就可以按照如下的方程来迭代
 $$
 x_{n+1} = x_n - \frac{f(x_n)}{f&amp;rsquo;(x_n)}=2x_n - ax_{n}^2
@@ -88,8 +86,7 @@ $$
 而刚好这个初值就是指令使用一次之后的结果（相比随意找一个数字，这个值离根更近），即$x_0 = 1/a = rec(a)$。&lt;/p&gt;
 &lt;p&gt;更一般的，假如&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;我们利用指令$f$需要对数$a$做指令计算$f(a)$，但是该指令的精度不高，可以转化成求$f^{-1}(x) = a$得根，也就是求$g(x) = f^{-1}(x) - a$的根&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;我们利用指令$f$需要对数$a$做指令计算$f(a)$，但是该指令的精度不高，可以转化成求$f^{-1}(x) = a$得根，也就是求$g(x) = f^{-1}(x) - a$的根&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;比如，假如有求一个数的自然对数的指令vln，那么可以通过计算$f(x) = e^x -a$的根计算$vln(a)$的值。&lt;/p&gt;
 &lt;h2 id=&#34;方程举例&#34;&gt;&lt;a href=&#34;#%e6%96%b9%e7%a8%8b%e4%b8%be%e4%be%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;方程举例
 &lt;/h2&gt;&lt;p&gt;下面我们使用牛顿迭代法用C++的代码求解一个数的立方根，假定这个数是$a$，该问题等价于求方程$x^3 = a$的根，也就是求方程$f(x) = x^3 - a$的根。根据牛顿迭代法，可以按照如下的步骤求根&lt;/p&gt;
@@ -318,8 +315,7 @@ $$&lt;/p&gt;
 &lt;li&gt;对于方程 f(x)=0f(x)=0，舍设定损失函数 F(x)=(f(x)−0)2F(x)=(f(x)−0)2；&lt;/li&gt;
 &lt;li&gt;设定一个初值 x0x0，代入损失函数求得结果，如果大于 0，那么找到一个新的值 x1=x0−αF′(x0)x1=x0−αF′(x0)，考察损失函数是否为 0；&lt;/li&gt;
 &lt;li&gt;反复迭代第 2 步，直到达到满意的精度为止。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;上面的算法中，有三个参数需要注意：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;αα，称为学习率，代表了曲线逼近的速度，这个参数可以自己设定；&lt;/li&gt;

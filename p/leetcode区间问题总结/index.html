@@ -429,8 +429,7 @@
 <li>表示在公交站第<code>i</code>站上车<code>k</code>人，<code>count[i - 1] += k</code>；</li>
 <li>第<code>i + 1</code>站直到第<code>j</code>站都没有乘客上下车，<code>count[i],...,count[j - 1]</code>无操作；</li>
 <li>在第<code>j + 1</code>站下车<code>k</code>人，所以<code>count[j] -= k</code></li>
-</ol>
-</blockquote>
+</ol></blockquote>
 <p>为了方便起见，<strong>我们缩小问题的规模，以具体的数字代替抽象的代数字母</strong>，假如我们就只有3个公交站，取示例中的前2行，</p>
 <ol>
 <li>公交车刚开始上的人数是0，<code>vector&lt;int&gt; count(4, 0)</code>；</li>

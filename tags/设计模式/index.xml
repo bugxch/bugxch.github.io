@@ -16,8 +16,7 @@
         <description>&lt;img src="https://pic.imgdb.cn/item/608eae16d1a9ae528f502e1a.png" alt="Featured image of post Factory Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;继续之前的设计模式第四弹，这次是大名鼎鼎的工厂方法模式。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method是创建型模式，使一个类的实例化延迟到其子类。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method是创建型模式，使一个类的实例化延迟到其子类。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Factory有工厂的意思，简单来看，这个模式利用到了上一篇的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/dp_3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Template Method模式&lt;/a&gt;用来生成具体的实例，说得更清楚一点，工厂方法模式将创建对象的过程延迟到子类实现，其他的父类的步骤保持完整。&lt;/p&gt;
 &lt;h2 id=&#34;问题引入&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题引入
@@ -134,8 +133,7 @@
 &lt;li&gt;考虑设计中什么应该是可变的；&lt;/li&gt;
 &lt;li&gt;对变化的概念进行封装；&lt;/li&gt;
 &lt;li&gt;优先使用对象聚集而不是类继承&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;在上面的例子中，有两个基本要素——农场和动物，&lt;strong&gt;每一个类应该对自己的职责负责&lt;/strong&gt;，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;农场负责生产和饲养动物，不同种类的动物&lt;strong&gt;生产和饲养的方式&lt;/strong&gt;都不同；&lt;/li&gt;
@@ -298,8 +296,7 @@
         <description>&lt;img src="https://pic.imgdb.cn/item/608bef5dd1a9ae528f268767.png" alt="Featured image of post Template Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;设计模式第三弹，设计模式&lt;strong&gt;行为型模式&lt;/strong&gt;中的模板方法，也比较简单。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method是行为型模式，使得子类可以不改变算法的结构（步骤）即可重定义该算法的某些特定步骤。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method是行为型模式，使得子类可以不改变算法的结构（步骤）即可重定义该算法的某些特定步骤。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;模板方法将整个算法转换为一系列独立的步骤， 以便子类能对其进行扩展， 同时还可让超类中所定义的结构保持完整。可以设想我们上学时候临摹毛笔字，你可以使用墨汁沿着田字格中的汉字临摹，也可以使用红墨水临摹，无论用哪种颜色的墨水，最后完成的字的形状是一样的。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/608bf40bd1a9ae528f53b668.png&#34;
 	
@@ -553,8 +550,7 @@
         <description>&lt;img src="https://pic.imgdb.cn/item/608ac85bd1a9ae528fde126e.png" alt="Featured image of post Adapter模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;本篇是设计模式第二篇，适配器模式，比较好理解。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;适配器模式是一种&lt;strong&gt;结构型&lt;/strong&gt;设计模式， 它能使接口&lt;strong&gt;不兼容&lt;/strong&gt;的对象能够相互合作。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;适配器模式是一种&lt;strong&gt;结构型&lt;/strong&gt;设计模式， 它能使接口&lt;strong&gt;不兼容&lt;/strong&gt;的对象能够相互合作。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;如果你有出国的经验，那么在出国前肯定会在淘宝买一个电源的转接插头带在身上，在国外旅行时为手机或者PC充电。为什么需要这个东西？参考这篇&lt;a class=&#34;link&#34; href=&#34;https://www.skyscanner.net/news/international-travel-plug-adapter-guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;国际旅行电源适配器指南&lt;/a&gt;，从文章中可以看出，每个不同的国家和地区的电源插座的形状和电压都不同，比如中国家用交流电是220V，而印度是230V，从电压的角度出发，你也需要一个东西将230V的电源转换成为稳定的220V，才能给电脑供电。&lt;/p&gt;
 &lt;h2 id=&#34;问题引入&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题引入
@@ -766,8 +762,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;迭代器模式是一种行为设计模式， 提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象内部表示。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;迭代器模式是一种行为设计模式， 提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象内部表示。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;C++中比较典型类似与std的vector的前向迭代器&lt;code&gt;begin()&lt;/code&gt;和&lt;code&gt;end()&lt;/code&gt;，以及后向迭代器&lt;code&gt;rbegin()&lt;/code&gt;和&lt;code&gt;rend()&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;问题引入&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题引入
 &lt;/h2&gt;&lt;p&gt;可以设想元素聚合成集合的方式，最简单的方式是顺序存储的数组或者列表，但是也有例如树、图和其他复杂的数据结构。所以，如果要遍历集合中的元素，有下面的两个问题需要解决：&lt;/p&gt;

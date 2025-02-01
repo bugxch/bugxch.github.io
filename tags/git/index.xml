@@ -343,8 +343,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在添加文件之前，先介绍一个非常有用的命令&lt;code&gt;git status&lt;/code&gt;，它可以查看当前版本库中的所有文件状态，包括已跟踪或者未跟踪的文件。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;git status&lt;/code&gt;会将 workspace 和暂存区的文件比对，同时比对本地仓库有暂存区的文件。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;git status&lt;/code&gt;会将 workspace 和暂存区的文件比对，同时比对本地仓库有暂存区的文件。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;在当前的目录下，敲入该命令，输出如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -421,8 +420,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;显示当前的&lt;code&gt;readme.txt&lt;/code&gt;已经进入暂存区，该文件可以被 committed。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;**git add 的潜台词就是把目标文件快照放入暂存区域，也就是 add file into staged area，同时未曾跟踪过的文件标记为需要跟踪。**如果一次需要添加所有的文件，可以使用&lt;code&gt;git add .&lt;/code&gt;，其中的&lt;code&gt;.&lt;/code&gt;表示当前工作区中的所有文件。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;**git add 的潜台词就是把目标文件快照放入暂存区域，也就是 add file into staged area，同时未曾跟踪过的文件标记为需要跟踪。**如果一次需要添加所有的文件，可以使用&lt;code&gt;git add .&lt;/code&gt;，其中的&lt;code&gt;.&lt;/code&gt;表示当前工作区中的所有文件。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;我继续修改&lt;code&gt;readme.txt&lt;/code&gt;文件，添加一行&lt;code&gt;this is the 2nd line&lt;/code&gt;，之后再添加文件&lt;code&gt;test.cc&lt;/code&gt;，查看文件状态，显示如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

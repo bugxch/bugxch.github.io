@@ -185,14 +185,12 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;关键技术细节&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e9%94%ae%e6%8a%80%e6%9c%af%e7%bb%86%e8%8a%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关键技术细节
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky&lt;/em&gt;  &amp;ndash; &lt;strong&gt;Donald Knuth&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky&lt;/em&gt;  &amp;ndash; &lt;strong&gt;Donald Knuth&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;就像高德纳所说，二分法的思想简单且易于理解，但是二分法的细节却藏了很多坑，&lt;strong&gt;魔鬼就在细节中&lt;/strong&gt;。为了透彻理解二分法的实现，有必要对上面的代码的下面3个技术细节（标记为&lt;code&gt;detail&lt;/code&gt;注释的地方）进行深究。&lt;/p&gt;
 &lt;h4 id=&#34;循环的入口条件&#34;&gt;&lt;a href=&#34;#%e5%be%aa%e7%8e%af%e7%9a%84%e5%85%a5%e5%8f%a3%e6%9d%a1%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;循环的入口条件
 &lt;/h4&gt;&lt;p&gt;代码16行，为什么循环的入口条件是&lt;code&gt;left &amp;lt;= right&lt;/code&gt;？&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;无论何时$[left, right]$表示&lt;strong&gt;可能包含目标值&lt;/strong&gt;的搜索区间&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;无论何时$[left, right]$表示&lt;strong&gt;可能包含目标值&lt;/strong&gt;的搜索区间&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;注意这是个&lt;strong&gt;左闭右闭&lt;/strong&gt;的闭区间，单纯从数学角度出发，这个区间&lt;strong&gt;最短的长度就是1&lt;/strong&gt;，也就是$left = right$的时候。如果$left &amp;gt;  right$了，那$[left, right]$就是&lt;strong&gt;空集&lt;/strong&gt;，这个集合&lt;strong&gt;肯定不包含目标值&lt;/strong&gt;，也就&lt;strong&gt;没有继续搜索的必要&lt;/strong&gt;了，所以循环退出。&lt;/p&gt;
 &lt;h4 id=&#34;中点计算&#34;&gt;&lt;a href=&#34;#%e4%b8%ad%e7%82%b9%e8%ae%a1%e7%ae%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;中点计算
 &lt;/h4&gt;&lt;p&gt;为什么是&lt;code&gt;mid = left + ((right - left) &amp;gt;&amp;gt; 1)&lt;/code&gt;，也就是数学的$floor((left + right) / 2)$?
@@ -221,8 +219,7 @@ $$
 &gt;&lt;/p&gt;
 &lt;p&gt;，第1个公式$mid = \left \lfloor\frac{left + right}{2}  \right \rfloor = \left \lfloor\frac{left + left + 1}{2}  \right \rfloor = left$，而第2个公式$mid = \left \lceil\frac{left + right}{2}  \right \rceil = \left \lceil\frac{left + left + 1}{2}  \right \rceil = left + \lceil 0.5\rceil = left + 1 = right$，请记住这个重要的结论。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;当搜索区间的&lt;strong&gt;左右两端点挨着&lt;/strong&gt;的时候（即$right = left + 1)$，floor函数计算的中点mid是left，ceil函数计算的中点mid是right&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;当搜索区间的&lt;strong&gt;左右两端点挨着&lt;/strong&gt;的时候（即$right = left + 1)$，floor函数计算的中点mid是left，ceil函数计算的中点mid是right&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;请记住这个&lt;strong&gt;特殊的区间情况&lt;/strong&gt;，至于为何基础模板选择floor而没有选择ceil，在后面的变化类型一节很关键。&lt;/p&gt;
 &lt;h4 id=&#34;搜索区间调整&#34;&gt;&lt;a href=&#34;#%e6%90%9c%e7%b4%a2%e5%8c%ba%e9%97%b4%e8%b0%83%e6%95%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;搜索区间调整
 &lt;/h4&gt;&lt;p&gt;在每次判断与target的差距之后，搜索区间为什么是这么调整的？
@@ -231,8 +228,7 @@ $$
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;排除&lt;/strong&gt;target不可能存在的区间，&lt;strong&gt;保留&lt;/strong&gt;可能存在的区间&lt;/li&gt;
 &lt;li&gt;保证&lt;strong&gt;任意判断分支为true时最后都可以跳出循环，尤其当$right = left + 1$时&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;先看第1条原则，基础模板中，根据mid的值与目标值的差距，搜索区间$[left, right]$的调整有3个判断分支：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;如果和目标值相同$A[mid] = A[target]$，直接&lt;strong&gt;跳出循环&lt;/strong&gt;，返回mid(代码第21行)；&lt;/li&gt;
@@ -268,8 +264,7 @@ $$
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;排除&lt;/strong&gt;target不可能存在的区间，&lt;strong&gt;保留&lt;/strong&gt;可能存在的区间&lt;/li&gt;
 &lt;li&gt;保证&lt;strong&gt;任意判断分支为true时最后都可以跳出循环，尤其当$right = left + 1$时&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;深入探究&#34;&gt;&lt;a href=&#34;#%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;深入探究
 &lt;/h3&gt;&lt;p&gt;上一小节讨论了3个关键技术细节，循环入口条件、中点计算和搜索区间调整，下面可以看到在满足上面的原则基础上，它们都可以变化。&lt;/p&gt;
 &lt;h4 id=&#34;分支合并&#34;&gt;&lt;a href=&#34;#%e5%88%86%e6%94%af%e5%90%88%e5%b9%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;分支合并
@@ -461,8 +456,7 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;再考察一下上面的搜索区间左右端点相邻的情况，下一次搜索的$mid = 5$，无论走哪一个判断分支，最终$left = right$，跳出循环，所以对于第2条原则需要补充&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可以通过调整中点的计算方式，满足原则2，从而避免死循环&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;可以通过调整中点的计算方式，满足原则2，从而避免死循环&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h4 id=&#34;判断条件变更&#34;&gt;&lt;a href=&#34;#%e5%88%a4%e6%96%ad%e6%9d%a1%e4%bb%b6%e5%8f%98%e6%9b%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;判断条件变更
 &lt;/h4&gt;&lt;p&gt;需要注意，其他2个的模板的循环条件为$left &amp;lt; right$，当$left \ge right$时退出，如果$left = right$，那么搜索的区间只剩下一个元素，跳出循环之后别忘了要检查这个元素是否满足条件。如果最后的这个元素依然不是target，那么所有的元素也不是了，所以在最后我们加了一个判断，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

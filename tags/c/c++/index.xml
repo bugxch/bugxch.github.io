@@ -41,8 +41,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;那么&lt;code&gt;b = 126.35&lt;/code&gt;或者&lt;code&gt;b = 126.38&lt;/code&gt;或者&lt;code&gt;b = 126.3876&lt;/code&gt;都是成立的，因为它们都会在浮点数的表示体系下舍入到126.4。数学上不相等，但是在计算机里面是相等的，这就是数学意义和计算机表示意义上的背离，&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;浮点数的&lt;code&gt;==&lt;/code&gt;和数学意义上严格的相等是&lt;strong&gt;不等价&lt;/strong&gt;的。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;浮点数的&lt;code&gt;==&lt;/code&gt;和数学意义上严格的相等是&lt;strong&gt;不等价&lt;/strong&gt;的。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;所以为了追求相等的精确性，可以利用$|a-b|&amp;lt;\epsilon$的方式，将$b$限定在以$a$为中心的很短的绝对值区间上，$\epsilon$越小，二者的相等程度就越高。所以可以使用下面的代码做一个等价的处理&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -66,8 +65,7 @@
 &lt;/h4&gt;&lt;p&gt;A：浮点数在计算中的舍入引发的。在&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/26912767/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;深入理解计算机系统&lt;/a&gt;第2章浮点运算的章节，作者提到过&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;使用单精度浮点，3.14 + 1e10 - 1e10 = 0.0&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;使用单精度浮点，3.14 + 1e10 - 1e10 = 0.0&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;这就是一个大数吃小数的问题，严格来讲，在C语言中，当一个比较大的浮点数与一个相对小很多的浮点数相加时，结果是那个比较大的浮点数，就好像小数被“吃掉”了一样。上面的例子中，3.14 + 1e10 = 1e10，也就是说从计算机的角度来看，3.14 + 1e10的二进制表示与1e10的二进制浮点表示没有区别。这是怎么回事？&lt;/p&gt;
 &lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/csapp_ch2/#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;信息的表示和处理&lt;/a&gt;中的内容，模拟它们的二进制加法就能得到答案。&lt;/p&gt;
@@ -89,8 +87,7 @@
         <description>&lt;img src="https://pic.imgdb.cn/item/627703420947543129b87e9a.jpg" alt="Featured image of post 信息的表示和处理" /&gt;&lt;p&gt;疫情居家办公，利用时间好好系统学习下CSAPP，年龄大了，好记性不如烂笔头，写写笔记。&lt;/p&gt;
 &lt;h2 id=&#34;计算机的字长&#34;&gt;&lt;a href=&#34;#%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%9a%84%e5%ad%97%e9%95%bf&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;计算机的字长
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;每一台计算机都有字长，指明指针数据的标称大小，字长决定了的最重要的系统参数是虚拟地址空间的最大大小。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;每一台计算机都有字长，指明指针数据的标称大小，字长决定了的最重要的系统参数是虚拟地址空间的最大大小。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;字长决定了指针的存储大小，32位的字长的指针存储空间是4字节，64位是8个字节；&lt;/li&gt;
 &lt;li&gt;字长决定了虚拟地址的最大大小，所以32位的寻址空间最大是$2^{32}$Byte = 4GB，64位的是$2^{64}$Byte = 16EB。&lt;/li&gt;
@@ -333,8 +330,7 @@ $$&lt;/p&gt;
 &lt;li&gt;$TMin_w = -TMax_w - 1$。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;假如 &lt;code&gt;0xFA&lt;/code&gt;是某个2字节数的补码表示，那么它实际表示的数字是十进制的多少？&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;假如 &lt;code&gt;0xFA&lt;/code&gt;是某个2字节数的补码表示，那么它实际表示的数字是十进制的多少？&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;这个问题的解答可以通过补码的定义（参考上文）逐位计算，&lt;/p&gt;
 &lt;p&gt;$$
 B2T_{w}(\vec{x}) \doteq-x_{w-1} 2^{w-1}+\sum_{i=0}^{w-2} x_{i} 2^{i} = -x_{w-1} 2^{w-1}+A
@@ -433,8 +429,7 @@ $$&lt;/p&gt;
 &lt;li&gt;对于有符号整数，$(x + (1\ll k) - 1)\gg k = \lceil x/2^k\rceil$，这里实际上是一个数学的小技巧，$(m+n-1)/n = \lceil m/n\rceil$。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;习题2.44是掌握整数运算的试金石。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;习题2.44是掌握整数运算的试金石。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;浮点数表示&#34;&gt;&lt;a href=&#34;#%e6%b5%ae%e7%82%b9%e6%95%b0%e8%a1%a8%e7%a4%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;浮点数表示
 &lt;/h2&gt;&lt;h3 id=&#34;ieee-754浮点数的表示法&#34;&gt;&lt;a href=&#34;#ieee-754%e6%b5%ae%e7%82%b9%e6%95%b0%e7%9a%84%e8%a1%a8%e7%a4%ba%e6%b3%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;IEEE 754浮点数的表示法
 &lt;/h3&gt;&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/floatincomputer/#&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -442,8 +437,7 @@ $$&lt;/p&gt;
 &lt;h3 id=&#34;舍入rounding&#34;&gt;&lt;a href=&#34;#%e8%88%8d%e5%85%a5rounding&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;舍入（Rounding）
 &lt;/h3&gt;&lt;p&gt;上面的IEEE的浮点数的表示方法解决了二进制bit到浮点数的映射问题，但是如果给定一个任意精度的实数$x$，如果使用给定位宽的浮点数表示这个数呢？这里就要引入舍入的概念。&lt;strong&gt;舍入解决了将数学上的任意精度的实数集合到计算机表示的有限元素的浮点数集合的映射问题&lt;/strong&gt;。从之前的浮点数的表示可以看出，计算机表示的浮点数不可能有无限的精度，将半精度浮点数在数轴上标示出来，它在数轴上的分布是离散的，任意两个离散标示值之间的实数是无穷多的，这些实数如果要用半精度表示就只能通过某种方法&lt;strong&gt;舍入&lt;/strong&gt;到标示的某个值上。以下面的问题为例，&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;半精度浮点数有下面的点，[0.01118, 0.011185, 0.01119]，那么0.011183该如何表示成半精度浮点数结果是什么呢？&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;半精度浮点数有下面的点，[0.01118, 0.011185, 0.01119]，那么0.011183该如何表示成半精度浮点数结果是什么呢？&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h4 id=&#34;十进制的舍入&#34;&gt;&lt;a href=&#34;#%e5%8d%81%e8%bf%9b%e5%88%b6%e7%9a%84%e8%88%8d%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;十进制的舍入
 &lt;/h4&gt;&lt;p&gt;直觉告诉我，这个数要么就是0.01118，要么就是0.011185，因为这个数字介于二者之间，如果按照误差尽量小的原则，那么可以计算一下与两个备选数字的差的绝对值，然后舍入到绝对值最小的那个上。这个就是C语言当前使用的舍入方法，称为最接近值的舍入（round to nearest)。这里面还有一个特殊的地方，以对于十进制的数字为例，舍入到最近的整数，如果这个数是两个整数的中间的值，也就是X.5的形式，那么舍入到最近的偶数。比如0.5是0和1的中间值，它举例两个数的举例是一样的，舍入到0，3.5是3和4的中间值，舍入到4。这样做可以最小化一组数的舍入误差的均值。因此，这种舍入方法又称为round to even。除此之外，还有如下的舍入方法&lt;/p&gt;
 &lt;ol&gt;
@@ -678,14 +672,12 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;关键技术细节&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e9%94%ae%e6%8a%80%e6%9c%af%e7%bb%86%e8%8a%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关键技术细节
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky&lt;/em&gt;  &amp;ndash; &lt;strong&gt;Donald Knuth&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky&lt;/em&gt;  &amp;ndash; &lt;strong&gt;Donald Knuth&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;就像高德纳所说，二分法的思想简单且易于理解，但是二分法的细节却藏了很多坑，&lt;strong&gt;魔鬼就在细节中&lt;/strong&gt;。为了透彻理解二分法的实现，有必要对上面的代码的下面3个技术细节（标记为&lt;code&gt;detail&lt;/code&gt;注释的地方）进行深究。&lt;/p&gt;
 &lt;h4 id=&#34;循环的入口条件&#34;&gt;&lt;a href=&#34;#%e5%be%aa%e7%8e%af%e7%9a%84%e5%85%a5%e5%8f%a3%e6%9d%a1%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;循环的入口条件
 &lt;/h4&gt;&lt;p&gt;代码16行，为什么循环的入口条件是&lt;code&gt;left &amp;lt;= right&lt;/code&gt;？&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;无论何时$[left, right]$表示&lt;strong&gt;可能包含目标值&lt;/strong&gt;的搜索区间&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;无论何时$[left, right]$表示&lt;strong&gt;可能包含目标值&lt;/strong&gt;的搜索区间&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;注意这是个&lt;strong&gt;左闭右闭&lt;/strong&gt;的闭区间，单纯从数学角度出发，这个区间&lt;strong&gt;最短的长度就是1&lt;/strong&gt;，也就是$left = right$的时候。如果$left &amp;gt;  right$了，那$[left, right]$就是&lt;strong&gt;空集&lt;/strong&gt;，这个集合&lt;strong&gt;肯定不包含目标值&lt;/strong&gt;，也就&lt;strong&gt;没有继续搜索的必要&lt;/strong&gt;了，所以循环退出。&lt;/p&gt;
 &lt;h4 id=&#34;中点计算&#34;&gt;&lt;a href=&#34;#%e4%b8%ad%e7%82%b9%e8%ae%a1%e7%ae%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;中点计算
 &lt;/h4&gt;&lt;p&gt;为什么是&lt;code&gt;mid = left + ((right - left) &amp;gt;&amp;gt; 1)&lt;/code&gt;，也就是数学的$floor((left + right) / 2)$?
@@ -714,8 +706,7 @@ $$
 &gt;&lt;/p&gt;
 &lt;p&gt;，第1个公式$mid = \left \lfloor\frac{left + right}{2}  \right \rfloor = \left \lfloor\frac{left + left + 1}{2}  \right \rfloor = left$，而第2个公式$mid = \left \lceil\frac{left + right}{2}  \right \rceil = \left \lceil\frac{left + left + 1}{2}  \right \rceil = left + \lceil 0.5\rceil = left + 1 = right$，请记住这个重要的结论。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;当搜索区间的&lt;strong&gt;左右两端点挨着&lt;/strong&gt;的时候（即$right = left + 1)$，floor函数计算的中点mid是left，ceil函数计算的中点mid是right&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;当搜索区间的&lt;strong&gt;左右两端点挨着&lt;/strong&gt;的时候（即$right = left + 1)$，floor函数计算的中点mid是left，ceil函数计算的中点mid是right&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;请记住这个&lt;strong&gt;特殊的区间情况&lt;/strong&gt;，至于为何基础模板选择floor而没有选择ceil，在后面的变化类型一节很关键。&lt;/p&gt;
 &lt;h4 id=&#34;搜索区间调整&#34;&gt;&lt;a href=&#34;#%e6%90%9c%e7%b4%a2%e5%8c%ba%e9%97%b4%e8%b0%83%e6%95%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;搜索区间调整
 &lt;/h4&gt;&lt;p&gt;在每次判断与target的差距之后，搜索区间为什么是这么调整的？
@@ -724,8 +715,7 @@ $$
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;排除&lt;/strong&gt;target不可能存在的区间，&lt;strong&gt;保留&lt;/strong&gt;可能存在的区间&lt;/li&gt;
 &lt;li&gt;保证&lt;strong&gt;任意判断分支为true时最后都可以跳出循环，尤其当$right = left + 1$时&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;先看第1条原则，基础模板中，根据mid的值与目标值的差距，搜索区间$[left, right]$的调整有3个判断分支：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;如果和目标值相同$A[mid] = A[target]$，直接&lt;strong&gt;跳出循环&lt;/strong&gt;，返回mid(代码第21行)；&lt;/li&gt;
@@ -761,8 +751,7 @@ $$
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;排除&lt;/strong&gt;target不可能存在的区间，&lt;strong&gt;保留&lt;/strong&gt;可能存在的区间&lt;/li&gt;
 &lt;li&gt;保证&lt;strong&gt;任意判断分支为true时最后都可以跳出循环，尤其当$right = left + 1$时&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;深入探究&#34;&gt;&lt;a href=&#34;#%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;深入探究
 &lt;/h3&gt;&lt;p&gt;上一小节讨论了3个关键技术细节，循环入口条件、中点计算和搜索区间调整，下面可以看到在满足上面的原则基础上，它们都可以变化。&lt;/p&gt;
 &lt;h4 id=&#34;分支合并&#34;&gt;&lt;a href=&#34;#%e5%88%86%e6%94%af%e5%90%88%e5%b9%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;分支合并
@@ -954,8 +943,7 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;再考察一下上面的搜索区间左右端点相邻的情况，下一次搜索的$mid = 5$，无论走哪一个判断分支，最终$left = right$，跳出循环，所以对于第2条原则需要补充&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可以通过调整中点的计算方式，满足原则2，从而避免死循环&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;可以通过调整中点的计算方式，满足原则2，从而避免死循环&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h4 id=&#34;判断条件变更&#34;&gt;&lt;a href=&#34;#%e5%88%a4%e6%96%ad%e6%9d%a1%e4%bb%b6%e5%8f%98%e6%9b%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;判断条件变更
 &lt;/h4&gt;&lt;p&gt;需要注意，其他2个的模板的循环条件为$left &amp;lt; right$，当$left \ge right$时退出，如果$left = right$，那么搜索的区间只剩下一个元素，跳出循环之后别忘了要检查这个元素是否满足条件。如果最后的这个元素依然不是target，那么所有的元素也不是了，所以在最后我们加了一个判断，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1376,8 +1364,7 @@ $$
         <description>&lt;img src="https://pic.imgdb.cn/item/608eae16d1a9ae528f502e1a.png" alt="Featured image of post Factory Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;继续之前的设计模式第四弹，这次是大名鼎鼎的工厂方法模式。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method是创建型模式，使一个类的实例化延迟到其子类。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method是创建型模式，使一个类的实例化延迟到其子类。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Factory有工厂的意思，简单来看，这个模式利用到了上一篇的&lt;a class=&#34;link&#34; href=&#34;https://bugxch.github.io/dp_3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Template Method模式&lt;/a&gt;用来生成具体的实例，说得更清楚一点，工厂方法模式将创建对象的过程延迟到子类实现，其他的父类的步骤保持完整。&lt;/p&gt;
 &lt;h2 id=&#34;问题引入&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题引入
@@ -1494,8 +1481,7 @@ $$
 &lt;li&gt;考虑设计中什么应该是可变的；&lt;/li&gt;
 &lt;li&gt;对变化的概念进行封装；&lt;/li&gt;
 &lt;li&gt;优先使用对象聚集而不是类继承&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;在上面的例子中，有两个基本要素——农场和动物，&lt;strong&gt;每一个类应该对自己的职责负责&lt;/strong&gt;，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;农场负责生产和饲养动物，不同种类的动物&lt;strong&gt;生产和饲养的方式&lt;/strong&gt;都不同；&lt;/li&gt;
@@ -1658,8 +1644,7 @@ $$
         <description>&lt;img src="https://pic.imgdb.cn/item/608bef5dd1a9ae528f268767.png" alt="Featured image of post Template Method模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;设计模式第三弹，设计模式&lt;strong&gt;行为型模式&lt;/strong&gt;中的模板方法，也比较简单。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method是行为型模式，使得子类可以不改变算法的结构（步骤）即可重定义该算法的某些特定步骤。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method是行为型模式，使得子类可以不改变算法的结构（步骤）即可重定义该算法的某些特定步骤。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;模板方法将整个算法转换为一系列独立的步骤， 以便子类能对其进行扩展， 同时还可让超类中所定义的结构保持完整。可以设想我们上学时候临摹毛笔字，你可以使用墨汁沿着田字格中的汉字临摹，也可以使用红墨水临摹，无论用哪种颜色的墨水，最后完成的字的形状是一样的。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/608bf40bd1a9ae528f53b668.png&#34;
 	
@@ -1913,8 +1898,7 @@ $$
         <description>&lt;img src="https://pic.imgdb.cn/item/608ac85bd1a9ae528fde126e.png" alt="Featured image of post Adapter模式精解（C&#43;&#43;版本）" /&gt;&lt;p&gt;本篇是设计模式第二篇，适配器模式，比较好理解。&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;适配器模式是一种&lt;strong&gt;结构型&lt;/strong&gt;设计模式， 它能使接口&lt;strong&gt;不兼容&lt;/strong&gt;的对象能够相互合作。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;适配器模式是一种&lt;strong&gt;结构型&lt;/strong&gt;设计模式， 它能使接口&lt;strong&gt;不兼容&lt;/strong&gt;的对象能够相互合作。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;如果你有出国的经验，那么在出国前肯定会在淘宝买一个电源的转接插头带在身上，在国外旅行时为手机或者PC充电。为什么需要这个东西？参考这篇&lt;a class=&#34;link&#34; href=&#34;https://www.skyscanner.net/news/international-travel-plug-adapter-guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;国际旅行电源适配器指南&lt;/a&gt;，从文章中可以看出，每个不同的国家和地区的电源插座的形状和电压都不同，比如中国家用交流电是220V，而印度是230V，从电压的角度出发，你也需要一个东西将230V的电源转换成为稳定的220V，才能给电脑供电。&lt;/p&gt;
 &lt;h2 id=&#34;问题引入&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题引入
@@ -2126,8 +2110,7 @@ $$
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;使用情景&#34;&gt;&lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%83%85%e6%99%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;使用情景
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;迭代器模式是一种行为设计模式， 提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象内部表示。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;迭代器模式是一种行为设计模式， 提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象内部表示。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;C++中比较典型类似与std的vector的前向迭代器&lt;code&gt;begin()&lt;/code&gt;和&lt;code&gt;end()&lt;/code&gt;，以及后向迭代器&lt;code&gt;rbegin()&lt;/code&gt;和&lt;code&gt;rend()&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;问题引入&#34;&gt;&lt;a href=&#34;#%e9%97%ae%e9%a2%98%e5%bc%95%e5%85%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;问题引入
 &lt;/h2&gt;&lt;p&gt;可以设想元素聚合成集合的方式，最简单的方式是顺序存储的数组或者列表，但是也有例如树、图和其他复杂的数据结构。所以，如果要遍历集合中的元素，有下面的两个问题需要解决：&lt;/p&gt;
@@ -2897,8 +2880,7 @@ $$
         <description>&lt;img src="https://pic.imgdb.cn/item/600a17e53ffa7d37b3da9d49.jpg" alt="Featured image of post [转载]表驱动法代码实践" /&gt;&lt;p&gt;这是一篇转载，点击查看&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/clover-toeic/p/3730362.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;原文链接&lt;/a&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;数据压倒一切。如果选择了正确的数据结构并把一切组织的井井有条，正确的算法就不言自明。编程的核心是数据结构，而不是算法. &amp;ndash; Rob Pike&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;数据压倒一切。如果选择了正确的数据结构并把一切组织的井井有条，正确的算法就不言自明。编程的核心是数据结构，而不是算法. &amp;ndash; Rob Pike&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;本文基于这样的认识：数据是易变的，逻辑是稳定的。本文例举的编程实现多为代码片段，但不影响描述的完整性。本文例举的编程虽然基于C语言，但其编程思想也适用于其他语言。此外，本文不涉及语言相关的运行效率讨论。&lt;/p&gt;
 &lt;h2 id=&#34;概念提出&#34;&gt;&lt;a href=&#34;#%e6%a6%82%e5%bf%b5%e6%8f%90%e5%87%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;概念提出
 &lt;/h2&gt;&lt;p&gt;所谓表驱动法(Table-Driven Approach)简而言之就是用查表的方法获取数据。此处的“表”通常为数组，但可视为数据库的一种体现。根据字典中的部首检字表查找读音未知的汉字就是典型的表驱动法，即以每个字的字形为依据，计算出一个索引值，并映射到对应的页数。相比一页一页地顺序翻字典查字，部首检字法效率极高。&lt;/p&gt;
@@ -4415,12 +4397,10 @@ $$
 &lt;h2 id=&#34;编程思想&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e7%a8%8b%e6%80%9d%e6%83%b3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编程思想
 &lt;/h2&gt;&lt;p&gt;表驱动法属于数据驱动编程的一种，其核心思想在《Unix编程艺术》和《代码大全2》中均有阐述。两者均认为人类阅读复杂数据结构远比复杂的控制流程容易，即&lt;strong&gt;相对于程序逻辑，人类更擅长于处理数据&lt;/strong&gt;。本节将由Unix设计原则中的“分离原则”和“表示原则”展开。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;分离原则：策略同机制分离，接口同引擎分离&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;分离原则：策略同机制分离，接口同引擎分离&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;机制即提供的功能；策略即如何使用功能。策略的变化要远远快于机制的变化。将两者分离，可以使机制相对保持稳定，而同时支持策略的变化。代码大全中提到“隔离变化”的概念，以及设计模式中提到的将易变化的部分和不易变化的部分分离也是这个思路。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;表示原则：把知识叠入数据以求逻辑质朴而健壮&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;表示原则：把知识叠入数据以求逻辑质朴而健壮&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;即使最简单的程序逻辑让人类来验证也很困难，但就算是很复杂的数据，对人类来说，还是相对容易推导和建模的。数据比编程逻辑更容易驾驭。在复杂数据和复杂代码中选择，宁可选择前者。更进一步，在设计中，应该主动将代码的复杂度转移到数据中去(参考“版本控制”)。&lt;/p&gt;
 &lt;p&gt;在“消息处理”示例中，每个消息处理的逻辑不变，但消息可能是变化的。将容易变化的消息和不容易变化的查找逻辑分离，即“隔离变化”。此外，该例也体现消息内部的处理逻辑(机制)和不同的消息处理(策略)分离。&lt;/p&gt;
 &lt;p&gt;数据驱动编程可以应用于：&lt;/p&gt;
