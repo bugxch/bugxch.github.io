@@ -384,11 +384,11 @@
         </li>
         <li><a href="#第15章-智能指针">第15章 智能指针</a>
           <ol>
-            <li><a href="#使用boxt在堆上分配数据">使用Box<T>在堆上分配数据</a></li>
+            <li><a href="#使用box在堆上分配数据">使用Box<T>在堆上分配数据</a></li>
             <li><a href="#通过deref-trait将智能指针视作常规引用">通过Deref trait将智能指针视作常规引用</a></li>
             <li><a href="#借助drop-trait在清理时运行代码">借助Drop trait在清理时运行代码</a></li>
-            <li><a href="#基于引用计数的智能指针rct">基于引用计数的智能指针Rc<T></a></li>
-            <li><a href="#refcellt和内部可变性模式">RefCell<T>和内部可变性模式</a></li>
+            <li><a href="#基于引用计数的智能指针rc">基于引用计数的智能指针Rc<T></a></li>
+            <li><a href="#refcell和内部可变性模式">RefCell<T>和内部可变性模式</a></li>
             <li><a href="#循环引用会造成内存泄漏">循环引用会造成内存泄漏</a></li>
             <li><a href="#总结-14">总结</a></li>
           </ol>
@@ -774,11 +774,11 @@
 </h3><h3 id="使用自定义命令扩展cargo的功能"><a href="#%e4%bd%bf%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e5%91%bd%e4%bb%a4%e6%89%a9%e5%b1%95cargo%e7%9a%84%e5%8a%9f%e8%83%bd" class="header-anchor"></a>使用自定义命令扩展Cargo的功能
 </h3><h3 id="总结-13"><a href="#%e6%80%bb%e7%bb%93-13" class="header-anchor"></a>总结
 </h3><h2 id="第15章-智能指针"><a href="#%e7%ac%ac15%e7%ab%a0-%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88" class="header-anchor"></a>第15章 智能指针
-</h2><h3 id="使用boxt在堆上分配数据"><a href="#%e4%bd%bf%e7%94%a8boxt%e5%9c%a8%e5%a0%86%e4%b8%8a%e5%88%86%e9%85%8d%e6%95%b0%e6%8d%ae" class="header-anchor"></a>使用Box<T>在堆上分配数据
+</h2><h3 id="使用box在堆上分配数据"><a href="#%e4%bd%bf%e7%94%a8box%e5%9c%a8%e5%a0%86%e4%b8%8a%e5%88%86%e9%85%8d%e6%95%b0%e6%8d%ae" class="header-anchor"></a>使用Box<T>在堆上分配数据
 </h3><h3 id="通过deref-trait将智能指针视作常规引用"><a href="#%e9%80%9a%e8%bf%87deref-trait%e5%b0%86%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88%e8%a7%86%e4%bd%9c%e5%b8%b8%e8%a7%84%e5%bc%95%e7%94%a8" class="header-anchor"></a>通过Deref trait将智能指针视作常规引用
 </h3><h3 id="借助drop-trait在清理时运行代码"><a href="#%e5%80%9f%e5%8a%a9drop-trait%e5%9c%a8%e6%b8%85%e7%90%86%e6%97%b6%e8%bf%90%e8%a1%8c%e4%bb%a3%e7%a0%81" class="header-anchor"></a>借助Drop trait在清理时运行代码
-</h3><h3 id="基于引用计数的智能指针rct"><a href="#%e5%9f%ba%e4%ba%8e%e5%bc%95%e7%94%a8%e8%ae%a1%e6%95%b0%e7%9a%84%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88rct" class="header-anchor"></a>基于引用计数的智能指针Rc<T>
-</h3><h3 id="refcellt和内部可变性模式"><a href="#refcellt%e5%92%8c%e5%86%85%e9%83%a8%e5%8f%af%e5%8f%98%e6%80%a7%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>RefCell<T>和内部可变性模式
+</h3><h3 id="基于引用计数的智能指针rc"><a href="#%e5%9f%ba%e4%ba%8e%e5%bc%95%e7%94%a8%e8%ae%a1%e6%95%b0%e7%9a%84%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88rc" class="header-anchor"></a>基于引用计数的智能指针Rc<T>
+</h3><h3 id="refcell和内部可变性模式"><a href="#refcell%e5%92%8c%e5%86%85%e9%83%a8%e5%8f%af%e5%8f%98%e6%80%a7%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>RefCell<T>和内部可变性模式
 </h3><h3 id="循环引用会造成内存泄漏"><a href="#%e5%be%aa%e7%8e%af%e5%bc%95%e7%94%a8%e4%bc%9a%e9%80%a0%e6%88%90%e5%86%85%e5%ad%98%e6%b3%84%e6%bc%8f" class="header-anchor"></a>循环引用会造成内存泄漏
 </h3><h3 id="总结-14"><a href="#%e6%80%bb%e7%bb%93-14" class="header-anchor"></a>总结
 </h3><h2 id="第16章-无畏并发"><a href="#%e7%ac%ac16%e7%ab%a0-%e6%97%a0%e7%95%8f%e5%b9%b6%e5%8f%91" class="header-anchor"></a>第16章 无畏并发
