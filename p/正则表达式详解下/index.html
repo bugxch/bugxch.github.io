@@ -556,29 +556,124 @@
   </tbody>
 </table></div>
 <p><code>group()</code>在上篇中讲过，它在字符捕获时候非常有用，字符的分组从 0 开始，其中第 0 个代表所有匹配的内容，1 代表匹配的第一组，以此类推。比如下面的代码</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt;&gt;&gt; p = re.compile(&#39;(a(b)c)d&#39;)
-</span></span><span class="line"><span class="cl">&gt;&gt;&gt; m = p.match(&#39;abcd&#39;)
-</span></span><span class="line"><span class="cl">&gt;&gt;&gt; m.group(0)
-</span></span><span class="line"><span class="cl">&#39;abcd&#39;
-</span></span><span class="line"><span class="cl">&gt;&gt;&gt; m.group(1)
-</span></span><span class="line"><span class="cl">&#39;abc&#39;
-</span></span><span class="line"><span class="cl">&gt;&gt;&gt; m.group(2)
-</span></span><span class="line"><span class="cl">&#39;b&#39;
-</span></span></code></pre></td></tr></table>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 248 137"
+      >
+      <g transform='translate(8,16)'>
+<polygon points='8.000000,0.000000 -4.000000,-5.600000 -4.000000,5.600000' fill='currentColor' transform='rotate(0.000000, 0.000000, 0.000000)'></polygon>
+<polygon points='8.000000,16.000000 -4.000000,10.400000 -4.000000,21.600000' fill='currentColor' transform='rotate(0.000000, 0.000000, 16.000000)'></polygon>
+<polygon points='8.000000,32.000000 -4.000000,26.400000 -4.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 0.000000, 32.000000)'></polygon>
+<polygon points='8.000000,64.000000 -4.000000,58.400002 -4.000000,69.599998' fill='currentColor' transform='rotate(0.000000, 0.000000, 64.000000)'></polygon>
+<polygon points='8.000000,96.000000 -4.000000,90.400002 -4.000000,101.599998' fill='currentColor' transform='rotate(0.000000, 0.000000, 96.000000)'></polygon>
+<polygon points='16.000000,0.000000 4.000000,-5.600000 4.000000,5.600000' fill='currentColor' transform='rotate(0.000000, 8.000000, 0.000000)'></polygon>
+<polygon points='16.000000,16.000000 4.000000,10.400000 4.000000,21.600000' fill='currentColor' transform='rotate(0.000000, 8.000000, 16.000000)'></polygon>
+<polygon points='16.000000,32.000000 4.000000,26.400000 4.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 8.000000, 32.000000)'></polygon>
+<polygon points='16.000000,64.000000 4.000000,58.400002 4.000000,69.599998' fill='currentColor' transform='rotate(0.000000, 8.000000, 64.000000)'></polygon>
+<polygon points='16.000000,96.000000 4.000000,90.400002 4.000000,101.599998' fill='currentColor' transform='rotate(0.000000, 8.000000, 96.000000)'></polygon>
+<polygon points='24.000000,0.000000 12.000000,-5.600000 12.000000,5.600000' fill='currentColor' transform='rotate(0.000000, 16.000000, 0.000000)'></polygon>
+<polygon points='24.000000,16.000000 12.000000,10.400000 12.000000,21.600000' fill='currentColor' transform='rotate(0.000000, 16.000000, 16.000000)'></polygon>
+<polygon points='24.000000,32.000000 12.000000,26.400000 12.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 16.000000, 32.000000)'></polygon>
+<polygon points='24.000000,64.000000 12.000000,58.400002 12.000000,69.599998' fill='currentColor' transform='rotate(0.000000, 16.000000, 64.000000)'></polygon>
+<polygon points='24.000000,96.000000 12.000000,90.400002 12.000000,101.599998' fill='currentColor' transform='rotate(0.000000, 16.000000, 96.000000)'></polygon>
+<text text-anchor='middle' x='0' y='52' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='0' y='84' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='0' y='116' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='8' y='52' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='8' y='84' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='8' y='116' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='16' y='52' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='16' y='84' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='16' y='116' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='24' y='52' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='24' y='84' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='32' y='20' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='32' y='36' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='32' y='52' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='32' y='68' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='32' y='84' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='32' y='100' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='40' y='36' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='40' y='52' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='40' y='68' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='40' y='100' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>=</text>
+<text text-anchor='middle' x='48' y='20' fill='currentColor' style='font-size:1em'>=</text>
+<text text-anchor='middle' x='48' y='36' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='48' y='68' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='48' y='100' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='56' y='36' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='56' y='68' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='56' y='100' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='64' y='20' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='64' y='68' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='64' y='100' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='72' y='20' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='72' y='36' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='72' y='68' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='72' y='100' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='80' y='20' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='80' y='36' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='80' y='68' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='80' y='100' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='88' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='88' y='36' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='88' y='68' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='88' y='100' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='96' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='96' y='36' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='96' y='68' fill='currentColor' style='font-size:1em'>1</text>
+<text text-anchor='middle' x='96' y='100' fill='currentColor' style='font-size:1em'>2</text>
+<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='104' y='20' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='104' y='36' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='104' y='68' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='104' y='100' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='112' y='20' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='120' y='20' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='128' y='20' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='136' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='144' y='20' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='152' y='20' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='160' y='20' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='168' y='20' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='176' y='20' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='184' y='4' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='192' y='4' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='200' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='208' y='4' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='216' y='4' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='224' y='4' fill='currentColor' style='font-size:1em'>'</text>
+<text text-anchor='middle' x='232' y='4' fill='currentColor' style='font-size:1em'>)</text>
+</g>
+
+    </svg>
+  
 </div>
-</div><p>可以将<code>group(0)</code>理解成没有分组符号匹配的所有字符，而之后的编号代表分组依次匹配的子串。</p>
+<p>可以将<code>group(0)</code>理解成没有分组符号匹配的所有字符，而之后的编号代表分组依次匹配的子串。</p>
 <h2 id="修改字符串"><a href="#%e4%bf%ae%e6%94%b9%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>修改字符串
 </h2><p>模块级别的字符串修改方法如下表所示。</p>
 <div class="table-wrapper"><table>
