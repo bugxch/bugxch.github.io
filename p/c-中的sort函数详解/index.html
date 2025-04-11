@@ -408,43 +408,15 @@
     >稳定性</a>，即如果被排序的序列中有多个相同值的元素，并不能保证排序之后他们的相对位置保持不变。</p>
 <h3 id="使用方法"><a href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95" class="header-anchor"></a>使用方法
 </h3><p>值得一提的是，sort() 函数位于<code>&lt;algorithm&gt;</code>头文件中，因此在使用该函数前，程序中应包含如下语句：</p>
-
-
-
-<div class="goat svg-container ">
-  
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      font-family="Menlo,Lucida Console,monospace"
-      
-        viewBox="0 0 168 25"
-      >
-      <g transform='translate(8,16)'>
-<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>#</text>
-<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='24' y='4' fill='currentColor' style='font-size:1em'>c</text>
-<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='40' y='4' fill='currentColor' style='font-size:1em'>u</text>
-<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>&lt;</text>
-<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>g</text>
-<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>h</text>
-<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>&gt;</text>
-</g>
-
-    </svg>
-  
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span></span></span></code></pre></td></tr></table>
 </div>
-<p>sort() 函数有 2 种用法，其语法格式分别为：</p>
+</div><p>sort() 函数有 2 种用法，其语法格式分别为：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -666,64 +638,21 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>输出</p>
-
-
-
-<div class="goat svg-container ">
-  
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      font-family="Menlo,Lucida Console,monospace"
-      
-        viewBox="0 0 160 73"
-      >
-      <g transform='translate(8,16)'>
-<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>0</text>
-<text text-anchor='middle' x='0' y='20' fill='currentColor' style='font-size:1em'>9</text>
-<text text-anchor='middle' x='0' y='36' fill='currentColor' style='font-size:1em'>0</text>
-<text text-anchor='middle' x='0' y='52' fill='currentColor' style='font-size:1em'>9</text>
-<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='16' y='20' fill='currentColor' style='font-size:1em'>8</text>
-<text text-anchor='middle' x='16' y='36' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='16' y='52' fill='currentColor' style='font-size:1em'>8</text>
-<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='32' y='20' fill='currentColor' style='font-size:1em'>7</text>
-<text text-anchor='middle' x='32' y='36' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='32' y='52' fill='currentColor' style='font-size:1em'>7</text>
-<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='48' y='20' fill='currentColor' style='font-size:1em'>6</text>
-<text text-anchor='middle' x='48' y='36' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='48' y='52' fill='currentColor' style='font-size:1em'>6</text>
-<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='64' y='20' fill='currentColor' style='font-size:1em'>5</text>
-<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='64' y='52' fill='currentColor' style='font-size:1em'>5</text>
-<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>5</text>
-<text text-anchor='middle' x='80' y='20' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='80' y='36' fill='currentColor' style='font-size:1em'>5</text>
-<text text-anchor='middle' x='80' y='52' fill='currentColor' style='font-size:1em'>4</text>
-<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>6</text>
-<text text-anchor='middle' x='96' y='20' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='96' y='36' fill='currentColor' style='font-size:1em'>6</text>
-<text text-anchor='middle' x='96' y='52' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>7</text>
-<text text-anchor='middle' x='112' y='20' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='112' y='36' fill='currentColor' style='font-size:1em'>7</text>
-<text text-anchor='middle' x='112' y='52' fill='currentColor' style='font-size:1em'>2</text>
-<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>8</text>
-<text text-anchor='middle' x='128' y='20' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='128' y='36' fill='currentColor' style='font-size:1em'>8</text>
-<text text-anchor='middle' x='128' y='52' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>9</text>
-<text text-anchor='middle' x='144' y='20' fill='currentColor' style='font-size:1em'>0</text>
-<text text-anchor='middle' x='144' y='36' fill='currentColor' style='font-size:1em'>9</text>
-<text text-anchor='middle' x='144' y='52' fill='currentColor' style='font-size:1em'>0</text>
-</g>
-
-    </svg>
-  
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">0 1 2 3 4 5 6 7 8 9
+</span></span><span class="line"><span class="cl">9 8 7 6 5 4 3 2 1 0
+</span></span><span class="line"><span class="cl">0 1 2 3 4 5 6 7 8 9
+</span></span><span class="line"><span class="cl">9 8 7 6 5 4 3 2 1 0
+</span></span></code></pre></td></tr></table>
 </div>
-<p>表示了3种谓词，标准库、函数对象和lambda表达式。这里的二元谓词，告诉了<code>sort</code>，当比较<strong>其中两个元素</strong>的时候该如何处理两个元素的位置。</p>
+</div><p>表示了3种谓词，标准库、函数对象和lambda表达式。这里的二元谓词，告诉了<code>sort</code>，当比较<strong>其中两个元素</strong>的时候该如何处理两个元素的位置。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1

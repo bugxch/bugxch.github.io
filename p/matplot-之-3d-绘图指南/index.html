@@ -346,143 +346,21 @@
 <p>本文稿翻译自 <a class="link" href="https://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html"  target="_blank" rel="noopener"
     >mplot3d tutorial — Matplotlib 2.0.2 documentation</a>。</p>
 <p>使用 matplotlib 绘制 3D 图像，一般要加入一个新的 axes 类型 Axes3D:</p>
-
-
-
-<div class="goat svg-container ">
-  
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      font-family="Menlo,Lucida Console,monospace"
-      
-        viewBox="0 0 344 73"
-      >
-      <g transform='translate(8,16)'>
-<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='0' y='20' fill='currentColor' style='font-size:1em'>f</text>
-<text text-anchor='middle' x='0' y='36' fill='currentColor' style='font-size:1em'>f</text>
-<text text-anchor='middle' x='0' y='52' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='8' y='20' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='8' y='36' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='8' y='52' fill='currentColor' style='font-size:1em'>x</text>
-<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='16' y='20' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='16' y='36' fill='currentColor' style='font-size:1em'>g</text>
-<text text-anchor='middle' x='24' y='4' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='24' y='20' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='24' y='52' fill='currentColor' style='font-size:1em'>=</text>
-<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='32' y='36' fill='currentColor' style='font-size:1em'>=</text>
-<text text-anchor='middle' x='40' y='4' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='40' y='20' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='40' y='52' fill='currentColor' style='font-size:1em'>f</text>
-<text text-anchor='middle' x='48' y='20' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='48' y='36' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='48' y='52' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='56' y='20' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='56' y='36' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='56' y='52' fill='currentColor' style='font-size:1em'>g</text>
-<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='64' y='20' fill='currentColor' style='font-size:1em'>_</text>
-<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='64' y='52' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='72' y='20' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='72' y='36' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='72' y='52' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='80' y='20' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='80' y='36' fill='currentColor' style='font-size:1em'>f</text>
-<text text-anchor='middle' x='80' y='52' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='88' y='20' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='88' y='36' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='88' y='52' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='96' y='20' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='96' y='36' fill='currentColor' style='font-size:1em'>g</text>
-<text text-anchor='middle' x='96' y='52' fill='currentColor' style='font-size:1em'>_</text>
-<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='104' y='20' fill='currentColor' style='font-size:1em'>k</text>
-<text text-anchor='middle' x='104' y='36' fill='currentColor' style='font-size:1em'>u</text>
-<text text-anchor='middle' x='104' y='52' fill='currentColor' style='font-size:1em'>s</text>
-<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='112' y='20' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='112' y='36' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='112' y='52' fill='currentColor' style='font-size:1em'>u</text>
-<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='120' y='20' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='120' y='36' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='120' y='52' fill='currentColor' style='font-size:1em'>b</text>
-<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>b</text>
-<text text-anchor='middle' x='128' y='20' fill='currentColor' style='font-size:1em'>s</text>
-<text text-anchor='middle' x='128' y='36' fill='currentColor' style='font-size:1em'>(</text>
-<text text-anchor='middle' x='128' y='52' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='136' y='20' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='136' y='36' fill='currentColor' style='font-size:1em'>)</text>
-<text text-anchor='middle' x='136' y='52' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='144' y='20' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='144' y='52' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>y</text>
-<text text-anchor='middle' x='152' y='20' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='152' y='52' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='160' y='20' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='160' y='52' fill='currentColor' style='font-size:1em'>(</text>
-<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='168' y='20' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='168' y='52' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='176' y='20' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='176' y='52' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='184' y='4' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='184' y='20' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='184' y='52' fill='currentColor' style='font-size:1em'>1</text>
-<text text-anchor='middle' x='192' y='20' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='192' y='52' fill='currentColor' style='font-size:1em'>,</text>
-<text text-anchor='middle' x='200' y='4' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='208' y='4' fill='currentColor' style='font-size:1em'>s</text>
-<text text-anchor='middle' x='208' y='20' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='208' y='52' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='216' y='20' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='216' y='52' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='224' y='4' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='224' y='20' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='224' y='52' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='232' y='4' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='232' y='20' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='232' y='52' fill='currentColor' style='font-size:1em'>j</text>
-<text text-anchor='middle' x='240' y='4' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='240' y='20' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='240' y='52' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='248' y='20' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='248' y='52' fill='currentColor' style='font-size:1em'>c</text>
-<text text-anchor='middle' x='256' y='52' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='264' y='20' fill='currentColor' style='font-size:1em'>A</text>
-<text text-anchor='middle' x='264' y='52' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='272' y='20' fill='currentColor' style='font-size:1em'>x</text>
-<text text-anchor='middle' x='272' y='52' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='280' y='20' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='280' y='52' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='288' y='20' fill='currentColor' style='font-size:1em'>s</text>
-<text text-anchor='middle' x='288' y='52' fill='currentColor' style='font-size:1em'>=</text>
-<text text-anchor='middle' x='296' y='20' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='296' y='52' fill='currentColor' style='font-size:1em'>'</text>
-<text text-anchor='middle' x='304' y='20' fill='currentColor' style='font-size:1em'>D</text>
-<text text-anchor='middle' x='304' y='52' fill='currentColor' style='font-size:1em'>3</text>
-<text text-anchor='middle' x='312' y='52' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='320' y='52' fill='currentColor' style='font-size:1em'>'</text>
-<text text-anchor='middle' x='328' y='52' fill='currentColor' style='font-size:1em'>)</text>
-</g>
-
-    </svg>
-  
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">import</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span> <span class="n">as</span> <span class="n">plt</span>
+</span></span><span class="line"><span class="cl"><span class="n">from</span> <span class="n">mpl_toolkits</span><span class="o">.</span><span class="n">mplot3d</span> <span class="n">import</span> <span class="n">Axes3D</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
-<p>其中的<code>ax</code>，就是添加一个三维坐标系<code>Axes3D</code>的对象，如下图所示</p>
+</div><p>其中的<code>ax</code>，就是添加一个三维坐标系<code>Axes3D</code>的对象，如下图所示</p>
 <p><img src="https://github.com/bugxch/blogpics/blob/master/201807/3dax.png?raw=true"
 	
 	
