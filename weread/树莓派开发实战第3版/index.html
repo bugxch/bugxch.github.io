@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] 树莓派开发实战（第3版）\n书名： 树莓派开发实战（第3版） 作者： 西蒙·蒙克 简介： 本书是对树莓派开发的内容进行全面升级之后的第 3 版，囊括丰富的实践示例，详细讲解树莓派的配置与管理、网络连接、操作系统及软件，以及使用Python进行树莓派开发的各项技巧，包括有关Python编程的基础知识、列表与字典、Python高级特性。同时，本书还涉及机器视觉、硬件基础、控制硬件、电机、数字输入、传感器、显示设备、音频设备、物联网、家庭自动化、Arduino等内容。 本书适合程序员、计算机软硬件爱好者，以及对树莓派感兴趣的读者阅读，也适合作为树莓派相关实践课程的指导书。 出版时间 2023-11-01 00:00:00 ISBN： 9787115609083 分类： 计算机-计算机综合 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/f8532810813ab85eeg015f10 高亮划线 封面 版权信息 O’Reilly Media, Inc. 介绍 内容提要 第3版前言 第1章 配置与管理 1.1 选择树莓派型号 1.2 装配系统 1.3 封装树莓派 1.4 选择电源 1.5 选择操作系统 1.6 通过NOOBS刷写microSD卡 1.7 在不借助NOOBS的情况下安装操作系统 1.8 使用PiBakery配置和刷写SD卡 1.9 使用PiBakery配置headless模式的树莓派 1.10 从真正的硬盘或U盘启动 1.11 连接DVI或VGA显示器 1.12 使用复合视频显示器/电视 1.13 调整显示器中的图像尺寸 1.14 优化性能 1.15 修改密码 1.16 关闭树莓派 1.17 为树莓派安装摄像头模块 1.18 使用蓝牙设备 第2章 网络连接 2.1 连接有线网络 2.2 查看自己的IP地址 2.3 配置静态IP地址 2.4 为树莓派配置网络名称 2.5 配置无线网络连接 2.6 使用控制台线联网 2.7 利用SSH远程控制树莓派 2.8 利用VNC远程控制树莓派 📌 当你在macOS或Windows等上运行该客户端软件时，需要输入要连接的VNC服务器的IP地址（即你的树莓派的IP地址）。 ⏱ 2024-09-06 13:02:51 ^3300080465-33-1667-1728\n">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98%E7%AC%AC3%E7%89%88/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] 树莓派开发实战（第3版）\n书名： 树莓派开发实战（第3版） 作者： 西蒙·蒙克 简介： 本书是对树莓派开发的内容进行全面升级之后的第 3 版，囊括丰富的实践示例，详细讲解树莓派的配置与管理、网络连接、操作系统及软件，以及使用Python进行树莓派开发的各项技巧，包括有关Python编程的基础知识、列表与字典、Python高级特性。同时，本书还涉及机器视觉、硬件基础、控制硬件、电机、数字输入、传感器、显示设备、音频设备、物联网、家庭自动化、Arduino等内容。 本书适合程序员、计算机软硬件爱好者，以及对树莓派感兴趣的读者阅读，也适合作为树莓派相关实践课程的指导书。 出版时间 2023-11-01 00:00:00 ISBN： 9787115609083 分类： 计算机-计算机综合 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/f8532810813ab85eeg015f10 高亮划线 封面 版权信息 O’Reilly Media, Inc. 介绍 内容提要 第3版前言 第1章 配置与管理 1.1 选择树莓派型号 1.2 装配系统 1.3 封装树莓派 1.4 选择电源 1.5 选择操作系统 1.6 通过NOOBS刷写microSD卡 1.7 在不借助NOOBS的情况下安装操作系统 1.8 使用PiBakery配置和刷写SD卡 1.9 使用PiBakery配置headless模式的树莓派 1.10 从真正的硬盘或U盘启动 1.11 连接DVI或VGA显示器 1.12 使用复合视频显示器/电视 1.13 调整显示器中的图像尺寸 1.14 优化性能 1.15 修改密码 1.16 关闭树莓派 1.17 为树莓派安装摄像头模块 1.18 使用蓝牙设备 第2章 网络连接 2.1 连接有线网络 2.2 查看自己的IP地址 2.3 配置静态IP地址 2.4 为树莓派配置网络名称 2.5 配置无线网络连接 2.6 使用控制台线联网 2.7 利用SSH远程控制树莓派 2.8 利用VNC远程控制树莓派 📌 当你在macOS或Windows等上运行该客户端软件时，需要输入要连接的VNC服务器的IP地址（即你的树莓派的IP地址）。 ⏱ 2024-09-06 13:02:51 ^3300080465-33-1667-1728\n">
+<meta property='og:url' content='https://blog.bugxch.top/weread/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98%E7%AC%AC3%E7%89%88/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] 树莓派开发实战（第3版）\n书名： 树莓派开发实战（第3版） 作者： 西蒙·蒙克 简介： 本书是对树莓派开发的内容进行全面升级之后的第 3 版，囊括丰富的实践示例，详细讲解树莓派的配置与管理、网络连接、操作系统及软件，以及使用Python进行树莓派开发的各项技巧，包括有关Python编程的基础知识、列表与字典、Python高级特性。同时，本书还涉及机器视觉、硬件基础、控制硬件、电机、数字输入、传感器、显示设备、音频设备、物联网、家庭自动化、Arduino等内容。 本书适合程序员、计算机软硬件爱好者，以及对树莓派感兴趣的读者阅读，也适合作为树莓派相关实践课程的指导书。 出版时间 2023-11-01 00:00:00 ISBN： 9787115609083 分类： 计算机-计算机综合 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/f8532810813ab85eeg015f10 高亮划线 封面 版权信息 O’Reilly Media, Inc. 介绍 内容提要 第3版前言 第1章 配置与管理 1.1 选择树莓派型号 1.2 装配系统 1.3 封装树莓派 1.4 选择电源 1.5 选择操作系统 1.6 通过NOOBS刷写microSD卡 1.7 在不借助NOOBS的情况下安装操作系统 1.8 使用PiBakery配置和刷写SD卡 1.9 使用PiBakery配置headless模式的树莓派 1.10 从真正的硬盘或U盘启动 1.11 连接DVI或VGA显示器 1.12 使用复合视频显示器/电视 1.13 调整显示器中的图像尺寸 1.14 优化性能 1.15 修改密码 1.16 关闭树莓派 1.17 为树莓派安装摄像头模块 1.18 使用蓝牙设备 第2章 网络连接 2.1 连接有线网络 2.2 查看自己的IP地址 2.3 配置静态IP地址 2.4 为树莓派配置网络名称 2.5 配置无线网络连接 2.6 使用控制台线联网 2.7 利用SSH远程控制树莓派 2.8 利用VNC远程控制树莓派 📌 当你在macOS或Windows等上运行该客户端软件时，需要输入要连接的VNC服务器的IP地址（即你的树莓派的IP地址）。 ⏱ 2024-09-06 13:02:51 ^3300080465-33-1667-1728\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_1ef23741c9bee174.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#元数据">元数据</a></li>
+    <li><a href="#高亮划线">高亮划线</a>
+      <ol>
+        <li><a href="#封面">封面</a></li>
+        <li><a href="#版权信息">版权信息</a></li>
+        <li><a href="#oreilly-media-inc-介绍">O’Reilly Media, Inc. 介绍</a></li>
+        <li><a href="#内容提要">内容提要</a></li>
+        <li><a href="#第3版前言">第3版前言</a></li>
+        <li><a href="#第1章-配置与管理">第1章 配置与管理</a>
+          <ol>
+            <li><a href="#11-选择树莓派型号">1.1 选择树莓派型号</a></li>
+            <li><a href="#12-装配系统">1.2 装配系统</a></li>
+            <li><a href="#13-封装树莓派">1.3 封装树莓派</a></li>
+            <li><a href="#14-选择电源">1.4 选择电源</a></li>
+            <li><a href="#15-选择操作系统">1.5 选择操作系统</a></li>
+            <li><a href="#16-通过noobs刷写microsd卡">1.6 通过NOOBS刷写microSD卡</a></li>
+            <li><a href="#17-在不借助noobs的情况下安装操作系统">1.7 在不借助NOOBS的情况下安装操作系统</a></li>
+            <li><a href="#18-使用pibakery配置和刷写sd卡">1.8 使用PiBakery配置和刷写SD卡</a></li>
+            <li><a href="#19-使用pibakery配置headless模式的树莓派">1.9 使用PiBakery配置headless模式的树莓派</a></li>
+            <li><a href="#110-从真正的硬盘或u盘启动">1.10 从真正的硬盘或U盘启动</a></li>
+            <li><a href="#111-连接dvi或vga显示器">1.11 连接DVI或VGA显示器</a></li>
+            <li><a href="#112-使用复合视频显示器电视">1.12 使用复合视频显示器/电视</a></li>
+            <li><a href="#113-调整显示器中的图像尺寸">1.13 调整显示器中的图像尺寸</a></li>
+            <li><a href="#114-优化性能">1.14 优化性能</a></li>
+            <li><a href="#115-修改密码">1.15 修改密码</a></li>
+            <li><a href="#116-关闭树莓派">1.16 关闭树莓派</a></li>
+            <li><a href="#117-为树莓派安装摄像头模块">1.17 为树莓派安装摄像头模块</a></li>
+            <li><a href="#118-使用蓝牙设备">1.18 使用蓝牙设备</a></li>
+          </ol>
+        </li>
+        <li><a href="#第2章-网络连接">第2章 网络连接</a>
+          <ol>
+            <li><a href="#21-连接有线网络">2.1 连接有线网络</a></li>
+            <li><a href="#22-查看自己的ip地址">2.2 查看自己的IP地址</a></li>
+            <li><a href="#23-配置静态ip地址">2.3 配置静态IP地址</a></li>
+            <li><a href="#24-为树莓派配置网络名称">2.4 为树莓派配置网络名称</a></li>
+            <li><a href="#25-配置无线网络连接">2.5 配置无线网络连接</a></li>
+            <li><a href="#26-使用控制台线联网">2.6 使用控制台线联网</a></li>
+            <li><a href="#27-利用ssh远程控制树莓派">2.7 利用SSH远程控制树莓派</a></li>
+            <li><a href="#28-利用vnc远程控制树莓派">2.8 利用VNC远程控制树莓派</a></li>
+            <li><a href="#29-利用rdp远程控制树莓派">2.9 利用RDP远程控制树莓派</a></li>
+            <li><a href="#210-在mac网络中实现文件共享">2.10 在Mac网络中实现文件共享</a></li>
+            <li><a href="#211-将树莓派用作网络附接存储系统">2.11 将树莓派用作网络附接存储系统</a></li>
+            <li><a href="#212-网络打印">2.12 网络打印</a></li>
+          </ol>
+        </li>
+        <li><a href="#第3章-操作系统">第3章 操作系统</a>
+          <ol>
+            <li><a href="#31-通过图形界面处理文件">3.1 通过图形界面处理文件</a></li>
+            <li><a href="#32-将文件复制到u盘中">3.2 将文件复制到U盘中</a></li>
+            <li><a href="#33-启动一个终端会话">3.3 启动一个终端会话</a></li>
+            <li><a href="#34-利用终端浏览文件系统">3.4 利用终端浏览文件系统</a></li>
+            <li><a href="#35-复制文件或文件夹">3.5 复制文件或文件夹</a></li>
+            <li><a href="#36-重命名文件和文件夹">3.6 重命名文件和文件夹</a></li>
+            <li><a href="#37-编辑文件">3.7 编辑文件</a></li>
+            <li><a href="#38-查看文件内容">3.8 查看文件内容</a></li>
+            <li><a href="#39-在不借助编辑器的情况下创建文件">3.9 在不借助编辑器的情况下创建文件</a></li>
+            <li><a href="#310-创建目录">3.10 创建目录</a></li>
+            <li><a href="#311-删除文件或目录">3.11 删除文件或目录</a></li>
+            <li><a href="#312-以超级用户权限执行任务">3.12 以超级用户权限执行任务</a></li>
+            <li><a href="#313-理解文件权限">3.13 理解文件权限</a></li>
+            <li><a href="#314-修改文件的权限">3.14 修改文件的权限</a></li>
+            <li><a href="#315-修改文件的属主">3.15 修改文件的属主</a></li>
+            <li><a href="#316-屏幕截图">3.16 屏幕截图</a></li>
+            <li><a href="#317-利用apt-get安装软件">3.17 利用apt-get安装软件</a></li>
+            <li><a href="#318-删除利用apt-get安装的软件">3.18 删除利用apt-get安装的软件</a></li>
+            <li><a href="#319-利用pip安装python库">3.19 利用Pip安装Python库</a></li>
+            <li><a href="#320-通过命令行获取文件">3.20 通过命令行获取文件</a></li>
+            <li><a href="#321-利用git获取源代码">3.21 利用Git获取源代码</a></li>
+            <li><a href="#322-获取本书的随附代码">3.22 获取本书的随附代码</a></li>
+            <li><a href="#323-在系统启动时自动运行程序或脚本">3.23 在系统启动时自动运行程序或脚本</a></li>
+            <li><a href="#324-让程序或脚本作为服务自动运行">3.24 让程序或脚本作为服务自动运行</a></li>
+            <li><a href="#325-定期自动运行程序或脚本">3.25 定期自动运行程序或脚本</a></li>
+            <li><a href="#326-搜索功能">3.26 搜索功能</a></li>
+            <li><a href="#327-使用命令行历史记录功能">3.27 使用命令行历史记录功能</a></li>
+            <li><a href="#328-监视处理器活动">3.28 监视处理器活动</a></li>
+            <li><a href="#329-文件压缩">3.29 文件压缩</a></li>
+            <li><a href="#330-列出已连接的usb设备">3.30 列出已连接的USB设备</a></li>
+            <li><a href="#331-将输出从命令行重定向到文件">3.31 将输出从命令行重定向到文件</a></li>
+            <li><a href="#332-连接文件">3.32 连接文件</a></li>
+            <li><a href="#333-使用管道">3.33 使用管道</a></li>
+            <li><a href="#334-不将输出结果显示到终端">3.34 不将输出结果显示到终端</a></li>
+            <li><a href="#335-在后台运行程序">3.35 在后台运行程序</a></li>
+            <li><a href="#336-创建命令别名">3.36 创建命令别名</a></li>
+            <li><a href="#337-设置日期和时间">3.37 设置日期和时间</a></li>
+            <li><a href="#338-查看sd卡剩余存储空间">3.38 查看SD卡剩余存储空间</a></li>
+            <li><a href="#339-检查操作系统版本">3.39 检查操作系统版本</a></li>
+            <li><a href="#340-更新raspbian操作系统">3.40 更新Raspbian操作系统</a></li>
+          </ol>
+        </li>
+        <li><a href="#第4章-软件">第4章 软件</a>
+          <ol>
+            <li><a href="#41-搭建媒体中心">4.1 搭建媒体中心</a></li>
+            <li><a href="#42-安装办公软件">4.2 安装办公软件</a></li>
+            <li><a href="#43-打造网络摄像头服务器">4.3 打造网络摄像头服务器</a></li>
+            <li><a href="#44-运行老式游戏控制台模拟器">4.4 运行老式游戏控制台模拟器</a></li>
+            <li><a href="#45-运行树莓派版minecraft">4.5 运行树莓派版Minecraft</a></li>
+            <li><a href="#46-树莓派无线电发射器">4.6 树莓派无线电发射器</a></li>
+            <li><a href="#47-编辑位图">4.7 编辑位图</a></li>
+            <li><a href="#48-编辑矢量图">4.8 编辑矢量图</a></li>
+            <li><a href="#49-互联网广播">4.9 互联网广播</a></li>
+          </ol>
+        </li>
+        <li><a href="#第5章-python入门">第5章 Python入门</a>
+          <ol>
+            <li><a href="#51-在python-2和python-3之间做出选择">5.1 在Python 2和Python 3之间做出选择</a></li>
+            <li><a href="#52-使用mu编辑python程序">5.2 使用Mu编辑Python程序</a></li>
+            <li><a href="#53-使用python控制台">5.3 使用Python控制台</a></li>
+            <li><a href="#54-利用终端运行python程序">5.4 利用终端运行Python程序</a></li>
+            <li><a href="#55-为值变量命名">5.5 为值（变量）命名</a></li>
+            <li><a href="#56-显示输出结果">5.6 显示输出结果</a></li>
+            <li><a href="#57-读取用户的输入">5.7 读取用户的输入</a></li>
+            <li><a href="#58-算术运算">5.8 算术运算</a></li>
+            <li><a href="#59-创建字符串">5.9 创建字符串</a></li>
+            <li><a href="#510-连接合并字符串">5.10 连接（合并）字符串</a></li>
+            <li><a href="#511-将数字转换为字符串">5.11 将数字转换为字符串</a></li>
+            <li><a href="#512-将字符串转换为数字">5.12 将字符串转换为数字</a></li>
+            <li><a href="#513-确定字符串的长度">5.13 确定字符串的长度</a></li>
+            <li><a href="#514-确定某字符串在另一个字符串中的位置">5.14 确定某字符串在另一个字符串中的位置</a></li>
+            <li><a href="#515-截取部分字符串">5.15 截取部分字符串</a></li>
+            <li><a href="#516-使用字符串替换另一个字符串中的内容">5.16 使用字符串替换另一个字符串中的内容</a></li>
+            <li><a href="#517-字符串的大小写转换">5.17 字符串的大小写转换</a></li>
+            <li><a href="#518-根据条件运行命令">5.18 根据条件运行命令</a></li>
+            <li><a href="#519-值的比较">5.19 值的比较</a></li>
+            <li><a href="#520-逻辑运算符">5.20 逻辑运算符</a></li>
+            <li><a href="#521-将指令重复执行特定次数">5.21 将指令重复执行特定次数</a></li>
+            <li><a href="#522-重复执行指令直到特定条件改变为止">5.22 重复执行指令直到特定条件改变为止</a></li>
+            <li><a href="#523-跳出循环语句">5.23 跳出循环语句</a></li>
+            <li><a href="#524-定义python函数">5.24 定义Python函数</a></li>
+          </ol>
+        </li>
+        <li><a href="#第6章-python中的列表与字典">第6章 Python中的列表与字典</a>
+          <ol>
+            <li><a href="#61-创建列表">6.1 创建列表</a></li>
+            <li><a href="#62-访问列表元素">6.2 访问列表元素</a></li>
+            <li><a href="#63-确定列表长度">6.3 确定列表长度</a></li>
+            <li><a href="#64-为列表添加元素">6.4 为列表添加元素</a></li>
+            <li><a href="#65-删除列表元素">6.5 删除列表元素</a></li>
+            <li><a href="#66-通过解析字符串创建列表">6.6 通过解析字符串创建列表</a></li>
+            <li><a href="#67-遍历列表">6.7 遍历列表</a></li>
+            <li><a href="#68-枚举列表">6.8 枚举列表</a></li>
+            <li><a href="#69-列表排序">6.9 列表排序</a></li>
+            <li><a href="#610-分割列表">6.10 分割列表</a></li>
+            <li><a href="#611-将函数应用于列表">6.11 将函数应用于列表</a></li>
+            <li><a href="#612-创建字典">6.12 创建字典</a></li>
+            <li><a href="#613-访问字典">6.13 访问字典</a></li>
+            <li><a href="#614-删除字典元素">6.14 删除字典元素</a></li>
+            <li><a href="#615-遍历字典">6.15 遍历字典</a></li>
+          </ol>
+        </li>
+        <li><a href="#第7章-python高级特性">第7章 Python高级特性</a>
+          <ol>
+            <li><a href="#71-格式化数字">7.1 格式化数字</a></li>
+            <li><a href="#72-格式化时间和日期">7.2 格式化时间和日期</a></li>
+            <li><a href="#73-返回多个值">7.3 返回多个值</a></li>
+            <li><a href="#74-定义类">7.4 定义类</a></li>
+            <li><a href="#75-定义方法">7.5 定义方法</a></li>
+            <li><a href="#76-继承">7.6 继承</a></li>
+            <li><a href="#77-向文件中写入内容">7.7 向文件中写入内容</a></li>
+            <li><a href="#78-读文件">7.8 读文件</a></li>
+            <li><a href="#79-序列化">7.9 序列化</a></li>
+            <li><a href="#710-异常处理">7.10 异常处理</a></li>
+            <li><a href="#711-使用模块">7.11 使用模块</a></li>
+            <li><a href="#712-随机数">7.12 随机数</a></li>
+            <li><a href="#713-利用python发送web请求">7.13 利用Python发送Web请求</a></li>
+            <li><a href="#714-python的命令行参数">7.14 Python的命令行参数</a></li>
+            <li><a href="#715-从python运行linux命令">7.15 从Python运行Linux命令</a></li>
+            <li><a href="#716-从python发送电子邮件">7.16 从Python发送电子邮件</a></li>
+            <li><a href="#717-利用python编写简单web服务器">7.17 利用Python编写简单Web服务器</a></li>
+            <li><a href="#718-让python无所事事">7.18 让Python无所事事</a></li>
+            <li><a href="#719-同时进行多件事情">7.19 同时进行多件事情</a></li>
+            <li><a href="#720-将python应用于树莓派版minecraft">7.20 将Python应用于树莓派版Minecraft</a></li>
+            <li><a href="#721-解析json">7.21 解析JSON</a></li>
+            <li><a href="#722-创建用户界面">7.22 创建用户界面</a></li>
+            <li><a href="#723-使用正则表达式在文本中搜索">7.23 使用正则表达式在文本中搜索</a></li>
+            <li><a href="#724-使用正则表达式来验证数据输入">7.24 使用正则表达式来验证数据输入</a></li>
+            <li><a href="#725-使用正则表达式抓取网页">7.25 使用正则表达式抓取网页</a></li>
+          </ol>
+        </li>
+        <li><a href="#第8章-机器视觉">第8章 机器视觉</a>
+          <ol>
+            <li><a href="#81-安装simplecv">8.1 安装SimpleCV</a></li>
+            <li><a href="#82-为机器视觉配置usb摄像头">8.2 为机器视觉配置USB摄像头</a></li>
+            <li><a href="#83-将树莓派的摄像头模块用于机器视觉">8.3 将树莓派的摄像头模块用于机器视觉</a></li>
+            <li><a href="#84-数硬币">8.4 数硬币</a></li>
+            <li><a href="#85-人脸检测">8.5 人脸检测</a></li>
+            <li><a href="#86-运动检测">8.6 运动检测</a></li>
+            <li><a href="#87-光学字符识别">8.7 光学字符识别</a></li>
+          </ol>
+        </li>
+        <li><a href="#第9章-硬件基础">第9章 硬件基础</a>
+          <ol>
+            <li><a href="#91-gpio连接器使用说明">9.1 GPIO连接器使用说明</a></li>
+            <li><a href="#92-使用gpio接口时树莓派的安全保护">9.2 使用GPIO接口时树莓派的安全保护</a></li>
+            <li><a href="#93-配置i2c">9.3 配置I2C</a></li>
+            <li><a href="#94-使用i2c工具">9.4 使用I2C工具</a></li>
+            <li><a href="#95-配置spi">9.5 配置SPI</a></li>
+            <li><a href="#96-安装pyserial以便通过python访问串口">9.6 安装PySerial以便通过Python访问串口</a></li>
+            <li><a href="#97-安装minicom以检测串口">9.7 安装Minicom以检测串口</a></li>
+            <li><a href="#98-使用带有跳线的面包板">9.8 使用带有跳线的面包板</a></li>
+            <li><a href="#99-使用树莓派的排线连接面包板">9.9 使用树莓派的排线连接面包板</a></li>
+            <li><a href="#910-使用树莓派squid">9.10 使用树莓派Squid</a></li>
+            <li><a href="#911-使用raspberry-squid按钮">9.11 使用Raspberry Squid按钮</a></li>
+            <li><a href="#912-利用两个电阻器将5v信号转换为33v">9.12 利用两个电阻器将5V信号转换为3.3V</a></li>
+            <li><a href="#913-利用电平转换模块将5v信号转换为33v">9.13 利用电平转换模块将5V信号转换为3.3V</a></li>
+            <li><a href="#914-利用电池为树莓派供电">9.14 利用电池为树莓派供电</a></li>
+            <li><a href="#915-利用锂电池为树莓派供电">9.15 利用锂电池为树莓派供电</a></li>
+            <li><a href="#916-sense-hat入门指南">9.16 Sense HAT入门指南</a></li>
+            <li><a href="#917-explorer-hat-pro入门指南">9.17 Explorer HAT Pro入门指南</a></li>
+            <li><a href="#918-raspirobot-board入门指南">9.18 RasPiRobot Board入门指南</a></li>
+            <li><a href="#919-使用pi-plate原型板">9.19 使用Pi Plate原型板</a></li>
+            <li><a href="#920-制作树莓派扩展板">9.20 制作树莓派扩展板</a></li>
+            <li><a href="#921-树莓派zero与w型树莓派zero">9.21 树莓派Zero与W型树莓派Zero</a></li>
+          </ol>
+        </li>
+        <li><a href="#第10章-控制硬件">第10章 控制硬件</a>
+          <ol>
+            <li><a href="#101-连接led">10.1 连接LED</a></li>
+            <li><a href="#102-让gpio引脚进入安全状态">10.2 让GPIO引脚进入安全状态</a></li>
+            <li><a href="#103-控制led的亮度">10.3 控制LED的亮度</a></li>
+            <li><a href="#104-利用晶体管开关大功率直流设备">10.4 利用晶体管开关大功率直流设备</a></li>
+            <li><a href="#105-使用继电器控制大功率设备的开关">10.5 使用继电器控制大功率设备的开关</a></li>
+            <li><a href="#106-控制高压交流设备">10.6 控制高压交流设备</a></li>
+            <li><a href="#107-用android手机和蓝牙控制硬件">10.7 用Android手机和蓝牙控制硬件</a></li>
+            <li><a href="#108-编写用于控制开关的用户界面">10.8 编写用于控制开关的用户界面</a></li>
+            <li><a href="#109-编写控制led和电机的pwm功率的用户界面">10.9 编写控制LED和电机的PWM功率的用户界面</a></li>
+            <li><a href="#1010-改变rgb-led的颜色">10.10 改变RGB LED的颜色</a></li>
+            <li><a href="#1011-将模拟仪表用作显示器">10.11 将模拟仪表用作显示器</a></li>
+          </ol>
+        </li>
+        <li><a href="#第11章-电机">第11章 电机</a>
+          <ol>
+            <li><a href="#111-控制伺服电机">11.1 控制伺服电机</a></li>
+            <li><a href="#112-精确控制伺服电机">11.2 精确控制伺服电机</a></li>
+            <li><a href="#113-精确控制多台伺服电机">11.3 精确控制多台伺服电机</a></li>
+            <li><a href="#114-控制直流电机的速度">11.4 控制直流电机的速度</a></li>
+            <li><a href="#115-控制直流电机的方向">11.5 控制直流电机的方向</a></li>
+            <li><a href="#116-使用单极步进电机">11.6 使用单极步进电机</a></li>
+            <li><a href="#117-使用双极步进电机">11.7 使用双极步进电机</a></li>
+            <li><a href="#118-利用步进电机hat驱动双极步进电机">11.8 利用步进电机HAT驱动双极步进电机</a></li>
+            <li><a href="#119-使用raspirobot-board驱动双极步进电机">11.9 使用RasPiRobot Board驱动双极步进电机</a></li>
+            <li><a href="#1110-打造一款简单的机器人小车">11.10 打造一款简单的机器人小车</a></li>
+          </ol>
+        </li>
+        <li><a href="#第12章-数字输入">第12章 数字输入</a>
+          <ol>
+            <li><a href="#121-连接按钮开关">12.1 连接按钮开关</a></li>
+            <li><a href="#122-通过按钮开关切换开关状态">12.2 通过按钮开关切换开关状态</a></li>
+            <li><a href="#123-使用双位拨动开关或滑动开关">12.3 使用双位拨动开关或滑动开关</a></li>
+            <li><a href="#124-使用三位拨动开关">12.4 使用三位拨动开关</a></li>
+            <li><a href="#125-按钮去抖">12.5 按钮去抖</a></li>
+            <li><a href="#126-使用外部上拉电阻器">12.6 使用外部上拉电阻器</a></li>
+            <li><a href="#127-使用旋转正交编码器">12.7 使用旋转（正交）编码器</a></li>
+            <li><a href="#128-使用数字键盘">12.8 使用数字键盘</a></li>
+            <li><a href="#129-检测移动">12.9 检测移动</a></li>
+            <li><a href="#1210-为树莓派添加gps模块">12.10 为树莓派添加GPS模块</a></li>
+            <li><a href="#1211-拦截按键">12.11 拦截按键</a></li>
+            <li><a href="#1212-拦截鼠标移动">12.12 拦截鼠标移动</a></li>
+            <li><a href="#1213-使用实时时钟模块">12.13 使用实时时钟模块</a></li>
+            <li><a href="#1214-为树莓派提供重启按钮">12.14 为树莓派提供重启按钮</a></li>
+          </ol>
+        </li>
+        <li><a href="#第13章-传感器">第13章 传感器</a>
+          <ol>
+            <li><a href="#131-使用电阻式传感器">13.1 使用电阻式传感器</a></li>
+            <li><a href="#132-测量亮度">13.2 测量亮度</a></li>
+            <li><a href="#133-利用热敏电阻器测量温度">13.3 利用热敏电阻器测量温度</a></li>
+            <li><a href="#134-检测甲烷">13.4 检测甲烷</a></li>
+            <li><a href="#135-测量二氧化碳浓度">13.5 测量二氧化碳浓度</a></li>
+            <li><a href="#136-测量电压">13.6 测量电压</a></li>
+            <li><a href="#137-为测量而降低电压">13.7 为测量而降低电压</a></li>
+            <li><a href="#138-使用电阻式传感器与adc">13.8 使用电阻式传感器与ADC</a></li>
+            <li><a href="#139-使用adc测量温度">13.9 使用ADC测量温度</a></li>
+            <li><a href="#1310-测量树莓派的cpu温度">13.10 测量树莓派的CPU温度</a></li>
+            <li><a href="#1311-利用sense-hat测量温度湿度和气压">13.11 利用Sense HAT测量温度、湿度和气压</a></li>
+            <li><a href="#1312-利用数字传感器测量温度">13.12 利用数字传感器测量温度</a></li>
+            <li><a href="#1313-利用mma8452q模块测量加速度">13.13 利用MMA8452Q模块测量加速度</a></li>
+            <li><a href="#1314-使用sense-hat检测磁北">13.14 使用Sense HAT检测磁北</a></li>
+            <li><a href="#1315-使用sense-hat的惯性管理单元">13.15 使用Sense HAT的惯性管理单元</a></li>
+            <li><a href="#1316-利用簧片开关检测磁场">13.16 利用簧片开关检测磁场</a></li>
+            <li><a href="#1317-利用sense-hat感应磁场">13.17 利用Sense HAT感应磁场</a></li>
+            <li><a href="#1318-测量距离">13.18 测量距离</a></li>
+            <li><a href="#1319-使用飞行时间传感器测量距离">13.19 使用飞行时间传感器测量距离</a></li>
+            <li><a href="#1320-电容式触摸传感技术">13.20 电容式触摸传感技术</a></li>
+            <li><a href="#1321-用rfid读写器读取智能卡">13.21 用RFID读写器读取智能卡</a></li>
+            <li><a href="#1322-显示传感器的值">13.22 显示传感器的值</a></li>
+            <li><a href="#1323-利用usb闪存驱动器记录日志">13.23 利用USB闪存驱动器记录日志</a></li>
+          </ol>
+        </li>
+        <li><a href="#第14章-显示设备">第14章 显示设备</a>
+          <ol>
+            <li><a href="#141-使用四位led显示设备">14.1 使用四位LED显示设备</a></li>
+            <li><a href="#142-在i2c-led矩阵上面显示消息">14.2 在I2C LED矩阵上面显示消息</a></li>
+            <li><a href="#143-使用sense-hat-led矩阵显示器">14.3 使用Sense HAT LED矩阵显示器</a></li>
+            <li><a href="#144-在alphanumeric-lcd-hat上显示消息">14.4 在Alphanumeric LCD HAT上显示消息</a></li>
+            <li><a href="#145-使用oled图形显示器">14.5 使用OLED图形显示器</a></li>
+            <li><a href="#146-使用可寻址的rgb-led灯条">14.6 使用可寻址的RGB LED灯条</a></li>
+            <li><a href="#147-使用pimoroni-unicorn-hat">14.7 使用Pimoroni Unicorn HAT</a></li>
+            <li><a href="#148-使用epaper显示屏">14.8 使用ePaper显示屏</a></li>
+          </ol>
+        </li>
+        <li><a href="#第15章-音频设备">第15章 音频设备</a>
+          <ol>
+            <li><a href="#151-连接一个扬声器">15.1 连接一个扬声器</a></li>
+            <li><a href="#152-控制声音的输出位置">15.2 控制声音的输出位置</a></li>
+            <li><a href="#153-通过命令行播放声音">15.3 通过命令行播放声音</a></li>
+            <li><a href="#154-通过python程序播放声音">15.4 通过Python程序播放声音</a></li>
+            <li><a href="#155-使用usb麦克风">15.5 使用USB麦克风</a></li>
+            <li><a href="#156-播放蜂鸣声">15.6 播放蜂鸣声</a></li>
+          </ol>
+        </li>
+        <li><a href="#第16章-物联网">第16章 物联网</a>
+          <ol>
+            <li><a href="#161-使用web接口控制gpio输出">16.1 使用Web接口控制GPIO输出</a></li>
+            <li><a href="#162-在网页上显示传感器读数">16.2 在网页上显示传感器读数</a></li>
+            <li><a href="#163-node-red入门">16.3 Node-RED入门</a></li>
+            <li><a href="#164-使用ifttt发送电子邮件及其他通知">16.4 使用IFTTT发送电子邮件及其他通知</a></li>
+            <li><a href="#165-利用thingspeak发送推文">16.5 利用ThingSpeak发送推文</a></li>
+            <li><a href="#166-cheerlights">16.6 CheerLights</a></li>
+            <li><a href="#167-向thingspeak发送传感器数据">16.7 向ThingSpeak发送传感器数据</a></li>
+            <li><a href="#168-使用dweet和ifttt响应推文">16.8 使用Dweet和IFTTT响应推文</a></li>
+          </ol>
+        </li>
+        <li><a href="#第17章-家庭自动化">第17章 家庭自动化</a>
+          <ol>
+            <li><a href="#171-通过mosquitto将树莓派打造成mqtt代理">17.1 通过Mosquitto将树莓派打造成MQTT代理</a></li>
+            <li><a href="#172-组合使用node-red与mqtt服务器">17.2 组合使用Node-RED与MQTT服务器</a></li>
+            <li><a href="#173-刷写sonoff-wi-fi智能开关使其适用于mqtt">17.3 刷写Sonoff Wi-Fi智能开关，使其适用于MQTT</a></li>
+            <li><a href="#174-配置sonoff-wi-fi智能开关">17.4 配置Sonoff Wi-Fi智能开关</a></li>
+            <li><a href="#175-通过mqtt使用sonoff网络开关">17.5 通过MQTT使用Sonoff网络开关</a></li>
+            <li><a href="#176-利用node-red制作sonoff闪烁开关">17.6 利用Node-RED制作Sonoff闪烁开关</a></li>
+            <li><a href="#177-node-red-dashboard扩展">17.7 Node-RED Dashboard扩展</a></li>
+            <li><a href="#178-基于node-red的预定事件">17.8 基于Node-RED的预定事件</a></li>
+            <li><a href="#179-通过wemos-d1发布mqtt消息">17.9 通过Wemos D1发布MQTT消息</a></li>
+            <li><a href="#1710-在node-red中使用wemos-d1">17.10 在Node-RED中使用Wemos D1</a></li>
+          </ol>
+        </li>
+        <li><a href="#第18章-arduino与树莓派">第18章 Arduino与树莓派</a>
+          <ol>
+            <li><a href="#181-通过树莓派对arduino进行编程">18.1 通过树莓派对Arduino进行编程</a></li>
+            <li><a href="#182-利用serial-monitor与arduino进行通信">18.2 利用Serial Monitor与Arduino进行通信</a></li>
+            <li><a href="#183-配置pyfirmata以便通过树莓派来控制arduino">18.3 配置PyFirmata以便通过树莓派来控制Arduino</a></li>
+            <li><a href="#184-通过树莓派对arduino的数字输出进行写操作">18.4 通过树莓派对Arduino的数字输出进行写操作</a></li>
+            <li><a href="#185-使用pyfirmata与ttl串口">18.5 使用PyFirmata与TTL串口</a></li>
+            <li><a href="#186-使用pyfirmata读取arduino的数字输入">18.6 使用PyFirmata读取Arduino的数字输入</a></li>
+            <li><a href="#187-利用pyfirmata读取arduino的模拟输入">18.7 利用PyFirmata读取Arduino的模拟输入</a></li>
+            <li><a href="#188-模拟输出pwm与pyfirmata">18.8 模拟输出(PWM)与PyFirmata</a></li>
+            <li><a href="#189-利用pyfirmata控制伺服电机">18.9 利用PyFirmata控制伺服电机</a></li>
+            <li><a href="#1810-在树莓派上使用小型arduino">18.10 在树莓派上使用小型Arduino</a></li>
+            <li><a href="#1811-使用支持wi-fi的小型arduino兼容系统esp8266">18.11 使用支持Wi-Fi的小型Arduino兼容系统(ESP8266)</a></li>
+          </ol>
+        </li>
+        <li><a href="#附录a-配件与供应商">附录A 配件与供应商</a>
+          <ol>
+            <li><a href="#a2-成型设备与套件">A.2 成型设备与套件</a></li>
+            <li><a href="#a3-集成电路">A.3 集成电路</a></li>
+            <li><a href="#a4-光电器件">A.4 光电器件</a></li>
+            <li><a href="#a5-模块">A.5 模块</a></li>
+            <li><a href="#a6-杂项">A.6 杂项</a></li>
+          </ol>
+        </li>
+        <li><a href="#附录b-树莓派引脚">附录B 树莓派引脚</a>
+          <ol>
+            <li><a href="#b2-b型树莓派第2版与a型树莓派">B.2 B型树莓派第2版与A型树莓派</a></li>
+            <li><a href="#b3-b型树莓派第1版">B.3 B型树莓派第1版</a></li>
+          </ol>
+        </li>
+        <li><a href="#作者简介">作者简介</a></li>
+        <li><a href="#封面简介">封面简介</a></li>
+      </ol>
+    </li>
+    <li><a href="#读书笔记">读书笔记</a>
+      <ol>
+        <li><a href="#29-利用rdp远程控制树莓派-1">2.9 利用RDP远程控制树莓派</a>
+          <ol>
+            <li><a href="#划线评论">划线评论</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#本书评论">本书评论</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98%E7%AC%AC3%E7%89%88/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 9 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] 树莓派开发实战（第3版）</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/37/cpplatform_gy2v9x9f8hjbxtvslgd7vw/t7_cpplatform_gy2v9x9f8hjbxtvslgd7vw1701765334.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" 树莓派开发实战（第3版）|200"
+	
+	
+></li>
+<li>书名： 树莓派开发实战（第3版）</li>
+<li>作者： 西蒙·蒙克</li>
+<li>简介： 本书是对树莓派开发的内容进行全面升级之后的第 3 版，囊括丰富的实践示例，详细讲解树莓派的配置与管理、网络连接、操作系统及软件，以及使用Python进行树莓派开发的各项技巧，包括有关Python编程的基础知识、列表与字典、Python高级特性。同时，本书还涉及机器视觉、硬件基础、控制硬件、电机、数字输入、传感器、显示设备、音频设备、物联网、家庭自动化、Arduino等内容。 本书适合程序员、计算机软硬件爱好者，以及对树莓派感兴趣的读者阅读，也适合作为树莓派相关实践课程的指导书。</li>
+<li>出版时间 2023-11-01 00:00:00</li>
+<li>ISBN： 9787115609083</li>
+<li>分类： 计算机-计算机综合</li>
+<li>出版社： 人民邮电出版社有限公司</li>
+<li>PC地址：https://weread.qq.com/web/reader/f8532810813ab85eeg015f10</li>
+</ul></blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="oreilly-media-inc-介绍"><a href="#oreilly-media-inc-%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>O’Reilly Media, Inc. 介绍
+</h2><h2 id="内容提要"><a href="#%e5%86%85%e5%ae%b9%e6%8f%90%e8%a6%81" class="header-anchor"></a>内容提要
+</h2><h2 id="第3版前言"><a href="#%e7%ac%ac3%e7%89%88%e5%89%8d%e8%a8%80" class="header-anchor"></a>第3版前言
+</h2><h2 id="第1章-配置与管理"><a href="#%e7%ac%ac1%e7%ab%a0-%e9%85%8d%e7%bd%ae%e4%b8%8e%e7%ae%a1%e7%90%86" class="header-anchor"></a>第1章 配置与管理
+</h2><h3 id="11-选择树莓派型号"><a href="#11-%e9%80%89%e6%8b%a9%e6%a0%91%e8%8e%93%e6%b4%be%e5%9e%8b%e5%8f%b7" class="header-anchor"></a>1.1 选择树莓派型号
+</h3><h3 id="12-装配系统"><a href="#12-%e8%a3%85%e9%85%8d%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>1.2 装配系统
+</h3><h3 id="13-封装树莓派"><a href="#13-%e5%b0%81%e8%a3%85%e6%a0%91%e8%8e%93%e6%b4%be" class="header-anchor"></a>1.3 封装树莓派
+</h3><h3 id="14-选择电源"><a href="#14-%e9%80%89%e6%8b%a9%e7%94%b5%e6%ba%90" class="header-anchor"></a>1.4 选择电源
+</h3><h3 id="15-选择操作系统"><a href="#15-%e9%80%89%e6%8b%a9%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>1.5 选择操作系统
+</h3><h3 id="16-通过noobs刷写microsd卡"><a href="#16-%e9%80%9a%e8%bf%87noobs%e5%88%b7%e5%86%99microsd%e5%8d%a1" class="header-anchor"></a>1.6 通过NOOBS刷写microSD卡
+</h3><h3 id="17-在不借助noobs的情况下安装操作系统"><a href="#17-%e5%9c%a8%e4%b8%8d%e5%80%9f%e5%8a%a9noobs%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e5%ae%89%e8%a3%85%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>1.7 在不借助NOOBS的情况下安装操作系统
+</h3><h3 id="18-使用pibakery配置和刷写sd卡"><a href="#18-%e4%bd%bf%e7%94%a8pibakery%e9%85%8d%e7%bd%ae%e5%92%8c%e5%88%b7%e5%86%99sd%e5%8d%a1" class="header-anchor"></a>1.8 使用PiBakery配置和刷写SD卡
+</h3><h3 id="19-使用pibakery配置headless模式的树莓派"><a href="#19-%e4%bd%bf%e7%94%a8pibakery%e9%85%8d%e7%bd%aeheadless%e6%a8%a1%e5%bc%8f%e7%9a%84%e6%a0%91%e8%8e%93%e6%b4%be" class="header-anchor"></a>1.9 使用PiBakery配置headless模式的树莓派
+</h3><h3 id="110-从真正的硬盘或u盘启动"><a href="#110-%e4%bb%8e%e7%9c%9f%e6%ad%a3%e7%9a%84%e7%a1%ac%e7%9b%98%e6%88%96u%e7%9b%98%e5%90%af%e5%8a%a8" class="header-anchor"></a>1.10 从真正的硬盘或U盘启动
+</h3><h3 id="111-连接dvi或vga显示器"><a href="#111-%e8%bf%9e%e6%8e%a5dvi%e6%88%96vga%e6%98%be%e7%a4%ba%e5%99%a8" class="header-anchor"></a>1.11 连接DVI或VGA显示器
+</h3><h3 id="112-使用复合视频显示器电视"><a href="#112-%e4%bd%bf%e7%94%a8%e5%a4%8d%e5%90%88%e8%a7%86%e9%a2%91%e6%98%be%e7%a4%ba%e5%99%a8%e7%94%b5%e8%a7%86" class="header-anchor"></a>1.12 使用复合视频显示器/电视
+</h3><h3 id="113-调整显示器中的图像尺寸"><a href="#113-%e8%b0%83%e6%95%b4%e6%98%be%e7%a4%ba%e5%99%a8%e4%b8%ad%e7%9a%84%e5%9b%be%e5%83%8f%e5%b0%ba%e5%af%b8" class="header-anchor"></a>1.13 调整显示器中的图像尺寸
+</h3><h3 id="114-优化性能"><a href="#114-%e4%bc%98%e5%8c%96%e6%80%a7%e8%83%bd" class="header-anchor"></a>1.14 优化性能
+</h3><h3 id="115-修改密码"><a href="#115-%e4%bf%ae%e6%94%b9%e5%af%86%e7%a0%81" class="header-anchor"></a>1.15 修改密码
+</h3><h3 id="116-关闭树莓派"><a href="#116-%e5%85%b3%e9%97%ad%e6%a0%91%e8%8e%93%e6%b4%be" class="header-anchor"></a>1.16 关闭树莓派
+</h3><h3 id="117-为树莓派安装摄像头模块"><a href="#117-%e4%b8%ba%e6%a0%91%e8%8e%93%e6%b4%be%e5%ae%89%e8%a3%85%e6%91%84%e5%83%8f%e5%a4%b4%e6%a8%a1%e5%9d%97" class="header-anchor"></a>1.17 为树莓派安装摄像头模块
+</h3><h3 id="118-使用蓝牙设备"><a href="#118-%e4%bd%bf%e7%94%a8%e8%93%9d%e7%89%99%e8%ae%be%e5%a4%87" class="header-anchor"></a>1.18 使用蓝牙设备
+</h3><h2 id="第2章-网络连接"><a href="#%e7%ac%ac2%e7%ab%a0-%e7%bd%91%e7%bb%9c%e8%bf%9e%e6%8e%a5" class="header-anchor"></a>第2章 网络连接
+</h2><h3 id="21-连接有线网络"><a href="#21-%e8%bf%9e%e6%8e%a5%e6%9c%89%e7%ba%bf%e7%bd%91%e7%bb%9c" class="header-anchor"></a>2.1 连接有线网络
+</h3><h3 id="22-查看自己的ip地址"><a href="#22-%e6%9f%a5%e7%9c%8b%e8%87%aa%e5%b7%b1%e7%9a%84ip%e5%9c%b0%e5%9d%80" class="header-anchor"></a>2.2 查看自己的IP地址
+</h3><h3 id="23-配置静态ip地址"><a href="#23-%e9%85%8d%e7%bd%ae%e9%9d%99%e6%80%81ip%e5%9c%b0%e5%9d%80" class="header-anchor"></a>2.3 配置静态IP地址
+</h3><h3 id="24-为树莓派配置网络名称"><a href="#24-%e4%b8%ba%e6%a0%91%e8%8e%93%e6%b4%be%e9%85%8d%e7%bd%ae%e7%bd%91%e7%bb%9c%e5%90%8d%e7%a7%b0" class="header-anchor"></a>2.4 为树莓派配置网络名称
+</h3><h3 id="25-配置无线网络连接"><a href="#25-%e9%85%8d%e7%bd%ae%e6%97%a0%e7%ba%bf%e7%bd%91%e7%bb%9c%e8%bf%9e%e6%8e%a5" class="header-anchor"></a>2.5 配置无线网络连接
+</h3><h3 id="26-使用控制台线联网"><a href="#26-%e4%bd%bf%e7%94%a8%e6%8e%a7%e5%88%b6%e5%8f%b0%e7%ba%bf%e8%81%94%e7%bd%91" class="header-anchor"></a>2.6 使用控制台线联网
+</h3><h3 id="27-利用ssh远程控制树莓派"><a href="#27-%e5%88%a9%e7%94%a8ssh%e8%bf%9c%e7%a8%8b%e6%8e%a7%e5%88%b6%e6%a0%91%e8%8e%93%e6%b4%be" class="header-anchor"></a>2.7 利用SSH远程控制树莓派
+</h3><h3 id="28-利用vnc远程控制树莓派"><a href="#28-%e5%88%a9%e7%94%a8vnc%e8%bf%9c%e7%a8%8b%e6%8e%a7%e5%88%b6%e6%a0%91%e8%8e%93%e6%b4%be" class="header-anchor"></a>2.8 利用VNC远程控制树莓派
+</h3><blockquote>
+<p>📌 当你在macOS或Windows等上运行该客户端软件时，需要输入要连接的VNC服务器的IP地址（即你的树莓派的IP地址）。
+⏱ 2024-09-06 13:02:51 ^3300080465-33-1667-1728</p></blockquote>
+<h3 id="29-利用rdp远程控制树莓派"><a href="#29-%e5%88%a9%e7%94%a8rdp%e8%bf%9c%e7%a8%8b%e6%8e%a7%e5%88%b6%e6%a0%91%e8%8e%93%e6%b4%be" class="header-anchor"></a>2.9 利用RDP远程控制树莓派
+</h3><h3 id="210-在mac网络中实现文件共享"><a href="#210-%e5%9c%a8mac%e7%bd%91%e7%bb%9c%e4%b8%ad%e5%ae%9e%e7%8e%b0%e6%96%87%e4%bb%b6%e5%85%b1%e4%ba%ab" class="header-anchor"></a>2.10 在Mac网络中实现文件共享
+</h3><h3 id="211-将树莓派用作网络附接存储系统"><a href="#211-%e5%b0%86%e6%a0%91%e8%8e%93%e6%b4%be%e7%94%a8%e4%bd%9c%e7%bd%91%e7%bb%9c%e9%99%84%e6%8e%a5%e5%ad%98%e5%82%a8%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>2.11 将树莓派用作网络附接存储系统
+</h3><h3 id="212-网络打印"><a href="#212-%e7%bd%91%e7%bb%9c%e6%89%93%e5%8d%b0" class="header-anchor"></a>2.12 网络打印
+</h3><h2 id="第3章-操作系统"><a href="#%e7%ac%ac3%e7%ab%a0-%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>第3章 操作系统
+</h2><h3 id="31-通过图形界面处理文件"><a href="#31-%e9%80%9a%e8%bf%87%e5%9b%be%e5%bd%a2%e7%95%8c%e9%9d%a2%e5%a4%84%e7%90%86%e6%96%87%e4%bb%b6" class="header-anchor"></a>3.1 通过图形界面处理文件
+</h3><h3 id="32-将文件复制到u盘中"><a href="#32-%e5%b0%86%e6%96%87%e4%bb%b6%e5%a4%8d%e5%88%b6%e5%88%b0u%e7%9b%98%e4%b8%ad" class="header-anchor"></a>3.2 将文件复制到U盘中
+</h3><h3 id="33-启动一个终端会话"><a href="#33-%e5%90%af%e5%8a%a8%e4%b8%80%e4%b8%aa%e7%bb%88%e7%ab%af%e4%bc%9a%e8%af%9d" class="header-anchor"></a>3.3 启动一个终端会话
+</h3><h3 id="34-利用终端浏览文件系统"><a href="#34-%e5%88%a9%e7%94%a8%e7%bb%88%e7%ab%af%e6%b5%8f%e8%a7%88%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>3.4 利用终端浏览文件系统
+</h3><h3 id="35-复制文件或文件夹"><a href="#35-%e5%a4%8d%e5%88%b6%e6%96%87%e4%bb%b6%e6%88%96%e6%96%87%e4%bb%b6%e5%a4%b9" class="header-anchor"></a>3.5 复制文件或文件夹
+</h3><blockquote>
+<p>📌 你想通过终端会话复制文件。</p></blockquote>
+<p>3.5.2 解决方案</p>
+<p>使用cp命令复制文件和目录。</p>
+<p>3.5.3 进一步探讨</p>
+<p>当然，你可以通过文件管理器的复制、粘贴选项或快捷键来复制文件（见3.1节）。</p>
+<p>使用终端会话来复制文件的最简单的例子就是在工作目录复制文件。cp命令后面的第一个参数是待复制的文件，第二个参数是复制后新文件的名称。</p>
+<blockquote>
+<p>⏱ 2024-09-06 13:05:59 ^3300080465-43-476</p></blockquote>
+<h3 id="36-重命名文件和文件夹"><a href="#36-%e9%87%8d%e5%91%bd%e5%90%8d%e6%96%87%e4%bb%b6%e5%92%8c%e6%96%87%e4%bb%b6%e5%a4%b9" class="header-anchor"></a>3.6 重命名文件和文件夹
+</h3><h3 id="37-编辑文件"><a href="#37-%e7%bc%96%e8%be%91%e6%96%87%e4%bb%b6" class="header-anchor"></a>3.7 编辑文件
+</h3><h3 id="38-查看文件内容"><a href="#38-%e6%9f%a5%e7%9c%8b%e6%96%87%e4%bb%b6%e5%86%85%e5%ae%b9" class="header-anchor"></a>3.8 查看文件内容
+</h3><h3 id="39-在不借助编辑器的情况下创建文件"><a href="#39-%e5%9c%a8%e4%b8%8d%e5%80%9f%e5%8a%a9%e7%bc%96%e8%be%91%e5%99%a8%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e5%88%9b%e5%bb%ba%e6%96%87%e4%bb%b6" class="header-anchor"></a>3.9 在不借助编辑器的情况下创建文件
+</h3><h3 id="310-创建目录"><a href="#310-%e5%88%9b%e5%bb%ba%e7%9b%ae%e5%bd%95" class="header-anchor"></a>3.10 创建目录
+</h3><h3 id="311-删除文件或目录"><a href="#311-%e5%88%a0%e9%99%a4%e6%96%87%e4%bb%b6%e6%88%96%e7%9b%ae%e5%bd%95" class="header-anchor"></a>3.11 删除文件或目录
+</h3><h3 id="312-以超级用户权限执行任务"><a href="#312-%e4%bb%a5%e8%b6%85%e7%ba%a7%e7%94%a8%e6%88%b7%e6%9d%83%e9%99%90%e6%89%a7%e8%a1%8c%e4%bb%bb%e5%8a%a1" class="header-anchor"></a>3.12 以超级用户权限执行任务
+</h3><h3 id="313-理解文件权限"><a href="#313-%e7%90%86%e8%a7%a3%e6%96%87%e4%bb%b6%e6%9d%83%e9%99%90" class="header-anchor"></a>3.13 理解文件权限
+</h3><h3 id="314-修改文件的权限"><a href="#314-%e4%bf%ae%e6%94%b9%e6%96%87%e4%bb%b6%e7%9a%84%e6%9d%83%e9%99%90" class="header-anchor"></a>3.14 修改文件的权限
+</h3><h3 id="315-修改文件的属主"><a href="#315-%e4%bf%ae%e6%94%b9%e6%96%87%e4%bb%b6%e7%9a%84%e5%b1%9e%e4%b8%bb" class="header-anchor"></a>3.15 修改文件的属主
+</h3><h3 id="316-屏幕截图"><a href="#316-%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be" class="header-anchor"></a>3.16 屏幕截图
+</h3><h3 id="317-利用apt-get安装软件"><a href="#317-%e5%88%a9%e7%94%a8apt-get%e5%ae%89%e8%a3%85%e8%bd%af%e4%bb%b6" class="header-anchor"></a>3.17 利用apt-get安装软件
+</h3><h3 id="318-删除利用apt-get安装的软件"><a href="#318-%e5%88%a0%e9%99%a4%e5%88%a9%e7%94%a8apt-get%e5%ae%89%e8%a3%85%e7%9a%84%e8%bd%af%e4%bb%b6" class="header-anchor"></a>3.18 删除利用apt-get安装的软件
+</h3><h3 id="319-利用pip安装python库"><a href="#319-%e5%88%a9%e7%94%a8pip%e5%ae%89%e8%a3%85python%e5%ba%93" class="header-anchor"></a>3.19 利用Pip安装Python库
+</h3><blockquote>
+<p>📌 如果你的系统还没有安装pip，可以通过下面所示的命令进行安装。
+⏱ 2024-09-06 13:06:49 ^3300080465-57-781-812</p></blockquote>
+<h3 id="320-通过命令行获取文件"><a href="#320-%e9%80%9a%e8%bf%87%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%8e%b7%e5%8f%96%e6%96%87%e4%bb%b6" class="header-anchor"></a>3.20 通过命令行获取文件
+</h3><h3 id="321-利用git获取源代码"><a href="#321-%e5%88%a9%e7%94%a8git%e8%8e%b7%e5%8f%96%e6%ba%90%e4%bb%a3%e7%a0%81" class="header-anchor"></a>3.21 利用Git获取源代码
+</h3><h3 id="322-获取本书的随附代码"><a href="#322-%e8%8e%b7%e5%8f%96%e6%9c%ac%e4%b9%a6%e7%9a%84%e9%9a%8f%e9%99%84%e4%bb%a3%e7%a0%81" class="header-anchor"></a>3.22 获取本书的随附代码
+</h3><h3 id="323-在系统启动时自动运行程序或脚本"><a href="#323-%e5%9c%a8%e7%b3%bb%e7%bb%9f%e5%90%af%e5%8a%a8%e6%97%b6%e8%87%aa%e5%8a%a8%e8%bf%90%e8%a1%8c%e7%a8%8b%e5%ba%8f%e6%88%96%e8%84%9a%e6%9c%ac" class="header-anchor"></a>3.23 在系统启动时自动运行程序或脚本
+</h3><h3 id="324-让程序或脚本作为服务自动运行"><a href="#324-%e8%ae%a9%e7%a8%8b%e5%ba%8f%e6%88%96%e8%84%9a%e6%9c%ac%e4%bd%9c%e4%b8%ba%e6%9c%8d%e5%8a%a1%e8%87%aa%e5%8a%a8%e8%bf%90%e8%a1%8c" class="header-anchor"></a>3.24 让程序或脚本作为服务自动运行
+</h3><h3 id="325-定期自动运行程序或脚本"><a href="#325-%e5%ae%9a%e6%9c%9f%e8%87%aa%e5%8a%a8%e8%bf%90%e8%a1%8c%e7%a8%8b%e5%ba%8f%e6%88%96%e8%84%9a%e6%9c%ac" class="header-anchor"></a>3.25 定期自动运行程序或脚本
+</h3><h3 id="326-搜索功能"><a href="#326-%e6%90%9c%e7%b4%a2%e5%8a%9f%e8%83%bd" class="header-anchor"></a>3.26 搜索功能
+</h3><h3 id="327-使用命令行历史记录功能"><a href="#327-%e4%bd%bf%e7%94%a8%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8e%86%e5%8f%b2%e8%ae%b0%e5%bd%95%e5%8a%9f%e8%83%bd" class="header-anchor"></a>3.27 使用命令行历史记录功能
+</h3><h3 id="328-监视处理器活动"><a href="#328-%e7%9b%91%e8%a7%86%e5%a4%84%e7%90%86%e5%99%a8%e6%b4%bb%e5%8a%a8" class="header-anchor"></a>3.28 监视处理器活动
+</h3><h3 id="329-文件压缩"><a href="#329-%e6%96%87%e4%bb%b6%e5%8e%8b%e7%bc%a9" class="header-anchor"></a>3.29 文件压缩
+</h3><h3 id="330-列出已连接的usb设备"><a href="#330-%e5%88%97%e5%87%ba%e5%b7%b2%e8%bf%9e%e6%8e%a5%e7%9a%84usb%e8%ae%be%e5%a4%87" class="header-anchor"></a>3.30 列出已连接的USB设备
+</h3><h3 id="331-将输出从命令行重定向到文件"><a href="#331-%e5%b0%86%e8%be%93%e5%87%ba%e4%bb%8e%e5%91%bd%e4%bb%a4%e8%a1%8c%e9%87%8d%e5%ae%9a%e5%90%91%e5%88%b0%e6%96%87%e4%bb%b6" class="header-anchor"></a>3.31 将输出从命令行重定向到文件
+</h3><h3 id="332-连接文件"><a href="#332-%e8%bf%9e%e6%8e%a5%e6%96%87%e4%bb%b6" class="header-anchor"></a>3.32 连接文件
+</h3><h3 id="333-使用管道"><a href="#333-%e4%bd%bf%e7%94%a8%e7%ae%a1%e9%81%93" class="header-anchor"></a>3.33 使用管道
+</h3><h3 id="334-不将输出结果显示到终端"><a href="#334-%e4%b8%8d%e5%b0%86%e8%be%93%e5%87%ba%e7%bb%93%e6%9e%9c%e6%98%be%e7%a4%ba%e5%88%b0%e7%bb%88%e7%ab%af" class="header-anchor"></a>3.34 不将输出结果显示到终端
+</h3><h3 id="335-在后台运行程序"><a href="#335-%e5%9c%a8%e5%90%8e%e5%8f%b0%e8%bf%90%e8%a1%8c%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>3.35 在后台运行程序
+</h3><h3 id="336-创建命令别名"><a href="#336-%e5%88%9b%e5%bb%ba%e5%91%bd%e4%bb%a4%e5%88%ab%e5%90%8d" class="header-anchor"></a>3.36 创建命令别名
+</h3><h3 id="337-设置日期和时间"><a href="#337-%e8%ae%be%e7%bd%ae%e6%97%a5%e6%9c%9f%e5%92%8c%e6%97%b6%e9%97%b4" class="header-anchor"></a>3.37 设置日期和时间
+</h3><h3 id="338-查看sd卡剩余存储空间"><a href="#338-%e6%9f%a5%e7%9c%8bsd%e5%8d%a1%e5%89%a9%e4%bd%99%e5%ad%98%e5%82%a8%e7%a9%ba%e9%97%b4" class="header-anchor"></a>3.38 查看SD卡剩余存储空间
+</h3><h3 id="339-检查操作系统版本"><a href="#339-%e6%a3%80%e6%9f%a5%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e7%89%88%e6%9c%ac" class="header-anchor"></a>3.39 检查操作系统版本
+</h3><h3 id="340-更新raspbian操作系统"><a href="#340-%e6%9b%b4%e6%96%b0raspbian%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>3.40 更新Raspbian操作系统
+</h3><h2 id="第4章-软件"><a href="#%e7%ac%ac4%e7%ab%a0-%e8%bd%af%e4%bb%b6" class="header-anchor"></a>第4章 软件
+</h2><h3 id="41-搭建媒体中心"><a href="#41-%e6%90%ad%e5%bb%ba%e5%aa%92%e4%bd%93%e4%b8%ad%e5%bf%83" class="header-anchor"></a>4.1 搭建媒体中心
+</h3><h3 id="42-安装办公软件"><a href="#42-%e5%ae%89%e8%a3%85%e5%8a%9e%e5%85%ac%e8%bd%af%e4%bb%b6" class="header-anchor"></a>4.2 安装办公软件
+</h3><h3 id="43-打造网络摄像头服务器"><a href="#43-%e6%89%93%e9%80%a0%e7%bd%91%e7%bb%9c%e6%91%84%e5%83%8f%e5%a4%b4%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-anchor"></a>4.3 打造网络摄像头服务器
+</h3><h3 id="44-运行老式游戏控制台模拟器"><a href="#44-%e8%bf%90%e8%a1%8c%e8%80%81%e5%bc%8f%e6%b8%b8%e6%88%8f%e6%8e%a7%e5%88%b6%e5%8f%b0%e6%a8%a1%e6%8b%9f%e5%99%a8" class="header-anchor"></a>4.4 运行老式游戏控制台模拟器
+</h3><h3 id="45-运行树莓派版minecraft"><a href="#45-%e8%bf%90%e8%a1%8c%e6%a0%91%e8%8e%93%e6%b4%be%e7%89%88minecraft" class="header-anchor"></a>4.5 运行树莓派版Minecraft
+</h3><h3 id="46-树莓派无线电发射器"><a href="#46-%e6%a0%91%e8%8e%93%e6%b4%be%e6%97%a0%e7%ba%bf%e7%94%b5%e5%8f%91%e5%b0%84%e5%99%a8" class="header-anchor"></a>4.6 树莓派无线电发射器
+</h3><h3 id="47-编辑位图"><a href="#47-%e7%bc%96%e8%be%91%e4%bd%8d%e5%9b%be" class="header-anchor"></a>4.7 编辑位图
+</h3><h3 id="48-编辑矢量图"><a href="#48-%e7%bc%96%e8%be%91%e7%9f%a2%e9%87%8f%e5%9b%be" class="header-anchor"></a>4.8 编辑矢量图
+</h3><h3 id="49-互联网广播"><a href="#49-%e4%ba%92%e8%81%94%e7%bd%91%e5%b9%bf%e6%92%ad" class="header-anchor"></a>4.9 互联网广播
+</h3><h2 id="第5章-python入门"><a href="#%e7%ac%ac5%e7%ab%a0-python%e5%85%a5%e9%97%a8" class="header-anchor"></a>第5章 Python入门
+</h2><h3 id="51-在python-2和python-3之间做出选择"><a href="#51-%e5%9c%a8python-2%e5%92%8cpython-3%e4%b9%8b%e9%97%b4%e5%81%9a%e5%87%ba%e9%80%89%e6%8b%a9" class="header-anchor"></a>5.1 在Python 2和Python 3之间做出选择
+</h3><h3 id="52-使用mu编辑python程序"><a href="#52-%e4%bd%bf%e7%94%a8mu%e7%bc%96%e8%be%91python%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>5.2 使用Mu编辑Python程序
+</h3><h3 id="53-使用python控制台"><a href="#53-%e4%bd%bf%e7%94%a8python%e6%8e%a7%e5%88%b6%e5%8f%b0" class="header-anchor"></a>5.3 使用Python控制台
+</h3><h3 id="54-利用终端运行python程序"><a href="#54-%e5%88%a9%e7%94%a8%e7%bb%88%e7%ab%af%e8%bf%90%e8%a1%8cpython%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>5.4 利用终端运行Python程序
+</h3><h3 id="55-为值变量命名"><a href="#55-%e4%b8%ba%e5%80%bc%e5%8f%98%e9%87%8f%e5%91%bd%e5%90%8d" class="header-anchor"></a>5.5 为值（变量）命名
+</h3><h3 id="56-显示输出结果"><a href="#56-%e6%98%be%e7%a4%ba%e8%be%93%e5%87%ba%e7%bb%93%e6%9e%9c" class="header-anchor"></a>5.6 显示输出结果
+</h3><h3 id="57-读取用户的输入"><a href="#57-%e8%af%bb%e5%8f%96%e7%94%a8%e6%88%b7%e7%9a%84%e8%be%93%e5%85%a5" class="header-anchor"></a>5.7 读取用户的输入
+</h3><h3 id="58-算术运算"><a href="#58-%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97" class="header-anchor"></a>5.8 算术运算
+</h3><h3 id="59-创建字符串"><a href="#59-%e5%88%9b%e5%bb%ba%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>5.9 创建字符串
+</h3><h3 id="510-连接合并字符串"><a href="#510-%e8%bf%9e%e6%8e%a5%e5%90%88%e5%b9%b6%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>5.10 连接（合并）字符串
+</h3><h3 id="511-将数字转换为字符串"><a href="#511-%e5%b0%86%e6%95%b0%e5%ad%97%e8%bd%ac%e6%8d%a2%e4%b8%ba%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>5.11 将数字转换为字符串
+</h3><h3 id="512-将字符串转换为数字"><a href="#512-%e5%b0%86%e5%ad%97%e7%ac%a6%e4%b8%b2%e8%bd%ac%e6%8d%a2%e4%b8%ba%e6%95%b0%e5%ad%97" class="header-anchor"></a>5.12 将字符串转换为数字
+</h3><h3 id="513-确定字符串的长度"><a href="#513-%e7%a1%ae%e5%ae%9a%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e9%95%bf%e5%ba%a6" class="header-anchor"></a>5.13 确定字符串的长度
+</h3><h3 id="514-确定某字符串在另一个字符串中的位置"><a href="#514-%e7%a1%ae%e5%ae%9a%e6%9f%90%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%9c%a8%e5%8f%a6%e4%b8%80%e4%b8%aa%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%ad%e7%9a%84%e4%bd%8d%e7%bd%ae" class="header-anchor"></a>5.14 确定某字符串在另一个字符串中的位置
+</h3><h3 id="515-截取部分字符串"><a href="#515-%e6%88%aa%e5%8f%96%e9%83%a8%e5%88%86%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>5.15 截取部分字符串
+</h3><h3 id="516-使用字符串替换另一个字符串中的内容"><a href="#516-%e4%bd%bf%e7%94%a8%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%9b%bf%e6%8d%a2%e5%8f%a6%e4%b8%80%e4%b8%aa%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%ad%e7%9a%84%e5%86%85%e5%ae%b9" class="header-anchor"></a>5.16 使用字符串替换另一个字符串中的内容
+</h3><h3 id="517-字符串的大小写转换"><a href="#517-%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e5%a4%a7%e5%b0%8f%e5%86%99%e8%bd%ac%e6%8d%a2" class="header-anchor"></a>5.17 字符串的大小写转换
+</h3><h3 id="518-根据条件运行命令"><a href="#518-%e6%a0%b9%e6%8d%ae%e6%9d%a1%e4%bb%b6%e8%bf%90%e8%a1%8c%e5%91%bd%e4%bb%a4" class="header-anchor"></a>5.18 根据条件运行命令
+</h3><h3 id="519-值的比较"><a href="#519-%e5%80%bc%e7%9a%84%e6%af%94%e8%be%83" class="header-anchor"></a>5.19 值的比较
+</h3><h3 id="520-逻辑运算符"><a href="#520-%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-anchor"></a>5.20 逻辑运算符
+</h3><h3 id="521-将指令重复执行特定次数"><a href="#521-%e5%b0%86%e6%8c%87%e4%bb%a4%e9%87%8d%e5%a4%8d%e6%89%a7%e8%a1%8c%e7%89%b9%e5%ae%9a%e6%ac%a1%e6%95%b0" class="header-anchor"></a>5.21 将指令重复执行特定次数
+</h3><h3 id="522-重复执行指令直到特定条件改变为止"><a href="#522-%e9%87%8d%e5%a4%8d%e6%89%a7%e8%a1%8c%e6%8c%87%e4%bb%a4%e7%9b%b4%e5%88%b0%e7%89%b9%e5%ae%9a%e6%9d%a1%e4%bb%b6%e6%94%b9%e5%8f%98%e4%b8%ba%e6%ad%a2" class="header-anchor"></a>5.22 重复执行指令直到特定条件改变为止
+</h3><h3 id="523-跳出循环语句"><a href="#523-%e8%b7%b3%e5%87%ba%e5%be%aa%e7%8e%af%e8%af%ad%e5%8f%a5" class="header-anchor"></a>5.23 跳出循环语句
+</h3><h3 id="524-定义python函数"><a href="#524-%e5%ae%9a%e4%b9%89python%e5%87%bd%e6%95%b0" class="header-anchor"></a>5.24 定义Python函数
+</h3><h2 id="第6章-python中的列表与字典"><a href="#%e7%ac%ac6%e7%ab%a0-python%e4%b8%ad%e7%9a%84%e5%88%97%e8%a1%a8%e4%b8%8e%e5%ad%97%e5%85%b8" class="header-anchor"></a>第6章 Python中的列表与字典
+</h2><h3 id="61-创建列表"><a href="#61-%e5%88%9b%e5%bb%ba%e5%88%97%e8%a1%a8" class="header-anchor"></a>6.1 创建列表
+</h3><h3 id="62-访问列表元素"><a href="#62-%e8%ae%bf%e9%97%ae%e5%88%97%e8%a1%a8%e5%85%83%e7%b4%a0" class="header-anchor"></a>6.2 访问列表元素
+</h3><h3 id="63-确定列表长度"><a href="#63-%e7%a1%ae%e5%ae%9a%e5%88%97%e8%a1%a8%e9%95%bf%e5%ba%a6" class="header-anchor"></a>6.3 确定列表长度
+</h3><h3 id="64-为列表添加元素"><a href="#64-%e4%b8%ba%e5%88%97%e8%a1%a8%e6%b7%bb%e5%8a%a0%e5%85%83%e7%b4%a0" class="header-anchor"></a>6.4 为列表添加元素
+</h3><h3 id="65-删除列表元素"><a href="#65-%e5%88%a0%e9%99%a4%e5%88%97%e8%a1%a8%e5%85%83%e7%b4%a0" class="header-anchor"></a>6.5 删除列表元素
+</h3><h3 id="66-通过解析字符串创建列表"><a href="#66-%e9%80%9a%e8%bf%87%e8%a7%a3%e6%9e%90%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%88%9b%e5%bb%ba%e5%88%97%e8%a1%a8" class="header-anchor"></a>6.6 通过解析字符串创建列表
+</h3><h3 id="67-遍历列表"><a href="#67-%e9%81%8d%e5%8e%86%e5%88%97%e8%a1%a8" class="header-anchor"></a>6.7 遍历列表
+</h3><h3 id="68-枚举列表"><a href="#68-%e6%9e%9a%e4%b8%be%e5%88%97%e8%a1%a8" class="header-anchor"></a>6.8 枚举列表
+</h3><h3 id="69-列表排序"><a href="#69-%e5%88%97%e8%a1%a8%e6%8e%92%e5%ba%8f" class="header-anchor"></a>6.9 列表排序
+</h3><h3 id="610-分割列表"><a href="#610-%e5%88%86%e5%89%b2%e5%88%97%e8%a1%a8" class="header-anchor"></a>6.10 分割列表
+</h3><h3 id="611-将函数应用于列表"><a href="#611-%e5%b0%86%e5%87%bd%e6%95%b0%e5%ba%94%e7%94%a8%e4%ba%8e%e5%88%97%e8%a1%a8" class="header-anchor"></a>6.11 将函数应用于列表
+</h3><h3 id="612-创建字典"><a href="#612-%e5%88%9b%e5%bb%ba%e5%ad%97%e5%85%b8" class="header-anchor"></a>6.12 创建字典
+</h3><h3 id="613-访问字典"><a href="#613-%e8%ae%bf%e9%97%ae%e5%ad%97%e5%85%b8" class="header-anchor"></a>6.13 访问字典
+</h3><h3 id="614-删除字典元素"><a href="#614-%e5%88%a0%e9%99%a4%e5%ad%97%e5%85%b8%e5%85%83%e7%b4%a0" class="header-anchor"></a>6.14 删除字典元素
+</h3><h3 id="615-遍历字典"><a href="#615-%e9%81%8d%e5%8e%86%e5%ad%97%e5%85%b8" class="header-anchor"></a>6.15 遍历字典
+</h3><h2 id="第7章-python高级特性"><a href="#%e7%ac%ac7%e7%ab%a0-python%e9%ab%98%e7%ba%a7%e7%89%b9%e6%80%a7" class="header-anchor"></a>第7章 Python高级特性
+</h2><h3 id="71-格式化数字"><a href="#71-%e6%a0%bc%e5%bc%8f%e5%8c%96%e6%95%b0%e5%ad%97" class="header-anchor"></a>7.1 格式化数字
+</h3><h3 id="72-格式化时间和日期"><a href="#72-%e6%a0%bc%e5%bc%8f%e5%8c%96%e6%97%b6%e9%97%b4%e5%92%8c%e6%97%a5%e6%9c%9f" class="header-anchor"></a>7.2 格式化时间和日期
+</h3><h3 id="73-返回多个值"><a href="#73-%e8%bf%94%e5%9b%9e%e5%a4%9a%e4%b8%aa%e5%80%bc" class="header-anchor"></a>7.3 返回多个值
+</h3><h3 id="74-定义类"><a href="#74-%e5%ae%9a%e4%b9%89%e7%b1%bb" class="header-anchor"></a>7.4 定义类
+</h3><h3 id="75-定义方法"><a href="#75-%e5%ae%9a%e4%b9%89%e6%96%b9%e6%b3%95" class="header-anchor"></a>7.5 定义方法
+</h3><h3 id="76-继承"><a href="#76-%e7%bb%a7%e6%89%bf" class="header-anchor"></a>7.6 继承
+</h3><h3 id="77-向文件中写入内容"><a href="#77-%e5%90%91%e6%96%87%e4%bb%b6%e4%b8%ad%e5%86%99%e5%85%a5%e5%86%85%e5%ae%b9" class="header-anchor"></a>7.7 向文件中写入内容
+</h3><h3 id="78-读文件"><a href="#78-%e8%af%bb%e6%96%87%e4%bb%b6" class="header-anchor"></a>7.8 读文件
+</h3><h3 id="79-序列化"><a href="#79-%e5%ba%8f%e5%88%97%e5%8c%96" class="header-anchor"></a>7.9 序列化
+</h3><h3 id="710-异常处理"><a href="#710-%e5%bc%82%e5%b8%b8%e5%a4%84%e7%90%86" class="header-anchor"></a>7.10 异常处理
+</h3><h3 id="711-使用模块"><a href="#711-%e4%bd%bf%e7%94%a8%e6%a8%a1%e5%9d%97" class="header-anchor"></a>7.11 使用模块
+</h3><h3 id="712-随机数"><a href="#712-%e9%9a%8f%e6%9c%ba%e6%95%b0" class="header-anchor"></a>7.12 随机数
+</h3><h3 id="713-利用python发送web请求"><a href="#713-%e5%88%a9%e7%94%a8python%e5%8f%91%e9%80%81web%e8%af%b7%e6%b1%82" class="header-anchor"></a>7.13 利用Python发送Web请求
+</h3><h3 id="714-python的命令行参数"><a href="#714-python%e7%9a%84%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0" class="header-anchor"></a>7.14 Python的命令行参数
+</h3><h3 id="715-从python运行linux命令"><a href="#715-%e4%bb%8epython%e8%bf%90%e8%a1%8clinux%e5%91%bd%e4%bb%a4" class="header-anchor"></a>7.15 从Python运行Linux命令
+</h3><h3 id="716-从python发送电子邮件"><a href="#716-%e4%bb%8epython%e5%8f%91%e9%80%81%e7%94%b5%e5%ad%90%e9%82%ae%e4%bb%b6" class="header-anchor"></a>7.16 从Python发送电子邮件
+</h3><h3 id="717-利用python编写简单web服务器"><a href="#717-%e5%88%a9%e7%94%a8python%e7%bc%96%e5%86%99%e7%ae%80%e5%8d%95web%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-anchor"></a>7.17 利用Python编写简单Web服务器
+</h3><h3 id="718-让python无所事事"><a href="#718-%e8%ae%a9python%e6%97%a0%e6%89%80%e4%ba%8b%e4%ba%8b" class="header-anchor"></a>7.18 让Python无所事事
+</h3><h3 id="719-同时进行多件事情"><a href="#719-%e5%90%8c%e6%97%b6%e8%bf%9b%e8%a1%8c%e5%a4%9a%e4%bb%b6%e4%ba%8b%e6%83%85" class="header-anchor"></a>7.19 同时进行多件事情
+</h3><h3 id="720-将python应用于树莓派版minecraft"><a href="#720-%e5%b0%86python%e5%ba%94%e7%94%a8%e4%ba%8e%e6%a0%91%e8%8e%93%e6%b4%be%e7%89%88minecraft" class="header-anchor"></a>7.20 将Python应用于树莓派版Minecraft
+</h3><h3 id="721-解析json"><a href="#721-%e8%a7%a3%e6%9e%90json" class="header-anchor"></a>7.21 解析JSON
+</h3><h3 id="722-创建用户界面"><a href="#722-%e5%88%9b%e5%bb%ba%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2" class="header-anchor"></a>7.22 创建用户界面
+</h3><h3 id="723-使用正则表达式在文本中搜索"><a href="#723-%e4%bd%bf%e7%94%a8%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e5%9c%a8%e6%96%87%e6%9c%ac%e4%b8%ad%e6%90%9c%e7%b4%a2" class="header-anchor"></a>7.23 使用正则表达式在文本中搜索
+</h3><h3 id="724-使用正则表达式来验证数据输入"><a href="#724-%e4%bd%bf%e7%94%a8%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e6%9d%a5%e9%aa%8c%e8%af%81%e6%95%b0%e6%8d%ae%e8%be%93%e5%85%a5" class="header-anchor"></a>7.24 使用正则表达式来验证数据输入
+</h3><h3 id="725-使用正则表达式抓取网页"><a href="#725-%e4%bd%bf%e7%94%a8%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e6%8a%93%e5%8f%96%e7%bd%91%e9%a1%b5" class="header-anchor"></a>7.25 使用正则表达式抓取网页
+</h3><h2 id="第8章-机器视觉"><a href="#%e7%ac%ac8%e7%ab%a0-%e6%9c%ba%e5%99%a8%e8%a7%86%e8%a7%89" class="header-anchor"></a>第8章 机器视觉
+</h2><h3 id="81-安装simplecv"><a href="#81-%e5%ae%89%e8%a3%85simplecv" class="header-anchor"></a>8.1 安装SimpleCV
+</h3><h3 id="82-为机器视觉配置usb摄像头"><a href="#82-%e4%b8%ba%e6%9c%ba%e5%99%a8%e8%a7%86%e8%a7%89%e9%85%8d%e7%bd%aeusb%e6%91%84%e5%83%8f%e5%a4%b4" class="header-anchor"></a>8.2 为机器视觉配置USB摄像头
+</h3><h3 id="83-将树莓派的摄像头模块用于机器视觉"><a href="#83-%e5%b0%86%e6%a0%91%e8%8e%93%e6%b4%be%e7%9a%84%e6%91%84%e5%83%8f%e5%a4%b4%e6%a8%a1%e5%9d%97%e7%94%a8%e4%ba%8e%e6%9c%ba%e5%99%a8%e8%a7%86%e8%a7%89" class="header-anchor"></a>8.3 将树莓派的摄像头模块用于机器视觉
+</h3><h3 id="84-数硬币"><a href="#84-%e6%95%b0%e7%a1%ac%e5%b8%81" class="header-anchor"></a>8.4 数硬币
+</h3><h3 id="85-人脸检测"><a href="#85-%e4%ba%ba%e8%84%b8%e6%a3%80%e6%b5%8b" class="header-anchor"></a>8.5 人脸检测
+</h3><h3 id="86-运动检测"><a href="#86-%e8%bf%90%e5%8a%a8%e6%a3%80%e6%b5%8b" class="header-anchor"></a>8.6 运动检测
+</h3><h3 id="87-光学字符识别"><a href="#87-%e5%85%89%e5%ad%a6%e5%ad%97%e7%ac%a6%e8%af%86%e5%88%ab" class="header-anchor"></a>8.7 光学字符识别
+</h3><h2 id="第9章-硬件基础"><a href="#%e7%ac%ac9%e7%ab%a0-%e7%a1%ac%e4%bb%b6%e5%9f%ba%e7%a1%80" class="header-anchor"></a>第9章 硬件基础
+</h2><h3 id="91-gpio连接器使用说明"><a href="#91-gpio%e8%bf%9e%e6%8e%a5%e5%99%a8%e4%bd%bf%e7%94%a8%e8%af%b4%e6%98%8e" class="header-anchor"></a>9.1 GPIO连接器使用说明
+</h3><h3 id="92-使用gpio接口时树莓派的安全保护"><a href="#92-%e4%bd%bf%e7%94%a8gpio%e6%8e%a5%e5%8f%a3%e6%97%b6%e6%a0%91%e8%8e%93%e6%b4%be%e7%9a%84%e5%ae%89%e5%85%a8%e4%bf%9d%e6%8a%a4" class="header-anchor"></a>9.2 使用GPIO接口时树莓派的安全保护
+</h3><h3 id="93-配置i2c"><a href="#93-%e9%85%8d%e7%bd%aei2c" class="header-anchor"></a>9.3 配置I2C
+</h3><h3 id="94-使用i2c工具"><a href="#94-%e4%bd%bf%e7%94%a8i2c%e5%b7%a5%e5%85%b7" class="header-anchor"></a>9.4 使用I2C工具
+</h3><h3 id="95-配置spi"><a href="#95-%e9%85%8d%e7%bd%aespi" class="header-anchor"></a>9.5 配置SPI
+</h3><h3 id="96-安装pyserial以便通过python访问串口"><a href="#96-%e5%ae%89%e8%a3%85pyserial%e4%bb%a5%e4%be%bf%e9%80%9a%e8%bf%87python%e8%ae%bf%e9%97%ae%e4%b8%b2%e5%8f%a3" class="header-anchor"></a>9.6 安装PySerial以便通过Python访问串口
+</h3><h3 id="97-安装minicom以检测串口"><a href="#97-%e5%ae%89%e8%a3%85minicom%e4%bb%a5%e6%a3%80%e6%b5%8b%e4%b8%b2%e5%8f%a3" class="header-anchor"></a>9.7 安装Minicom以检测串口
+</h3><h3 id="98-使用带有跳线的面包板"><a href="#98-%e4%bd%bf%e7%94%a8%e5%b8%a6%e6%9c%89%e8%b7%b3%e7%ba%bf%e7%9a%84%e9%9d%a2%e5%8c%85%e6%9d%bf" class="header-anchor"></a>9.8 使用带有跳线的面包板
+</h3><h3 id="99-使用树莓派的排线连接面包板"><a href="#99-%e4%bd%bf%e7%94%a8%e6%a0%91%e8%8e%93%e6%b4%be%e7%9a%84%e6%8e%92%e7%ba%bf%e8%bf%9e%e6%8e%a5%e9%9d%a2%e5%8c%85%e6%9d%bf" class="header-anchor"></a>9.9 使用树莓派的排线连接面包板
+</h3><h3 id="910-使用树莓派squid"><a href="#910-%e4%bd%bf%e7%94%a8%e6%a0%91%e8%8e%93%e6%b4%besquid" class="header-anchor"></a>9.10 使用树莓派Squid
+</h3><h3 id="911-使用raspberry-squid按钮"><a href="#911-%e4%bd%bf%e7%94%a8raspberry-squid%e6%8c%89%e9%92%ae" class="header-anchor"></a>9.11 使用Raspberry Squid按钮
+</h3><h3 id="912-利用两个电阻器将5v信号转换为33v"><a href="#912-%e5%88%a9%e7%94%a8%e4%b8%a4%e4%b8%aa%e7%94%b5%e9%98%bb%e5%99%a8%e5%b0%865v%e4%bf%a1%e5%8f%b7%e8%bd%ac%e6%8d%a2%e4%b8%ba33v" class="header-anchor"></a>9.12 利用两个电阻器将5V信号转换为3.3V
+</h3><h3 id="913-利用电平转换模块将5v信号转换为33v"><a href="#913-%e5%88%a9%e7%94%a8%e7%94%b5%e5%b9%b3%e8%bd%ac%e6%8d%a2%e6%a8%a1%e5%9d%97%e5%b0%865v%e4%bf%a1%e5%8f%b7%e8%bd%ac%e6%8d%a2%e4%b8%ba33v" class="header-anchor"></a>9.13 利用电平转换模块将5V信号转换为3.3V
+</h3><h3 id="914-利用电池为树莓派供电"><a href="#914-%e5%88%a9%e7%94%a8%e7%94%b5%e6%b1%a0%e4%b8%ba%e6%a0%91%e8%8e%93%e6%b4%be%e4%be%9b%e7%94%b5" class="header-anchor"></a>9.14 利用电池为树莓派供电
+</h3><h3 id="915-利用锂电池为树莓派供电"><a href="#915-%e5%88%a9%e7%94%a8%e9%94%82%e7%94%b5%e6%b1%a0%e4%b8%ba%e6%a0%91%e8%8e%93%e6%b4%be%e4%be%9b%e7%94%b5" class="header-anchor"></a>9.15 利用锂电池为树莓派供电
+</h3><h3 id="916-sense-hat入门指南"><a href="#916-sense-hat%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97" class="header-anchor"></a>9.16 Sense HAT入门指南
+</h3><h3 id="917-explorer-hat-pro入门指南"><a href="#917-explorer-hat-pro%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97" class="header-anchor"></a>9.17 Explorer HAT Pro入门指南
+</h3><h3 id="918-raspirobot-board入门指南"><a href="#918-raspirobot-board%e5%85%a5%e9%97%a8%e6%8c%87%e5%8d%97" class="header-anchor"></a>9.18 RasPiRobot Board入门指南
+</h3><h3 id="919-使用pi-plate原型板"><a href="#919-%e4%bd%bf%e7%94%a8pi-plate%e5%8e%9f%e5%9e%8b%e6%9d%bf" class="header-anchor"></a>9.19 使用Pi Plate原型板
+</h3><h3 id="920-制作树莓派扩展板"><a href="#920-%e5%88%b6%e4%bd%9c%e6%a0%91%e8%8e%93%e6%b4%be%e6%89%a9%e5%b1%95%e6%9d%bf" class="header-anchor"></a>9.20 制作树莓派扩展板
+</h3><h3 id="921-树莓派zero与w型树莓派zero"><a href="#921-%e6%a0%91%e8%8e%93%e6%b4%bezero%e4%b8%8ew%e5%9e%8b%e6%a0%91%e8%8e%93%e6%b4%bezero" class="header-anchor"></a>9.21 树莓派Zero与W型树莓派Zero
+</h3><h2 id="第10章-控制硬件"><a href="#%e7%ac%ac10%e7%ab%a0-%e6%8e%a7%e5%88%b6%e7%a1%ac%e4%bb%b6" class="header-anchor"></a>第10章 控制硬件
+</h2><h3 id="101-连接led"><a href="#101-%e8%bf%9e%e6%8e%a5led" class="header-anchor"></a>10.1 连接LED
+</h3><h3 id="102-让gpio引脚进入安全状态"><a href="#102-%e8%ae%a9gpio%e5%bc%95%e8%84%9a%e8%bf%9b%e5%85%a5%e5%ae%89%e5%85%a8%e7%8a%b6%e6%80%81" class="header-anchor"></a>10.2 让GPIO引脚进入安全状态
+</h3><h3 id="103-控制led的亮度"><a href="#103-%e6%8e%a7%e5%88%b6led%e7%9a%84%e4%ba%ae%e5%ba%a6" class="header-anchor"></a>10.3 控制LED的亮度
+</h3><h3 id="104-利用晶体管开关大功率直流设备"><a href="#104-%e5%88%a9%e7%94%a8%e6%99%b6%e4%bd%93%e7%ae%a1%e5%bc%80%e5%85%b3%e5%a4%a7%e5%8a%9f%e7%8e%87%e7%9b%b4%e6%b5%81%e8%ae%be%e5%a4%87" class="header-anchor"></a>10.4 利用晶体管开关大功率直流设备
+</h3><h3 id="105-使用继电器控制大功率设备的开关"><a href="#105-%e4%bd%bf%e7%94%a8%e7%bb%a7%e7%94%b5%e5%99%a8%e6%8e%a7%e5%88%b6%e5%a4%a7%e5%8a%9f%e7%8e%87%e8%ae%be%e5%a4%87%e7%9a%84%e5%bc%80%e5%85%b3" class="header-anchor"></a>10.5 使用继电器控制大功率设备的开关
+</h3><h3 id="106-控制高压交流设备"><a href="#106-%e6%8e%a7%e5%88%b6%e9%ab%98%e5%8e%8b%e4%ba%a4%e6%b5%81%e8%ae%be%e5%a4%87" class="header-anchor"></a>10.6 控制高压交流设备
+</h3><h3 id="107-用android手机和蓝牙控制硬件"><a href="#107-%e7%94%a8android%e6%89%8b%e6%9c%ba%e5%92%8c%e8%93%9d%e7%89%99%e6%8e%a7%e5%88%b6%e7%a1%ac%e4%bb%b6" class="header-anchor"></a>10.7 用Android手机和蓝牙控制硬件
+</h3><h3 id="108-编写用于控制开关的用户界面"><a href="#108-%e7%bc%96%e5%86%99%e7%94%a8%e4%ba%8e%e6%8e%a7%e5%88%b6%e5%bc%80%e5%85%b3%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2" class="header-anchor"></a>10.8 编写用于控制开关的用户界面
+</h3><h3 id="109-编写控制led和电机的pwm功率的用户界面"><a href="#109-%e7%bc%96%e5%86%99%e6%8e%a7%e5%88%b6led%e5%92%8c%e7%94%b5%e6%9c%ba%e7%9a%84pwm%e5%8a%9f%e7%8e%87%e7%9a%84%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2" class="header-anchor"></a>10.9 编写控制LED和电机的PWM功率的用户界面
+</h3><h3 id="1010-改变rgb-led的颜色"><a href="#1010-%e6%94%b9%e5%8f%98rgb-led%e7%9a%84%e9%a2%9c%e8%89%b2" class="header-anchor"></a>10.10 改变RGB LED的颜色
+</h3><h3 id="1011-将模拟仪表用作显示器"><a href="#1011-%e5%b0%86%e6%a8%a1%e6%8b%9f%e4%bb%aa%e8%a1%a8%e7%94%a8%e4%bd%9c%e6%98%be%e7%a4%ba%e5%99%a8" class="header-anchor"></a>10.11 将模拟仪表用作显示器
+</h3><h2 id="第11章-电机"><a href="#%e7%ac%ac11%e7%ab%a0-%e7%94%b5%e6%9c%ba" class="header-anchor"></a>第11章 电机
+</h2><h3 id="111-控制伺服电机"><a href="#111-%e6%8e%a7%e5%88%b6%e4%bc%ba%e6%9c%8d%e7%94%b5%e6%9c%ba" class="header-anchor"></a>11.1 控制伺服电机
+</h3><h3 id="112-精确控制伺服电机"><a href="#112-%e7%b2%be%e7%a1%ae%e6%8e%a7%e5%88%b6%e4%bc%ba%e6%9c%8d%e7%94%b5%e6%9c%ba" class="header-anchor"></a>11.2 精确控制伺服电机
+</h3><h3 id="113-精确控制多台伺服电机"><a href="#113-%e7%b2%be%e7%a1%ae%e6%8e%a7%e5%88%b6%e5%a4%9a%e5%8f%b0%e4%bc%ba%e6%9c%8d%e7%94%b5%e6%9c%ba" class="header-anchor"></a>11.3 精确控制多台伺服电机
+</h3><h3 id="114-控制直流电机的速度"><a href="#114-%e6%8e%a7%e5%88%b6%e7%9b%b4%e6%b5%81%e7%94%b5%e6%9c%ba%e7%9a%84%e9%80%9f%e5%ba%a6" class="header-anchor"></a>11.4 控制直流电机的速度
+</h3><h3 id="115-控制直流电机的方向"><a href="#115-%e6%8e%a7%e5%88%b6%e7%9b%b4%e6%b5%81%e7%94%b5%e6%9c%ba%e7%9a%84%e6%96%b9%e5%90%91" class="header-anchor"></a>11.5 控制直流电机的方向
+</h3><h3 id="116-使用单极步进电机"><a href="#116-%e4%bd%bf%e7%94%a8%e5%8d%95%e6%9e%81%e6%ad%a5%e8%bf%9b%e7%94%b5%e6%9c%ba" class="header-anchor"></a>11.6 使用单极步进电机
+</h3><h3 id="117-使用双极步进电机"><a href="#117-%e4%bd%bf%e7%94%a8%e5%8f%8c%e6%9e%81%e6%ad%a5%e8%bf%9b%e7%94%b5%e6%9c%ba" class="header-anchor"></a>11.7 使用双极步进电机
+</h3><h3 id="118-利用步进电机hat驱动双极步进电机"><a href="#118-%e5%88%a9%e7%94%a8%e6%ad%a5%e8%bf%9b%e7%94%b5%e6%9c%bahat%e9%a9%b1%e5%8a%a8%e5%8f%8c%e6%9e%81%e6%ad%a5%e8%bf%9b%e7%94%b5%e6%9c%ba" class="header-anchor"></a>11.8 利用步进电机HAT驱动双极步进电机
+</h3><h3 id="119-使用raspirobot-board驱动双极步进电机"><a href="#119-%e4%bd%bf%e7%94%a8raspirobot-board%e9%a9%b1%e5%8a%a8%e5%8f%8c%e6%9e%81%e6%ad%a5%e8%bf%9b%e7%94%b5%e6%9c%ba" class="header-anchor"></a>11.9 使用RasPiRobot Board驱动双极步进电机
+</h3><h3 id="1110-打造一款简单的机器人小车"><a href="#1110-%e6%89%93%e9%80%a0%e4%b8%80%e6%ac%be%e7%ae%80%e5%8d%95%e7%9a%84%e6%9c%ba%e5%99%a8%e4%ba%ba%e5%b0%8f%e8%bd%a6" class="header-anchor"></a>11.10 打造一款简单的机器人小车
+</h3><h2 id="第12章-数字输入"><a href="#%e7%ac%ac12%e7%ab%a0-%e6%95%b0%e5%ad%97%e8%be%93%e5%85%a5" class="header-anchor"></a>第12章 数字输入
+</h2><h3 id="121-连接按钮开关"><a href="#121-%e8%bf%9e%e6%8e%a5%e6%8c%89%e9%92%ae%e5%bc%80%e5%85%b3" class="header-anchor"></a>12.1 连接按钮开关
+</h3><h3 id="122-通过按钮开关切换开关状态"><a href="#122-%e9%80%9a%e8%bf%87%e6%8c%89%e9%92%ae%e5%bc%80%e5%85%b3%e5%88%87%e6%8d%a2%e5%bc%80%e5%85%b3%e7%8a%b6%e6%80%81" class="header-anchor"></a>12.2 通过按钮开关切换开关状态
+</h3><h3 id="123-使用双位拨动开关或滑动开关"><a href="#123-%e4%bd%bf%e7%94%a8%e5%8f%8c%e4%bd%8d%e6%8b%a8%e5%8a%a8%e5%bc%80%e5%85%b3%e6%88%96%e6%bb%91%e5%8a%a8%e5%bc%80%e5%85%b3" class="header-anchor"></a>12.3 使用双位拨动开关或滑动开关
+</h3><h3 id="124-使用三位拨动开关"><a href="#124-%e4%bd%bf%e7%94%a8%e4%b8%89%e4%bd%8d%e6%8b%a8%e5%8a%a8%e5%bc%80%e5%85%b3" class="header-anchor"></a>12.4 使用三位拨动开关
+</h3><h3 id="125-按钮去抖"><a href="#125-%e6%8c%89%e9%92%ae%e5%8e%bb%e6%8a%96" class="header-anchor"></a>12.5 按钮去抖
+</h3><h3 id="126-使用外部上拉电阻器"><a href="#126-%e4%bd%bf%e7%94%a8%e5%a4%96%e9%83%a8%e4%b8%8a%e6%8b%89%e7%94%b5%e9%98%bb%e5%99%a8" class="header-anchor"></a>12.6 使用外部上拉电阻器
+</h3><h3 id="127-使用旋转正交编码器"><a href="#127-%e4%bd%bf%e7%94%a8%e6%97%8b%e8%bd%ac%e6%ad%a3%e4%ba%a4%e7%bc%96%e7%a0%81%e5%99%a8" class="header-anchor"></a>12.7 使用旋转（正交）编码器
+</h3><h3 id="128-使用数字键盘"><a href="#128-%e4%bd%bf%e7%94%a8%e6%95%b0%e5%ad%97%e9%94%ae%e7%9b%98" class="header-anchor"></a>12.8 使用数字键盘
+</h3><h3 id="129-检测移动"><a href="#129-%e6%a3%80%e6%b5%8b%e7%a7%bb%e5%8a%a8" class="header-anchor"></a>12.9 检测移动
+</h3><h3 id="1210-为树莓派添加gps模块"><a href="#1210-%e4%b8%ba%e6%a0%91%e8%8e%93%e6%b4%be%e6%b7%bb%e5%8a%a0gps%e6%a8%a1%e5%9d%97" class="header-anchor"></a>12.10 为树莓派添加GPS模块
+</h3><h3 id="1211-拦截按键"><a href="#1211-%e6%8b%a6%e6%88%aa%e6%8c%89%e9%94%ae" class="header-anchor"></a>12.11 拦截按键
+</h3><h3 id="1212-拦截鼠标移动"><a href="#1212-%e6%8b%a6%e6%88%aa%e9%bc%a0%e6%a0%87%e7%a7%bb%e5%8a%a8" class="header-anchor"></a>12.12 拦截鼠标移动
+</h3><h3 id="1213-使用实时时钟模块"><a href="#1213-%e4%bd%bf%e7%94%a8%e5%ae%9e%e6%97%b6%e6%97%b6%e9%92%9f%e6%a8%a1%e5%9d%97" class="header-anchor"></a>12.13 使用实时时钟模块
+</h3><h3 id="1214-为树莓派提供重启按钮"><a href="#1214-%e4%b8%ba%e6%a0%91%e8%8e%93%e6%b4%be%e6%8f%90%e4%be%9b%e9%87%8d%e5%90%af%e6%8c%89%e9%92%ae" class="header-anchor"></a>12.14 为树莓派提供重启按钮
+</h3><h2 id="第13章-传感器"><a href="#%e7%ac%ac13%e7%ab%a0-%e4%bc%a0%e6%84%9f%e5%99%a8" class="header-anchor"></a>第13章 传感器
+</h2><h3 id="131-使用电阻式传感器"><a href="#131-%e4%bd%bf%e7%94%a8%e7%94%b5%e9%98%bb%e5%bc%8f%e4%bc%a0%e6%84%9f%e5%99%a8" class="header-anchor"></a>13.1 使用电阻式传感器
+</h3><h3 id="132-测量亮度"><a href="#132-%e6%b5%8b%e9%87%8f%e4%ba%ae%e5%ba%a6" class="header-anchor"></a>13.2 测量亮度
+</h3><h3 id="133-利用热敏电阻器测量温度"><a href="#133-%e5%88%a9%e7%94%a8%e7%83%ad%e6%95%8f%e7%94%b5%e9%98%bb%e5%99%a8%e6%b5%8b%e9%87%8f%e6%b8%a9%e5%ba%a6" class="header-anchor"></a>13.3 利用热敏电阻器测量温度
+</h3><h3 id="134-检测甲烷"><a href="#134-%e6%a3%80%e6%b5%8b%e7%94%b2%e7%83%b7" class="header-anchor"></a>13.4 检测甲烷
+</h3><h3 id="135-测量二氧化碳浓度"><a href="#135-%e6%b5%8b%e9%87%8f%e4%ba%8c%e6%b0%a7%e5%8c%96%e7%a2%b3%e6%b5%93%e5%ba%a6" class="header-anchor"></a>13.5 测量二氧化碳浓度
+</h3><h3 id="136-测量电压"><a href="#136-%e6%b5%8b%e9%87%8f%e7%94%b5%e5%8e%8b" class="header-anchor"></a>13.6 测量电压
+</h3><h3 id="137-为测量而降低电压"><a href="#137-%e4%b8%ba%e6%b5%8b%e9%87%8f%e8%80%8c%e9%99%8d%e4%bd%8e%e7%94%b5%e5%8e%8b" class="header-anchor"></a>13.7 为测量而降低电压
+</h3><h3 id="138-使用电阻式传感器与adc"><a href="#138-%e4%bd%bf%e7%94%a8%e7%94%b5%e9%98%bb%e5%bc%8f%e4%bc%a0%e6%84%9f%e5%99%a8%e4%b8%8eadc" class="header-anchor"></a>13.8 使用电阻式传感器与ADC
+</h3><h3 id="139-使用adc测量温度"><a href="#139-%e4%bd%bf%e7%94%a8adc%e6%b5%8b%e9%87%8f%e6%b8%a9%e5%ba%a6" class="header-anchor"></a>13.9 使用ADC测量温度
+</h3><h3 id="1310-测量树莓派的cpu温度"><a href="#1310-%e6%b5%8b%e9%87%8f%e6%a0%91%e8%8e%93%e6%b4%be%e7%9a%84cpu%e6%b8%a9%e5%ba%a6" class="header-anchor"></a>13.10 测量树莓派的CPU温度
+</h3><h3 id="1311-利用sense-hat测量温度湿度和气压"><a href="#1311-%e5%88%a9%e7%94%a8sense-hat%e6%b5%8b%e9%87%8f%e6%b8%a9%e5%ba%a6%e6%b9%bf%e5%ba%a6%e5%92%8c%e6%b0%94%e5%8e%8b" class="header-anchor"></a>13.11 利用Sense HAT测量温度、湿度和气压
+</h3><h3 id="1312-利用数字传感器测量温度"><a href="#1312-%e5%88%a9%e7%94%a8%e6%95%b0%e5%ad%97%e4%bc%a0%e6%84%9f%e5%99%a8%e6%b5%8b%e9%87%8f%e6%b8%a9%e5%ba%a6" class="header-anchor"></a>13.12 利用数字传感器测量温度
+</h3><h3 id="1313-利用mma8452q模块测量加速度"><a href="#1313-%e5%88%a9%e7%94%a8mma8452q%e6%a8%a1%e5%9d%97%e6%b5%8b%e9%87%8f%e5%8a%a0%e9%80%9f%e5%ba%a6" class="header-anchor"></a>13.13 利用MMA8452Q模块测量加速度
+</h3><h3 id="1314-使用sense-hat检测磁北"><a href="#1314-%e4%bd%bf%e7%94%a8sense-hat%e6%a3%80%e6%b5%8b%e7%a3%81%e5%8c%97" class="header-anchor"></a>13.14 使用Sense HAT检测磁北
+</h3><h3 id="1315-使用sense-hat的惯性管理单元"><a href="#1315-%e4%bd%bf%e7%94%a8sense-hat%e7%9a%84%e6%83%af%e6%80%a7%e7%ae%a1%e7%90%86%e5%8d%95%e5%85%83" class="header-anchor"></a>13.15 使用Sense HAT的惯性管理单元
+</h3><h3 id="1316-利用簧片开关检测磁场"><a href="#1316-%e5%88%a9%e7%94%a8%e7%b0%a7%e7%89%87%e5%bc%80%e5%85%b3%e6%a3%80%e6%b5%8b%e7%a3%81%e5%9c%ba" class="header-anchor"></a>13.16 利用簧片开关检测磁场
+</h3><h3 id="1317-利用sense-hat感应磁场"><a href="#1317-%e5%88%a9%e7%94%a8sense-hat%e6%84%9f%e5%ba%94%e7%a3%81%e5%9c%ba" class="header-anchor"></a>13.17 利用Sense HAT感应磁场
+</h3><h3 id="1318-测量距离"><a href="#1318-%e6%b5%8b%e9%87%8f%e8%b7%9d%e7%a6%bb" class="header-anchor"></a>13.18 测量距离
+</h3><h3 id="1319-使用飞行时间传感器测量距离"><a href="#1319-%e4%bd%bf%e7%94%a8%e9%a3%9e%e8%a1%8c%e6%97%b6%e9%97%b4%e4%bc%a0%e6%84%9f%e5%99%a8%e6%b5%8b%e9%87%8f%e8%b7%9d%e7%a6%bb" class="header-anchor"></a>13.19 使用飞行时间传感器测量距离
+</h3><h3 id="1320-电容式触摸传感技术"><a href="#1320-%e7%94%b5%e5%ae%b9%e5%bc%8f%e8%a7%a6%e6%91%b8%e4%bc%a0%e6%84%9f%e6%8a%80%e6%9c%af" class="header-anchor"></a>13.20 电容式触摸传感技术
+</h3><h3 id="1321-用rfid读写器读取智能卡"><a href="#1321-%e7%94%a8rfid%e8%af%bb%e5%86%99%e5%99%a8%e8%af%bb%e5%8f%96%e6%99%ba%e8%83%bd%e5%8d%a1" class="header-anchor"></a>13.21 用RFID读写器读取智能卡
+</h3><h3 id="1322-显示传感器的值"><a href="#1322-%e6%98%be%e7%a4%ba%e4%bc%a0%e6%84%9f%e5%99%a8%e7%9a%84%e5%80%bc" class="header-anchor"></a>13.22 显示传感器的值
+</h3><h3 id="1323-利用usb闪存驱动器记录日志"><a href="#1323-%e5%88%a9%e7%94%a8usb%e9%97%aa%e5%ad%98%e9%a9%b1%e5%8a%a8%e5%99%a8%e8%ae%b0%e5%bd%95%e6%97%a5%e5%bf%97" class="header-anchor"></a>13.23 利用USB闪存驱动器记录日志
+</h3><h2 id="第14章-显示设备"><a href="#%e7%ac%ac14%e7%ab%a0-%e6%98%be%e7%a4%ba%e8%ae%be%e5%a4%87" class="header-anchor"></a>第14章 显示设备
+</h2><h3 id="141-使用四位led显示设备"><a href="#141-%e4%bd%bf%e7%94%a8%e5%9b%9b%e4%bd%8dled%e6%98%be%e7%a4%ba%e8%ae%be%e5%a4%87" class="header-anchor"></a>14.1 使用四位LED显示设备
+</h3><h3 id="142-在i2c-led矩阵上面显示消息"><a href="#142-%e5%9c%a8i2c-led%e7%9f%a9%e9%98%b5%e4%b8%8a%e9%9d%a2%e6%98%be%e7%a4%ba%e6%b6%88%e6%81%af" class="header-anchor"></a>14.2 在I2C LED矩阵上面显示消息
+</h3><h3 id="143-使用sense-hat-led矩阵显示器"><a href="#143-%e4%bd%bf%e7%94%a8sense-hat-led%e7%9f%a9%e9%98%b5%e6%98%be%e7%a4%ba%e5%99%a8" class="header-anchor"></a>14.3 使用Sense HAT LED矩阵显示器
+</h3><h3 id="144-在alphanumeric-lcd-hat上显示消息"><a href="#144-%e5%9c%a8alphanumeric-lcd-hat%e4%b8%8a%e6%98%be%e7%a4%ba%e6%b6%88%e6%81%af" class="header-anchor"></a>14.4 在Alphanumeric LCD HAT上显示消息
+</h3><h3 id="145-使用oled图形显示器"><a href="#145-%e4%bd%bf%e7%94%a8oled%e5%9b%be%e5%bd%a2%e6%98%be%e7%a4%ba%e5%99%a8" class="header-anchor"></a>14.5 使用OLED图形显示器
+</h3><h3 id="146-使用可寻址的rgb-led灯条"><a href="#146-%e4%bd%bf%e7%94%a8%e5%8f%af%e5%af%bb%e5%9d%80%e7%9a%84rgb-led%e7%81%af%e6%9d%a1" class="header-anchor"></a>14.6 使用可寻址的RGB LED灯条
+</h3><h3 id="147-使用pimoroni-unicorn-hat"><a href="#147-%e4%bd%bf%e7%94%a8pimoroni-unicorn-hat" class="header-anchor"></a>14.7 使用Pimoroni Unicorn HAT
+</h3><h3 id="148-使用epaper显示屏"><a href="#148-%e4%bd%bf%e7%94%a8epaper%e6%98%be%e7%a4%ba%e5%b1%8f" class="header-anchor"></a>14.8 使用ePaper显示屏
+</h3><h2 id="第15章-音频设备"><a href="#%e7%ac%ac15%e7%ab%a0-%e9%9f%b3%e9%a2%91%e8%ae%be%e5%a4%87" class="header-anchor"></a>第15章 音频设备
+</h2><h3 id="151-连接一个扬声器"><a href="#151-%e8%bf%9e%e6%8e%a5%e4%b8%80%e4%b8%aa%e6%89%ac%e5%a3%b0%e5%99%a8" class="header-anchor"></a>15.1 连接一个扬声器
+</h3><h3 id="152-控制声音的输出位置"><a href="#152-%e6%8e%a7%e5%88%b6%e5%a3%b0%e9%9f%b3%e7%9a%84%e8%be%93%e5%87%ba%e4%bd%8d%e7%bd%ae" class="header-anchor"></a>15.2 控制声音的输出位置
+</h3><h3 id="153-通过命令行播放声音"><a href="#153-%e9%80%9a%e8%bf%87%e5%91%bd%e4%bb%a4%e8%a1%8c%e6%92%ad%e6%94%be%e5%a3%b0%e9%9f%b3" class="header-anchor"></a>15.3 通过命令行播放声音
+</h3><h3 id="154-通过python程序播放声音"><a href="#154-%e9%80%9a%e8%bf%87python%e7%a8%8b%e5%ba%8f%e6%92%ad%e6%94%be%e5%a3%b0%e9%9f%b3" class="header-anchor"></a>15.4 通过Python程序播放声音
+</h3><h3 id="155-使用usb麦克风"><a href="#155-%e4%bd%bf%e7%94%a8usb%e9%ba%a6%e5%85%8b%e9%a3%8e" class="header-anchor"></a>15.5 使用USB麦克风
+</h3><h3 id="156-播放蜂鸣声"><a href="#156-%e6%92%ad%e6%94%be%e8%9c%82%e9%b8%a3%e5%a3%b0" class="header-anchor"></a>15.6 播放蜂鸣声
+</h3><h2 id="第16章-物联网"><a href="#%e7%ac%ac16%e7%ab%a0-%e7%89%a9%e8%81%94%e7%bd%91" class="header-anchor"></a>第16章 物联网
+</h2><h3 id="161-使用web接口控制gpio输出"><a href="#161-%e4%bd%bf%e7%94%a8web%e6%8e%a5%e5%8f%a3%e6%8e%a7%e5%88%b6gpio%e8%be%93%e5%87%ba" class="header-anchor"></a>16.1 使用Web接口控制GPIO输出
+</h3><h3 id="162-在网页上显示传感器读数"><a href="#162-%e5%9c%a8%e7%bd%91%e9%a1%b5%e4%b8%8a%e6%98%be%e7%a4%ba%e4%bc%a0%e6%84%9f%e5%99%a8%e8%af%bb%e6%95%b0" class="header-anchor"></a>16.2 在网页上显示传感器读数
+</h3><h3 id="163-node-red入门"><a href="#163-node-red%e5%85%a5%e9%97%a8" class="header-anchor"></a>16.3 Node-RED入门
+</h3><h3 id="164-使用ifttt发送电子邮件及其他通知"><a href="#164-%e4%bd%bf%e7%94%a8ifttt%e5%8f%91%e9%80%81%e7%94%b5%e5%ad%90%e9%82%ae%e4%bb%b6%e5%8f%8a%e5%85%b6%e4%bb%96%e9%80%9a%e7%9f%a5" class="header-anchor"></a>16.4 使用IFTTT发送电子邮件及其他通知
+</h3><h3 id="165-利用thingspeak发送推文"><a href="#165-%e5%88%a9%e7%94%a8thingspeak%e5%8f%91%e9%80%81%e6%8e%a8%e6%96%87" class="header-anchor"></a>16.5 利用ThingSpeak发送推文
+</h3><h3 id="166-cheerlights"><a href="#166-cheerlights" class="header-anchor"></a>16.6 CheerLights
+</h3><h3 id="167-向thingspeak发送传感器数据"><a href="#167-%e5%90%91thingspeak%e5%8f%91%e9%80%81%e4%bc%a0%e6%84%9f%e5%99%a8%e6%95%b0%e6%8d%ae" class="header-anchor"></a>16.7 向ThingSpeak发送传感器数据
+</h3><h3 id="168-使用dweet和ifttt响应推文"><a href="#168-%e4%bd%bf%e7%94%a8dweet%e5%92%8cifttt%e5%93%8d%e5%ba%94%e6%8e%a8%e6%96%87" class="header-anchor"></a>16.8 使用Dweet和IFTTT响应推文
+</h3><h2 id="第17章-家庭自动化"><a href="#%e7%ac%ac17%e7%ab%a0-%e5%ae%b6%e5%ba%ad%e8%87%aa%e5%8a%a8%e5%8c%96" class="header-anchor"></a>第17章 家庭自动化
+</h2><h3 id="171-通过mosquitto将树莓派打造成mqtt代理"><a href="#171-%e9%80%9a%e8%bf%87mosquitto%e5%b0%86%e6%a0%91%e8%8e%93%e6%b4%be%e6%89%93%e9%80%a0%e6%88%90mqtt%e4%bb%a3%e7%90%86" class="header-anchor"></a>17.1 通过Mosquitto将树莓派打造成MQTT代理
+</h3><h3 id="172-组合使用node-red与mqtt服务器"><a href="#172-%e7%bb%84%e5%90%88%e4%bd%bf%e7%94%a8node-red%e4%b8%8emqtt%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-anchor"></a>17.2 组合使用Node-RED与MQTT服务器
+</h3><h3 id="173-刷写sonoff-wi-fi智能开关使其适用于mqtt"><a href="#173-%e5%88%b7%e5%86%99sonoff-wi-fi%e6%99%ba%e8%83%bd%e5%bc%80%e5%85%b3%e4%bd%bf%e5%85%b6%e9%80%82%e7%94%a8%e4%ba%8emqtt" class="header-anchor"></a>17.3 刷写Sonoff Wi-Fi智能开关，使其适用于MQTT
+</h3><h3 id="174-配置sonoff-wi-fi智能开关"><a href="#174-%e9%85%8d%e7%bd%aesonoff-wi-fi%e6%99%ba%e8%83%bd%e5%bc%80%e5%85%b3" class="header-anchor"></a>17.4 配置Sonoff Wi-Fi智能开关
+</h3><h3 id="175-通过mqtt使用sonoff网络开关"><a href="#175-%e9%80%9a%e8%bf%87mqtt%e4%bd%bf%e7%94%a8sonoff%e7%bd%91%e7%bb%9c%e5%bc%80%e5%85%b3" class="header-anchor"></a>17.5 通过MQTT使用Sonoff网络开关
+</h3><h3 id="176-利用node-red制作sonoff闪烁开关"><a href="#176-%e5%88%a9%e7%94%a8node-red%e5%88%b6%e4%bd%9csonoff%e9%97%aa%e7%83%81%e5%bc%80%e5%85%b3" class="header-anchor"></a>17.6 利用Node-RED制作Sonoff闪烁开关
+</h3><h3 id="177-node-red-dashboard扩展"><a href="#177-node-red-dashboard%e6%89%a9%e5%b1%95" class="header-anchor"></a>17.7 Node-RED Dashboard扩展
+</h3><h3 id="178-基于node-red的预定事件"><a href="#178-%e5%9f%ba%e4%ba%8enode-red%e7%9a%84%e9%a2%84%e5%ae%9a%e4%ba%8b%e4%bb%b6" class="header-anchor"></a>17.8 基于Node-RED的预定事件
+</h3><h3 id="179-通过wemos-d1发布mqtt消息"><a href="#179-%e9%80%9a%e8%bf%87wemos-d1%e5%8f%91%e5%b8%83mqtt%e6%b6%88%e6%81%af" class="header-anchor"></a>17.9 通过Wemos D1发布MQTT消息
+</h3><h3 id="1710-在node-red中使用wemos-d1"><a href="#1710-%e5%9c%a8node-red%e4%b8%ad%e4%bd%bf%e7%94%a8wemos-d1" class="header-anchor"></a>17.10 在Node-RED中使用Wemos D1
+</h3><h2 id="第18章-arduino与树莓派"><a href="#%e7%ac%ac18%e7%ab%a0-arduino%e4%b8%8e%e6%a0%91%e8%8e%93%e6%b4%be" class="header-anchor"></a>第18章 Arduino与树莓派
+</h2><h3 id="181-通过树莓派对arduino进行编程"><a href="#181-%e9%80%9a%e8%bf%87%e6%a0%91%e8%8e%93%e6%b4%be%e5%af%b9arduino%e8%bf%9b%e8%a1%8c%e7%bc%96%e7%a8%8b" class="header-anchor"></a>18.1 通过树莓派对Arduino进行编程
+</h3><h3 id="182-利用serial-monitor与arduino进行通信"><a href="#182-%e5%88%a9%e7%94%a8serial-monitor%e4%b8%8earduino%e8%bf%9b%e8%a1%8c%e9%80%9a%e4%bf%a1" class="header-anchor"></a>18.2 利用Serial Monitor与Arduino进行通信
+</h3><h3 id="183-配置pyfirmata以便通过树莓派来控制arduino"><a href="#183-%e9%85%8d%e7%bd%aepyfirmata%e4%bb%a5%e4%be%bf%e9%80%9a%e8%bf%87%e6%a0%91%e8%8e%93%e6%b4%be%e6%9d%a5%e6%8e%a7%e5%88%b6arduino" class="header-anchor"></a>18.3 配置PyFirmata以便通过树莓派来控制Arduino
+</h3><h3 id="184-通过树莓派对arduino的数字输出进行写操作"><a href="#184-%e9%80%9a%e8%bf%87%e6%a0%91%e8%8e%93%e6%b4%be%e5%af%b9arduino%e7%9a%84%e6%95%b0%e5%ad%97%e8%be%93%e5%87%ba%e8%bf%9b%e8%a1%8c%e5%86%99%e6%93%8d%e4%bd%9c" class="header-anchor"></a>18.4 通过树莓派对Arduino的数字输出进行写操作
+</h3><h3 id="185-使用pyfirmata与ttl串口"><a href="#185-%e4%bd%bf%e7%94%a8pyfirmata%e4%b8%8ettl%e4%b8%b2%e5%8f%a3" class="header-anchor"></a>18.5 使用PyFirmata与TTL串口
+</h3><h3 id="186-使用pyfirmata读取arduino的数字输入"><a href="#186-%e4%bd%bf%e7%94%a8pyfirmata%e8%af%bb%e5%8f%96arduino%e7%9a%84%e6%95%b0%e5%ad%97%e8%be%93%e5%85%a5" class="header-anchor"></a>18.6 使用PyFirmata读取Arduino的数字输入
+</h3><h3 id="187-利用pyfirmata读取arduino的模拟输入"><a href="#187-%e5%88%a9%e7%94%a8pyfirmata%e8%af%bb%e5%8f%96arduino%e7%9a%84%e6%a8%a1%e6%8b%9f%e8%be%93%e5%85%a5" class="header-anchor"></a>18.7 利用PyFirmata读取Arduino的模拟输入
+</h3><h3 id="188-模拟输出pwm与pyfirmata"><a href="#188-%e6%a8%a1%e6%8b%9f%e8%be%93%e5%87%bapwm%e4%b8%8epyfirmata" class="header-anchor"></a>18.8 模拟输出(PWM)与PyFirmata
+</h3><h3 id="189-利用pyfirmata控制伺服电机"><a href="#189-%e5%88%a9%e7%94%a8pyfirmata%e6%8e%a7%e5%88%b6%e4%bc%ba%e6%9c%8d%e7%94%b5%e6%9c%ba" class="header-anchor"></a>18.9 利用PyFirmata控制伺服电机
+</h3><h3 id="1810-在树莓派上使用小型arduino"><a href="#1810-%e5%9c%a8%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%8a%e4%bd%bf%e7%94%a8%e5%b0%8f%e5%9e%8barduino" class="header-anchor"></a>18.10 在树莓派上使用小型Arduino
+</h3><h3 id="1811-使用支持wi-fi的小型arduino兼容系统esp8266"><a href="#1811-%e4%bd%bf%e7%94%a8%e6%94%af%e6%8c%81wi-fi%e7%9a%84%e5%b0%8f%e5%9e%8barduino%e5%85%bc%e5%ae%b9%e7%b3%bb%e7%bb%9fesp8266" class="header-anchor"></a>18.11 使用支持Wi-Fi的小型Arduino兼容系统(ESP8266)
+</h3><h2 id="附录a-配件与供应商"><a href="#%e9%99%84%e5%bd%95a-%e9%85%8d%e4%bb%b6%e4%b8%8e%e4%be%9b%e5%ba%94%e5%95%86" class="header-anchor"></a>附录A 配件与供应商
+</h2><h3 id="a2-成型设备与套件"><a href="#a2-%e6%88%90%e5%9e%8b%e8%ae%be%e5%a4%87%e4%b8%8e%e5%a5%97%e4%bb%b6" class="header-anchor"></a>A.2 成型设备与套件
+</h3><h3 id="a3-集成电路"><a href="#a3-%e9%9b%86%e6%88%90%e7%94%b5%e8%b7%af" class="header-anchor"></a>A.3 集成电路
+</h3><h3 id="a4-光电器件"><a href="#a4-%e5%85%89%e7%94%b5%e5%99%a8%e4%bb%b6" class="header-anchor"></a>A.4 光电器件
+</h3><h3 id="a5-模块"><a href="#a5-%e6%a8%a1%e5%9d%97" class="header-anchor"></a>A.5 模块
+</h3><h3 id="a6-杂项"><a href="#a6-%e6%9d%82%e9%a1%b9" class="header-anchor"></a>A.6 杂项
+</h3><h2 id="附录b-树莓派引脚"><a href="#%e9%99%84%e5%bd%95b-%e6%a0%91%e8%8e%93%e6%b4%be%e5%bc%95%e8%84%9a" class="header-anchor"></a>附录B 树莓派引脚
+</h2><h3 id="b2-b型树莓派第2版与a型树莓派"><a href="#b2-b%e5%9e%8b%e6%a0%91%e8%8e%93%e6%b4%be%e7%ac%ac2%e7%89%88%e4%b8%8ea%e5%9e%8b%e6%a0%91%e8%8e%93%e6%b4%be" class="header-anchor"></a>B.2 B型树莓派第2版与A型树莓派
+</h3><h3 id="b3-b型树莓派第1版"><a href="#b3-b%e5%9e%8b%e6%a0%91%e8%8e%93%e6%b4%be%e7%ac%ac1%e7%89%88" class="header-anchor"></a>B.3 B型树莓派第1版
+</h3><h2 id="作者简介"><a href="#%e4%bd%9c%e8%80%85%e7%ae%80%e4%bb%8b" class="header-anchor"></a>作者简介
+</h2><h2 id="封面简介"><a href="#%e5%b0%81%e9%9d%a2%e7%ae%80%e4%bb%8b" class="header-anchor"></a>封面简介
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="29-利用rdp远程控制树莓派-1"><a href="#29-%e5%88%a9%e7%94%a8rdp%e8%bf%9c%e7%a8%8b%e6%8e%a7%e5%88%b6%e6%a0%91%e8%8e%93%e6%b4%be-1" class="header-anchor"></a>2.9 利用RDP远程控制树莓派
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 利用RDP远程控制树莓派  ^6733360-7U08Bi1Eg
+- 💭 回去试试
+- ⏱ 2024-09-06 13:03:57</p></blockquote>
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2025 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.87d72694fb97c84cb5cbf9b1a64d476a38e04a5706618a6ffe5b89c7db00488f.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

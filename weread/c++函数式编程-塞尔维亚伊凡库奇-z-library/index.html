@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] C++函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library)\n书名： C++函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library) 作者： 简介： 出版时间 ISBN： 分类： 出版社： PC地址：https://weread.qq.com/web/reader/7e242383643425f44573645695145667942365736754f367378434c6e444c52bee 高亮划线 封面 书名 版权 前言 目录 第1章 函数式编程简介 📌 这里的差别只在于命令式(Imperative)和声明式(Declarative)编程的不同。命令式意味着显式地要求计算机需要做什么，说明计算最终结果需要执行的每一个步骤。声明式则需要说明需要做什么，编程语言来决定如何做。只要定义了什么是数列的和，编程语言即可利用定义计算给定数列的和。 ⏱ 2025-02-28 10:32:54 ^CB-DW6EiQEfyB6W6uO6sxCLnDLR-6-3653-3795\n">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/c&#43;&#43;%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B-%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A%E4%BC%8A%E5%87%A1%E5%BA%93%E5%A5%87-z-library/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] C++函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library)\n书名： C++函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library) 作者： 简介： 出版时间 ISBN： 分类： 出版社： PC地址：https://weread.qq.com/web/reader/7e242383643425f44573645695145667942365736754f367378434c6e444c52bee 高亮划线 封面 书名 版权 前言 目录 第1章 函数式编程简介 📌 这里的差别只在于命令式(Imperative)和声明式(Declarative)编程的不同。命令式意味着显式地要求计算机需要做什么，说明计算最终结果需要执行的每一个步骤。声明式则需要说明需要做什么，编程语言来决定如何做。只要定义了什么是数列的和，编程语言即可利用定义计算给定数列的和。 ⏱ 2025-02-28 10:32:54 ^CB-DW6EiQEfyB6W6uO6sxCLnDLR-6-3653-3795\n">
+<meta property='og:url' content='https://blog.bugxch.top/weread/c&#43;&#43;%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B-%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A%E4%BC%8A%E5%87%A1%E5%BA%93%E5%A5%87-z-library/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] C++函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library)\n书名： C++函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library) 作者： 简介： 出版时间 ISBN： 分类： 出版社： PC地址：https://weread.qq.com/web/reader/7e242383643425f44573645695145667942365736754f367378434c6e444c52bee 高亮划线 封面 书名 版权 前言 目录 第1章 函数式编程简介 📌 这里的差别只在于命令式(Imperative)和声明式(Declarative)编程的不同。命令式意味着显式地要求计算机需要做什么，说明计算最终结果需要执行的每一个步骤。声明式则需要说明需要做什么，编程语言来决定如何做。只要定义了什么是数列的和，编程语言即可利用定义计算给定数列的和。 ⏱ 2025-02-28 10:32:54 ^CB-DW6EiQEfyB6W6uO6sxCLnDLR-6-3653-3795\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_1ef23741c9bee174.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#元数据">元数据</a></li>
+    <li><a href="#高亮划线">高亮划线</a>
+      <ol>
+        <li><a href="#封面">封面</a></li>
+        <li><a href="#书名">书名</a></li>
+        <li><a href="#版权">版权</a></li>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#目录">目录</a></li>
+        <li><a href="#第1章-函数式编程简介">第1章 函数式编程简介</a>
+          <ol>
+            <li>
+              <ol>
+                <li><a href="#111-与面向对象编程的关系">1.1.1 与面向对象编程的关系</a></li>
+                <li><a href="#112-命令式与声明式编程的比较">1.1.2 命令式与声明式编程的比较</a></li>
+              </ol>
+            </li>
+            <li><a href="#12-纯函数pure-functions">1.2 纯函数（Pure functions）</a>
+              <ol>
+                <li><a href="#121-避免可变状态">1.2.1 避免可变状态</a></li>
+              </ol>
+            </li>
+            <li><a href="#13-以函数方式思考问题">1.3 以函数方式思考问题</a></li>
+            <li><a href="#14-函数式编程的优点">1.4 函数式编程的优点</a>
+              <ol>
+                <li><a href="#141-代码简洁易读">1.4.1 代码简洁易读</a></li>
+                <li><a href="#143-持续优化">1.4.3 持续优化</a></li>
+              </ol>
+            </li>
+            <li><a href="#16-将会学到什么">1.6 将会学到什么</a></li>
+            <li><a href="#总结">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第2章-函数式编程之旅">第2章 函数式编程之旅</a>
+          <ol>
+            <li><a href="#22-stl实例">2.2 STL实例</a>
+              <ol>
+                <li><a href="#222-折叠folding">2.2.2 折叠（Folding）</a></li>
+                <li><a href="#223-删除字符串空白符">2.2.3 删除字符串空白符</a></li>
+                <li><a href="#224-基于谓词分割集合">2.2.4 基于谓词分割集合</a></li>
+                <li><a href="#225-过滤filtering和转换transforming">2.2.5 过滤（Filtering）和转换（Transforming）</a></li>
+              </ol>
+            </li>
+            <li><a href="#23-stl算法的可组合性">2.3 STL算法的可组合性</a></li>
+            <li><a href="#24-编写自己的高阶函数">2.4 编写自己的高阶函数</a>
+              <ol>
+                <li><a href="#242-用循环实现">2.4.2 用循环实现</a></li>
+                <li><a href="#243-递归recursion和尾调用优化tailcall-optimization">2.4.3 递归（Recursion）和尾调用优化（Tail－call optimization）</a></li>
+                <li><a href="#244-使用折叠实现">2.4.4 使用折叠实现</a></li>
+              </ol>
+            </li>
+            <li><a href="#总结-1">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第3章-函数对象">第3章 函数对象</a>
+          <ol>
+            <li>
+              <ol>
+                <li><a href="#311-自动推断返回值类型">3.1.1 自动推断返回值类型</a></li>
+                <li><a href="#312-函数指针">3.1.2 函数指针</a></li>
+                <li><a href="#313-调用操作符重载">3.1.3 调用操作符重载</a></li>
+                <li><a href="#314-创建通用函数对象">3.1.4 创建通用函数对象</a></li>
+              </ol>
+            </li>
+            <li><a href="#32-lambda和闭包closure">3.2 lambda和闭包（Closure）</a>
+              <ol>
+                <li><a href="#321-lambda语法">3.2.1 lambda语法</a></li>
+                <li><a href="#322-lambda详解">3.2.2 lambda详解</a></li>
+                <li><a href="#323-在lambda中创建任意成员变量">3.2.3 在lambda中创建任意成员变量</a></li>
+                <li><a href="#324-通用lambda表达式">3.2.4 通用lambda表达式</a></li>
+              </ol>
+            </li>
+            <li><a href="#33-编写比lambda更简洁的函数对象">3.3 编写比lambda更简洁的函数对象</a>
+              <ol>
+                <li><a href="#331-stl中的操作符函数对象">3.3.1 STL中的操作符函数对象</a></li>
+                <li><a href="#332-其他库中的操作符函数对象">3.3.2 其他库中的操作符函数对象</a></li>
+              </ol>
+            </li>
+            <li><a href="#34-用stdfunction包装函数对象">3.4 用std：：function包装函数对象</a></li>
+            <li><a href="#总结-2">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第4章-以旧函数创建新函数">第4章 以旧函数创建新函数</a>
+          <ol>
+            <li>
+              <ol>
+                <li><a href="#411-把二元函数转换成一元函数的通用方法">4.1.1 把二元函数转换成一元函数的通用方法</a></li>
+                <li><a href="#412-使用stdbind绑定值到特定的函数参数">4.1.2 使用std：：bind绑定值到特定的函数参数</a></li>
+                <li><a href="#413-二元函数参数的反转">4.1.3 二元函数参数的反转</a></li>
+                <li><a href="#414-对多参数函数使用stdbind">4.1.4 对多参数函数使用std：：bind</a></li>
+                <li><a href="#415-使用lambda替代stdbind">4.1.5 使用lambda替代std：：bind</a></li>
+              </ol>
+            </li>
+            <li><a href="#42-柯里化currying看待函数不同的方式">4.2 柯里化（Currying）：看待函数不同的方式</a>
+              <ol>
+                <li><a href="#421-创建柯里化函数的简单方法">4.2.1 创建柯里化函数的简单方法</a></li>
+                <li><a href="#422-数据库访问柯里化">4.2.2 数据库访问柯里化</a></li>
+                <li><a href="#423-柯里化与偏函数应用">4.2.3 柯里化与偏函数应用</a></li>
+              </ol>
+            </li>
+            <li><a href="#43-函数组合">4.3 函数组合</a></li>
+            <li><a href="#44-函数提升复习">4.4 函数提升（复习）</a>
+              <ol>
+                <li><a href="#441-键值对列表反转">4.4.1 键值对列表反转</a></li>
+              </ol>
+            </li>
+            <li><a href="#总结-3">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第5章-纯洁性避免可变状态">第5章 纯洁性：避免可变状态</a>
+          <ol>
+            <li><a href="#52-纯函数和引用透明">5.2 纯函数和引用透明</a></li>
+            <li><a href="#53-无副作用编程">5.3 无副作用编程</a></li>
+            <li><a href="#54-并发环境中的可变状态与不可变状态">5.4 并发环境中的可变状态与不可变状态</a></li>
+            <li><a href="#55-const的重要性">5.5 const的重要性</a>
+              <ol>
+                <li><a href="#551-逻辑const与内部const">5.5.1 逻辑const与内部const</a></li>
+                <li><a href="#552-对于临时值优化成员函数">5.5.2 对于临时值优化成员函数</a></li>
+                <li><a href="#553-const的缺陷">5.5.3 const的缺陷</a></li>
+              </ol>
+            </li>
+            <li><a href="#总结-4">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第6章-惰性求值">第6章 惰性求值</a>
+          <ol>
+            <li><a href="#61-c的惰性">6.1 C＋＋的惰性</a></li>
+            <li><a href="#62-惰性作为一种优化技术">6.2 惰性作为一种优化技术</a>
+              <ol>
+                <li><a href="#622-用户接口中的列表视图">6.2.2 用户接口中的列表视图</a></li>
+                <li><a href="#623-通过缓存函数结果修剪递归树">6.2.3 通过缓存函数结果修剪递归树</a></li>
+                <li><a href="#624-动态编程作为惰性形式">6.2.4 动态编程作为惰性形式</a></li>
+              </ol>
+            </li>
+            <li><a href="#63-通用记忆化generalized-memoization">6.3 通用记忆化（Generalized memoization）</a></li>
+            <li><a href="#64-表达式模板与惰性字符串拼接">6.4 表达式模板与惰性字符串拼接</a>
+              <ol>
+                <li><a href="#641-纯洁性与表达式模板">6.4.1 纯洁性与表达式模板</a></li>
+              </ol>
+            </li>
+            <li><a href="#总结-5">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第7章-range">第7章 range</a>
+          <ol>
+            <li><a href="#71-range简介">7.1 range简介</a></li>
+            <li><a href="#72-创建数据的只读视图">7.2 创建数据的只读视图</a>
+              <ol>
+                <li><a href="#722-range的transform函数">7.2.2 range的transform函数</a></li>
+                <li><a href="#723-range惰性求值">7.2.3 range惰性求值</a></li>
+              </ol>
+            </li>
+            <li><a href="#73-修改range中的值">7.3 修改range中的值</a></li>
+            <li><a href="#74-定界range和无限range">7.4 定界range和无限range</a>
+              <ol>
+                <li><a href="#741-用定界range优化用于输入的range">7.4.1 用定界range优化用于输入的range</a></li>
+                <li><a href="#742-用哨兵创建无限range">7.4.2 用哨兵创建无限range</a></li>
+              </ol>
+            </li>
+            <li><a href="#75-用range统计词频">7.5 用range统计词频</a></li>
+            <li><a href="#总结-6">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第8章-函数式数据结构">第8章 函数式数据结构</a>
+          <ol>
+            <li>
+              <ol>
+                <li><a href="#811-在表头添加和删除元素">8.1.1 在表头添加和删除元素</a></li>
+                <li><a href="#812-在链表末尾添加和删除元素">8.1.2 在链表末尾添加和删除元素</a></li>
+                <li><a href="#813-在链表中间添加和删除元素">8.1.3 在链表中间添加和删除元素</a></li>
+                <li><a href="#814-内存管理">8.1.4 内存管理</a></li>
+              </ol>
+            </li>
+            <li><a href="#82-不可变类向量结构">8.2 不可变类向量结构</a>
+              <ol>
+                <li><a href="#821-位图向量树中的元素查找">8.2.1 位图向量树中的元素查找</a></li>
+                <li><a href="#823-位图向量树的修改">8.2.3 位图向量树的修改</a></li>
+                <li><a href="#824-在位图向量树的末尾删除元素">8.2.4 在位图向量树的末尾删除元素</a></li>
+              </ol>
+            </li>
+            <li><a href="#总结-7">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第9章-代数数据类型及模式匹配">第9章 代数数据类型及模式匹配</a>
+          <ol>
+            <li><a href="#91-代数数据类型">9.1 代数数据类型</a>
+              <ol>
+                <li><a href="#911-通过继承实现和类型">9.1.1 通过继承实现和类型</a></li>
+                <li><a href="#912-通过union和stdvariant实现和类型">9.1.2 通过union和std：：variant实现和类型</a></li>
+                <li><a href="#913-特定状态的实现">9.1.3 特定状态的实现</a></li>
+                <li><a href="#914-特殊的和类型optional">9.1.4 特殊的和类型：Optional</a></li>
+                <li><a href="#915-和类型用于错误处理">9.1.5 和类型用于错误处理</a></li>
+              </ol>
+            </li>
+            <li><a href="#92-使用代数数据类型进行域建模">9.2 使用代数数据类型进行域建模</a>
+              <ol>
+                <li><a href="#922-更复杂的方法自上而下的设计">9.2.2 更复杂的方法：自上而下的设计</a></li>
+              </ol>
+            </li>
+            <li><a href="#93-使用模式匹配更好地处理代数数据类型">9.3 使用模式匹配更好地处理代数数据类型</a></li>
+            <li><a href="#94-mach7的强大匹配功能">9.4 Mach7的强大匹配功能</a></li>
+            <li><a href="#总结-8">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第10章-monad">第10章 monad</a>
+          <ol>
+            <li>
+              <ol>
+                <li><a href="#1011-处理可选值">10.1.1 处理可选值</a></li>
+              </ol>
+            </li>
+            <li><a href="#102-monad更强大的仿函数">10.2 monad：更强大的仿函数</a></li>
+            <li><a href="#103-基本的例子">10.3 基本的例子</a></li>
+            <li><a href="#104-range与monad的嵌套使用">10.4 range与monad的嵌套使用</a></li>
+            <li><a href="#105-错误处理">10.5 错误处理</a>
+              <ol>
+                <li><a href="#1051-stdoptionalt作为monad">10.5.1 std：：optional〈T〉作为monad</a></li>
+                <li><a href="#1052-expectedte作为monad">10.5.2 expected〈T，E〉作为monad</a></li>
+                <li><a href="#1053-try-monad">10.5.3 try monad</a></li>
+              </ol>
+            </li>
+            <li><a href="#106-monad状态处理">10.6 monad状态处理</a></li>
+            <li><a href="#107-并发和延续monad">10.7 并发和延续monad</a>
+              <ol>
+                <li><a href="#1071-future作为monad">10.7.1 future作为monad</a></li>
+                <li><a href="#1072-future的实现">10.7.2 future的实现</a></li>
+              </ol>
+            </li>
+            <li><a href="#108-monad组合">10.8 monad组合</a></li>
+            <li><a href="#总结-9">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第11章-模板元编程">第11章 模板元编程</a>
+          <ol>
+            <li><a href="#111-编译时操作类型">11.1 编译时操作类型</a>
+              <ol>
+                <li><a href="#1111-推断类型调试">11.1.1 推断类型调试</a></li>
+                <li><a href="#1112-编译时的模式匹配">11.1.2 编译时的模式匹配</a></li>
+                <li><a href="#1113-提供类型的元信息">11.1.3 提供类型的元信息</a></li>
+              </ol>
+            </li>
+            <li><a href="#113-构造科里化函数">11.3 构造科里化函数</a>
+              <ol>
+                <li><a href="#1131-调用所有可调用的">11.3.1 调用所有可调用的</a></li>
+              </ol>
+            </li>
+            <li><a href="#114-dsl构建块">11.4 DSL构建块</a></li>
+            <li><a href="#总结-10">总结</a></li>
+          </ol>
+        </li>
+        <li><a href="#第12章-并发系统的函数式设计">第12章 并发系统的函数式设计</a>
+          <ol>
+            <li><a href="#121-actor模型组件思想">12.1 Actor模型：组件思想</a></li>
+            <li><a href="#122-创建简单的消息源">12.2 创建简单的消息源</a></li>
+            <li><a href="#123-将反应流建模为monad">12.3 将反应流建模为monad</a>
+              <ol>
+                <li><a href="#1231-创建宿sink接收消息">12.3.1 创建宿（Sink）接收消息</a></li>
+                <li><a href="#1232-转换反应流">12.3.2 转换反应流</a></li>
+                <li><a href="#1233-创建给定值的流">12.3.3 创建给定值的流</a></li>
+                <li><a href="#1234-连接流">12.3.4 连接流</a></li>
+              </ol>
+            </li>
+            <li><a href="#124-过滤反应流">12.4 过滤反应流</a></li>
+            <li><a href="#125-反应流的错误处理">12.5 反应流的错误处理</a></li>
+            <li><a href="#126-响应客户端">12.6 响应客户端</a></li>
+            <li><a href="#127-创建状态可修改的actor">12.7 创建状态可修改的Actor</a></li>
+            <li><a href="#128-用actor编写分布式系统">12.8 用Actor编写分布式系统</a></li>
+          </ol>
+        </li>
+        <li><a href="#第13章-测试与调试">第13章 测试与调试</a>
+          <ol>
+            <li><a href="#131-程序编译正确吗">13.1 程序编译正确吗？</a></li>
+            <li><a href="#132-单元测试与纯函数">13.2 单元测试与纯函数</a></li>
+            <li><a href="#133-自动产生测试">13.3 自动产生测试</a>
+              <ol>
+                <li><a href="#1332-基于规则的测试">13.3.2 基于规则的测试</a></li>
+                <li><a href="#1333-比较测试">13.3.3 比较测试</a></li>
+              </ol>
+            </li>
+            <li><a href="#134-测试基于monad的并发系统">13.4 测试基于monad的并发系统</a></li>
+            <li><a href="#总结-11">总结</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#读书笔记">读书笔记</a></li>
+    <li><a href="#本书评论">本书评论</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/c&#43;&#43;%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B-%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A%E4%BC%8A%E5%87%A1%E5%BA%93%E5%A5%87-z-library/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] C++函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library)</p>
+<ul>
+<li><img src="https://res.weread.qq.com/wrepub/CB_2el5Jv5Gm06Y6hK6gS20vDEH_parsecover"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" C&#43;&#43;函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library)|200"
+	
+	
+></li>
+<li>书名： C++函数式编程 ([塞尔维亚]伊凡·库奇) (Z-Library)</li>
+<li>作者：</li>
+<li>简介：</li>
+<li>出版时间</li>
+<li>ISBN：</li>
+<li>分类：</li>
+<li>出版社：</li>
+<li>PC地址：https://weread.qq.com/web/reader/7e242383643425f44573645695145667942365736754f367378434c6e444c52bee</li>
+</ul></blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="书名"><a href="#%e4%b9%a6%e5%90%8d" class="header-anchor"></a>书名
+</h2><h2 id="版权"><a href="#%e7%89%88%e6%9d%83" class="header-anchor"></a>版权
+</h2><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><h2 id="目录"><a href="#%e7%9b%ae%e5%bd%95" class="header-anchor"></a>目录
+</h2><h2 id="第1章-函数式编程简介"><a href="#%e7%ac%ac1%e7%ab%a0-%e5%87%bd%e6%95%b0%e5%bc%8f%e7%bc%96%e7%a8%8b%e7%ae%80%e4%bb%8b" class="header-anchor"></a>第1章 函数式编程简介
+</h2><blockquote>
+<p>📌 这里的差别只在于命令式(Imperative)和声明式(Declarative)编程的不同。命令式意味着显式地要求计算机需要做什么，说明计算最终结果需要执行的每一个步骤。声明式则需要说明需要做什么，编程语言来决定如何做。只要定义了什么是数列的和，编程语言即可利用定义计算给定数列的和。
+⏱ 2025-02-28 10:32:54 ^CB-DW6EiQEfyB6W6uO6sxCLnDLR-6-3653-3795</p></blockquote>
+<h4 id="111-与面向对象编程的关系"><a href="#111-%e4%b8%8e%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%bc%96%e7%a8%8b%e7%9a%84%e5%85%b3%e7%b3%bb" class="header-anchor"></a>1.1.1 与面向对象编程的关系
+</h4><h4 id="112-命令式与声明式编程的比较"><a href="#112-%e5%91%bd%e4%bb%a4%e5%bc%8f%e4%b8%8e%e5%a3%b0%e6%98%8e%e5%bc%8f%e7%bc%96%e7%a8%8b%e7%9a%84%e6%af%94%e8%be%83" class="header-anchor"></a>1.1.2 命令式与声明式编程的比较
+</h4><h3 id="12-纯函数pure-functions"><a href="#12-%e7%ba%af%e5%87%bd%e6%95%b0pure-functions" class="header-anchor"></a>1.2 纯函数（Pure functions）
+</h3><h4 id="121-避免可变状态"><a href="#121-%e9%81%bf%e5%85%8d%e5%8f%af%e5%8f%98%e7%8a%b6%e6%80%81" class="header-anchor"></a>1.2.1 避免可变状态
+</h4><h3 id="13-以函数方式思考问题"><a href="#13-%e4%bb%a5%e5%87%bd%e6%95%b0%e6%96%b9%e5%bc%8f%e6%80%9d%e8%80%83%e9%97%ae%e9%a2%98" class="header-anchor"></a>1.3 以函数方式思考问题
+</h3><h3 id="14-函数式编程的优点"><a href="#14-%e5%87%bd%e6%95%b0%e5%bc%8f%e7%bc%96%e7%a8%8b%e7%9a%84%e4%bc%98%e7%82%b9" class="header-anchor"></a>1.4 函数式编程的优点
+</h3><h4 id="141-代码简洁易读"><a href="#141-%e4%bb%a3%e7%a0%81%e7%ae%80%e6%b4%81%e6%98%93%e8%af%bb" class="header-anchor"></a>1.4.1 代码简洁易读
+</h4><h4 id="143-持续优化"><a href="#143-%e6%8c%81%e7%bb%ad%e4%bc%98%e5%8c%96" class="header-anchor"></a>1.4.3 持续优化
+</h4><h3 id="16-将会学到什么"><a href="#16-%e5%b0%86%e4%bc%9a%e5%ad%a6%e5%88%b0%e4%bb%80%e4%b9%88" class="header-anchor"></a>1.6 将会学到什么
+</h3><h3 id="总结"><a href="#%e6%80%bb%e7%bb%93" class="header-anchor"></a>总结
+</h3><h2 id="第2章-函数式编程之旅"><a href="#%e7%ac%ac2%e7%ab%a0-%e5%87%bd%e6%95%b0%e5%bc%8f%e7%bc%96%e7%a8%8b%e4%b9%8b%e6%97%85" class="header-anchor"></a>第2章 函数式编程之旅
+</h2><h3 id="22-stl实例"><a href="#22-stl%e5%ae%9e%e4%be%8b" class="header-anchor"></a>2.2 STL实例
+</h3><h4 id="222-折叠folding"><a href="#222-%e6%8a%98%e5%8f%a0folding" class="header-anchor"></a>2.2.2 折叠（Folding）
+</h4><h4 id="223-删除字符串空白符"><a href="#223-%e5%88%a0%e9%99%a4%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%a9%ba%e7%99%bd%e7%ac%a6" class="header-anchor"></a>2.2.3 删除字符串空白符
+</h4><h4 id="224-基于谓词分割集合"><a href="#224-%e5%9f%ba%e4%ba%8e%e8%b0%93%e8%af%8d%e5%88%86%e5%89%b2%e9%9b%86%e5%90%88" class="header-anchor"></a>2.2.4 基于谓词分割集合
+</h4><h4 id="225-过滤filtering和转换transforming"><a href="#225-%e8%bf%87%e6%bb%a4filtering%e5%92%8c%e8%bd%ac%e6%8d%a2transforming" class="header-anchor"></a>2.2.5 过滤（Filtering）和转换（Transforming）
+</h4><h3 id="23-stl算法的可组合性"><a href="#23-stl%e7%ae%97%e6%b3%95%e7%9a%84%e5%8f%af%e7%bb%84%e5%90%88%e6%80%a7" class="header-anchor"></a>2.3 STL算法的可组合性
+</h3><h3 id="24-编写自己的高阶函数"><a href="#24-%e7%bc%96%e5%86%99%e8%87%aa%e5%b7%b1%e7%9a%84%e9%ab%98%e9%98%b6%e5%87%bd%e6%95%b0" class="header-anchor"></a>2.4 编写自己的高阶函数
+</h3><h4 id="242-用循环实现"><a href="#242-%e7%94%a8%e5%be%aa%e7%8e%af%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>2.4.2 用循环实现
+</h4><h4 id="243-递归recursion和尾调用优化tailcall-optimization"><a href="#243-%e9%80%92%e5%bd%92recursion%e5%92%8c%e5%b0%be%e8%b0%83%e7%94%a8%e4%bc%98%e5%8c%96tailcall-optimization" class="header-anchor"></a>2.4.3 递归（Recursion）和尾调用优化（Tail－call optimization）
+</h4><h4 id="244-使用折叠实现"><a href="#244-%e4%bd%bf%e7%94%a8%e6%8a%98%e5%8f%a0%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>2.4.4 使用折叠实现
+</h4><h3 id="总结-1"><a href="#%e6%80%bb%e7%bb%93-1" class="header-anchor"></a>总结
+</h3><h2 id="第3章-函数对象"><a href="#%e7%ac%ac3%e7%ab%a0-%e5%87%bd%e6%95%b0%e5%af%b9%e8%b1%a1" class="header-anchor"></a>第3章 函数对象
+</h2><h4 id="311-自动推断返回值类型"><a href="#311-%e8%87%aa%e5%8a%a8%e6%8e%a8%e6%96%ad%e8%bf%94%e5%9b%9e%e5%80%bc%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>3.1.1 自动推断返回值类型
+</h4><h4 id="312-函数指针"><a href="#312-%e5%87%bd%e6%95%b0%e6%8c%87%e9%92%88" class="header-anchor"></a>3.1.2 函数指针
+</h4><h4 id="313-调用操作符重载"><a href="#313-%e8%b0%83%e7%94%a8%e6%93%8d%e4%bd%9c%e7%ac%a6%e9%87%8d%e8%bd%bd" class="header-anchor"></a>3.1.3 调用操作符重载
+</h4><h4 id="314-创建通用函数对象"><a href="#314-%e5%88%9b%e5%bb%ba%e9%80%9a%e7%94%a8%e5%87%bd%e6%95%b0%e5%af%b9%e8%b1%a1" class="header-anchor"></a>3.1.4 创建通用函数对象
+</h4><h3 id="32-lambda和闭包closure"><a href="#32-lambda%e5%92%8c%e9%97%ad%e5%8c%85closure" class="header-anchor"></a>3.2 lambda和闭包（Closure）
+</h3><h4 id="321-lambda语法"><a href="#321-lambda%e8%af%ad%e6%b3%95" class="header-anchor"></a>3.2.1 lambda语法
+</h4><h4 id="322-lambda详解"><a href="#322-lambda%e8%af%a6%e8%a7%a3" class="header-anchor"></a>3.2.2 lambda详解
+</h4><h4 id="323-在lambda中创建任意成员变量"><a href="#323-%e5%9c%a8lambda%e4%b8%ad%e5%88%9b%e5%bb%ba%e4%bb%bb%e6%84%8f%e6%88%90%e5%91%98%e5%8f%98%e9%87%8f" class="header-anchor"></a>3.2.3 在lambda中创建任意成员变量
+</h4><h4 id="324-通用lambda表达式"><a href="#324-%e9%80%9a%e7%94%a8lambda%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>3.2.4 通用lambda表达式
+</h4><h3 id="33-编写比lambda更简洁的函数对象"><a href="#33-%e7%bc%96%e5%86%99%e6%af%94lambda%e6%9b%b4%e7%ae%80%e6%b4%81%e7%9a%84%e5%87%bd%e6%95%b0%e5%af%b9%e8%b1%a1" class="header-anchor"></a>3.3 编写比lambda更简洁的函数对象
+</h3><h4 id="331-stl中的操作符函数对象"><a href="#331-stl%e4%b8%ad%e7%9a%84%e6%93%8d%e4%bd%9c%e7%ac%a6%e5%87%bd%e6%95%b0%e5%af%b9%e8%b1%a1" class="header-anchor"></a>3.3.1 STL中的操作符函数对象
+</h4><h4 id="332-其他库中的操作符函数对象"><a href="#332-%e5%85%b6%e4%bb%96%e5%ba%93%e4%b8%ad%e7%9a%84%e6%93%8d%e4%bd%9c%e7%ac%a6%e5%87%bd%e6%95%b0%e5%af%b9%e8%b1%a1" class="header-anchor"></a>3.3.2 其他库中的操作符函数对象
+</h4><h3 id="34-用stdfunction包装函数对象"><a href="#34-%e7%94%a8stdfunction%e5%8c%85%e8%a3%85%e5%87%bd%e6%95%b0%e5%af%b9%e8%b1%a1" class="header-anchor"></a>3.4 用std：：function包装函数对象
+</h3><h3 id="总结-2"><a href="#%e6%80%bb%e7%bb%93-2" class="header-anchor"></a>总结
+</h3><h2 id="第4章-以旧函数创建新函数"><a href="#%e7%ac%ac4%e7%ab%a0-%e4%bb%a5%e6%97%a7%e5%87%bd%e6%95%b0%e5%88%9b%e5%bb%ba%e6%96%b0%e5%87%bd%e6%95%b0" class="header-anchor"></a>第4章 以旧函数创建新函数
+</h2><h4 id="411-把二元函数转换成一元函数的通用方法"><a href="#411-%e6%8a%8a%e4%ba%8c%e5%85%83%e5%87%bd%e6%95%b0%e8%bd%ac%e6%8d%a2%e6%88%90%e4%b8%80%e5%85%83%e5%87%bd%e6%95%b0%e7%9a%84%e9%80%9a%e7%94%a8%e6%96%b9%e6%b3%95" class="header-anchor"></a>4.1.1 把二元函数转换成一元函数的通用方法
+</h4><h4 id="412-使用stdbind绑定值到特定的函数参数"><a href="#412-%e4%bd%bf%e7%94%a8stdbind%e7%bb%91%e5%ae%9a%e5%80%bc%e5%88%b0%e7%89%b9%e5%ae%9a%e7%9a%84%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0" class="header-anchor"></a>4.1.2 使用std：：bind绑定值到特定的函数参数
+</h4><h4 id="413-二元函数参数的反转"><a href="#413-%e4%ba%8c%e5%85%83%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0%e7%9a%84%e5%8f%8d%e8%bd%ac" class="header-anchor"></a>4.1.3 二元函数参数的反转
+</h4><h4 id="414-对多参数函数使用stdbind"><a href="#414-%e5%af%b9%e5%a4%9a%e5%8f%82%e6%95%b0%e5%87%bd%e6%95%b0%e4%bd%bf%e7%94%a8stdbind" class="header-anchor"></a>4.1.4 对多参数函数使用std：：bind
+</h4><h4 id="415-使用lambda替代stdbind"><a href="#415-%e4%bd%bf%e7%94%a8lambda%e6%9b%bf%e4%bb%a3stdbind" class="header-anchor"></a>4.1.5 使用lambda替代std：：bind
+</h4><h3 id="42-柯里化currying看待函数不同的方式"><a href="#42-%e6%9f%af%e9%87%8c%e5%8c%96currying%e7%9c%8b%e5%be%85%e5%87%bd%e6%95%b0%e4%b8%8d%e5%90%8c%e7%9a%84%e6%96%b9%e5%bc%8f" class="header-anchor"></a>4.2 柯里化（Currying）：看待函数不同的方式
+</h3><h4 id="421-创建柯里化函数的简单方法"><a href="#421-%e5%88%9b%e5%bb%ba%e6%9f%af%e9%87%8c%e5%8c%96%e5%87%bd%e6%95%b0%e7%9a%84%e7%ae%80%e5%8d%95%e6%96%b9%e6%b3%95" class="header-anchor"></a>4.2.1 创建柯里化函数的简单方法
+</h4><h4 id="422-数据库访问柯里化"><a href="#422-%e6%95%b0%e6%8d%ae%e5%ba%93%e8%ae%bf%e9%97%ae%e6%9f%af%e9%87%8c%e5%8c%96" class="header-anchor"></a>4.2.2 数据库访问柯里化
+</h4><h4 id="423-柯里化与偏函数应用"><a href="#423-%e6%9f%af%e9%87%8c%e5%8c%96%e4%b8%8e%e5%81%8f%e5%87%bd%e6%95%b0%e5%ba%94%e7%94%a8" class="header-anchor"></a>4.2.3 柯里化与偏函数应用
+</h4><h3 id="43-函数组合"><a href="#43-%e5%87%bd%e6%95%b0%e7%bb%84%e5%90%88" class="header-anchor"></a>4.3 函数组合
+</h3><h3 id="44-函数提升复习"><a href="#44-%e5%87%bd%e6%95%b0%e6%8f%90%e5%8d%87%e5%a4%8d%e4%b9%a0" class="header-anchor"></a>4.4 函数提升（复习）
+</h3><h4 id="441-键值对列表反转"><a href="#441-%e9%94%ae%e5%80%bc%e5%af%b9%e5%88%97%e8%a1%a8%e5%8f%8d%e8%bd%ac" class="header-anchor"></a>4.4.1 键值对列表反转
+</h4><h3 id="总结-3"><a href="#%e6%80%bb%e7%bb%93-3" class="header-anchor"></a>总结
+</h3><h2 id="第5章-纯洁性避免可变状态"><a href="#%e7%ac%ac5%e7%ab%a0-%e7%ba%af%e6%b4%81%e6%80%a7%e9%81%bf%e5%85%8d%e5%8f%af%e5%8f%98%e7%8a%b6%e6%80%81" class="header-anchor"></a>第5章 纯洁性：避免可变状态
+</h2><h3 id="52-纯函数和引用透明"><a href="#52-%e7%ba%af%e5%87%bd%e6%95%b0%e5%92%8c%e5%bc%95%e7%94%a8%e9%80%8f%e6%98%8e" class="header-anchor"></a>5.2 纯函数和引用透明
+</h3><h3 id="53-无副作用编程"><a href="#53-%e6%97%a0%e5%89%af%e4%bd%9c%e7%94%a8%e7%bc%96%e7%a8%8b" class="header-anchor"></a>5.3 无副作用编程
+</h3><h3 id="54-并发环境中的可变状态与不可变状态"><a href="#54-%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%ad%e7%9a%84%e5%8f%af%e5%8f%98%e7%8a%b6%e6%80%81%e4%b8%8e%e4%b8%8d%e5%8f%af%e5%8f%98%e7%8a%b6%e6%80%81" class="header-anchor"></a>5.4 并发环境中的可变状态与不可变状态
+</h3><h3 id="55-const的重要性"><a href="#55-const%e7%9a%84%e9%87%8d%e8%a6%81%e6%80%a7" class="header-anchor"></a>5.5 const的重要性
+</h3><h4 id="551-逻辑const与内部const"><a href="#551-%e9%80%bb%e8%be%91const%e4%b8%8e%e5%86%85%e9%83%a8const" class="header-anchor"></a>5.5.1 逻辑const与内部const
+</h4><h4 id="552-对于临时值优化成员函数"><a href="#552-%e5%af%b9%e4%ba%8e%e4%b8%b4%e6%97%b6%e5%80%bc%e4%bc%98%e5%8c%96%e6%88%90%e5%91%98%e5%87%bd%e6%95%b0" class="header-anchor"></a>5.5.2 对于临时值优化成员函数
+</h4><h4 id="553-const的缺陷"><a href="#553-const%e7%9a%84%e7%bc%ba%e9%99%b7" class="header-anchor"></a>5.5.3 const的缺陷
+</h4><h3 id="总结-4"><a href="#%e6%80%bb%e7%bb%93-4" class="header-anchor"></a>总结
+</h3><h2 id="第6章-惰性求值"><a href="#%e7%ac%ac6%e7%ab%a0-%e6%83%b0%e6%80%a7%e6%b1%82%e5%80%bc" class="header-anchor"></a>第6章 惰性求值
+</h2><h3 id="61-c的惰性"><a href="#61-c%e7%9a%84%e6%83%b0%e6%80%a7" class="header-anchor"></a>6.1 C＋＋的惰性
+</h3><h3 id="62-惰性作为一种优化技术"><a href="#62-%e6%83%b0%e6%80%a7%e4%bd%9c%e4%b8%ba%e4%b8%80%e7%a7%8d%e4%bc%98%e5%8c%96%e6%8a%80%e6%9c%af" class="header-anchor"></a>6.2 惰性作为一种优化技术
+</h3><h4 id="622-用户接口中的列表视图"><a href="#622-%e7%94%a8%e6%88%b7%e6%8e%a5%e5%8f%a3%e4%b8%ad%e7%9a%84%e5%88%97%e8%a1%a8%e8%a7%86%e5%9b%be" class="header-anchor"></a>6.2.2 用户接口中的列表视图
+</h4><h4 id="623-通过缓存函数结果修剪递归树"><a href="#623-%e9%80%9a%e8%bf%87%e7%bc%93%e5%ad%98%e5%87%bd%e6%95%b0%e7%bb%93%e6%9e%9c%e4%bf%ae%e5%89%aa%e9%80%92%e5%bd%92%e6%a0%91" class="header-anchor"></a>6.2.3 通过缓存函数结果修剪递归树
+</h4><h4 id="624-动态编程作为惰性形式"><a href="#624-%e5%8a%a8%e6%80%81%e7%bc%96%e7%a8%8b%e4%bd%9c%e4%b8%ba%e6%83%b0%e6%80%a7%e5%bd%a2%e5%bc%8f" class="header-anchor"></a>6.2.4 动态编程作为惰性形式
+</h4><h3 id="63-通用记忆化generalized-memoization"><a href="#63-%e9%80%9a%e7%94%a8%e8%ae%b0%e5%bf%86%e5%8c%96generalized-memoization" class="header-anchor"></a>6.3 通用记忆化（Generalized memoization）
+</h3><h3 id="64-表达式模板与惰性字符串拼接"><a href="#64-%e8%a1%a8%e8%be%be%e5%bc%8f%e6%a8%a1%e6%9d%bf%e4%b8%8e%e6%83%b0%e6%80%a7%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%8b%bc%e6%8e%a5" class="header-anchor"></a>6.4 表达式模板与惰性字符串拼接
+</h3><h4 id="641-纯洁性与表达式模板"><a href="#641-%e7%ba%af%e6%b4%81%e6%80%a7%e4%b8%8e%e8%a1%a8%e8%be%be%e5%bc%8f%e6%a8%a1%e6%9d%bf" class="header-anchor"></a>6.4.1 纯洁性与表达式模板
+</h4><h3 id="总结-5"><a href="#%e6%80%bb%e7%bb%93-5" class="header-anchor"></a>总结
+</h3><h2 id="第7章-range"><a href="#%e7%ac%ac7%e7%ab%a0-range" class="header-anchor"></a>第7章 range
+</h2><h3 id="71-range简介"><a href="#71-range%e7%ae%80%e4%bb%8b" class="header-anchor"></a>7.1 range简介
+</h3><h3 id="72-创建数据的只读视图"><a href="#72-%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e7%9a%84%e5%8f%aa%e8%af%bb%e8%a7%86%e5%9b%be" class="header-anchor"></a>7.2 创建数据的只读视图
+</h3><h4 id="722-range的transform函数"><a href="#722-range%e7%9a%84transform%e5%87%bd%e6%95%b0" class="header-anchor"></a>7.2.2 range的transform函数
+</h4><h4 id="723-range惰性求值"><a href="#723-range%e6%83%b0%e6%80%a7%e6%b1%82%e5%80%bc" class="header-anchor"></a>7.2.3 range惰性求值
+</h4><h3 id="73-修改range中的值"><a href="#73-%e4%bf%ae%e6%94%b9range%e4%b8%ad%e7%9a%84%e5%80%bc" class="header-anchor"></a>7.3 修改range中的值
+</h3><h3 id="74-定界range和无限range"><a href="#74-%e5%ae%9a%e7%95%8crange%e5%92%8c%e6%97%a0%e9%99%90range" class="header-anchor"></a>7.4 定界range和无限range
+</h3><h4 id="741-用定界range优化用于输入的range"><a href="#741-%e7%94%a8%e5%ae%9a%e7%95%8crange%e4%bc%98%e5%8c%96%e7%94%a8%e4%ba%8e%e8%be%93%e5%85%a5%e7%9a%84range" class="header-anchor"></a>7.4.1 用定界range优化用于输入的range
+</h4><h4 id="742-用哨兵创建无限range"><a href="#742-%e7%94%a8%e5%93%a8%e5%85%b5%e5%88%9b%e5%bb%ba%e6%97%a0%e9%99%90range" class="header-anchor"></a>7.4.2 用哨兵创建无限range
+</h4><h3 id="75-用range统计词频"><a href="#75-%e7%94%a8range%e7%bb%9f%e8%ae%a1%e8%af%8d%e9%a2%91" class="header-anchor"></a>7.5 用range统计词频
+</h3><h3 id="总结-6"><a href="#%e6%80%bb%e7%bb%93-6" class="header-anchor"></a>总结
+</h3><h2 id="第8章-函数式数据结构"><a href="#%e7%ac%ac8%e7%ab%a0-%e5%87%bd%e6%95%b0%e5%bc%8f%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>第8章 函数式数据结构
+</h2><h4 id="811-在表头添加和删除元素"><a href="#811-%e5%9c%a8%e8%a1%a8%e5%a4%b4%e6%b7%bb%e5%8a%a0%e5%92%8c%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0" class="header-anchor"></a>8.1.1 在表头添加和删除元素
+</h4><h4 id="812-在链表末尾添加和删除元素"><a href="#812-%e5%9c%a8%e9%93%be%e8%a1%a8%e6%9c%ab%e5%b0%be%e6%b7%bb%e5%8a%a0%e5%92%8c%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0" class="header-anchor"></a>8.1.2 在链表末尾添加和删除元素
+</h4><h4 id="813-在链表中间添加和删除元素"><a href="#813-%e5%9c%a8%e9%93%be%e8%a1%a8%e4%b8%ad%e9%97%b4%e6%b7%bb%e5%8a%a0%e5%92%8c%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0" class="header-anchor"></a>8.1.3 在链表中间添加和删除元素
+</h4><h4 id="814-内存管理"><a href="#814-%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86" class="header-anchor"></a>8.1.4 内存管理
+</h4><h3 id="82-不可变类向量结构"><a href="#82-%e4%b8%8d%e5%8f%af%e5%8f%98%e7%b1%bb%e5%90%91%e9%87%8f%e7%bb%93%e6%9e%84" class="header-anchor"></a>8.2 不可变类向量结构
+</h3><h4 id="821-位图向量树中的元素查找"><a href="#821-%e4%bd%8d%e5%9b%be%e5%90%91%e9%87%8f%e6%a0%91%e4%b8%ad%e7%9a%84%e5%85%83%e7%b4%a0%e6%9f%a5%e6%89%be" class="header-anchor"></a>8.2.1 位图向量树中的元素查找
+</h4><h4 id="823-位图向量树的修改"><a href="#823-%e4%bd%8d%e5%9b%be%e5%90%91%e9%87%8f%e6%a0%91%e7%9a%84%e4%bf%ae%e6%94%b9" class="header-anchor"></a>8.2.3 位图向量树的修改
+</h4><h4 id="824-在位图向量树的末尾删除元素"><a href="#824-%e5%9c%a8%e4%bd%8d%e5%9b%be%e5%90%91%e9%87%8f%e6%a0%91%e7%9a%84%e6%9c%ab%e5%b0%be%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0" class="header-anchor"></a>8.2.4 在位图向量树的末尾删除元素
+</h4><h3 id="总结-7"><a href="#%e6%80%bb%e7%bb%93-7" class="header-anchor"></a>总结
+</h3><h2 id="第9章-代数数据类型及模式匹配"><a href="#%e7%ac%ac9%e7%ab%a0-%e4%bb%a3%e6%95%b0%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b%e5%8f%8a%e6%a8%a1%e5%bc%8f%e5%8c%b9%e9%85%8d" class="header-anchor"></a>第9章 代数数据类型及模式匹配
+</h2><h3 id="91-代数数据类型"><a href="#91-%e4%bb%a3%e6%95%b0%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>9.1 代数数据类型
+</h3><h4 id="911-通过继承实现和类型"><a href="#911-%e9%80%9a%e8%bf%87%e7%bb%a7%e6%89%bf%e5%ae%9e%e7%8e%b0%e5%92%8c%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>9.1.1 通过继承实现和类型
+</h4><h4 id="912-通过union和stdvariant实现和类型"><a href="#912-%e9%80%9a%e8%bf%87union%e5%92%8cstdvariant%e5%ae%9e%e7%8e%b0%e5%92%8c%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>9.1.2 通过union和std：：variant实现和类型
+</h4><h4 id="913-特定状态的实现"><a href="#913-%e7%89%b9%e5%ae%9a%e7%8a%b6%e6%80%81%e7%9a%84%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>9.1.3 特定状态的实现
+</h4><h4 id="914-特殊的和类型optional"><a href="#914-%e7%89%b9%e6%ae%8a%e7%9a%84%e5%92%8c%e7%b1%bb%e5%9e%8boptional" class="header-anchor"></a>9.1.4 特殊的和类型：Optional
+</h4><h4 id="915-和类型用于错误处理"><a href="#915-%e5%92%8c%e7%b1%bb%e5%9e%8b%e7%94%a8%e4%ba%8e%e9%94%99%e8%af%af%e5%a4%84%e7%90%86" class="header-anchor"></a>9.1.5 和类型用于错误处理
+</h4><h3 id="92-使用代数数据类型进行域建模"><a href="#92-%e4%bd%bf%e7%94%a8%e4%bb%a3%e6%95%b0%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b%e8%bf%9b%e8%a1%8c%e5%9f%9f%e5%bb%ba%e6%a8%a1" class="header-anchor"></a>9.2 使用代数数据类型进行域建模
+</h3><h4 id="922-更复杂的方法自上而下的设计"><a href="#922-%e6%9b%b4%e5%a4%8d%e6%9d%82%e7%9a%84%e6%96%b9%e6%b3%95%e8%87%aa%e4%b8%8a%e8%80%8c%e4%b8%8b%e7%9a%84%e8%ae%be%e8%ae%a1" class="header-anchor"></a>9.2.2 更复杂的方法：自上而下的设计
+</h4><h3 id="93-使用模式匹配更好地处理代数数据类型"><a href="#93-%e4%bd%bf%e7%94%a8%e6%a8%a1%e5%bc%8f%e5%8c%b9%e9%85%8d%e6%9b%b4%e5%a5%bd%e5%9c%b0%e5%a4%84%e7%90%86%e4%bb%a3%e6%95%b0%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>9.3 使用模式匹配更好地处理代数数据类型
+</h3><h3 id="94-mach7的强大匹配功能"><a href="#94-mach7%e7%9a%84%e5%bc%ba%e5%a4%a7%e5%8c%b9%e9%85%8d%e5%8a%9f%e8%83%bd" class="header-anchor"></a>9.4 Mach7的强大匹配功能
+</h3><h3 id="总结-8"><a href="#%e6%80%bb%e7%bb%93-8" class="header-anchor"></a>总结
+</h3><h2 id="第10章-monad"><a href="#%e7%ac%ac10%e7%ab%a0-monad" class="header-anchor"></a>第10章 monad
+</h2><h4 id="1011-处理可选值"><a href="#1011-%e5%a4%84%e7%90%86%e5%8f%af%e9%80%89%e5%80%bc" class="header-anchor"></a>10.1.1 处理可选值
+</h4><h3 id="102-monad更强大的仿函数"><a href="#102-monad%e6%9b%b4%e5%bc%ba%e5%a4%a7%e7%9a%84%e4%bb%bf%e5%87%bd%e6%95%b0" class="header-anchor"></a>10.2 monad：更强大的仿函数
+</h3><h3 id="103-基本的例子"><a href="#103-%e5%9f%ba%e6%9c%ac%e7%9a%84%e4%be%8b%e5%ad%90" class="header-anchor"></a>10.3 基本的例子
+</h3><h3 id="104-range与monad的嵌套使用"><a href="#104-range%e4%b8%8emonad%e7%9a%84%e5%b5%8c%e5%a5%97%e4%bd%bf%e7%94%a8" class="header-anchor"></a>10.4 range与monad的嵌套使用
+</h3><h3 id="105-错误处理"><a href="#105-%e9%94%99%e8%af%af%e5%a4%84%e7%90%86" class="header-anchor"></a>10.5 错误处理
+</h3><h4 id="1051-stdoptionalt作为monad"><a href="#1051-stdoptionalt%e4%bd%9c%e4%b8%bamonad" class="header-anchor"></a>10.5.1 std：：optional〈T〉作为monad
+</h4><h4 id="1052-expectedte作为monad"><a href="#1052-expectedte%e4%bd%9c%e4%b8%bamonad" class="header-anchor"></a>10.5.2 expected〈T，E〉作为monad
+</h4><h4 id="1053-try-monad"><a href="#1053-try-monad" class="header-anchor"></a>10.5.3 try monad
+</h4><h3 id="106-monad状态处理"><a href="#106-monad%e7%8a%b6%e6%80%81%e5%a4%84%e7%90%86" class="header-anchor"></a>10.6 monad状态处理
+</h3><h3 id="107-并发和延续monad"><a href="#107-%e5%b9%b6%e5%8f%91%e5%92%8c%e5%bb%b6%e7%bb%admonad" class="header-anchor"></a>10.7 并发和延续monad
+</h3><h4 id="1071-future作为monad"><a href="#1071-future%e4%bd%9c%e4%b8%bamonad" class="header-anchor"></a>10.7.1 future作为monad
+</h4><h4 id="1072-future的实现"><a href="#1072-future%e7%9a%84%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>10.7.2 future的实现
+</h4><h3 id="108-monad组合"><a href="#108-monad%e7%bb%84%e5%90%88" class="header-anchor"></a>10.8 monad组合
+</h3><h3 id="总结-9"><a href="#%e6%80%bb%e7%bb%93-9" class="header-anchor"></a>总结
+</h3><h2 id="第11章-模板元编程"><a href="#%e7%ac%ac11%e7%ab%a0-%e6%a8%a1%e6%9d%bf%e5%85%83%e7%bc%96%e7%a8%8b" class="header-anchor"></a>第11章 模板元编程
+</h2><h3 id="111-编译时操作类型"><a href="#111-%e7%bc%96%e8%af%91%e6%97%b6%e6%93%8d%e4%bd%9c%e7%b1%bb%e5%9e%8b" class="header-anchor"></a>11.1 编译时操作类型
+</h3><h4 id="1111-推断类型调试"><a href="#1111-%e6%8e%a8%e6%96%ad%e7%b1%bb%e5%9e%8b%e8%b0%83%e8%af%95" class="header-anchor"></a>11.1.1 推断类型调试
+</h4><h4 id="1112-编译时的模式匹配"><a href="#1112-%e7%bc%96%e8%af%91%e6%97%b6%e7%9a%84%e6%a8%a1%e5%bc%8f%e5%8c%b9%e9%85%8d" class="header-anchor"></a>11.1.2 编译时的模式匹配
+</h4><h4 id="1113-提供类型的元信息"><a href="#1113-%e6%8f%90%e4%be%9b%e7%b1%bb%e5%9e%8b%e7%9a%84%e5%85%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>11.1.3 提供类型的元信息
+</h4><h3 id="113-构造科里化函数"><a href="#113-%e6%9e%84%e9%80%a0%e7%a7%91%e9%87%8c%e5%8c%96%e5%87%bd%e6%95%b0" class="header-anchor"></a>11.3 构造科里化函数
+</h3><h4 id="1131-调用所有可调用的"><a href="#1131-%e8%b0%83%e7%94%a8%e6%89%80%e6%9c%89%e5%8f%af%e8%b0%83%e7%94%a8%e7%9a%84" class="header-anchor"></a>11.3.1 调用所有可调用的
+</h4><h3 id="114-dsl构建块"><a href="#114-dsl%e6%9e%84%e5%bb%ba%e5%9d%97" class="header-anchor"></a>11.4 DSL构建块
+</h3><h3 id="总结-10"><a href="#%e6%80%bb%e7%bb%93-10" class="header-anchor"></a>总结
+</h3><h2 id="第12章-并发系统的函数式设计"><a href="#%e7%ac%ac12%e7%ab%a0-%e5%b9%b6%e5%8f%91%e7%b3%bb%e7%bb%9f%e7%9a%84%e5%87%bd%e6%95%b0%e5%bc%8f%e8%ae%be%e8%ae%a1" class="header-anchor"></a>第12章 并发系统的函数式设计
+</h2><h3 id="121-actor模型组件思想"><a href="#121-actor%e6%a8%a1%e5%9e%8b%e7%bb%84%e4%bb%b6%e6%80%9d%e6%83%b3" class="header-anchor"></a>12.1 Actor模型：组件思想
+</h3><h3 id="122-创建简单的消息源"><a href="#122-%e5%88%9b%e5%bb%ba%e7%ae%80%e5%8d%95%e7%9a%84%e6%b6%88%e6%81%af%e6%ba%90" class="header-anchor"></a>12.2 创建简单的消息源
+</h3><h3 id="123-将反应流建模为monad"><a href="#123-%e5%b0%86%e5%8f%8d%e5%ba%94%e6%b5%81%e5%bb%ba%e6%a8%a1%e4%b8%bamonad" class="header-anchor"></a>12.3 将反应流建模为monad
+</h3><h4 id="1231-创建宿sink接收消息"><a href="#1231-%e5%88%9b%e5%bb%ba%e5%ae%bfsink%e6%8e%a5%e6%94%b6%e6%b6%88%e6%81%af" class="header-anchor"></a>12.3.1 创建宿（Sink）接收消息
+</h4><h4 id="1232-转换反应流"><a href="#1232-%e8%bd%ac%e6%8d%a2%e5%8f%8d%e5%ba%94%e6%b5%81" class="header-anchor"></a>12.3.2 转换反应流
+</h4><h4 id="1233-创建给定值的流"><a href="#1233-%e5%88%9b%e5%bb%ba%e7%bb%99%e5%ae%9a%e5%80%bc%e7%9a%84%e6%b5%81" class="header-anchor"></a>12.3.3 创建给定值的流
+</h4><h4 id="1234-连接流"><a href="#1234-%e8%bf%9e%e6%8e%a5%e6%b5%81" class="header-anchor"></a>12.3.4 连接流
+</h4><h3 id="124-过滤反应流"><a href="#124-%e8%bf%87%e6%bb%a4%e5%8f%8d%e5%ba%94%e6%b5%81" class="header-anchor"></a>12.4 过滤反应流
+</h3><h3 id="125-反应流的错误处理"><a href="#125-%e5%8f%8d%e5%ba%94%e6%b5%81%e7%9a%84%e9%94%99%e8%af%af%e5%a4%84%e7%90%86" class="header-anchor"></a>12.5 反应流的错误处理
+</h3><h3 id="126-响应客户端"><a href="#126-%e5%93%8d%e5%ba%94%e5%ae%a2%e6%88%b7%e7%ab%af" class="header-anchor"></a>12.6 响应客户端
+</h3><h3 id="127-创建状态可修改的actor"><a href="#127-%e5%88%9b%e5%bb%ba%e7%8a%b6%e6%80%81%e5%8f%af%e4%bf%ae%e6%94%b9%e7%9a%84actor" class="header-anchor"></a>12.7 创建状态可修改的Actor
+</h3><h3 id="128-用actor编写分布式系统"><a href="#128-%e7%94%a8actor%e7%bc%96%e5%86%99%e5%88%86%e5%b8%83%e5%bc%8f%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>12.8 用Actor编写分布式系统
+</h3><h2 id="第13章-测试与调试"><a href="#%e7%ac%ac13%e7%ab%a0-%e6%b5%8b%e8%af%95%e4%b8%8e%e8%b0%83%e8%af%95" class="header-anchor"></a>第13章 测试与调试
+</h2><h3 id="131-程序编译正确吗"><a href="#131-%e7%a8%8b%e5%ba%8f%e7%bc%96%e8%af%91%e6%ad%a3%e7%a1%ae%e5%90%97" class="header-anchor"></a>13.1 程序编译正确吗？
+</h3><h3 id="132-单元测试与纯函数"><a href="#132-%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e4%b8%8e%e7%ba%af%e5%87%bd%e6%95%b0" class="header-anchor"></a>13.2 单元测试与纯函数
+</h3><h3 id="133-自动产生测试"><a href="#133-%e8%87%aa%e5%8a%a8%e4%ba%a7%e7%94%9f%e6%b5%8b%e8%af%95" class="header-anchor"></a>13.3 自动产生测试
+</h3><h4 id="1332-基于规则的测试"><a href="#1332-%e5%9f%ba%e4%ba%8e%e8%a7%84%e5%88%99%e7%9a%84%e6%b5%8b%e8%af%95" class="header-anchor"></a>13.3.2 基于规则的测试
+</h4><h4 id="1333-比较测试"><a href="#1333-%e6%af%94%e8%be%83%e6%b5%8b%e8%af%95" class="header-anchor"></a>13.3.3 比较测试
+</h4><h3 id="134-测试基于monad的并发系统"><a href="#134-%e6%b5%8b%e8%af%95%e5%9f%ba%e4%ba%8emonad%e7%9a%84%e5%b9%b6%e5%8f%91%e7%b3%bb%e7%bb%9f" class="header-anchor"></a>13.4 测试基于monad的并发系统
+</h3><h3 id="总结-11"><a href="#%e6%80%bb%e7%bb%93-11" class="header-anchor"></a>总结
+</h3><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2025 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.87d72694fb97c84cb5cbf9b1a64d476a38e04a5706618a6ffe5b89c7db00488f.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
