@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] 这就是ChatGPT\n书名： 这就是ChatGPT 作者： 斯蒂芬·沃尔弗拉姆 简介： ChatGPT是OpenAI开发的人工智能聊天机器人程序，于2022年11月推出。它能够自动生成一些表面上看起来像人类写的文字，这是一件很厉害且出乎大家意料的事。那么，它是如何做到的呢？又为何能做到呢？本书会大致介绍ChatGPT的内部机制，然后探讨一下为什么它能很好地生成我们认为有意义的文本。 出版时间 2023-07-01 00:00:00 ISBN： 9787115618085 分类： 计算机-人工智能 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/74332a90813ab86c4g019d98 高亮划线 封面 版权信息 导读序 奇事·奇人·奇书 奇人 奇书 📌 在神经网络的早期发展阶段，人们倾向于认为应该“让神经网络做尽可能少的事”。例如，在将语音转换为文本时，人们认为应该先分析语音的音频，再将其分解为音素，等等。但是后来发现，（至少对于“类人任务”）最好的方法通常是尝试训练神经网络来“解决端到端的问题”，让它自己“发现”必要的中间特征、编码等。 ⏱ 2024-02-23 14:15:11 ^3300082609-5-1842-1987\n">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/%E8%BF%99%E5%B0%B1%E6%98%AFchatgpt/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] 这就是ChatGPT\n书名： 这就是ChatGPT 作者： 斯蒂芬·沃尔弗拉姆 简介： ChatGPT是OpenAI开发的人工智能聊天机器人程序，于2022年11月推出。它能够自动生成一些表面上看起来像人类写的文字，这是一件很厉害且出乎大家意料的事。那么，它是如何做到的呢？又为何能做到呢？本书会大致介绍ChatGPT的内部机制，然后探讨一下为什么它能很好地生成我们认为有意义的文本。 出版时间 2023-07-01 00:00:00 ISBN： 9787115618085 分类： 计算机-人工智能 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/74332a90813ab86c4g019d98 高亮划线 封面 版权信息 导读序 奇事·奇人·奇书 奇人 奇书 📌 在神经网络的早期发展阶段，人们倾向于认为应该“让神经网络做尽可能少的事”。例如，在将语音转换为文本时，人们认为应该先分析语音的音频，再将其分解为音素，等等。但是后来发现，（至少对于“类人任务”）最好的方法通常是尝试训练神经网络来“解决端到端的问题”，让它自己“发现”必要的中间特征、编码等。 ⏱ 2024-02-23 14:15:11 ^3300082609-5-1842-1987\n">
+<meta property='og:url' content='https://blog.bugxch.top/weread/%E8%BF%99%E5%B0%B1%E6%98%AFchatgpt/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' /><meta property='article:published_time' content='2025-04-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-04-17T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] 这就是ChatGPT\n书名： 这就是ChatGPT 作者： 斯蒂芬·沃尔弗拉姆 简介： ChatGPT是OpenAI开发的人工智能聊天机器人程序，于2022年11月推出。它能够自动生成一些表面上看起来像人类写的文字，这是一件很厉害且出乎大家意料的事。那么，它是如何做到的呢？又为何能做到呢？本书会大致介绍ChatGPT的内部机制，然后探讨一下为什么它能很好地生成我们认为有意义的文本。 出版时间 2023-07-01 00:00:00 ISBN： 9787115618085 分类： 计算机-人工智能 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/74332a90813ab86c4g019d98 高亮划线 封面 版权信息 导读序 奇事·奇人·奇书 奇人 奇书 📌 在神经网络的早期发展阶段，人们倾向于认为应该“让神经网络做尽可能少的事”。例如，在将语音转换为文本时，人们认为应该先分析语音的音频，再将其分解为音素，等等。但是后来发现，（至少对于“类人任务”）最好的方法通常是尝试训练神经网络来“解决端到端的问题”，让它自己“发现”必要的中间特征、编码等。 ⏱ 2024-02-23 14:15:11 ^3300082609-5-1842-1987\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_1ef23741c9bee174.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#元数据">元数据</a></li>
+    <li><a href="#高亮划线">高亮划线</a>
+      <ol>
+        <li><a href="#封面">封面</a></li>
+        <li><a href="#版权信息">版权信息</a></li>
+        <li><a href="#导读序-奇事奇人奇书">导读序 奇事·奇人·奇书</a>
+          <ol>
+            <li><a href="#奇人">奇人</a></li>
+            <li><a href="#奇书">奇书</a></li>
+          </ol>
+        </li>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#第一篇-chatgpt在做什么它为何能做到这些">第一篇 ChatGPT在做什么？它为何能做到这些？</a>
+          <ol>
+            <li><a href="#概率从何而来">概率从何而来</a></li>
+            <li><a href="#什么是模型">什么是模型</a></li>
+            <li><a href="#类人任务human-like-task的模型">类人任务(human-like task)的模型</a></li>
+            <li><a href="#神经网络">神经网络</a></li>
+            <li><a href="#机器学习和神经网络的训练">机器学习和神经网络的训练</a></li>
+            <li><a href="#神经网络训练的实践和学问">神经网络训练的实践和学问</a></li>
+            <li><a href="#足够大的神经网络当然无所不能">“足够大的神经网络当然无所不能！”</a></li>
+            <li><a href="#嵌入的概念">“嵌入”的概念</a></li>
+            <li><a href="#chatgpt的内部原理">ChatGPT的内部原理</a></li>
+            <li><a href="#chatgpt的训练">ChatGPT的训练</a></li>
+            <li><a href="#在基础训练之外">在基础训练之外</a></li>
+            <li><a href="#真正让chatgpt发挥作用的是什么">真正让ChatGPT发挥作用的是什么</a></li>
+            <li><a href="#意义空间和语义运动定律">意义空间和语义运动定律</a></li>
+            <li><a href="#语义语法和计算语言的力量">语义语法和计算语言的力量</a></li>
+            <li><a href="#那么chatgpt到底在做什么它为什么能做到这些">那么，ChatGPT到底在做什么？它为什么能做到这些？</a></li>
+            <li><a href="#致谢">致谢</a></li>
+          </ol>
+        </li>
+        <li><a href="#第二篇-利用wolframalpha为chatgpt赋予计算知识超能力">第二篇 利用Wolfram|Alpha为ChatGPT赋予计算知识超能力</a>
+          <ol>
+            <li><a href="#chatgpt和wolframalpha">ChatGPT和Wolfram|Alpha</a></li>
+            <li><a href="#一个简单的例子">一个简单的例子</a></li>
+            <li><a href="#再举几个例子">再举几个例子</a></li>
+            <li><a href="#前方的路">前方的路</a></li>
+            <li><a href="#相关资源">相关资源</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#读书笔记">读书笔记</a>
+      <ol>
+        <li><a href="#第一篇-chatgpt在做什么它为何能做到这些-1">第一篇 ChatGPT在做什么？它为何能做到这些？</a>
+          <ol>
+            <li><a href="#划线评论">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#嵌入的概念-1">“嵌入”的概念</a>
+          <ol>
+            <li><a href="#划线评论-1">划线评论</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#本书评论">本书评论</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/%E8%BF%99%E5%B0%B1%E6%98%AFchatgpt/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025/04/17</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] 这就是ChatGPT</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/24/cpplatform_4cn8w4tmgzntjobg9ffeny/t7_cpplatform_4cn8w4tmgzntjobg9ffeny1703648785.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" 这就是ChatGPT|200"
+	
+	
+></li>
+<li>书名： 这就是ChatGPT</li>
+<li>作者： 斯蒂芬·沃尔弗拉姆</li>
+<li>简介： ChatGPT是OpenAI开发的人工智能聊天机器人程序，于2022年11月推出。它能够自动生成一些表面上看起来像人类写的文字，这是一件很厉害且出乎大家意料的事。那么，它是如何做到的呢？又为何能做到呢？本书会大致介绍ChatGPT的内部机制，然后探讨一下为什么它能很好地生成我们认为有意义的文本。</li>
+<li>出版时间 2023-07-01 00:00:00</li>
+<li>ISBN： 9787115618085</li>
+<li>分类： 计算机-人工智能</li>
+<li>出版社： 人民邮电出版社有限公司</li>
+<li>PC地址：https://weread.qq.com/web/reader/74332a90813ab86c4g019d98</li>
+</ul></blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="导读序-奇事奇人奇书"><a href="#%e5%af%bc%e8%af%bb%e5%ba%8f-%e5%a5%87%e4%ba%8b%e5%a5%87%e4%ba%ba%e5%a5%87%e4%b9%a6" class="header-anchor"></a>导读序 奇事·奇人·奇书
+</h2><h3 id="奇人"><a href="#%e5%a5%87%e4%ba%ba" class="header-anchor"></a>奇人
+</h3><h3 id="奇书"><a href="#%e5%a5%87%e4%b9%a6" class="header-anchor"></a>奇书
+</h3><blockquote>
+<p>📌 在神经网络的早期发展阶段，人们倾向于认为应该“让神经网络做尽可能少的事”。例如，在将语音转换为文本时，人们认为应该先分析语音的音频，再将其分解为音素，等等。但是后来发现，（至少对于“类人任务”）最好的方法通常是尝试训练神经网络来“解决端到端的问题”，让它自己“发现”必要的中间特征、编码等。
+⏱ 2024-02-23 14:15:11 ^3300082609-5-1842-1987</p></blockquote>
+<h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><h2 id="第一篇-chatgpt在做什么它为何能做到这些"><a href="#%e7%ac%ac%e4%b8%80%e7%af%87-chatgpt%e5%9c%a8%e5%81%9a%e4%bb%80%e4%b9%88%e5%ae%83%e4%b8%ba%e4%bd%95%e8%83%bd%e5%81%9a%e5%88%b0%e8%bf%99%e4%ba%9b" class="header-anchor"></a>第一篇 ChatGPT在做什么？它为何能做到这些？
+</h2><h3 id="概率从何而来"><a href="#%e6%a6%82%e7%8e%87%e4%bb%8e%e4%bd%95%e8%80%8c%e6%9d%a5" class="header-anchor"></a>概率从何而来
+</h3><h3 id="什么是模型"><a href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>什么是模型
+</h3><h3 id="类人任务human-like-task的模型"><a href="#%e7%b1%bb%e4%ba%ba%e4%bb%bb%e5%8a%a1human-like-task%e7%9a%84%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>类人任务(human-like task)的模型
+</h3><h3 id="神经网络"><a href="#%e7%a5%9e%e7%bb%8f%e7%bd%91%e7%bb%9c" class="header-anchor"></a>神经网络
+</h3><h3 id="机器学习和神经网络的训练"><a href="#%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%92%8c%e7%a5%9e%e7%bb%8f%e7%bd%91%e7%bb%9c%e7%9a%84%e8%ae%ad%e7%bb%83" class="header-anchor"></a>机器学习和神经网络的训练
+</h3><h3 id="神经网络训练的实践和学问"><a href="#%e7%a5%9e%e7%bb%8f%e7%bd%91%e7%bb%9c%e8%ae%ad%e7%bb%83%e7%9a%84%e5%ae%9e%e8%b7%b5%e5%92%8c%e5%ad%a6%e9%97%ae" class="header-anchor"></a>神经网络训练的实践和学问
+</h3><blockquote>
+<p>📌 那么ChatGPT呢？它有一个很好的特点，就是可以进行“无监督学习”，这样更容易获取训练样例。回想一下，ChatGPT的基本任务是弄清楚如何续写一段给定的文本。因此，要获得“训练样例”，要做的就是取一段文本，并将结尾遮盖起来，然后将其用作“训练的输入”，而“输出”则是未被遮盖的完整文本。
+⏱ 2025-03-11 09:24:09 ^3300082609-13-3513-3657</p></blockquote>
+<blockquote>
+<p>📌 未来，是否会有更好的方法来训练神经网络或者完成神经网络的任务呢？我认为答案几乎是肯定的。神经网络的基本思想是利用大量简单（本质上相同）的组件来创建一个灵活的“计算结构”，并使其能够逐步通过学习样例得到改进。在当前的神经网络中，基本上是利用微积分的思想（应用于实数）来进行这种逐步的改进。但越来越清楚的是，重点并不是拥有高精度数值，即使使用当前的方法，8位或更少的数也可能已经足够了。
+⏱ 2024-05-01 14:39:03 ^3300082609-13-4607-4798</p></blockquote>
+<h3 id="足够大的神经网络当然无所不能"><a href="#%e8%b6%b3%e5%a4%9f%e5%a4%a7%e7%9a%84%e7%a5%9e%e7%bb%8f%e7%bd%91%e7%bb%9c%e5%bd%93%e7%84%b6%e6%97%a0%e6%89%80%e4%b8%8d%e8%83%bd" class="header-anchor"></a>“足够大的神经网络当然无所不能！”
+</h3><blockquote>
+<p>📌 当然，你可能会问，能够进行不可约计算是否真的很重要
+⏱ 2024-05-01 14:58:29 ^3300082609-14-1845-1870</p></blockquote>
+<h3 id="嵌入的概念"><a href="#%e5%b5%8c%e5%85%a5%e7%9a%84%e6%a6%82%e5%bf%b5" class="header-anchor"></a>“嵌入”的概念
+</h3><h3 id="chatgpt的内部原理"><a href="#chatgpt%e7%9a%84%e5%86%85%e9%83%a8%e5%8e%9f%e7%90%86" class="header-anchor"></a>ChatGPT的内部原理
+</h3><h3 id="chatgpt的训练"><a href="#chatgpt%e7%9a%84%e8%ae%ad%e7%bb%83" class="header-anchor"></a>ChatGPT的训练
+</h3><h3 id="在基础训练之外"><a href="#%e5%9c%a8%e5%9f%ba%e7%a1%80%e8%ae%ad%e7%bb%83%e4%b9%8b%e5%a4%96" class="header-anchor"></a>在基础训练之外
+</h3><h3 id="真正让chatgpt发挥作用的是什么"><a href="#%e7%9c%9f%e6%ad%a3%e8%ae%a9chatgpt%e5%8f%91%e6%8c%a5%e4%bd%9c%e7%94%a8%e7%9a%84%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor"></a>真正让ChatGPT发挥作用的是什么
+</h3><blockquote>
+<p>📌 那么，ChatGPT是如何在语言方面获得如此巨大成功的呢？我认为基本答案是，语言在根本上比它看起来更简单。这意味着，即使是具有简单的神经网络结构的ChatGPT，也能够成功地捕捉人类语言的“本质”和背后的思维方式。此外，在训练过程中，ChatGPT已经通过某种方式“隐含地发现”了使这一切成为可能的语言（和思维）规律。
+⏱ 2025-03-11 15:03:23 ^3300082609-19-1020-1179</p></blockquote>
+<blockquote>
+<p>📌 如果只使用一个有8个头的注意力块和长度为128的特征向量来设置Transformer网络（ChatGPT也使用长度为128的特征向量，但有96个注意力块，每个块有96个头），似乎不可能让它学会括号语言。但是使用2个注意力块，学习过程似乎会收敛—至少在给出1000万个样例之后（并且，与Transformer网络一样，展示更多的样例似乎只会降低其性能）。
+⏱ 2025-03-11 15:05:20 ^3300082609-19-2662-2838</p></blockquote>
+<h3 id="意义空间和语义运动定律"><a href="#%e6%84%8f%e4%b9%89%e7%a9%ba%e9%97%b4%e5%92%8c%e8%af%ad%e4%b9%89%e8%bf%90%e5%8a%a8%e5%ae%9a%e5%be%8b" class="header-anchor"></a>意义空间和语义运动定律
+</h3><h3 id="语义语法和计算语言的力量"><a href="#%e8%af%ad%e4%b9%89%e8%af%ad%e6%b3%95%e5%92%8c%e8%ae%a1%e7%ae%97%e8%af%ad%e8%a8%80%e7%9a%84%e5%8a%9b%e9%87%8f" class="header-anchor"></a>语义语法和计算语言的力量
+</h3><blockquote>
+<p>📌 有意义的人类语言实际上比我们所知道的更加结构化、更加简单，最终可能以相当简单的规则来描述如何组织这样的语言。
+⏱ 2025-03-11 15:09:05 ^3300082609-21-538-592</p></blockquote>
+<blockquote>
+<p>📌 我们不仅可以用符号话语语言来做“独立的陈述”，而且可以用它来问关于世界的问题，就像对Wolfram|Alpha所做的那样。此外，也可以用它来陈述我们“想要实现”的事情，这可能需要一些外部激活机制；还可以用它来做断言—也许是关于实际世界的，也许是关于某个我们正在考虑的（无论是虚构还是其他的）特定世界的。
+⏱ 2024-02-23 13:59:22 ^3300082609-21-2078-2229</p></blockquote>
+<h3 id="那么chatgpt到底在做什么它为什么能做到这些"><a href="#%e9%82%a3%e4%b9%88chatgpt%e5%88%b0%e5%ba%95%e5%9c%a8%e5%81%9a%e4%bb%80%e4%b9%88%e5%ae%83%e4%b8%ba%e4%bb%80%e4%b9%88%e8%83%bd%e5%81%9a%e5%88%b0%e8%bf%99%e4%ba%9b" class="header-anchor"></a>那么，ChatGPT到底在做什么？它为什么能做到这些？
+</h3><h3 id="致谢"><a href="#%e8%87%b4%e8%b0%a2" class="header-anchor"></a>致谢
+</h3><h2 id="第二篇-利用wolframalpha为chatgpt赋予计算知识超能力"><a href="#%e7%ac%ac%e4%ba%8c%e7%af%87-%e5%88%a9%e7%94%a8wolframalpha%e4%b8%bachatgpt%e8%b5%8b%e4%ba%88%e8%ae%a1%e7%ae%97%e7%9f%a5%e8%af%86%e8%b6%85%e8%83%bd%e5%8a%9b" class="header-anchor"></a>第二篇 利用Wolfram|Alpha为ChatGPT赋予计算知识超能力
+</h2><h3 id="chatgpt和wolframalpha"><a href="#chatgpt%e5%92%8cwolframalpha" class="header-anchor"></a>ChatGPT和Wolfram|Alpha
+</h3><h3 id="一个简单的例子"><a href="#%e4%b8%80%e4%b8%aa%e7%ae%80%e5%8d%95%e7%9a%84%e4%be%8b%e5%ad%90" class="header-anchor"></a>一个简单的例子
+</h3><h3 id="再举几个例子"><a href="#%e5%86%8d%e4%b8%be%e5%87%a0%e4%b8%aa%e4%be%8b%e5%ad%90" class="header-anchor"></a>再举几个例子
+</h3><h3 id="前方的路"><a href="#%e5%89%8d%e6%96%b9%e7%9a%84%e8%b7%af" class="header-anchor"></a>前方的路
+</h3><h3 id="相关资源"><a href="#%e7%9b%b8%e5%85%b3%e8%b5%84%e6%ba%90" class="header-anchor"></a>相关资源
+</h3><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="第一篇-chatgpt在做什么它为何能做到这些-1"><a href="#%e7%ac%ac%e4%b8%80%e7%af%87-chatgpt%e5%9c%a8%e5%81%9a%e4%bb%80%e4%b9%88%e5%ae%83%e4%b8%ba%e4%bd%95%e8%83%bd%e5%81%9a%e5%88%b0%e8%bf%99%e4%ba%9b-1" class="header-anchor"></a>第一篇 ChatGPT在做什么？它为何能做到这些？
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 值得注意的是，当ChatGPT做一些事情，比如写一篇文章时，它实质上只是在一遍又一遍地询问“根据目前的文本，下一个词应该是什么”，并且每次都添加一个词。［正如我将要解释的那样，更准确地说，它是每次都添加一个“标记”(token)，而标记可能只是词的一部分。这就是它有时可以“造词”的原因。］  ^6733360-7PLh3mbgt
+- 💭 token原义在此
+- ⏱ 2024-03-17 17:38:39</p></blockquote>
+<h2 id="嵌入的概念-1"><a href="#%e5%b5%8c%e5%85%a5%e7%9a%84%e6%a6%82%e5%bf%b5-1" class="header-anchor"></a>“嵌入”的概念
+</h2><h3 id="划线评论-1"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 实际上，比起用一系列数对词进行表征，我们还可以做得更好—可以对词序列甚至整个文本块进行这样的表征。ChatGPT内部就是这样进行处理的。它会获取到目前为止的所有文本，并生成一个嵌入向量来表示它。然后，它的目标就是找到下一个可能出现的各个词的概率。它会将答案表示为一个数字列表，这些数基本上给出了大约50000个可能出现的词的概率。  ^6733360-7Yz1pf1SI
+- 💭 token这么来的吗
+- ⏱ 2025-03-11 12:21:53</p></blockquote>
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2025 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.87d72694fb97c84cb5cbf9b1a64d476a38e04a5706618a6ffe5b89c7db00488f.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
