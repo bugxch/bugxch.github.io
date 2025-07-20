@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] C++性能优化指南\n书名： C++性能优化指南 作者： 【美】 Kurt Guntheroth 简介： 出版时间 ISBN： 分类： 出版社： 人民邮电出版社 PC地址：https://weread.qq.com/web/reader/f93426a3643425f47563543794a386365417949367848367836346633396743c52 高亮划线 版权声明 O&rsquo;Reilly Media, Inc. 介绍 业界评论 前言 为本书中的代码致歉 示例代码的使用 排版约定 第 1 章\u3000优化概述 📌 许多优化机会的出现源于某些 C++ 特性被误用而导致程序运行缓慢、消耗许多资源。这些代码虽然是正确的，却不完善。这些代码往往是因为开发人员 ⏱ 2025-07-19 09:49:14 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-8-880-949\n">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/c&#43;&#43;%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/'>
+
+<link rel="stylesheet" href="/scss/style.min.860dd2cdb2f2ca3d772cda81aa659d4c99fcffa6b8fd7a384c2f4ccecd8f6b9f.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] C++性能优化指南\n书名： C++性能优化指南 作者： 【美】 Kurt Guntheroth 简介： 出版时间 ISBN： 分类： 出版社： 人民邮电出版社 PC地址：https://weread.qq.com/web/reader/f93426a3643425f47563543794a386365417949367848367836346633396743c52 高亮划线 版权声明 O&rsquo;Reilly Media, Inc. 介绍 业界评论 前言 为本书中的代码致歉 示例代码的使用 排版约定 第 1 章\u3000优化概述 📌 许多优化机会的出现源于某些 C++ 特性被误用而导致程序运行缓慢、消耗许多资源。这些代码虽然是正确的，却不完善。这些代码往往是因为开发人员 ⏱ 2025-07-19 09:49:14 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-8-880-949\n">
+<meta property='og:url' content='https://blog.bugxch.top/weread/c&#43;&#43;%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] C++性能优化指南\n书名： C++性能优化指南 作者： 【美】 Kurt Guntheroth 简介： 出版时间 ISBN： 分类： 出版社： 人民邮电出版社 PC地址：https://weread.qq.com/web/reader/f93426a3643425f47563543794a386365417949367848367836346633396743c52 高亮划线 版权声明 O&rsquo;Reilly Media, Inc. 介绍 业界评论 前言 为本书中的代码致歉 示例代码的使用 排版约定 第 1 章\u3000优化概述 📌 许多优化机会的出现源于某些 C++ 特性被误用而导致程序运行缓慢、消耗许多资源。这些代码虽然是正确的，却不完善。这些代码往往是因为开发人员 ⏱ 2025-07-19 09:49:14 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-8-880-949\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_1ef23741c9bee174.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#元数据">元数据</a></li>
+    <li><a href="#高亮划线">高亮划线</a>
+      <ol>
+        <li><a href="#版权声明">版权声明</a></li>
+        <li><a href="#oreilly-media-inc-介绍">O&rsquo;Reilly Media, Inc. 介绍</a></li>
+        <li><a href="#业界评论">业界评论</a></li>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#为本书中的代码致歉">为本书中的代码致歉</a></li>
+        <li><a href="#示例代码的使用">示例代码的使用</a></li>
+        <li><a href="#排版约定">排版约定</a></li>
+        <li><a href="#第-1-章优化概述">第 1 章　优化概述</a></li>
+        <li><a href="#11优化是软件开发的一部分">1.1　优化是软件开发的一部分</a></li>
+        <li><a href="#12优化是高效的">1.2　优化是高效的</a></li>
+        <li><a href="#13优化是没有问题的">1.3　优化是没有问题的</a></li>
+        <li><a href="#14这儿一纳秒那儿一纳秒">1.4　这儿一纳秒，那儿一纳秒</a></li>
+        <li><a href="#15c-代码优化策略总结">1.5　C++ 代码优化策略总结</a></li>
+        <li><a href="#151用好的编译器并用好编译器">1.5.1　用好的编译器并用好编译器</a></li>
+        <li><a href="#152使用更好的算法">1.5.2　使用更好的算法</a></li>
+        <li><a href="#153使用更好的库">1.5.3　使用更好的库</a></li>
+        <li><a href="#154减少内存分配和复制">1.5.4　减少内存分配和复制</a></li>
+        <li><a href="#155移除计算">1.5.5　移除计算</a></li>
+        <li><a href="#156使用更好的数据结构">1.5.6　使用更好的数据结构</a></li>
+        <li><a href="#157提高并发性">1.5.7　提高并发性</a></li>
+        <li><a href="#158优化内存管理">1.5.8　优化内存管理</a></li>
+        <li><a href="#16小结">1.6　小结</a></li>
+        <li><a href="#第-2-章影响优化的计算机行为">第 2 章　影响优化的计算机行为</a></li>
+        <li><a href="#21c-所相信的计算机谎言">2.1　C++ 所相信的计算机谎言</a></li>
+        <li><a href="#22计算机的真相">2.2　计算机的真相</a></li>
+        <li><a href="#221内存很慢">2.2.1　内存很慢</a></li>
+        <li><a href="#222内存访问并非以字节为单位">2.2.2　内存访问并非以字节为单位</a></li>
+        <li><a href="#223某些内存访问会比其他的更慢">2.2.3　某些内存访问会比其他的更慢</a></li>
+        <li><a href="#224内存字分为大端和小端">2.2.4　内存字分为大端和小端</a></li>
+        <li><a href="#225内存容量是有限的">2.2.5　内存容量是有限的</a></li>
+        <li><a href="#226指令执行缓慢">2.2.6　指令执行缓慢</a></li>
+        <li><a href="#227计算机难以作决定">2.2.7　计算机难以作决定</a></li>
+        <li><a href="#228程序执行中的多个流">2.2.8　程序执行中的多个流</a></li>
+        <li><a href="#229调用操作系统的开销是昂贵的">2.2.9　调用操作系统的开销是昂贵的</a></li>
+        <li><a href="#23c-也会说谎">2.3　C++ 也会说谎</a></li>
+        <li><a href="#231并非所有语句的性能开销都相同">2.3.1　并非所有语句的性能开销都相同</a></li>
+        <li><a href="#232语句并非按顺序执行">2.3.2　语句并非按顺序执行</a></li>
+        <li><a href="#24小结">2.4　小结</a></li>
+        <li><a href="#第-3-章测量性能">第 3 章　测量性能</a></li>
+        <li><a href="#31优化思想">3.1　优化思想</a></li>
+        <li><a href="#311必须测量性能">3.1.1　必须测量性能</a></li>
+        <li><a href="#312优化器是王牌猎人">3.1.2　优化器是王牌猎人</a></li>
+        <li><a href="#3139010-规则">3.1.3　90/10 规则</a></li>
+        <li><a href="#314阿姆达尔定律">3.1.4　阿姆达尔定律</a></li>
+        <li><a href="#32进行实验">3.2　进行实验</a></li>
+        <li><a href="#321记实验笔记">3.2.1　记实验笔记</a></li>
+        <li><a href="#322测量基准性能并设定目标">3.2.2　测量基准性能并设定目标</a></li>
+        <li><a href="#323你只能改善你能够测量的">3.2.3　你只能改善你能够测量的</a></li>
+        <li><a href="#33分析程序执行">3.3　分析程序执行</a></li>
+        <li><a href="#34测量长时间运行的代码">3.4　测量长时间运行的代码</a></li>
+        <li><a href="#341一点关于测量时间的知识">3.4.1　一点关于测量时间的知识</a></li>
+        <li><a href="#342用计算机测量时间">3.4.2　用计算机测量时间</a></li>
+        <li><a href="#343克服测量障碍">3.4.3　克服测量障碍</a></li>
+        <li><a href="#344创建-stopwatch-类">3.4.4　创建 stopwatch 类</a></li>
+        <li><a href="#345使用测试套件测量热点函数">3.4.5　使用测试套件测量热点函数</a></li>
+        <li><a href="#35评估代码开销来找出热点代码">3.5　评估代码开销来找出热点代码</a></li>
+        <li><a href="#351评估独立的-c-语句的开销">3.5.1　评估独立的 C++ 语句的开销</a></li>
+        <li><a href="#352评估循环的开销">3.5.2　评估循环的开销</a></li>
+        <li><a href="#36其他找出热点代码的方法">3.6　其他找出热点代码的方法</a></li>
+        <li><a href="#37小结">3.7　小结</a></li>
+        <li><a href="#第-4-章优化字符串的使用案例研究">第 4 章　优化字符串的使用：案例研究</a></li>
+        <li><a href="#41为什么字符串很麻烦">4.1　为什么字符串很麻烦</a></li>
+        <li><a href="#411字符串是动态分配的">4.1.1　字符串是动态分配的</a></li>
+        <li><a href="#412字符串就是值">4.1.2　字符串就是值</a></li>
+        <li><a href="#413字符串会进行大量复制">4.1.3　字符串会进行大量复制</a></li>
+        <li><a href="#42第一次尝试优化字符串">4.2　第一次尝试优化字符串</a></li>
+        <li><a href="#421使用复合赋值操作避免临时字符串">4.2.1　使用复合赋值操作避免临时字符串</a></li>
+        <li><a href="#422通过预留存储空间减少内存的重新分配">4.2.2　通过预留存储空间减少内存的重新分配</a></li>
+        <li><a href="#423消除对参数字符串的复制">4.2.3　消除对参数字符串的复制</a></li>
+        <li><a href="#424使用迭代器消除指针解引">4.2.4　使用迭代器消除指针解引</a></li>
+        <li><a href="#425消除对返回的字符串的复制">4.2.5　消除对返回的字符串的复制</a></li>
+        <li><a href="#426用字符数组代替字符串">4.2.6　用字符数组代替字符串</a></li>
+        <li><a href="#427第一次优化总结">4.2.7　第一次优化总结</a></li>
+        <li><a href="#43第二次尝试优化字符串">4.3　第二次尝试优化字符串</a></li>
+        <li><a href="#431使用更好的算法">4.3.1　使用更好的算法</a></li>
+        <li><a href="#432使用更好的编译器">4.3.2　使用更好的编译器</a></li>
+        <li><a href="#433使用更好的字符串库">4.3.3　使用更好的字符串库</a></li>
+        <li><a href="#434使用更好的内存分配器">4.3.4　使用更好的内存分配器</a></li>
+        <li><a href="#44消除字符串转换">4.4　消除字符串转换</a></li>
+        <li><a href="#441将-c-字符串转换为-stdstring">4.4.1　将 C 字符串转换为 std::string</a></li>
+        <li><a href="#442不同字符集间的转换">4.4.2　不同字符集间的转换</a></li>
+        <li><a href="#45小结">4.5　小结</a></li>
+        <li><a href="#第-5-章优化算法">第 5 章　优化算法</a></li>
+        <li><a href="#51算法的时间开销">5.1　算法的时间开销</a></li>
+        <li><a href="#511最优情况平均情况和最差情况的时间开销">5.1.1　最优情况、平均情况和最差情况的时间开销</a></li>
+        <li><a href="#512摊销时间开销">5.1.2　摊销时间开销</a></li>
+        <li><a href="#513其他开销">5.1.3　其他开销</a></li>
+        <li><a href="#52优化查找和排序的工具箱">5.2　优化查找和排序的工具箱</a></li>
+        <li><a href="#53高效查找算法">5.3　高效查找算法</a></li>
+        <li><a href="#531查找算法的时间开销">5.3.1　查找算法的时间开销</a></li>
+        <li><a href="#532当-n-很小时所有算法的时间开销都一样">5.3.2　当 n 很小时，所有算法的时间开销都一样</a></li>
+        <li><a href="#54高效排序算法">5.4　高效排序算法</a></li>
+        <li><a href="#541排序算法的时间开销">5.4.1　排序算法的时间开销</a></li>
+        <li><a href="#542替换在最差情况下性能较差的排序算法">5.4.2　替换在最差情况下性能较差的排序算法</a></li>
+        <li><a href="#543利用输入数据集的已知特性">5.4.3　利用输入数据集的已知特性</a></li>
+        <li><a href="#55优化模式">5.5　优化模式</a></li>
+        <li><a href="#551预计算">5.5.1　预计算</a></li>
+        <li><a href="#552延迟计算">5.5.2　延迟计算</a></li>
+        <li><a href="#553批量处理">5.5.3　批量处理</a></li>
+        <li><a href="#554缓存">5.5.4　缓存</a></li>
+        <li><a href="#555特化">5.5.5　特化</a></li>
+        <li><a href="#556提高处理量">5.5.6　提高处理量</a></li>
+        <li><a href="#557提示">5.5.7　提示</a></li>
+        <li><a href="#558优化期待路径">5.5.8　优化期待路径</a></li>
+        <li><a href="#559散列法">5.5.9　散列法</a></li>
+        <li><a href="#5510双重检查">5.5.10　双重检查</a></li>
+        <li><a href="#56小结">5.6　小结</a></li>
+        <li><a href="#第-6-章优化动态分配内存的变量">第 6 章　优化动态分配内存的变量</a></li>
+        <li><a href="#61c-变量回顾">6.1　C++ 变量回顾</a></li>
+        <li><a href="#611变量的存储期">6.1.1　变量的存储期</a></li>
+        <li><a href="#612变量的所有权">6.1.2　变量的所有权</a></li>
+        <li><a href="#613值对象与实体对象">6.1.3　值对象与实体对象</a></li>
+        <li><a href="#62c-动态变量-api-回顾">6.2　C++ 动态变量 API 回顾</a></li>
+        <li><a href="#621使用智能指针实现动态变量所有权的自动化">6.2.1　使用智能指针实现动态变量所有权的自动化</a></li>
+        <li><a href="#622动态变量有运行时开销">6.2.2　动态变量有运行时开销</a></li>
+        <li><a href="#63减少动态变量的使用">6.3　减少动态变量的使用</a></li>
+        <li><a href="#631静态地创建类实例">6.3.1　静态地创建类实例</a></li>
+        <li><a href="#632使用静态数据结构">6.3.2　使用静态数据结构</a></li>
+        <li><a href="#633使用-stdmake_shared-替代-new-表达式">6.3.3　使用 std::make_shared 替代 new 表达式</a></li>
+        <li><a href="#634不要无谓地共享所有权">6.3.4　不要无谓地共享所有权</a></li>
+        <li><a href="#635使用主指针拥有动态变量">6.3.5　使用“主指针”拥有动态变量</a></li>
+        <li><a href="#64减少动态变量的重新分配">6.4　减少动态变量的重新分配</a></li>
+        <li><a href="#641预分配动态变量以防止重新分配">6.4.1　预分配动态变量以防止重新分配</a></li>
+        <li><a href="#642在循环外创建动态变量">6.4.2　在循环外创建动态变量</a></li>
+        <li><a href="#65移除无谓的复制">6.5　移除无谓的复制</a></li>
+        <li><a href="#651在类定义中禁止不希望发生的复制">6.5.1　在类定义中禁止不希望发生的复制</a></li>
+        <li><a href="#652移除函数调用上的复制">6.5.2　移除函数调用上的复制</a></li>
+        <li><a href="#653移除函数返回上的复制">6.5.3　移除函数返回上的复制</a></li>
+        <li><a href="#654免复制库">6.5.4　免复制库</a></li>
+        <li><a href="#655实现写时复制惯用法">6.5.5　实现写时复制惯用法</a></li>
+        <li><a href="#656切割数据结构">6.5.6　切割数据结构</a></li>
+        <li><a href="#66实现移动语义">6.6　实现移动语义</a></li>
+        <li><a href="#661非标准复制语义痛苦的实现">6.6.1　非标准复制语义：痛苦的实现</a></li>
+        <li><a href="#662stdswap-穷人的移动语义">6.6.2　std::swap() ：“穷人”的移动语义</a></li>
+        <li><a href="#663共享所有权的实体">6.6.3　共享所有权的实体</a></li>
+        <li><a href="#664移动语义的移动部分">6.6.4　移动语义的移动部分</a></li>
+        <li><a href="#665更新代码以使用移动语义">6.6.5　更新代码以使用移动语义</a></li>
+        <li><a href="#666移动语义的微妙之处">6.6.6　移动语义的微妙之处</a></li>
+        <li><a href="#67扁平数据结构">6.7　扁平数据结构</a></li>
+        <li><a href="#68小结">6.8　小结</a></li>
+        <li><a href="#第-7-章优化热点语句">第 7 章　优化热点语句</a></li>
+        <li><a href="#71从循环中移除代码">7.1　从循环中移除代码</a></li>
+        <li><a href="#711缓存循环结束条件值">7.1.1　缓存循环结束条件值</a></li>
+        <li><a href="#712使用更高效的循环语句">7.1.2　使用更高效的循环语句</a></li>
+        <li><a href="#713用递减替代递增">7.1.3　用递减替代递增</a></li>
+        <li><a href="#714从循环中移除不变性代码">7.1.4　从循环中移除不变性代码</a></li>
+        <li><a href="#715从循环中移除无谓的函数调用">7.1.5　从循环中移除无谓的函数调用</a></li>
+        <li><a href="#716从循环中移除隐含的函数调用">7.1.6　从循环中移除隐含的函数调用</a></li>
+        <li><a href="#717从循环中移除昂贵的缓慢改变的调用">7.1.7　从循环中移除昂贵的、缓慢改变的调用</a></li>
+        <li><a href="#718将循环放入函数以减少调用开销">7.1.8　将循环放入函数以减少调用开销</a></li>
+        <li><a href="#719不要频繁地进行操作">7.1.9　不要频繁地进行操作</a></li>
+        <li><a href="#7110其他优化技巧">7.1.10　其他优化技巧</a></li>
+        <li><a href="#72从函数中移除代码">7.2　从函数中移除代码</a></li>
+        <li><a href="#721函数调用的开销">7.2.1　函数调用的开销</a></li>
+        <li><a href="#722简短地声明内联函数">7.2.2　简短地声明内联函数</a></li>
+        <li><a href="#723在使用之前定义函数">7.2.3　在使用之前定义函数</a></li>
+        <li><a href="#724移除未使用的多态性">7.2.4　移除未使用的多态性</a></li>
+        <li><a href="#725放弃不使用的接口">7.2.5　放弃不使用的接口</a></li>
+        <li><a href="#726用模板在编译时选择实现">7.2.6　用模板在编译时选择实现</a></li>
+        <li><a href="#727避免使用-pimpl-惯用法">7.2.7　避免使用 PIMPL 惯用法</a></li>
+        <li><a href="#728移除对-ddl-的调用">7.2.8　移除对 DDL 的调用</a></li>
+        <li><a href="#729使用静态成员函数取代成员函数">7.2.9　使用静态成员函数取代成员函数</a></li>
+        <li><a href="#7210将虚析构函数移至基类中">7.2.10　将虚析构函数移至基类中</a></li>
+        <li><a href="#73优化表达式">7.3　优化表达式</a></li>
+        <li><a href="#731简化表达式">7.3.1　简化表达式</a></li>
+        <li><a href="#732将常量组合在一起">7.3.2　将常量组合在一起</a></li>
+        <li><a href="#733使用更高效的运算符">7.3.3　使用更高效的运算符</a></li>
+        <li><a href="#734使用整数计算替代浮点型计算">7.3.4　使用整数计算替代浮点型计算</a></li>
+        <li><a href="#735双精度类型可能会比浮点型更快">7.3.5　双精度类型可能会比浮点型更快</a></li>
+        <li><a href="#736用闭形式替代迭代计算">7.3.6　用闭形式替代迭代计算</a></li>
+        <li><a href="#74优化控制流程惯用法">7.4　优化控制流程惯用法</a></li>
+        <li><a href="#741用-switch-替代-if-elseif-else">7.4.1　用 switch 替代 if-else　if-else</a></li>
+        <li><a href="#742用虚函数替代-switch-或-if">7.4.2　用虚函数替代 switch 或 if</a></li>
+        <li><a href="#743使用无开销的异常处理">7.4.3　使用无开销的异常处理</a></li>
+        <li><a href="#75小结">7.5　小结</a></li>
+        <li><a href="#第-8-章使用更好的库">第 8 章　使用更好的库</a></li>
+        <li><a href="#81优化标准库的使用">8.1　优化标准库的使用</a></li>
+        <li><a href="#811c-标准库的哲学">8.1.1　C++ 标准库的哲学</a></li>
+        <li><a href="#812使用-c-标准库的注意事项">8.1.2　使用 C++ 标准库的注意事项</a></li>
+        <li><a href="#82优化现有库">8.2　优化现有库</a></li>
+        <li><a href="#821改动越少越好">8.2.1　改动越少越好</a></li>
+        <li><a href="#822添加函数不要改动功能">8.2.2　添加函数，不要改动功能</a></li>
+        <li><a href="#83设计优化库">8.3　设计优化库</a></li>
+        <li><a href="#831草率编码后悔多">8.3.1　草率编码后悔多</a></li>
+        <li><a href="#832在库的设计上简约是一种美德">8.3.2　在库的设计上，简约是一种美德</a></li>
+        <li><a href="#833不要在库内分配内存">8.3.3　不要在库内分配内存</a></li>
+        <li><a href="#834若有疑问以速度为准">8.3.4　若有疑问，以速度为准</a></li>
+        <li><a href="#835函数比框架更容易优化">8.3.5　函数比框架更容易优化</a></li>
+        <li><a href="#836扁平继承层次关系">8.3.6　扁平继承层次关系</a></li>
+        <li><a href="#837扁平调用链">8.3.7　扁平调用链</a></li>
+        <li><a href="#838扁平分层设计">8.3.8　扁平分层设计</a></li>
+        <li><a href="#839避免动态查找">8.3.9　避免动态查找</a></li>
+        <li><a href="#8310留意上帝函数">8.3.10　留意“上帝函数”</a></li>
+        <li><a href="#84小结">8.4　小结</a></li>
+        <li><a href="#第-9-章优化查找和排序">第 9 章　优化查找和排序</a></li>
+        <li><a href="#91使用-stdmap-和-stdstring-的键值对表">9.1　使用 std::map 和 std::string 的键值对表</a></li>
+        <li><a href="#92改善查找性能的工具箱">9.2　改善查找性能的工具箱</a></li>
+        <li><a href="#921进行一次基准测量">9.2.1　进行一次基准测量</a></li>
+        <li><a href="#922识别出待优化的活动">9.2.2　识别出待优化的活动</a></li>
+        <li><a href="#923分解待优化的活动">9.2.3　分解待优化的活动</a></li>
+        <li><a href="#924修改或替换算法和数据结构">9.2.4　修改或替换算法和数据结构</a></li>
+        <li><a href="#925在自定义抽象上应用优化过程">9.2.5　在自定义抽象上应用优化过程</a></li>
+        <li><a href="#93优化-stdmap-的查找">9.3　优化 std::map 的查找</a></li>
+        <li><a href="#931以固定长度的字符数组作为-stdmap-的键">9.3.1　以固定长度的字符数组作为 std::map 的键</a></li>
+        <li><a href="#932以-c-风格的字符串组作为键使用-stdmap">9.3.2　以 C 风格的字符串组作为键使用 std::map</a></li>
+        <li><a href="#933当键就是值的时候使用-map-的表亲-stdset">9.3.3　当键就是值的时候，使用 map 的表亲 std::set</a></li>
+        <li><a href="#94使用--头文件优化算法">9.4　使用 <algorithm> 头文件优化算法</a></li>
+        <li><a href="#941以序列容器作为被查找的键值对表">9.4.1　以序列容器作为被查找的键值对表</a></li>
+        <li><a href="#942stdfind-功能如其名on-时间开销">9.4.2　std::find() ：功能如其名，O(n) 时间开销</a></li>
+        <li><a href="#943stdbinary_search-不返回值">9.4.3　std::binary_search() ：不返回值</a></li>
+        <li><a href="#944使用-stdequal_range-的二分查找">9.4.4　使用 std::equal_range() 的二分查找</a></li>
+        <li><a href="#945使用-stdlower_bound-的二分查找">9.4.5　使用 std::lower_bound() 的二分查找</a></li>
+        <li><a href="#946自己编写二分查找法">9.4.6　自己编写二分查找法</a></li>
+        <li><a href="#947使用-strcmp-自己编写二分查找法">9.4.7　使用 strcmp() 自己编写二分查找法</a></li>
+        <li><a href="#95优化键值对散列表中的查找">9.5　优化键值对散列表中的查找</a></li>
+        <li><a href="#951使用-stdunordered_map-进行散列">9.5.1　使用 std::unordered_map 进行散列</a></li>
+        <li><a href="#952对固定长度字符数组的键进行散列">9.5.2　对固定长度字符数组的键进行散列</a></li>
+        <li><a href="#953以空字符结尾的字符串为键进行散列">9.5.3　以空字符结尾的字符串为键进行散列</a></li>
+        <li><a href="#954用自定义的散列表进行散列">9.5.4　用自定义的散列表进行散列</a></li>
+        <li><a href="#96斯特潘诺夫3的抽象惩罚">9.6　斯特潘诺夫3的抽象惩罚</a></li>
+        <li><a href="#97使用-c-标准库优化排序">9.7　使用 C++ 标准库优化排序</a></li>
+        <li><a href="#98小结">9.8　小结</a></li>
+        <li><a href="#第-10-章优化数据结构">第 10 章　优化数据结构</a></li>
+        <li><a href="#101理解标准库容器">10.1　理解标准库容器</a></li>
+        <li><a href="#1011序列容器">10.1.1　序列容器</a></li>
+        <li><a href="#1012关联容器">10.1.2　关联容器</a></li>
+        <li><a href="#1013测试标准库容器">10.1.3　测试标准库容器</a></li>
+        <li><a href="#102stdvector-与-stdstring">10.2　std::vector 与 std::string</a></li>
+        <li><a href="#1021重新分配的性能影响">10.2.1　重新分配的性能影响</a></li>
+        <li><a href="#1022stdvector-中的插入与删除">10.2.2　std::vector 中的插入与删除</a></li>
+        <li><a href="#1023遍历-stdvector">10.2.3　遍历 std::vector</a></li>
+        <li><a href="#1024对-stdvector-排序">10.2.4　　对 std::vector 排序</a></li>
+        <li><a href="#1025查找-stdvector">10.2.5　查找 std::vector</a></li>
+        <li><a href="#103stddeque">10.3　std::deque</a></li>
+        <li><a href="#1031stddeque-中的插入和删除">10.3.1　std::deque 中的插入和删除</a></li>
+        <li><a href="#1032遍历-stddeque">10.3.2　遍历 std::deque</a></li>
+        <li><a href="#1033对-stddeque-的排序">10.3.3　对 std::deque 的排序</a></li>
+        <li><a href="#1034查找-stddeque">10.3.4　查找 std::deque</a></li>
+        <li><a href="#104stdlist">10.4　std::list</a></li>
+        <li><a href="#1041stdlist-中的插入和删除">10.4.1　std::list 中的插入和删除</a></li>
+        <li><a href="#1042遍历-stdlist-中">10.4.2　遍历 std::list 中</a></li>
+        <li><a href="#1043对-stdlist-排序">10.4.3　对 std::list 排序</a></li>
+        <li><a href="#1044查找-stdlist">10.4.4　查找 std::list</a></li>
+        <li><a href="#105stdforward_list">10.5　std::forward_list</a></li>
+        <li><a href="#1051stdforward_list-中的插入和删除">10.5.1　std::forward_list 中的插入和删除</a></li>
+        <li><a href="#1052遍历-stdforward_list">10.5.2　遍历 std::forward_list</a></li>
+        <li><a href="#1053对-stdforward_list-排序">10.5.3　对 std::forward_list 排序</a></li>
+        <li><a href="#1054查找-stdforward_list">10.5.4　查找 std::forward_list</a></li>
+        <li><a href="#106stdmap-与-stdmultimap">10.6　std::map 与 std::multimap</a></li>
+        <li><a href="#1061stdmap-中的插入和删除">10.6.1　std::map 中的插入和删除</a></li>
+        <li><a href="#1062遍历-stdmap">10.6.2　遍历 std::map</a></li>
+        <li><a href="#1063对-stdmap-排序">10.6.3　对 std::map 排序</a></li>
+        <li><a href="#1064查找-stdmap">10.6.4　查找 std::map</a></li>
+        <li><a href="#107stdset-与-stdmultiset">10.7　std::set 与 std::multiset</a></li>
+        <li><a href="#108stdunordered_map-与-stdunordered_multimap">10.8　std::unordered_map 与 std::unordered_multimap</a></li>
+        <li><a href="#1081stdunordered_map-中的插入与删除">10.8.1　std::unordered_map 中的插入与删除</a></li>
+        <li><a href="#1082遍历-stdunordered_map">10.8.2　遍历 std::unordered_map</a></li>
+        <li><a href="#1083查找-stdunordered_map">10.8.3　查找 std::unordered_map</a></li>
+        <li><a href="#109其他数据结构">10.9　其他数据结构</a></li>
+        <li><a href="#1010小结">10.10　小结</a></li>
+        <li><a href="#第-11-章优化-io">第 11 章　优化 I/O</a></li>
+        <li><a href="#111读取文件的秘诀">11.1　读取文件的秘诀</a></li>
+        <li><a href="#1111创建一个吝啬的函数签名">11.1.1　创建一个吝啬的函数签名</a></li>
+        <li><a href="#1112缩短调用链">11.1.2　缩短调用链</a></li>
+        <li><a href="#1113减少重新分配">11.1.3　减少重新分配</a></li>
+        <li><a href="#1114更大的吞吐量使用更大的输入缓冲区">11.1.4　更大的吞吐量——使用更大的输入缓冲区</a></li>
+        <li><a href="#1115更大的吞吐量一次读取一行">11.1.5　更大的吞吐量——一次读取一行</a></li>
+        <li><a href="#1116再次缩短函数调用链">11.1.6　再次缩短函数调用链</a></li>
+        <li><a href="#1117无用的技巧">11.1.7　无用的技巧</a></li>
+        <li><a href="#112写文件">11.2　写文件</a></li>
+        <li><a href="#113从-stdcin-读取和向-stdcout-中写入">11.3　从 std::cin 读取和向 std::cout 中写入</a></li>
+        <li><a href="#114小结">11.4　小结</a></li>
+        <li><a href="#第-12-章优化并发">第 12 章　优化并发</a></li>
+        <li><a href="#121复习并发">12.1　复习并发</a></li>
+        <li><a href="#1211并发概述">12.1.1　并发概述</a></li>
+        <li><a href="#1212交叉执行">12.1.2　交叉执行</a></li>
+        <li><a href="#1213顺序一致性">12.1.3　顺序一致性</a></li>
+        <li><a href="#1214竞争">12.1.4　竞争</a></li>
+        <li><a href="#1215同步">12.1.5　同步</a></li>
+        <li><a href="#1216原子性">12.1.6　原子性</a></li>
+        <li><a href="#122复习-c-并发方式">12.2　复习 C++ 并发方式</a></li>
+        <li><a href="#1221线程">12.2.1　线程</a></li>
+        <li><a href="#1222promise-和-future">12.2.2　promise 和 future</a></li>
+        <li><a href="#1223异步任务">12.2.3　异步任务</a></li>
+        <li><a href="#1224互斥量">12.2.4　互斥量</a></li>
+        <li><a href="#1225锁">12.2.5　锁</a></li>
+        <li><a href="#1226条件变量">12.2.6　条件变量</a></li>
+        <li><a href="#1227共享变量上的原子操作">12.2.7　共享变量上的原子操作</a></li>
+        <li><a href="#1228展望未来的-c-并发特性">12.2.8　展望未来的 C++ 并发特性</a></li>
+        <li><a href="#123优化多线程-c-程序">12.3　优化多线程 C++ 程序</a></li>
+        <li><a href="#1231用-stdasync-替代-stdthread">12.3.1　用 std::async 替代 std::thread</a></li>
+        <li><a href="#1232创建与核心数量一样多的可执行线程">12.3.2　创建与核心数量一样多的可执行线程</a></li>
+        <li><a href="#1233实现任务队列和线程池">12.3.3　实现任务队列和线程池</a></li>
+        <li><a href="#1234在单独的线程中执行-io">12.3.4　在单独的线程中执行 I/O</a></li>
+        <li><a href="#1235没有同步的程序">12.3.5　没有同步的程序</a></li>
+        <li><a href="#1236移除启动和停止代码">12.3.6　移除启动和停止代码</a></li>
+        <li><a href="#124让同步更加高效">12.4　让同步更加高效</a></li>
+        <li><a href="#1241减小临界区的范围">12.4.1　减小临界区的范围</a></li>
+        <li><a href="#1242限制并发线程的数量">12.4.2　限制并发线程的数量</a></li>
+        <li><a href="#1243避免惊群">12.4.3　避免惊群</a></li>
+        <li><a href="#1244避免锁护送">12.4.4　避免锁护送</a></li>
+        <li><a href="#1245减少竞争">12.4.5　减少竞争</a></li>
+        <li><a href="#1246不要在单核系统上繁忙等待">12.4.6　不要在单核系统上繁忙等待</a></li>
+        <li><a href="#1247不要永远等待">12.4.7　不要永远等待</a></li>
+        <li><a href="#1248自己设计互斥量可能会低效">12.4.8　自己设计互斥量可能会低效</a></li>
+        <li><a href="#1249限制生产者输出队列的长度">12.4.9　限制生产者输出队列的长度</a></li>
+        <li><a href="#125并发库">12.5　并发库</a></li>
+        <li><a href="#126小结">12.6　小结</a></li>
+        <li><a href="#第-13-章优化内存管理">第 13 章　优化内存管理</a></li>
+        <li><a href="#131复习-c-内存管理器-api">13.1　复习 C++ 内存管理器 API</a></li>
+        <li><a href="#1311动态变量的生命周期">13.1.1　动态变量的生命周期</a></li>
+        <li><a href="#1312内存管理函数分配和释放内存">13.1.2　内存管理函数分配和释放内存</a></li>
+        <li><a href="#1313new-表达式构造动态变量">13.1.3　new 表达式构造动态变量</a></li>
+        <li><a href="#1314delete-表达式处置动态变量">13.1.4　delete 表达式处置动态变量</a></li>
+        <li><a href="#1315显式析构函数调用销毁动态变量">13.1.5　显式析构函数调用销毁动态变量</a></li>
+        <li><a href="#132高性能内存管理器">13.2　高性能内存管理器</a></li>
+        <li><a href="#133提供类专用内存管理器">13.3　提供类专用内存管理器</a></li>
+        <li><a href="#1331分配固定大小内存的内存管理器">13.3.1　分配固定大小内存的内存管理器</a></li>
+        <li><a href="#1332内存块分配区">13.3.2　内存块分配区</a></li>
+        <li><a href="#1333添加一个类专用-new-运算符">13.3.3　添加一个类专用 new() 运算符</a></li>
+        <li><a href="#1334分配固定大小内存块的内存管理器的性能">13.3.4　分配固定大小内存块的内存管理器的性能</a></li>
+        <li><a href="#1335分配固定大小内存块的内存管理器的变化形式">13.3.5　分配固定大小内存块的内存管理器的变化形式</a></li>
+        <li><a href="#1336非线程安全的内存管理器是高效的">13.3.6　非线程安全的内存管理器是高效的</a></li>
+        <li><a href="#134自定义标准库分配器">13.4　自定义标准库分配器</a></li>
+        <li><a href="#1341最小-c11-分配器">13.4.1　最小 C++11 分配器</a></li>
+        <li><a href="#1342c98-分配器的其他定义">13.4.2　C++98 分配器的其他定义</a></li>
+        <li><a href="#1343一个分配固定大小内存块的分配器">13.4.3　一个分配固定大小内存块的分配器</a></li>
+        <li><a href="#1344字符串的分配固定大小内存块的分配器">13.4.4　字符串的分配固定大小内存块的分配器</a></li>
+        <li><a href="#135小结">13.5　小结</a></li>
+        <li><a href="#作者介绍">作者介绍</a></li>
+        <li><a href="#封面介绍">封面介绍</a></li>
+      </ol>
+    </li>
+    <li><a href="#读书笔记">读书笔记</a>
+      <ol>
+        <li><a href="#第-1-章优化概述-1">第 1 章　优化概述</a>
+          <ol>
+            <li><a href="#划线评论">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#151用好的编译器并用好编译器-1">1.5.1　用好的编译器并用好编译器</a>
+          <ol>
+            <li><a href="#划线评论-1">划线评论</a></li>
+            <li><a href="#划线评论-2">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#152使用更好的算法-1">1.5.2　使用更好的算法</a>
+          <ol>
+            <li><a href="#划线评论-3">划线评论</a></li>
+            <li><a href="#划线评论-4">划线评论</a></li>
+            <li><a href="#划线评论-5">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#153使用更好的库-1">1.5.3　使用更好的库</a>
+          <ol>
+            <li><a href="#划线评论-6">划线评论</a></li>
+            <li><a href="#划线评论-7">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#155移除计算-1">1.5.5　移除计算</a>
+          <ol>
+            <li><a href="#划线评论-8">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#21c-所相信的计算机谎言-1">2.1　C++ 所相信的计算机谎言</a>
+          <ol>
+            <li><a href="#划线评论-9">划线评论</a></li>
+            <li><a href="#划线评论-10">划线评论</a></li>
+            <li><a href="#划线评论-11">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#221内存很慢-1">2.2.1　内存很慢</a>
+          <ol>
+            <li><a href="#划线评论-12">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#222内存访问并非以字节为单位-1">2.2.2　内存访问并非以字节为单位</a>
+          <ol>
+            <li><a href="#划线评论-13">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#223某些内存访问会比其他的更慢-1">2.2.3　某些内存访问会比其他的更慢</a>
+          <ol>
+            <li><a href="#划线评论-14">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#226指令执行缓慢-1">2.2.6　指令执行缓慢</a>
+          <ol>
+            <li><a href="#划线评论-15">划线评论</a></li>
+          </ol>
+        </li>
+        <li><a href="#228程序执行中的多个流-1">2.2.8　程序执行中的多个流</a>
+          <ol>
+            <li><a href="#划线评论-16">划线评论</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#本书评论">本书评论</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/c&#43;&#43;%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 14 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] C++性能优化指南</p>
+<ul>
+<li><img src="https://res.weread.qq.com/wrepub/CB_36M8Qg8OgBLd6kj6kj35h2hj_parsecover"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" C&#43;&#43;性能优化指南|200"
+	
+	
+></li>
+<li>书名： C++性能优化指南</li>
+<li>作者： 【美】 Kurt Guntheroth</li>
+<li>简介：</li>
+<li>出版时间</li>
+<li>ISBN：</li>
+<li>分类：</li>
+<li>出版社： 人民邮电出版社</li>
+<li>PC地址：https://weread.qq.com/web/reader/f93426a3643425f47563543794a386365417949367848367836346633396743c52</li>
+</ul></blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="版权声明"><a href="#%e7%89%88%e6%9d%83%e5%a3%b0%e6%98%8e" class="header-anchor"></a>版权声明
+</h2><h2 id="oreilly-media-inc-介绍"><a href="#oreilly-media-inc-%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>O&rsquo;Reilly Media, Inc. 介绍
+</h2><h2 id="业界评论"><a href="#%e4%b8%9a%e7%95%8c%e8%af%84%e8%ae%ba" class="header-anchor"></a>业界评论
+</h2><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><h2 id="为本书中的代码致歉"><a href="#%e4%b8%ba%e6%9c%ac%e4%b9%a6%e4%b8%ad%e7%9a%84%e4%bb%a3%e7%a0%81%e8%87%b4%e6%ad%89" class="header-anchor"></a>为本书中的代码致歉
+</h2><h2 id="示例代码的使用"><a href="#%e7%a4%ba%e4%be%8b%e4%bb%a3%e7%a0%81%e7%9a%84%e4%bd%bf%e7%94%a8" class="header-anchor"></a>示例代码的使用
+</h2><h2 id="排版约定"><a href="#%e6%8e%92%e7%89%88%e7%ba%a6%e5%ae%9a" class="header-anchor"></a>排版约定
+</h2><h2 id="第-1-章优化概述"><a href="#%e7%ac%ac-1-%e7%ab%a0%e4%bc%98%e5%8c%96%e6%a6%82%e8%bf%b0" class="header-anchor"></a>第 1 章　优化概述
+</h2><blockquote>
+<p>📌 许多优化机会的出现源于某些 C++ 特性被误用而导致程序运行缓慢、消耗许多资源。这些代码虽然是正确的，却不完善。这些代码往往是因为开发人员
+⏱ 2025-07-19 09:49:14 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-8-880-949</p></blockquote>
+<blockquote>
+<p>📌 对于大多数应用程序来说，对每种处理器都进行特定的优化是难以取得好效果的，因为这些应用程序必须运行于各种处理器之上。
+⏱ 2025-07-19 09:49:45 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-8-1324-1381</p></blockquote>
+<h2 id="11优化是软件开发的一部分"><a href="#11%e4%bc%98%e5%8c%96%e6%98%af%e8%bd%af%e4%bb%b6%e5%bc%80%e5%8f%91%e7%9a%84%e4%b8%80%e9%83%a8%e5%88%86" class="header-anchor"></a>1.1　优化是软件开发的一部分
+</h2><blockquote>
+<p>📌 但是性能可以是非常糟糕或者非常优秀，还可能是介于这二者之间的某种程度。优化还是一个迭代的过程。每当程序中最慢的部分被改善后，一个新的最慢的部分就会出现
+⏱ 2025-07-19 09:51:18 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-9-747-822</p></blockquote>
+<blockquote>
+<p>📌 经验丰富的开发人员常常相信他们对于最优代码具有足够的经验和直觉。但是除非他们频繁地测试自己的直觉，否则通常他们都是错误的。在我个人为本书编写测试代码的经历中，就多次出现测试结果与我的直觉相悖的情况。实验，而非直觉，才是贯穿本书的主题
+⏱ 2025-07-19 09:51:50 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-9-935-1051</p></blockquote>
+<h2 id="12优化是高效的"><a href="#12%e4%bc%98%e5%8c%96%e6%98%af%e9%ab%98%e6%95%88%e7%9a%84" class="header-anchor"></a>1.2　优化是高效的
+</h2><h2 id="13优化是没有问题的"><a href="#13%e4%bc%98%e5%8c%96%e6%98%af%e6%b2%a1%e6%9c%89%e9%97%ae%e9%a2%98%e7%9a%84" class="header-anchor"></a>1.3　优化是没有问题的
+</h2><blockquote>
+<p>📌 我的建议是不要过于教条。优化是没有问题的。学习高效的编程惯用法并在程序中实践之是没有问题的，即使你不知道哪部分代码的性能很重要。这些惯用法对C++ 程序很有帮助。使用这些技巧也不会让你被同事鄙夷。如果有人问你为什么不写一些“简单”和低效的代码，你可以这么回答他：​“编写高效代码与编写低效无用的代码所需的时间是一样的，为什么还会有人特意去编写低效的代码呢？​”
+⏱ 2025-07-19 09:53:13 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-11-1950-2130</p></blockquote>
+<blockquote>
+<p>📌 。虽然总的看来，如今多核处理器的性能不断强大，但是单个核心的性能增长却非常缓慢，甚至有时还有所下降。如今的程序还必须运行于移动平台上，电池的电量和散热都制约了指令的执行速率。而且，尽管随着时间的推移，会给新客户带来更快的计算机，但是也无法改善现有硬件的性能。
+⏱ 2025-07-19 09:56:04 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-11-4230-4359</p></blockquote>
+<h2 id="14这儿一纳秒那儿一纳秒"><a href="#14%e8%bf%99%e5%84%bf%e4%b8%80%e7%ba%b3%e7%a7%92%e9%82%a3%e5%84%bf%e4%b8%80%e7%ba%b3%e7%a7%92" class="header-anchor"></a>1.4　这儿一纳秒，那儿一纳秒
+</h2><h2 id="15c-代码优化策略总结"><a href="#15c-%e4%bb%a3%e7%a0%81%e4%bc%98%e5%8c%96%e7%ad%96%e7%95%a5%e6%80%bb%e7%bb%93" class="header-anchor"></a>1.5　C++ 代码优化策略总结
+</h2><h2 id="151用好的编译器并用好编译器"><a href="#151%e7%94%a8%e5%a5%bd%e7%9a%84%e7%bc%96%e8%af%91%e5%99%a8%e5%b9%b6%e7%94%a8%e5%a5%bd%e7%bc%96%e8%af%91%e5%99%a8" class="header-anchor"></a>1.5.1　用好的编译器并用好编译器
+</h2><h2 id="152使用更好的算法"><a href="#152%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e7%ae%97%e6%b3%95" class="header-anchor"></a>1.5.2　使用更好的算法
+</h2><h2 id="153使用更好的库"><a href="#153%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e5%ba%93" class="header-anchor"></a>1.5.3　使用更好的库
+</h2><h2 id="154减少内存分配和复制"><a href="#154%e5%87%8f%e5%b0%91%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%92%8c%e5%a4%8d%e5%88%b6" class="header-anchor"></a>1.5.4　减少内存分配和复制
+</h2><h2 id="155移除计算"><a href="#155%e7%a7%bb%e9%99%a4%e8%ae%a1%e7%ae%97" class="header-anchor"></a>1.5.5　移除计算
+</h2><h2 id="156使用更好的数据结构"><a href="#156%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>1.5.6　使用更好的数据结构
+</h2><h2 id="157提高并发性"><a href="#157%e6%8f%90%e9%ab%98%e5%b9%b6%e5%8f%91%e6%80%a7" class="header-anchor"></a>1.5.7　提高并发性
+</h2><h2 id="158优化内存管理"><a href="#158%e4%bc%98%e5%8c%96%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86" class="header-anchor"></a>1.5.8　优化内存管理
+</h2><h2 id="16小结"><a href="#16%e5%b0%8f%e7%bb%93" class="header-anchor"></a>1.6　小结
+</h2><h2 id="第-2-章影响优化的计算机行为"><a href="#%e7%ac%ac-2-%e7%ab%a0%e5%bd%b1%e5%93%8d%e4%bc%98%e5%8c%96%e7%9a%84%e8%ae%a1%e7%ae%97%e6%9c%ba%e8%a1%8c%e4%b8%ba" class="header-anchor"></a>第 2 章　影响优化的计算机行为
+</h2><h2 id="21c-所相信的计算机谎言"><a href="#21c-%e6%89%80%e7%9b%b8%e4%bf%a1%e7%9a%84%e8%ae%a1%e7%ae%97%e6%9c%ba%e8%b0%8e%e8%a8%80" class="header-anchor"></a>2.1　C++ 所相信的计算机谎言
+</h2><h2 id="22计算机的真相"><a href="#22%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%9a%84%e7%9c%9f%e7%9b%b8" class="header-anchor"></a>2.2　计算机的真相
+</h2><h2 id="221内存很慢"><a href="#221%e5%86%85%e5%ad%98%e5%be%88%e6%85%a2" class="header-anchor"></a>2.2.1　内存很慢
+</h2><h2 id="222内存访问并非以字节为单位"><a href="#222%e5%86%85%e5%ad%98%e8%ae%bf%e9%97%ae%e5%b9%b6%e9%9d%9e%e4%bb%a5%e5%ad%97%e8%8a%82%e4%b8%ba%e5%8d%95%e4%bd%8d" class="header-anchor"></a>2.2.2　内存访问并非以字节为单位
+</h2><h2 id="223某些内存访问会比其他的更慢"><a href="#223%e6%9f%90%e4%ba%9b%e5%86%85%e5%ad%98%e8%ae%bf%e9%97%ae%e4%bc%9a%e6%af%94%e5%85%b6%e4%bb%96%e7%9a%84%e6%9b%b4%e6%85%a2" class="header-anchor"></a>2.2.3　某些内存访问会比其他的更慢
+</h2><blockquote>
+<p>📌 就 C++ 而言，这表示一个包含循环处理的代码块的执行速度可能会更快。这是因为组成循环处理的指令会被频繁地执行，而且互相紧挨着，因此更容易留在高速缓存中。一段包含函数调用或是含有 if 语句导致执行发生跳转的代码则会执行得较慢，因为代码中各个独立的部分不会那么频繁地被执行，也不是那么紧邻着。相比紧凑的循环，这样的代码在高速缓存中会占用更多的空间。如果程序很
+⏱ 2025-07-19 11:29:45 ^CB-GV5CyJ8ceAyI6xH6x64f39gC-28-1066-1259</p></blockquote>
+<h2 id="224内存字分为大端和小端"><a href="#224%e5%86%85%e5%ad%98%e5%ad%97%e5%88%86%e4%b8%ba%e5%a4%a7%e7%ab%af%e5%92%8c%e5%b0%8f%e7%ab%af" class="header-anchor"></a>2.2.4　内存字分为大端和小端
+</h2><h2 id="225内存容量是有限的"><a href="#225%e5%86%85%e5%ad%98%e5%ae%b9%e9%87%8f%e6%98%af%e6%9c%89%e9%99%90%e7%9a%84" class="header-anchor"></a>2.2.5　内存容量是有限的
+</h2><h2 id="226指令执行缓慢"><a href="#226%e6%8c%87%e4%bb%a4%e6%89%a7%e8%a1%8c%e7%bc%93%e6%85%a2" class="header-anchor"></a>2.2.6　指令执行缓慢
+</h2><h2 id="227计算机难以作决定"><a href="#227%e8%ae%a1%e7%ae%97%e6%9c%ba%e9%9a%be%e4%bb%a5%e4%bd%9c%e5%86%b3%e5%ae%9a" class="header-anchor"></a>2.2.7　计算机难以作决定
+</h2><h2 id="228程序执行中的多个流"><a href="#228%e7%a8%8b%e5%ba%8f%e6%89%a7%e8%a1%8c%e4%b8%ad%e7%9a%84%e5%a4%9a%e4%b8%aa%e6%b5%81" class="header-anchor"></a>2.2.8　程序执行中的多个流
+</h2><h2 id="229调用操作系统的开销是昂贵的"><a href="#229%e8%b0%83%e7%94%a8%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e7%9a%84%e5%bc%80%e9%94%80%e6%98%af%e6%98%82%e8%b4%b5%e7%9a%84" class="header-anchor"></a>2.2.9　调用操作系统的开销是昂贵的
+</h2><h2 id="23c-也会说谎"><a href="#23c-%e4%b9%9f%e4%bc%9a%e8%af%b4%e8%b0%8e" class="header-anchor"></a>2.3　C++ 也会说谎
+</h2><h2 id="231并非所有语句的性能开销都相同"><a href="#231%e5%b9%b6%e9%9d%9e%e6%89%80%e6%9c%89%e8%af%ad%e5%8f%a5%e7%9a%84%e6%80%a7%e8%83%bd%e5%bc%80%e9%94%80%e9%83%bd%e7%9b%b8%e5%90%8c" class="header-anchor"></a>2.3.1　并非所有语句的性能开销都相同
+</h2><h2 id="232语句并非按顺序执行"><a href="#232%e8%af%ad%e5%8f%a5%e5%b9%b6%e9%9d%9e%e6%8c%89%e9%a1%ba%e5%ba%8f%e6%89%a7%e8%a1%8c" class="header-anchor"></a>2.3.2　语句并非按顺序执行
+</h2><h2 id="24小结"><a href="#24%e5%b0%8f%e7%bb%93" class="header-anchor"></a>2.4　小结
+</h2><h2 id="第-3-章测量性能"><a href="#%e7%ac%ac-3-%e7%ab%a0%e6%b5%8b%e9%87%8f%e6%80%a7%e8%83%bd" class="header-anchor"></a>第 3 章　测量性能
+</h2><h2 id="31优化思想"><a href="#31%e4%bc%98%e5%8c%96%e6%80%9d%e6%83%b3" class="header-anchor"></a>3.1　优化思想
+</h2><h2 id="311必须测量性能"><a href="#311%e5%bf%85%e9%a1%bb%e6%b5%8b%e9%87%8f%e6%80%a7%e8%83%bd" class="header-anchor"></a>3.1.1　必须测量性能
+</h2><h2 id="312优化器是王牌猎人"><a href="#312%e4%bc%98%e5%8c%96%e5%99%a8%e6%98%af%e7%8e%8b%e7%89%8c%e7%8c%8e%e4%ba%ba" class="header-anchor"></a>3.1.2　优化器是王牌猎人
+</h2><h2 id="3139010-规则"><a href="#3139010-%e8%a7%84%e5%88%99" class="header-anchor"></a>3.1.3　90/10 规则
+</h2><h2 id="314阿姆达尔定律"><a href="#314%e9%98%bf%e5%a7%86%e8%be%be%e5%b0%94%e5%ae%9a%e5%be%8b" class="header-anchor"></a>3.1.4　阿姆达尔定律
+</h2><h2 id="32进行实验"><a href="#32%e8%bf%9b%e8%a1%8c%e5%ae%9e%e9%aa%8c" class="header-anchor"></a>3.2　进行实验
+</h2><h2 id="321记实验笔记"><a href="#321%e8%ae%b0%e5%ae%9e%e9%aa%8c%e7%ac%94%e8%ae%b0" class="header-anchor"></a>3.2.1　记实验笔记
+</h2><h2 id="322测量基准性能并设定目标"><a href="#322%e6%b5%8b%e9%87%8f%e5%9f%ba%e5%87%86%e6%80%a7%e8%83%bd%e5%b9%b6%e8%ae%be%e5%ae%9a%e7%9b%ae%e6%a0%87" class="header-anchor"></a>3.2.2　测量基准性能并设定目标
+</h2><h2 id="323你只能改善你能够测量的"><a href="#323%e4%bd%a0%e5%8f%aa%e8%83%bd%e6%94%b9%e5%96%84%e4%bd%a0%e8%83%bd%e5%a4%9f%e6%b5%8b%e9%87%8f%e7%9a%84" class="header-anchor"></a>3.2.3　你只能改善你能够测量的
+</h2><h2 id="33分析程序执行"><a href="#33%e5%88%86%e6%9e%90%e7%a8%8b%e5%ba%8f%e6%89%a7%e8%a1%8c" class="header-anchor"></a>3.3　分析程序执行
+</h2><h2 id="34测量长时间运行的代码"><a href="#34%e6%b5%8b%e9%87%8f%e9%95%bf%e6%97%b6%e9%97%b4%e8%bf%90%e8%a1%8c%e7%9a%84%e4%bb%a3%e7%a0%81" class="header-anchor"></a>3.4　测量长时间运行的代码
+</h2><h2 id="341一点关于测量时间的知识"><a href="#341%e4%b8%80%e7%82%b9%e5%85%b3%e4%ba%8e%e6%b5%8b%e9%87%8f%e6%97%b6%e9%97%b4%e7%9a%84%e7%9f%a5%e8%af%86" class="header-anchor"></a>3.4.1　一点关于测量时间的知识
+</h2><h2 id="342用计算机测量时间"><a href="#342%e7%94%a8%e8%ae%a1%e7%ae%97%e6%9c%ba%e6%b5%8b%e9%87%8f%e6%97%b6%e9%97%b4" class="header-anchor"></a>3.4.2　用计算机测量时间
+</h2><h2 id="343克服测量障碍"><a href="#343%e5%85%8b%e6%9c%8d%e6%b5%8b%e9%87%8f%e9%9a%9c%e7%a2%8d" class="header-anchor"></a>3.4.3　克服测量障碍
+</h2><h2 id="344创建-stopwatch-类"><a href="#344%e5%88%9b%e5%bb%ba-stopwatch-%e7%b1%bb" class="header-anchor"></a>3.4.4　创建 stopwatch 类
+</h2><h2 id="345使用测试套件测量热点函数"><a href="#345%e4%bd%bf%e7%94%a8%e6%b5%8b%e8%af%95%e5%a5%97%e4%bb%b6%e6%b5%8b%e9%87%8f%e7%83%ad%e7%82%b9%e5%87%bd%e6%95%b0" class="header-anchor"></a>3.4.5　使用测试套件测量热点函数
+</h2><h2 id="35评估代码开销来找出热点代码"><a href="#35%e8%af%84%e4%bc%b0%e4%bb%a3%e7%a0%81%e5%bc%80%e9%94%80%e6%9d%a5%e6%89%be%e5%87%ba%e7%83%ad%e7%82%b9%e4%bb%a3%e7%a0%81" class="header-anchor"></a>3.5　评估代码开销来找出热点代码
+</h2><h2 id="351评估独立的-c-语句的开销"><a href="#351%e8%af%84%e4%bc%b0%e7%8b%ac%e7%ab%8b%e7%9a%84-c-%e8%af%ad%e5%8f%a5%e7%9a%84%e5%bc%80%e9%94%80" class="header-anchor"></a>3.5.1　评估独立的 C++ 语句的开销
+</h2><h2 id="352评估循环的开销"><a href="#352%e8%af%84%e4%bc%b0%e5%be%aa%e7%8e%af%e7%9a%84%e5%bc%80%e9%94%80" class="header-anchor"></a>3.5.2　评估循环的开销
+</h2><h2 id="36其他找出热点代码的方法"><a href="#36%e5%85%b6%e4%bb%96%e6%89%be%e5%87%ba%e7%83%ad%e7%82%b9%e4%bb%a3%e7%a0%81%e7%9a%84%e6%96%b9%e6%b3%95" class="header-anchor"></a>3.6　其他找出热点代码的方法
+</h2><h2 id="37小结"><a href="#37%e5%b0%8f%e7%bb%93" class="header-anchor"></a>3.7　小结
+</h2><h2 id="第-4-章优化字符串的使用案例研究"><a href="#%e7%ac%ac-4-%e7%ab%a0%e4%bc%98%e5%8c%96%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e4%bd%bf%e7%94%a8%e6%a1%88%e4%be%8b%e7%a0%94%e7%a9%b6" class="header-anchor"></a>第 4 章　优化字符串的使用：案例研究
+</h2><h2 id="41为什么字符串很麻烦"><a href="#41%e4%b8%ba%e4%bb%80%e4%b9%88%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%be%88%e9%ba%bb%e7%83%a6" class="header-anchor"></a>4.1　为什么字符串很麻烦
+</h2><h2 id="411字符串是动态分配的"><a href="#411%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%98%af%e5%8a%a8%e6%80%81%e5%88%86%e9%85%8d%e7%9a%84" class="header-anchor"></a>4.1.1　字符串是动态分配的
+</h2><h2 id="412字符串就是值"><a href="#412%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%b0%b1%e6%98%af%e5%80%bc" class="header-anchor"></a>4.1.2　字符串就是值
+</h2><h2 id="413字符串会进行大量复制"><a href="#413%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%bc%9a%e8%bf%9b%e8%a1%8c%e5%a4%a7%e9%87%8f%e5%a4%8d%e5%88%b6" class="header-anchor"></a>4.1.3　字符串会进行大量复制
+</h2><h2 id="42第一次尝试优化字符串"><a href="#42%e7%ac%ac%e4%b8%80%e6%ac%a1%e5%b0%9d%e8%af%95%e4%bc%98%e5%8c%96%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>4.2　第一次尝试优化字符串
+</h2><h2 id="421使用复合赋值操作避免临时字符串"><a href="#421%e4%bd%bf%e7%94%a8%e5%a4%8d%e5%90%88%e8%b5%8b%e5%80%bc%e6%93%8d%e4%bd%9c%e9%81%bf%e5%85%8d%e4%b8%b4%e6%97%b6%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>4.2.1　使用复合赋值操作避免临时字符串
+</h2><h2 id="422通过预留存储空间减少内存的重新分配"><a href="#422%e9%80%9a%e8%bf%87%e9%a2%84%e7%95%99%e5%ad%98%e5%82%a8%e7%a9%ba%e9%97%b4%e5%87%8f%e5%b0%91%e5%86%85%e5%ad%98%e7%9a%84%e9%87%8d%e6%96%b0%e5%88%86%e9%85%8d" class="header-anchor"></a>4.2.2　通过预留存储空间减少内存的重新分配
+</h2><h2 id="423消除对参数字符串的复制"><a href="#423%e6%b6%88%e9%99%a4%e5%af%b9%e5%8f%82%e6%95%b0%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e5%a4%8d%e5%88%b6" class="header-anchor"></a>4.2.3　消除对参数字符串的复制
+</h2><h2 id="424使用迭代器消除指针解引"><a href="#424%e4%bd%bf%e7%94%a8%e8%bf%ad%e4%bb%a3%e5%99%a8%e6%b6%88%e9%99%a4%e6%8c%87%e9%92%88%e8%a7%a3%e5%bc%95" class="header-anchor"></a>4.2.4　使用迭代器消除指针解引
+</h2><h2 id="425消除对返回的字符串的复制"><a href="#425%e6%b6%88%e9%99%a4%e5%af%b9%e8%bf%94%e5%9b%9e%e7%9a%84%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e5%a4%8d%e5%88%b6" class="header-anchor"></a>4.2.5　消除对返回的字符串的复制
+</h2><h2 id="426用字符数组代替字符串"><a href="#426%e7%94%a8%e5%ad%97%e7%ac%a6%e6%95%b0%e7%bb%84%e4%bb%a3%e6%9b%bf%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>4.2.6　用字符数组代替字符串
+</h2><h2 id="427第一次优化总结"><a href="#427%e7%ac%ac%e4%b8%80%e6%ac%a1%e4%bc%98%e5%8c%96%e6%80%bb%e7%bb%93" class="header-anchor"></a>4.2.7　第一次优化总结
+</h2><h2 id="43第二次尝试优化字符串"><a href="#43%e7%ac%ac%e4%ba%8c%e6%ac%a1%e5%b0%9d%e8%af%95%e4%bc%98%e5%8c%96%e5%ad%97%e7%ac%a6%e4%b8%b2" class="header-anchor"></a>4.3　第二次尝试优化字符串
+</h2><h2 id="431使用更好的算法"><a href="#431%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e7%ae%97%e6%b3%95" class="header-anchor"></a>4.3.1　使用更好的算法
+</h2><h2 id="432使用更好的编译器"><a href="#432%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e7%bc%96%e8%af%91%e5%99%a8" class="header-anchor"></a>4.3.2　使用更好的编译器
+</h2><h2 id="433使用更好的字符串库"><a href="#433%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%ba%93" class="header-anchor"></a>4.3.3　使用更好的字符串库
+</h2><h2 id="434使用更好的内存分配器"><a href="#434%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8" class="header-anchor"></a>4.3.4　使用更好的内存分配器
+</h2><h2 id="44消除字符串转换"><a href="#44%e6%b6%88%e9%99%a4%e5%ad%97%e7%ac%a6%e4%b8%b2%e8%bd%ac%e6%8d%a2" class="header-anchor"></a>4.4　消除字符串转换
+</h2><h2 id="441将-c-字符串转换为-stdstring"><a href="#441%e5%b0%86-c-%e5%ad%97%e7%ac%a6%e4%b8%b2%e8%bd%ac%e6%8d%a2%e4%b8%ba-stdstring" class="header-anchor"></a>4.4.1　将 C 字符串转换为 std::string
+</h2><h2 id="442不同字符集间的转换"><a href="#442%e4%b8%8d%e5%90%8c%e5%ad%97%e7%ac%a6%e9%9b%86%e9%97%b4%e7%9a%84%e8%bd%ac%e6%8d%a2" class="header-anchor"></a>4.4.2　不同字符集间的转换
+</h2><h2 id="45小结"><a href="#45%e5%b0%8f%e7%bb%93" class="header-anchor"></a>4.5　小结
+</h2><h2 id="第-5-章优化算法"><a href="#%e7%ac%ac-5-%e7%ab%a0%e4%bc%98%e5%8c%96%e7%ae%97%e6%b3%95" class="header-anchor"></a>第 5 章　优化算法
+</h2><h2 id="51算法的时间开销"><a href="#51%e7%ae%97%e6%b3%95%e7%9a%84%e6%97%b6%e9%97%b4%e5%bc%80%e9%94%80" class="header-anchor"></a>5.1　算法的时间开销
+</h2><h2 id="511最优情况平均情况和最差情况的时间开销"><a href="#511%e6%9c%80%e4%bc%98%e6%83%85%e5%86%b5%e5%b9%b3%e5%9d%87%e6%83%85%e5%86%b5%e5%92%8c%e6%9c%80%e5%b7%ae%e6%83%85%e5%86%b5%e7%9a%84%e6%97%b6%e9%97%b4%e5%bc%80%e9%94%80" class="header-anchor"></a>5.1.1　最优情况、平均情况和最差情况的时间开销
+</h2><h2 id="512摊销时间开销"><a href="#512%e6%91%8a%e9%94%80%e6%97%b6%e9%97%b4%e5%bc%80%e9%94%80" class="header-anchor"></a>5.1.2　摊销时间开销
+</h2><h2 id="513其他开销"><a href="#513%e5%85%b6%e4%bb%96%e5%bc%80%e9%94%80" class="header-anchor"></a>5.1.3　其他开销
+</h2><h2 id="52优化查找和排序的工具箱"><a href="#52%e4%bc%98%e5%8c%96%e6%9f%a5%e6%89%be%e5%92%8c%e6%8e%92%e5%ba%8f%e7%9a%84%e5%b7%a5%e5%85%b7%e7%ae%b1" class="header-anchor"></a>5.2　优化查找和排序的工具箱
+</h2><h2 id="53高效查找算法"><a href="#53%e9%ab%98%e6%95%88%e6%9f%a5%e6%89%be%e7%ae%97%e6%b3%95" class="header-anchor"></a>5.3　高效查找算法
+</h2><h2 id="531查找算法的时间开销"><a href="#531%e6%9f%a5%e6%89%be%e7%ae%97%e6%b3%95%e7%9a%84%e6%97%b6%e9%97%b4%e5%bc%80%e9%94%80" class="header-anchor"></a>5.3.1　查找算法的时间开销
+</h2><h2 id="532当-n-很小时所有算法的时间开销都一样"><a href="#532%e5%bd%93-n-%e5%be%88%e5%b0%8f%e6%97%b6%e6%89%80%e6%9c%89%e7%ae%97%e6%b3%95%e7%9a%84%e6%97%b6%e9%97%b4%e5%bc%80%e9%94%80%e9%83%bd%e4%b8%80%e6%a0%b7" class="header-anchor"></a>5.3.2　当 n 很小时，所有算法的时间开销都一样
+</h2><h2 id="54高效排序算法"><a href="#54%e9%ab%98%e6%95%88%e6%8e%92%e5%ba%8f%e7%ae%97%e6%b3%95" class="header-anchor"></a>5.4　高效排序算法
+</h2><h2 id="541排序算法的时间开销"><a href="#541%e6%8e%92%e5%ba%8f%e7%ae%97%e6%b3%95%e7%9a%84%e6%97%b6%e9%97%b4%e5%bc%80%e9%94%80" class="header-anchor"></a>5.4.1　排序算法的时间开销
+</h2><h2 id="542替换在最差情况下性能较差的排序算法"><a href="#542%e6%9b%bf%e6%8d%a2%e5%9c%a8%e6%9c%80%e5%b7%ae%e6%83%85%e5%86%b5%e4%b8%8b%e6%80%a7%e8%83%bd%e8%be%83%e5%b7%ae%e7%9a%84%e6%8e%92%e5%ba%8f%e7%ae%97%e6%b3%95" class="header-anchor"></a>5.4.2　替换在最差情况下性能较差的排序算法
+</h2><h2 id="543利用输入数据集的已知特性"><a href="#543%e5%88%a9%e7%94%a8%e8%be%93%e5%85%a5%e6%95%b0%e6%8d%ae%e9%9b%86%e7%9a%84%e5%b7%b2%e7%9f%a5%e7%89%b9%e6%80%a7" class="header-anchor"></a>5.4.3　利用输入数据集的已知特性
+</h2><h2 id="55优化模式"><a href="#55%e4%bc%98%e5%8c%96%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>5.5　优化模式
+</h2><h2 id="551预计算"><a href="#551%e9%a2%84%e8%ae%a1%e7%ae%97" class="header-anchor"></a>5.5.1　预计算
+</h2><h2 id="552延迟计算"><a href="#552%e5%bb%b6%e8%bf%9f%e8%ae%a1%e7%ae%97" class="header-anchor"></a>5.5.2　延迟计算
+</h2><h2 id="553批量处理"><a href="#553%e6%89%b9%e9%87%8f%e5%a4%84%e7%90%86" class="header-anchor"></a>5.5.3　批量处理
+</h2><h2 id="554缓存"><a href="#554%e7%bc%93%e5%ad%98" class="header-anchor"></a>5.5.4　缓存
+</h2><h2 id="555特化"><a href="#555%e7%89%b9%e5%8c%96" class="header-anchor"></a>5.5.5　特化
+</h2><h2 id="556提高处理量"><a href="#556%e6%8f%90%e9%ab%98%e5%a4%84%e7%90%86%e9%87%8f" class="header-anchor"></a>5.5.6　提高处理量
+</h2><h2 id="557提示"><a href="#557%e6%8f%90%e7%a4%ba" class="header-anchor"></a>5.5.7　提示
+</h2><h2 id="558优化期待路径"><a href="#558%e4%bc%98%e5%8c%96%e6%9c%9f%e5%be%85%e8%b7%af%e5%be%84" class="header-anchor"></a>5.5.8　优化期待路径
+</h2><h2 id="559散列法"><a href="#559%e6%95%a3%e5%88%97%e6%b3%95" class="header-anchor"></a>5.5.9　散列法
+</h2><h2 id="5510双重检查"><a href="#5510%e5%8f%8c%e9%87%8d%e6%a3%80%e6%9f%a5" class="header-anchor"></a>5.5.10　双重检查
+</h2><h2 id="56小结"><a href="#56%e5%b0%8f%e7%bb%93" class="header-anchor"></a>5.6　小结
+</h2><h2 id="第-6-章优化动态分配内存的变量"><a href="#%e7%ac%ac-6-%e7%ab%a0%e4%bc%98%e5%8c%96%e5%8a%a8%e6%80%81%e5%88%86%e9%85%8d%e5%86%85%e5%ad%98%e7%9a%84%e5%8f%98%e9%87%8f" class="header-anchor"></a>第 6 章　优化动态分配内存的变量
+</h2><h2 id="61c-变量回顾"><a href="#61c-%e5%8f%98%e9%87%8f%e5%9b%9e%e9%a1%be" class="header-anchor"></a>6.1　C++ 变量回顾
+</h2><h2 id="611变量的存储期"><a href="#611%e5%8f%98%e9%87%8f%e7%9a%84%e5%ad%98%e5%82%a8%e6%9c%9f" class="header-anchor"></a>6.1.1　变量的存储期
+</h2><h2 id="612变量的所有权"><a href="#612%e5%8f%98%e9%87%8f%e7%9a%84%e6%89%80%e6%9c%89%e6%9d%83" class="header-anchor"></a>6.1.2　变量的所有权
+</h2><h2 id="613值对象与实体对象"><a href="#613%e5%80%bc%e5%af%b9%e8%b1%a1%e4%b8%8e%e5%ae%9e%e4%bd%93%e5%af%b9%e8%b1%a1" class="header-anchor"></a>6.1.3　值对象与实体对象
+</h2><h2 id="62c-动态变量-api-回顾"><a href="#62c-%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f-api-%e5%9b%9e%e9%a1%be" class="header-anchor"></a>6.2　C++ 动态变量 API 回顾
+</h2><h2 id="621使用智能指针实现动态变量所有权的自动化"><a href="#621%e4%bd%bf%e7%94%a8%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88%e5%ae%9e%e7%8e%b0%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f%e6%89%80%e6%9c%89%e6%9d%83%e7%9a%84%e8%87%aa%e5%8a%a8%e5%8c%96" class="header-anchor"></a>6.2.1　使用智能指针实现动态变量所有权的自动化
+</h2><h2 id="622动态变量有运行时开销"><a href="#622%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f%e6%9c%89%e8%bf%90%e8%a1%8c%e6%97%b6%e5%bc%80%e9%94%80" class="header-anchor"></a>6.2.2　动态变量有运行时开销
+</h2><h2 id="63减少动态变量的使用"><a href="#63%e5%87%8f%e5%b0%91%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f%e7%9a%84%e4%bd%bf%e7%94%a8" class="header-anchor"></a>6.3　减少动态变量的使用
+</h2><h2 id="631静态地创建类实例"><a href="#631%e9%9d%99%e6%80%81%e5%9c%b0%e5%88%9b%e5%bb%ba%e7%b1%bb%e5%ae%9e%e4%be%8b" class="header-anchor"></a>6.3.1　静态地创建类实例
+</h2><h2 id="632使用静态数据结构"><a href="#632%e4%bd%bf%e7%94%a8%e9%9d%99%e6%80%81%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>6.3.2　使用静态数据结构
+</h2><h2 id="633使用-stdmake_shared-替代-new-表达式"><a href="#633%e4%bd%bf%e7%94%a8-stdmake_shared-%e6%9b%bf%e4%bb%a3-new-%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>6.3.3　使用 std::make_shared 替代 new 表达式
+</h2><h2 id="634不要无谓地共享所有权"><a href="#634%e4%b8%8d%e8%a6%81%e6%97%a0%e8%b0%93%e5%9c%b0%e5%85%b1%e4%ba%ab%e6%89%80%e6%9c%89%e6%9d%83" class="header-anchor"></a>6.3.4　不要无谓地共享所有权
+</h2><h2 id="635使用主指针拥有动态变量"><a href="#635%e4%bd%bf%e7%94%a8%e4%b8%bb%e6%8c%87%e9%92%88%e6%8b%a5%e6%9c%89%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f" class="header-anchor"></a>6.3.5　使用“主指针”拥有动态变量
+</h2><h2 id="64减少动态变量的重新分配"><a href="#64%e5%87%8f%e5%b0%91%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f%e7%9a%84%e9%87%8d%e6%96%b0%e5%88%86%e9%85%8d" class="header-anchor"></a>6.4　减少动态变量的重新分配
+</h2><h2 id="641预分配动态变量以防止重新分配"><a href="#641%e9%a2%84%e5%88%86%e9%85%8d%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f%e4%bb%a5%e9%98%b2%e6%ad%a2%e9%87%8d%e6%96%b0%e5%88%86%e9%85%8d" class="header-anchor"></a>6.4.1　预分配动态变量以防止重新分配
+</h2><h2 id="642在循环外创建动态变量"><a href="#642%e5%9c%a8%e5%be%aa%e7%8e%af%e5%a4%96%e5%88%9b%e5%bb%ba%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f" class="header-anchor"></a>6.4.2　在循环外创建动态变量
+</h2><h2 id="65移除无谓的复制"><a href="#65%e7%a7%bb%e9%99%a4%e6%97%a0%e8%b0%93%e7%9a%84%e5%a4%8d%e5%88%b6" class="header-anchor"></a>6.5　移除无谓的复制
+</h2><h2 id="651在类定义中禁止不希望发生的复制"><a href="#651%e5%9c%a8%e7%b1%bb%e5%ae%9a%e4%b9%89%e4%b8%ad%e7%a6%81%e6%ad%a2%e4%b8%8d%e5%b8%8c%e6%9c%9b%e5%8f%91%e7%94%9f%e7%9a%84%e5%a4%8d%e5%88%b6" class="header-anchor"></a>6.5.1　在类定义中禁止不希望发生的复制
+</h2><h2 id="652移除函数调用上的复制"><a href="#652%e7%a7%bb%e9%99%a4%e5%87%bd%e6%95%b0%e8%b0%83%e7%94%a8%e4%b8%8a%e7%9a%84%e5%a4%8d%e5%88%b6" class="header-anchor"></a>6.5.2　移除函数调用上的复制
+</h2><h2 id="653移除函数返回上的复制"><a href="#653%e7%a7%bb%e9%99%a4%e5%87%bd%e6%95%b0%e8%bf%94%e5%9b%9e%e4%b8%8a%e7%9a%84%e5%a4%8d%e5%88%b6" class="header-anchor"></a>6.5.3　移除函数返回上的复制
+</h2><h2 id="654免复制库"><a href="#654%e5%85%8d%e5%a4%8d%e5%88%b6%e5%ba%93" class="header-anchor"></a>6.5.4　免复制库
+</h2><h2 id="655实现写时复制惯用法"><a href="#655%e5%ae%9e%e7%8e%b0%e5%86%99%e6%97%b6%e5%a4%8d%e5%88%b6%e6%83%af%e7%94%a8%e6%b3%95" class="header-anchor"></a>6.5.5　实现写时复制惯用法
+</h2><h2 id="656切割数据结构"><a href="#656%e5%88%87%e5%89%b2%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>6.5.6　切割数据结构
+</h2><h2 id="66实现移动语义"><a href="#66%e5%ae%9e%e7%8e%b0%e7%a7%bb%e5%8a%a8%e8%af%ad%e4%b9%89" class="header-anchor"></a>6.6　实现移动语义
+</h2><h2 id="661非标准复制语义痛苦的实现"><a href="#661%e9%9d%9e%e6%a0%87%e5%87%86%e5%a4%8d%e5%88%b6%e8%af%ad%e4%b9%89%e7%97%9b%e8%8b%a6%e7%9a%84%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>6.6.1　非标准复制语义：痛苦的实现
+</h2><h2 id="662stdswap-穷人的移动语义"><a href="#662stdswap-%e7%a9%b7%e4%ba%ba%e7%9a%84%e7%a7%bb%e5%8a%a8%e8%af%ad%e4%b9%89" class="header-anchor"></a>6.6.2　std::swap() ：“穷人”的移动语义
+</h2><h2 id="663共享所有权的实体"><a href="#663%e5%85%b1%e4%ba%ab%e6%89%80%e6%9c%89%e6%9d%83%e7%9a%84%e5%ae%9e%e4%bd%93" class="header-anchor"></a>6.6.3　共享所有权的实体
+</h2><h2 id="664移动语义的移动部分"><a href="#664%e7%a7%bb%e5%8a%a8%e8%af%ad%e4%b9%89%e7%9a%84%e7%a7%bb%e5%8a%a8%e9%83%a8%e5%88%86" class="header-anchor"></a>6.6.4　移动语义的移动部分
+</h2><h2 id="665更新代码以使用移动语义"><a href="#665%e6%9b%b4%e6%96%b0%e4%bb%a3%e7%a0%81%e4%bb%a5%e4%bd%bf%e7%94%a8%e7%a7%bb%e5%8a%a8%e8%af%ad%e4%b9%89" class="header-anchor"></a>6.6.5　更新代码以使用移动语义
+</h2><h2 id="666移动语义的微妙之处"><a href="#666%e7%a7%bb%e5%8a%a8%e8%af%ad%e4%b9%89%e7%9a%84%e5%be%ae%e5%a6%99%e4%b9%8b%e5%a4%84" class="header-anchor"></a>6.6.6　移动语义的微妙之处
+</h2><h2 id="67扁平数据结构"><a href="#67%e6%89%81%e5%b9%b3%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>6.7　扁平数据结构
+</h2><h2 id="68小结"><a href="#68%e5%b0%8f%e7%bb%93" class="header-anchor"></a>6.8　小结
+</h2><h2 id="第-7-章优化热点语句"><a href="#%e7%ac%ac-7-%e7%ab%a0%e4%bc%98%e5%8c%96%e7%83%ad%e7%82%b9%e8%af%ad%e5%8f%a5" class="header-anchor"></a>第 7 章　优化热点语句
+</h2><h2 id="71从循环中移除代码"><a href="#71%e4%bb%8e%e5%be%aa%e7%8e%af%e4%b8%ad%e7%a7%bb%e9%99%a4%e4%bb%a3%e7%a0%81" class="header-anchor"></a>7.1　从循环中移除代码
+</h2><h2 id="711缓存循环结束条件值"><a href="#711%e7%bc%93%e5%ad%98%e5%be%aa%e7%8e%af%e7%bb%93%e6%9d%9f%e6%9d%a1%e4%bb%b6%e5%80%bc" class="header-anchor"></a>7.1.1　缓存循环结束条件值
+</h2><h2 id="712使用更高效的循环语句"><a href="#712%e4%bd%bf%e7%94%a8%e6%9b%b4%e9%ab%98%e6%95%88%e7%9a%84%e5%be%aa%e7%8e%af%e8%af%ad%e5%8f%a5" class="header-anchor"></a>7.1.2　使用更高效的循环语句
+</h2><h2 id="713用递减替代递增"><a href="#713%e7%94%a8%e9%80%92%e5%87%8f%e6%9b%bf%e4%bb%a3%e9%80%92%e5%a2%9e" class="header-anchor"></a>7.1.3　用递减替代递增
+</h2><h2 id="714从循环中移除不变性代码"><a href="#714%e4%bb%8e%e5%be%aa%e7%8e%af%e4%b8%ad%e7%a7%bb%e9%99%a4%e4%b8%8d%e5%8f%98%e6%80%a7%e4%bb%a3%e7%a0%81" class="header-anchor"></a>7.1.4　从循环中移除不变性代码
+</h2><h2 id="715从循环中移除无谓的函数调用"><a href="#715%e4%bb%8e%e5%be%aa%e7%8e%af%e4%b8%ad%e7%a7%bb%e9%99%a4%e6%97%a0%e8%b0%93%e7%9a%84%e5%87%bd%e6%95%b0%e8%b0%83%e7%94%a8" class="header-anchor"></a>7.1.5　从循环中移除无谓的函数调用
+</h2><h2 id="716从循环中移除隐含的函数调用"><a href="#716%e4%bb%8e%e5%be%aa%e7%8e%af%e4%b8%ad%e7%a7%bb%e9%99%a4%e9%9a%90%e5%90%ab%e7%9a%84%e5%87%bd%e6%95%b0%e8%b0%83%e7%94%a8" class="header-anchor"></a>7.1.6　从循环中移除隐含的函数调用
+</h2><h2 id="717从循环中移除昂贵的缓慢改变的调用"><a href="#717%e4%bb%8e%e5%be%aa%e7%8e%af%e4%b8%ad%e7%a7%bb%e9%99%a4%e6%98%82%e8%b4%b5%e7%9a%84%e7%bc%93%e6%85%a2%e6%94%b9%e5%8f%98%e7%9a%84%e8%b0%83%e7%94%a8" class="header-anchor"></a>7.1.7　从循环中移除昂贵的、缓慢改变的调用
+</h2><h2 id="718将循环放入函数以减少调用开销"><a href="#718%e5%b0%86%e5%be%aa%e7%8e%af%e6%94%be%e5%85%a5%e5%87%bd%e6%95%b0%e4%bb%a5%e5%87%8f%e5%b0%91%e8%b0%83%e7%94%a8%e5%bc%80%e9%94%80" class="header-anchor"></a>7.1.8　将循环放入函数以减少调用开销
+</h2><h2 id="719不要频繁地进行操作"><a href="#719%e4%b8%8d%e8%a6%81%e9%a2%91%e7%b9%81%e5%9c%b0%e8%bf%9b%e8%a1%8c%e6%93%8d%e4%bd%9c" class="header-anchor"></a>7.1.9　不要频繁地进行操作
+</h2><h2 id="7110其他优化技巧"><a href="#7110%e5%85%b6%e4%bb%96%e4%bc%98%e5%8c%96%e6%8a%80%e5%b7%a7" class="header-anchor"></a>7.1.10　其他优化技巧
+</h2><h2 id="72从函数中移除代码"><a href="#72%e4%bb%8e%e5%87%bd%e6%95%b0%e4%b8%ad%e7%a7%bb%e9%99%a4%e4%bb%a3%e7%a0%81" class="header-anchor"></a>7.2　从函数中移除代码
+</h2><h2 id="721函数调用的开销"><a href="#721%e5%87%bd%e6%95%b0%e8%b0%83%e7%94%a8%e7%9a%84%e5%bc%80%e9%94%80" class="header-anchor"></a>7.2.1　函数调用的开销
+</h2><h2 id="722简短地声明内联函数"><a href="#722%e7%ae%80%e7%9f%ad%e5%9c%b0%e5%a3%b0%e6%98%8e%e5%86%85%e8%81%94%e5%87%bd%e6%95%b0" class="header-anchor"></a>7.2.2　简短地声明内联函数
+</h2><h2 id="723在使用之前定义函数"><a href="#723%e5%9c%a8%e4%bd%bf%e7%94%a8%e4%b9%8b%e5%89%8d%e5%ae%9a%e4%b9%89%e5%87%bd%e6%95%b0" class="header-anchor"></a>7.2.3　在使用之前定义函数
+</h2><h2 id="724移除未使用的多态性"><a href="#724%e7%a7%bb%e9%99%a4%e6%9c%aa%e4%bd%bf%e7%94%a8%e7%9a%84%e5%a4%9a%e6%80%81%e6%80%a7" class="header-anchor"></a>7.2.4　移除未使用的多态性
+</h2><h2 id="725放弃不使用的接口"><a href="#725%e6%94%be%e5%bc%83%e4%b8%8d%e4%bd%bf%e7%94%a8%e7%9a%84%e6%8e%a5%e5%8f%a3" class="header-anchor"></a>7.2.5　放弃不使用的接口
+</h2><h2 id="726用模板在编译时选择实现"><a href="#726%e7%94%a8%e6%a8%a1%e6%9d%bf%e5%9c%a8%e7%bc%96%e8%af%91%e6%97%b6%e9%80%89%e6%8b%a9%e5%ae%9e%e7%8e%b0" class="header-anchor"></a>7.2.6　用模板在编译时选择实现
+</h2><h2 id="727避免使用-pimpl-惯用法"><a href="#727%e9%81%bf%e5%85%8d%e4%bd%bf%e7%94%a8-pimpl-%e6%83%af%e7%94%a8%e6%b3%95" class="header-anchor"></a>7.2.7　避免使用 PIMPL 惯用法
+</h2><h2 id="728移除对-ddl-的调用"><a href="#728%e7%a7%bb%e9%99%a4%e5%af%b9-ddl-%e7%9a%84%e8%b0%83%e7%94%a8" class="header-anchor"></a>7.2.8　移除对 DDL 的调用
+</h2><h2 id="729使用静态成员函数取代成员函数"><a href="#729%e4%bd%bf%e7%94%a8%e9%9d%99%e6%80%81%e6%88%90%e5%91%98%e5%87%bd%e6%95%b0%e5%8f%96%e4%bb%a3%e6%88%90%e5%91%98%e5%87%bd%e6%95%b0" class="header-anchor"></a>7.2.9　使用静态成员函数取代成员函数
+</h2><h2 id="7210将虚析构函数移至基类中"><a href="#7210%e5%b0%86%e8%99%9a%e6%9e%90%e6%9e%84%e5%87%bd%e6%95%b0%e7%a7%bb%e8%87%b3%e5%9f%ba%e7%b1%bb%e4%b8%ad" class="header-anchor"></a>7.2.10　将虚析构函数移至基类中
+</h2><h2 id="73优化表达式"><a href="#73%e4%bc%98%e5%8c%96%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>7.3　优化表达式
+</h2><h2 id="731简化表达式"><a href="#731%e7%ae%80%e5%8c%96%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"></a>7.3.1　简化表达式
+</h2><h2 id="732将常量组合在一起"><a href="#732%e5%b0%86%e5%b8%b8%e9%87%8f%e7%bb%84%e5%90%88%e5%9c%a8%e4%b8%80%e8%b5%b7" class="header-anchor"></a>7.3.2　将常量组合在一起
+</h2><h2 id="733使用更高效的运算符"><a href="#733%e4%bd%bf%e7%94%a8%e6%9b%b4%e9%ab%98%e6%95%88%e7%9a%84%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-anchor"></a>7.3.3　使用更高效的运算符
+</h2><h2 id="734使用整数计算替代浮点型计算"><a href="#734%e4%bd%bf%e7%94%a8%e6%95%b4%e6%95%b0%e8%ae%a1%e7%ae%97%e6%9b%bf%e4%bb%a3%e6%b5%ae%e7%82%b9%e5%9e%8b%e8%ae%a1%e7%ae%97" class="header-anchor"></a>7.3.4　使用整数计算替代浮点型计算
+</h2><h2 id="735双精度类型可能会比浮点型更快"><a href="#735%e5%8f%8c%e7%b2%be%e5%ba%a6%e7%b1%bb%e5%9e%8b%e5%8f%af%e8%83%bd%e4%bc%9a%e6%af%94%e6%b5%ae%e7%82%b9%e5%9e%8b%e6%9b%b4%e5%bf%ab" class="header-anchor"></a>7.3.5　双精度类型可能会比浮点型更快
+</h2><h2 id="736用闭形式替代迭代计算"><a href="#736%e7%94%a8%e9%97%ad%e5%bd%a2%e5%bc%8f%e6%9b%bf%e4%bb%a3%e8%bf%ad%e4%bb%a3%e8%ae%a1%e7%ae%97" class="header-anchor"></a>7.3.6　用闭形式替代迭代计算
+</h2><h2 id="74优化控制流程惯用法"><a href="#74%e4%bc%98%e5%8c%96%e6%8e%a7%e5%88%b6%e6%b5%81%e7%a8%8b%e6%83%af%e7%94%a8%e6%b3%95" class="header-anchor"></a>7.4　优化控制流程惯用法
+</h2><h2 id="741用-switch-替代-if-elseif-else"><a href="#741%e7%94%a8-switch-%e6%9b%bf%e4%bb%a3-if-elseif-else" class="header-anchor"></a>7.4.1　用 switch 替代 if-else　if-else
+</h2><h2 id="742用虚函数替代-switch-或-if"><a href="#742%e7%94%a8%e8%99%9a%e5%87%bd%e6%95%b0%e6%9b%bf%e4%bb%a3-switch-%e6%88%96-if" class="header-anchor"></a>7.4.2　用虚函数替代 switch 或 if
+</h2><h2 id="743使用无开销的异常处理"><a href="#743%e4%bd%bf%e7%94%a8%e6%97%a0%e5%bc%80%e9%94%80%e7%9a%84%e5%bc%82%e5%b8%b8%e5%a4%84%e7%90%86" class="header-anchor"></a>7.4.3　使用无开销的异常处理
+</h2><h2 id="75小结"><a href="#75%e5%b0%8f%e7%bb%93" class="header-anchor"></a>7.5　小结
+</h2><h2 id="第-8-章使用更好的库"><a href="#%e7%ac%ac-8-%e7%ab%a0%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e5%ba%93" class="header-anchor"></a>第 8 章　使用更好的库
+</h2><h2 id="81优化标准库的使用"><a href="#81%e4%bc%98%e5%8c%96%e6%a0%87%e5%87%86%e5%ba%93%e7%9a%84%e4%bd%bf%e7%94%a8" class="header-anchor"></a>8.1　优化标准库的使用
+</h2><h2 id="811c-标准库的哲学"><a href="#811c-%e6%a0%87%e5%87%86%e5%ba%93%e7%9a%84%e5%93%b2%e5%ad%a6" class="header-anchor"></a>8.1.1　C++ 标准库的哲学
+</h2><h2 id="812使用-c-标准库的注意事项"><a href="#812%e4%bd%bf%e7%94%a8-c-%e6%a0%87%e5%87%86%e5%ba%93%e7%9a%84%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor"></a>8.1.2　使用 C++ 标准库的注意事项
+</h2><h2 id="82优化现有库"><a href="#82%e4%bc%98%e5%8c%96%e7%8e%b0%e6%9c%89%e5%ba%93" class="header-anchor"></a>8.2　优化现有库
+</h2><h2 id="821改动越少越好"><a href="#821%e6%94%b9%e5%8a%a8%e8%b6%8a%e5%b0%91%e8%b6%8a%e5%a5%bd" class="header-anchor"></a>8.2.1　改动越少越好
+</h2><h2 id="822添加函数不要改动功能"><a href="#822%e6%b7%bb%e5%8a%a0%e5%87%bd%e6%95%b0%e4%b8%8d%e8%a6%81%e6%94%b9%e5%8a%a8%e5%8a%9f%e8%83%bd" class="header-anchor"></a>8.2.2　添加函数，不要改动功能
+</h2><h2 id="83设计优化库"><a href="#83%e8%ae%be%e8%ae%a1%e4%bc%98%e5%8c%96%e5%ba%93" class="header-anchor"></a>8.3　设计优化库
+</h2><h2 id="831草率编码后悔多"><a href="#831%e8%8d%89%e7%8e%87%e7%bc%96%e7%a0%81%e5%90%8e%e6%82%94%e5%a4%9a" class="header-anchor"></a>8.3.1　草率编码后悔多
+</h2><h2 id="832在库的设计上简约是一种美德"><a href="#832%e5%9c%a8%e5%ba%93%e7%9a%84%e8%ae%be%e8%ae%a1%e4%b8%8a%e7%ae%80%e7%ba%a6%e6%98%af%e4%b8%80%e7%a7%8d%e7%be%8e%e5%be%b7" class="header-anchor"></a>8.3.2　在库的设计上，简约是一种美德
+</h2><h2 id="833不要在库内分配内存"><a href="#833%e4%b8%8d%e8%a6%81%e5%9c%a8%e5%ba%93%e5%86%85%e5%88%86%e9%85%8d%e5%86%85%e5%ad%98" class="header-anchor"></a>8.3.3　不要在库内分配内存
+</h2><h2 id="834若有疑问以速度为准"><a href="#834%e8%8b%a5%e6%9c%89%e7%96%91%e9%97%ae%e4%bb%a5%e9%80%9f%e5%ba%a6%e4%b8%ba%e5%87%86" class="header-anchor"></a>8.3.4　若有疑问，以速度为准
+</h2><h2 id="835函数比框架更容易优化"><a href="#835%e5%87%bd%e6%95%b0%e6%af%94%e6%a1%86%e6%9e%b6%e6%9b%b4%e5%ae%b9%e6%98%93%e4%bc%98%e5%8c%96" class="header-anchor"></a>8.3.5　函数比框架更容易优化
+</h2><h2 id="836扁平继承层次关系"><a href="#836%e6%89%81%e5%b9%b3%e7%bb%a7%e6%89%bf%e5%b1%82%e6%ac%a1%e5%85%b3%e7%b3%bb" class="header-anchor"></a>8.3.6　扁平继承层次关系
+</h2><h2 id="837扁平调用链"><a href="#837%e6%89%81%e5%b9%b3%e8%b0%83%e7%94%a8%e9%93%be" class="header-anchor"></a>8.3.7　扁平调用链
+</h2><h2 id="838扁平分层设计"><a href="#838%e6%89%81%e5%b9%b3%e5%88%86%e5%b1%82%e8%ae%be%e8%ae%a1" class="header-anchor"></a>8.3.8　扁平分层设计
+</h2><h2 id="839避免动态查找"><a href="#839%e9%81%bf%e5%85%8d%e5%8a%a8%e6%80%81%e6%9f%a5%e6%89%be" class="header-anchor"></a>8.3.9　避免动态查找
+</h2><h2 id="8310留意上帝函数"><a href="#8310%e7%95%99%e6%84%8f%e4%b8%8a%e5%b8%9d%e5%87%bd%e6%95%b0" class="header-anchor"></a>8.3.10　留意“上帝函数”
+</h2><h2 id="84小结"><a href="#84%e5%b0%8f%e7%bb%93" class="header-anchor"></a>8.4　小结
+</h2><h2 id="第-9-章优化查找和排序"><a href="#%e7%ac%ac-9-%e7%ab%a0%e4%bc%98%e5%8c%96%e6%9f%a5%e6%89%be%e5%92%8c%e6%8e%92%e5%ba%8f" class="header-anchor"></a>第 9 章　优化查找和排序
+</h2><h2 id="91使用-stdmap-和-stdstring-的键值对表"><a href="#91%e4%bd%bf%e7%94%a8-stdmap-%e5%92%8c-stdstring-%e7%9a%84%e9%94%ae%e5%80%bc%e5%af%b9%e8%a1%a8" class="header-anchor"></a>9.1　使用 std::map 和 std::string 的键值对表
+</h2><h2 id="92改善查找性能的工具箱"><a href="#92%e6%94%b9%e5%96%84%e6%9f%a5%e6%89%be%e6%80%a7%e8%83%bd%e7%9a%84%e5%b7%a5%e5%85%b7%e7%ae%b1" class="header-anchor"></a>9.2　改善查找性能的工具箱
+</h2><h2 id="921进行一次基准测量"><a href="#921%e8%bf%9b%e8%a1%8c%e4%b8%80%e6%ac%a1%e5%9f%ba%e5%87%86%e6%b5%8b%e9%87%8f" class="header-anchor"></a>9.2.1　进行一次基准测量
+</h2><h2 id="922识别出待优化的活动"><a href="#922%e8%af%86%e5%88%ab%e5%87%ba%e5%be%85%e4%bc%98%e5%8c%96%e7%9a%84%e6%b4%bb%e5%8a%a8" class="header-anchor"></a>9.2.2　识别出待优化的活动
+</h2><h2 id="923分解待优化的活动"><a href="#923%e5%88%86%e8%a7%a3%e5%be%85%e4%bc%98%e5%8c%96%e7%9a%84%e6%b4%bb%e5%8a%a8" class="header-anchor"></a>9.2.3　分解待优化的活动
+</h2><h2 id="924修改或替换算法和数据结构"><a href="#924%e4%bf%ae%e6%94%b9%e6%88%96%e6%9b%bf%e6%8d%a2%e7%ae%97%e6%b3%95%e5%92%8c%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>9.2.4　修改或替换算法和数据结构
+</h2><h2 id="925在自定义抽象上应用优化过程"><a href="#925%e5%9c%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e6%8a%bd%e8%b1%a1%e4%b8%8a%e5%ba%94%e7%94%a8%e4%bc%98%e5%8c%96%e8%bf%87%e7%a8%8b" class="header-anchor"></a>9.2.5　在自定义抽象上应用优化过程
+</h2><h2 id="93优化-stdmap-的查找"><a href="#93%e4%bc%98%e5%8c%96-stdmap-%e7%9a%84%e6%9f%a5%e6%89%be" class="header-anchor"></a>9.3　优化 std::map 的查找
+</h2><h2 id="931以固定长度的字符数组作为-stdmap-的键"><a href="#931%e4%bb%a5%e5%9b%ba%e5%ae%9a%e9%95%bf%e5%ba%a6%e7%9a%84%e5%ad%97%e7%ac%a6%e6%95%b0%e7%bb%84%e4%bd%9c%e4%b8%ba-stdmap-%e7%9a%84%e9%94%ae" class="header-anchor"></a>9.3.1　以固定长度的字符数组作为 std::map 的键
+</h2><h2 id="932以-c-风格的字符串组作为键使用-stdmap"><a href="#932%e4%bb%a5-c-%e9%a3%8e%e6%a0%bc%e7%9a%84%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%bb%84%e4%bd%9c%e4%b8%ba%e9%94%ae%e4%bd%bf%e7%94%a8-stdmap" class="header-anchor"></a>9.3.2　以 C 风格的字符串组作为键使用 std::map
+</h2><h2 id="933当键就是值的时候使用-map-的表亲-stdset"><a href="#933%e5%bd%93%e9%94%ae%e5%b0%b1%e6%98%af%e5%80%bc%e7%9a%84%e6%97%b6%e5%80%99%e4%bd%bf%e7%94%a8-map-%e7%9a%84%e8%a1%a8%e4%ba%b2-stdset" class="header-anchor"></a>9.3.3　当键就是值的时候，使用 map 的表亲 std::set
+</h2><h2 id="94使用--头文件优化算法"><a href="#94%e4%bd%bf%e7%94%a8--%e5%a4%b4%e6%96%87%e4%bb%b6%e4%bc%98%e5%8c%96%e7%ae%97%e6%b3%95" class="header-anchor"></a>9.4　使用 <algorithm> 头文件优化算法
+</h2><h2 id="941以序列容器作为被查找的键值对表"><a href="#941%e4%bb%a5%e5%ba%8f%e5%88%97%e5%ae%b9%e5%99%a8%e4%bd%9c%e4%b8%ba%e8%a2%ab%e6%9f%a5%e6%89%be%e7%9a%84%e9%94%ae%e5%80%bc%e5%af%b9%e8%a1%a8" class="header-anchor"></a>9.4.1　以序列容器作为被查找的键值对表
+</h2><h2 id="942stdfind-功能如其名on-时间开销"><a href="#942stdfind-%e5%8a%9f%e8%83%bd%e5%a6%82%e5%85%b6%e5%90%8don-%e6%97%b6%e9%97%b4%e5%bc%80%e9%94%80" class="header-anchor"></a>9.4.2　std::find() ：功能如其名，O(n) 时间开销
+</h2><h2 id="943stdbinary_search-不返回值"><a href="#943stdbinary_search-%e4%b8%8d%e8%bf%94%e5%9b%9e%e5%80%bc" class="header-anchor"></a>9.4.3　std::binary_search() ：不返回值
+</h2><h2 id="944使用-stdequal_range-的二分查找"><a href="#944%e4%bd%bf%e7%94%a8-stdequal_range-%e7%9a%84%e4%ba%8c%e5%88%86%e6%9f%a5%e6%89%be" class="header-anchor"></a>9.4.4　使用 std::equal_range() 的二分查找
+</h2><h2 id="945使用-stdlower_bound-的二分查找"><a href="#945%e4%bd%bf%e7%94%a8-stdlower_bound-%e7%9a%84%e4%ba%8c%e5%88%86%e6%9f%a5%e6%89%be" class="header-anchor"></a>9.4.5　使用 std::lower_bound() 的二分查找
+</h2><h2 id="946自己编写二分查找法"><a href="#946%e8%87%aa%e5%b7%b1%e7%bc%96%e5%86%99%e4%ba%8c%e5%88%86%e6%9f%a5%e6%89%be%e6%b3%95" class="header-anchor"></a>9.4.6　自己编写二分查找法
+</h2><h2 id="947使用-strcmp-自己编写二分查找法"><a href="#947%e4%bd%bf%e7%94%a8-strcmp-%e8%87%aa%e5%b7%b1%e7%bc%96%e5%86%99%e4%ba%8c%e5%88%86%e6%9f%a5%e6%89%be%e6%b3%95" class="header-anchor"></a>9.4.7　使用 strcmp() 自己编写二分查找法
+</h2><h2 id="95优化键值对散列表中的查找"><a href="#95%e4%bc%98%e5%8c%96%e9%94%ae%e5%80%bc%e5%af%b9%e6%95%a3%e5%88%97%e8%a1%a8%e4%b8%ad%e7%9a%84%e6%9f%a5%e6%89%be" class="header-anchor"></a>9.5　优化键值对散列表中的查找
+</h2><h2 id="951使用-stdunordered_map-进行散列"><a href="#951%e4%bd%bf%e7%94%a8-stdunordered_map-%e8%bf%9b%e8%a1%8c%e6%95%a3%e5%88%97" class="header-anchor"></a>9.5.1　使用 std::unordered_map 进行散列
+</h2><h2 id="952对固定长度字符数组的键进行散列"><a href="#952%e5%af%b9%e5%9b%ba%e5%ae%9a%e9%95%bf%e5%ba%a6%e5%ad%97%e7%ac%a6%e6%95%b0%e7%bb%84%e7%9a%84%e9%94%ae%e8%bf%9b%e8%a1%8c%e6%95%a3%e5%88%97" class="header-anchor"></a>9.5.2　对固定长度字符数组的键进行散列
+</h2><h2 id="953以空字符结尾的字符串为键进行散列"><a href="#953%e4%bb%a5%e7%a9%ba%e5%ad%97%e7%ac%a6%e7%bb%93%e5%b0%be%e7%9a%84%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%ba%e9%94%ae%e8%bf%9b%e8%a1%8c%e6%95%a3%e5%88%97" class="header-anchor"></a>9.5.3　以空字符结尾的字符串为键进行散列
+</h2><h2 id="954用自定义的散列表进行散列"><a href="#954%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e7%9a%84%e6%95%a3%e5%88%97%e8%a1%a8%e8%bf%9b%e8%a1%8c%e6%95%a3%e5%88%97" class="header-anchor"></a>9.5.4　用自定义的散列表进行散列
+</h2><h2 id="96斯特潘诺夫3的抽象惩罚"><a href="#96%e6%96%af%e7%89%b9%e6%bd%98%e8%af%ba%e5%a4%ab3%e7%9a%84%e6%8a%bd%e8%b1%a1%e6%83%a9%e7%bd%9a" class="header-anchor"></a>9.6　斯特潘诺夫3的抽象惩罚
+</h2><h2 id="97使用-c-标准库优化排序"><a href="#97%e4%bd%bf%e7%94%a8-c-%e6%a0%87%e5%87%86%e5%ba%93%e4%bc%98%e5%8c%96%e6%8e%92%e5%ba%8f" class="header-anchor"></a>9.7　使用 C++ 标准库优化排序
+</h2><h2 id="98小结"><a href="#98%e5%b0%8f%e7%bb%93" class="header-anchor"></a>9.8　小结
+</h2><h2 id="第-10-章优化数据结构"><a href="#%e7%ac%ac-10-%e7%ab%a0%e4%bc%98%e5%8c%96%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>第 10 章　优化数据结构
+</h2><h2 id="101理解标准库容器"><a href="#101%e7%90%86%e8%a7%a3%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8" class="header-anchor"></a>10.1　理解标准库容器
+</h2><h2 id="1011序列容器"><a href="#1011%e5%ba%8f%e5%88%97%e5%ae%b9%e5%99%a8" class="header-anchor"></a>10.1.1　序列容器
+</h2><h2 id="1012关联容器"><a href="#1012%e5%85%b3%e8%81%94%e5%ae%b9%e5%99%a8" class="header-anchor"></a>10.1.2　关联容器
+</h2><h2 id="1013测试标准库容器"><a href="#1013%e6%b5%8b%e8%af%95%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8" class="header-anchor"></a>10.1.3　测试标准库容器
+</h2><h2 id="102stdvector-与-stdstring"><a href="#102stdvector-%e4%b8%8e-stdstring" class="header-anchor"></a>10.2　std::vector 与 std::string
+</h2><h2 id="1021重新分配的性能影响"><a href="#1021%e9%87%8d%e6%96%b0%e5%88%86%e9%85%8d%e7%9a%84%e6%80%a7%e8%83%bd%e5%bd%b1%e5%93%8d" class="header-anchor"></a>10.2.1　重新分配的性能影响
+</h2><h2 id="1022stdvector-中的插入与删除"><a href="#1022stdvector-%e4%b8%ad%e7%9a%84%e6%8f%92%e5%85%a5%e4%b8%8e%e5%88%a0%e9%99%a4" class="header-anchor"></a>10.2.2　std::vector 中的插入与删除
+</h2><h2 id="1023遍历-stdvector"><a href="#1023%e9%81%8d%e5%8e%86-stdvector" class="header-anchor"></a>10.2.3　遍历 std::vector
+</h2><h2 id="1024对-stdvector-排序"><a href="#1024%e5%af%b9-stdvector-%e6%8e%92%e5%ba%8f" class="header-anchor"></a>10.2.4　　对 std::vector 排序
+</h2><h2 id="1025查找-stdvector"><a href="#1025%e6%9f%a5%e6%89%be-stdvector" class="header-anchor"></a>10.2.5　查找 std::vector
+</h2><h2 id="103stddeque"><a href="#103stddeque" class="header-anchor"></a>10.3　std::deque
+</h2><h2 id="1031stddeque-中的插入和删除"><a href="#1031stddeque-%e4%b8%ad%e7%9a%84%e6%8f%92%e5%85%a5%e5%92%8c%e5%88%a0%e9%99%a4" class="header-anchor"></a>10.3.1　std::deque 中的插入和删除
+</h2><h2 id="1032遍历-stddeque"><a href="#1032%e9%81%8d%e5%8e%86-stddeque" class="header-anchor"></a>10.3.2　遍历 std::deque
+</h2><h2 id="1033对-stddeque-的排序"><a href="#1033%e5%af%b9-stddeque-%e7%9a%84%e6%8e%92%e5%ba%8f" class="header-anchor"></a>10.3.3　对 std::deque 的排序
+</h2><h2 id="1034查找-stddeque"><a href="#1034%e6%9f%a5%e6%89%be-stddeque" class="header-anchor"></a>10.3.4　查找 std::deque
+</h2><h2 id="104stdlist"><a href="#104stdlist" class="header-anchor"></a>10.4　std::list
+</h2><h2 id="1041stdlist-中的插入和删除"><a href="#1041stdlist-%e4%b8%ad%e7%9a%84%e6%8f%92%e5%85%a5%e5%92%8c%e5%88%a0%e9%99%a4" class="header-anchor"></a>10.4.1　std::list 中的插入和删除
+</h2><h2 id="1042遍历-stdlist-中"><a href="#1042%e9%81%8d%e5%8e%86-stdlist-%e4%b8%ad" class="header-anchor"></a>10.4.2　遍历 std::list 中
+</h2><h2 id="1043对-stdlist-排序"><a href="#1043%e5%af%b9-stdlist-%e6%8e%92%e5%ba%8f" class="header-anchor"></a>10.4.3　对 std::list 排序
+</h2><h2 id="1044查找-stdlist"><a href="#1044%e6%9f%a5%e6%89%be-stdlist" class="header-anchor"></a>10.4.4　查找 std::list
+</h2><h2 id="105stdforward_list"><a href="#105stdforward_list" class="header-anchor"></a>10.5　std::forward_list
+</h2><h2 id="1051stdforward_list-中的插入和删除"><a href="#1051stdforward_list-%e4%b8%ad%e7%9a%84%e6%8f%92%e5%85%a5%e5%92%8c%e5%88%a0%e9%99%a4" class="header-anchor"></a>10.5.1　std::forward_list 中的插入和删除
+</h2><h2 id="1052遍历-stdforward_list"><a href="#1052%e9%81%8d%e5%8e%86-stdforward_list" class="header-anchor"></a>10.5.2　遍历 std::forward_list
+</h2><h2 id="1053对-stdforward_list-排序"><a href="#1053%e5%af%b9-stdforward_list-%e6%8e%92%e5%ba%8f" class="header-anchor"></a>10.5.3　对 std::forward_list 排序
+</h2><h2 id="1054查找-stdforward_list"><a href="#1054%e6%9f%a5%e6%89%be-stdforward_list" class="header-anchor"></a>10.5.4　查找 std::forward_list
+</h2><h2 id="106stdmap-与-stdmultimap"><a href="#106stdmap-%e4%b8%8e-stdmultimap" class="header-anchor"></a>10.6　std::map 与 std::multimap
+</h2><h2 id="1061stdmap-中的插入和删除"><a href="#1061stdmap-%e4%b8%ad%e7%9a%84%e6%8f%92%e5%85%a5%e5%92%8c%e5%88%a0%e9%99%a4" class="header-anchor"></a>10.6.1　std::map 中的插入和删除
+</h2><h2 id="1062遍历-stdmap"><a href="#1062%e9%81%8d%e5%8e%86-stdmap" class="header-anchor"></a>10.6.2　遍历 std::map
+</h2><h2 id="1063对-stdmap-排序"><a href="#1063%e5%af%b9-stdmap-%e6%8e%92%e5%ba%8f" class="header-anchor"></a>10.6.3　对 std::map 排序
+</h2><h2 id="1064查找-stdmap"><a href="#1064%e6%9f%a5%e6%89%be-stdmap" class="header-anchor"></a>10.6.4　查找 std::map
+</h2><h2 id="107stdset-与-stdmultiset"><a href="#107stdset-%e4%b8%8e-stdmultiset" class="header-anchor"></a>10.7　std::set 与 std::multiset
+</h2><h2 id="108stdunordered_map-与-stdunordered_multimap"><a href="#108stdunordered_map-%e4%b8%8e-stdunordered_multimap" class="header-anchor"></a>10.8　std::unordered_map 与 std::unordered_multimap
+</h2><h2 id="1081stdunordered_map-中的插入与删除"><a href="#1081stdunordered_map-%e4%b8%ad%e7%9a%84%e6%8f%92%e5%85%a5%e4%b8%8e%e5%88%a0%e9%99%a4" class="header-anchor"></a>10.8.1　std::unordered_map 中的插入与删除
+</h2><h2 id="1082遍历-stdunordered_map"><a href="#1082%e9%81%8d%e5%8e%86-stdunordered_map" class="header-anchor"></a>10.8.2　遍历 std::unordered_map
+</h2><h2 id="1083查找-stdunordered_map"><a href="#1083%e6%9f%a5%e6%89%be-stdunordered_map" class="header-anchor"></a>10.8.3　查找 std::unordered_map
+</h2><h2 id="109其他数据结构"><a href="#109%e5%85%b6%e4%bb%96%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="header-anchor"></a>10.9　其他数据结构
+</h2><h2 id="1010小结"><a href="#1010%e5%b0%8f%e7%bb%93" class="header-anchor"></a>10.10　小结
+</h2><h2 id="第-11-章优化-io"><a href="#%e7%ac%ac-11-%e7%ab%a0%e4%bc%98%e5%8c%96-io" class="header-anchor"></a>第 11 章　优化 I/O
+</h2><h2 id="111读取文件的秘诀"><a href="#111%e8%af%bb%e5%8f%96%e6%96%87%e4%bb%b6%e7%9a%84%e7%a7%98%e8%af%80" class="header-anchor"></a>11.1　读取文件的秘诀
+</h2><h2 id="1111创建一个吝啬的函数签名"><a href="#1111%e5%88%9b%e5%bb%ba%e4%b8%80%e4%b8%aa%e5%90%9d%e5%95%ac%e7%9a%84%e5%87%bd%e6%95%b0%e7%ad%be%e5%90%8d" class="header-anchor"></a>11.1.1　创建一个吝啬的函数签名
+</h2><h2 id="1112缩短调用链"><a href="#1112%e7%bc%a9%e7%9f%ad%e8%b0%83%e7%94%a8%e9%93%be" class="header-anchor"></a>11.1.2　缩短调用链
+</h2><h2 id="1113减少重新分配"><a href="#1113%e5%87%8f%e5%b0%91%e9%87%8d%e6%96%b0%e5%88%86%e9%85%8d" class="header-anchor"></a>11.1.3　减少重新分配
+</h2><h2 id="1114更大的吞吐量使用更大的输入缓冲区"><a href="#1114%e6%9b%b4%e5%a4%a7%e7%9a%84%e5%90%9e%e5%90%90%e9%87%8f%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a4%a7%e7%9a%84%e8%be%93%e5%85%a5%e7%bc%93%e5%86%b2%e5%8c%ba" class="header-anchor"></a>11.1.4　更大的吞吐量——使用更大的输入缓冲区
+</h2><h2 id="1115更大的吞吐量一次读取一行"><a href="#1115%e6%9b%b4%e5%a4%a7%e7%9a%84%e5%90%9e%e5%90%90%e9%87%8f%e4%b8%80%e6%ac%a1%e8%af%bb%e5%8f%96%e4%b8%80%e8%a1%8c" class="header-anchor"></a>11.1.5　更大的吞吐量——一次读取一行
+</h2><h2 id="1116再次缩短函数调用链"><a href="#1116%e5%86%8d%e6%ac%a1%e7%bc%a9%e7%9f%ad%e5%87%bd%e6%95%b0%e8%b0%83%e7%94%a8%e9%93%be" class="header-anchor"></a>11.1.6　再次缩短函数调用链
+</h2><h2 id="1117无用的技巧"><a href="#1117%e6%97%a0%e7%94%a8%e7%9a%84%e6%8a%80%e5%b7%a7" class="header-anchor"></a>11.1.7　无用的技巧
+</h2><h2 id="112写文件"><a href="#112%e5%86%99%e6%96%87%e4%bb%b6" class="header-anchor"></a>11.2　写文件
+</h2><h2 id="113从-stdcin-读取和向-stdcout-中写入"><a href="#113%e4%bb%8e-stdcin-%e8%af%bb%e5%8f%96%e5%92%8c%e5%90%91-stdcout-%e4%b8%ad%e5%86%99%e5%85%a5" class="header-anchor"></a>11.3　从 std::cin 读取和向 std::cout 中写入
+</h2><h2 id="114小结"><a href="#114%e5%b0%8f%e7%bb%93" class="header-anchor"></a>11.4　小结
+</h2><h2 id="第-12-章优化并发"><a href="#%e7%ac%ac-12-%e7%ab%a0%e4%bc%98%e5%8c%96%e5%b9%b6%e5%8f%91" class="header-anchor"></a>第 12 章　优化并发
+</h2><h2 id="121复习并发"><a href="#121%e5%a4%8d%e4%b9%a0%e5%b9%b6%e5%8f%91" class="header-anchor"></a>12.1　复习并发
+</h2><h2 id="1211并发概述"><a href="#1211%e5%b9%b6%e5%8f%91%e6%a6%82%e8%bf%b0" class="header-anchor"></a>12.1.1　并发概述
+</h2><h2 id="1212交叉执行"><a href="#1212%e4%ba%a4%e5%8f%89%e6%89%a7%e8%a1%8c" class="header-anchor"></a>12.1.2　交叉执行
+</h2><h2 id="1213顺序一致性"><a href="#1213%e9%a1%ba%e5%ba%8f%e4%b8%80%e8%87%b4%e6%80%a7" class="header-anchor"></a>12.1.3　顺序一致性
+</h2><h2 id="1214竞争"><a href="#1214%e7%ab%9e%e4%ba%89" class="header-anchor"></a>12.1.4　竞争
+</h2><h2 id="1215同步"><a href="#1215%e5%90%8c%e6%ad%a5" class="header-anchor"></a>12.1.5　同步
+</h2><h2 id="1216原子性"><a href="#1216%e5%8e%9f%e5%ad%90%e6%80%a7" class="header-anchor"></a>12.1.6　原子性
+</h2><h2 id="122复习-c-并发方式"><a href="#122%e5%a4%8d%e4%b9%a0-c-%e5%b9%b6%e5%8f%91%e6%96%b9%e5%bc%8f" class="header-anchor"></a>12.2　复习 C++ 并发方式
+</h2><h2 id="1221线程"><a href="#1221%e7%ba%bf%e7%a8%8b" class="header-anchor"></a>12.2.1　线程
+</h2><h2 id="1222promise-和-future"><a href="#1222promise-%e5%92%8c-future" class="header-anchor"></a>12.2.2　promise 和 future
+</h2><h2 id="1223异步任务"><a href="#1223%e5%bc%82%e6%ad%a5%e4%bb%bb%e5%8a%a1" class="header-anchor"></a>12.2.3　异步任务
+</h2><h2 id="1224互斥量"><a href="#1224%e4%ba%92%e6%96%a5%e9%87%8f" class="header-anchor"></a>12.2.4　互斥量
+</h2><h2 id="1225锁"><a href="#1225%e9%94%81" class="header-anchor"></a>12.2.5　锁
+</h2><h2 id="1226条件变量"><a href="#1226%e6%9d%a1%e4%bb%b6%e5%8f%98%e9%87%8f" class="header-anchor"></a>12.2.6　条件变量
+</h2><h2 id="1227共享变量上的原子操作"><a href="#1227%e5%85%b1%e4%ba%ab%e5%8f%98%e9%87%8f%e4%b8%8a%e7%9a%84%e5%8e%9f%e5%ad%90%e6%93%8d%e4%bd%9c" class="header-anchor"></a>12.2.7　共享变量上的原子操作
+</h2><h2 id="1228展望未来的-c-并发特性"><a href="#1228%e5%b1%95%e6%9c%9b%e6%9c%aa%e6%9d%a5%e7%9a%84-c-%e5%b9%b6%e5%8f%91%e7%89%b9%e6%80%a7" class="header-anchor"></a>12.2.8　展望未来的 C++ 并发特性
+</h2><h2 id="123优化多线程-c-程序"><a href="#123%e4%bc%98%e5%8c%96%e5%a4%9a%e7%ba%bf%e7%a8%8b-c-%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>12.3　优化多线程 C++ 程序
+</h2><h2 id="1231用-stdasync-替代-stdthread"><a href="#1231%e7%94%a8-stdasync-%e6%9b%bf%e4%bb%a3-stdthread" class="header-anchor"></a>12.3.1　用 std::async 替代 std::thread
+</h2><h2 id="1232创建与核心数量一样多的可执行线程"><a href="#1232%e5%88%9b%e5%bb%ba%e4%b8%8e%e6%a0%b8%e5%bf%83%e6%95%b0%e9%87%8f%e4%b8%80%e6%a0%b7%e5%a4%9a%e7%9a%84%e5%8f%af%e6%89%a7%e8%a1%8c%e7%ba%bf%e7%a8%8b" class="header-anchor"></a>12.3.2　创建与核心数量一样多的可执行线程
+</h2><h2 id="1233实现任务队列和线程池"><a href="#1233%e5%ae%9e%e7%8e%b0%e4%bb%bb%e5%8a%a1%e9%98%9f%e5%88%97%e5%92%8c%e7%ba%bf%e7%a8%8b%e6%b1%a0" class="header-anchor"></a>12.3.3　实现任务队列和线程池
+</h2><h2 id="1234在单独的线程中执行-io"><a href="#1234%e5%9c%a8%e5%8d%95%e7%8b%ac%e7%9a%84%e7%ba%bf%e7%a8%8b%e4%b8%ad%e6%89%a7%e8%a1%8c-io" class="header-anchor"></a>12.3.4　在单独的线程中执行 I/O
+</h2><h2 id="1235没有同步的程序"><a href="#1235%e6%b2%a1%e6%9c%89%e5%90%8c%e6%ad%a5%e7%9a%84%e7%a8%8b%e5%ba%8f" class="header-anchor"></a>12.3.5　没有同步的程序
+</h2><h2 id="1236移除启动和停止代码"><a href="#1236%e7%a7%bb%e9%99%a4%e5%90%af%e5%8a%a8%e5%92%8c%e5%81%9c%e6%ad%a2%e4%bb%a3%e7%a0%81" class="header-anchor"></a>12.3.6　移除启动和停止代码
+</h2><h2 id="124让同步更加高效"><a href="#124%e8%ae%a9%e5%90%8c%e6%ad%a5%e6%9b%b4%e5%8a%a0%e9%ab%98%e6%95%88" class="header-anchor"></a>12.4　让同步更加高效
+</h2><h2 id="1241减小临界区的范围"><a href="#1241%e5%87%8f%e5%b0%8f%e4%b8%b4%e7%95%8c%e5%8c%ba%e7%9a%84%e8%8c%83%e5%9b%b4" class="header-anchor"></a>12.4.1　减小临界区的范围
+</h2><h2 id="1242限制并发线程的数量"><a href="#1242%e9%99%90%e5%88%b6%e5%b9%b6%e5%8f%91%e7%ba%bf%e7%a8%8b%e7%9a%84%e6%95%b0%e9%87%8f" class="header-anchor"></a>12.4.2　限制并发线程的数量
+</h2><h2 id="1243避免惊群"><a href="#1243%e9%81%bf%e5%85%8d%e6%83%8a%e7%be%a4" class="header-anchor"></a>12.4.3　避免惊群
+</h2><h2 id="1244避免锁护送"><a href="#1244%e9%81%bf%e5%85%8d%e9%94%81%e6%8a%a4%e9%80%81" class="header-anchor"></a>12.4.4　避免锁护送
+</h2><h2 id="1245减少竞争"><a href="#1245%e5%87%8f%e5%b0%91%e7%ab%9e%e4%ba%89" class="header-anchor"></a>12.4.5　减少竞争
+</h2><h2 id="1246不要在单核系统上繁忙等待"><a href="#1246%e4%b8%8d%e8%a6%81%e5%9c%a8%e5%8d%95%e6%a0%b8%e7%b3%bb%e7%bb%9f%e4%b8%8a%e7%b9%81%e5%bf%99%e7%ad%89%e5%be%85" class="header-anchor"></a>12.4.6　不要在单核系统上繁忙等待
+</h2><h2 id="1247不要永远等待"><a href="#1247%e4%b8%8d%e8%a6%81%e6%b0%b8%e8%bf%9c%e7%ad%89%e5%be%85" class="header-anchor"></a>12.4.7　不要永远等待
+</h2><h2 id="1248自己设计互斥量可能会低效"><a href="#1248%e8%87%aa%e5%b7%b1%e8%ae%be%e8%ae%a1%e4%ba%92%e6%96%a5%e9%87%8f%e5%8f%af%e8%83%bd%e4%bc%9a%e4%bd%8e%e6%95%88" class="header-anchor"></a>12.4.8　自己设计互斥量可能会低效
+</h2><h2 id="1249限制生产者输出队列的长度"><a href="#1249%e9%99%90%e5%88%b6%e7%94%9f%e4%ba%a7%e8%80%85%e8%be%93%e5%87%ba%e9%98%9f%e5%88%97%e7%9a%84%e9%95%bf%e5%ba%a6" class="header-anchor"></a>12.4.9　限制生产者输出队列的长度
+</h2><h2 id="125并发库"><a href="#125%e5%b9%b6%e5%8f%91%e5%ba%93" class="header-anchor"></a>12.5　并发库
+</h2><h2 id="126小结"><a href="#126%e5%b0%8f%e7%bb%93" class="header-anchor"></a>12.6　小结
+</h2><h2 id="第-13-章优化内存管理"><a href="#%e7%ac%ac-13-%e7%ab%a0%e4%bc%98%e5%8c%96%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86" class="header-anchor"></a>第 13 章　优化内存管理
+</h2><h2 id="131复习-c-内存管理器-api"><a href="#131%e5%a4%8d%e4%b9%a0-c-%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86%e5%99%a8-api" class="header-anchor"></a>13.1　复习 C++ 内存管理器 API
+</h2><h2 id="1311动态变量的生命周期"><a href="#1311%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f%e7%9a%84%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" class="header-anchor"></a>13.1.1　动态变量的生命周期
+</h2><h2 id="1312内存管理函数分配和释放内存"><a href="#1312%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86%e5%87%bd%e6%95%b0%e5%88%86%e9%85%8d%e5%92%8c%e9%87%8a%e6%94%be%e5%86%85%e5%ad%98" class="header-anchor"></a>13.1.2　内存管理函数分配和释放内存
+</h2><h2 id="1313new-表达式构造动态变量"><a href="#1313new-%e8%a1%a8%e8%be%be%e5%bc%8f%e6%9e%84%e9%80%a0%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f" class="header-anchor"></a>13.1.3　new 表达式构造动态变量
+</h2><h2 id="1314delete-表达式处置动态变量"><a href="#1314delete-%e8%a1%a8%e8%be%be%e5%bc%8f%e5%a4%84%e7%bd%ae%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f" class="header-anchor"></a>13.1.4　delete 表达式处置动态变量
+</h2><h2 id="1315显式析构函数调用销毁动态变量"><a href="#1315%e6%98%be%e5%bc%8f%e6%9e%90%e6%9e%84%e5%87%bd%e6%95%b0%e8%b0%83%e7%94%a8%e9%94%80%e6%af%81%e5%8a%a8%e6%80%81%e5%8f%98%e9%87%8f" class="header-anchor"></a>13.1.5　显式析构函数调用销毁动态变量
+</h2><h2 id="132高性能内存管理器"><a href="#132%e9%ab%98%e6%80%a7%e8%83%bd%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86%e5%99%a8" class="header-anchor"></a>13.2　高性能内存管理器
+</h2><h2 id="133提供类专用内存管理器"><a href="#133%e6%8f%90%e4%be%9b%e7%b1%bb%e4%b8%93%e7%94%a8%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86%e5%99%a8" class="header-anchor"></a>13.3　提供类专用内存管理器
+</h2><h2 id="1331分配固定大小内存的内存管理器"><a href="#1331%e5%88%86%e9%85%8d%e5%9b%ba%e5%ae%9a%e5%a4%a7%e5%b0%8f%e5%86%85%e5%ad%98%e7%9a%84%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86%e5%99%a8" class="header-anchor"></a>13.3.1　分配固定大小内存的内存管理器
+</h2><h2 id="1332内存块分配区"><a href="#1332%e5%86%85%e5%ad%98%e5%9d%97%e5%88%86%e9%85%8d%e5%8c%ba" class="header-anchor"></a>13.3.2　内存块分配区
+</h2><h2 id="1333添加一个类专用-new-运算符"><a href="#1333%e6%b7%bb%e5%8a%a0%e4%b8%80%e4%b8%aa%e7%b1%bb%e4%b8%93%e7%94%a8-new-%e8%bf%90%e7%ae%97%e7%ac%a6" class="header-anchor"></a>13.3.3　添加一个类专用 new() 运算符
+</h2><h2 id="1334分配固定大小内存块的内存管理器的性能"><a href="#1334%e5%88%86%e9%85%8d%e5%9b%ba%e5%ae%9a%e5%a4%a7%e5%b0%8f%e5%86%85%e5%ad%98%e5%9d%97%e7%9a%84%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86%e5%99%a8%e7%9a%84%e6%80%a7%e8%83%bd" class="header-anchor"></a>13.3.4　分配固定大小内存块的内存管理器的性能
+</h2><h2 id="1335分配固定大小内存块的内存管理器的变化形式"><a href="#1335%e5%88%86%e9%85%8d%e5%9b%ba%e5%ae%9a%e5%a4%a7%e5%b0%8f%e5%86%85%e5%ad%98%e5%9d%97%e7%9a%84%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86%e5%99%a8%e7%9a%84%e5%8f%98%e5%8c%96%e5%bd%a2%e5%bc%8f" class="header-anchor"></a>13.3.5　分配固定大小内存块的内存管理器的变化形式
+</h2><h2 id="1336非线程安全的内存管理器是高效的"><a href="#1336%e9%9d%9e%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8%e7%9a%84%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86%e5%99%a8%e6%98%af%e9%ab%98%e6%95%88%e7%9a%84" class="header-anchor"></a>13.3.6　非线程安全的内存管理器是高效的
+</h2><h2 id="134自定义标准库分配器"><a href="#134%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a0%87%e5%87%86%e5%ba%93%e5%88%86%e9%85%8d%e5%99%a8" class="header-anchor"></a>13.4　自定义标准库分配器
+</h2><h2 id="1341最小-c11-分配器"><a href="#1341%e6%9c%80%e5%b0%8f-c11-%e5%88%86%e9%85%8d%e5%99%a8" class="header-anchor"></a>13.4.1　最小 C++11 分配器
+</h2><h2 id="1342c98-分配器的其他定义"><a href="#1342c98-%e5%88%86%e9%85%8d%e5%99%a8%e7%9a%84%e5%85%b6%e4%bb%96%e5%ae%9a%e4%b9%89" class="header-anchor"></a>13.4.2　C++98 分配器的其他定义
+</h2><h2 id="1343一个分配固定大小内存块的分配器"><a href="#1343%e4%b8%80%e4%b8%aa%e5%88%86%e9%85%8d%e5%9b%ba%e5%ae%9a%e5%a4%a7%e5%b0%8f%e5%86%85%e5%ad%98%e5%9d%97%e7%9a%84%e5%88%86%e9%85%8d%e5%99%a8" class="header-anchor"></a>13.4.3　一个分配固定大小内存块的分配器
+</h2><h2 id="1344字符串的分配固定大小内存块的分配器"><a href="#1344%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e5%88%86%e9%85%8d%e5%9b%ba%e5%ae%9a%e5%a4%a7%e5%b0%8f%e5%86%85%e5%ad%98%e5%9d%97%e7%9a%84%e5%88%86%e9%85%8d%e5%99%a8" class="header-anchor"></a>13.4.4　字符串的分配固定大小内存块的分配器
+</h2><h2 id="135小结"><a href="#135%e5%b0%8f%e7%bb%93" class="header-anchor"></a>13.5　小结
+</h2><h2 id="作者介绍"><a href="#%e4%bd%9c%e8%80%85%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>作者介绍
+</h2><h2 id="封面介绍"><a href="#%e5%b0%81%e9%9d%a2%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>封面介绍
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="第-1-章优化概述-1"><a href="#%e7%ac%ac-1-%e7%ab%a0%e4%bc%98%e5%8c%96%e6%a6%82%e8%bf%b0-1" class="header-anchor"></a>第 1 章　优化概述
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 最后，这本书是关于创造奇迹的，是关于在检查性能变化时听见一位同事惊叹：​“哇，到底发生了什么？才启动就处理完毕了。有人做了什么修改吗？​”优化也是一件可以提升开发人员的地位和自豪感的事情。  ^6733360-81KBJWWSj
+- 💭 希望有一天也做到这样
+- ⏱ 2025-07-19 09:50:46</p></blockquote>
+<h2 id="151用好的编译器并用好编译器-1"><a href="#151%e7%94%a8%e5%a5%bd%e7%9a%84%e7%bc%96%e8%af%91%e5%99%a8%e5%b9%b6%e7%94%a8%e5%a5%bd%e7%bc%96%e8%af%91%e5%99%a8-1" class="header-anchor"></a>1.5.1　用好的编译器并用好编译器
+</h2><h3 id="划线评论-1"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-1" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 微不足道。当关闭优化选项时，调试也会变得更加简单，因为程序的执行流程与源代码完全一致。优化选项可能会将代码移出循环、移除一些函数调用和完全移除一些变量。当编译选项打开后，有些编译器将不会生成任何调试符号。虽然部分编译器可能仍然会生成调试符号，但是开发人员想通过在调试器中观察执行流程来理解程序正在做什么就会变得非常困难。许多编译器在调试构建时允许打开和关闭个别不会过多干扰调试的优化选项。仅仅是打开函数内联优化选项就可以显著地提升 C++ 程序的性能，因为编写许多小的成员函数去访问各个类的成员变量是一种优秀的 C++ 编码风格。  ^6733360-81KCyoPKe
+- 💭 这里提供了一种反向定位程序bug的思路，如果想查看程序的每一步是怎么做的，可以关闭编译选项，这样生成的机器码就跟源代码几乎有相同的行为了
+- ⏱ 2025-07-19 10:03:12</p></blockquote>
+<h3 id="划线评论-2"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-2" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 。例如，如果应用程序非常缓慢，那么你应当检查是否打开了编译器的优化选项。这条建议看似非常明显，但是我已经记不清有多少次我向其他人提出这个建议后，他们都承认在编译时确实忘记打开优化选项了。多数情况下，只要正确地打开了优化选项，你都不用做额外的优化，因为编译器就可以让程序的运行速度提高数倍。  ^6733360-81KCrm1hz
+- 💭 需要深入研究下编译器的优化选项，这个对程序的性能优化很重要，但是掌握起来非常简单，属于二八分则中的20%的那一部分
+- ⏱ 2025-07-19 10:01:27</p></blockquote>
+<h2 id="152使用更好的算法-1"><a href="#152%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e7%ae%97%e6%b3%95-1" class="header-anchor"></a>1.5.2　使用更好的算法
+</h2><h3 id="划线评论-3"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-3" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 许多优化手段可以将程序性能提升 30% 至 100%。如果足够幸运，也许你可以将性能提升至三倍。但是除非你能找到一种更加高效的算法，否则要想实现性能的指数级增长通常是不太可能的。  ^6733360-81KD3YBGD
+- 💭 大部分程序的优化手段可以线性提升性能，如果想得到指数级的优化效果，那么需要使用更高效更好的算法
+- ⏱ 2025-07-19 10:10:58</p></blockquote>
+<h3 id="划线评论-4"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-4" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 许多优化手段可以将程序性能提升 30% 至 100%。如果足够幸运，也许你可以将性能提升至三倍。但是除非你能找到一种更加高效的算法，否则要想实现性能的指数级增长通常是不太可能的。  ^6733360-81KD0Aoo9
+- 💭 常规的优化手段将程序线性提升，如果想得到指数级别的增长，需要使用更好的算法
+- ⏱ 2025-07-19 10:10:08</p></blockquote>
+<h3 id="划线评论-5"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-5" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 最优算法适用于大大小小的各种程序，从精简的闭式计算到短小的关键字查找函数，再到复杂的数据结构和大规模的程序。市面上有许多优秀的图书讨论了这个主题。开发人员在职业生涯中都应该不断学习这些知识。很遗憾，在本书中我只能对优化算法主题浅谈辄止。  ^6733360-81KDcH85M
+- 💭 #task 需要更进一步了解这些经典的优化算法
+- ⏱ 2025-07-19 10:13:07</p></blockquote>
+<h2 id="153使用更好的库-1"><a href="#153%e4%bd%bf%e7%94%a8%e6%9b%b4%e5%a5%bd%e7%9a%84%e5%ba%93-1" class="header-anchor"></a>1.5.3　使用更好的库
+</h2><h3 id="划线评论-6"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-6" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 可能更令人吃惊的是，虽然 C++ 已经发明出来 30 年多了，商业 C++ 编译器的库仍然有 bug，而且可能不遵循现在的 C++ 标准，甚至不遵循编译器发布时的标准。这使得测量和推荐优化方法的任务变得非常复杂，也使得开发人员认为没有任何优化经验是可以移植的。  ^6733360-81KDfUpYz
+- 💭 kidding me?
+- ⏱ 2025-07-19 10:13:54</p></blockquote>
+<h3 id="划线评论-7"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-7" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 要想隐藏高度优化后的程序的复杂性，函数和类库是非常合适的地方。作为调用库的回报，它们会以最高的效率完成工作。库函数通常位于深层嵌套调用链的底端，在那里，性能改善的效果会更加明显。  ^6733360-81KDm7VJm
+- 💭 越是底层的优化，对程序性能的提升越明显
+- ⏱ 2025-07-19 10:15:26</p></blockquote>
+<h2 id="155移除计算-1"><a href="#155%e7%a7%bb%e9%99%a4%e8%ae%a1%e7%ae%97-1" class="header-anchor"></a>1.5.5　移除计算
+</h2><h3 id="划线评论-8"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-8" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 。这种看法的问题在于，除非一段代码真的是热点代码（被频繁地执行的代码）​，否则从中移除一两句内存访问对程序的整体性能不会有什么改善。  ^6733360-81KDvxxkE
+- 💭 优化循环内部的单独的代码才有效
+- ⏱ 2025-07-19 10:17:45</p></blockquote>
+<h2 id="21c-所相信的计算机谎言-1"><a href="#21c-%e6%89%80%e7%9b%b8%e4%bf%a1%e7%9a%84%e8%ae%a1%e7%ae%97%e6%9c%ba%e8%b0%8e%e8%a8%80-1" class="header-anchor"></a>2.1　C++ 所相信的计算机谎言
+</h2><h3 id="划线评论-9"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-9" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 C++ 程序只需要表现得好像语句是按照顺序执行的。C++ 编译器和计算机自身只要能够确保每次计算的含义都不会改变，就可以改变执行顺序使程序运行得更快。  ^6733360-81KEoMMwD
+- 💭 就是乱序执行
+- ⏱ 2025-07-19 10:31:22</p></blockquote>
+<h3 id="划线评论-10"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-10" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 声明一个 volatile 变量会要求编译器在每次使用该变量时都获取它的一份新的副本，而不用通过将该变量的值保存在一个寄存器中并复用它来优化程序。  ^6733360-81KEuFtuh
+- 💭 作用是保证每次使用的值都是最新的，而不是之前拷贝到寄存器中的旧值
+- ⏱ 2025-07-19 10:32:49</p></blockquote>
+<h3 id="划线评论-11"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-11" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 操作系统也欺骗了程序和用户。实际上，操作系统的目的就是为了给每个程序讲一个让它们信服的谎言。最重要的谎言之一是，操作系统希望每个程序都相信它们是独立运行于计算机上的，而且这些计算机的内存是无限的，还有无限的处理器来运行程序的所有线程。  ^6733360-81KEzTu3G
+- 💭 这里有点佛教的意味了，大脑会产生很多想法，让每个人误以为真，操作系统营造一种假象，让每个程序误以为真
+- ⏱ 2025-07-19 10:34:06</p></blockquote>
+<h2 id="221内存很慢-1"><a href="#221%e5%86%85%e5%ad%98%e5%be%88%e6%85%a2-1" class="header-anchor"></a>2.2.1　内存很慢
+</h2><h3 id="划线评论-12"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-12" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 内存墙 （memory wall）​。  ^6733360-81KEKFRhz
+- 💭 或者叫memory bound
+- ⏱ 2025-07-19 10:36:45</p></blockquote>
+<h2 id="222内存访问并非以字节为单位-1"><a href="#222%e5%86%85%e5%ad%98%e8%ae%bf%e9%97%ae%e5%b9%b6%e9%9d%9e%e4%bb%a5%e5%ad%97%e8%8a%82%e4%b8%ba%e5%8d%95%e4%bd%8d-1" class="header-anchor"></a>2.2.2　内存访问并非以字节为单位
+</h2><h3 id="划线评论-13"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-13" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 当 C++ 获取一个多字节类型的数据，比如一个 int 、double 或者指针时，构成数据的字节可能跨越了两个物理内存字。这种访问被称为非对齐的内存访问 （unaligned memory access）​。此处优化的意义在于，一次非对齐的内存访问的时间相当于这些字节在同一个字中时的两倍，因为需要读取两个字。C++编译器会帮助我们对齐结构体，使每个字段的起始字节地址都是该字段的大小的倍数。但是这样也会带来相应的问题：结构体的“洞”中包含了无用的数据。在定义结构体时，对各个数据字段的大小和顺序稍加注意，可以在保持对齐的前提下使结构体更加紧凑。  ^6733360-81KER5ArL
+- 💭 结构体对齐的意义，是的cpu在获取数据时候尽量避免跨越两个物理内存字
+- ⏱ 2025-07-19 10:38:20</p></blockquote>
+<h2 id="223某些内存访问会比其他的更慢-1"><a href="#223%e6%9f%90%e4%ba%9b%e5%86%85%e5%ad%98%e8%ae%bf%e9%97%ae%e4%bc%9a%e6%af%94%e5%85%b6%e4%bb%96%e7%9a%84%e6%9b%b4%e6%85%a2-1" class="header-anchor"></a>2.2.3　某些内存访问会比其他的更慢
+</h2><h3 id="划线评论-14"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-14" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 访问包含通过指针链接的记录的数据结构（例如链表或者树）可能会较慢，这是因为需要从主内存读取每个节点的数据到新的缓存行中。  ^6733360-81KIiaOBx
+- 💭 因为很可能存储在不连续的地址空间中，无法享受到存储局部性的优势
+- ⏱ 2025-07-19 11:30:48</p></blockquote>
+<h2 id="226指令执行缓慢-1"><a href="#226%e6%8c%87%e4%bb%a4%e6%89%a7%e8%a1%8c%e7%bc%93%e6%85%a2-1" class="header-anchor"></a>2.2.6　指令执行缓慢
+</h2><h3 id="划线评论-15"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-15" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 指令执行缓慢  ^6733360-81KIL98MJ
+- 💭 本身的处理时间非常短，但是发生了流水线停滞之后的会因为依赖导致时间拉得非常长
+- ⏱ 2025-07-19 11:37:57</p></blockquote>
+<h2 id="228程序执行中的多个流-1"><a href="#228%e7%a8%8b%e5%ba%8f%e6%89%a7%e8%a1%8c%e4%b8%ad%e7%9a%84%e5%a4%9a%e4%b8%aa%e6%b5%81-1" class="header-anchor"></a>2.2.8　程序执行中的多个流
+</h2><h3 id="划线评论-16"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba-16" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 当执行单元写值时，这个值会首先进入高速缓存内存。不过最终，这个值将被写入至主内存中，这样其他所有的执行单元就都可以看见这个值了。但是，这些执行单元在访问主内存时存在着竞争，所以可能在执行单元改变了一个值，然后又执行几百个指令后，主内存中的值才会被更新。  ^6733360-81KJCEB2u
+- 💭 这个就是cache一致性问题的来源，cache是独立的，可以随时写入，但是主内存是跟其他的程序共享的，从cache写入到主内存有延迟
+- ⏱ 2025-07-19 11:51:07</p></blockquote>
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2025 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.87d72694fb97c84cb5cbf9b1a64d476a38e04a5706618a6ffe5b89c7db00488f.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
