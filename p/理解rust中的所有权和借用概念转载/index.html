@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.bugxch.top/p/%E7%90%86%E8%A7%A3rust%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8%E6%A6%82%E5%BF%B5%E8%BD%AC%E8%BD%BD/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content="理解Rust中的“所有权”和“借用”概念（转载）">
+<link rel="stylesheet" href="/scss/style.min.1a6eab8f97c7ad47119bcfe4ea87cc5227d4789df170608fabd9b3910bc037f2.css"><meta property='og:title' content="理解Rust中的“所有权”和“借用”概念（转载）">
 <meta property='og:description' content="这是一篇转载的文章，学习rust时候很多地方说不清楚什么时变量绑定和借用，这篇翻译的文章给说清楚了。\n如果不理解背后的设计理念和工作原理，那么就会对Rust的所有权和借用特性产生困惑。这种困惑尤其出现在将以前学习的编程风格应用于新范式时, 我们称之为范式转移。所有权是一个新颖的想法，初次接触时非常难以理解。但是，随着使用经验的逐渐积累，开发人员会越来越深刻的体会到其设计理念的精妙。在进一步学习Rust的所有权和借用特性之前。首先，需要了解下“内存安全”和“内存泄漏”的原理以及编程语言处理这两种问题的方式。\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/%E7%90%86%E8%A7%A3rust%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8%E6%A6%82%E5%BF%B5%E8%BD%AC%E8%BD%BD/'>
 <meta property='og:site_name' content='巴巴变的博客'>
