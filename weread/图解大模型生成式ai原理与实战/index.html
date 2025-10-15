@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] 图解大模型：生成式AI原理与实战\n书名： 图解大模型：生成式AI原理与实战 作者： 【沙特】杰伊·阿拉马尔 【荷】马尔滕·格鲁滕多斯特 简介： 本书全程图解式讲解，通过大量全彩插图拆解概念，让读者真正告别学习大模型的枯燥和复杂。 全书分为三部分，依次介绍语言模型的原理、应用及优化。第一部分 理解语言模型（第13章），解析语言模型的核心概念，包括词元、嵌入向量及Transformer架构，帮助读者建立基础认知。第二部分 使用预训练语言模型（第49章），介绍如何使用大模型进行文本分类、聚类、语义搜索、文本生成及多模态扩展，提升模型的应用能力。第三部分 训练和微调语言模型（第10~12章），探讨大模型的训练与微调方法，包括嵌入模型的构建、分类任务的优化及生成式模型的微调，以适应特定需求。 本书适合对大模型感兴趣的开发者、研究人员和行业从业者。读者无须深度学习基础，只要会用Python，就可以通过本书深入理解大模型的原理并上手大模型应用开发。书中示例还可以一键在线运行，让学习过程更轻松。 出版时间 2025-05-01 00:00:00 ISBN： 9787115670830 分类： 计算机-人工智能 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/14032420813ab9f2bg0110b9 高亮划线 封面 版权信息 O&rsquo;Reilly Media, Inc.介绍 对本书的赞誉 对本书中文版的赞誉 译者序 中文版序 前言 第一部分 理解语言模型 📌 然而，对计算机来说，语言是一个复杂的概念。文本本质上是非结构化的，当用0和1（单个字符）表示时就会失去其含义。因此，在语言人工智能的发展历程中，人们一直非常关注如何以结构化的方式表示语言，使计算机能够更容易地使 ⏱ 2025-09-15 20:04:57 ^3300145071-9-3008-3113\n">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/%E5%9B%BE%E8%A7%A3%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%94%9F%E6%88%90%E5%BC%8Fai%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98/'>
+
+<link rel="stylesheet" href="/scss/style.min.1a6eab8f97c7ad47119bcfe4ea87cc5227d4789df170608fabd9b3910bc037f2.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] 图解大模型：生成式AI原理与实战\n书名： 图解大模型：生成式AI原理与实战 作者： 【沙特】杰伊·阿拉马尔 【荷】马尔滕·格鲁滕多斯特 简介： 本书全程图解式讲解，通过大量全彩插图拆解概念，让读者真正告别学习大模型的枯燥和复杂。 全书分为三部分，依次介绍语言模型的原理、应用及优化。第一部分 理解语言模型（第13章），解析语言模型的核心概念，包括词元、嵌入向量及Transformer架构，帮助读者建立基础认知。第二部分 使用预训练语言模型（第49章），介绍如何使用大模型进行文本分类、聚类、语义搜索、文本生成及多模态扩展，提升模型的应用能力。第三部分 训练和微调语言模型（第10~12章），探讨大模型的训练与微调方法，包括嵌入模型的构建、分类任务的优化及生成式模型的微调，以适应特定需求。 本书适合对大模型感兴趣的开发者、研究人员和行业从业者。读者无须深度学习基础，只要会用Python，就可以通过本书深入理解大模型的原理并上手大模型应用开发。书中示例还可以一键在线运行，让学习过程更轻松。 出版时间 2025-05-01 00:00:00 ISBN： 9787115670830 分类： 计算机-人工智能 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/14032420813ab9f2bg0110b9 高亮划线 封面 版权信息 O&rsquo;Reilly Media, Inc.介绍 对本书的赞誉 对本书中文版的赞誉 译者序 中文版序 前言 第一部分 理解语言模型 📌 然而，对计算机来说，语言是一个复杂的概念。文本本质上是非结构化的，当用0和1（单个字符）表示时就会失去其含义。因此，在语言人工智能的发展历程中，人们一直非常关注如何以结构化的方式表示语言，使计算机能够更容易地使 ⏱ 2025-09-15 20:04:57 ^3300145071-9-3008-3113\n">
+<meta property='og:url' content='https://blog.bugxch.top/weread/%E5%9B%BE%E8%A7%A3%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%94%9F%E6%88%90%E5%BC%8Fai%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] 图解大模型：生成式AI原理与实战\n书名： 图解大模型：生成式AI原理与实战 作者： 【沙特】杰伊·阿拉马尔 【荷】马尔滕·格鲁滕多斯特 简介： 本书全程图解式讲解，通过大量全彩插图拆解概念，让读者真正告别学习大模型的枯燥和复杂。 全书分为三部分，依次介绍语言模型的原理、应用及优化。第一部分 理解语言模型（第13章），解析语言模型的核心概念，包括词元、嵌入向量及Transformer架构，帮助读者建立基础认知。第二部分 使用预训练语言模型（第49章），介绍如何使用大模型进行文本分类、聚类、语义搜索、文本生成及多模态扩展，提升模型的应用能力。第三部分 训练和微调语言模型（第10~12章），探讨大模型的训练与微调方法，包括嵌入模型的构建、分类任务的优化及生成式模型的微调，以适应特定需求。 本书适合对大模型感兴趣的开发者、研究人员和行业从业者。读者无须深度学习基础，只要会用Python，就可以通过本书深入理解大模型的原理并上手大模型应用开发。书中示例还可以一键在线运行，让学习过程更轻松。 出版时间 2025-05-01 00:00:00 ISBN： 9787115670830 分类： 计算机-人工智能 出版社： 人民邮电出版社有限公司 PC地址：https://weread.qq.com/web/reader/14032420813ab9f2bg0110b9 高亮划线 封面 版权信息 O&rsquo;Reilly Media, Inc.介绍 对本书的赞誉 对本书中文版的赞誉 译者序 中文版序 前言 第一部分 理解语言模型 📌 然而，对计算机来说，语言是一个复杂的概念。文本本质上是非结构化的，当用0和1（单个字符）表示时就会失去其含义。因此，在语言人工智能的发展历程中，人们一直非常关注如何以结构化的方式表示语言，使计算机能够更容易地使 ⏱ 2025-09-15 20:04:57 ^3300145071-9-3008-3113\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_1ef23741c9bee174.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#元数据">元数据</a></li>
+    <li><a href="#高亮划线">高亮划线</a>
+      <ol>
+        <li><a href="#封面">封面</a></li>
+        <li><a href="#版权信息">版权信息</a></li>
+        <li><a href="#oreilly-media-inc介绍">O&rsquo;Reilly Media, Inc.介绍</a></li>
+        <li><a href="#对本书的赞誉">对本书的赞誉</a></li>
+        <li><a href="#对本书中文版的赞誉">对本书中文版的赞誉</a></li>
+        <li><a href="#译者序">译者序</a></li>
+        <li><a href="#中文版序">中文版序</a></li>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#第一部分-理解语言模型">第一部分 理解语言模型</a>
+          <ol>
+            <li><a href="#第2章-词元和嵌入">第2章 词元和嵌入</a></li>
+            <li><a href="#第3章-llm的内部机制">第3章 LLM的内部机制</a></li>
+          </ol>
+        </li>
+        <li><a href="#第二部分-使用预训练语言模型">第二部分 使用预训练语言模型</a>
+          <ol>
+            <li><a href="#第5章-文本聚类和主题建模">第5章 文本聚类和主题建模</a></li>
+            <li><a href="#第6章-提示工程">第6章 提示工程</a></li>
+            <li><a href="#第7章-高级文本生成技术与工具">第7章 高级文本生成技术与工具</a></li>
+            <li><a href="#第8章-语义搜索与rag">第8章 语义搜索与RAG</a></li>
+            <li><a href="#第9章-多模态llm">第9章 多模态LLM</a></li>
+          </ol>
+        </li>
+        <li><a href="#第三部分-训练和微调语言模型">第三部分 训练和微调语言模型</a>
+          <ol>
+            <li><a href="#第11章-为分类任务微调表示模型">第11章 为分类任务微调表示模型</a></li>
+            <li><a href="#第12章-微调生成模型">第12章 微调生成模型</a></li>
+          </ol>
+        </li>
+        <li><a href="#附录-图解deepseek-r1">附录 图解DeepSeek-R1</a></li>
+        <li><a href="#后记">后记</a></li>
+        <li><a href="#作者简介">作者简介</a></li>
+        <li><a href="#封面简介">封面简介</a></li>
+        <li><a href="#链接资源">链接资源</a></li>
+        <li><a href="#大模型面试题200问">大模型面试题200问</a></li>
+      </ol>
+    </li>
+    <li><a href="#读书笔记">读书笔记</a></li>
+    <li><a href="#本书评论">本书评论</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/%E5%9B%BE%E8%A7%A3%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%94%9F%E6%88%90%E5%BC%8Fai%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] 图解大模型：生成式AI原理与实战</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/55/cpplatform_wkrlewcyytdbube364hnb8/t6_cpplatform_wkrlewcyytdbube364hnb81747733663.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" 图解大模型：生成式AI原理与实战|200"
+	
+	
+></li>
+<li>书名： 图解大模型：生成式AI原理与实战</li>
+<li>作者： 【沙特】杰伊·阿拉马尔  【荷】马尔滕·格鲁滕多斯特</li>
+<li>简介： 本书全程图解式讲解，通过大量全彩插图拆解概念，让读者真正告别学习大模型的枯燥和复杂。   全书分为三部分，依次介绍语言模型的原理、应用及优化。第一部分 理解语言模型（第1<del>3章），解析语言模型的核心概念，包括词元、嵌入向量及Transformer架构，帮助读者建立基础认知。第二部分 使用预训练语言模型（第4</del>9章），介绍如何使用大模型进行文本分类、聚类、语义搜索、文本生成及多模态扩展，提升模型的应用能力。第三部分 训练和微调语言模型（第10~12章），探讨大模型的训练与微调方法，包括嵌入模型的构建、分类任务的优化及生成式模型的微调，以适应特定需求。   本书适合对大模型感兴趣的开发者、研究人员和行业从业者。读者无须深度学习基础，只要会用Python，就可以通过本书深入理解大模型的原理并上手大模型应用开发。书中示例还可以一键在线运行，让学习过程更轻松。</li>
+<li>出版时间 2025-05-01 00:00:00</li>
+<li>ISBN： 9787115670830</li>
+<li>分类： 计算机-人工智能</li>
+<li>出版社： 人民邮电出版社有限公司</li>
+<li>PC地址：https://weread.qq.com/web/reader/14032420813ab9f2bg0110b9</li>
+</ul></blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="oreilly-media-inc介绍"><a href="#oreilly-media-inc%e4%bb%8b%e7%bb%8d" class="header-anchor"></a>O&rsquo;Reilly Media, Inc.介绍
+</h2><h2 id="对本书的赞誉"><a href="#%e5%af%b9%e6%9c%ac%e4%b9%a6%e7%9a%84%e8%b5%9e%e8%aa%89" class="header-anchor"></a>对本书的赞誉
+</h2><h2 id="对本书中文版的赞誉"><a href="#%e5%af%b9%e6%9c%ac%e4%b9%a6%e4%b8%ad%e6%96%87%e7%89%88%e7%9a%84%e8%b5%9e%e8%aa%89" class="header-anchor"></a>对本书中文版的赞誉
+</h2><h2 id="译者序"><a href="#%e8%af%91%e8%80%85%e5%ba%8f" class="header-anchor"></a>译者序
+</h2><h2 id="中文版序"><a href="#%e4%b8%ad%e6%96%87%e7%89%88%e5%ba%8f" class="header-anchor"></a>中文版序
+</h2><h2 id="前言"><a href="#%e5%89%8d%e8%a8%80" class="header-anchor"></a>前言
+</h2><h2 id="第一部分-理解语言模型"><a href="#%e7%ac%ac%e4%b8%80%e9%83%a8%e5%88%86-%e7%90%86%e8%a7%a3%e8%af%ad%e8%a8%80%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>第一部分 理解语言模型
+</h2><blockquote>
+<p>📌 然而，对计算机来说，语言是一个复杂的概念。文本本质上是非结构化的，当用0和1（单个字符）表示时就会失去其含义。因此，在语言人工智能的发展历程中，人们一直非常关注如何以结构化的方式表示语言，使计算机能够更容易地使
+⏱ 2025-09-15 20:04:57 ^3300145071-9-3008-3113</p></blockquote>
+<h3 id="第2章-词元和嵌入"><a href="#%e7%ac%ac2%e7%ab%a0-%e8%af%8d%e5%85%83%e5%92%8c%e5%b5%8c%e5%85%a5" class="header-anchor"></a>第2章 词元和嵌入
+</h3><h3 id="第3章-llm的内部机制"><a href="#%e7%ac%ac3%e7%ab%a0-llm%e7%9a%84%e5%86%85%e9%83%a8%e6%9c%ba%e5%88%b6" class="header-anchor"></a>第3章 LLM的内部机制
+</h3><h2 id="第二部分-使用预训练语言模型"><a href="#%e7%ac%ac%e4%ba%8c%e9%83%a8%e5%88%86-%e4%bd%bf%e7%94%a8%e9%a2%84%e8%ae%ad%e7%bb%83%e8%af%ad%e8%a8%80%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>第二部分 使用预训练语言模型
+</h2><h3 id="第5章-文本聚类和主题建模"><a href="#%e7%ac%ac5%e7%ab%a0-%e6%96%87%e6%9c%ac%e8%81%9a%e7%b1%bb%e5%92%8c%e4%b8%bb%e9%a2%98%e5%bb%ba%e6%a8%a1" class="header-anchor"></a>第5章 文本聚类和主题建模
+</h3><h3 id="第6章-提示工程"><a href="#%e7%ac%ac6%e7%ab%a0-%e6%8f%90%e7%a4%ba%e5%b7%a5%e7%a8%8b" class="header-anchor"></a>第6章 提示工程
+</h3><h3 id="第7章-高级文本生成技术与工具"><a href="#%e7%ac%ac7%e7%ab%a0-%e9%ab%98%e7%ba%a7%e6%96%87%e6%9c%ac%e7%94%9f%e6%88%90%e6%8a%80%e6%9c%af%e4%b8%8e%e5%b7%a5%e5%85%b7" class="header-anchor"></a>第7章 高级文本生成技术与工具
+</h3><h3 id="第8章-语义搜索与rag"><a href="#%e7%ac%ac8%e7%ab%a0-%e8%af%ad%e4%b9%89%e6%90%9c%e7%b4%a2%e4%b8%8erag" class="header-anchor"></a>第8章 语义搜索与RAG
+</h3><h3 id="第9章-多模态llm"><a href="#%e7%ac%ac9%e7%ab%a0-%e5%a4%9a%e6%a8%a1%e6%80%81llm" class="header-anchor"></a>第9章 多模态LLM
+</h3><h2 id="第三部分-训练和微调语言模型"><a href="#%e7%ac%ac%e4%b8%89%e9%83%a8%e5%88%86-%e8%ae%ad%e7%bb%83%e5%92%8c%e5%be%ae%e8%b0%83%e8%af%ad%e8%a8%80%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>第三部分 训练和微调语言模型
+</h2><h3 id="第11章-为分类任务微调表示模型"><a href="#%e7%ac%ac11%e7%ab%a0-%e4%b8%ba%e5%88%86%e7%b1%bb%e4%bb%bb%e5%8a%a1%e5%be%ae%e8%b0%83%e8%a1%a8%e7%a4%ba%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>第11章 为分类任务微调表示模型
+</h3><h3 id="第12章-微调生成模型"><a href="#%e7%ac%ac12%e7%ab%a0-%e5%be%ae%e8%b0%83%e7%94%9f%e6%88%90%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>第12章 微调生成模型
+</h3><h2 id="附录-图解deepseek-r1"><a href="#%e9%99%84%e5%bd%95-%e5%9b%be%e8%a7%a3deepseek-r1" class="header-anchor"></a>附录 图解DeepSeek-R1
+</h2><h2 id="后记"><a href="#%e5%90%8e%e8%ae%b0" class="header-anchor"></a>后记
+</h2><h2 id="作者简介"><a href="#%e4%bd%9c%e8%80%85%e7%ae%80%e4%bb%8b" class="header-anchor"></a>作者简介
+</h2><h2 id="封面简介"><a href="#%e5%b0%81%e9%9d%a2%e7%ae%80%e4%bb%8b" class="header-anchor"></a>封面简介
+</h2><h2 id="链接资源"><a href="#%e9%93%be%e6%8e%a5%e8%b5%84%e6%ba%90" class="header-anchor"></a>链接资源
+</h2><h2 id="大模型面试题200问"><a href="#%e5%a4%a7%e6%a8%a1%e5%9e%8b%e9%9d%a2%e8%af%95%e9%a2%98200%e9%97%ae" class="header-anchor"></a>大模型面试题200问
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2025 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.87d72694fb97c84cb5cbf9b1a64d476a38e04a5706618a6ffe5b89c7db00488f.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

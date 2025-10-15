@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="元数据 [!abstract] 程序员的思维修炼：开发认知潜能的九堂课\n书名： 程序员的思维修炼：开发认知潜能的九堂课 作者： Andy Hunt 简介： 作者从软件开发领域的角度，阐述了每一名程序员提升“内力”所需要的各种软性知识：从新手到专家的5个层次、人类大脑的运行机制、直觉和理性的利与弊、学习方法和实践经验的重要性、控制注意力的技巧，等等，可谓是一本程序员“素质教育”的微型百科全书。 出版时间 2010-12-21 00:00:00 ISBN： 9787115242334 分类： 计算机-理论知识 出版社： 人民邮电出版社 PC地址：https://weread.qq.com/web/reader/abd32400718ff62babdf499 高亮划线 封面 版权信息 数字版权声明 赞誉 版权声明 译者序 对本书的赞誉 献言 第1章 绪论 1.1 再提“实用” 1.2 关注情境 1.3 所有人都关注这些技能 1.4 本书结构 📌 我们还将探讨直觉从何而来。直觉是专家的基本特征，事实上难以驾驭。你需要它，依赖它，但或许也莫名其妙地反对经常使用它。你可能总会怀疑自己或其他人的直觉，错误地认为它是“非科学的”。 ⏱ 2025-08-17 18:12:03 ^26211883-13-1402-1519\n">
+<title></title>
+
+<link rel='canonical' href='https://blog.bugxch.top/weread/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%80%9D%E7%BB%B4%E4%BF%AE%E7%82%BC%E5%BC%80%E5%8F%91%E8%AE%A4%E7%9F%A5%E6%BD%9C%E8%83%BD%E7%9A%84%E4%B9%9D%E5%A0%82%E8%AF%BE/'>
+
+<link rel="stylesheet" href="/scss/style.min.1a6eab8f97c7ad47119bcfe4ea87cc5227d4789df170608fabd9b3910bc037f2.css"><meta property='og:title' content="">
+<meta property='og:description' content="元数据 [!abstract] 程序员的思维修炼：开发认知潜能的九堂课\n书名： 程序员的思维修炼：开发认知潜能的九堂课 作者： Andy Hunt 简介： 作者从软件开发领域的角度，阐述了每一名程序员提升“内力”所需要的各种软性知识：从新手到专家的5个层次、人类大脑的运行机制、直觉和理性的利与弊、学习方法和实践经验的重要性、控制注意力的技巧，等等，可谓是一本程序员“素质教育”的微型百科全书。 出版时间 2010-12-21 00:00:00 ISBN： 9787115242334 分类： 计算机-理论知识 出版社： 人民邮电出版社 PC地址：https://weread.qq.com/web/reader/abd32400718ff62babdf499 高亮划线 封面 版权信息 数字版权声明 赞誉 版权声明 译者序 对本书的赞誉 献言 第1章 绪论 1.1 再提“实用” 1.2 关注情境 1.3 所有人都关注这些技能 1.4 本书结构 📌 我们还将探讨直觉从何而来。直觉是专家的基本特征，事实上难以驾驭。你需要它，依赖它，但或许也莫名其妙地反对经常使用它。你可能总会怀疑自己或其他人的直觉，错误地认为它是“非科学的”。 ⏱ 2025-08-17 18:12:03 ^26211883-13-1402-1519\n">
+<meta property='og:url' content='https://blog.bugxch.top/weread/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%80%9D%E7%BB%B4%E4%BF%AE%E7%82%BC%E5%BC%80%E5%8F%91%E8%AE%A4%E7%9F%A5%E6%BD%9C%E8%83%BD%E7%9A%84%E4%B9%9D%E5%A0%82%E8%AF%BE/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Weread' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="元数据 [!abstract] 程序员的思维修炼：开发认知潜能的九堂课\n书名： 程序员的思维修炼：开发认知潜能的九堂课 作者： Andy Hunt 简介： 作者从软件开发领域的角度，阐述了每一名程序员提升“内力”所需要的各种软性知识：从新手到专家的5个层次、人类大脑的运行机制、直觉和理性的利与弊、学习方法和实践经验的重要性、控制注意力的技巧，等等，可谓是一本程序员“素质教育”的微型百科全书。 出版时间 2010-12-21 00:00:00 ISBN： 9787115242334 分类： 计算机-理论知识 出版社： 人民邮电出版社 PC地址：https://weread.qq.com/web/reader/abd32400718ff62babdf499 高亮划线 封面 版权信息 数字版权声明 赞誉 版权声明 译者序 对本书的赞誉 献言 第1章 绪论 1.1 再提“实用” 1.2 关注情境 1.3 所有人都关注这些技能 1.4 本书结构 📌 我们还将探讨直觉从何而来。直觉是专家的基本特征，事实上难以驾驭。你需要它，依赖它，但或许也莫名其妙地反对经常使用它。你可能总会怀疑自己或其他人的直觉，错误地认为它是“非科学的”。 ⏱ 2025-08-17 18:12:03 ^26211883-13-1402-1519\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_1ef23741c9bee174.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#元数据">元数据</a></li>
+    <li><a href="#高亮划线">高亮划线</a>
+      <ol>
+        <li><a href="#封面">封面</a></li>
+        <li><a href="#版权信息">版权信息</a></li>
+        <li><a href="#数字版权声明">数字版权声明</a></li>
+        <li><a href="#赞誉">赞誉</a></li>
+        <li><a href="#版权声明">版权声明</a></li>
+        <li><a href="#译者序">译者序</a></li>
+        <li><a href="#对本书的赞誉">对本书的赞誉</a></li>
+        <li><a href="#献言">献言</a></li>
+        <li><a href="#第1章-绪论">第1章 绪论</a>
+          <ol>
+            <li><a href="#11-再提实用">1.1 再提“实用”</a></li>
+            <li><a href="#12-关注情境">1.2 关注情境</a></li>
+            <li><a href="#13-所有人都关注这些技能">1.3 所有人都关注这些技能</a></li>
+            <li><a href="#14-本书结构">1.4 本书结构</a></li>
+            <li><a href="#15-致谢">1.5 致谢</a></li>
+          </ol>
+        </li>
+        <li><a href="#第2章-从新手到专家的历程">第2章 从新手到专家的历程</a>
+          <ol>
+            <li><a href="#21-新手与专家">2.1 新手与专家</a></li>
+            <li><a href="#22-德雷福斯模型的5个阶段">2.2 德雷福斯模型的5个阶段</a></li>
+            <li><a href="#23-现实中的德雷福斯模型赛马和赛羊">2.3 现实中的德雷福斯模型：赛马和赛羊</a></li>
+            <li><a href="#24-有效地使用德雷福斯模型">2.4 有效地使用德雷福斯模型</a></li>
+            <li><a href="#25-警惕工具陷阱">2.5 警惕工具陷阱</a></li>
+            <li><a href="#26-再一次考虑情境">2.6 再一次考虑情境</a></li>
+            <li><a href="#27-日常的德雷福斯模型">2.7 日常的德雷福斯模型</a></li>
+          </ol>
+        </li>
+        <li><a href="#第3章-认识你的大脑">第3章 认识你的大脑</a>
+          <ol>
+            <li><a href="#31-双cpu模式">3.1 双CPU模式</a></li>
+            <li><a href="#32-随时247记录想法">3.2 随时（24×7）记录想法</a></li>
+            <li><a href="#33-l型和r型的特征">3.3 L型和R型的特征</a></li>
+            <li><a href="#34-r型的崛起">3.4 R型的崛起</a></li>
+            <li><a href="#35-r型看森林l型看树木">3.5 R型看森林，L型看树木</a></li>
+            <li><a href="#36-diy脑部手术和神经可塑性">3.6 DIY脑部手术和神经可塑性</a></li>
+            <li><a href="#37-如何更上一层楼">3.7 如何更上一层楼</a></li>
+          </ol>
+        </li>
+        <li><a href="#第4章-利用右脑">第4章 利用右脑</a>
+          <ol>
+            <li><a href="#41-启动感观输入">4.1 启动感观输入</a></li>
+            <li><a href="#42-用右脑画画">4.2 用右脑画画</a></li>
+            <li><a href="#43-促成r型到l型的转换">4.3 促成R型到L型的转换</a></li>
+            <li><a href="#44-收获r型线索">4.4 收获R型线索</a></li>
+            <li><a href="#45-收获模式">4.5 收获模式</a></li>
+            <li><a href="#46-正确理解">4.6 正确理解</a></li>
+          </ol>
+        </li>
+        <li><a href="#第5章-调试你的大脑">第5章 调试你的大脑</a>
+          <ol>
+            <li><a href="#51-了解认知偏见">5.1 了解认知偏见</a></li>
+            <li><a href="#52-认清时代影响">5.2 认清时代影响</a></li>
+            <li><a href="#53-了解个性倾向">5.3 了解个性倾向</a></li>
+            <li><a href="#54-找出硬件问题">5.4 找出硬件问题</a></li>
+            <li><a href="#55-现在我不知道该思考什么">5.5 现在我不知道该思考什么</a></li>
+          </ol>
+        </li>
+        <li><a href="#第6章-主动学习">第6章 主动学习</a>
+          <ol>
+            <li><a href="#61-学习是什么不是什么">6.1 学习是什么……不是什么</a></li>
+            <li><a href="#62-瞄准smart目标">6.2 瞄准SMART目标</a></li>
+            <li><a href="#63-建立一个务实的投资计划">6.3 建立一个务实的投资计划</a></li>
+            <li><a href="#64-使用你的原生学习模式">6.4 使用你的原生学习模式</a></li>
+            <li><a href="#65-一起工作一起学习">6.5 一起工作，一起学习</a></li>
+            <li><a href="#66-使用增强的学习法">6.6 使用增强的学习法</a></li>
+            <li><a href="#67-使用sq3r法主动阅读">6.7 使用SQ3R法主动阅读</a></li>
+            <li><a href="#68-使用思维导图">6.8 使用思维导图</a></li>
+            <li><a href="#69-利用文档的真正力量">6.9 利用文档的真正力量</a></li>
+            <li><a href="#610-以教代学">6.10 以教代学</a></li>
+            <li><a href="#611-付诸实践">6.11 付诸实践</a></li>
+          </ol>
+        </li>
+        <li><a href="#第7章-积累经验">第7章 积累经验</a>
+          <ol>
+            <li><a href="#71-为了学习而玩耍">7.1 为了学习而玩耍</a></li>
+            <li><a href="#72-利用现有知识">7.2 利用现有知识</a></li>
+            <li><a href="#73-正确对待实践中的失败">7.3 正确对待实践中的失败</a></li>
+            <li><a href="#74-了解内在诀窍">7.4 了解内在诀窍</a></li>
+            <li><a href="#75-压力扼杀认知">7.5 压力扼杀认知</a></li>
+            <li><a href="#76-想象超越感观">7.6 想象超越感观</a></li>
+            <li><a href="#77-像专家一样学习">7.7 像专家一样学习</a></li>
+          </ol>
+        </li>
+        <li><a href="#第8章-控制注意力">第8章 控制注意力</a>
+          <ol>
+            <li><a href="#81-提高注意力">8.1 提高注意力</a></li>
+            <li><a href="#82-通过分散注意力来集中注意力">8.2 通过分散注意力来集中注意力</a></li>
+            <li><a href="#83-管理知识">8.3 管理知识</a></li>
+            <li><a href="#84-优化当前情境">8.4 优化当前情境</a></li>
+            <li><a href="#85-积极地管理干扰">8.5 积极地管理干扰</a></li>
+            <li><a href="#86-保持足够大的情境">8.6 保持足够大的情境</a></li>
+            <li><a href="#87-如何保持注意力">8.7 如何保持注意力</a></li>
+          </ol>
+        </li>
+        <li><a href="#第9章-超越专家">第9章 超越专家</a>
+          <ol>
+            <li><a href="#91-有效的改变">9.1 有效的改变</a></li>
+            <li><a href="#92-明天上午做什么">9.2 明天上午做什么</a></li>
+            <li><a href="#93-超越专家">9.3 超越专家</a></li>
+          </ol>
+        </li>
+        <li><a href="#附录a-图片授权">附录A 图片授权</a></li>
+        <li><a href="#附录b-参考文献">附录B 参考文献</a></li>
+        <li><a href="#推荐语">推荐语</a></li>
+        <li><a href="#欢迎加入-图灵社区">欢迎加入 图灵社区</a></li>
+      </ol>
+    </li>
+    <li><a href="#读书笔记">读书笔记</a>
+      <ol>
+        <li><a href="#31-双cpu模式-1">3.1 双CPU模式</a>
+          <ol>
+            <li><a href="#章节评论-no1">章节评论 No.1</a></li>
+          </ol>
+        </li>
+        <li><a href="#42-用右脑画画-1">4.2 用右脑画画</a>
+          <ol>
+            <li><a href="#划线评论">划线评论</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#本书评论">本书评论</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/weread/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%80%9D%E7%BB%B4%E4%BF%AE%E7%82%BC%E5%BC%80%E5%8F%91%E8%AE%A4%E7%9F%A5%E6%BD%9C%E8%83%BD%E7%9A%84%E4%B9%9D%E5%A0%82%E8%AF%BE/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="元数据"><a href="#%e5%85%83%e6%95%b0%e6%8d%ae" class="header-anchor"></a>元数据
+</h1><blockquote>
+<p>[!abstract] 程序员的思维修炼：开发认知潜能的九堂课</p>
+<ul>
+<li><img src="https://cdn.weread.qq.com/weread/cover/1/YueWen_26211883/t6_YueWen_26211883.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt=" 程序员的思维修炼：开发认知潜能的九堂课|200"
+	
+	
+></li>
+<li>书名： 程序员的思维修炼：开发认知潜能的九堂课</li>
+<li>作者： Andy Hunt</li>
+<li>简介： 作者从软件开发领域的角度，阐述了每一名程序员提升“内力”所需要的各种软性知识：从新手到专家的5个层次、人类大脑的运行机制、直觉和理性的利与弊、学习方法和实践经验的重要性、控制注意力的技巧，等等，可谓是一本程序员“素质教育”的微型百科全书。</li>
+<li>出版时间 2010-12-21 00:00:00</li>
+<li>ISBN： 9787115242334</li>
+<li>分类： 计算机-理论知识</li>
+<li>出版社： 人民邮电出版社</li>
+<li>PC地址：https://weread.qq.com/web/reader/abd32400718ff62babdf499</li>
+</ul></blockquote>
+<h1 id="高亮划线"><a href="#%e9%ab%98%e4%ba%ae%e5%88%92%e7%ba%bf" class="header-anchor"></a>高亮划线
+</h1><h2 id="封面"><a href="#%e5%b0%81%e9%9d%a2" class="header-anchor"></a>封面
+</h2><h2 id="版权信息"><a href="#%e7%89%88%e6%9d%83%e4%bf%a1%e6%81%af" class="header-anchor"></a>版权信息
+</h2><h2 id="数字版权声明"><a href="#%e6%95%b0%e5%ad%97%e7%89%88%e6%9d%83%e5%a3%b0%e6%98%8e" class="header-anchor"></a>数字版权声明
+</h2><h2 id="赞誉"><a href="#%e8%b5%9e%e8%aa%89" class="header-anchor"></a>赞誉
+</h2><h2 id="版权声明"><a href="#%e7%89%88%e6%9d%83%e5%a3%b0%e6%98%8e" class="header-anchor"></a>版权声明
+</h2><h2 id="译者序"><a href="#%e8%af%91%e8%80%85%e5%ba%8f" class="header-anchor"></a>译者序
+</h2><h2 id="对本书的赞誉"><a href="#%e5%af%b9%e6%9c%ac%e4%b9%a6%e7%9a%84%e8%b5%9e%e8%aa%89" class="header-anchor"></a>对本书的赞誉
+</h2><h2 id="献言"><a href="#%e7%8c%ae%e8%a8%80" class="header-anchor"></a>献言
+</h2><h2 id="第1章-绪论"><a href="#%e7%ac%ac1%e7%ab%a0-%e7%bb%aa%e8%ae%ba" class="header-anchor"></a>第1章 绪论
+</h2><h3 id="11-再提实用"><a href="#11-%e5%86%8d%e6%8f%90%e5%ae%9e%e7%94%a8" class="header-anchor"></a>1.1 再提“实用”
+</h3><h3 id="12-关注情境"><a href="#12-%e5%85%b3%e6%b3%a8%e6%83%85%e5%a2%83" class="header-anchor"></a>1.2 关注情境
+</h3><h3 id="13-所有人都关注这些技能"><a href="#13-%e6%89%80%e6%9c%89%e4%ba%ba%e9%83%bd%e5%85%b3%e6%b3%a8%e8%bf%99%e4%ba%9b%e6%8a%80%e8%83%bd" class="header-anchor"></a>1.3 所有人都关注这些技能
+</h3><h3 id="14-本书结构"><a href="#14-%e6%9c%ac%e4%b9%a6%e7%bb%93%e6%9e%84" class="header-anchor"></a>1.4 本书结构
+</h3><blockquote>
+<p>📌 我们还将探讨直觉从何而来。直觉是专家的基本特征，事实上难以驾驭。你需要它，依赖它，但或许也莫名其妙地反对经常使用它。你可能总会怀疑自己或其他人的直觉，错误地认为它是“非科学的”。
+⏱ 2025-08-17 18:12:03 ^26211883-13-1402-1519</p></blockquote>
+<h3 id="15-致谢"><a href="#15-%e8%87%b4%e8%b0%a2" class="header-anchor"></a>1.5 致谢
+</h3><h2 id="第2章-从新手到专家的历程"><a href="#%e7%ac%ac2%e7%ab%a0-%e4%bb%8e%e6%96%b0%e6%89%8b%e5%88%b0%e4%b8%93%e5%ae%b6%e7%9a%84%e5%8e%86%e7%a8%8b" class="header-anchor"></a>第2章 从新手到专家的历程
+</h2><h3 id="21-新手与专家"><a href="#21-%e6%96%b0%e6%89%8b%e4%b8%8e%e4%b8%93%e5%ae%b6" class="header-anchor"></a>2.1 新手与专家
+</h3><h3 id="22-德雷福斯模型的5个阶段"><a href="#22-%e5%be%b7%e9%9b%b7%e7%a6%8f%e6%96%af%e6%a8%a1%e5%9e%8b%e7%9a%845%e4%b8%aa%e9%98%b6%e6%ae%b5" class="header-anchor"></a>2.2 德雷福斯模型的5个阶段
+</h3><h3 id="23-现实中的德雷福斯模型赛马和赛羊"><a href="#23-%e7%8e%b0%e5%ae%9e%e4%b8%ad%e7%9a%84%e5%be%b7%e9%9b%b7%e7%a6%8f%e6%96%af%e6%a8%a1%e5%9e%8b%e8%b5%9b%e9%a9%ac%e5%92%8c%e8%b5%9b%e7%be%8a" class="header-anchor"></a>2.3 现实中的德雷福斯模型：赛马和赛羊
+</h3><blockquote>
+<p>📌 正确自我评估的唯一办法就是提高个人技能层次，这反过来又会提高元认知能力
+⏱ 2025-08-17 21:04:10 ^26211883-18-5666-5701</p></blockquote>
+<h3 id="24-有效地使用德雷福斯模型"><a href="#24-%e6%9c%89%e6%95%88%e5%9c%b0%e4%bd%bf%e7%94%a8%e5%be%b7%e9%9b%b7%e7%a6%8f%e6%96%af%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>2.4 有效地使用德雷福斯模型
+</h3><h3 id="25-警惕工具陷阱"><a href="#25-%e8%ad%a6%e6%83%95%e5%b7%a5%e5%85%b7%e9%99%b7%e9%98%b1" class="header-anchor"></a>2.5 警惕工具陷阱
+</h3><h3 id="26-再一次考虑情境"><a href="#26-%e5%86%8d%e4%b8%80%e6%ac%a1%e8%80%83%e8%99%91%e6%83%85%e5%a2%83" class="header-anchor"></a>2.6 再一次考虑情境
+</h3><blockquote>
+<p>📌 2.6 再一次考虑情境</p></blockquote>
+<p>从德雷福斯模型学到的最重要的收获之一就是，认识到新手需要与情境无关的规则，而专家使用与情境相关的直觉。</p>
+<p>拿着咸鱼的男人已经认定了一个真理，也经历了许多假象、许多谎言。可这条鱼却不是那种颜色、那种纹理、那种死样、那种气味儿。</p>
+<p>——John Steinbeck，《科尔特斯的海》</p>
+<p>在《科尔特斯的海》中，Steinbeck冥想了情境和真理的相互作用。你可以描述实验室里的一条墨西哥锯齿鱼。你需要做的仅仅就是“打开一个气味儿难闻的罐子，从福尔马林溶液中取出一条僵硬无色的鱼，数一数骨头，然后写下真理‘D.</p>
+<blockquote>
+<p>⏱ 2025-08-17 22:05:46 ^26211883-21-391</p></blockquote>
+<h3 id="27-日常的德雷福斯模型"><a href="#27-%e6%97%a5%e5%b8%b8%e7%9a%84%e5%be%b7%e9%9b%b7%e7%a6%8f%e6%96%af%e6%a8%a1%e5%9e%8b" class="header-anchor"></a>2.7 日常的德雷福斯模型
+</h3><h2 id="第3章-认识你的大脑"><a href="#%e7%ac%ac3%e7%ab%a0-%e8%ae%a4%e8%af%86%e4%bd%a0%e7%9a%84%e5%a4%a7%e8%84%91" class="header-anchor"></a>第3章 认识你的大脑
+</h2><h3 id="31-双cpu模式"><a href="#31-%e5%8f%8ccpu%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>3.1 双CPU模式
+</h3><blockquote>
+<p>📌 由于2号CPU不做任何语言处理，这意味着它的结果也不是言语可以表达的。
+⏱ 2025-08-17 22:08:14 ^26211883-24-874-909</p></blockquote>
+<blockquote>
+<p>📌 这是因为图像、情感和整体经验都是R型的：你的梦是在R型下产生的。当你尝试把梦讲出来时，就开始争用总线。L型占用了总线，现在你无法获取那些R型记忆了。实际上，它们是无法用言语表达的[插图]。
+⏱ 2025-08-17 22:09:58 ^26211883-24-2627-2866</p></blockquote>
+<h3 id="32-随时247记录想法"><a href="#32-%e9%9a%8f%e6%97%b6247%e8%ae%b0%e5%bd%95%e6%83%b3%e6%b3%95" class="header-anchor"></a>3.2 随时（24×7）记录想法
+</h3><h3 id="33-l型和r型的特征"><a href="#33-l%e5%9e%8b%e5%92%8cr%e5%9e%8b%e7%9a%84%e7%89%b9%e5%be%81" class="header-anchor"></a>3.3 L型和R型的特征
+</h3><blockquote>
+<p>📌 事实上，综合是一项非常强大的学习技术，以至于麻省理工学院媒体实验室的尼葛洛庞蒂[插图]在Don&rsquo;t Dissect the Frog,Build It[Neg94]中建议，真正想要了解一只青蛙，传统的解剖不是办法，更好的方式是构造一只青蛙。
+⏱ 2025-08-18 09:21:20 ^26211883-26-7058-7340</p></blockquote>
+<h3 id="34-r型的崛起"><a href="#34-r%e5%9e%8b%e7%9a%84%e5%b4%9b%e8%b5%b7" class="header-anchor"></a>3.4 R型的崛起
+</h3><blockquote>
+<p>📌 积极的情感对学习和创造性思维非常关键。处于“高兴”的状态可以扩展你的思维过程，激活更多的大脑物质。
+⏱ 2025-08-18 09:24:48 ^26211883-27-4878-4927</p></blockquote>
+<blockquote>
+<p>📌 相反，如果处于一个丰富的环境中，里面充满了需要学习、观察和交互的事物，你就会产生大量新脑细胞和新的神经联系。几十年来，科学家被人造环境（无菌实验室笼子）误导了，因为人造环境只会产生人造数据，这再次证明情境是关键。你的工作环境需要提供丰富的感观机会，否则它真的会损坏大脑。
+⏱ 2025-08-18 09:25:59 ^26211883-27-6128-6299</p></blockquote>
+<h3 id="35-r型看森林l型看树木"><a href="#35-r%e5%9e%8b%e7%9c%8b%e6%a3%ae%e6%9e%97l%e5%9e%8b%e7%9c%8b%e6%a0%91%e6%9c%a8" class="header-anchor"></a>3.5 R型看森林，L型看树木
+</h3><h3 id="36-diy脑部手术和神经可塑性"><a href="#36-diy%e8%84%91%e9%83%a8%e6%89%8b%e6%9c%af%e5%92%8c%e7%a5%9e%e7%bb%8f%e5%8f%af%e5%a1%91%e6%80%a7" class="header-anchor"></a>3.6 DIY脑部手术和神经可塑性
+</h3><blockquote>
+<p>📌 根据斯坦福大学研究心理学家、Mindset:The New Psychology of Success[Dwe08]的作者卡罗尔·德韦克的说法，那些不相信自己能增长智力的学生的确做不到。而那些相信自己大脑可塑性的学生则能够很容易提高能力。
+⏱ 2025-08-18 09:36:12 ^26211883-29-1439-1586</p></blockquote>
+<h3 id="37-如何更上一层楼"><a href="#37-%e5%a6%82%e4%bd%95%e6%9b%b4%e4%b8%8a%e4%b8%80%e5%b1%82%e6%a5%bc" class="header-anchor"></a>3.7 如何更上一层楼
+</h3><h2 id="第4章-利用右脑"><a href="#%e7%ac%ac4%e7%ab%a0-%e5%88%a9%e7%94%a8%e5%8f%b3%e8%84%91" class="header-anchor"></a>第4章 利用右脑
+</h2><blockquote>
+<p>📌 人应该努力学习洞察和培养自己内心深处的灵光一现，这远远胜于外面流光溢彩的整个世界。然而，人总会下意识地抛弃自己特有的想法，仅仅因为那是他自己的想法。
+⏱ 2025-08-18 11:37:14 ^26211883-31-476-550</p></blockquote>
+<h3 id="41-启动感观输入"><a href="#41-%e5%90%af%e5%8a%a8%e6%84%9f%e8%a7%82%e8%be%93%e5%85%a5" class="header-anchor"></a>4.1 启动感观输入
+</h3><h3 id="42-用右脑画画"><a href="#42-%e7%94%a8%e5%8f%b3%e8%84%91%e7%94%bb%e7%94%bb" class="header-anchor"></a>4.2 用右脑画画
+</h3><h3 id="43-促成r型到l型的转换"><a href="#43-%e4%bf%83%e6%88%90r%e5%9e%8b%e5%88%b0l%e5%9e%8b%e7%9a%84%e8%bd%ac%e6%8d%a2" class="header-anchor"></a>4.3 促成R型到L型的转换
+</h3><blockquote>
+<p>📌 不要太着急。解决问题时，学会轻松面对不确定的事情。进行创造时，坦然面对荒谬和不切实际的东西。学习过程中，不要太迫于学会和记忆，首先只是适应它。试着先理解其意思，掌握主旨思想。
+⏱ 2025-08-19 08:41:01 ^26211883-34-3891-3978</p></blockquote>
+<h3 id="44-收获r型线索"><a href="#44-%e6%94%b6%e8%8e%b7r%e5%9e%8b%e7%ba%bf%e7%b4%a2" class="header-anchor"></a>4.4 收获R型线索
+</h3><h3 id="45-收获模式"><a href="#45-%e6%94%b6%e8%8e%b7%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>4.5 收获模式
+</h3><h3 id="46-正确理解"><a href="#46-%e6%ad%a3%e7%a1%ae%e7%90%86%e8%a7%a3" class="header-anchor"></a>4.6 正确理解
+</h3><h2 id="第5章-调试你的大脑"><a href="#%e7%ac%ac5%e7%ab%a0-%e8%b0%83%e8%af%95%e4%bd%a0%e7%9a%84%e5%a4%a7%e8%84%91" class="header-anchor"></a>第5章 调试你的大脑
+</h2><h3 id="51-了解认知偏见"><a href="#51-%e4%ba%86%e8%a7%a3%e8%ae%a4%e7%9f%a5%e5%81%8f%e8%a7%81" class="header-anchor"></a>5.1 了解认知偏见
+</h3><h3 id="52-认清时代影响"><a href="#52-%e8%ae%a4%e6%b8%85%e6%97%b6%e4%bb%a3%e5%bd%b1%e5%93%8d" class="header-anchor"></a>5.2 认清时代影响
+</h3><h3 id="53-了解个性倾向"><a href="#53-%e4%ba%86%e8%a7%a3%e4%b8%aa%e6%80%a7%e5%80%be%e5%90%91" class="header-anchor"></a>5.3 了解个性倾向
+</h3><h3 id="54-找出硬件问题"><a href="#54-%e6%89%be%e5%87%ba%e7%a1%ac%e4%bb%b6%e9%97%ae%e9%a2%98" class="header-anchor"></a>5.4 找出硬件问题
+</h3><h3 id="55-现在我不知道该思考什么"><a href="#55-%e7%8e%b0%e5%9c%a8%e6%88%91%e4%b8%8d%e7%9f%a5%e9%81%93%e8%af%a5%e6%80%9d%e8%80%83%e4%bb%80%e4%b9%88" class="header-anchor"></a>5.5 现在我不知道该思考什么
+</h3><h2 id="第6章-主动学习"><a href="#%e7%ac%ac6%e7%ab%a0-%e4%b8%bb%e5%8a%a8%e5%ad%a6%e4%b9%a0" class="header-anchor"></a>第6章 主动学习
+</h2><h3 id="61-学习是什么不是什么"><a href="#61-%e5%ad%a6%e4%b9%a0%e6%98%af%e4%bb%80%e4%b9%88%e4%b8%8d%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor"></a>6.1 学习是什么……不是什么
+</h3><h3 id="62-瞄准smart目标"><a href="#62-%e7%9e%84%e5%87%86smart%e7%9b%ae%e6%a0%87" class="header-anchor"></a>6.2 瞄准SMART目标
+</h3><h3 id="63-建立一个务实的投资计划"><a href="#63-%e5%bb%ba%e7%ab%8b%e4%b8%80%e4%b8%aa%e5%8a%a1%e5%ae%9e%e7%9a%84%e6%8a%95%e8%b5%84%e8%ae%a1%e5%88%92" class="header-anchor"></a>6.3 建立一个务实的投资计划
+</h3><h3 id="64-使用你的原生学习模式"><a href="#64-%e4%bd%bf%e7%94%a8%e4%bd%a0%e7%9a%84%e5%8e%9f%e7%94%9f%e5%ad%a6%e4%b9%a0%e6%a8%a1%e5%bc%8f" class="header-anchor"></a>6.4 使用你的原生学习模式
+</h3><h3 id="65-一起工作一起学习"><a href="#65-%e4%b8%80%e8%b5%b7%e5%b7%a5%e4%bd%9c%e4%b8%80%e8%b5%b7%e5%ad%a6%e4%b9%a0" class="header-anchor"></a>6.5 一起工作，一起学习
+</h3><h3 id="66-使用增强的学习法"><a href="#66-%e4%bd%bf%e7%94%a8%e5%a2%9e%e5%bc%ba%e7%9a%84%e5%ad%a6%e4%b9%a0%e6%b3%95" class="header-anchor"></a>6.6 使用增强的学习法
+</h3><h3 id="67-使用sq3r法主动阅读"><a href="#67-%e4%bd%bf%e7%94%a8sq3r%e6%b3%95%e4%b8%bb%e5%8a%a8%e9%98%85%e8%af%bb" class="header-anchor"></a>6.7 使用SQ3R法主动阅读
+</h3><h3 id="68-使用思维导图"><a href="#68-%e4%bd%bf%e7%94%a8%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be" class="header-anchor"></a>6.8 使用思维导图
+</h3><h3 id="69-利用文档的真正力量"><a href="#69-%e5%88%a9%e7%94%a8%e6%96%87%e6%a1%a3%e7%9a%84%e7%9c%9f%e6%ad%a3%e5%8a%9b%e9%87%8f" class="header-anchor"></a>6.9 利用文档的真正力量
+</h3><h3 id="610-以教代学"><a href="#610-%e4%bb%a5%e6%95%99%e4%bb%a3%e5%ad%a6" class="header-anchor"></a>6.10 以教代学
+</h3><h3 id="611-付诸实践"><a href="#611-%e4%bb%98%e8%af%b8%e5%ae%9e%e8%b7%b5" class="header-anchor"></a>6.11 付诸实践
+</h3><h2 id="第7章-积累经验"><a href="#%e7%ac%ac7%e7%ab%a0-%e7%a7%af%e7%b4%af%e7%bb%8f%e9%aa%8c" class="header-anchor"></a>第7章 积累经验
+</h2><h3 id="71-为了学习而玩耍"><a href="#71-%e4%b8%ba%e4%ba%86%e5%ad%a6%e4%b9%a0%e8%80%8c%e7%8e%a9%e8%80%8d" class="header-anchor"></a>7.1 为了学习而玩耍
+</h3><h3 id="72-利用现有知识"><a href="#72-%e5%88%a9%e7%94%a8%e7%8e%b0%e6%9c%89%e7%9f%a5%e8%af%86" class="header-anchor"></a>7.2 利用现有知识
+</h3><h3 id="73-正确对待实践中的失败"><a href="#73-%e6%ad%a3%e7%a1%ae%e5%af%b9%e5%be%85%e5%ae%9e%e8%b7%b5%e4%b8%ad%e7%9a%84%e5%a4%b1%e8%b4%a5" class="header-anchor"></a>7.3 正确对待实践中的失败
+</h3><h3 id="74-了解内在诀窍"><a href="#74-%e4%ba%86%e8%a7%a3%e5%86%85%e5%9c%a8%e8%af%80%e7%aa%8d" class="header-anchor"></a>7.4 了解内在诀窍
+</h3><h3 id="75-压力扼杀认知"><a href="#75-%e5%8e%8b%e5%8a%9b%e6%89%bc%e6%9d%80%e8%ae%a4%e7%9f%a5" class="header-anchor"></a>7.5 压力扼杀认知
+</h3><h3 id="76-想象超越感观"><a href="#76-%e6%83%b3%e8%b1%a1%e8%b6%85%e8%b6%8a%e6%84%9f%e8%a7%82" class="header-anchor"></a>7.6 想象超越感观
+</h3><h3 id="77-像专家一样学习"><a href="#77-%e5%83%8f%e4%b8%93%e5%ae%b6%e4%b8%80%e6%a0%b7%e5%ad%a6%e4%b9%a0" class="header-anchor"></a>7.7 像专家一样学习
+</h3><h2 id="第8章-控制注意力"><a href="#%e7%ac%ac8%e7%ab%a0-%e6%8e%a7%e5%88%b6%e6%b3%a8%e6%84%8f%e5%8a%9b" class="header-anchor"></a>第8章 控制注意力
+</h2><h3 id="81-提高注意力"><a href="#81-%e6%8f%90%e9%ab%98%e6%b3%a8%e6%84%8f%e5%8a%9b" class="header-anchor"></a>8.1 提高注意力
+</h3><h3 id="82-通过分散注意力来集中注意力"><a href="#82-%e9%80%9a%e8%bf%87%e5%88%86%e6%95%a3%e6%b3%a8%e6%84%8f%e5%8a%9b%e6%9d%a5%e9%9b%86%e4%b8%ad%e6%b3%a8%e6%84%8f%e5%8a%9b" class="header-anchor"></a>8.2 通过分散注意力来集中注意力
+</h3><h3 id="83-管理知识"><a href="#83-%e7%ae%a1%e7%90%86%e7%9f%a5%e8%af%86" class="header-anchor"></a>8.3 管理知识
+</h3><h3 id="84-优化当前情境"><a href="#84-%e4%bc%98%e5%8c%96%e5%bd%93%e5%89%8d%e6%83%85%e5%a2%83" class="header-anchor"></a>8.4 优化当前情境
+</h3><h3 id="85-积极地管理干扰"><a href="#85-%e7%a7%af%e6%9e%81%e5%9c%b0%e7%ae%a1%e7%90%86%e5%b9%b2%e6%89%b0" class="header-anchor"></a>8.5 积极地管理干扰
+</h3><h3 id="86-保持足够大的情境"><a href="#86-%e4%bf%9d%e6%8c%81%e8%b6%b3%e5%a4%9f%e5%a4%a7%e7%9a%84%e6%83%85%e5%a2%83" class="header-anchor"></a>8.6 保持足够大的情境
+</h3><h3 id="87-如何保持注意力"><a href="#87-%e5%a6%82%e4%bd%95%e4%bf%9d%e6%8c%81%e6%b3%a8%e6%84%8f%e5%8a%9b" class="header-anchor"></a>8.7 如何保持注意力
+</h3><h2 id="第9章-超越专家"><a href="#%e7%ac%ac9%e7%ab%a0-%e8%b6%85%e8%b6%8a%e4%b8%93%e5%ae%b6" class="header-anchor"></a>第9章 超越专家
+</h2><h3 id="91-有效的改变"><a href="#91-%e6%9c%89%e6%95%88%e7%9a%84%e6%94%b9%e5%8f%98" class="header-anchor"></a>9.1 有效的改变
+</h3><h3 id="92-明天上午做什么"><a href="#92-%e6%98%8e%e5%a4%a9%e4%b8%8a%e5%8d%88%e5%81%9a%e4%bb%80%e4%b9%88" class="header-anchor"></a>9.2 明天上午做什么
+</h3><h3 id="93-超越专家"><a href="#93-%e8%b6%85%e8%b6%8a%e4%b8%93%e5%ae%b6" class="header-anchor"></a>9.3 超越专家
+</h3><h2 id="附录a-图片授权"><a href="#%e9%99%84%e5%bd%95a-%e5%9b%be%e7%89%87%e6%8e%88%e6%9d%83" class="header-anchor"></a>附录A 图片授权
+</h2><h2 id="附录b-参考文献"><a href="#%e9%99%84%e5%bd%95b-%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>附录B 参考文献
+</h2><h2 id="推荐语"><a href="#%e6%8e%a8%e8%8d%90%e8%af%ad" class="header-anchor"></a>推荐语
+</h2><h2 id="欢迎加入-图灵社区"><a href="#%e6%ac%a2%e8%bf%8e%e5%8a%a0%e5%85%a5-%e5%9b%be%e7%81%b5%e7%a4%be%e5%8c%ba" class="header-anchor"></a>欢迎加入 图灵社区
+</h2><h1 id="读书笔记"><a href="#%e8%af%bb%e4%b9%a6%e7%ac%94%e8%ae%b0" class="header-anchor"></a>读书笔记
+</h1><h2 id="31-双cpu模式-1"><a href="#31-%e5%8f%8ccpu%e6%a8%a1%e5%bc%8f-1" class="header-anchor"></a>3.1 双CPU模式
+</h2><h3 id="章节评论-no1"><a href="#%e7%ab%a0%e8%8a%82%e8%af%84%e8%ae%ba-no1" class="header-anchor"></a>章节评论 No.1
+</h3><ul>
+<li>这里也有佛教的影子 ^6733360-82tvyRN0a
+<ul>
+<li>⏱ 2025-08-17 22:16:36</li>
+</ul>
+</li>
+</ul>
+<h2 id="42-用右脑画画-1"><a href="#42-%e7%94%a8%e5%8f%b3%e8%84%91%e7%94%bb%e7%94%bb-1" class="header-anchor"></a>4.2 用右脑画画
+</h2><h3 id="划线评论"><a href="#%e5%88%92%e7%ba%bf%e8%af%84%e8%ae%ba" class="header-anchor"></a>划线评论
+</h3><blockquote>
+<p>📌 这个问题的关键是共享总线，我前面为你介绍过（见第3章）​。如果L型占用了这条总线，就会阻碍R型干活。有趣的是，很多常见的休闲活动都能够激活R型并停止L型的占用：听音乐、绘画、静思、慢跑、针线活、攀岩，等等。  ^6733360-82uF7zoBk
+- 💭 这里的概念有点像是《制胜心态》里面的自我1和自我2的概念
+- ⏱ 2025-08-18 16:29:14</p></blockquote>
+<h1 id="本书评论"><a href="#%e6%9c%ac%e4%b9%a6%e8%af%84%e8%ae%ba" class="header-anchor"></a>本书评论
+</h1>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2025 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.87d72694fb97c84cb5cbf9b1a64d476a38e04a5706618a6ffe5b89c7db00488f.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
