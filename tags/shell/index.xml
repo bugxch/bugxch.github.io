@@ -107,7 +107,8 @@
 &lt;h3 id=&#34;为什么不用pwd&#34;&gt;&lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e7%94%a8pwd&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;为什么不用pwd？
 &lt;/h3&gt;&lt;p&gt;请注意以下的基本事实&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;调用shell脚本，就是在调用脚本的&lt;strong&gt;当前目录&lt;/strong&gt;下，&lt;strong&gt;逐行执行&lt;/strong&gt;脚本中的&lt;strong&gt;每一个命令&lt;/strong&gt;。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;调用shell脚本，就是在调用脚本的&lt;strong&gt;当前目录&lt;/strong&gt;下，&lt;strong&gt;逐行执行&lt;/strong&gt;脚本中的&lt;strong&gt;每一个命令&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;如果我们修改上面的脚本如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

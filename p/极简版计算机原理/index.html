@@ -423,18 +423,21 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
     >函数库</a>概念的一种实作方式。这些函式庫函数的<a class="link" href="https://www.wikiwand.com/zh/%E6%89%A9%E5%B1%95%E5%90%8D"  target="_blank" rel="noopener"
     >扩展名</a>是<code>.DLL</code>、<code>.OCX</code>（包含 <a class="link" href="https://www.wikiwand.com/zh/ActiveX"  target="_blank" rel="noopener"
     >ActiveX</a> 控制的函式庫）或者<code>.DRV</code>（舊式的系统<a class="link" href="https://www.wikiwand.com/zh/%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F"  target="_blank" rel="noopener"
-    >驱动程序</a>)。</p></blockquote>
+    >驱动程序</a>)。</p>
+</blockquote>
 <blockquote>
 <p>所謂動態链接，就是把一些經常會共用的程式碼（靜態链接的 OBJ 程式庫）製作成 DLL 檔，當執行檔呼叫到 DLL 檔內的函數時，Windows 作業系統才會把 DLL 檔載入記憶體內，DLL 檔本身的結構就是可執行檔，當程式需求函數才進行链接。透過動態链接方式，記憶體浪費的情形將可大幅降低。<a class="link" href="https://www.wikiwand.com/zh/%E9%9D%9C%E6%85%8B%E9%80%A3%E7%B5%90%E5%87%BD%E5%BC%8F%E5%BA%AB"  target="_blank" rel="noopener"
     >靜態連結函式庫</a>則是直接<a class="link" href="https://www.wikiwand.com/zh/%E9%93%BE%E6%8E%A5%E5%99%A8"  target="_blank" rel="noopener"
-    >連結</a>到執行檔。</p></blockquote>
+    >連結</a>到執行檔。</p>
+</blockquote>
 <blockquote>
 <p>DLL 的文件格式与视窗 <a class="link" href="https://www.wikiwand.com/zh/EXE"  target="_blank" rel="noopener"
     >EXE</a> 文件一样——也就是说，等同于 <a class="link" href="https://www.wikiwand.com/zh/32%E4%BD%8D"  target="_blank" rel="noopener"
     >32 位</a>视窗的<a class="link" href="https://www.wikiwand.com/zh/Portable_Executable"  target="_blank" rel="noopener"
     >可移植执行文件</a>（PE）和 <a class="link" href="https://www.wikiwand.com/zh/16%E4%BD%8D"  target="_blank" rel="noopener"
     >16 位</a>视窗的 New Executable（NE）。作为 EXE 格式，DLL 可以包括<a class="link" href="https://www.wikiwand.com/zh/%E5%8E%9F%E5%A7%8B%E7%A2%BC"  target="_blank" rel="noopener"
-    >原始碼</a>、数据和资源的多种组合。</p></blockquote>
+    >原始碼</a>、数据和资源的多种组合。</p>
+</blockquote>
 <p>简单来说，已经编译成汇编语言的程序文件，在进一步链接时如果直接将库文件链接进 exe 可执行文件，则该链接文件就是静态库，如果仅仅在程序运行时才进行链接称为动态链接，链接的目标文件就是动态链接库（windows 中为 dll 文件）。需要说明的是，在链接之后，exe 文件中包含了静态链接库的所有内容，所以会比较大，而动态链接库相对轻巧，并且<strong>动态链接库可以在被多个同时运行的程序所共有，并且保证内存中只有一个 dll 文件中调用函数的副本</strong>，这样就节省了程序运行的空间。实际上 window 操作系统的大部分 API 目标文件是动态链接库，动态链接库一般由导入库导入，导入库中并不存在目标函数的实体，仅仅保存目标函数所在的动态链接库的名称及路径。下面的表格是对两者的总结。</p>
 <div class="table-wrapper"><table>
   <thead>
@@ -543,7 +546,8 @@ A：程序和数据是保存在计算机的硬盘中的，但是程序运行需�
 <strong>A</strong>：c 是 C 语言的源文件，如博文 <a class="link" href="http://blog.csdn.net/chlele0105/article/details/23691147"  target="_blank" rel="noopener"
     >Linux 的. a、.so 和. o 文件</a> 中所述</p>
 <blockquote>
-<p>lib,dll,exe 都算是最终的目标文件，是最终产物。而 c/c++ 属于源代码。源代码和最终目标文件中过渡的就是中间代码 obj，实际上之所以需要中间代码，是你不可能一次得到目标文件。比如说一个 exe 需要很多的 cpp 文件生成。而编译器一次只能编译一个 cpp 文件。这样编译器编译好一个 cpp 以后会将其编译成 obj，当所有必须要的 cpp 都编译成 obj 以后，再统一 link 成所需要的 exe，应该说缺少任意一个 obj 都会导致 exe 的链接失败。而 .o, 是 Linux 目标文件, 相当于 windows 中的. obj 文件，.so 文件为共享库, 是 shared object, 用于动态连接的, 相当于 windows 下的 dll,.a 为静态库, 是好多个. o 合在一起, 用于静态链接</p></blockquote>
+<p>lib,dll,exe 都算是最终的目标文件，是最终产物。而 c/c++ 属于源代码。源代码和最终目标文件中过渡的就是中间代码 obj，实际上之所以需要中间代码，是你不可能一次得到目标文件。比如说一个 exe 需要很多的 cpp 文件生成。而编译器一次只能编译一个 cpp 文件。这样编译器编译好一个 cpp 以后会将其编译成 obj，当所有必须要的 cpp 都编译成 obj 以后，再统一 link 成所需要的 exe，应该说缺少任意一个 obj 都会导致 exe 的链接失败。而 .o, 是 Linux 目标文件, 相当于 windows 中的. obj 文件，.so 文件为共享库, 是 shared object, 用于动态连接的, 相当于 windows 下的 dll,.a 为静态库, 是好多个. o 合在一起, 用于静态链接</p>
+</blockquote>
 <p><strong>Q：什么是_BSS 段和_DATA 段？全局变量和局部变量在程序运行时有何不同？</strong>
 <strong>A</strong>：这是汇编语言的概念，编译器将高级语言源程序转换成汇编文件 (.asm 文件)，有如下的源文件<code>sample2.c</code></p>
 <div class="highlight"><div class="chroma">

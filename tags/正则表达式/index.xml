@@ -20,7 +20,8 @@
 &lt;p&gt;&lt;strong&gt;正则表达式&lt;/strong&gt;，又称&lt;strong&gt;正规表示式&lt;/strong&gt;、&lt;strong&gt;正规表示法、正规运算式、规则运算式、常规表示法&lt;/strong&gt;（英语：Regular Expression，在代码中常简写为 regex、regexp 或 RE），&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh-hans/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;计算机科学&lt;/a&gt;的一个概念。正则表达式使用单个字符串来描述、匹配一系列符合某个句法规则的&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh-hans/%E5%AD%97%E7%AC%A6%E4%B8%B2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;字符串&lt;/a&gt;。在很多&lt;a class=&#34;link&#34; href=&#34;https://www.wikiwand.com/zh-hans/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;文本编辑器&lt;/a&gt;里，正则表达式通常被用来&lt;strong&gt;检索、替换&lt;/strong&gt;那些符合某个模式的文本。&lt;/p&gt;&lt;/blockquote&gt;
+    &gt;文本编辑器&lt;/a&gt;里，正则表达式通常被用来&lt;strong&gt;检索、替换&lt;/strong&gt;那些符合某个模式的文本。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;正则表达式在台湾又译作正规表达式，英文名称表示 “某种规则的表达式” 的意思，目前&lt;strong&gt;主流的文本编辑器&lt;/strong&gt;(source insight/sublimtext/ultra edit/emacs/notepad++/vim) 和&lt;strong&gt;主流计算机语言&lt;/strong&gt;（perl/python/PHP/java/.NET/tcl/c/c++）都支持正则表达式。它**简单，优美，功能强大，妙用无穷。**大数据时代的到来，因其快捷强大的文本处理能力必然在数据挖掘处理中发挥越来越重要的作用。&lt;/p&gt;
 &lt;p&gt;正则表达式由一般字符和特殊字符组成，一般字符指常见的字符本身，比如&lt;code&gt;123Aaf0=;~#@%&lt;/code&gt;这些简单字符。通过简单地排列组合这些字符可以实现对复杂字符串的精确匹配。先放一张 python 的正则字符列表，下面逐一介绍。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://images.cnblogs.com/cnblogs_com/huxi/Windows-Live-Writer/Python_10A67/pyre_ebb9ce1c-e5e8-4219-a8ae-7ee620d5f9f1.png&#34;
@@ -395,7 +396,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;代码第 4 行，使用正则表达式&lt;code&gt;r&amp;quot;\d+&amp;quot;&lt;/code&gt;compile 编译一个 pattern 的实例。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;为什么要在正则表达式之前加个&lt;code&gt;r&lt;/code&gt;呢？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;为什么要在正则表达式之前加个&lt;code&gt;r&lt;/code&gt;呢？&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;此处的&lt;code&gt;r&lt;/code&gt;表示 raw，即原始输入。因为&lt;code&gt;\&lt;/code&gt;在 python 的字符串中也是转义字符，此处的功能与正则表达式中的功能有冲突。&lt;code&gt;compile&lt;/code&gt;中的表达式从输入到真正的表达式的意思执行需要经过两次解读，&lt;strong&gt;python 本身解读之后将字符串表达的意思传递给正则表达式，正则引擎再解读之后执行&lt;/strong&gt;，问题就出在两次解读上。&lt;/p&gt;
 &lt;p&gt;以最终匹配&lt;code&gt;\section&lt;/code&gt;为例，如果不加&lt;code&gt;r&lt;/code&gt;使用 python 第 5 行的参数就该是&lt;code&gt;\\\\section&lt;/code&gt;，即&lt;code&gt;pattern = re.compile(&amp;quot;\\\\section&amp;quot;, re.M)&lt;/code&gt;。第一次解读，python 将其理解为&lt;code&gt;\\section&lt;/code&gt;传递给正则引擎，正则理解为要匹配&lt;code&gt;\section&lt;/code&gt;，如下表所示&lt;/p&gt;
 &lt;table&gt;
@@ -445,7 +447,8 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;re.M&lt;/code&gt;是个什么东东？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;re.M&lt;/code&gt;是个什么东东？&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;上面的代码中，compile 还包含了&lt;code&gt;re.M&lt;/code&gt;作为一个 flag，它是&lt;code&gt;MULTILINE&lt;/code&gt;的缩写，表示匹配多行模式，除了多行模式之外（具体含义见下表），python 还有其他的 flag 影响表达式匹配的规则。&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -508,7 +511,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;表达式内部加入了注释，而且可以多行显示，可以使用它表示复杂的表达式，非常方便。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;匹配正则表达式的方法&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;匹配正则表达式的方法&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;pattern 的对象建立之后，就是可以使用 re 的方法匹配字符串了。最重要的方法有下表中的四个。&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;

@@ -92,7 +92,8 @@
 &lt;li&gt;表示在公交站第&lt;code&gt;i&lt;/code&gt;站上车&lt;code&gt;k&lt;/code&gt;人，&lt;code&gt;count[i - 1] += k&lt;/code&gt;；&lt;/li&gt;
 &lt;li&gt;第&lt;code&gt;i + 1&lt;/code&gt;站直到第&lt;code&gt;j&lt;/code&gt;站都没有乘客上下车，&lt;code&gt;count[i],...,count[j - 1]&lt;/code&gt;无操作；&lt;/li&gt;
 &lt;li&gt;在第&lt;code&gt;j + 1&lt;/code&gt;站下车&lt;code&gt;k&lt;/code&gt;人，所以&lt;code&gt;count[j] -= k&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;为了方便起见，&lt;strong&gt;我们缩小问题的规模，以具体的数字代替抽象的代数字母&lt;/strong&gt;，假如我们就只有3个公交站，取示例中的前2行，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;公交车刚开始上的人数是0，&lt;code&gt;vector&amp;lt;int&amp;gt; count(4, 0)&lt;/code&gt;；&lt;/li&gt;

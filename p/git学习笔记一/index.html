@@ -438,7 +438,8 @@
 </div>
 </div><p>在添加文件之前，先介绍一个非常有用的命令<code>git status</code>，它可以查看当前版本库中的所有文件状态，包括已跟踪或者未跟踪的文件。</p>
 <blockquote>
-<p><code>git status</code>会将 workspace 和暂存区的文件比对，同时比对本地仓库有暂存区的文件。</p></blockquote>
+<p><code>git status</code>会将 workspace 和暂存区的文件比对，同时比对本地仓库有暂存区的文件。</p>
+</blockquote>
 <p>在当前的目录下，敲入该命令，输出如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -515,7 +516,8 @@
 </div>
 </div><p>显示当前的<code>readme.txt</code>已经进入暂存区，该文件可以被 committed。</p>
 <blockquote>
-<p>**git add 的潜台词就是把目标文件快照放入暂存区域，也就是 add file into staged area，同时未曾跟踪过的文件标记为需要跟踪。**如果一次需要添加所有的文件，可以使用<code>git add .</code>，其中的<code>.</code>表示当前工作区中的所有文件。</p></blockquote>
+<p>**git add 的潜台词就是把目标文件快照放入暂存区域，也就是 add file into staged area，同时未曾跟踪过的文件标记为需要跟踪。**如果一次需要添加所有的文件，可以使用<code>git add .</code>，其中的<code>.</code>表示当前工作区中的所有文件。</p>
+</blockquote>
 <p>我继续修改<code>readme.txt</code>文件，添加一行<code>this is the 2nd line</code>，之后再添加文件<code>test.cc</code>，查看文件状态，显示如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

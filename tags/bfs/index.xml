@@ -196,7 +196,8 @@
 &lt;h4 id=&#34;描述变量&#34;&gt;&lt;a href=&#34;#%e6%8f%8f%e8%bf%b0%e5%8f%98%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;描述变量
 &lt;/h4&gt;&lt;p&gt;我们有一个关于目标变量的描述，在这个题目中目标变量是整棵树的最大深度，放弃整体的概念，假设你站在根节点往下看，会看到它有左右两个子树，每棵树又有自己的节点和深度。所以假定推导的变量是&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;maxdepth[node]&lt;/code&gt;表示以&lt;code&gt;node&lt;/code&gt;为根节点的树的最大深度&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;maxdepth[node]&lt;/code&gt;表示以&lt;code&gt;node&lt;/code&gt;为根节点的树的最大深度&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;递归关系式&#34;&gt;&lt;a href=&#34;#%e9%80%92%e5%bd%92%e5%85%b3%e7%b3%bb%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;递归关系式
 &lt;/h4&gt;&lt;p&gt;查看这个值和左右子树的关系是什么？3这个node的最大深度是9这个node最大深度和20这个node的最大深度的最大值 + 1，重新表述下就是下面的关系式&lt;code&gt;maxD[node] = max(maxD[node-&amp;gt;left], maxD[node-&amp;gt;right]) + 1&lt;/code&gt;。&lt;/p&gt;
 &lt;h4 id=&#34;终止条件&#34;&gt;&lt;a href=&#34;#%e7%bb%88%e6%ad%a2%e6%9d%a1%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;终止条件

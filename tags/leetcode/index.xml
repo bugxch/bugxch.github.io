@@ -185,12 +185,14 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;关键技术细节&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e9%94%ae%e6%8a%80%e6%9c%af%e7%bb%86%e8%8a%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关键技术细节
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky&lt;/em&gt;  &amp;ndash; &lt;strong&gt;Donald Knuth&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Although the basic idea of binary search is comparatively straightforward, the details can be surprisingly tricky&lt;/em&gt;  &amp;ndash; &lt;strong&gt;Donald Knuth&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;就像高德纳所说，二分法的思想简单且易于理解，但是二分法的细节却藏了很多坑，&lt;strong&gt;魔鬼就在细节中&lt;/strong&gt;。为了透彻理解二分法的实现，有必要对上面的代码的下面3个技术细节（标记为&lt;code&gt;detail&lt;/code&gt;注释的地方）进行深究。&lt;/p&gt;
 &lt;h4 id=&#34;循环的入口条件&#34;&gt;&lt;a href=&#34;#%e5%be%aa%e7%8e%af%e7%9a%84%e5%85%a5%e5%8f%a3%e6%9d%a1%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;循环的入口条件
 &lt;/h4&gt;&lt;p&gt;代码16行，为什么循环的入口条件是&lt;code&gt;left &amp;lt;= right&lt;/code&gt;？&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;无论何时$[left, right]$表示&lt;strong&gt;可能包含目标值&lt;/strong&gt;的搜索区间&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;无论何时$[left, right]$表示&lt;strong&gt;可能包含目标值&lt;/strong&gt;的搜索区间&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;注意这是个&lt;strong&gt;左闭右闭&lt;/strong&gt;的闭区间，单纯从数学角度出发，这个区间&lt;strong&gt;最短的长度就是1&lt;/strong&gt;，也就是$left = right$的时候。如果$left &amp;gt;  right$了，那$[left, right]$就是&lt;strong&gt;空集&lt;/strong&gt;，这个集合&lt;strong&gt;肯定不包含目标值&lt;/strong&gt;，也就&lt;strong&gt;没有继续搜索的必要&lt;/strong&gt;了，所以循环退出。&lt;/p&gt;
 &lt;h4 id=&#34;中点计算&#34;&gt;&lt;a href=&#34;#%e4%b8%ad%e7%82%b9%e8%ae%a1%e7%ae%97&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;中点计算
 &lt;/h4&gt;&lt;p&gt;为什么是&lt;code&gt;mid = left + ((right - left) &amp;gt;&amp;gt; 1)&lt;/code&gt;，也就是数学的$floor((left + right) / 2)$?
@@ -219,7 +221,8 @@ $$
 &gt;&lt;/p&gt;
 &lt;p&gt;，第1个公式$mid = \left \lfloor\frac{left + right}{2}  \right \rfloor = \left \lfloor\frac{left + left + 1}{2}  \right \rfloor = left$，而第2个公式$mid = \left \lceil\frac{left + right}{2}  \right \rceil = \left \lceil\frac{left + left + 1}{2}  \right \rceil = left + \lceil 0.5\rceil = left + 1 = right$，请记住这个重要的结论。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;当搜索区间的&lt;strong&gt;左右两端点挨着&lt;/strong&gt;的时候（即$right = left + 1)$，floor函数计算的中点mid是left，ceil函数计算的中点mid是right&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;当搜索区间的&lt;strong&gt;左右两端点挨着&lt;/strong&gt;的时候（即$right = left + 1)$，floor函数计算的中点mid是left，ceil函数计算的中点mid是right&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;请记住这个&lt;strong&gt;特殊的区间情况&lt;/strong&gt;，至于为何基础模板选择floor而没有选择ceil，在后面的变化类型一节很关键。&lt;/p&gt;
 &lt;h4 id=&#34;搜索区间调整&#34;&gt;&lt;a href=&#34;#%e6%90%9c%e7%b4%a2%e5%8c%ba%e9%97%b4%e8%b0%83%e6%95%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;搜索区间调整
 &lt;/h4&gt;&lt;p&gt;在每次判断与target的差距之后，搜索区间为什么是这么调整的？
@@ -228,7 +231,8 @@ $$
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;排除&lt;/strong&gt;target不可能存在的区间，&lt;strong&gt;保留&lt;/strong&gt;可能存在的区间&lt;/li&gt;
 &lt;li&gt;保证&lt;strong&gt;任意判断分支为true时最后都可以跳出循环，尤其当$right = left + 1$时&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;先看第1条原则，基础模板中，根据mid的值与目标值的差距，搜索区间$[left, right]$的调整有3个判断分支：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;如果和目标值相同$A[mid] = A[target]$，直接&lt;strong&gt;跳出循环&lt;/strong&gt;，返回mid(代码第21行)；&lt;/li&gt;
@@ -264,7 +268,8 @@ $$
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;排除&lt;/strong&gt;target不可能存在的区间，&lt;strong&gt;保留&lt;/strong&gt;可能存在的区间&lt;/li&gt;
 &lt;li&gt;保证&lt;strong&gt;任意判断分支为true时最后都可以跳出循环，尤其当$right = left + 1$时&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;深入探究&#34;&gt;&lt;a href=&#34;#%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;深入探究
 &lt;/h3&gt;&lt;p&gt;上一小节讨论了3个关键技术细节，循环入口条件、中点计算和搜索区间调整，下面可以看到在满足上面的原则基础上，它们都可以变化。&lt;/p&gt;
 &lt;h4 id=&#34;分支合并&#34;&gt;&lt;a href=&#34;#%e5%88%86%e6%94%af%e5%90%88%e5%b9%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;分支合并
@@ -456,7 +461,8 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;再考察一下上面的搜索区间左右端点相邻的情况，下一次搜索的$mid = 5$，无论走哪一个判断分支，最终$left = right$，跳出循环，所以对于第2条原则需要补充&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可以通过调整中点的计算方式，满足原则2，从而避免死循环&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;可以通过调整中点的计算方式，满足原则2，从而避免死循环&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;判断条件变更&#34;&gt;&lt;a href=&#34;#%e5%88%a4%e6%96%ad%e6%9d%a1%e4%bb%b6%e5%8f%98%e6%9b%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;判断条件变更
 &lt;/h4&gt;&lt;p&gt;需要注意，其他2个的模板的循环条件为$left &amp;lt; right$，当$left \ge right$时退出，如果$left = right$，那么搜索的区间只剩下一个元素，跳出循环之后别忘了要检查这个元素是否满足条件。如果最后的这个元素依然不是target，那么所有的元素也不是了，所以在最后我们加了一个判断，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -953,7 +959,8 @@ $$
 &lt;li&gt;表示在公交站第&lt;code&gt;i&lt;/code&gt;站上车&lt;code&gt;k&lt;/code&gt;人，&lt;code&gt;count[i - 1] += k&lt;/code&gt;；&lt;/li&gt;
 &lt;li&gt;第&lt;code&gt;i + 1&lt;/code&gt;站直到第&lt;code&gt;j&lt;/code&gt;站都没有乘客上下车，&lt;code&gt;count[i],...,count[j - 1]&lt;/code&gt;无操作；&lt;/li&gt;
 &lt;li&gt;在第&lt;code&gt;j + 1&lt;/code&gt;站下车&lt;code&gt;k&lt;/code&gt;人，所以&lt;code&gt;count[j] -= k&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;为了方便起见，&lt;strong&gt;我们缩小问题的规模，以具体的数字代替抽象的代数字母&lt;/strong&gt;，假如我们就只有3个公交站，取示例中的前2行，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;公交车刚开始上的人数是0，&lt;code&gt;vector&amp;lt;int&amp;gt; count(4, 0)&lt;/code&gt;；&lt;/li&gt;
@@ -1206,7 +1213,8 @@ $$
 &lt;h4 id=&#34;描述变量&#34;&gt;&lt;a href=&#34;#%e6%8f%8f%e8%bf%b0%e5%8f%98%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;描述变量
 &lt;/h4&gt;&lt;p&gt;我们有一个关于目标变量的描述，在这个题目中目标变量是整棵树的最大深度，放弃整体的概念，假设你站在根节点往下看，会看到它有左右两个子树，每棵树又有自己的节点和深度。所以假定推导的变量是&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;maxdepth[node]&lt;/code&gt;表示以&lt;code&gt;node&lt;/code&gt;为根节点的树的最大深度&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;maxdepth[node]&lt;/code&gt;表示以&lt;code&gt;node&lt;/code&gt;为根节点的树的最大深度&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;递归关系式&#34;&gt;&lt;a href=&#34;#%e9%80%92%e5%bd%92%e5%85%b3%e7%b3%bb%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;递归关系式
 &lt;/h4&gt;&lt;p&gt;查看这个值和左右子树的关系是什么？3这个node的最大深度是9这个node最大深度和20这个node的最大深度的最大值 + 1，重新表述下就是下面的关系式&lt;code&gt;maxD[node] = max(maxD[node-&amp;gt;left], maxD[node-&amp;gt;right]) + 1&lt;/code&gt;。&lt;/p&gt;
 &lt;h4 id=&#34;终止条件&#34;&gt;&lt;a href=&#34;#%e7%bb%88%e6%ad%a2%e6%9d%a1%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;终止条件
@@ -2076,7 +2084,8 @@ $$
 &lt;p&gt;所以，无论是按照重量，大小，还是密度排序，这样的方法都是错误的。其实考虑最周全的方法，求$n$件物品的是否放入背包的全部组合，记录所有总重量可以放入背包的组合的价值，然后选一个最大值即可，但是对于$n$件物品，需要考虑的组合有$2^n$组，算法的复杂度很高，当$n$比较大的时候就很不实际。&lt;/p&gt;
 &lt;p&gt;上面的三种方法使用贪婪算法，下面是《算法的乐趣》中对贪婪算法的描述，&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;贪婪算法是寻找最优解的常用方法，该方法将求解的过程分成若干步骤，在每个步骤都应用贪心原则，选取当前状态下最好的或者最优的选择（局部最有利的选择），并以此希望最后堆叠出的结果是最好的或者最优的解。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;贪婪算法是寻找最优解的常用方法，该方法将求解的过程分成若干步骤，在每个步骤都应用贪心原则，选取当前状态下最好的或者最优的选择（局部最有利的选择），并以此希望最后堆叠出的结果是最好的或者最优的解。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;之前的算法将物品的选择分解为依次挑选物品，这里的次序可以是价值从高到低，重量从低到高或者密度从大到小，并且希冀于每一步结束之后，整体上的价值是最高的，重量是最轻的或者密度是最大的。这个就是明显的贪婪算法思想，但是&lt;strong&gt;局部最优不等于全部最优&lt;/strong&gt;，因此这样的算法是失败的。&lt;/p&gt;
 &lt;h2 id=&#34;动态规划&#34;&gt;&lt;a href=&#34;#%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;动态规划
 &lt;/h2&gt;&lt;h3 id=&#34;重新定义问题&#34;&gt;&lt;a href=&#34;#%e9%87%8d%e6%96%b0%e5%ae%9a%e4%b9%89%e9%97%ae%e9%a2%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;重新定义问题
@@ -2085,7 +2094,8 @@ $$
 &lt;ol&gt;
 &lt;li&gt;使得$m$个物件的的总重量不超过$C$，即$ \sum_{k=1}^{m}{w_k} \le C$&lt;/li&gt;
 &lt;li&gt;在满足条件1的情况下，$m$个物件的总价值在所有可能的挑选组合中&lt;strong&gt;最大&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;我们用$V[i, C]$表示这$m$个物件的总价值，即
 $$
 V[i,C] = \max_{s.t.}{\sum_{k=1}^{m}{p_k}}，m \le n
@@ -2106,7 +2116,8 @@ $$
 &lt;ol&gt;
 &lt;li&gt;使用$i + 1$个物件充分填充空间C得到的最大价值$V[i + 1,C]$&lt;/li&gt;
 &lt;li&gt;以及$V[i + 1,C]$对应的物件的组合$M_{i+1}$&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;当你手里拿着这个重量为$w_{i+1}$的物品，准备填充容量为$C$的&lt;strong&gt;空包&lt;/strong&gt;时候（&lt;strong&gt;注意此处的空包，不要想当然得以为包里面已经有前面的$i - 1$中挑选的物件&lt;/strong&gt;了），有下面两种情形，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;该物件的重量大于背包的容量，即$w_{i+1} \gt C$，那么这个物品无论如何也放不进背包，因此这个物品不会被选中，所以只能&lt;strong&gt;使用前面$i$个物件填充$C$&lt;/strong&gt;，得出$V[i + 1,C] = V[i, C]，M_{i + 1} = M_{i}$。&lt;/li&gt;
@@ -2283,7 +2294,8 @@ $$
 &lt;h3 id=&#34;放入哪些物件&#34;&gt;&lt;a href=&#34;#%e6%94%be%e5%85%a5%e5%93%aa%e4%ba%9b%e7%89%a9%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;放入哪些物件
 &lt;/h3&gt;&lt;p&gt;但是且慢，文章的开头还有一个问题，我们放进去哪些物件，得到这个最大值的呢？请注意之前的递推思路那一小节中的物件集合$M_i$的变化，&lt;strong&gt;当且仅当$V[i, C] = V[i-1, C-w{i}] + p_{i}$时，第$i$件物品才会被放进来&lt;/strong&gt;。再仔细观察一下递推公式，我们可以看到$V[i,C]$的值要么等于$V[i-1, C-w{i}] + p_{i}$，要么等于$V[i-1,C]$，所以可以确认&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;如果$V[i, C] = V[i-1, C]$，那么第$i$件物品没有被放入背包中&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;如果$V[i, C] = V[i-1, C]$，那么第$i$件物品没有被放入背包中&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;但是仅仅有这个条件判断是不是已经足够了，如果第$i$个物品是被放入背包中的，下一步回溯还是考察$V[i-1,C]$是否与$V[i-2,C]$的值相等吗？回到之前的那幅图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bugxch/blogpics/master/202002/_u80CC_u53051582427182205.png&#34;
 	

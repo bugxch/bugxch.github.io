@@ -274,7 +274,8 @@
 &lt;/div&gt;&lt;h2 id=&#34;numpy文件读写&#34;&gt;&lt;a href=&#34;#numpy%e6%96%87%e4%bb%b6%e8%af%bb%e5%86%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;numpy文件读写
 &lt;/h2&gt;&lt;p&gt;numpy是python的一个数据处理的模块，它的文件读写功能使用起来更加强大和便捷。在日常工作中，常常需要比对数据，因此有必要将数据保存成txt文档进行比对，此处的文件读写都是围绕数据展开。将数据保存在文本文件中是日常工作的一个大痛点和需求，下面的命令就可以实现这样的目标。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;numpy的数据读写是成对使用的。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;numpy的数据读写是成对使用的。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;savetxt&lt;/code&gt;和&lt;code&gt;loadtxt&lt;/code&gt;&lt;/p&gt;
@@ -1235,7 +1236,8 @@
 &lt;/div&gt;&lt;p&gt;使用&lt;code&gt;sort&lt;/code&gt;是按照递增序列排序，使用参数&lt;code&gt;reverse&lt;/code&gt;是递减序列排序，但是这样的方法改变了列表原来的值。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;sort 与 sorted 区别&lt;/strong&gt;：
-sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。list 的 sort 方法返回的是对已经存在的列表进行操作，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。&lt;/p&gt;&lt;/blockquote&gt;
+sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。list 的 sort 方法返回的是对已经存在的列表进行操作，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;如果不想改变原来的值，可以使用&lt;code&gt;sorted&lt;/code&gt;方法，举例如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

@@ -32,7 +32,8 @@
 &lt;h1 id=&#34;关于网站&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e4%ba%8e%e7%bd%91%e7%ab%99&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关于网站
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;互联网上的自留地，致力于用中文将关心的技术问题讲清楚。写作就是思考的过程，参考&lt;a class=&#34;link&#34; href=&#34;https://baike.baidu.com/item/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/50895393&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;费曼学习法&lt;/a&gt;，利用写作完成知识输出，可以加深对知识的理解。&lt;/p&gt;&lt;/blockquote&gt;
+    &gt;费曼学习法&lt;/a&gt;，利用写作完成知识输出，可以加深对知识的理解。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;2024年1月1日，网站主题切换成 &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Stack | Hugo Themes&lt;/a&gt;，并使用github actions 自动编译和部署&lt;/li&gt;
@@ -45,7 +46,8 @@
 &lt;hr&gt;
 &lt;h1 id=&#34;关于我&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e4%ba%8e%e6%88%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关于我
 &lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;欢迎发送邮件到&lt;a class=&#34;link&#34; href=&#34;mailto:635426349@qq.com&#34; &gt;635426349@qq.com&lt;/a&gt;联系我&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;欢迎发送邮件到&lt;a class=&#34;link&#34; href=&#34;mailto:635426349@qq.com&#34; &gt;635426349@qq.com&lt;/a&gt;联系我&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;程序员@魔都，现任职华为海思，从事AI方面的软件开发工作&lt;/li&gt;
 &lt;li&gt;初级奶爸，摄影爱好者，数学爱好者，工具控，收音机爱好者，长期主义者&lt;/li&gt;

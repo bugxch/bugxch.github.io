@@ -375,7 +375,8 @@
 </div>
 </div><p>那么<code>b = 126.35</code>或者<code>b = 126.38</code>或者<code>b = 126.3876</code>都是成立的，因为它们都会在浮点数的表示体系下舍入到126.4。数学上不相等，但是在计算机里面是相等的，这就是数学意义和计算机表示意义上的背离，</p>
 <blockquote>
-<p>浮点数的<code>==</code>和数学意义上严格的相等是<strong>不等价</strong>的。</p></blockquote>
+<p>浮点数的<code>==</code>和数学意义上严格的相等是<strong>不等价</strong>的。</p>
+</blockquote>
 <p>所以为了追求相等的精确性，可以利用$|a-b|&lt;\epsilon$的方式，将$b$限定在以$a$为中心的很短的绝对值区间上，$\epsilon$越小，二者的相等程度就越高。所以可以使用下面的代码做一个等价的处理</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -399,7 +400,8 @@
 </h4><p>A：浮点数在计算中的舍入引发的。在<a class="link" href="https://book.douban.com/subject/26912767/"  target="_blank" rel="noopener"
     >深入理解计算机系统</a>第2章浮点运算的章节，作者提到过</p>
 <blockquote>
-<p>使用单精度浮点，3.14 + 1e10 - 1e10 = 0.0</p></blockquote>
+<p>使用单精度浮点，3.14 + 1e10 - 1e10 = 0.0</p>
+</blockquote>
 <p>这就是一个大数吃小数的问题，严格来讲，在C语言中，当一个比较大的浮点数与一个相对小很多的浮点数相加时，结果是那个比较大的浮点数，就好像小数被“吃掉”了一样。上面的例子中，3.14 + 1e10 = 1e10，也就是说从计算机的角度来看，3.14 + 1e10的二进制表示与1e10的二进制浮点表示没有区别。这是怎么回事？</p>
 <p>参考<a class="link" href="http://localhost:1313/csapp_ch2/#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97"  target="_blank" rel="noopener"
     >信息的表示和处理</a>中的内容，模拟它们的二进制加法就能得到答案。</p>

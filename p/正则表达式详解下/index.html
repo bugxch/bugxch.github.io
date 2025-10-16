@@ -370,7 +370,8 @@
 </div>
 </div><p>代码第 4 行，使用正则表达式<code>r&quot;\d+&quot;</code>compile 编译一个 pattern 的实例。</p>
 <blockquote>
-<p>为什么要在正则表达式之前加个<code>r</code>呢？</p></blockquote>
+<p>为什么要在正则表达式之前加个<code>r</code>呢？</p>
+</blockquote>
 <p>此处的<code>r</code>表示 raw，即原始输入。因为<code>\</code>在 python 的字符串中也是转义字符，此处的功能与正则表达式中的功能有冲突。<code>compile</code>中的表达式从输入到真正的表达式的意思执行需要经过两次解读，<strong>python 本身解读之后将字符串表达的意思传递给正则表达式，正则引擎再解读之后执行</strong>，问题就出在两次解读上。</p>
 <p>以最终匹配<code>\section</code>为例，如果不加<code>r</code>使用 python 第 5 行的参数就该是<code>\\\\section</code>，即<code>pattern = re.compile(&quot;\\\\section&quot;, re.M)</code>。第一次解读，python 将其理解为<code>\\section</code>传递给正则引擎，正则理解为要匹配<code>\section</code>，如下表所示</p>
 <div class="table-wrapper"><table>
@@ -420,7 +421,8 @@
   </tbody>
 </table></div>
 <blockquote>
-<p><code>re.M</code>是个什么东东？</p></blockquote>
+<p><code>re.M</code>是个什么东东？</p>
+</blockquote>
 <p>上面的代码中，compile 还包含了<code>re.M</code>作为一个 flag，它是<code>MULTILINE</code>的缩写，表示匹配多行模式，除了多行模式之外（具体含义见下表），python 还有其他的 flag 影响表达式匹配的规则。</p>
 <div class="table-wrapper"><table>
   <thead>
@@ -483,7 +485,8 @@
 </div>
 </div><p>表达式内部加入了注释，而且可以多行显示，可以使用它表示复杂的表达式，非常方便。</p>
 <blockquote>
-<p>匹配正则表达式的方法</p></blockquote>
+<p>匹配正则表达式的方法</p>
+</blockquote>
 <p>pattern 的对象建立之后，就是可以使用 re 的方法匹配字符串了。最重要的方法有下表中的四个。</p>
 <div class="table-wrapper"><table>
   <thead>
