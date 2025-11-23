@@ -7,7 +7,37 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
-        <lastBuildDate>Thu, 17 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 23 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>大模型知识之一</title>
+        <link>https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/</link>
+        <pubDate>Sun, 23 Nov 2025 15:47:55 +0800</pubDate>
+        
+        <guid>https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/</guid>
+        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post 大模型知识之一" /&gt;&lt;h1 id=&#34;基础架构&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e6%9e%b6%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基础架构
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/Transformer%2C_full_architecture.png?imageSlim&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Transformer,_full_architecture.png&#34;
+	
+	
+&gt;
+上图是transfomer block的基础架构图，&lt;/p&gt;
+&lt;h1 id=&#34;参考文献&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考文献
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://bbycroft.net/llm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LLM Visualization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://poloclub.github.io/transformer-explainer/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Transformer Explainer: LLM Transformer Model Visually Explained&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;本文原载于 &lt;a class=&#34;link&#34; href=&#34;http://blog.bugxch.top&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;巴巴变的博客&lt;/a&gt;，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>2024年度总结</title>
         <link>https://blog.bugxch.top/p/2024%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sun, 29 Dec 2024 21:00:24 +0800</pubDate>
