@@ -441,16 +441,16 @@ $$
 	
 	
 ></p>
-<p>在这一步之前，有些大模型中不需要对每个token做layernorm的归一化处理，GPT-2中需要做这个处理，做完之后可以得到归一化之后的 $a{}&rsquo;$，接着计算对应的q/k/v向量，
-$$
+<p>在这一步之前，有些大模型中不需要对每个token做layernorm的归一化处理，GPT-2中需要做这个处理，做完之后可以得到归一化之后的 $a{}&rsquo;$，接着计算对应的q/k/v向量，</p>
+<p>$$
 \left{\begin{matrix}
 q_i=a_i{}&lsquo;W^{Q} + b^{Q} \<br>
 k_i=a_i{}&lsquo;W^{K} + b^{K} \<br>
 v_i=a_i{}&lsquo;W^{V} + b^{V}
 \end{matrix}\right.
 $$</p>
-<p>上面示意图中的维度有问题，GPT-2中有12个头，所以每个头计算完成之后的二q/k/v向量的长度是768/12= 64，因此 $q_i,k_i,v_i\in R^{1\times 64}$ ，而 $W^{Q}, W^{K},W^V \in R^{768\times 64}$。得到所有token的QKV矩阵如下
-$$
+<p>上面示意图中的维度有问题，GPT-2中有12个头，所以每个头计算完成之后的二q/k/v向量的长度是768/12= 64，因此 $q_i,k_i,v_i\in R^{1\times 64}$ ，而 $W^{Q}, W^{K},W^V \in R^{768\times 64}$。得到所有token的QKV矩阵如下</p>
+<p>$$
 Q = \begin{bmatrix}<br>
 q_0 \<br>
 q_1 \
@@ -498,25 +498,25 @@ k_1 &amp;
 \dots &amp;<br>
 k_5 \
 \end{bmatrix} ,= QK^T
-$$
-其实 $A\in \mathbb{R}^{6\times 6}$，下一步是masked softmax，因为大模型推理过程只能从已知的token推测之后的token，所以第 $i$ 个token只能知道前面的 $i$ 个token的信息，也就是说第 $j$ 个token只能计算前 $j - 1$ 个token的相关系数，所以上面的矩阵需要改成一个下三角矩阵
-$$
+$$</p>
+<p>其实 $A\in \mathbb{R}^{6\times 6}$，下一步是masked softmax，因为大模型推理过程只能从已知的token推测之后的token，所以第 $i$ 个token只能知道前面的 $i$ 个token的信息，也就是说第 $j$ 个token只能计算前 $j - 1$ 个token的相关系数，所以上面的矩阵需要改成一个下三角矩阵</p>
+<p>$$
 A_m = A + Mask =  \begin{bmatrix}<br>
 q_0k_0^T &amp; -\infty &amp; \dots &amp; -\infty      \<br>
 q_1k_0^T &amp; q_1k_1^T &amp; \dots &amp; -\infty      \<br>
 \vdots &amp; \vdots &amp;\dots &amp;\vdots \<br>
 q_5k_0^T &amp; q_5k_1^T &amp; \dots &amp; q_5k_5^T     \<br>
 \end{bmatrix}
-$$
-对上面的矩阵按照行做softmax，可以得到一个下三角矩阵，右上部分全部是0，
-$$
+$$</p>
+<p>对上面的矩阵按照行做softmax，可以得到一个下三角矩阵，右上部分全部是0，</p>
+<p>$$
 A_{softmax} = \text{Softmax}(A_m) = \text{Softmax}(\frac{QK^T}{\sqrt{d}})
-$$
-下面的关键一步，是更新所有token的v向量，令
-$$
+$$</p>
+<p>下面的关键一步，是更新所有token的v向量，令</p>
+<p>$$
 v_i&rsquo; = \sum_{j}A_{softmax}[i, j]v_j
-$$
-如下图所示</p>
+$$</p>
+<p>如下图所示</p>
 <p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123201405.png?imageSlim"
 	
 	
@@ -527,25 +527,25 @@ $$
 	
 	
 ></p>
-<p>所以得到的新的v矩阵就是
-$$
+<p>所以得到的新的v矩阵就是</p>
+<p>$$
 V&rsquo; = \text{Softmax}(\frac{QK^T}{\sqrt{d}})V
-$$
-从上面的计算过程可以看到，新的value矩阵已经包括了其他token的相关性的信息，每个token都包括了其他token的信息。因为GPT-2有12个头，每个头计算得到相同维度的 $V&rsquo;$ 矩阵，这些矩阵的数据是相互独立的，所以可以大规模的<strong>并行计算</strong>。得到12个新的V矩阵之后，拼接起来就可以得到更大的新矩阵，
-$$
+$$</p>
+<p>从上面的计算过程可以看到，新的value矩阵已经包括了其他token的相关性的信息，每个token都包括了其他token的信息。因为GPT-2有12个头，每个头计算得到相同维度的 $V&rsquo;$ 矩阵，这些矩阵的数据是相互独立的，所以可以大规模的<strong>并行计算</strong>。得到12个新的V矩阵之后，拼接起来就可以得到更大的新矩阵，</p>
+<p>$$
 V_{new}&rsquo; = [V_0&rsquo;,V_1&rsquo;,\dots,V_{11}&rsquo;]
-$$
-所以 $V_{new}&rsquo;\in \mathbb{R}^{6\times 768}$，下一步再做一个矩阵的投影，使用矩阵 $W_{prj} \in \mathbb{R}^{768\times 768}$，得到新的V矩阵
-$$
+$$</p>
+<p>所以 $V_{new}&rsquo;\in \mathbb{R}^{6\times 768}$，下一步再做一个矩阵的投影，使用矩阵 $W_{prj} \in \mathbb{R}^{768\times 768}$，得到新的V矩阵</p>
+<p>$$
 V_{final}&rsquo; = V_{new}&lsquo;W_{prj} + b_{prj}
-$$
-最后得到的矩阵大小不变。</p>
+$$</p>
+<p>最后得到的矩阵大小不变。</p>
 <h2 id="残差层和归一化层"><a href="#%e6%ae%8b%e5%b7%ae%e5%b1%82%e5%92%8c%e5%bd%92%e4%b8%80%e5%8c%96%e5%b1%82" class="header-anchor"></a>残差层和归一化层
-</h2><p>计算完上面的步骤之后，做残差相加之后做layernorm
-$$
+</h2><p>计算完上面的步骤之后，做残差相加之后做layernorm</p>
+<p>$$
 L = Layernorm(V_{final}&rsquo; + \begin{bmatrix}a_0&rsquo; \a_1&rsquo;\\vdots\a_5&rsquo;  \end{bmatrix})
-$$
-其中 $L \in \mathbb{R}^{6\times 768}$。</p>
+$$</p>
+<p>其中 $L \in \mathbb{R}^{6\times 768}$。</p>
 <h2 id="mlpffn层"><a href="#mlpffn%e5%b1%82" class="header-anchor"></a>MLP/FFN层
 </h2><p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123203454.png?imageSlim"
 	
@@ -557,17 +557,17 @@ $$
 	
 	
 ></p>
-<p>可以用如下的数学公式表示
-$$
+<p>可以用如下的数学公式表示</p>
+<p>$$
 FFN(x) = Act(LW_1 + b_1)W_2
-$$
-其中  $W_1 \in \mathbb{R}^{768\times 3072}, W_2 \in \mathbb{R}^{3072\times 768}$，最后得到结果还是6个长度是768的token向量。</p>
+$$</p>
+<p>其中  $W_1 \in \mathbb{R}^{768\times 3072}, W_2 \in \mathbb{R}^{3072\times 768}$，最后得到结果还是6个长度是768的token向量。</p>
 <h2 id="linear和softmax层"><a href="#linear%e5%92%8csoftmax%e5%b1%82" class="header-anchor"></a>Linear和Softmax层
-</h2><p>在上面的所有的block重复12次之后，最后一个transformer block结束之后，再做一个layernorm，使用权重矩阵将计算结果映射到整个词汇表上，得到
-$$
+</h2><p>在上面的所有的block重复12次之后，最后一个transformer block结束之后，再做一个layernorm，使用权重矩阵将计算结果映射到整个词汇表上，得到</p>
+<p>$$
 Softmax(B) = Softmax(V_{new}&lsquo;W_f)
-$$
-其中 $W_f\in \mathbb{R}^{768\times 50257}$，最后一个token对应的那一行中的最大值的id，就是下一个输出的token。</p>
+$$</p>
+<p>其中 $W_f\in \mathbb{R}^{768\times 50257}$，最后一个token对应的那一行中的最大值的id，就是下一个输出的token。</p>
 <h1 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
 </h1><ul>
 <li><a class="link" href="https://bbycroft.net/llm"  target="_blank" rel="noopener"
