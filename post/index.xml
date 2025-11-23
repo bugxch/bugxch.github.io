@@ -189,9 +189,10 @@ $$
 对上面的矩阵按照行做softmax，可以得到一个下三角矩阵，右上部分全部是0，
 $$
 A_{softmax} = \text{Softmax}(A_m) = \text{Softmax}(\frac{QK^T}{\sqrt{d}})
-$$下面的关键一步，是更新所有token的v向量，令
 $$
-v_i{}&amp;rsquo; = \sum_j{A_{softmax}[i, j]v_j}
+下面的关键一步，是更新所有token的v向量，令
+$$
+v_i&amp;rsquo; = \sum_{j}A_{softmax}[i, j]v_j
 $$
 如下图所示&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123201405.png?imageSlim&#34;
@@ -206,7 +207,7 @@ $$
 &gt;&lt;/p&gt;
 &lt;p&gt;所以得到的新的v矩阵就是
 $$
-V{}&amp;rsquo; = \text{Softmax}(\frac{QK^T}{\sqrt{d}})V
+V&amp;rsquo; = \text{Softmax}(\frac{QK^T}{\sqrt{d}})V
 $$
 从上面的计算过程可以看到，新的value矩阵已经包括了其他token的相关性的信息，每个token都包括了其他token的信息。因为GPT-2有12个头，每个头计算得到相同维度的 $V&amp;rsquo;$ 矩阵，这些矩阵的数据是相互独立的，所以可以大规模的&lt;strong&gt;并行计算&lt;/strong&gt;。得到12个新的V矩阵之后，拼接起来就可以得到更大的新矩阵，
 $$
