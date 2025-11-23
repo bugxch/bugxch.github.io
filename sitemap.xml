@@ -5,16 +5,16 @@
     <loc>https://blog.bugxch.top/</loc>
     <lastmod>2025-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.bugxch.top/categories/</loc>
-    <lastmod>2025-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.bugxch.top/categories/llm/</loc>
+    <loc>https://blog.bugxch.top/tags/llm/</loc>
     <lastmod>2025-11-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.bugxch.top/post/</loc>
     <lastmod>2025-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/</loc>
+    <loc>https://blog.bugxch.top/tags/</loc>
+    <lastmod>2025-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2025-11-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.bugxch.top/weread/%E4%BA%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E7%94%9F%E7%97%85/</loc>
@@ -98,9 +98,6 @@
     <loc>https://blog.bugxch.top/p/2024%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2025-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.bugxch.top/tags/</loc>
-    <lastmod>2024-10-31T07:41:56+00:00</lastmod>
-  </url><url>
     <loc>https://blog.bugxch.top/tags/%E5%88%9B%E5%AE%A2/</loc>
     <lastmod>2024-10-31T07:41:56+00:00</lastmod>
   </url><url>
@@ -109,6 +106,9 @@
   </url><url>
     <loc>https://blog.bugxch.top/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B0%8F%E8%BD%A6%E9%87%8D%E7%94%9F%E8%AE%B0/</loc>
     <lastmod>2024-10-31T07:41:56+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.bugxch.top/categories/</loc>
+    <lastmod>2024-07-19T22:16:59+00:00</lastmod>
   </url><url>
     <loc>https://blog.bugxch.top/tags/rust/</loc>
     <lastmod>2024-07-19T22:16:59+00:00</lastmod>

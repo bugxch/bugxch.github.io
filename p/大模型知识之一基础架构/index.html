@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="基础架构 上图是transfomer block的基础架构图，由标准的encoder和decoder的结构组成，但是在chatgpt里面仅仅包含decoder部分的结构，所以我们仅仅专注于右边部分的结构。GPT2的网络结构如下所示\n">
+<title>大模型知识之一——基础架构</title>
+
+<link rel='canonical' href='https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/'>
+
+<link rel="stylesheet" href="/scss/style.min.1a6eab8f97c7ad47119bcfe4ea87cc5227d4789df170608fabd9b3910bc037f2.css"><meta property='og:title' content="大模型知识之一——基础架构">
+<meta property='og:description' content="基础架构 上图是transfomer block的基础架构图，由标准的encoder和decoder的结构组成，但是在chatgpt里面仅仅包含decoder部分的结构，所以我们仅仅专注于右边部分的结构。GPT2的网络结构如下所示\n">
+<meta property='og:url' content='https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/'>
+<meta property='og:site_name' content='巴巴变的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='llm' /><meta property='article:published_time' content='2025-11-23T15:47:55&#43;08:00'/><meta property='article:modified_time' content='2025-11-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg' />
+<meta name="twitter:title" content="大模型知识之一——基础架构">
+<meta name="twitter:description" content="基础架构 上图是transfomer block的基础架构图，由标准的encoder和decoder的结构组成，但是在chatgpt里面仅仅包含decoder部分的结构，所以我们仅仅专注于右边部分的结构。GPT2的网络结构如下所示\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+    :root {
+      --sys-font-family: "Noto Serif SC";
+      --zh-font-family: "Noto Serif SC";
+      --base-font-family: "Noto Serif SC";
+      --code-font-family: "Noto Serif SC";
+      --article-font-family: "Noto Serif SC";
+    }
+  </style>
+  
+  <script>
+    (function () {
+      const customFont = document.createElement("link");
+      customFont.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+  
+      customFont.type = "text/css";
+      customFont.rel = "stylesheet";
+  
+      document.head.appendChild(customFont);
+    })();
+  </script>
+  
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_1ef23741c9bee174.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">巴巴变的博客</a></h1>
+            <h2 class="site-description">平凡的生活也值得记录</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%94%B6%E9%9B%86/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>收集</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#基础架构">基础架构</a>
+      <ol>
+        <li><a href="#位置编码">位置编码</a></li>
+        <li><a href="#masked-mha">Masked MHA</a></li>
+        <li><a href="#残差层和归一化层">残差层和归一化层</a></li>
+      </ol>
+    </li>
+    <li><a href="#参考文献">参考文献</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/">
+                
+                    <img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" loading="lazy" alt="Featured image of post 大模型知识之一——基础架构" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/">大模型知识之一——基础架构</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025/11/23</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="基础架构"><a href="#%e5%9f%ba%e7%a1%80%e6%9e%b6%e6%9e%84" class="header-anchor"></a>基础架构
+</h1><p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/Transformer%2C_full_architecture.png?imageSlim"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Transformer,_full_architecture.png"
+	
+	
+>
+上图是transfomer block的基础架构图，由标准的encoder和decoder的结构组成，但是在chatgpt里面仅仅包含decoder部分的结构，所以我们仅仅专注于右边部分的结构。GPT2的网络结构如下所示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">GPT2Model</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">wte</span><span class="p">):</span> <span class="n">Embedding</span><span class="p">(</span><span class="mi">50257</span><span class="p">,</span> <span class="mi">768</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">wpe</span><span class="p">):</span> <span class="n">Embedding</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">768</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">drop</span><span class="p">):</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">h</span><span class="p">):</span> <span class="n">ModuleList</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">11</span><span class="p">):</span> <span class="mi">12</span> <span class="n">x</span> <span class="n">GPT2Block</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="n">ln_1</span><span class="p">):</span> <span class="n">LayerNorm</span><span class="p">((</span><span class="mi">768</span><span class="p">,),</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">,</span> <span class="n">elementwise_affine</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="n">attn</span><span class="p">):</span> <span class="n">GPT2Attention</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">c_attn</span><span class="p">):</span> <span class="n">Conv1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">c_proj</span><span class="p">):</span> <span class="n">Conv1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">attn_dropout</span><span class="p">):</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">resid_dropout</span><span class="p">):</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="n">ln_2</span><span class="p">):</span> <span class="n">LayerNorm</span><span class="p">((</span><span class="mi">768</span><span class="p">,),</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">,</span> <span class="n">elementwise_affine</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="n">mlp</span><span class="p">):</span> <span class="n">GPT2MLP</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">c_fc</span><span class="p">):</span> <span class="n">Conv1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">c_proj</span><span class="p">):</span> <span class="n">Conv1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">act</span><span class="p">):</span> <span class="n">NewGELUActivation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">dropout</span><span class="p">):</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">ln_f</span><span class="p">):</span> <span class="n">LayerNorm</span><span class="p">((</span><span class="mi">768</span><span class="p">,),</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">,</span> <span class="n">elementwise_affine</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Total</span> <span class="c1"># of params: 124.44M</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Tansformer架构核心氛围如下几步，</p>
+<ol>
+<li>将所有的语料token数字化，将人类的语言转换成便于计算机处理的数字信息，得到全量的token表格；</li>
+<li>输入一段token，加上位置编码的向量，在token中加入位置信息</li>
+<li>利用全中矩阵计算每个token的q/k/v向量，计算每一个token与其他token的相关性（通过计算当前token向量的q向量与其他token的k向量的内积得到），根据相关性得到权重系数（通过softmax获得），然后计算每一个token的v向量的加权和，更新当前token的v向量；</li>
+<li>得到多头的v向量，然后使用投影矩阵将其映射到与第2步相同大小的向量，两个相加之后做layernorm；</li>
+<li>使用权重矩阵将第4步的向量升维，然后做激活函数处理，再降维到之前的第2步的大小；</li>
+<li>上面的2~5步就是一个完整的transformer block的过程，重复多次之后就可以通过现行层得到最少的logits softmax的矩阵，通过最后一列（最后一个token）的最大值从全量的token表格中取出对应编号的token，即为下一个输出的token</li>
+<li>将上面的第6步生成的token再加入到原来的token序列的尾巴上，送到transoformer的网络中重复步骤2~7</li>
+</ol>
+<p>下面以输入6个token为例，通过画图说明上面的所有过程。GPT-2的参数如下，全部token一共有50257个，每个token的嵌入维度是768，可以处理的最大连续的token数字是1024.</p>
+<h2 id="位置编码"><a href="#%e4%bd%8d%e7%bd%ae%e7%bc%96%e7%a0%81" class="header-anchor"></a>位置编码
+</h2><p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123185902.png?imageSlim"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image.png"
+	
+	
+></p>
+<p>当前有6个token的输入，每个长度是768的一维向量 ${a_0, a_1,&hellip;,a_5}$，位置编码的向量的长度也是768, ${p_0, p_1,&hellip;,p_5}$，相加之后得到位置编码之后的向量
+$$
+a_i^{&rsquo;} = a_i + p_i
+$$
+其中 $a_i^{&rsquo;},a_i,p_i \in R^{1\times 768}$</p>
+<h2 id="masked-mha"><a href="#masked-mha" class="header-anchor"></a>Masked MHA
+</h2><p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123190659.png?imageSlim"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image.png"
+	
+	
+></p>
+<p>在这一步之前，有些大模型中不需要对每个token做layernorm的归一化处理，GPT-2中需要做这个处理，做完之后可以得到归一化之后的 $a{}&rsquo;$，接着计算对应的q/k/v向量，
+$$
+\left{\begin{matrix}
+q_i=a_i{}&lsquo;W^{Q} + b^{Q} \<br>
+k_i=a_i{}&lsquo;W^{K} + b^{K} \<br>
+v_i=a_i{}&lsquo;W^{V} + b^{V}
+\end{matrix}\right.
+$$</p>
+<p>上面示意图中的维度有问题，GPT-2中有12个头，所以每个头计算完成之后的二q/k/v向量的长度是768/12= 64，因此 $q_i,k_i,v_i\in R^{1\times 64}$ ，而 $W^{Q}, W^{K},W^V \in R^{768\times 64}$。得到所有token的QKV矩阵如下
+$$
+Q = \begin{bmatrix}<br>
+q_0 \<br>
+q_1 \
+\vdots \<br>
+q_5 \
+\end{bmatrix} ,
+K = \begin{bmatrix}<br>
+k_0 \<br>
+k_1 \
+\vdots \<br>
+k_5 \
+\end{bmatrix} ,
+V = \begin{bmatrix}<br>
+v_0 \<br>
+v_1 \
+\vdots \<br>
+v_5 \
+\end{bmatrix}
+$$</p>
+<p>其中 $Q,K,V \in R^{6\times 64}$。下一步计算不同token之间的相关性，计算第i个token跟第j个token相关性就是计算 $q_ik^T_j$, 得到如下的<strong>自注意力矩阵</strong>，</p>
+<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123192138.png?imageSlim"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image.png"
+	
+	
+></p>
+<p>$$
+A = \begin{bmatrix}<br>
+q_0k_0^T &amp; q_0k_1^T &amp; \dots &amp; q_0k_5^T     \<br>
+q_1k_0^T &amp; q_1k_1^T &amp; \dots &amp; q_1k_5^T     \<br>
+\vdots &amp; \vdots &amp;\dots &amp;\vdots \<br>
+q_5k_0^T &amp; q_5k_1^T &amp; \dots &amp; q_5k_5^T     \<br>
+\end{bmatrix}  =\begin{bmatrix}<br>
+q_0 \<br>
+q_1 \
+\vdots \<br>
+q_5 \
+\end{bmatrix}\begin{bmatrix}<br>
+k_0 &amp;<br>
+k_1 &amp;
+\dots &amp;<br>
+k_5 \
+\end{bmatrix} ,= QK^T
+$$
+其实 $A\in \mathbb{R}^{6\times 6}$，下一步是masked softmax，因为大模型推理过程只能从已知的token推测之后的token，所以第 $i$ 个token只能知道前面的 $i$ 个token的信息，也就是说第 $j$ 个token只能计算前 $j - 1$ 个token的相关系数，所以上面的矩阵需要改成一个下三角矩阵
+$$
+A_m = A + Mask =  \begin{bmatrix}<br>
+q_0k_0^T &amp; -\infty &amp; \dots &amp; -\infty      \<br>
+q_1k_0^T &amp; q_1k_1^T &amp; \dots &amp; -\infty      \<br>
+\vdots &amp; \vdots &amp;\dots &amp;\vdots \<br>
+q_5k_0^T &amp; q_5k_1^T &amp; \dots &amp; q_5k_5^T     \<br>
+\end{bmatrix}
+$$
+对上面的矩阵按照行做softmax，可以得到一个下三角矩阵，右上部分全部是0，
+$$
+A_{softmax} = \text{Softmax}(A_m) = \text{Softmax}(\frac{QK^T}{\sqrt{d}})
+$$下面的关键一步，是更新所有token的v向量，令
+$$
+v_i{}&rsquo; = \sum_j{A_{softmax}[i, j]v_j}
+$$
+如下图所示</p>
+<p><img src="https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123201405.png?imageSlim"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image.png"
+	
+	
+></p>
+<p>所以得到的新的v矩阵就是
+$$
+V{}&rsquo; = \text{Softmax}(\frac{QK^T}{\sqrt{d}})V
+$$
+从上面的计算过程可以看到，新的value矩阵已经包括了其他token的相关性的信息，每个token都包括了其他token的信息。因为GPT-2有12个头，每个头计算得到相同维度的 $V&rsquo;$ 矩阵，这些矩阵的数据是相互独立的，所以可以大规模的<strong>并行计算</strong>。得到12个新的V矩阵之后，拼接起来就可以得到更大的新矩阵，
+$$
+V_{new}&rsquo; = [V_0&rsquo;,V_1&rsquo;,\dots,V_{11}&rsquo;]
+$$
+所以 $V_{new}&rsquo;\in \mathbb{R}^{6\times 768}$，下一步再做一个矩阵的投影，使用矩阵 $W_{prj} \in \mathbb{R}^{768\times 768}$，得到新的V矩阵
+$$
+V_{final}&rsquo; = V_{new}&lsquo;W_{prj} + b_{prj}
+$$
+最后得到的矩阵大小不变。</p>
+<h2 id="残差层和归一化层"><a href="#%e6%ae%8b%e5%b7%ae%e5%b1%82%e5%92%8c%e5%bd%92%e4%b8%80%e5%8c%96%e5%b1%82" class="header-anchor"></a>残差层和归一化层
+</h2><p>计算完上面的步骤之后，做残差相加之后做layernorm</p>
+<h1 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
+</h1><ul>
+<li><a class="link" href="https://bbycroft.net/llm"  target="_blank" rel="noopener"
+    >LLM Visualization</a></li>
+<li><a class="link" href="https://poloclub.github.io/transformer-explainer/"  target="_blank" rel="noopener"
+    >Transformer Explainer: LLM Transformer Model Visually Explained</a></li>
+<li><a class="link" href="https://michaelwornow.net/2024/01/18/counting-params-in-transformer"  target="_blank" rel="noopener"
+    >Transformer Math (Part 1) - Counting Model Parameters</a></li>
+</ul>
+<hr>
+<p>本文原载于 <a class="link" href="http://blog.bugxch.top"  target="_blank" rel="noopener"
+    >巴巴变的博客</a>，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/llm/">Llm</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2025/11/23
+        </span>
+    </section></footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bugxch" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2025 bugxch
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.87d72694fb97c84cb5cbf9b1a64d476a38e04a5706618a6ffe5b89c7db00488f.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

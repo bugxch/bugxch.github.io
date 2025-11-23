@@ -8,12 +8,12 @@
         <language>zh-cn</language>
         <copyright>bugxch</copyright>
         <lastBuildDate>Sun, 23 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bugxch.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>大模型知识之一</title>
-        <link>https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/</link>
+        <title>大模型知识之一——基础架构</title>
+        <link>https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/</link>
         <pubDate>Sun, 23 Nov 2025 15:47:55 +0800</pubDate>
         
-        <guid>https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/</guid>
-        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post 大模型知识之一" /&gt;&lt;h1 id=&#34;基础架构&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e6%9e%b6%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基础架构
+        <guid>https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/</guid>
+        <description>&lt;img src="https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg" alt="Featured image of post 大模型知识之一——基础架构" /&gt;&lt;h1 id=&#34;基础架构&#34;&gt;&lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e6%9e%b6%e6%9e%84&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;基础架构
 &lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/Transformer%2C_full_architecture.png?imageSlim&#34;
 	
 	
@@ -81,7 +81,145 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Total&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# of params: 124.44M&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;参考文献&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考文献
+&lt;/div&gt;&lt;p&gt;Tansformer架构核心氛围如下几步，&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将所有的语料token数字化，将人类的语言转换成便于计算机处理的数字信息，得到全量的token表格；&lt;/li&gt;
+&lt;li&gt;输入一段token，加上位置编码的向量，在token中加入位置信息&lt;/li&gt;
+&lt;li&gt;利用全中矩阵计算每个token的q/k/v向量，计算每一个token与其他token的相关性（通过计算当前token向量的q向量与其他token的k向量的内积得到），根据相关性得到权重系数（通过softmax获得），然后计算每一个token的v向量的加权和，更新当前token的v向量；&lt;/li&gt;
+&lt;li&gt;得到多头的v向量，然后使用投影矩阵将其映射到与第2步相同大小的向量，两个相加之后做layernorm；&lt;/li&gt;
+&lt;li&gt;使用权重矩阵将第4步的向量升维，然后做激活函数处理，再降维到之前的第2步的大小；&lt;/li&gt;
+&lt;li&gt;上面的2~5步就是一个完整的transformer block的过程，重复多次之后就可以通过现行层得到最少的logits softmax的矩阵，通过最后一列（最后一个token）的最大值从全量的token表格中取出对应编号的token，即为下一个输出的token&lt;/li&gt;
+&lt;li&gt;将上面的第6步生成的token再加入到原来的token序列的尾巴上，送到transoformer的网络中重复步骤2~7&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面以输入6个token为例，通过画图说明上面的所有过程。GPT-2的参数如下，全部token一共有50257个，每个token的嵌入维度是768，可以处理的最大连续的token数字是1024.&lt;/p&gt;
+&lt;h2 id=&#34;位置编码&#34;&gt;&lt;a href=&#34;#%e4%bd%8d%e7%bd%ae%e7%bc%96%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;位置编码
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123185902.png?imageSlim&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;当前有6个token的输入，每个长度是768的一维向量 ${a_0, a_1,&amp;hellip;,a_5}$，位置编码的向量的长度也是768, ${p_0, p_1,&amp;hellip;,p_5}$，相加之后得到位置编码之后的向量
+$$
+a_i^{&amp;rsquo;} = a_i + p_i
+$$
+其中 $a_i^{&amp;rsquo;},a_i,p_i \in R^{1\times 768}$&lt;/p&gt;
+&lt;h2 id=&#34;masked-mha&#34;&gt;&lt;a href=&#34;#masked-mha&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Masked MHA
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123190659.png?imageSlim&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在这一步之前，有些大模型中不需要对每个token做layernorm的归一化处理，GPT-2中需要做这个处理，做完之后可以得到归一化之后的 $a{}&amp;rsquo;$，接着计算对应的q/k/v向量，
+$$
+\left{\begin{matrix}
+q_i=a_i{}&amp;lsquo;W^{Q} + b^{Q} \&lt;br&gt;
+k_i=a_i{}&amp;lsquo;W^{K} + b^{K} \&lt;br&gt;
+v_i=a_i{}&amp;lsquo;W^{V} + b^{V}
+\end{matrix}\right.
+$$&lt;/p&gt;
+&lt;p&gt;上面示意图中的维度有问题，GPT-2中有12个头，所以每个头计算完成之后的二q/k/v向量的长度是768/12= 64，因此 $q_i,k_i,v_i\in R^{1\times 64}$ ，而 $W^{Q}, W^{K},W^V \in R^{768\times 64}$。得到所有token的QKV矩阵如下
+$$
+Q = \begin{bmatrix}&lt;br&gt;
+q_0 \&lt;br&gt;
+q_1 \
+\vdots \&lt;br&gt;
+q_5 \
+\end{bmatrix} ,
+K = \begin{bmatrix}&lt;br&gt;
+k_0 \&lt;br&gt;
+k_1 \
+\vdots \&lt;br&gt;
+k_5 \
+\end{bmatrix} ,
+V = \begin{bmatrix}&lt;br&gt;
+v_0 \&lt;br&gt;
+v_1 \
+\vdots \&lt;br&gt;
+v_5 \
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $Q,K,V \in R^{6\times 64}$。下一步计算不同token之间的相关性，计算第i个token跟第j个token相关性就是计算 $q_ik^T_j$, 得到如下的&lt;strong&gt;自注意力矩阵&lt;/strong&gt;，&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123192138.png?imageSlim&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;$$
+A = \begin{bmatrix}&lt;br&gt;
+q_0k_0^T &amp;amp; q_0k_1^T &amp;amp; \dots &amp;amp; q_0k_5^T     \&lt;br&gt;
+q_1k_0^T &amp;amp; q_1k_1^T &amp;amp; \dots &amp;amp; q_1k_5^T     \&lt;br&gt;
+\vdots &amp;amp; \vdots &amp;amp;\dots &amp;amp;\vdots \&lt;br&gt;
+q_5k_0^T &amp;amp; q_5k_1^T &amp;amp; \dots &amp;amp; q_5k_5^T     \&lt;br&gt;
+\end{bmatrix}  =\begin{bmatrix}&lt;br&gt;
+q_0 \&lt;br&gt;
+q_1 \
+\vdots \&lt;br&gt;
+q_5 \
+\end{bmatrix}\begin{bmatrix}&lt;br&gt;
+k_0 &amp;amp;&lt;br&gt;
+k_1 &amp;amp;
+\dots &amp;amp;&lt;br&gt;
+k_5 \
+\end{bmatrix} ,= QK^T
+$$
+其实 $A\in \mathbb{R}^{6\times 6}$，下一步是masked softmax，因为大模型推理过程只能从已知的token推测之后的token，所以第 $i$ 个token只能知道前面的 $i$ 个token的信息，也就是说第 $j$ 个token只能计算前 $j - 1$ 个token的相关系数，所以上面的矩阵需要改成一个下三角矩阵
+$$
+A_m = A + Mask =  \begin{bmatrix}&lt;br&gt;
+q_0k_0^T &amp;amp; -\infty &amp;amp; \dots &amp;amp; -\infty      \&lt;br&gt;
+q_1k_0^T &amp;amp; q_1k_1^T &amp;amp; \dots &amp;amp; -\infty      \&lt;br&gt;
+\vdots &amp;amp; \vdots &amp;amp;\dots &amp;amp;\vdots \&lt;br&gt;
+q_5k_0^T &amp;amp; q_5k_1^T &amp;amp; \dots &amp;amp; q_5k_5^T     \&lt;br&gt;
+\end{bmatrix}
+$$
+对上面的矩阵按照行做softmax，可以得到一个下三角矩阵，右上部分全部是0，
+$$
+A_{softmax} = \text{Softmax}(A_m) = \text{Softmax}(\frac{QK^T}{\sqrt{d}})
+$$下面的关键一步，是更新所有token的v向量，令
+$$
+v_i{}&amp;rsquo; = \sum_j{A_{softmax}[i, j]v_j}
+$$
+如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image-1258996033.cos.ap-shanghai.myqcloud.com/20251123201405.png?imageSlim&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;所以得到的新的v矩阵就是
+$$
+V{}&amp;rsquo; = \text{Softmax}(\frac{QK^T}{\sqrt{d}})V
+$$
+从上面的计算过程可以看到，新的value矩阵已经包括了其他token的相关性的信息，每个token都包括了其他token的信息。因为GPT-2有12个头，每个头计算得到相同维度的 $V&amp;rsquo;$ 矩阵，这些矩阵的数据是相互独立的，所以可以大规模的&lt;strong&gt;并行计算&lt;/strong&gt;。得到12个新的V矩阵之后，拼接起来就可以得到更大的新矩阵，
+$$
+V_{new}&amp;rsquo; = [V_0&amp;rsquo;,V_1&amp;rsquo;,\dots,V_{11}&amp;rsquo;]
+$$
+所以 $V_{new}&amp;rsquo;\in \mathbb{R}^{6\times 768}$，下一步再做一个矩阵的投影，使用矩阵 $W_{prj} \in \mathbb{R}^{768\times 768}$，得到新的V矩阵
+$$
+V_{final}&amp;rsquo; = V_{new}&amp;lsquo;W_{prj} + b_{prj}
+$$
+最后得到的矩阵大小不变。&lt;/p&gt;
+&lt;h2 id=&#34;残差层和归一化层&#34;&gt;&lt;a href=&#34;#%e6%ae%8b%e5%b7%ae%e5%b1%82%e5%92%8c%e5%bd%92%e4%b8%80%e5%8c%96%e5%b1%82&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;残差层和归一化层
+&lt;/h2&gt;&lt;p&gt;计算完上面的步骤之后，做残差相加之后做layernorm&lt;/p&gt;
+&lt;h1 id=&#34;参考文献&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考文献
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://bbycroft.net/llm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;LLM Visualization&lt;/a&gt;&lt;/li&gt;
