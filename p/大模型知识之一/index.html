@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="基础架构 上图是transfomer block的基础架构图，\n参考文献 LLM Visualization Transformer Explainer: LLM Transformer Model Visually Explained 本文原载于 巴巴变的博客，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="基础架构 上图是transfomer block的基础架构图，由标准的encoder和decoder的结构组成，但是在chatgpt里面仅仅包含decoder部分的结构，所以我们仅仅专注于右边部分的结构。GPT2的网络结构如下所示\n">
 <title>大模型知识之一</title>
 
 <link rel='canonical' href='https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/'>
 
 <link rel="stylesheet" href="/scss/style.min.1a6eab8f97c7ad47119bcfe4ea87cc5227d4789df170608fabd9b3910bc037f2.css"><meta property='og:title' content="大模型知识之一">
-<meta property='og:description' content="基础架构 上图是transfomer block的基础架构图，\n参考文献 LLM Visualization Transformer Explainer: LLM Transformer Model Visually Explained 本文原载于 巴巴变的博客，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。\n">
+<meta property='og:description' content="基础架构 上图是transfomer block的基础架构图，由标准的encoder和decoder的结构组成，但是在chatgpt里面仅仅包含decoder部分的结构，所以我们仅仅专注于右边部分的结构。GPT2的网络结构如下所示\n">
 <meta property='og:url' content='https://blog.bugxch.top/p/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E4%B9%8B%E4%B8%80/'>
 <meta property='og:site_name' content='巴巴变的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-11-23T15:47:55&#43;08:00'/><meta property='article:modified_time' content='2025-11-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg' />
 <meta name="twitter:title" content="大模型知识之一">
-<meta name="twitter:description" content="基础架构 上图是transfomer block的基础架构图，\n参考文献 LLM Visualization Transformer Explainer: LLM Transformer Model Visually Explained 本文原载于 巴巴变的博客，遵循CC BY-NC-SA 4.0协议，复制请保留原文出处。\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="基础架构 上图是transfomer block的基础架构图，由标准的encoder和decoder的结构组成，但是在chatgpt里面仅仅包含decoder部分的结构，所以我们仅仅专注于右边部分的结构。GPT2的网络结构如下所示\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://pic.imgdb.cn/item/65927ef2c458853aefd7b5ce.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
@@ -346,13 +346,71 @@
 	
 	
 >
-上图是transfomer block的基础架构图，</p>
-<h1 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
+上图是transfomer block的基础架构图，由标准的encoder和decoder的结构组成，但是在chatgpt里面仅仅包含decoder部分的结构，所以我们仅仅专注于右边部分的结构。GPT2的网络结构如下所示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">GPT2Model</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">wte</span><span class="p">):</span> <span class="n">Embedding</span><span class="p">(</span><span class="mi">50257</span><span class="p">,</span> <span class="mi">768</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">wpe</span><span class="p">):</span> <span class="n">Embedding</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">768</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">drop</span><span class="p">):</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">h</span><span class="p">):</span> <span class="n">ModuleList</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">11</span><span class="p">):</span> <span class="mi">12</span> <span class="n">x</span> <span class="n">GPT2Block</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="n">ln_1</span><span class="p">):</span> <span class="n">LayerNorm</span><span class="p">((</span><span class="mi">768</span><span class="p">,),</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">,</span> <span class="n">elementwise_affine</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="n">attn</span><span class="p">):</span> <span class="n">GPT2Attention</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">c_attn</span><span class="p">):</span> <span class="n">Conv1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">c_proj</span><span class="p">):</span> <span class="n">Conv1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">attn_dropout</span><span class="p">):</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">resid_dropout</span><span class="p">):</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="n">ln_2</span><span class="p">):</span> <span class="n">LayerNorm</span><span class="p">((</span><span class="mi">768</span><span class="p">,),</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">,</span> <span class="n">elementwise_affine</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="n">mlp</span><span class="p">):</span> <span class="n">GPT2MLP</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">c_fc</span><span class="p">):</span> <span class="n">Conv1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">c_proj</span><span class="p">):</span> <span class="n">Conv1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">act</span><span class="p">):</span> <span class="n">NewGELUActivation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">dropout</span><span class="p">):</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">ln_f</span><span class="p">):</span> <span class="n">LayerNorm</span><span class="p">((</span><span class="mi">768</span><span class="p">,),</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">,</span> <span class="n">elementwise_affine</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Total</span> <span class="c1"># of params: 124.44M</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="参考文献"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"></a>参考文献
 </h1><ul>
 <li><a class="link" href="https://bbycroft.net/llm"  target="_blank" rel="noopener"
     >LLM Visualization</a></li>
 <li><a class="link" href="https://poloclub.github.io/transformer-explainer/"  target="_blank" rel="noopener"
     >Transformer Explainer: LLM Transformer Model Visually Explained</a></li>
+<li><a class="link" href="https://michaelwornow.net/2024/01/18/counting-params-in-transformer"  target="_blank" rel="noopener"
+    >Transformer Math (Part 1) - Counting Model Parameters</a></li>
 </ul>
 <hr>
 <p>本文原载于 <a class="link" href="http://blog.bugxch.top"  target="_blank" rel="noopener"
