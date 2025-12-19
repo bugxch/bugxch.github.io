@@ -370,7 +370,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">float16</span> <span class="n">b</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>那么<code>b = 126.35</code>或者<code>b = 126.38</code>或者<code>b = 126.3876</code>都是成立的，因为它们都会在浮点数的表示体系下舍入到126.4。数学上不相等，但是在计算机里面是相等的，这就是数学意义和计算机表示意义上的背离，</p>
@@ -389,11 +389,11 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#define EPSILON 1e-6
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">float16</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">126.4</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="n">float16</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">126.4</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">float16</span> <span class="n">b</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nf">fabs</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">EPSILON</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="什么是浮点数的大数吃小数问题原理是什么"><a href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%b5%ae%e7%82%b9%e6%95%b0%e7%9a%84%e5%a4%a7%e6%95%b0%e5%90%83%e5%b0%8f%e6%95%b0%e9%97%ae%e9%a2%98%e5%8e%9f%e7%90%86%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor"></a>什么是浮点数的“大数吃小数”问题？原理是什么？

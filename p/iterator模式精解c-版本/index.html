@@ -572,7 +572,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">enum</span> <span class="nc">State</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">RIGHT</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
@@ -580,7 +580,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">RESERVED</span> <span class="o">=</span> <span class="mi">22</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// 书本的类
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Book</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Book</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Book</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">)</span> <span class="o">:</span> <span class="n">name_</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{};</span>
 </span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">getName</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">name_</span><span class="p">;</span> <span class="p">};</span>
@@ -590,7 +590,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 抽象的迭代器类，包括获得下一本书，以及是否有下一本书的判断
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Iterator</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Iterator</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="n">Book</span> <span class="n">Next</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="kt">bool</span> <span class="nf">HasNext</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -598,7 +598,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 抽象的聚合类，该类有创建迭代器、取得某个位置的书本，弹出书本，计数，加入书本等功能
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Aggregate</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Aggregate</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="n">Iterator</span><span class="o">*</span> <span class="n">CreateIterator</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="n">State</span> <span class="nf">getBookAt</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">Book</span><span class="o">&amp;</span> <span class="n">book</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -607,7 +607,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 书架的具体迭代器，实现上面的抽象类的虚函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">BookShelfIterator</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Iterator</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BookShelfIterator</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Iterator</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">BookShelfIterator</span><span class="p">(</span><span class="n">Aggregate</span><span class="o">*</span> <span class="n">aggregate</span><span class="p">)</span> <span class="o">:</span> <span class="n">aggregate_</span><span class="p">(</span><span class="n">aggregate</span><span class="p">),</span> <span class="n">loc_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{};</span>
 </span></span><span class="line"><span class="cl">    <span class="o">~</span><span class="n">BookShelfIterator</span><span class="p">()</span> <span class="p">{</span>
@@ -633,7 +633,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 具体的聚合类——书架，实现上面的功能
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">BookShelf</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Aggregate</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BookShelf</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Aggregate</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">BookShelf</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">maxSize</span><span class="p">)</span> <span class="o">:</span><span class="n">maxSize_</span><span class="p">(</span><span class="n">maxSize</span><span class="p">),</span> <span class="n">count_</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">iterator_</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">books_</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
@@ -689,7 +689,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// client
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">BookShelf</span><span class="o">*</span> <span class="n">myShelf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BookShelf</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">myShelf</span><span class="o">-&gt;</span><span class="n">Push</span><span class="p">(</span><span class="n">Book</span><span class="p">(</span><span class="s">&#34;《重构》&#34;</span><span class="p">));</span>
@@ -942,7 +942,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">RESERVED</span> <span class="o">=</span> <span class="mi">22</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// concrete book
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Book</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Book</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Book</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">)</span> <span class="o">:</span> <span class="n">name_</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{};</span>
 </span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">getName</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">name_</span><span class="p">;</span> <span class="p">};</span>
@@ -1090,7 +1090,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// book class
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">BookShelf</span><span class="o">*</span> <span class="n">myShelf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BookShelf</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>

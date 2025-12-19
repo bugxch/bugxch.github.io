@@ -397,10 +397,10 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="c1">// pseudocode  #1 - shows valid reference
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span><span class="w"> </span><span class="c1">// scope  starts here
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="n">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w">   
+</span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w"> </span><span class="c1">// scope  starts here
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w">   
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="c1">// scope ends  he
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> </span><span class="c1">// scope ends  he
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>在上面的伪代码中，我们创建了一个值为10的变量x。我们使用&amp;作为运算符或关键字来创建引用。因此，语法&amp;x允许我们创建对变量x的值的引用。简单地说，我们创建了一个值为5的变量x和一个引用x的变量<br>
@@ -417,10 +417,10 @@ Y。</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="c1">// pseudocode  #2 - shows invalid reference aka dangling reference
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span><span class="w"> </span><span class="c1">// scope  starts here
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="n">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="c1">// scope ends  here
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="w">  </span><span class="c1">// can&#39;t access x from here; creates dangling reference
+</span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w"> </span><span class="c1">// scope  starts here
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> </span><span class="c1">// scope ends  here
+</span></span></span><span class="line"><span class="cl"><span class="n">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="w">  </span><span class="c1">// can&#39;t access x from here; creates dangling reference
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>悬空引用</strong></p>
@@ -574,9 +574,9 @@ Y。</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="s">&#34;hello&#34;</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// hello
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="c1">// hello
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// hello
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="c1">// hello
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>在Rust中，有两种字符串：String（堆分配的，可增长的）和&amp;str（固定大小，不能改变）。</p>
@@ -600,7 +600,7 @@ Y。</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>我们可以假设第二行（即<br>
@@ -651,8 +651,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">,  world!&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Won&#39;t compile. 我们得到一个错误。
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">,  world!&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Won&#39;t compile. 我们得到一个错误。
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>我们会得到一个类似下面的错误，因为Rust不允许使用无效的引用：</p>
@@ -712,8 +712,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">s1</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;s1  = </span><span class="si">{}</span><span class="s">, s2 = </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">s1</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;s1  = </span><span class="si">{}</span><span class="s">, s2 = </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Clone方法确实将堆数据复制到s2中了。操作非常完美，下图是示例：
@@ -736,7 +736,7 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;Rule 1&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="所有权规则2"><a href="#%e6%89%80%e6%9c%89%e6%9d%83%e8%a7%84%e5%88%992" class="header-anchor"></a>所有权规则2
@@ -750,8 +750,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>我们将10分配给变量x；换句话说，变量x拥有10。然后我们将x分配给y，同时将其分配给z。我们知道同一时间只能存在一个所有者，但没有引发任何错误。所以在此示例中，每次当我们将x分配给一个新变量时，编译器都会对其进行复制。</p>
@@ -777,9 +777,9 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">,  world!&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Won&#39;t compile. 我们得到一个错误。
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">,  world!&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Won&#39;t compile. 我们得到一个错误。
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>字符串类型的场景下，其存储在堆上的数据长度可能会发生变化。这就表示:</p>
@@ -806,9 +806,9 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">, world!&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">s1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Won&#39;t compile. The value of s1  has already been dropped.
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">, world!&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">s1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Won&#39;t compile. The value of s1  has already been dropped.
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>在将s1分配给s2之后（在let s2 = s1赋值语句中），s1的值就被释放了。因此，赋值语句执行后，s1就失效了。S1被释放后的内存状态：
@@ -854,25 +854,25 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">  </span><span class="c1">// s  comes into scope
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">move_ownership</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w">            </span><span class="c1">// s&#39;s value moves into the  function...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                  </span><span class="c1">// so it&#39;s  no longer valid from this
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                               </span><span class="c1">// point  forward
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                    </span><span class="c1">// x comes into scope
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">makes_copy</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">                </span><span class="c1">// x would move into the function
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                  </span><span class="c1">// It  follows copy semantics since it&#39;s
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                               </span><span class="c1">// primitive,  so we use x afterward
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w"> </span><span class="c1">// Here, x  goes out of scope, then s. But because s&#39;s value was moved, nothing
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="c1">// special happens.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span>  <span class="nf">move_ownership</span><span class="p">(</span><span class="n">some_string</span>: <span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// some_string comes into scope
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">some_string</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="c1">// Here,  some_string goes out of scope and `drop` is called.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="c1">// The occupied memory is freed.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span>  <span class="nf">makes_copy</span><span class="p">(</span><span class="n">some_integer</span>: <span class="kt">i32</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// some_integer comes into scope
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">some_integer</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="c1">// Here,  some_integer goes out of scope. Nothing special happens.
+</span></span></span><span class="line"><span class="cl"><span class="w">                                  </span><span class="c1">// so it&#39;s  no longer valid from this
+</span></span></span><span class="line"><span class="cl"><span class="w">                               </span><span class="c1">// point  forward
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                    </span><span class="c1">// x comes into scope
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">makes_copy</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">                </span><span class="c1">// x would move into the function
+</span></span></span><span class="line"><span class="cl"><span class="w">                                  </span><span class="c1">// It  follows copy semantics since it&#39;s
+</span></span></span><span class="line"><span class="cl"><span class="w">                               </span><span class="c1">// primitive,  so we use x afterward
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> </span><span class="c1">// Here, x  goes out of scope, then s. But because s&#39;s value was moved, nothing
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// special happens.
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="k">fn</span>  <span class="nf">move_ownership</span><span class="p">(</span><span class="n">some_string</span>: <span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// some_string comes into scope
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">some_string</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> </span><span class="c1">// Here,  some_string goes out of scope and `drop` is called.
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// The occupied memory is freed.
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="k">fn</span>  <span class="nf">makes_copy</span><span class="p">(</span><span class="n">some_integer</span>: <span class="kt">i32</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// some_integer comes into scope
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">some_integer</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> </span><span class="c1">// Here,  some_integer goes out of scope. Nothing special happens.
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果我们在调用move_ownership之后尝试使用s，Rust会抛出编译错误。</p>
@@ -909,29 +909,29 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gives_ownership</span><span class="p">();</span><span class="w">         </span><span class="c1">// gives_ownership moves its return
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                        </span><span class="c1">//  value into s1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">     </span><span class="c1">//  s2 comes into scope
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">takes_and_gives_back</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span><span class="w">  </span><span class="c1">// s2 is moved into
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                        </span><span class="c1">//  takes_and_gives_back, which also
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                        </span><span class="c1">//  moves its return value into s3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w"> </span><span class="c1">// Here, s3  goes out of scope and is dropped. s2 was moved, so nothing
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="c1">// happens. s1 goes out of scope and is  dropped.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span>  <span class="nf">gives_ownership</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span><span class="w">              </span><span class="c1">// gives_ownership will move its
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                              </span><span class="c1">// return value into the function
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                              </span><span class="c1">// that calls it
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">some_string</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;yours&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// some_string comes into scope
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">some_string</span><span class="w">                              </span><span class="c1">// some_string  is returned and
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                             </span><span class="c1">// moves out to the calling
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                              </span><span class="c1">// function
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                                        </span><span class="c1">//  value into s1
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">     </span><span class="c1">//  s2 comes into scope
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">takes_and_gives_back</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span><span class="w">  </span><span class="c1">// s2 is moved into
+</span></span></span><span class="line"><span class="cl"><span class="w">                                        </span><span class="c1">//  takes_and_gives_back, which also
+</span></span></span><span class="line"><span class="cl"><span class="w">                                        </span><span class="c1">//  moves its return value into s3
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> </span><span class="c1">// Here, s3  goes out of scope and is dropped. s2 was moved, so nothing
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// happens. s1 goes out of scope and is  dropped.
 </span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// This  function takes a String and returns it
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">fn</span>  <span class="nf">takes_and_gives_back</span><span class="p">(</span><span class="n">a_string</span>: <span class="nb">String</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span><span class="w"> </span><span class="c1">// a_string comes into
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                                                       </span><span class="c1">// scope
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="k">fn</span>  <span class="nf">gives_ownership</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span><span class="w">              </span><span class="c1">// gives_ownership will move its
+</span></span></span><span class="line"><span class="cl"><span class="w">                                              </span><span class="c1">// return value into the function
+</span></span></span><span class="line"><span class="cl"><span class="w">                                              </span><span class="c1">// that calls it
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">some_string</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;yours&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// some_string comes into scope
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">some_string</span><span class="w">                              </span><span class="c1">// some_string  is returned and
+</span></span></span><span class="line"><span class="cl"><span class="w">                                             </span><span class="c1">// moves out to the calling
+</span></span></span><span class="line"><span class="cl"><span class="w">                                              </span><span class="c1">// function
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="c1">// This  function takes a String and returns it
+</span></span></span><span class="line"><span class="cl"><span class="k">fn</span>  <span class="nf">takes_and_gives_back</span><span class="p">(</span><span class="n">a_string</span>: <span class="nb">String</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span><span class="w"> </span><span class="c1">// a_string comes into
+</span></span></span><span class="line"><span class="cl"><span class="w">                                                       </span><span class="c1">// scope
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">a_string</span><span class="w">   </span><span class="c1">// a_string is returned and moves out to the calling function
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>变量的所有权改变始终遵循相同的模式：当值被分配给另一个变量时，就会触发move操作。除非数据的所有权被转移至另一个变量，否则当包含堆上数据的变量超出作用域时，该值将被清除。</p>
@@ -957,11 +957,11 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">];</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">print_vector</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="c1">// this  line gives us an error
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span>  <span class="nf">print_vector</span><span class="p">(</span><span class="n">x</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">fn</span>  <span class="nf">print_vector</span><span class="p">(</span><span class="n">x</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Inside print_vector  function </span><span class="si">{:?}</span><span class="s">&#34;</span><span class="p">,</span><span class="n">x</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>跟踪所有权看似很容易，但是当我们面对复杂的大型程序时，它就会变得非常复杂。<strong>所以我们需要一种在不转移“所有权”的情况下传递数据的方法，这就是“借用”概念发挥作用的地方。</strong></p>
@@ -980,11 +980,11 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Value  y=</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Address  of y=</span><span class="si">{:p}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Deref  of y=</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">y</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Value  y=</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Address  of y=</span><span class="si">{:p}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Deref  of y=</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">y</span><span class="p">);</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>上述代码生成以下输出：</p>
@@ -1020,11 +1020,11 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">];</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">print_vector</span><span class="p">(</span><span class="o">&amp;</span><span class="n">v</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="c1">// can  access v here as references can&#39;t move the value
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span>  <span class="nf">print_vector</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">fn</span>  <span class="nf">print_vector</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Inside print_vector  function </span><span class="si">{:?}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>我们将引用 (&amp;v)（又名pass-by-reference）而非所有权（即pass-by-value）传递给print_vector函数。因此在main函数中调用print_vector函数后，我们就可以访问v了。</p>
@@ -1040,10 +1040,10 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">assert_eq!</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">assert_eq!</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w">  </span><span class="o">*</span><span class="n">y</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">assert_eq!</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">assert_eq!</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w">  </span><span class="o">*</span><span class="n">y</span><span class="p">);</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>在上面的代码中，我们创建了一个对i32类型数据的引用，然后使用解引用运算符跟踪被引用的数据。变量x存储一个i32类型的值5。我们将y设置为对x的引用。</p>
@@ -1084,7 +1084,7 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>不可变引用也被称为共享引用，而可变引用也被称为独占引用。</p>
@@ -1097,8 +1097,8 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">ref_to_n</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="o">&amp;</span><span class="n">n</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w">  </span><span class="n">another_ref_to_n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">ref_to_n</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="o">&amp;</span><span class="n">n</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w">  </span><span class="n">another_ref_to_n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>借用检查器将抛出以下错误：</p>
@@ -1141,11 +1141,11 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w">  </span><span class="n">x</span><span class="p">);</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面的示例程序尝试在所有者y超出作用域后取消x对y的引用。Rust阻止了这种UAF错误。</p>
@@ -1171,7 +1171,7 @@ Let s2 = s1;）将复制s1中的值并绑定到s2。然而所见并非所得。<
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">, </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">r1</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面的代码尝试为s创建两个可变引用（r1 和 r2），这最终会执行失败：</p>

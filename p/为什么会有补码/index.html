@@ -408,13 +408,13 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;stdio.h&gt;
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include&lt;stdlib.h&gt;
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">enum</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">INT</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="c1">//int和float有4个字节
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">FLOAT</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">FLOAT</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="n">DOUBLE</span> <span class="o">=</span> <span class="mi">8</span> <span class="c1">//double有8个字节
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="n">TYPE_E</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="n">TYPE_E</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">showBytes</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">ch</span><span class="p">,</span> <span class="n">TYPE_E</span> <span class="n">len</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>

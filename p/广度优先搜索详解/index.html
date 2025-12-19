@@ -379,9 +379,9 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">    <span class="m">3</span>
 </span></span><span class="line"><span class="cl">   / <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="m">9</span>  <span class="m">20</span>
+</span></span></span><span class="line"><span class="cl">  <span class="m">9</span>  <span class="m">20</span>
 </span></span><span class="line"><span class="cl">    /  <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>   <span class="m">15</span>   <span class="m">7</span>
+</span></span></span><span class="line"><span class="cl">   <span class="m">15</span>   <span class="m">7</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这个如何解决呢？肉眼可见，最大深度是3。</p>
@@ -456,7 +456,7 @@
 </span></span><span class="line"><span class="cl">        <span class="n">iq</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// check vectors for left node
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">!=</span> <span class="n">INT_MAX</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">!=</span> <span class="n">INT_MAX</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">TreeNode</span> <span class="o">*</span><span class="n">leftNode</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="n">leftNode</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">id</span><span class="p">];</span>
@@ -470,7 +470,7 @@
 </span></span><span class="line"><span class="cl">        <span class="n">id</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// add right node
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">!=</span> <span class="n">INT_MAX</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">!=</span> <span class="n">INT_MAX</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">TreeNode</span> <span class="o">*</span><span class="n">rightNode</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="n">rightNode</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">id</span><span class="p">];</span>
@@ -520,7 +520,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// handle value
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tree</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tree</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">tree</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
@@ -561,11 +561,11 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">maxDepth</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 终止条件
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">// 关系式
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="n">max</span><span class="p">(</span><span class="n">maxDepth</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">),</span> <span class="n">maxDepth</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">max</span><span class="p">(</span><span class="n">maxDepth</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">),</span> <span class="n">maxDepth</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -633,21 +633,21 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">maxDepth</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 如果为空，那么返回0
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">queue</span><span class="o">&lt;</span><span class="n">TreeNode</span> <span class="o">*&gt;</span> <span class="n">qu</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">depth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 添加根节点
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">qu</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">qu</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">qu</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">qz</span> <span class="o">=</span> <span class="n">qu</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">qz</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 考察队列中的每个节点，是否有左子树和右子树
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">TreeNode</span> <span class="o">*</span> <span class="n">node</span> <span class="o">=</span> <span class="n">qu</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">            <span class="n">TreeNode</span> <span class="o">*</span> <span class="n">node</span> <span class="o">=</span> <span class="n">qu</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="n">qu</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 如果有左右子节点，那么添加到队列中
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="n">qu</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -734,24 +734,24 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// CPP program to illustrate
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Application of push() and pop() function
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;queue&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">// Empty Queue
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">myqueue</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">myqueue</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="n">myqueue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">myqueue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">myqueue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">myqueue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">myqueue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">// queue becomes 5, 13, 0, 9, 4
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// Counting number of elements in queue
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">myqueue</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">myqueue</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="n">myqueue</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">		<span class="n">c</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
@@ -801,7 +801,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">rlt</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// empty rlt for empty tree
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">rlt</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -810,9 +810,9 @@
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">qu</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">qz</span> <span class="o">=</span> <span class="n">qu</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// add the last node in the current queue
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">rlt</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">qu</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">        <span class="n">rlt</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">qu</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// add nodes of next layer into the queue
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">qz</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">qz</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">TreeNode</span> <span class="o">*</span> <span class="n">node</span> <span class="o">=</span> <span class="n">qu</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="n">qu</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="p">{</span>
@@ -941,7 +941,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="cm">/************ PART 1 ************/</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// find the father node of all the nodes in the tree
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">queue</span><span class="o">&lt;</span><span class="n">TreeNode</span> <span class="o">*&gt;</span> <span class="n">qu</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">queue</span><span class="o">&lt;</span><span class="n">TreeNode</span> <span class="o">*&gt;</span> <span class="n">qu</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">umap</span><span class="p">[</span><span class="n">root</span><span class="p">]</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">qu</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">qu</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
@@ -955,21 +955,21 @@
 </span></span><span class="line"><span class="cl">            <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="n">qu</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// father node
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">umap</span><span class="p">[</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">                <span class="n">umap</span><span class="p">[</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="n">qu</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// father node
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">umap</span><span class="p">[</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">                <span class="n">umap</span><span class="p">[</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="cm">/************ PART 2 ************/</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// find the node with depth of K
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">queue</span><span class="o">&lt;</span><span class="n">TreeNode</span> <span class="o">*&gt;</span> <span class="n">newQ</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">queue</span><span class="o">&lt;</span><span class="n">TreeNode</span> <span class="o">*&gt;</span> <span class="n">newQ</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">depth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">TreeNode</span> <span class="o">*</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;</span> <span class="n">usedmap</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">usedmap</span><span class="p">[</span><span class="n">target</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
@@ -1006,7 +1006,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">//BFS for final rlt
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="n">rlt</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">rlt</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -1190,7 +1190,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">shortestAlternatingPaths</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">red_edges</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">blue_edges</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// 由于存在自环或者平行边，所以定义哈希表保存每个结点对应的多条边并初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">redGraph</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">redGraph</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">blueGraph</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">red</span> <span class="p">:</span> <span class="n">red_edges</span><span class="p">)</span> <span class="n">redGraph</span><span class="p">[</span><span class="n">red</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">red</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">blue</span> <span class="p">:</span> <span class="n">blue_edges</span><span class="p">)</span> <span class="n">blueGraph</span><span class="p">[</span><span class="n">blue</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">blue</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
@@ -1199,20 +1199,20 @@
 </span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="kt">int</span> <span class="n">maxNode</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// 由于存在环和平行边，用数组 visit[x][y][color]=true 代表从节点x到节点y的且颜色为color的边被访问过，防止重复访问
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 第三维[2]有两维，第0维代表红色是否访问，第1维代表蓝色是否访问
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 所有的点初始化为0代表为被访问过
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">bool</span> <span class="n">visited</span><span class="p">[</span><span class="n">maxNode</span><span class="p">][</span><span class="n">maxNode</span><span class="p">][</span><span class="n">colorNum</span><span class="p">];</span>
+</span></span></span><span class="line"><span class="cl">        <span class="c1">// 第三维[2]有两维，第0维代表红色是否访问，第1维代表蓝色是否访问
+</span></span></span><span class="line"><span class="cl">        <span class="c1">// 所有的点初始化为0代表为被访问过
+</span></span></span><span class="line"><span class="cl">        <span class="kt">bool</span> <span class="n">visited</span><span class="p">[</span><span class="n">maxNode</span><span class="p">][</span><span class="n">maxNode</span><span class="p">][</span><span class="n">colorNum</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">        <span class="n">memset</span><span class="p">(</span><span class="n">visited</span><span class="p">,</span> <span class="nb">false</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">visited</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// step用于记录当前的步长，即从节点0到各节点的步长，从0逐渐+1自增
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// res代表节点 0 到节点 X 的最短路径的长度，初始化为最大值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">        <span class="c1">// res代表节点 0 到节点 X 的最短路径的长度，初始化为最大值
+</span></span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">INT_MAX</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// 定义队列进行BFS，并进行初始化，pair&lt;int, int&gt;的意思是 &lt;当前节点, 路径上颜色&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 队列初始化先进&lt;0, 1&gt;, 再进&lt;0, 0&gt;，即我们先访问蓝色，再访问红色。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">color</span><span class="o">&gt;&gt;</span> <span class="n">myQue</span><span class="p">;</span> <span class="c1">// &lt;node, color&gt; means start from node and select the edge with color
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">myQue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">        <span class="c1">// 队列初始化先进&lt;0, 1&gt;, 再进&lt;0, 0&gt;，即我们先访问蓝色，再访问红色。
+</span></span></span><span class="line"><span class="cl">        <span class="n">queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">color</span><span class="o">&gt;&gt;</span> <span class="n">myQue</span><span class="p">;</span> <span class="c1">// &lt;node, color&gt; means start from node and select the edge with color
+</span></span></span><span class="line"><span class="cl">        <span class="n">myQue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">        <span class="n">myQue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">RED</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">myQue</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
@@ -1223,24 +1223,24 @@
 </span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// 队首元素出队列，得到其节点，以及颜色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="kt">int</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">myQue</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">myQue</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">curColor</span> <span class="o">=</span> <span class="n">myQue</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">second</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">                <span class="n">myQue</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">                <span class="c1">//若当前已访问的为蓝色边，希望下一个节点的边是红色；反之亦然
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">if</span> <span class="p">(</span><span class="n">curColor</span> <span class="o">==</span> <span class="n">BLUE</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">curColor</span> <span class="o">==</span> <span class="n">BLUE</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                    <span class="c1">// 遍历当前节点每一个相邻的节点，寻找相连的红色边
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">nextNode</span> <span class="p">:</span> <span class="n">blueGraph</span><span class="p">[</span><span class="n">curNode</span><span class="p">])</span>
+</span></span></span><span class="line"><span class="cl">                    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">nextNode</span> <span class="p">:</span> <span class="n">blueGraph</span><span class="p">[</span><span class="n">curNode</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl">                    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                        <span class="c1">// 如果 curNode 和 nextNode 相连的红色边未被访问过，访问并加入队列
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="c1">// 同时需要更新两点之间的最短路径
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">curNode</span><span class="p">][</span><span class="n">nextNode</span><span class="p">][</span><span class="n">RED</span><span class="p">]</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">                        <span class="c1">// 同时需要更新两点之间的最短路径
+</span></span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">curNode</span><span class="p">][</span><span class="n">nextNode</span><span class="p">][</span><span class="n">RED</span><span class="p">]</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                            <span class="n">res</span><span class="p">[</span><span class="n">nextNode</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">nextNode</span><span class="p">],</span> <span class="n">step</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">                            <span class="c1">// make_pair&lt;nextNode, 0&gt; 的含义是标记当前访问的边为红色，下次应该访问蓝色的
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                            <span class="n">myQue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">nextNode</span><span class="p">,</span> <span class="n">RED</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">                            <span class="n">myQue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">nextNode</span><span class="p">,</span> <span class="n">RED</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">                            <span class="n">visited</span><span class="p">[</span><span class="n">curNode</span><span class="p">][</span><span class="n">nextNode</span><span class="p">][</span><span class="n">RED</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">                        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">                    <span class="p">}</span>
@@ -1248,16 +1248,16 @@
 </span></span><span class="line"><span class="cl">                <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">curColor</span> <span class="o">==</span> <span class="n">RED</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                    <span class="c1">// 遍历当前节点每一个相邻的节点，寻找相连的蓝色边
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">nextNode</span> <span class="p">:</span> <span class="n">redGraph</span><span class="p">[</span><span class="n">curNode</span><span class="p">])</span>
+</span></span></span><span class="line"><span class="cl">                    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">nextNode</span> <span class="p">:</span> <span class="n">redGraph</span><span class="p">[</span><span class="n">curNode</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl">                    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                        <span class="c1">// 如果 curNode 和 nextNode 相连的蓝色边未被访问过，访问并加入队列
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="c1">// 同时需要更新两点之间的最短路径
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">curNode</span><span class="p">][</span><span class="n">nextNode</span><span class="p">][</span><span class="n">BLUE</span><span class="p">]</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">                        <span class="c1">// 同时需要更新两点之间的最短路径
+</span></span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">curNode</span><span class="p">][</span><span class="n">nextNode</span><span class="p">][</span><span class="n">BLUE</span><span class="p">]</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                            <span class="n">res</span><span class="p">[</span><span class="n">nextNode</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">nextNode</span><span class="p">],</span> <span class="n">step</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">                            <span class="c1">// make_pair&lt;nextNode, 1&gt; 的含义是标记当前访问的边为蓝色，下次应该访问红色的
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                            <span class="n">myQue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">nextNode</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">                            <span class="n">myQue</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">nextNode</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">                            <span class="n">visited</span><span class="p">[</span><span class="n">curNode</span><span class="p">][</span><span class="n">nextNode</span><span class="p">][</span><span class="n">BLUE</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">                        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">                    <span class="p">}</span>
@@ -1266,7 +1266,7 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// 根据题意，0 到自身的距离为0；在上述操作后，若 0 到其他节点距离仍为INT_MAX，说明不存在符合要求的路径，设置为-1；
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">INT_MAX</span><span class="p">)</span> <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>

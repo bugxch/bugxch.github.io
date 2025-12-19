@@ -362,7 +362,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">s1</span><span class="p">),</span> <span class="nf">offsetof</span><span class="p">(</span><span class="k">struct</span> <span class="n">s1</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="nf">offsetof</span><span class="p">(</span><span class="k">struct</span>
 </span></span><span class="line"><span class="cl">    <span class="n">s1</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="nf">offsetof</span><span class="p">(</span><span class="k">struct</span> <span class="n">s1</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="p">)</span> <span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//注: offsetof 为计算偏移量的宏
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -560,7 +560,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#define paster( n ) printf( &#34;token&#34; #n &#34; = %d&#34;, token##n )
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="nf">fun</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">fun</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">token3</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">tokenn</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>

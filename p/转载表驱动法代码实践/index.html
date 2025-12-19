@@ -419,7 +419,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">ucNumChar</span> <span class="o">=</span> <span class="sc">&#39;C&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//... ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">ucNum</span> <span class="o">==</span> <span class="mi">35</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">ucNum</span> <span class="o">==</span> <span class="mi">35</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">ucNumChar</span> <span class="o">=</span> <span class="sc">&#39;Z&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -476,7 +476,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">pszDayName</span> <span class="o">=</span> <span class="s">&#34;Monday&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//... ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="mi">6</span> <span class="o">==</span> <span class="n">ucDay</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="mi">6</span> <span class="o">==</span> <span class="n">ucDay</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">pszDayName</span> <span class="o">=</span> <span class="s">&#34;Saturday&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -519,7 +519,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#define MAX_GRADE_LEVEL   (INT8U)5
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">DOUBLE</span> <span class="n">aRangeLimit</span><span class="p">[</span><span class="n">MAX_GRADE_LEVEL</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">,</span> <span class="mf">70.0</span><span class="p">,</span> <span class="mf">80.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">};</span>
+</span></span></span><span class="line"><span class="cl"><span class="n">DOUBLE</span> <span class="n">aRangeLimit</span><span class="p">[</span><span class="n">MAX_GRADE_LEVEL</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">,</span> <span class="mf">70.0</span><span class="p">,</span> <span class="mf">80.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="n">CHAR</span> <span class="o">*</span><span class="n">paGrades</span><span class="p">[</span><span class="n">MAX_GRADE_LEVEL</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#34;Fail&#34;</span><span class="p">,</span> <span class="s">&#34;Pass&#34;</span><span class="p">,</span> <span class="s">&#34;Credit&#34;</span><span class="p">,</span> <span class="s">&#34;Distinction&#34;</span><span class="p">,</span> <span class="s">&#34;High Distinction&#34;</span><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="n">CHAR</span><span class="o">*</span> <span class="nf">EvaluateGrade</span><span class="p">(</span><span class="n">DOUBLE</span> <span class="n">dScore</span><span class="p">)</span>
@@ -632,7 +632,7 @@
 </span></span><span class="line"><span class="cl">            <span class="n">aDigitCharNum</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">//... ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">case</span> <span class="sc">&#39;9&#39;</span><span class="o">:</span>
+</span></span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="sc">&#39;9&#39;</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">            <span class="n">aDigitCharNum</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -785,10 +785,10 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#define MONTH_OF_YEAR 12    </span><span class="cm">/* 一年中的月份数 */</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cm">/* 闰年：能被4整除且不能被100整除，或能被400整除 */</span>
 </span></span><span class="line"><span class="cl"><span class="cp">#define IS_LEAP_YEAR(year) ((((year) % 4 == 0) &amp;&amp; ((year) % 100 != 0)) || ((year) % 400 == 0))
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cm">/* 平年中的各月天数，下标对应月份 */</span>
 </span></span><span class="line"><span class="cl"><span class="n">INT8U</span> <span class="n">aDayOfCommonMonth</span><span class="p">[</span><span class="n">MONTH_OF_YEAR</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
@@ -871,7 +871,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#define  GET_BIT(var, bit)   (((var) &gt;&gt; (bit)) &amp; 0x1)    </span><span class="cm">/* 获取var变量第bit位，编号从右至左 */</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">const</span> <span class="n">CHAR</span><span class="o">*</span> <span class="n">paSvrNames</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#34;_INTERNET&#34;</span><span class="p">,</span> <span class="s">&#34;_TR069&#34;</span><span class="p">,</span> <span class="s">&#34;_VOIP&#34;</span><span class="p">,</span> <span class="s">&#34;_OTHER&#34;</span><span class="p">};</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">CHAR</span><span class="o">*</span> <span class="n">paSvrNames</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#34;_INTERNET&#34;</span><span class="p">,</span> <span class="s">&#34;_TR069&#34;</span><span class="p">,</span> <span class="s">&#34;_VOIP&#34;</span><span class="p">,</span> <span class="s">&#34;_OTHER&#34;</span><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">INT8U</span> <span class="n">ucSvrNameNum</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">paSvrNames</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">paSvrNames</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">SetServerType</span><span class="p">(</span><span class="n">CHAR</span> <span class="o">*</span><span class="n">pszSvrType</span><span class="p">,</span> <span class="n">INT16U</span> <span class="n">wSvrType</span><span class="p">)</span>
@@ -941,10 +941,10 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"> <span class="c1">//值名映射表结构体定义，用于数值解析器
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">INT32U</span> <span class="n">dwElem</span><span class="p">;</span>    <span class="c1">//待解析数值，通常为枚举变量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">CHAR</span><span class="o">*</span>  <span class="n">pszName</span><span class="p">;</span>   <span class="c1">//指向数值所对应解析名字符串的指针
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="n">T_NAME_PARSER</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">CHAR</span><span class="o">*</span>  <span class="n">pszName</span><span class="p">;</span>   <span class="c1">//指向数值所对应解析名字符串的指针
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">T_NAME_PARSER</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cm">/******************************************************************************
 </span></span></span><span class="line"><span class="cl"><span class="cm">* 函数名称:  NameParser
@@ -973,8 +973,8 @@
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">ptNameParser</span><span class="o">-&gt;</span><span class="n">pszName</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">//ANSI标准禁止对void指针进行算法操作；GNU标准则指定void*算法操作与char*一致。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//若考虑移植性，可将pvMap类型改为INT8U*，或定义INT8U*局部变量指向pvMap。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">pvMap</span> <span class="o">+=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">T_NAME_PARSER</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">        <span class="c1">//若考虑移植性，可将pvMap类型改为INT8U*，或定义INT8U*局部变量指向pvMap。
+</span></span></span><span class="line"><span class="cl">        <span class="n">pvMap</span> <span class="o">+=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">T_NAME_PARSER</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nb">NULL</span> <span class="o">!=</span> <span class="n">pszDefName</span><span class="p">)</span>
@@ -984,7 +984,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">else</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">static</span> <span class="n">INT8U</span> <span class="n">szName</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span> <span class="c1">//Max:&#34;0xFFFFFFFF&#34;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">sprintf</span><span class="p">(</span><span class="n">szName</span><span class="p">,</span> <span class="s">&#34;0x%X&#34;</span><span class="p">,</span> <span class="n">dwElem</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">        <span class="n">sprintf</span><span class="p">(</span><span class="n">szName</span><span class="p">,</span> <span class="s">&#34;0x%X&#34;</span><span class="p">,</span> <span class="n">dwElem</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">szName</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -1029,12 +1029,12 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//UNI端口类型值名映射表结构体定义
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">INT32U</span> <span class="n">dwPortType</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">INT8U</span><span class="o">*</span> <span class="n">pszPortName</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">T_PORT_NAME</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//UNI端口类型解析器
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">T_PORT_NAME</span> <span class="n">gUniNameMap</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="n">T_PORT_NAME</span> <span class="n">gUniNameMap</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="mi">1</span><span class="p">,</span>      <span class="s">&#34;Fe&#34;</span><span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="mi">3</span><span class="p">,</span>      <span class="s">&#34;Pots&#34;</span><span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="mi">99</span><span class="p">,</span>     <span class="s">&#34;Vuni&#34;</span><span class="p">}</span>
@@ -1269,9 +1269,9 @@
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define  CES_JITTERBUF_STEP           (INT32U)125    </span><span class="cm">/* jitterbuf步长为125us，即1帧 */</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define  CES_DEFAULT_QUEUESIZE        (INT32U)5
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define  CES_DEFAULT_MAX_QUEUESIZE    (INT32U)7
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cp">#define  ARRAY_NUM(array)             (sizeof(array) / sizeof((array)[0]))  </span><span class="cm">/* 数组元素个数 */</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">INT32U</span>  <span class="n">dwJitterBuffer</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">INT32U</span>  <span class="n">dwFramePerPkt</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">INT32U</span>  <span class="n">dwQueueSize</span><span class="p">;</span>
@@ -1309,7 +1309,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">INT8U</span> <span class="n">ucIdx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ucNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">//本函数暂时仅考虑E1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">ucNum</span> <span class="o">=</span> <span class="n">ARRAY_NUM</span><span class="p">(</span><span class="n">gCesQueueSizeMap</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">ucNum</span> <span class="o">=</span> <span class="n">ARRAY_NUM</span><span class="p">(</span><span class="n">gCesQueueSizeMap</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="n">ucIdx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ucIdx</span> <span class="o">&lt;</span> <span class="n">ucNum</span><span class="p">;</span> <span class="n">ucIdx</span><span class="o">++</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">       <span class="k">if</span><span class="p">((</span><span class="n">dwJitterBuffer</span> <span class="o">==</span> <span class="n">gCesQueueSizeMap</span><span class="p">[</span><span class="n">ucIdx</span><span class="p">].</span><span class="n">dwJitterBuffer</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
@@ -1398,7 +1398,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">pstSendTlv</span><span class="o">-&gt;</span><span class="n">aucVersionList</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x01</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//此处省略gOamCtrlCode == 2~6的处理代码
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">gOamCtrlCode</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">gOamCtrlCode</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">vosMemCpy</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">pstSendTlv</span><span class="o">-&gt;</span><span class="n">aucVersionList</span><span class="p">),</span> <span class="n">ctc_oui</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">pstSendTlv</span><span class="o">-&gt;</span><span class="n">aucVersionList</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x20</span><span class="p">;</span>
@@ -1477,7 +1477,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="cm">**********************************************************************/</span>
 </span></span><span class="line"><span class="cl"><span class="cp">#define CTRL_VERS_NUM    3
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define CTRL_CODE_NUM    (1&lt;&lt;CTRL_VERS_NUM)
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">u8_t</span> <span class="n">gOamVerCtrlMap</span><span class="p">[</span><span class="n">CTRL_CODE_NUM</span><span class="p">][</span><span class="n">CTRL_VERS_NUM</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="n">u8_t</span> <span class="n">gOamVerCtrlMap</span><span class="p">[</span><span class="n">CTRL_CODE_NUM</span><span class="p">][</span><span class="n">CTRL_VERS_NUM</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"> <span class="cm">/* Ver21         Ver30        VerAA */</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="mh">0x21</span><span class="p">,</span>         <span class="mh">0x30</span><span class="p">,</span>        <span class="mh">0xaa</span><span class="p">},</span>    <span class="cm">/*gOamCtrlCode = 0*/</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="mh">0x21</span><span class="p">,</span>         <span class="mh">0x30</span><span class="p">,</span>          <span class="mi">0</span> <span class="p">},</span>    <span class="cm">/*gOamCtrlCode = 1*/</span>
@@ -1489,7 +1489,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>  <span class="mi">0</span><span class="p">,</span>            <span class="mi">0</span><span class="p">,</span>           <span class="mi">0</span> <span class="p">}</span>     <span class="cm">/*gOamCtrlCode = 7*/</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="cp">#define INFO_TYPE_VERS_LEN    7  </span><span class="cm">/* InfoType + Length + OUI + ExtSupport + Version */</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">u8_t</span> <span class="n">verIdx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">u8_t</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="n">verIdx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">verIdx</span> <span class="o">&lt;</span> <span class="n">CTRL_VERS_NUM</span><span class="p">;</span> <span class="n">verIdx</span><span class="o">++</span><span class="p">)</span>
@@ -1591,7 +1591,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">g_log_control</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="mh">0x01</span> <span class="o">&lt;&lt;</span> <span class="n">FUNCTION_Oam</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//... ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">logExec</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="n">INT8U</span> <span class="n">enable</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">logExec</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="n">INT8U</span> <span class="n">enable</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">CtcOamLog</span><span class="p">(</span><span class="n">FUNCTION_Oam</span><span class="p">,</span><span class="s">&#34;log %s %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">enable</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">enable</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="cm">/*log*/</span>
@@ -1603,7 +1603,7 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcasecmp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;pon&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">logPon</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">//... ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcasecmp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;version&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcasecmp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;version&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">logVersion</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">enable</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="cm">/*nolog*/</span>
@@ -1615,7 +1615,7 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcasecmp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;pon&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">nologPon</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">//... ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcasecmp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;version&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcasecmp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;version&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">nologVersion</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span>
@@ -1687,12 +1687,12 @@
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s">&#34;all&#34;</span><span class="p">,</span>         <span class="n">OAM_LOG_OFF</span><span class="p">,</span>       <span class="n">noanylog</span><span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s">&#34;oam&#34;</span><span class="p">,</span>         <span class="n">OAM_LOG_OFF</span><span class="p">,</span>       <span class="n">nologOam</span><span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//... ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span><span class="s">&#34;version&#34;</span><span class="p">,</span>     <span class="n">OAM_LOG_OFF</span><span class="p">,</span>       <span class="n">nologVersion</span><span class="p">},</span>
+</span></span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s">&#34;version&#34;</span><span class="p">,</span>     <span class="n">OAM_LOG_OFF</span><span class="p">,</span>       <span class="n">nologVersion</span><span class="p">},</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s">&#34;all&#34;</span><span class="p">,</span>         <span class="n">OAM_LOG_ON</span><span class="p">,</span>        <span class="n">logall</span><span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s">&#34;oam&#34;</span><span class="p">,</span>         <span class="n">OAM_LOG_ON</span><span class="p">,</span>        <span class="n">logOam</span><span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//... ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span><span class="s">&#34;version&#34;</span><span class="p">,</span>     <span class="n">OAM_LOG_ON</span><span class="p">,</span>        <span class="n">logVersion</span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s">&#34;version&#34;</span><span class="p">,</span>     <span class="n">OAM_LOG_ON</span><span class="p">,</span>        <span class="n">logVersion</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="n">INT32U</span> <span class="n">gOamLogMapNum</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">gOamLogMap</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">T_OAM_LOG_MAP</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -1823,7 +1823,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">LOG_XDSL</span><span class="p">,</span>            <span class="cm">/* xDsl日志 */</span>
 </span></span><span class="line"><span class="cl">    <span class="n">LOG_DB</span><span class="p">,</span>              <span class="cm">/* 数据库操作日志 */</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//新日志类型在此处扩展，共支持32种日志类型
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">LOG_ALL</span> <span class="o">=</span> <span class="n">UINT_MAX</span>   <span class="cm">/* 所有日志类型 */</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">LOG_ALL</span> <span class="o">=</span> <span class="n">UINT_MAX</span>   <span class="cm">/* 所有日志类型 */</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">E_LOG_TYPE</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cm">/*****************************************************************************
@@ -1837,7 +1837,7 @@
 </span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="n">INT32U</span> <span class="n">gOmciLogCtrl</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//日志类型字符串数组，下标为各字符串所对应的日志类型枚举值。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="k">const</span> <span class="n">INT8U</span><span class="o">*</span> <span class="n">paLogTypeName</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="k">const</span> <span class="n">INT8U</span><span class="o">*</span> <span class="n">paLogTypeName</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="s">&#34;Norm&#34;</span><span class="p">,</span>        <span class="s">&#34;Frame&#34;</span><span class="p">,</span>   <span class="s">&#34;Pon&#34;</span><span class="p">,</span>  <span class="s">&#34;Ethernet&#34;</span><span class="p">,</span>  <span class="s">&#34;Internet&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="s">&#34;Multicast&#34;</span><span class="p">,</span>   <span class="s">&#34;Qos&#34;</span><span class="p">,</span>     <span class="s">&#34;Ces&#34;</span><span class="p">,</span>  <span class="s">&#34;Voip&#34;</span><span class="p">,</span>      <span class="s">&#34;Alarm&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="s">&#34;Performance&#34;</span><span class="p">,</span> <span class="s">&#34;Version&#34;</span><span class="p">,</span> <span class="s">&#34;Xdsl&#34;</span><span class="p">,</span>  <span class="s">&#34;Db&#34;</span>

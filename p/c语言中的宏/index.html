@@ -369,7 +369,7 @@
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define trace(x, format) printf(#x &#34; = %&#34; #format &#34;\n&#34;, x)
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define trace2(i) trace(x##i, d)
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">_TCHAR</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -377,14 +377,14 @@
 </span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nf">trace</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>                <span class="c1">// 相当于 printf(&#34;x = %d\n&#34;, x)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">trace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>                <span class="c1">// 相当于 printf(&#34;x = %f\n&#34;, x)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">trace</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>                <span class="c1">// 相当于 printf(&#34;x = %s\n&#34;, x)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">    <span class="nf">trace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>                <span class="c1">// 相当于 printf(&#34;x = %f\n&#34;, x)
+</span></span></span><span class="line"><span class="cl">    <span class="nf">trace</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>                <span class="c1">// 相当于 printf(&#34;x = %s\n&#34;, x)
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">x1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x3</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">trace2</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>                  <span class="c1">// 相当于 trace(x1, d)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">trace2</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>                  <span class="c1">// 相当于 trace(x2, d)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">trace2</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>                  <span class="c1">// 相当于 trace(x3, d)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">    <span class="nf">trace2</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>                  <span class="c1">// 相当于 trace(x2, d)
+</span></span></span><span class="line"><span class="cl">    <span class="nf">trace2</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>                  <span class="c1">// 相当于 trace(x3, d)
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -504,7 +504,7 @@
 </span></span><span class="line"><span class="cl"><span class="k">else</span>
 </span></span><span class="line"><span class="cl">   <span class="p">{</span>
 </span></span><span class="line"><span class="cl">       <span class="c1">//do nothing
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>但是使用<code>do{...}while(0)</code>结构就不会有这样的问题。</p>
@@ -554,7 +554,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">answer</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">short</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -565,7 +565,7 @@
 </span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;p&#39;</span><span class="p">;;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// __DATE__, __TIME__, __FILE__, __LINE__ 为预定义宏
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Date : %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">__DATE__</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Date : %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">__DATE__</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Time : %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">__TIME__</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;File : %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">__FILE__</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Line : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">__LINE__</span><span class="p">);</span>
@@ -573,10 +573,10 @@
 </span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">answer</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// 这是一个条件表达式
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">answer</span><span class="o">?</span><span class="s">&#34;You sayd YES&#34;</span><span class="o">:</span><span class="s">&#34;You said NO&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">answer</span><span class="o">?</span><span class="s">&#34;You sayd YES&#34;</span><span class="o">:</span><span class="s">&#34;You said NO&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// 各种数据类型的长度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The size of int %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">answer</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The size of int %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">answer</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The size of short %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The size of long %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The size of float %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">u</span><span class="p">));</span>
